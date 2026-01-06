@@ -1223,6 +1223,40 @@ function AutresEvenements() {
           ))}
         </div>
 
+        {/* Forfait Anniversaire */}
+        <div className="card-dark p-8 mb-12 border-[#c9a227]/30">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="flex items-start gap-4">
+              <div className="shrink-0 w-14 h-14 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-xl flex items-center justify-center">
+                <Cake size={28} className="text-[#c9a227]" />
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-white font-[family-name:var(--font-display)] text-xl">
+                    Forfait Anniversaire
+                  </h3>
+                  <span className="px-3 py-1 bg-[#c9a227]/20 border border-[#c9a227]/30 rounded-full text-[#c9a227] text-xs">
+                    Octobre à Avril
+                  </span>
+                </div>
+                <p className="text-[#888] text-sm mb-2">
+                  Animation complète + vidéo projecteur inclus
+                </p>
+                <p className="text-[#666] text-xs italic">
+                  Détails sur demande
+                </p>
+              </div>
+            </div>
+            <div className="text-right shrink-0">
+              <p className="text-[#888] text-sm mb-1">À partir de</p>
+              <div className="flex items-baseline gap-1">
+                <span className="text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">600</span>
+                <span className="text-[#888]">€ TTC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="text-center">
           <p className="text-[#aaa] mb-6">
