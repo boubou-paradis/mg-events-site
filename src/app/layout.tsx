@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mg-events35.com'),
+  metadataBase: new URL('https://www.mg-events35.com'),
   title: {
     default: "MG Events Animation | DJ Mariage Bretagne",
     template: "%s | MG Events Animation",
@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MG Events Animation - DJ Mariage Bretagne",
     description: "DJ animateur mariage en Bretagne. +20 ans d'expérience, animations interactives, photobooth vintage.",
-    url: "https://mg-events35.com",
+    url: "https://www.mg-events35.com",
     siteName: "MG Events Animation",
     images: [
       {
-        url: "/images/hero-bg.jpg",
+        url: "https://www.mg-events35.com/images/hero-bg.jpg",
         width: 1200,
         height: 630,
         alt: "MG Events Animation - DJ Mariage Bretagne",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MG Events Animation - DJ Mariage Bretagne",
     description: "DJ animateur mariage en Bretagne. +20 ans d'expérience.",
-    images: ["/images/hero-bg.jpg"],
+    images: ["https://www.mg-events35.com/images/hero-bg.jpg"],
   },
   robots: {
     index: true,
@@ -45,11 +45,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "votre-code-verification-google",
-  },
   alternates: {
-    canonical: "https://mg-events35.com",
+    canonical: "https://www.mg-events35.com",
   },
 };
 
@@ -58,8 +55,8 @@ const jsonLd = {
   "@type": "LocalBusiness",
   "name": "MG Events Animation",
   "description": "DJ animateur de mariage en Bretagne. Animations interactives, photobooth vintage, effets spéciaux.",
-  "image": "https://mg-events35.com/images/logo.png",
-  "url": "https://mg-events35.com",
+  "image": "https://www.mg-events35.com/images/logo.png",
+  "url": "https://www.mg-events35.com",
   "telephone": "+33648106166",
   "email": "mg.events35@gmail.com",
   "address": {

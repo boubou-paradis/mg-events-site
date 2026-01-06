@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: "DJ animateur mariage en Mayenne. Laval, Château-Gontier, Mayenne. +20 ans d'expérience, animations interactives, photobooth vintage. Devis gratuit ✓",
   keywords: 'DJ mariage Mayenne, DJ mariage Laval, DJ mariage Château-Gontier, animation mariage 53, DJ mariage Évron',
   alternates: {
-    canonical: 'https://mg-events35.com/dj-mariage-mayenne',
+    canonical: 'https://www.mg-events35.com/dj-mariage-mayenne',
   },
   openGraph: {
     title: 'DJ Mariage Mayenne | Animation Mariage Laval - MG Events',
     description: "DJ animateur mariage en Mayenne. Laval, Château-Gontier, Mayenne. +20 ans d'expérience, animations interactives, photobooth vintage.",
-    url: 'https://mg-events35.com/dj-mariage-mayenne',
+    url: 'https://www.mg-events35.com/dj-mariage-mayenne',
   },
 };
 

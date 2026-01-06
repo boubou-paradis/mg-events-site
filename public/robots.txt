@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mg-events35.com/sitemap.xml
+Sitemap: https://www.mg-events35.com/sitemap.xml
+
+# Optimized for MG Events Animation - DJ Mariage Bretagne

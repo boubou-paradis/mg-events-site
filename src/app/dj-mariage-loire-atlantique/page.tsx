@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: "DJ animateur mariage en Loire-Atlantique. Nantes, Saint-Nazaire, Guérande, La Baule. +20 ans d'expérience, photobooth vintage. Devis gratuit ✓",
   keywords: 'DJ mariage Loire-Atlantique, DJ mariage Nantes, DJ mariage Saint-Nazaire, DJ mariage La Baule, DJ mariage Guérande, animation mariage 44',
   alternates: {
-    canonical: 'https://mg-events35.com/dj-mariage-loire-atlantique',
+    canonical: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',
   },
   openGraph: {
     title: 'DJ Mariage Loire-Atlantique | Animation Mariage Nantes - MG Events',
     description: "DJ animateur mariage en Loire-Atlantique. Nantes, Saint-Nazaire, Guérande, La Baule. +20 ans d'expérience, photobooth vintage.",
-    url: 'https://mg-events35.com/dj-mariage-loire-atlantique',
+    url: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',
   },
 };
 

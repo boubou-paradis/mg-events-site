@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Blog | Conseils Mariage & Animation DJ',
   description: 'Conseils et astuces pour réussir votre mariage en Bretagne. Choisir son DJ, ouverture de bal, étincelles froides, animations originales.',
   alternates: {
-    canonical: 'https://mg-events35.com/blog',
+    canonical: 'https://www.mg-events35.com/blog',
   },
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Étincelles froides mariage : effet spectaculaire en toute sécurité',
   description: 'Les étincelles froides font rêver mais soulèvent des questions de sécurité. Tout ce que vous devez savoir sur cet effet tendance pour votre mariage.',
   alternates: {
-    canonical: 'https://mg-events35.com/blog/etincelles-froides-mariage-securite',
+    canonical: 'https://www.mg-events35.com/blog/etincelles-froides-mariage-securite',
   },
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Ouverture de bal : 10 conseils pour un moment magique',
   description: 'L\'ouverture de bal est l\'un des moments les plus émouvants de votre mariage. Découvrez nos conseils : choix de la musique, chorégraphie, effets spéciaux.',
   alternates: {
-    canonical: 'https://mg-events35.com/blog/ouverture-de-bal-conseils',
+    canonical: 'https://www.mg-events35.com/blog/ouverture-de-bal-conseils',
   },
 };
 

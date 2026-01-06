@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: "DJ animateur mariage dans le Morbihan. Vannes, Lorient, Pontivy, Auray. +20 ans d'expérience, photobooth vintage, animations interactives. Devis gratuit ✓",
   keywords: 'DJ mariage Morbihan, DJ mariage Vannes, DJ mariage Lorient, DJ mariage Auray, DJ mariage Pontivy, animation mariage 56',
   alternates: {
-    canonical: 'https://mg-events35.com/dj-mariage-morbihan',
+    canonical: 'https://www.mg-events35.com/dj-mariage-morbihan',
   },
   openGraph: {
     title: 'DJ Mariage Morbihan | Animation Mariage Vannes - MG Events',
     description: "DJ animateur mariage dans le Morbihan. Vannes, Lorient, Pontivy, Auray. +20 ans d'expérience, photobooth vintage, animations interactives.",
-    url: 'https://mg-events35.com/dj-mariage-morbihan',
+    url: 'https://www.mg-events35.com/dj-mariage-morbihan',
   },
 };
 

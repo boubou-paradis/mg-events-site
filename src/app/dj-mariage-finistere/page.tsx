@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: "DJ animateur mariage dans le Finistère. Quimper, Brest, Morlaix, Concarneau. +20 ans d'expérience, animations interactives exclusives. Devis gratuit ✓",
   keywords: 'DJ mariage Finistère, DJ mariage Quimper, DJ mariage Brest, DJ mariage Morlaix, DJ mariage Concarneau, animation mariage 29',
   alternates: {
-    canonical: 'https://mg-events35.com/dj-mariage-finistere',
+    canonical: 'https://www.mg-events35.com/dj-mariage-finistere',
   },
   openGraph: {
     title: 'DJ Mariage Finistère | Animation Mariage Quimper Brest - MG Events',
     description: "DJ animateur mariage dans le Finistère. Quimper, Brest, Morlaix, Concarneau. +20 ans d'expérience, animations interactives exclusives.",
-    url: 'https://mg-events35.com/dj-mariage-finistere',
+    url: 'https://www.mg-events35.com/dj-mariage-finistere',
   },
 };
 

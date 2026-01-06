@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Comment choisir son DJ de mariage en Bretagne ? Guide 2026',
   description: 'Le choix du DJ est crucial pour la réussite de votre mariage. Découvrez nos conseils pour bien choisir : expérience, matériel, feeling, références, prix.',
   alternates: {
-    canonical: 'https://mg-events35.com/blog/comment-choisir-dj-mariage-bretagne',
+    canonical: 'https://www.mg-events35.com/blog/comment-choisir-dj-mariage-bretagne',
   },
 };
 

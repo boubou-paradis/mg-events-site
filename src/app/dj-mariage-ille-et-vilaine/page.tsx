@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: "DJ animateur mariage en Ille-et-Vilaine. Rennes, Redon, Vitré, Fougères. +20 ans d'expérience, photobooth vintage, animations interactives. Devis gratuit ✓",
   keywords: 'DJ mariage Ille-et-Vilaine, DJ mariage Rennes, DJ mariage Redon, DJ mariage Vitré, DJ mariage Fougères, animation mariage 35',
   alternates: {
-    canonical: 'https://mg-events35.com/dj-mariage-ille-et-vilaine',
+    canonical: 'https://www.mg-events35.com/dj-mariage-ille-et-vilaine',
   },
   openGraph: {
     title: 'DJ Mariage Ille-et-Vilaine | Animation Mariage Rennes - MG Events',
     description: "DJ animateur mariage en Ille-et-Vilaine. Rennes, Redon, Vitré, Fougères. +20 ans d'expérience, photobooth vintage, animations interactives.",
-    url: 'https://mg-events35.com/dj-mariage-ille-et-vilaine',
+    url: 'https://www.mg-events35.com/dj-mariage-ille-et-vilaine',
   },
 };
 

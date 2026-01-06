@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Animations mariage originales : les tendances 2026',
   description: 'Quiz interactif, photo mystère, partage photo en direct... Découvrez les nouvelles tendances d\'animation pour un mariage original et mémorable en 2026.',
   alternates: {
-    canonical: 'https://mg-events35.com/blog/animations-mariage-originales-2026',
+    canonical: 'https://www.mg-events35.com/blog/animations-mariage-originales-2026',
   },
 };
 
