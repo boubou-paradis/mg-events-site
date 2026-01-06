@@ -277,7 +277,7 @@ function Formules() {
     },
     {
       name: 'Conte de Fées',
-      price: '1750',
+      price: '1690',
       description: 'L\'expérience complète et magique',
       features: [
         'Tout de la formule Rêve en Blanc',
@@ -712,7 +712,7 @@ function Contact() {
                     <option value="">Je ne sais pas encore</option>
                     <option value="eclat">Éclat d&apos;Amour (1200€)</option>
                     <option value="reve">Rêve en Blanc (1490€)</option>
-                    <option value="conte">Conte de Fées (1750€)</option>
+                    <option value="conte">Conte de Fées (1690€)</option>
                   </select>
                 </div>
               </div>
@@ -916,7 +916,7 @@ function Photobooth() {
               Conte de Fées
             </p>
             <p className="text-[#888] text-sm">
-              Le photobooth est inclus dans notre formule premium à 1750€
+              Le photobooth est inclus dans notre formule premium à 1690€
             </p>
           </div>
 

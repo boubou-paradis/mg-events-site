@@ -18,7 +18,7 @@ interface ContactFormData {
 const formuleLabels: Record<string, string> = {
   eclat: "Eclat d'Amour (1200€)",
   reve: "Reve en Blanc (1490€)",
-  conte: "Conte de Fees (1750€)",
+  conte: "Conte de Fees (1690€)",
   '': "Non specifiee",
 };
 
