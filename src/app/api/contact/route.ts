@@ -67,12 +67,12 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // 2. Envoyer les emails (si Resend configuré)
+    // 2. Envoyer email de notification (si Resend configuré)
     if (resend) {
-      // Email de notification a MG Events
       await resend.emails.send({
         from: 'MG Events <onboarding@resend.dev>',
         to: 'mg.events35@gmail.com',
+        replyTo: data.email,
         subject: `Nouvelle demande de devis - ${data.name}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -104,55 +104,8 @@ export async function POST(request: NextRequest) {
 
             <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
             <p style="color: #888; font-size: 12px;">
-              Ce message a ete envoye depuis le formulaire de contact de mg-events35.com
-            </p>
-          </div>
-        `,
-      });
-
-      // Email de confirmation au prospect
-      await resend.emails.send({
-        from: 'MG Events <onboarding@resend.dev>',
-        to: data.email,
-        subject: 'Votre demande de devis - MG Events Animation',
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <div style="text-align: center; padding: 30px 0;">
-              <h1 style="color: #c9a227; margin: 0;">MG Events</h1>
-              <p style="color: #888; margin: 5px 0;">Animation DJ Mariage - Bretagne</p>
-            </div>
-
-            <h2 style="color: #333;">Bonjour ${data.name},</h2>
-
-            <p>Nous avons bien recu votre demande de devis et nous vous en remercions !</p>
-
-            <p>Notre equipe va etudier votre projet avec attention et vous recontactera
-            <strong>sous 24h maximum</strong> pour discuter de vos envies et vous proposer
-            une prestation sur-mesure.</p>
-
-            <div style="background: #f8f8f8; padding: 20px; border-radius: 8px; margin: 25px 0;">
-              <h3 style="color: #c9a227; margin-top: 0;">Recapitulatif de votre demande</h3>
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="padding: 5px 0;"><strong>Evenement:</strong> ${eventTypeLabels[data.eventType] || data.eventType}</li>
-                ${data.date ? `<li style="padding: 5px 0;"><strong>Date:</strong> ${data.date}</li>` : ''}
-                ${data.location ? `<li style="padding: 5px 0;"><strong>Lieu:</strong> ${data.location}</li>` : ''}
-                ${data.formule ? `<li style="padding: 5px 0;"><strong>Formule:</strong> ${formuleLabels[data.formule]}</li>` : ''}
-              </ul>
-            </div>
-
-            <p>En attendant, n'hesitez pas a visiter notre page
-            <a href="https://www.facebook.com/MGevents35/" style="color: #c9a227;">Facebook</a>
-            pour decouvrir nos prestations en images.</p>
-
-            <p>A tres bientot,<br>
-            <strong>Guillaume & Laurence</strong><br>
-            <span style="color: #c9a227;">MG Events Animation</span></p>
-
-            <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-
-            <p style="color: #888; font-size: 12px; text-align: center;">
-              MG Events Animation - DJ Mariage Bretagne<br>
-              <a href="mailto:mg.events35@gmail.com" style="color: #c9a227;">mg.events35@gmail.com</a>
+              Ce message a ete envoye depuis le formulaire de contact de mg-events35.com<br>
+              <strong>Repondez directement a cet email pour contacter le client.</strong>
             </p>
           </div>
         `,
