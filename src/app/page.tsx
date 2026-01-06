@@ -299,7 +299,6 @@ function Formules() {
         'Photo-booth vintage',
         'Appareil reflex + écran tactile 15"',
         '150 impressions incluses',
-        'Accessoires et décors',
       ],
       popular: false,
     },
@@ -900,7 +899,6 @@ function Photobooth() {
               <ul className="space-y-2">
                 {[
                   '150 impressions incluses',
-                  'Props et accessoires',
                   'Personnalisation des tirages avec vos prénoms et la date',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-[#aaa]">
