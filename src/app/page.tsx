@@ -766,10 +766,14 @@ function Contact() {
 // ============ GALLERY ============
 function Gallery() {
   const images = [
-    { src: '/images/hero-1.jpg', alt: 'Table de mixage DJ' },
-    { src: '/images/hero-2.jpg', alt: 'Couple de maries dansant' },
-    { src: '/images/hero-3.jpg', alt: 'Invites sur le dancefloor' },
-    { src: '/images/gallery-1.webp', alt: 'Installation lumiere MG Events' },
+    { src: '/images/gallery-1.jpg', alt: 'Couple dansant dans la fumee avec jeux de lumieres' },
+    { src: '/images/gallery-2.jpg', alt: 'Premiere danse avec fontaine etincelles' },
+    { src: '/images/gallery-3.jpg', alt: 'Vue DJ avec invites et guirlandes' },
+    { src: '/images/gallery-4.jpg', alt: 'Setup scene complet avec logo MG' },
+    { src: '/images/gallery-5.jpg', alt: 'Piste de danse grange avec lumieres' },
+    { src: '/images/gallery-6.jpg', alt: 'Table champagne avec LOVE lumineux' },
+    { src: '/images/gallery-7.jpg', alt: 'Jeux de lumiere avec lustre' },
+    { src: '/images/gallery-8.jpg', alt: 'Console DJ professionnelle' },
   ];
 
   return (
