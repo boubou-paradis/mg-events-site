@@ -989,12 +989,18 @@ function AnimaJet() {
             <span className="text-[#c9a227] text-sm font-medium">Exclusivité MG Events</span>
           </div>
 
-          <h2 className="section-title text-white mb-2">
+          <h2 className="section-title text-white mb-6">
             Animations <span className="text-gradient-gold">Interactives</span>
           </h2>
-          <p className="text-xl text-[#c9a227] font-[family-name:var(--font-display)] mb-4">
-            Propulsé par AnimaJet
-          </p>
+          <div className="mb-6">
+            <Image
+              src="/images/animajet-logo.png"
+              alt="AnimaJet"
+              width={280}
+              height={140}
+              className="mx-auto"
+            />
+          </div>
           <p className="text-[#888] max-w-2xl mx-auto">
             Une technologie exclusive développée par nos soins
           </p>
