@@ -38,9 +38,9 @@ function Header() {
   const navItems = [
     { label: 'Accueil', href: '#hero' },
     { label: 'À propos', href: '#about' },
-    { label: 'Formules', href: '#formules' },
     { label: 'Galerie', href: '#gallery' },
     { label: 'Photobooth', href: '#photobooth' },
+    { label: 'Formules', href: '#formules' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -1288,13 +1288,13 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Formules />
         <Gallery />
         <Photobooth />
         <AnimaJet />
         <EtincellesFroides />
-        <AutresEvenements />
         <Testimonials />
+        <Formules />
+        <AutresEvenements />
         <Contact />
       </main>
       <Footer />
