@@ -982,41 +982,46 @@ function AnimaJet() {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#c9a227]/5 rounded-full blur-3xl" />
 
       <div className="max-w-6xl mx-auto px-6 relative">
-        {/* Header */}
-        <div className="text-center mb-16">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#c9a227]/20 to-[#c9a227]/10 border border-[#c9a227]/30 rounded-full mb-6">
-            <Zap size={16} className="text-[#c9a227]" />
-            <span className="text-[#c9a227] text-sm font-medium">Exclusivité MG Events</span>
+        {/* Header avec logo */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Logo côté */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="absolute inset-0 bg-[#c9a227]/10 rounded-full blur-3xl" />
+              <Image
+                src="/images/animajet-logo.png"
+                alt="AnimaJet"
+                width={350}
+                height={175}
+                className="relative"
+              />
+            </div>
           </div>
 
-          <h2 className="section-title text-white mb-6">
-            Animations <span className="text-gradient-gold">Interactives</span>
-          </h2>
-          <div className="mb-6">
-            <Image
-              src="/images/animajet-logo.png"
-              alt="AnimaJet"
-              width={280}
-              height={140}
-              className="mx-auto"
-            />
-          </div>
-          <p className="text-[#888] max-w-2xl mx-auto">
-            Une technologie exclusive développée par nos soins
-          </p>
-        </div>
+          {/* Texte côté */}
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#c9a227]/20 to-[#c9a227]/10 border border-[#c9a227]/30 rounded-full mb-6">
+              <Zap size={16} className="text-[#c9a227]" />
+              <span className="text-[#c9a227] text-sm font-medium">Exclusivité MG Events</span>
+            </div>
 
-        {/* Description */}
-        <div className="text-center mb-16">
-          <p className="text-[#aaa] text-lg max-w-3xl mx-auto leading-relaxed">
-            Offrez à vos invités une expérience inédite grâce à <span className="text-[#c9a227] font-medium">AnimaJet</span>,
-            notre plateforme d&apos;animation interactive créée spécialement pour révolutionner vos soirées.
-          </p>
+            <h2 className="section-title text-white mb-4">
+              Animations <span className="text-gradient-gold">Interactives</span>
+            </h2>
+
+            <p className="text-[#888] mb-6">
+              Une technologie exclusive développée par nos soins
+            </p>
+
+            <p className="text-[#aaa] text-lg leading-relaxed">
+              Offrez à vos invités une expérience inédite grâce à <span className="text-[#c9a227] font-medium">AnimaJet</span>,
+              notre plateforme d&apos;animation interactive créée spécialement pour révolutionner vos soirées.
+            </p>
+          </div>
         </div>
 
         {/* Features */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -1024,17 +1029,17 @@ function AnimaJet() {
             >
               <div className="card-dark p-8 h-full hover:border-[#c9a227]/40 transition-all duration-300">
                 {/* Icon with glow effect */}
-                <div className="relative mb-6">
+                <div className="relative mb-6 flex justify-center md:justify-start">
                   <div className="absolute inset-0 bg-[#c9a227]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="relative w-16 h-16 bg-gradient-to-br from-[#c9a227]/20 to-[#c9a227]/5 rounded-2xl flex items-center justify-center border border-[#c9a227]/20">
                     <feature.icon size={28} className="text-[#c9a227]" />
                   </div>
                 </div>
 
-                <h3 className="text-white font-[family-name:var(--font-display)] text-xl mb-3">
+                <h3 className="text-white font-[family-name:var(--font-display)] text-xl mb-3 text-center md:text-left">
                   {feature.title}
                 </h3>
-                <p className="text-[#888] leading-relaxed">
+                <p className="text-[#888] leading-relaxed text-center md:text-left">
                   {feature.description}
                 </p>
               </div>
@@ -1043,15 +1048,22 @@ function AnimaJet() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="inline-block card-dark p-8 border-[#c9a227]/20">
-            <Sparkles size={32} className="text-[#c9a227] mx-auto mb-4" />
-            <p className="text-white text-lg font-[family-name:var(--font-display)] mb-2">
-              Du jamais vu en Bretagne
-            </p>
-            <p className="text-[#888]">
-              Une soirée unique, moderne et à votre image.
-            </p>
+        <div className="card-dark p-8 border-[#c9a227]/20">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <Sparkles size={40} className="text-[#c9a227]" />
+              <div>
+                <p className="text-white text-xl font-[family-name:var(--font-display)]">
+                  Du jamais vu en Bretagne
+                </p>
+                <p className="text-[#888]">
+                  Une soirée unique, moderne et à votre image.
+                </p>
+              </div>
+            </div>
+            <a href="#contact" className="btn-gold whitespace-nowrap">
+              Réserver AnimaJet
+            </a>
           </div>
         </div>
       </div>
