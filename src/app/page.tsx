@@ -832,7 +832,6 @@ function Photobooth() {
   const photos = [
     { src: '/images/photobooth-1.jpg', alt: 'Photobooth vue de face avec écran Kodak' },
     { src: '/images/photobooth-3.jpg', alt: 'Photobooth vue de côté avec imprimante' },
-    { src: '/images/photobooth-4.jpg', alt: 'Photobooth vue complète avec pied' },
   ];
 
   return (
