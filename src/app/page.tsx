@@ -122,7 +122,10 @@ function Hero() {
         </div>
 
         {/* Title */}
-        <h1 className="animate-fade-up delay-100 font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal mb-6">
+        <p className="animate-fade-up delay-100 text-sm sm:text-base text-[#c9a227] tracking-[0.3em] uppercase mb-4">
+          MG Events Animation
+        </p>
+        <h1 className="animate-fade-up delay-150 font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal mb-6">
           <span className="text-white">DJ Mariage</span>
           <br />
           <span className="text-gradient-gold">Bretagne</span>
