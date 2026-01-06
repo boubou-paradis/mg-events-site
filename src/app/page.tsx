@@ -870,7 +870,7 @@ function Photobooth() {
         </div>
 
         {/* Description */}
-        <div className="card-dark p-8">
+        <div className="card-dark p-8 mb-6">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <p className="text-[#aaa] leading-relaxed mb-6">
@@ -878,12 +878,9 @@ function Photobooth() {
                 imprimante instantanée, il permet à vos convives de repartir avec leurs souvenirs
                 imprimés sur place.
               </p>
-              <p className="text-sm text-[#c9a227] uppercase tracking-wider mb-4">
-                Inclus dans la formule Conte de Fées
-              </p>
               <ul className="space-y-2">
                 {[
-                  '150 impressions',
+                  '150 impressions incluses',
                   'Props et accessoires',
                   'Personnalisation des tirages avec vos prénoms et la date',
                 ].map((item) => (
@@ -905,6 +902,36 @@ function Photobooth() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Options */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Inclus dans Conte de Fées */}
+          <div className="card-dark p-6">
+            <p className="text-sm text-[#c9a227] uppercase tracking-wider mb-2">
+              Inclus dans la formule
+            </p>
+            <p className="text-white font-[family-name:var(--font-display)] text-xl mb-4">
+              Conte de Fées
+            </p>
+            <p className="text-[#888] text-sm">
+              Le photobooth est inclus dans notre formule premium à 1750€
+            </p>
+          </div>
+
+          {/* Location seule */}
+          <div className="card-dark p-6 border-[#c9a227]/30">
+            <p className="text-sm text-[#c9a227] uppercase tracking-wider mb-2">
+              Location seule
+            </p>
+            <div className="flex items-baseline gap-2 mb-4">
+              <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">240</span>
+              <span className="text-[#888]">€ TTC</span>
+            </div>
+            <p className="text-[#888] text-sm">
+              150 tirages inclus • Disponible en complément de toutes nos formules
+            </p>
           </div>
         </div>
       </div>
