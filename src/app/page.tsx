@@ -28,7 +28,7 @@ function Header() {
     { label: 'À propos', href: '#about' },
     { label: 'Formules', href: '#formules' },
     { label: 'Galerie', href: '#gallery' },
-    { label: 'Témoignages', href: '#testimonials' },
+    { label: 'Photobooth', href: '#photobooth' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -809,6 +809,109 @@ function Gallery() {
   );
 }
 
+// ============ PHOTOBOOTH ============
+function Photobooth() {
+  const photos = [
+    { src: '/images/photobooth-1.jpg', alt: 'Photobooth vue de face avec écran Kodak' },
+    { src: '/images/photobooth-3.jpg', alt: 'Photobooth vue de côté avec imprimante' },
+    { src: '/images/photobooth-4.jpg', alt: 'Photobooth vue complète avec pied' },
+  ];
+
+  return (
+    <section id="photobooth" className="py-24 bg-[#0a0a0a]">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="gold-line mx-auto mb-6" />
+          <h2 className="section-title text-white mb-4">
+            Notre <span className="text-gradient-gold">Photobooth</span> Vintage
+          </h2>
+          <p className="text-[#c9a227] text-lg mb-4">Capturez l&apos;instant</p>
+          <p className="text-[#888] max-w-2xl mx-auto">
+            Un incontournable des soirées réussies ! Notre photobooth au look unique et authentique
+            a été conçu à partir d&apos;un véritable poste TSF des années 60, pour une touche chic
+            et vintage qui fera sensation auprès de vos invités.
+          </p>
+        </div>
+
+        {/* Photo Gallery */}
+        <div className="grid lg:grid-cols-3 gap-4 mb-12">
+          {/* Main photo - en action */}
+          <div className="lg:col-span-2 lg:row-span-2 relative rounded-lg overflow-hidden border border-[#c9a227]/10 group">
+            <div className="relative aspect-[4/3] lg:aspect-auto lg:h-full">
+              <Image
+                src="/images/photobooth-2.jpg"
+                alt="Photobooth en action avec des invités"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6">
+                <p className="text-white font-medium">Le photobooth en action</p>
+                <p className="text-[#888] text-sm">Des souvenirs inoubliables</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Thumbnails */}
+          {photos.map((photo, index) => (
+            <div key={index} className="relative rounded-lg overflow-hidden border border-[#c9a227]/10 group">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Description */}
+        <div className="card-dark p-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <p className="text-[#aaa] leading-relaxed mb-6">
+                Équipé d&apos;un appareil reflex professionnel, d&apos;un écran tactile 15&quot; et d&apos;une
+                imprimante instantanée, il permet à vos convives de repartir avec leurs souvenirs
+                imprimés sur place.
+              </p>
+              <p className="text-sm text-[#c9a227] uppercase tracking-wider mb-4">
+                Inclus dans la formule Conte de Fées
+              </p>
+              <ul className="space-y-2">
+                {[
+                  '150 impressions',
+                  'Props et accessoires',
+                  'Personnalisation des tirages avec vos prénoms et la date',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-[#aaa]">
+                    <Check size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="text-center">
+                <Camera size={48} className="text-[#c9a227] mx-auto mb-4" />
+                <p className="text-white font-[family-name:var(--font-display)] text-xl mb-2">
+                  Poste TSF années 60
+                </p>
+                <p className="text-[#888] text-sm">
+                  Un look authentique et unique
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ FOOTER ============
 function Footer() {
   return (
@@ -858,6 +961,7 @@ export default function Home() {
         <About />
         <Formules />
         <Gallery />
+        <Photobooth />
         <Testimonials />
         <Contact />
       </main>
