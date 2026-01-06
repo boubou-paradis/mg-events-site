@@ -29,19 +29,22 @@ import {
   Flame,
   Home as HomeIcon,
   Award,
+  Headphones,
+  Volume2,
+  Disc3,
 } from 'lucide-react';
 
 // ============ HEADER ============
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  
-  const navItems = [
-    { label: 'Accueil', href: '#hero' },
-    { label: 'À propos', href: '#about' },
-    { label: 'Galerie', href: '#gallery' },
-    { label: 'Photobooth', href: '#photobooth' },
-    { label: 'Formules', href: '#formules' },
-    { label: 'Contact', href: '#contact' },
+  const [zonesOpen, setZonesOpen] = useState(false);
+
+  const zones = [
+    { label: 'Ille-et-Vilaine (35)', href: '/dj-mariage-ille-et-vilaine' },
+    { label: 'Morbihan (56)', href: '/dj-mariage-morbihan' },
+    { label: 'Finistère (29)', href: '/dj-mariage-finistere' },
+    { label: 'Loire-Atlantique (44)', href: '/dj-mariage-loire-atlantique' },
+    { label: 'Mayenne (53)', href: '/dj-mariage-mayenne' },
   ];
 
   return (
@@ -52,22 +55,39 @@ function Header() {
           <a href="#hero" className="flex items-center">
             <img
               src="/images/logo.png"
-              alt="MG Events Animation"
+              alt="MG Events Animation DJ Mariage Bretagne"
               className="h-14 w-auto"
             />
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors duration-300 tracking-wide"
-              >
-                {item.label}
-              </a>
-            ))}
+          <nav className="hidden md:flex items-center gap-6">
+            <a href="#about" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">À propos</a>
+            <a href="#formules" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Formules</a>
+
+            {/* Zones Dropdown */}
+            <div className="relative" onMouseEnter={() => setZonesOpen(true)} onMouseLeave={() => setZonesOpen(false)}>
+              <button className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors flex items-center gap-1">
+                Zones
+                <ChevronDown size={14} className={`transition-transform ${zonesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {zonesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg shadow-xl py-2">
+                  {zones.map((zone) => (
+                    <a
+                      key={zone.href}
+                      href={zone.href}
+                      className="block px-4 py-2 text-sm text-[#aaa] hover:text-[#c9a227] hover:bg-[#c9a227]/5 transition-colors"
+                    >
+                      {zone.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <a href="/blog" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Blog</a>
+            <a href="#contact" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Contact</a>
             <a href="#contact" className="btn-gold">
               Devis gratuit
             </a>
@@ -86,16 +106,21 @@ function Header() {
         {isOpen && (
           <nav className="md:hidden pt-6 pb-4 border-t border-[#c9a227]/10 mt-4">
             <div className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2"
-                >
-                  {item.label}
-                </a>
-              ))}
+              <a href="#about" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2">À propos</a>
+              <a href="#formules" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2">Formules</a>
+
+              {/* Mobile Zones */}
+              <div className="border-t border-[#c9a227]/10 pt-4">
+                <p className="text-xs text-[#666] uppercase tracking-wider mb-2">Zones d&apos;intervention</p>
+                {zones.map((zone) => (
+                  <a key={zone.href} href={zone.href} className="block text-[#aaa] hover:text-[#c9a227] transition-colors py-1.5 text-sm">
+                    {zone.label}
+                  </a>
+                ))}
+              </div>
+
+              <a href="/blog" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2 border-t border-[#c9a227]/10 pt-4">Blog</a>
+              <a href="#contact" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2">Contact</a>
               <a href="#contact" className="btn-gold text-center mt-2">
                 Devis gratuit
               </a>
@@ -166,7 +191,7 @@ function Hero() {
         </div>
 
         {/* Stats */}
-        <div className="animate-fade-up delay-500 mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
+        <div className="animate-fade-up delay-500 mt-16 grid grid-cols-4 gap-6 max-w-2xl mx-auto">
           <div className="text-center">
             <div className="text-3xl sm:text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">20+</div>
             <div className="text-xs text-[#666] uppercase tracking-wider mt-1">Années</div>
@@ -177,9 +202,13 @@ function Hero() {
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center gap-1 text-3xl sm:text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">
-              5<Star size={20} fill="#c9a227" />
+              45<Star size={18} fill="#c9a227" className="ml-1" />
             </div>
-            <div className="text-xs text-[#666] uppercase tracking-wider mt-1">Avis</div>
+            <div className="text-xs text-[#666] uppercase tracking-wider mt-1">Avis 5★</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl sm:text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">100%</div>
+            <div className="text-xs text-[#666] uppercase tracking-wider mt-1">Recommandé</div>
           </div>
         </div>
       </div>
@@ -195,12 +224,12 @@ function Hero() {
 // ============ ABOUT ============
 function About() {
   return (
-    <section id="about" className="py-24 bg-[#0a0a0a]">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section id="about" className="py-16 bg-[#0a0a0a]">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="relative">
-            <div className="aspect-[4/5] rounded-lg overflow-hidden border border-[#c9a227]/10">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/10">
               <Image
                 src="/images/gallery-2.jpg"
                 alt="Setup DJ MG Events"
@@ -257,6 +286,146 @@ function About() {
   );
 }
 
+// ============ EXPERIENCE MUSICALE ============
+function ExperienceMusicale() {
+  const stats = [
+    {
+      icon: Headphones,
+      value: '+25 ans',
+      label: "d'expérience DJ",
+      description: 'Des discothèques bretonnes aux plus beaux mariages de la région',
+    },
+    {
+      icon: Disc3,
+      value: 'Répertoire',
+      label: 'musical complet',
+      description: "80's, rock, variété française, hits actuels, électro, slow... toutes les générations sur la piste",
+    },
+    {
+      icon: Volume2,
+      value: 'Matériel',
+      label: 'professionnel',
+      description: 'Son et lumière haut de gamme adaptés à chaque salle de réception',
+    },
+  ];
+
+  const faqs = [
+    {
+      question: 'Quel style de musique passez-vous en mariage ?',
+      answer: "Notre répertoire couvre tous les styles : années 80, rock, new wave, variété française, hits actuels, électro, musiques du monde. Nous adaptons la programmation à vos goûts et à l'ambiance de la soirée, avec une ouverture aux demandes de vos invités.",
+    },
+    {
+      question: 'Peut-on vous transmettre une playlist personnalisée ?',
+      answer: "Absolument ! Nous créons ensemble votre playlist idéale en amont, tout en gardant la flexibilité de nous adapter en direct aux réactions de la piste de danse.",
+    },
+    {
+      question: "L'ambiance est-elle adaptée à toutes les générations ?",
+      answer: "C'est notre spécialité. Avec 25 ans d'expérience en discothèque, nous savons fédérer grands-parents, parents et jeunes sur la même piste de danse.",
+    },
+  ];
+
+  return (
+    <section id="experience" className="py-16 bg-[#141414]">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="gold-line mx-auto mb-6" />
+          <h2 className="section-title text-white mb-4">
+            DJ Professionnel Depuis 1999 — <span className="text-gradient-gold">Une Expertise Forgée en Discothèque</span>
+          </h2>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Text Content */}
+          <div className="space-y-6 text-[#aaa] leading-relaxed">
+            <p className="text-lg">
+              Avant de devenir <strong className="text-white">DJ animateur de mariage en Bretagne</strong>, j&apos;ai passé plus de 25 ans à faire vibrer les dancefloors des plus grandes discothèques du <strong className="text-white">Finistère</strong> et du <strong className="text-white">Morbihan</strong> : Le Kalicut, La Guinguette, Le Ten Club, Le 29...
+            </p>
+            <p>
+              Ces milliers de nuits aux platines m&apos;ont transmis un savoir-faire unique : <span className="text-[#c9a227]">lire une piste de danse</span> et adapter la musique en temps réel.
+            </p>
+            <p>
+              Ma philosophie ? Une <strong className="text-white">programmation musicale riche et variée</strong> qui rassemble toutes les générations. Des années 80 au rock, de la new wave aux tubes actuels — toujours en accord avec vos envies et l&apos;énergie de vos invités. Pas de playlist figée. Chaque soirée de mariage est unique.
+            </p>
+            <p className="text-[#c9a227] font-medium text-lg">
+              Notre règle d&apos;or : de tout, pour tout le monde.
+            </p>
+            <p>
+              Côté technique, chaque détail compte. <strong className="text-white">Sonorisation professionnelle</strong> calibrée pour chaque moment : ambiance feutrée pendant le repas, son puissant et maîtrisé pour enflammer le dancefloor. Une animation élégante et moderne, à l&apos;image de votre événement.
+            </p>
+          </div>
+
+          {/* Image */}
+          <div className="relative">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20">
+              <Image
+                src="/images/gallery-8.jpg"
+                alt="DJ professionnel aux platines - MG Events Animation"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-4 -left-4 w-full h-full border border-[#c9a227]/20 rounded-lg -z-10" />
+          </div>
+        </div>
+
+        {/* Statistics */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {stats.map((stat, index) => (
+            <div key={index} className="card-dark p-6 text-center">
+              <stat.icon size={40} className="text-[#c9a227] mx-auto mb-4" />
+              <div className="text-2xl font-[family-name:var(--font-display)] text-white mb-1">
+                <strong>{stat.value}</strong> {stat.label}
+              </div>
+              <p className="text-[#888] text-sm">{stat.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* FAQ Section */}
+        <div className="card-dark p-8">
+          <h3 className="font-[family-name:var(--font-display)] text-2xl text-white mb-8 text-center">
+            Questions fréquentes sur notre <span className="text-[#c9a227]">animation musicale</span>
+          </h3>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border-b border-[#c9a227]/10 pb-6 last:border-0 last:pb-0">
+                <h4 className="text-white font-medium mb-3 flex items-start gap-3">
+                  <HelpCircle size={20} className="text-[#c9a227] shrink-0 mt-0.5" />
+                  {faq.question}
+                </h4>
+                <p className="text-[#aaa] leading-relaxed pl-8">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
+    </section>
+  );
+}
+
 // ============ FORMULES ============
 function Formules() {
   const formules = [
@@ -305,67 +474,20 @@ function Formules() {
   ];
 
   return (
-    <section id="formules" className="py-24 bg-[#0a0a0a]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="formules" className="py-16 bg-[#0a0a0a]">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="gold-line mx-auto mb-6" />
-          <h2 className="section-title text-white mb-4">
+        <div className="text-center mb-10">
+          <h2 className="section-title text-white mb-2">
             Nos <span className="text-gradient-gold">Formules</span>
           </h2>
-          <p className="text-[#888] max-w-xl mx-auto">
-            Des prestations sur-mesure pour s&apos;adapter à vos envies et votre budget
+          <p className="text-[#888]">
+            Prestations sur-mesure pour s&apos;adapter à vos envies et votre budget
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {formules.map((formule) => (
-            <div
-              key={formule.name}
-              className={`relative card-dark p-8 ${
-                formule.popular ? 'border-[#c9a227]/40 scale-105 md:scale-110' : ''
-              }`}
-            >
-              {formule.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#c9a227] text-[#0a0a0a] text-xs font-semibold uppercase tracking-wider rounded-full">
-                  Populaire
-                </div>
-              )}
-
-              <h3 className="font-[family-name:var(--font-display)] text-2xl text-white mb-2">
-                {formule.name}
-              </h3>
-              <p className="text-sm text-[#888] mb-6">{formule.description}</p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">
-                  {formule.price}
-                </span>
-                <span className="text-[#888] ml-2">€ TTC</span>
-              </div>
-
-              <ul className="space-y-3 mb-8">
-                {formule.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm text-[#aaa]">
-                    <Check size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href="#contact"
-                className={formule.popular ? 'btn-gold w-full text-center block' : 'btn-outline w-full text-center block'}
-              >
-                Choisir cette formule
-              </a>
-            </div>
-          ))}
-        </div>
-
         {/* Cérémonie Laïque */}
-        <div className="mt-16">
+        <div className="mb-12">
           <div className="text-center mb-8">
             <h3 className="font-[family-name:var(--font-display)] text-3xl text-white mb-2">
               Cérémonie de mariage en plein air
@@ -457,6 +579,52 @@ function Formules() {
             </p>
           </div>
         </div>
+
+        {/* Cards Formules */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {formules.map((formule) => (
+            <div
+              key={formule.name}
+              className={`relative card-dark p-8 ${
+                formule.popular ? 'border-[#c9a227]/40 scale-105 md:scale-110' : ''
+              }`}
+            >
+              {formule.popular && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#c9a227] text-[#0a0a0a] text-xs font-semibold uppercase tracking-wider rounded-full">
+                  Populaire
+                </div>
+              )}
+
+              <h3 className="font-[family-name:var(--font-display)] text-2xl text-white mb-2">
+                {formule.name}
+              </h3>
+              <p className="text-sm text-[#888] mb-6">{formule.description}</p>
+
+              <div className="mb-6">
+                <span className="text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">
+                  {formule.price}
+                </span>
+                <span className="text-[#888] ml-2">€ TTC</span>
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                {formule.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3 text-sm text-[#aaa]">
+                    <Check size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href="#contact"
+                className={formule.popular ? 'btn-gold w-full text-center block' : 'btn-outline w-full text-center block'}
+              >
+                Choisir cette formule
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -466,61 +634,120 @@ function Formules() {
 function Testimonials() {
   const testimonials = [
     {
+      name: 'Sam & Flo',
+      text: 'Guillaume et Laurence, nous vous remercions infiniment pour votre gentillesse, professionnalisme et écoute. Tout y était, c\'était parfait ! Nos invités se sont éclatés. On vous recommande à 200% !',
+      platform: 'Mariages.net',
+    },
+    {
+      name: 'Michael S.',
+      text: 'Superbe ambiance, son et lumières de très bonnes qualités. Vous cherchez un DJ à la hauteur de votre événement, ne cherchez plus ! Rien à redire, tout a été fait avec beaucoup de professionnalisme.',
+      platform: 'Facebook',
+    },
+    {
       name: 'Morane & Kevin',
-      text: 'Merci à Guillaume et Laurence pour leur superbe prestation à notre mariage ! Les invités ont été conquis et ont enflammé le dancefloor, toutes générations confondues, jusqu\'au bout de la nuit !',
+      text: 'Superbe prestation ! Les invités ont été conquis et ont enflammé le dancefloor, toutes générations confondues, jusqu\'au bout de la nuit !',
+      platform: 'Mariages.net',
+    },
+    {
+      name: 'Cindy D.',
+      text: 'Un grand merci à Guillaume pour son professionnalisme, son écoute, sa disponibilité et sa gentillesse ! Nous sommes ravis de l\'avoir choisi pour notre mariage.',
+      platform: 'Facebook',
     },
     {
       name: 'Pauline & Nicolas',
-      text: 'Si vous cherchez un DJ pour n\'importe quelle occasion prenez le les yeux fermés. Nous n\'avons eu que des super retour des invités, tout le monde était ravi.',
+      text: 'Si vous cherchez un DJ, prenez-le les yeux fermés. Nous n\'avons eu que des super retours des invités.',
+      platform: 'Mariages.net',
     },
     {
-      name: 'Océane & Francky',
-      text: 'Merci à vous deux pour votre investissement, votre gentillesse et votre professionnalisme. Vous le faites tellement par passion et avec le cœur. Ne changez surtout pas !',
-    },
-    {
-      name: 'Marie & Julien',
-      text: 'Un grand merci pour votre professionnalisme, votre écoute, votre dynamisme ! Vous avez su donner à notre mariage l\'ambiance que nous espérions.',
+      name: 'Jennifer B.',
+      text: 'Je recommande fortement ! Personnes très agréables et ambiance assurée ! MERCI pour cette magnifique soirée !',
+      platform: 'Facebook',
     },
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="testimonials" className="py-16 bg-[#0a0a0a] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#c9a227]/20 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#c9a227]/20 to-transparent" />
-      
-      <div className="max-w-6xl mx-auto px-6">
+
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="gold-line mx-auto mb-6" />
+        <div className="text-center mb-10">
           <h2 className="section-title text-white mb-4">
             Ils nous ont fait <span className="text-gradient-gold">confiance</span>
           </h2>
-          <div className="flex items-center justify-center gap-2 text-[#888]">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={20} fill="#c9a227" className="text-[#c9a227]" />
-              ))}
+
+          {/* Stats summary */}
+          <div className="flex flex-wrap items-center justify-center gap-6 mb-6 text-[#aaa]">
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={16} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <span className="text-white font-semibold">45 avis</span>
+              <span className="text-sm">5 étoiles</span>
             </div>
-            <span>5.0 sur Mariages.net</span>
+            <span className="hidden sm:inline text-[#c9a227]">•</span>
+            <span className="text-sm"><strong className="text-white">100%</strong> recommandé</span>
+          </div>
+
+          {/* Platform Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://www.mariages.net/musique-mariage/mg-events-animation--e233666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/30 rounded-full hover:border-[#c9a227]/60 transition-colors text-sm"
+            >
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={14} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <span className="text-white font-medium">5/5 Mariages.net</span>
+              <span className="text-[#888]">(18 avis)</span>
+            </a>
+            <a
+              href="https://www.facebook.com/MGevents35/reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a1a1a] border border-[#3b5998]/30 rounded-full hover:border-[#3b5998]/60 transition-colors text-sm"
+            >
+              <svg className="w-4 h-4 text-[#3b5998]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              <span className="text-white font-medium">100% recommandé</span>
+              <span className="text-[#888]">(27 avis)</span>
+            </a>
           </div>
         </div>
 
-        {/* Testimonial grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.name} className="card-dark p-8 relative">
-              <Quote size={40} className="absolute top-6 right-6 text-[#c9a227]/10" />
-              <p className="text-[#aaa] leading-relaxed mb-6 relative z-10">
+        {/* Testimonial grid - 3 columns on large screens */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="card-dark p-5 relative">
+              <Quote size={24} className="absolute top-4 right-4 text-[#c9a227]/10" />
+              {/* Stars */}
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={14} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <p className="text-[#aaa] text-sm leading-relaxed mb-4 relative z-10">
                 &ldquo;{testimonial.text}&rdquo;
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#c9a227] to-[#9a7b1a] flex items-center justify-center">
-                  <span className="text-[#0a0a0a] text-sm font-semibold">
-                    {testimonial.name.charAt(0)}
-                  </span>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#c9a227] to-[#9a7b1a] flex items-center justify-center">
+                    <span className="text-[#0a0a0a] text-xs font-semibold">
+                      {testimonial.name.charAt(0)}
+                    </span>
+                  </div>
+                  <span className="text-white text-sm font-medium">{testimonial.name}</span>
                 </div>
-                <span className="text-white font-medium">{testimonial.name}</span>
+                <span className="text-[#666] text-xs">— {testimonial.platform}</span>
               </div>
             </div>
           ))}
@@ -582,9 +809,9 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0a0a0a]">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12">
+    <section id="contact" className="py-16 bg-[#0a0a0a]">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Info */}
           <div>
             <div className="gold-line mb-6" />
@@ -788,29 +1015,26 @@ function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-[#0a0a0a]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="gallery" className="py-16 bg-[#0a0a0a]">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="gold-line mx-auto mb-6" />
-          <h2 className="section-title text-white mb-4">
+        <div className="text-center mb-10">
+          <h2 className="section-title text-white mb-2">
             Nos <span className="text-gradient-gold">prestations</span> en images
           </h2>
-          <p className="text-[#888] max-w-xl mx-auto">
+          <p className="text-[#888]">
             Des ambiances uniques pour des moments inoubliables
           </p>
         </div>
 
-        {/* Gallery Grid */}
+        {/* Gallery Grid - Balanced 4 columns */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {images.map((image, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden rounded-lg border border-[#c9a227]/10 group ${
-                index === 0 ? 'col-span-2 row-span-2' : ''
-              }`}
+              className="relative overflow-hidden rounded-lg border border-[#c9a227]/10 group"
             >
-              <div className={`relative ${index === 0 ? 'aspect-square' : 'aspect-[4/3]'}`}>
+              <div className="relative aspect-square">
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -829,125 +1053,82 @@ function Gallery() {
 
 // ============ PHOTOBOOTH ============
 function Photobooth() {
-  const photos = [
-    { src: '/images/photobooth-1.jpg', alt: 'Photobooth vue de face avec écran Kodak' },
-    { src: '/images/photobooth-3.jpg', alt: 'Photobooth vue de côté avec imprimante' },
-  ];
-
   return (
-    <section id="photobooth" className="py-24 bg-[#0a0a0a]">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="gold-line mx-auto mb-6" />
-          <h2 className="section-title text-white mb-4">
+    <section id="photobooth" className="py-16 bg-[#0a0a0a]">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header compact */}
+        <div className="text-center mb-10">
+          <h2 className="section-title text-white mb-2">
             Notre <span className="text-gradient-gold">Photobooth</span> Vintage
           </h2>
-          <p className="text-[#c9a227] text-lg mb-4">Capturez l&apos;instant</p>
-          <p className="text-[#888] max-w-2xl mx-auto">
-            Un incontournable des soirées réussies ! Notre photobooth au look unique et authentique
-            a été conçu à partir d&apos;un véritable poste TSF des années 60, pour une touche chic
-            et vintage qui fera sensation auprès de vos invités.
-          </p>
+          <p className="text-[#888]">Capturez l&apos;instant avec notre poste TSF des années 60</p>
         </div>
 
-        {/* Photo Gallery */}
-        <div className="grid lg:grid-cols-3 gap-4 mb-12">
-          {/* Main photo - en action */}
-          <div className="lg:col-span-2 lg:row-span-2 relative rounded-lg overflow-hidden border border-[#c9a227]/10 group">
-            <div className="relative aspect-[4/3] lg:aspect-auto lg:h-full">
-              <Image
-                src="/images/photobooth-2.jpg"
-                alt="Photobooth en action avec des invités"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6">
-                <p className="text-white font-medium">Le photobooth en action</p>
-                <p className="text-[#888] text-sm">Des souvenirs inoubliables</p>
+        {/* Layout principal */}
+        <div className="grid lg:grid-cols-3 gap-6">
+          {/* Photos à gauche */}
+          <div className="lg:col-span-2 grid grid-cols-2 gap-4">
+            {/* Main photo */}
+            <div className="col-span-2 relative rounded-lg overflow-hidden border border-[#c9a227]/10 group">
+              <div className="relative aspect-[16/9]">
+                <Image
+                  src="/images/photobooth-2.jpg"
+                  alt="Photobooth en action"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            {/* Thumbnails */}
+            <div className="relative rounded-lg overflow-hidden border border-[#c9a227]/10">
+              <div className="relative aspect-[4/3]">
+                <Image src="/images/photobooth-1.jpg" alt="Photobooth face" fill className="object-cover" />
+              </div>
+            </div>
+            <div className="relative rounded-lg overflow-hidden border border-[#c9a227]/10">
+              <div className="relative aspect-[4/3]">
+                <Image src="/images/photobooth-3.jpg" alt="Photobooth côté" fill className="object-cover" />
               </div>
             </div>
           </div>
 
-          {/* Thumbnails */}
-          {photos.map((photo, index) => (
-            <div key={index} className="relative rounded-lg overflow-hidden border border-[#c9a227]/10 group">
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Description */}
-        <div className="card-dark p-8 mb-6">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-[#aaa] leading-relaxed mb-6">
-                Équipé d&apos;un appareil reflex professionnel, d&apos;un écran tactile 15&quot; et d&apos;une
-                imprimante instantanée, il permet à vos convives de repartir avec leurs souvenirs
-                imprimés sur place.
+          {/* Infos à droite */}
+          <div className="space-y-4">
+            {/* Description */}
+            <div className="card-dark p-6">
+              <p className="text-[#aaa] text-sm leading-relaxed mb-4">
+                Appareil reflex professionnel, écran tactile 15&quot; et imprimante instantanée.
+                Vos invités repartent avec leurs souvenirs imprimés sur place.
               </p>
               <ul className="space-y-2">
-                {[
-                  '150 impressions incluses',
-                  'Personnalisation des tirages avec vos prénoms et la date',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-[#aaa]">
-                    <Check size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
+                {['150 impressions incluses', 'Personnalisation avec vos prénoms'].map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm text-[#aaa]">
+                    <Check size={14} className="text-[#c9a227]" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="flex items-center justify-center">
-              <div className="text-center">
-                <Camera size={48} className="text-[#c9a227] mx-auto mb-4" />
-                <p className="text-white font-[family-name:var(--font-display)] text-xl mb-2">
-                  Poste TSF années 60
-                </p>
-                <p className="text-[#888] text-sm">
-                  Un look authentique et unique
-                </p>
+
+            {/* Inclus Conte de Fées */}
+            <div className="card-dark p-4">
+              <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-1">Inclus dans</p>
+              <p className="text-white font-[family-name:var(--font-display)]">Conte de Fées</p>
+            </div>
+
+            {/* Location seule */}
+            <div className="card-dark p-4 border-[#c9a227]/30">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-1">Location seule</p>
+                  <p className="text-[#888] text-xs">150 tirages inclus</p>
+                </div>
+                <div className="text-right">
+                  <span className="text-2xl font-[family-name:var(--font-display)] text-[#c9a227]">240</span>
+                  <span className="text-[#888] text-sm">€</span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Options */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Inclus dans Conte de Fées */}
-          <div className="card-dark p-6">
-            <p className="text-sm text-[#c9a227] uppercase tracking-wider mb-2">
-              Inclus dans la formule
-            </p>
-            <p className="text-white font-[family-name:var(--font-display)] text-xl mb-4">
-              Conte de Fées
-            </p>
-            <p className="text-[#888] text-sm">
-              Le photobooth est inclus dans notre formule premium à 1690€
-            </p>
-          </div>
-
-          {/* Location seule */}
-          <div className="card-dark p-6 border-[#c9a227]/30">
-            <p className="text-sm text-[#c9a227] uppercase tracking-wider mb-2">
-              Location seule
-            </p>
-            <div className="flex items-baseline gap-2 mb-4">
-              <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">240</span>
-              <span className="text-[#888]">€ TTC</span>
-            </div>
-            <p className="text-[#888] text-sm">
-              150 tirages inclus • Disponible en complément de toutes nos formules
-            </p>
           </div>
         </div>
       </div>
@@ -976,14 +1157,14 @@ function AnimaJet() {
   ];
 
   return (
-    <section className="py-24 bg-[#0a0a0a] relative overflow-hidden">
+    <section className="py-16 bg-[#0a0a0a] relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#c9a227]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#c9a227]/5 rounded-full blur-3xl" />
 
-      <div className="max-w-6xl mx-auto px-6 relative">
+      <div className="max-w-7xl mx-auto px-6 relative">
         {/* Header avec logo */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
           {/* Logo côté */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
@@ -1047,23 +1228,19 @@ function AnimaJet() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="card-dark p-8 border-[#c9a227]/20">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <Sparkles size={40} className="text-[#c9a227]" />
-              <div>
-                <p className="text-white text-xl font-[family-name:var(--font-display)]">
-                  Du jamais vu en Bretagne
-                </p>
-                <p className="text-[#888]">
-                  Une soirée unique, moderne et à votre image.
-                </p>
-              </div>
+        {/* Included notice */}
+        <div className="card-dark p-6 border-[#c9a227]/30 text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex items-center gap-3">
+              <Check size={24} className="text-[#c9a227]" />
+              <p className="text-white text-lg font-[family-name:var(--font-display)]">
+                AnimaJet <span className="text-[#c9a227]">inclus dans toutes nos formules</span>
+              </p>
             </div>
-            <a href="#contact" className="btn-gold whitespace-nowrap">
-              Réserver AnimaJet
-            </a>
+            <span className="hidden sm:inline text-[#666]">—</span>
+            <p className="text-[#888]">
+              Une exclusivité MG Events en Bretagne
+            </p>
           </div>
         </div>
       </div>
@@ -1092,69 +1269,56 @@ function EtincellesFroides() {
   ];
 
   return (
-    <section className="py-24 bg-[#141414]">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="gold-line mx-auto mb-6" />
+    <section className="py-16 bg-[#141414]">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header compact */}
+        <div className="text-center mb-10">
           <h2 className="section-title text-white mb-2">
             Étincelles <span className="text-gradient-gold">Froides</span>
           </h2>
-          <p className="text-xl text-[#c9a227] font-[family-name:var(--font-display)] mb-4">
-            La magie en toute sécurité
-          </p>
-          <p className="text-[#888] max-w-2xl mx-auto">
-            Sublimez votre ouverture de bal ou la présentation de votre gâteau
-            avec nos fontaines d&apos;étincelles froides. Un effet spectaculaire et féérique, sans aucun risque.
+          <p className="text-[#888]">
+            Sublimez votre ouverture de bal avec nos fontaines d&apos;étincelles froides • Effet spectaculaire et féérique, sans aucun risque
           </p>
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+        <div className="grid lg:grid-cols-3 gap-6 mb-8">
           {/* Image */}
           <div className="relative">
-            <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-[#c9a227]/20">
+            <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-[#c9a227]/20">
               <Image
                 src="/images/etincelles-ouverture-bal.jpg"
                 alt="Étincelles froides lors d'une ouverture de bal"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent" />
             </div>
             {/* Badge CE */}
-            <div className="absolute -bottom-4 -right-4 bg-[#0a0a0a] border-2 border-[#c9a227] rounded-full p-4">
-              <div className="text-center">
-                <ShieldCheck size={24} className="text-[#c9a227] mx-auto" />
-                <span className="text-[#c9a227] text-xs font-bold block mt-1">CE</span>
-              </div>
+            <div className="absolute bottom-4 right-4 bg-[#0a0a0a] border-2 border-[#c9a227] rounded-full p-3">
+              <ShieldCheck size={20} className="text-[#c9a227]" />
             </div>
           </div>
 
           {/* Sécurité */}
-          <div>
-            <div className="flex items-center gap-3 mb-8">
-              <ShieldCheck size={32} className="text-[#c9a227]" />
-              <h3 className="text-white font-[family-name:var(--font-display)] text-2xl">
+          <div className="lg:col-span-2 flex flex-col justify-center">
+            <div className="flex items-center gap-3 mb-6">
+              <ShieldCheck size={28} className="text-[#c9a227]" />
+              <h3 className="text-white font-[family-name:var(--font-display)] text-xl">
                 Votre sécurité, notre priorité
               </h3>
             </div>
 
-            <div className="space-y-6">
+            <div className="grid sm:grid-cols-3 gap-4">
               {securite.map((item, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="shrink-0 w-12 h-12 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-lg flex items-center justify-center">
-                    <item.icon size={24} className="text-[#c9a227]" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-medium mb-1 flex items-center gap-2">
-                      <Check size={16} className="text-green-500" />
-                      {item.title}
-                    </h4>
-                    <p className="text-[#888] text-sm leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
+                <div key={index} className="card-dark p-4 text-center">
+                  <item.icon size={28} className="text-[#c9a227] mx-auto mb-2" />
+                  <h4 className="text-white font-medium text-sm mb-1 flex items-center justify-center gap-1">
+                    <Check size={14} className="text-green-500" />
+                    {item.title}
+                  </h4>
+                  <p className="text-[#888] text-xs leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -1180,106 +1344,63 @@ function EtincellesFroides() {
 // ============ AUTRES EVENEMENTS ============
 function AutresEvenements() {
   const events = [
-    {
-      icon: Cake,
-      title: 'Anniversaire',
-      description: 'Fêtez vos moments importants avec une ambiance sur-mesure',
-    },
-    {
-      icon: Mic2,
-      title: 'Karaoké',
-      description: 'Animations karaoké pour des soirées inoubliables',
-    },
-    {
-      icon: Building2,
-      title: 'Comité d\'entreprise',
-      description: 'Séminaires, team building, soirées de gala',
-    },
-    {
-      icon: GlassWater,
-      title: 'Soirée privée',
-      description: 'Bar, discothèque, événements privés',
-    },
+    { icon: Cake, title: 'Anniversaire', description: 'Ambiance sur-mesure' },
+    { icon: Mic2, title: 'Karaoké', description: 'Soirées inoubliables' },
+    { icon: Building2, title: 'CE / Entreprise', description: 'Séminaires, galas' },
+    { icon: GlassWater, title: 'Soirée privée', description: 'Bar, discothèque' },
   ];
 
   return (
-    <section className="py-24 bg-[#141414]">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="gold-line mx-auto mb-6" />
-          <h2 className="section-title text-white mb-4">
-            Nous animons aussi vos <span className="text-gradient-gold">autres événements</span>
-          </h2>
-          <p className="text-[#888] max-w-xl mx-auto">
-            Notre expertise au service de toutes vos célébrations
-          </p>
-        </div>
+    <section className="py-16 bg-[#141414]">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header + Events Grid inline */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-8">
+          {/* Header */}
+          <div>
+            <h2 className="section-title text-white mb-2">
+              Autres <span className="text-gradient-gold">événements</span>
+            </h2>
+            <p className="text-[#888] text-sm">
+              Notre expertise au service de toutes vos célébrations
+            </p>
+          </div>
 
-        {/* Events Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className="card-dark p-6 text-center hover:border-[#c9a227]/30 transition-colors"
-            >
-              <event.icon size={40} className="text-[#c9a227] mx-auto mb-4" />
-              <h3 className="text-white font-[family-name:var(--font-display)] text-lg mb-2">
-                {event.title}
-              </h3>
-              <p className="text-[#888] text-sm">
-                {event.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Forfait Anniversaire */}
-        <div className="card-dark p-8 mb-12 border-[#c9a227]/30">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div className="flex items-start gap-4">
-              <div className="shrink-0 w-14 h-14 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-xl flex items-center justify-center">
-                <Cake size={28} className="text-[#c9a227]" />
+          {/* Events Grid */}
+          <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {events.map((event, index) => (
+              <div key={index} className="card-dark p-4 text-center hover:border-[#c9a227]/30 transition-colors">
+                <event.icon size={28} className="text-[#c9a227] mx-auto mb-2" />
+                <h3 className="text-white text-sm font-medium mb-1">{event.title}</h3>
+                <p className="text-[#888] text-xs">{event.description}</p>
               </div>
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-white font-[family-name:var(--font-display)] text-xl">
-                    Forfait Anniversaire
-                  </h3>
-                  <span className="px-3 py-1 bg-[#c9a227]/20 border border-[#c9a227]/30 rounded-full text-[#c9a227] text-xs">
-                    Octobre à Avril
-                  </span>
-                </div>
-                <p className="text-[#888] text-sm mb-2">
-                  Animation complète + vidéo projecteur inclus
-                </p>
-                <p className="text-[#666] text-xs italic">
-                  Détails sur demande
-                </p>
-              </div>
-            </div>
-            <div className="text-right shrink-0">
-              <p className="text-[#888] text-sm mb-1">À partir de</p>
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">600</span>
-                <span className="text-[#888]">€ TTC</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <p className="text-[#aaa] mb-6">
-            Demandez votre devis personnalisé et vérifiez nos disponibilités
-          </p>
-          <a
-            href="#contact"
-            className="btn-gold inline-flex items-center gap-2"
-          >
-            <Mail size={18} />
-            Demander un devis
-          </a>
+        {/* Forfait Anniversaire */}
+        <div className="card-dark p-6 border-[#c9a227]/30">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <Cake size={32} className="text-[#c9a227] shrink-0" />
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <h3 className="text-white font-[family-name:var(--font-display)] text-lg">Forfait Anniversaire</h3>
+                  <span className="px-2 py-0.5 bg-[#c9a227]/20 border border-[#c9a227]/30 rounded-full text-[#c9a227] text-xs">
+                    Oct-Avril
+                  </span>
+                </div>
+                <p className="text-[#888] text-sm">Animation complète + vidéo projecteur • <span className="text-[#666] italic">Détails sur demande</span></p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 shrink-0">
+              <div className="text-right">
+                <p className="text-[#888] text-xs">À partir de</p>
+                <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">600</span>
+                <span className="text-[#888] text-sm">€</span>
+              </div>
+              <a href="#contact" className="btn-gold whitespace-nowrap">Devis</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1288,36 +1409,78 @@ function AutresEvenements() {
 
 // ============ FOOTER ============
 function Footer() {
+  const zones = [
+    { label: 'Ille-et-Vilaine', href: '/dj-mariage-ille-et-vilaine' },
+    { label: 'Morbihan', href: '/dj-mariage-morbihan' },
+    { label: 'Finistère', href: '/dj-mariage-finistere' },
+    { label: 'Loire-Atlantique', href: '/dj-mariage-loire-atlantique' },
+    { label: 'Mayenne', href: '/dj-mariage-mayenne' },
+  ];
+
   return (
-    <footer className="py-12 bg-[#0a0a0a] border-t border-[#c9a227]/10">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo */}
-          <div className="flex items-center">
-            <img
-              src="/images/logo.png"
-              alt="MG Events Animation"
-              className="h-12 w-auto"
-            />
+    <footer className="py-16 bg-[#0a0a0a] border-t border-[#c9a227]/10">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Main Footer Grid */}
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
+          {/* Logo & Contact */}
+          <div className="md:col-span-1">
+            <img src="/images/logo.png" alt="MG Events Animation DJ Mariage Bretagne" className="h-12 w-auto mb-4" />
+            <p className="text-[#888] text-sm mb-4">DJ animateur mariage en Bretagne depuis plus de 20 ans.</p>
+            <p className="text-[#888] text-sm">
+              <a href="tel:+33648106166" className="text-[#c9a227] hover:underline">06 48 10 61 66</a><br />
+              <a href="mailto:mg.events35@gmail.com" className="text-[#c9a227] hover:underline">mg.events35@gmail.com</a>
+            </p>
           </div>
 
-          {/* Links */}
-          <div className="flex items-center gap-6 text-sm text-[#666]">
-            <a href="#" className="hover:text-[#c9a227] transition-colors">Mentions légales</a>
-            <a href="#" className="hover:text-[#c9a227] transition-colors">CGV</a>
-            <a 
-              href="https://www.facebook.com/MGevents35/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-[#c9a227] transition-colors"
-            >
-              Facebook
-            </a>
+          {/* Zones */}
+          <div>
+            <h4 className="text-white font-medium mb-4">Zones d&apos;intervention</h4>
+            <ul className="space-y-2">
+              {zones.map((zone) => (
+                <li key={zone.href}>
+                  <a href={zone.href} className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                    DJ Mariage {zone.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Copyright */}
+          {/* Blog */}
+          <div>
+            <h4 className="text-white font-medium mb-4">Blog</h4>
+            <ul className="space-y-2">
+              <li><a href="/blog/comment-choisir-dj-mariage-bretagne" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Choisir son DJ mariage</a></li>
+              <li><a href="/blog/ouverture-de-bal-conseils" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Ouverture de bal</a></li>
+              <li><a href="/blog/etincelles-froides-mariage-securite" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Étincelles froides</a></li>
+              <li><a href="/blog/animations-mariage-originales-2026" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Animations 2026</a></li>
+              <li><a href="/blog" className="text-[#c9a227] text-sm hover:underline">Tous les articles →</a></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-white font-medium mb-4">Informations</h4>
+            <ul className="space-y-2">
+              <li><a href="/mentions-legales" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Mentions légales</a></li>
+              <li><a href="/cgv" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">CGV</a></li>
+              <li><a href="/confidentialite" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Confidentialité</a></li>
+              <li>
+                <a href="https://www.facebook.com/MGevents35/" target="_blank" rel="noopener noreferrer" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                  Facebook
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-[#c9a227]/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-[#666]">
-            © {new Date().getFullYear()} MG Events Animation
+            © {new Date().getFullYear()} MG Events Animation - DJ Mariage Bretagne - Tous droits réservés
+          </p>
+          <p className="text-xs text-[#444]">
+            Rennes • Vannes • Nantes • Quimper • Brest • Laval
           </p>
         </div>
       </div>
@@ -1333,6 +1496,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <ExperienceMusicale />
         <Gallery />
         <Photobooth />
         <AnimaJet />

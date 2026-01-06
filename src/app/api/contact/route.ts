@@ -41,28 +41,30 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 1. Enregistrer le lead dans Supabase
-    const { error: supabaseError } = await supabase
-      .from('leads')
-      .insert([
-        {
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          date: data.date || null,
-          location: data.location || null,
-          event_type: data.eventType,
-          formule: data.formule || null,
-          message: data.message || null,
-        },
-      ]);
+    // 1. Enregistrer le lead dans Supabase (si configuré)
+    if (supabase) {
+      const { error: supabaseError } = await supabase
+        .from('leads')
+        .insert([
+          {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            date: data.date || null,
+            location: data.location || null,
+            event_type: data.eventType,
+            formule: data.formule || null,
+            message: data.message || null,
+          },
+        ]);
 
-    if (supabaseError) {
-      console.error('Erreur Supabase:', supabaseError);
-      return NextResponse.json(
-        { error: 'Erreur lors de l\'enregistrement de votre demande.' },
-        { status: 500 }
-      );
+      if (supabaseError) {
+        console.error('Erreur Supabase:', supabaseError);
+        return NextResponse.json(
+          { error: 'Erreur lors de l\'enregistrement de votre demande.' },
+          { status: 500 }
+        );
+      }
     }
 
     // 2. Envoyer un email de notification a MG Events
