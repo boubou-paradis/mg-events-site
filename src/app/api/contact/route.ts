@@ -71,7 +71,7 @@ export async function POST(request: NextRequest) {
     if (resend) {
       // Email de notification a MG Events
       await resend.emails.send({
-        from: 'MG Events <contact@mg-events35.com>',
+        from: 'MG Events <onboarding@resend.dev>',
         to: 'mg.events35@gmail.com',
         subject: `Nouvelle demande de devis - ${data.name}`,
         html: `
@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
 
       // Email de confirmation au prospect
       await resend.emails.send({
-        from: 'MG Events <contact@mg-events35.com>',
+        from: 'MG Events <onboarding@resend.dev>',
         to: data.email,
         subject: 'Votre demande de devis - MG Events Animation',
         html: `
