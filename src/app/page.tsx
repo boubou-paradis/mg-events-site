@@ -350,21 +350,52 @@ function Formules() {
           ))}
         </div>
 
-        {/* Option supplémentaire */}
-        <div className="mt-12 p-8 card-dark">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div>
-              <h3 className="font-[family-name:var(--font-display)] text-xl text-white mb-2">
-                Cérémonie Laïque
-              </h3>
-              <p className="text-sm text-[#888] max-w-xl">
-                Sonorisation complète sur batterie pour votre cérémonie en extérieur. 
-                2 micros sans fil, 2 micros cravate, table de mixage.
-              </p>
+        {/* Cérémonie Laïque */}
+        <div className="mt-16 card-dark overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            {/* Image */}
+            <div className="relative h-64 md:h-auto">
+              <Image
+                src="/images/ceremonie-laique.jpg"
+                alt="Cérémonie laïque en extérieur"
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="text-right shrink-0">
-              <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">180</span>
-              <span className="text-[#888] ml-2">€ TTC</span>
+            {/* Content */}
+            <div className="p-8">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="font-[family-name:var(--font-display)] text-2xl text-white">
+                  Cérémonie Laïque
+                </h3>
+                <div className="text-right">
+                  <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">180</span>
+                  <span className="text-[#888] ml-2">€ TTC</span>
+                </div>
+              </div>
+
+              <p className="text-sm text-[#c9a227] uppercase tracking-wider mb-4">Matériel inclus</p>
+              <ul className="space-y-2 mb-6">
+                {[
+                  '1 enceinte JBL EON ONE MK2 sur batterie',
+                  '2 micros sans fil',
+                  '2 micros cravate',
+                  '1 table de mixage avec connexion ordinateur/tablette',
+                  '1 technicien dédié le temps de la cérémonie',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-[#aaa]">
+                    <Check size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-sm text-[#888] leading-relaxed mb-2">
+                Le tout intégralement sur batterie pour vous offrir le cadre de votre choix.
+              </p>
+              <p className="text-xs text-[#666] italic">
+                La cérémonie doit être sur le même lieu de réception. Officiant non compris.
+              </p>
             </div>
           </div>
         </div>
