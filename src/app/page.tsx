@@ -509,8 +509,8 @@ function Contact() {
 
             {/* Contact info */}
             <div className="space-y-6">
-              <a 
-                href="tel:+33600000000" 
+              <a
+                href="tel:+33648106166"
                 className="flex items-center gap-4 text-[#aaa] hover:text-[#c9a227] transition-colors"
               >
                 <div className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#c9a227]/20 flex items-center justify-center">
@@ -518,7 +518,7 @@ function Contact() {
                 </div>
                 <div>
                   <div className="text-xs text-[#666] uppercase tracking-wider">Téléphone</div>
-                  <div className="text-white">06 XX XX XX XX</div>
+                  <div className="text-white">06 48 10 61 66</div>
                 </div>
               </a>
 
