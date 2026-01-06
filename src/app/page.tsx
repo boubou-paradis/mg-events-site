@@ -113,8 +113,8 @@ function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/hero-4.jpg"
-        alt="Couple dansant"
+        src="/images/hero-bg.jpg"
+        alt="Ouverture de bal avec étincelles froides"
         fill
         className="object-cover"
         priority
@@ -1106,7 +1106,7 @@ function EtincellesFroides() {
           <div className="relative">
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-[#c9a227]/20">
               <Image
-                src="/images/etincelles.jpg"
+                src="/images/etincelles-ouverture-bal.jpg"
                 alt="Étincelles froides lors d'une ouverture de bal"
                 fill
                 className="object-cover"
