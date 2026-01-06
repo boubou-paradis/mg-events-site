@@ -38,13 +38,10 @@ function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#hero" className="flex items-center">
-            <Image
+            <img
               src="/images/logo.jpg"
               alt="MG Events Animation"
-              width={140}
-              height={60}
               className="h-12 w-auto brightness-0 invert"
-              priority
             />
           </a>
 
@@ -121,7 +118,7 @@ function Hero() {
         {/* Badge */}
         <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full mb-8">
           <span className="w-2 h-2 bg-[#c9a227] rounded-full animate-pulse" />
-          <span className="text-sm text-[#aaa]">Disponible pour la saison 2025-2026</span>
+          <span className="text-sm text-[#aaa]">Disponible pour la saison 2026-2027</span>
         </div>
 
         {/* Title */}
@@ -133,7 +130,7 @@ function Hero() {
 
         {/* Subtitle */}
         <p className="animate-fade-up delay-200 text-lg sm:text-xl text-[#888] max-w-2xl mx-auto mb-4">
-          Plus de 6 ans d&apos;expérience au service de vos plus belles soirées
+          Plus de 20 ans d&apos;expérience au service de vos plus belles soirées
         </p>
         
         {/* Zone */}
@@ -156,7 +153,7 @@ function Hero() {
         {/* Stats */}
         <div className="animate-fade-up delay-500 mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
           <div className="text-center">
-            <div className="text-3xl sm:text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">6+</div>
+            <div className="text-3xl sm:text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">20+</div>
             <div className="text-xs text-[#666] uppercase tracking-wider mt-1">Années</div>
           </div>
           <div className="text-center">
@@ -211,7 +208,7 @@ function About() {
             <div className="space-y-4 text-[#aaa] leading-relaxed">
               <p>
                 <strong className="text-white">Guillaume et Laurence</strong>, un duo passionné et complémentaire, 
-                mettent leur expertise au service de vos événements depuis plus de 6 ans.
+                mettent leur expertise au service de vos événements depuis plus de 20 ans.
               </p>
               <p>
                 Fort d&apos;une expérience de plus de 20 ans dans le monde de la nuit et de l&apos;animation, 
@@ -745,11 +742,9 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div className="flex items-center">
-            <Image
+            <img
               src="/images/logo.jpg"
               alt="MG Events Animation"
-              width={120}
-              height={50}
               className="h-10 w-auto brightness-0 invert"
             />
           </div>
