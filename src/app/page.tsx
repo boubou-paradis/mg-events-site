@@ -39,9 +39,9 @@ function Header() {
           {/* Logo */}
           <a href="#hero" className="flex items-center">
             <img
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="MG Events Animation"
-              className="h-12 w-auto brightness-0 invert"
+              className="h-14 w-auto"
             />
           </a>
 
@@ -743,9 +743,9 @@ function Footer() {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="MG Events Animation"
-              className="h-10 w-auto brightness-0 invert"
+              className="h-12 w-auto"
             />
           </div>
 
