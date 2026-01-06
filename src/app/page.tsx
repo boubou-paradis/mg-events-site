@@ -27,7 +27,7 @@ import {
   Zap,
   ShieldCheck,
   Flame,
-  Home,
+  Home as HomeIcon,
   Award,
 } from 'lucide-react';
 
@@ -1076,7 +1076,7 @@ function EtincellesFroides() {
       description: 'Contrairement aux feux d\'artifice traditionnels, nos étincelles ne produisent pas de chaleur et ne présentent aucun risque d\'incendie.',
     },
     {
-      icon: Home,
+      icon: HomeIcon,
       title: 'Utilisable en intérieur',
       description: 'Sans fumée, sans odeur, sans danger pour vos invités ni pour la salle de réception.',
     },
