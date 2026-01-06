@@ -21,6 +21,10 @@ import {
   Music,
   Building2,
   GlassWater,
+  Share2,
+  HelpCircle,
+  Sparkles,
+  Zap,
 } from 'lucide-react';
 
 // ============ HEADER ============
@@ -950,6 +954,104 @@ function Photobooth() {
   );
 }
 
+// ============ ANIMAJET ============
+function AnimaJet() {
+  const features = [
+    {
+      icon: Share2,
+      title: 'Partage de photos en temps réel',
+      description: 'Vos invités partagent leurs plus beaux moments instantanément sur grand écran. Toute la soirée capturée, tous ensemble.',
+    },
+    {
+      icon: Music,
+      title: 'Quiz Musical Interactif',
+      description: 'Qui reconnaîtra le titre en premier ? Ambiance garantie et fous rires assurés pour toutes les générations.',
+    },
+    {
+      icon: HelpCircle,
+      title: 'Photo Mystère',
+      description: 'Un jeu original qui fera deviner vos invités et créera des moments de complicité inoubliables.',
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-[#0a0a0a] relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#c9a227]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#c9a227]/5 rounded-full blur-3xl" />
+
+      <div className="max-w-6xl mx-auto px-6 relative">
+        {/* Header */}
+        <div className="text-center mb-16">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#c9a227]/20 to-[#c9a227]/10 border border-[#c9a227]/30 rounded-full mb-6">
+            <Zap size={16} className="text-[#c9a227]" />
+            <span className="text-[#c9a227] text-sm font-medium">Exclusivité MG Events</span>
+          </div>
+
+          <h2 className="section-title text-white mb-2">
+            Animations <span className="text-gradient-gold">Interactives</span>
+          </h2>
+          <p className="text-xl text-[#c9a227] font-[family-name:var(--font-display)] mb-4">
+            Propulsé par AnimaJet
+          </p>
+          <p className="text-[#888] max-w-2xl mx-auto">
+            Une technologie exclusive développée par nos soins
+          </p>
+        </div>
+
+        {/* Description */}
+        <div className="text-center mb-16">
+          <p className="text-[#aaa] text-lg max-w-3xl mx-auto leading-relaxed">
+            Offrez à vos invités une expérience inédite grâce à <span className="text-[#c9a227] font-medium">AnimaJet</span>,
+            notre plateforme d&apos;animation interactive créée spécialement pour révolutionner vos soirées.
+          </p>
+        </div>
+
+        {/* Features */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="relative group"
+            >
+              <div className="card-dark p-8 h-full hover:border-[#c9a227]/40 transition-all duration-300">
+                {/* Icon with glow effect */}
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-[#c9a227]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="relative w-16 h-16 bg-gradient-to-br from-[#c9a227]/20 to-[#c9a227]/5 rounded-2xl flex items-center justify-center border border-[#c9a227]/20">
+                    <feature.icon size={28} className="text-[#c9a227]" />
+                  </div>
+                </div>
+
+                <h3 className="text-white font-[family-name:var(--font-display)] text-xl mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-[#888] leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center">
+          <div className="inline-block card-dark p-8 border-[#c9a227]/20">
+            <Sparkles size={32} className="text-[#c9a227] mx-auto mb-4" />
+            <p className="text-white text-lg font-[family-name:var(--font-display)] mb-2">
+              Du jamais vu en Bretagne
+            </p>
+            <p className="text-[#888]">
+              Une soirée unique, moderne et à votre image.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ AUTRES EVENEMENTS ============
 function AutresEvenements() {
   const events = [
@@ -1075,6 +1177,7 @@ export default function Home() {
         <Formules />
         <Gallery />
         <Photobooth />
+        <AnimaJet />
         <AutresEvenements />
         <Testimonials />
         <Contact />
