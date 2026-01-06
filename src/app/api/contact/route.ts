@@ -71,7 +71,7 @@ export async function POST(request: NextRequest) {
     if (resend) {
       await resend.emails.send({
         from: 'MG Events <onboarding@resend.dev>',
-        to: 'mg.events35@gmail.com',
+        to: 'mgevents.ecommerce@gmail.com',
         replyTo: data.email,
         subject: `Nouvelle demande de devis - ${data.name}`,
         html: `
