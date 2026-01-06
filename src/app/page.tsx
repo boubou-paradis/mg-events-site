@@ -351,52 +351,96 @@ function Formules() {
         </div>
 
         {/* Cérémonie Laïque */}
-        <div className="mt-16 card-dark overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
-            {/* Image */}
-            <div className="relative h-64 md:h-auto">
-              <Image
-                src="/images/ceremonie-laique.jpg"
-                alt="Cérémonie laïque en extérieur"
-                fill
-                className="object-cover"
-              />
-            </div>
-            {/* Content */}
-            <div className="p-8">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-[family-name:var(--font-display)] text-2xl text-white">
-                  Cérémonie Laïque
-                </h3>
-                <div className="text-right">
-                  <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">180</span>
-                  <span className="text-[#888] ml-2">€ TTC</span>
-                </div>
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <h3 className="font-[family-name:var(--font-display)] text-3xl text-white mb-2">
+              Cérémonie de mariage en plein air
+            </h3>
+            <p className="text-[#888]">Formule cérémonie laïque</p>
+          </div>
+
+          <div className="card-dark overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-0">
+              {/* Image */}
+              <div className="relative h-72 lg:h-auto min-h-[300px]">
+                <Image
+                  src="/images/ceremonie-laique.jpg"
+                  alt="Cérémonie laïque en extérieur"
+                  fill
+                  className="object-cover"
+                />
               </div>
+              {/* Content */}
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-6">
+                  <p className="text-sm text-[#c9a227] uppercase tracking-wider">Matériel inclus</p>
+                  <div className="text-right">
+                    <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">180</span>
+                    <span className="text-[#888] ml-2">€ TTC</span>
+                  </div>
+                </div>
 
-              <p className="text-sm text-[#c9a227] uppercase tracking-wider mb-4">Matériel inclus</p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  '1 enceinte JBL EON ONE MK2 sur batterie',
-                  '2 micros sans fil',
-                  '2 micros cravate',
-                  '1 table de mixage avec connexion ordinateur/tablette',
-                  '1 technicien dédié le temps de la cérémonie',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-[#aaa]">
-                    <Check size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                <ul className="space-y-2 mb-6">
+                  {[
+                    '1 enceinte JBL EON ONE MK2 sur batterie',
+                    '2 micros sans fil et/ou 2 micros cravate',
+                    '1 table de mixage avec connexion ordinateur/tablette',
+                    '2 techniciens dédiés le temps de la cérémonie',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-[#aaa]">
+                      <Check size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
 
-              <p className="text-sm text-[#888] leading-relaxed mb-2">
-                Le tout intégralement sur batterie pour vous offrir le cadre de votre choix.
-              </p>
-              <p className="text-xs text-[#666] italic">
-                La cérémonie doit être sur le même lieu de réception. Officiant non compris.
-              </p>
+                <p className="text-sm text-[#888] leading-relaxed mb-4">
+                  Le tout intégralement sur batterie pour vous offrir le cadre de votre choix.
+                </p>
+                <p className="text-xs text-[#666] italic">
+                  La cérémonie doit être sur le même lieu de réception. Officiant non compris.
+                </p>
+              </div>
             </div>
+          </div>
+
+          {/* Description détaillée */}
+          <div className="mt-8 card-dark p-8">
+            <p className="text-[#aaa] leading-relaxed mb-6">
+              Afin de faire de cette cérémonie un moment unique, rempli d&apos;émotion et de douceur,
+              une attention particulière a été portée à l&apos;univers musical qui l&apos;accompagne.
+              La musique, véritable fil conducteur de cette célébration, a été choisie pour refléter
+              l&apos;histoire, les valeurs et l&apos;amour qui unissent aujourd&apos;hui nos marié(e)s.
+            </p>
+
+            <p className="text-[#aaa] leading-relaxed mb-6">
+              Dès l&apos;arrivée des invités, une ambiance chaleureuse et harmonieuse vous accueillera,
+              grâce à une sélection de morceaux doux et instrumentaux, soigneusement diffusés en fond sonore.
+              Le système de sonorisation a été installé de manière à garantir une écoute claire et agréable
+              pour tous, tout en préservant l&apos;intimité des lieux.
+            </p>
+
+            <p className="text-sm text-[#c9a227] uppercase tracking-wider mb-4">
+              Chaque moment clé accompagné musicalement
+            </p>
+
+            <ul className="space-y-4 mb-6">
+              {[
+                { moment: 'L\'entrée des marié(e)s', desc: 'portée par une mélodie choisie spécialement pour symboliser leur engagement.' },
+                { moment: 'Les lectures et discours', desc: 'soutenus par une ambiance musicale légère, afin de laisser les mots résonner pleinement.' },
+                { moment: 'L\'échange des vœux et des alliances', desc: 'moment intime sublimé par une musique douce, comme un murmure au cœur.' },
+                { moment: 'La sortie des marié(e)s', desc: 'célébrée par un morceau joyeux et lumineux, pour inviter à la fête.' },
+              ].map((item) => (
+                <li key={item.moment} className="text-sm text-[#aaa]">
+                  <span className="text-white font-medium">{item.moment}</span> — {item.desc}
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-[#888] text-sm italic border-l-2 border-[#c9a227]/30 pl-4">
+              Tout au long de la cérémonie, la musique et la sonorisation seront gérées avec discrétion
+              et professionnalisme. Notre souhait est que chaque note accompagne votre cœur, sans jamais le précéder.
+            </p>
           </div>
         </div>
       </div>
