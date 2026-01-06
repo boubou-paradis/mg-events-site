@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { 
-  Music, 
-  Mic2, 
-  PartyPopper, 
-  Camera, 
-  Lightbulb, 
+import Image from 'next/image';
+import {
+  Mic2,
+  PartyPopper,
+  Camera,
+  Lightbulb,
   Monitor,
   Star,
   Phone,
@@ -17,9 +17,6 @@ import {
   X,
   Check,
   Quote,
-  Calendar,
-  Users,
-  Clock
 } from 'lucide-react';
 
 // ============ HEADER ============
@@ -30,6 +27,7 @@ function Header() {
     { label: 'Accueil', href: '#hero' },
     { label: 'À propos', href: '#about' },
     { label: 'Formules', href: '#formules' },
+    { label: 'Galerie', href: '#gallery' },
     { label: 'Témoignages', href: '#testimonials' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -39,14 +37,15 @@ function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#c9a227] to-[#9a7b1a] flex items-center justify-center">
-              <span className="font-[family-name:var(--font-display)] text-[#0a0a0a] text-xl font-bold">MG</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-[family-name:var(--font-display)] text-xl text-white">MG Events</span>
-              <span className="block text-xs text-[#888] tracking-widest uppercase">Animation</span>
-            </div>
+          <a href="#hero" className="flex items-center">
+            <Image
+              src="/images/logo.jpg"
+              alt="MG Events Animation"
+              width={140}
+              height={60}
+              className="h-12 w-auto brightness-0 invert"
+              priority
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -103,21 +102,20 @@ function Header() {
 function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a] to-[#141414]" />
-      
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c9a227]/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#c9a227]/5 rounded-full blur-3xl" />
-      
-      {/* Grid pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `linear-gradient(#c9a227 1px, transparent 1px), linear-gradient(90deg, #c9a227 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
-        }}
+      {/* Background Image */}
+      <Image
+        src="/images/hero-4.jpg"
+        alt="Couple dansant"
+        fill
+        className="object-cover"
+        priority
       />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]" />
+
+      {/* Decorative elements */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c9a227]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#c9a227]/10 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         {/* Badge */}
@@ -188,17 +186,15 @@ function About() {
     <section id="about" className="py-24 bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image placeholder */}
+          {/* Image */}
           <div className="relative">
-            <div className="aspect-[4/5] bg-gradient-to-br from-[#1a1a1a] to-[#141414] rounded-lg overflow-hidden border border-[#c9a227]/10">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#c9a227] to-[#9a7b1a] flex items-center justify-center">
-                    <Music size={40} className="text-[#0a0a0a]" />
-                  </div>
-                  <p className="text-[#888] text-sm">Guillaume & Laurence</p>
-                </div>
-              </div>
+            <div className="aspect-[4/5] rounded-lg overflow-hidden border border-[#c9a227]/10">
+              <Image
+                src="/images/gallery-2.jpg"
+                alt="Setup DJ MG Events"
+                fill
+                className="object-cover"
+              />
             </div>
             {/* Decorative frame */}
             <div className="absolute -bottom-4 -right-4 w-full h-full border border-[#c9a227]/20 rounded-lg -z-10" />
@@ -692,6 +688,55 @@ function Contact() {
   );
 }
 
+// ============ GALLERY ============
+function Gallery() {
+  const images = [
+    { src: '/images/hero-1.jpg', alt: 'Table de mixage DJ' },
+    { src: '/images/hero-2.jpg', alt: 'Couple de maries dansant' },
+    { src: '/images/hero-3.jpg', alt: 'Invites sur le dancefloor' },
+    { src: '/images/gallery-1.webp', alt: 'Installation lumiere MG Events' },
+  ];
+
+  return (
+    <section id="gallery" className="py-24 bg-[#0a0a0a]">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="gold-line mx-auto mb-6" />
+          <h2 className="section-title text-white mb-4">
+            Nos <span className="text-gradient-gold">prestations</span> en images
+          </h2>
+          <p className="text-[#888] max-w-xl mx-auto">
+            Des ambiances uniques pour des moments inoubliables
+          </p>
+        </div>
+
+        {/* Gallery Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`relative overflow-hidden rounded-lg border border-[#c9a227]/10 group ${
+                index === 0 ? 'col-span-2 row-span-2' : ''
+              }`}
+            >
+              <div className={`relative ${index === 0 ? 'aspect-square' : 'aspect-[4/3]'}`}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ FOOTER ============
 function Footer() {
   return (
@@ -699,13 +744,14 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#c9a227] to-[#9a7b1a] flex items-center justify-center">
-              <span className="font-[family-name:var(--font-display)] text-[#0a0a0a] font-bold">MG</span>
-            </div>
-            <div>
-              <span className="font-[family-name:var(--font-display)] text-white">MG Events Animation</span>
-            </div>
+          <div className="flex items-center">
+            <Image
+              src="/images/logo.jpg"
+              alt="MG Events Animation"
+              width={120}
+              height={50}
+              className="h-10 w-auto brightness-0 invert"
+            />
           </div>
 
           {/* Links */}
@@ -741,6 +787,7 @@ export default function Home() {
         <Hero />
         <About />
         <Formules />
+        <Gallery />
         <Testimonials />
         <Contact />
       </main>

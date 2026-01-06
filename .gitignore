@@ -6,6 +6,9 @@
 # claude
 .claude/
 
+# source images
+photo et logo/
+
 # dependencies
 /node_modules
 /.pnp
