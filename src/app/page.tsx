@@ -17,6 +17,10 @@ import {
   X,
   Check,
   Quote,
+  Cake,
+  Music,
+  Building2,
+  GlassWater,
 } from 'lucide-react';
 
 // ============ HEADER ============
@@ -946,6 +950,81 @@ function Photobooth() {
   );
 }
 
+// ============ AUTRES EVENEMENTS ============
+function AutresEvenements() {
+  const events = [
+    {
+      icon: Cake,
+      title: 'Anniversaire',
+      description: 'Fêtez vos moments importants avec une ambiance sur-mesure',
+    },
+    {
+      icon: Mic2,
+      title: 'Karaoké',
+      description: 'Animations karaoké pour des soirées inoubliables',
+    },
+    {
+      icon: Building2,
+      title: 'Comité d\'entreprise',
+      description: 'Séminaires, team building, soirées de gala',
+    },
+    {
+      icon: GlassWater,
+      title: 'Soirée privée',
+      description: 'Bar, discothèque, événements privés',
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-[#141414]">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="gold-line mx-auto mb-6" />
+          <h2 className="section-title text-white mb-4">
+            Nous animons aussi vos <span className="text-gradient-gold">autres événements</span>
+          </h2>
+          <p className="text-[#888] max-w-xl mx-auto">
+            Notre expertise au service de toutes vos célébrations
+          </p>
+        </div>
+
+        {/* Events Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {events.map((event, index) => (
+            <div
+              key={index}
+              className="card-dark p-6 text-center hover:border-[#c9a227]/30 transition-colors"
+            >
+              <event.icon size={40} className="text-[#c9a227] mx-auto mb-4" />
+              <h3 className="text-white font-[family-name:var(--font-display)] text-lg mb-2">
+                {event.title}
+              </h3>
+              <p className="text-[#888] text-sm">
+                {event.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <p className="text-[#aaa] mb-6">
+            Demandez votre devis personnalisé et vérifiez nos disponibilités
+          </p>
+          <a
+            href="#contact"
+            className="btn-gold inline-flex items-center gap-2"
+          >
+            <Mail size={18} />
+            Demander un devis
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ FOOTER ============
 function Footer() {
   return (
@@ -996,6 +1075,7 @@ export default function Home() {
         <Formules />
         <Gallery />
         <Photobooth />
+        <AutresEvenements />
         <Testimonials />
         <Contact />
       </main>
