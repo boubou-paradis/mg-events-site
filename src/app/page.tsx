@@ -25,6 +25,10 @@ import {
   HelpCircle,
   Sparkles,
   Zap,
+  ShieldCheck,
+  Flame,
+  Home,
+  Award,
 } from 'lucide-react';
 
 // ============ HEADER ============
@@ -1058,6 +1062,112 @@ function AnimaJet() {
   );
 }
 
+// ============ ETINCELLES FROIDES ============
+function EtincellesFroides() {
+  const securite = [
+    {
+      icon: Award,
+      title: 'Matériel certifié CE',
+      description: 'Nous utilisons exclusivement des machines professionnelles Mac Mah MAC SPARK 300, conformes aux normes européennes de sécurité.',
+    },
+    {
+      icon: Flame,
+      title: 'Étincelles froides',
+      description: 'Contrairement aux feux d\'artifice traditionnels, nos étincelles ne produisent pas de chaleur et ne présentent aucun risque d\'incendie.',
+    },
+    {
+      icon: Home,
+      title: 'Utilisable en intérieur',
+      description: 'Sans fumée, sans odeur, sans danger pour vos invités ni pour la salle de réception.',
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-[#141414]">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="gold-line mx-auto mb-6" />
+          <h2 className="section-title text-white mb-2">
+            Étincelles <span className="text-gradient-gold">Froides</span>
+          </h2>
+          <p className="text-xl text-[#c9a227] font-[family-name:var(--font-display)] mb-4">
+            La magie en toute sécurité
+          </p>
+          <p className="text-[#888] max-w-2xl mx-auto">
+            Sublimez votre ouverture de bal ou la présentation de votre gâteau
+            avec nos fontaines d&apos;étincelles froides. Un effet spectaculaire et féérique, sans aucun risque.
+          </p>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+          {/* Image */}
+          <div className="relative">
+            <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-[#c9a227]/20">
+              <Image
+                src="/images/etincelles.jpg"
+                alt="Étincelles froides lors d'une ouverture de bal"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent" />
+            </div>
+            {/* Badge CE */}
+            <div className="absolute -bottom-4 -right-4 bg-[#0a0a0a] border-2 border-[#c9a227] rounded-full p-4">
+              <div className="text-center">
+                <ShieldCheck size={24} className="text-[#c9a227] mx-auto" />
+                <span className="text-[#c9a227] text-xs font-bold block mt-1">CE</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Sécurité */}
+          <div>
+            <div className="flex items-center gap-3 mb-8">
+              <ShieldCheck size={32} className="text-[#c9a227]" />
+              <h3 className="text-white font-[family-name:var(--font-display)] text-2xl">
+                Votre sécurité, notre priorité
+              </h3>
+            </div>
+
+            <div className="space-y-6">
+              {securite.map((item, index) => (
+                <div key={index} className="flex gap-4">
+                  <div className="shrink-0 w-12 h-12 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-lg flex items-center justify-center">
+                    <item.icon size={24} className="text-[#c9a227]" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium mb-1 flex items-center gap-2">
+                      <Check size={16} className="text-green-500" />
+                      {item.title}
+                    </h4>
+                    <p className="text-[#888] text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="card-dark p-6 border-[#c9a227]/20">
+          <div className="flex items-start gap-4">
+            <ShieldCheck size={24} className="text-[#c9a227] shrink-0 mt-1" />
+            <p className="text-[#888] text-sm leading-relaxed">
+              <span className="text-white font-medium">Note importante :</span> Suite aux récents incidents survenus lors d&apos;événements,
+              nous tenons à vous garantir un matériel aux normes et une utilisation maîtrisée par des professionnels expérimentés.
+              Votre sécurité et celle de vos invités sont notre priorité absolue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ AUTRES EVENEMENTS ============
 function AutresEvenements() {
   const events = [
@@ -1184,6 +1294,7 @@ export default function Home() {
         <Gallery />
         <Photobooth />
         <AnimaJet />
+        <EtincellesFroides />
         <AutresEvenements />
         <Testimonials />
         <Contact />
