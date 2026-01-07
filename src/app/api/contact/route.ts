@@ -8,6 +8,7 @@ interface ContactFormData {
   name: string;
   email: string;
   phone: string;
+  address: string;
   date: string;
   location: string;
   eventType: string;
@@ -85,6 +86,7 @@ export async function POST(request: NextRequest) {
               <li><strong>Nom:</strong> ${data.name}</li>
               <li><strong>Email:</strong> ${data.email}</li>
               <li><strong>Telephone:</strong> ${data.phone}</li>
+              ${data.address ? `<li><strong>Adresse postale:</strong> ${data.address}</li>` : ''}
             </ul>
 
             <h2 style="color: #333;">Details de l'evenement</h2>

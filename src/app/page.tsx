@@ -763,6 +763,7 @@ function Contact() {
     name: '',
     email: '',
     phone: '',
+    address: '',
     date: '',
     location: '',
     eventType: 'mariage',
@@ -792,6 +793,7 @@ function Contact() {
           name: '',
           email: '',
           phone: '',
+          address: '',
           date: '',
           location: '',
           eventType: 'mariage',
@@ -925,6 +927,18 @@ function Contact() {
                   onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                   className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
                   placeholder="Nom de la salle ou adresse"
+                />
+              </div>
+
+              {/* Adresse postale */}
+              <div>
+                <label className="block text-sm text-[#888] mb-2">Adresse postale (pour l&apos;envoi du devis)</label>
+                <input
+                  type="text"
+                  value={formData.address}
+                  onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                  className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
+                  placeholder="Numéro, rue, code postal, ville"
                 />
               </div>
 
