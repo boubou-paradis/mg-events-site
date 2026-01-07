@@ -1,7 +1,69 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Image from 'next/image';
+
+// ============ LIGHTBOX MODAL ============
+function ImageLightbox({
+  src,
+  alt,
+  isOpen,
+  onClose
+}: {
+  src: string;
+  alt: string;
+  isOpen: boolean;
+  onClose: () => void;
+}) {
+  if (!isOpen) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 cursor-zoom-out"
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors z-10"
+        aria-label="Fermer"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div className="relative max-w-[90vw] max-h-[90vh] animate-fade-up">
+        <Image
+          src={src}
+          alt={alt}
+          width={1920}
+          height={1080}
+          className="object-contain max-h-[90vh] w-auto h-auto rounded-lg"
+          onClick={(e) => e.stopPropagation()}
+        />
+        <p className="text-white/70 text-center mt-4 text-sm">{alt}</p>
+      </div>
+    </div>
+  );
+}
+
+// Hook pour gérer la lightbox
+function useLightbox() {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
+  const openLightbox = useCallback((src: string, alt: string) => {
+    setLightbox({ src, alt });
+    document.body.style.overflow = 'hidden';
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    setLightbox(null);
+    document.body.style.overflow = '';
+  }, []);
+
+  return { lightbox, openLightbox, closeLightbox };
+}
+
 import {
   Mic2,
   PartyPopper,
@@ -56,7 +118,7 @@ function Header() {
             <img
               src="/images/logo.png"
               alt="MG Events Animation DJ Mariage Bretagne"
-              className="h-14 w-auto"
+              className="h-20 md:h-24 w-auto"
             />
           </a>
 
@@ -222,14 +284,17 @@ function Hero() {
 }
 
 // ============ ABOUT ============
-function About() {
+function About({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
   return (
     <section id="about" className="py-16 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/10">
+            <div
+              className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
+              onClick={() => onImageClick('/images/gallery-2.jpg', 'Setup DJ MG Events')}
+            >
               <Image
                 src="/images/gallery-2.jpg"
                 alt="Setup DJ MG Events"
@@ -287,7 +352,7 @@ function About() {
 }
 
 // ============ EXPERIENCE MUSICALE ============
-function ExperienceMusicale() {
+function ExperienceMusicale({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
   const stats = [
     {
       icon: Headphones,
@@ -358,7 +423,10 @@ function ExperienceMusicale() {
 
           {/* Image */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20">
+            <div
+              className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20 cursor-zoom-in"
+              onClick={() => onImageClick('/images/gallery-8.jpg', 'DJ professionnel aux platines - MG Events Animation')}
+            >
               <Image
                 src="/images/gallery-8.jpg"
                 alt="DJ professionnel aux platines - MG Events Animation"
@@ -427,7 +495,7 @@ function ExperienceMusicale() {
 }
 
 // ============ FORMULES ============
-function Formules() {
+function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
   const formules = [
     {
       name: 'Éclat d\'Amour',
@@ -498,7 +566,10 @@ function Formules() {
           <div className="card-dark overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image */}
-              <div className="relative h-72 lg:h-auto min-h-[300px]">
+              <div
+                className="relative h-72 lg:h-auto min-h-[300px] cursor-zoom-in"
+                onClick={() => onImageClick('/images/ceremonie-laique.jpg', 'Cérémonie laïque en extérieur')}
+              >
                 <Image
                   src="/images/ceremonie-laique.jpg"
                   alt="Cérémonie laïque en extérieur"
@@ -1016,15 +1087,15 @@ function Contact() {
 }
 
 // ============ GALLERY ============
-function Gallery() {
+function Gallery({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
   const images = [
-    { src: '/images/gallery-1.jpg', alt: 'Couple dansant dans la fumee avec jeux de lumieres' },
-    { src: '/images/gallery-2.jpg', alt: 'Premiere danse avec fontaine etincelles' },
-    { src: '/images/gallery-3.jpg', alt: 'Vue DJ avec invites et guirlandes' },
-    { src: '/images/gallery-4.jpg', alt: 'Setup scene complet avec logo MG' },
-    { src: '/images/gallery-5.jpg', alt: 'Piste de danse grange avec lumieres' },
+    { src: '/images/gallery-1.jpg', alt: 'Couple dansant dans la fumée avec jeux de lumières' },
+    { src: '/images/gallery-2.jpg', alt: 'Première danse avec fontaine étincelles' },
+    { src: '/images/gallery-3.jpg', alt: 'Vue DJ avec invités et guirlandes' },
+    { src: '/images/gallery-4.jpg', alt: 'Setup scène complet avec logo MG' },
+    { src: '/images/gallery-5.jpg', alt: 'Piste de danse grange avec lumières' },
     { src: '/images/gallery-6.jpg', alt: 'Table champagne avec LOVE lumineux' },
-    { src: '/images/gallery-7.jpg', alt: 'Jeux de lumiere avec lustre' },
+    { src: '/images/gallery-7.jpg', alt: 'Jeux de lumière avec lustre' },
     { src: '/images/gallery-8.jpg', alt: 'Console DJ professionnelle' },
   ];
 
@@ -1046,7 +1117,8 @@ function Gallery() {
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-lg border border-[#c9a227]/10 group"
+              className="relative overflow-hidden rounded-lg border border-[#c9a227]/10 group cursor-zoom-in"
+              onClick={() => onImageClick(image.src, image.alt)}
             >
               <div className="relative aspect-square">
                 <Image
@@ -1066,7 +1138,7 @@ function Gallery() {
 }
 
 // ============ PHOTOBOOTH ============
-function Photobooth() {
+function Photobooth({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
   return (
     <section id="photobooth" className="py-16 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto px-6">
@@ -1083,7 +1155,10 @@ function Photobooth() {
           {/* Photos à gauche */}
           <div className="lg:col-span-2 grid grid-cols-2 gap-4">
             {/* Main photo */}
-            <div className="col-span-2 relative rounded-lg overflow-hidden border border-[#c9a227]/10 group">
+            <div
+              className="col-span-2 relative rounded-lg overflow-hidden border border-[#c9a227]/10 group cursor-zoom-in"
+              onClick={() => onImageClick('/images/photobooth-2.jpg', 'Photobooth en action')}
+            >
               <div className="relative aspect-[16/9]">
                 <Image
                   src="/images/photobooth-2.jpg"
@@ -1094,12 +1169,18 @@ function Photobooth() {
               </div>
             </div>
             {/* Thumbnails */}
-            <div className="relative rounded-lg overflow-hidden border border-[#c9a227]/10">
+            <div
+              className="relative rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
+              onClick={() => onImageClick('/images/photobooth-1.jpg', 'Photobooth face')}
+            >
               <div className="relative aspect-[4/3]">
                 <Image src="/images/photobooth-1.jpg" alt="Photobooth face" fill className="object-cover" />
               </div>
             </div>
-            <div className="relative rounded-lg overflow-hidden border border-[#c9a227]/10">
+            <div
+              className="relative rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
+              onClick={() => onImageClick('/images/photobooth-3.jpg', 'Photobooth côté')}
+            >
               <div className="relative aspect-[4/3]">
                 <Image src="/images/photobooth-3.jpg" alt="Photobooth côté" fill className="object-cover" />
               </div>
@@ -1263,7 +1344,7 @@ function AnimaJet() {
 }
 
 // ============ ETINCELLES FROIDES ============
-function EtincellesFroides() {
+function EtincellesFroides({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
   const securite = [
     {
       icon: Award,
@@ -1299,7 +1380,10 @@ function EtincellesFroides() {
         <div className="grid lg:grid-cols-3 gap-6 mb-8">
           {/* Image */}
           <div className="relative">
-            <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-[#c9a227]/20">
+            <div
+              className="relative aspect-[3/4] rounded-lg overflow-hidden border border-[#c9a227]/20 cursor-zoom-in"
+              onClick={() => onImageClick('/images/etincelles-ouverture-bal.jpg', 'Étincelles froides lors d\'une ouverture de bal')}
+            >
               <Image
                 src="/images/etincelles-ouverture-bal.jpg"
                 alt="Étincelles froides lors d'une ouverture de bal"
@@ -1504,23 +1588,33 @@ function Footer() {
 
 // ============ PAGE ============
 export default function Home() {
+  const { lightbox, openLightbox, closeLightbox } = useLightbox();
+
   return (
     <>
       <Header />
       <main>
         <Hero />
-        <About />
-        <ExperienceMusicale />
-        <Gallery />
-        <Photobooth />
+        <About onImageClick={openLightbox} />
+        <ExperienceMusicale onImageClick={openLightbox} />
+        <Gallery onImageClick={openLightbox} />
+        <Photobooth onImageClick={openLightbox} />
         <AnimaJet />
-        <EtincellesFroides />
+        <EtincellesFroides onImageClick={openLightbox} />
         <Testimonials />
-        <Formules />
+        <Formules onImageClick={openLightbox} />
         <AutresEvenements />
         <Contact />
       </main>
       <Footer />
+
+      {/* Lightbox Modal */}
+      <ImageLightbox
+        src={lightbox?.src || ''}
+        alt={lightbox?.alt || ''}
+        isOpen={!!lightbox}
+        onClose={closeLightbox}
+      />
     </>
   );
 }
