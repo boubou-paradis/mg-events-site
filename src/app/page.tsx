@@ -115,10 +115,14 @@ function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#hero" className="flex items-center">
-            <img
+            <Image
               src="/images/logo.png"
               alt="MG Events Animation DJ Mariage Bretagne"
+              width={240}
+              height={96}
+              sizes="(max-width: 768px) 200px, 240px"
               className="h-20 md:h-24 w-auto"
+              priority
             />
           </a>
 
@@ -1522,7 +1526,13 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo & Contact */}
           <div className="md:col-span-1">
-            <img src="/images/logo.png" alt="MG Events Animation DJ Mariage Bretagne" className="h-12 w-auto mb-4" />
+            <Image
+              src="/images/logo.png"
+              alt="MG Events Animation DJ Mariage Bretagne"
+              width={120}
+              height={48}
+              className="h-12 w-auto mb-4"
+            />
             <p className="text-[#888] text-sm mb-4">DJ animateur mariage en Bretagne depuis plus de 20 ans.</p>
             <p className="text-[#888] text-sm">
               <a href="tel:+33648106166" className="text-[#c9a227] hover:underline">06 48 10 61 66</a><br />
