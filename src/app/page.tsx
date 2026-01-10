@@ -700,6 +700,44 @@ function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) =
             </div>
           ))}
         </div>
+
+        {/* Encart informations pratiques */}
+        <div className="mt-12 card-dark p-8 border-[#c9a227]/30">
+          <h3 className="font-[family-name:var(--font-display)] text-xl text-white mb-6 flex items-center gap-3">
+            <Sparkles size={24} className="text-[#c9a227]" />
+            Informations pratiques
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Check size={18} className="text-[#c9a227] mt-0.5 shrink-0" />
+                <p className="text-[#aaa] text-sm leading-relaxed">
+                  <span className="text-white font-medium">Toutes nos formules</span> incluent la prestation du vin d&apos;honneur jusqu&apos;à 4h du matin.
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Check size={18} className="text-[#c9a227] mt-0.5 shrink-0" />
+                <p className="text-[#aaa] text-sm leading-relaxed">
+                  <span className="text-white font-medium">Mariage de journée ?</span> Formule adaptée sur demande — <a href="#contact" className="text-[#c9a227] hover:underline">contactez-nous</a>.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Check size={18} className="text-[#c9a227] mt-0.5 shrink-0" />
+                <p className="text-[#aaa] text-sm leading-relaxed">
+                  <span className="text-white font-medium">Temps d&apos;installation :</span> environ 1h30. Montage la veille de préférence, ou le matin selon l&apos;accès à la salle.
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Mail size={18} className="text-[#c9a227] mt-0.5 shrink-0" />
+                <p className="text-[#aaa] text-sm leading-relaxed">
+                  <span className="text-white font-medium">Plus d&apos;infos ?</span> N&apos;hésitez pas à nous contacter via le <a href="#contact" className="text-[#c9a227] hover:underline">formulaire de contact</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
