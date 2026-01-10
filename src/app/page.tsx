@@ -445,7 +445,7 @@ function ExperienceMusicale({ onImageClick }: { onImageClick: (src: string, alt:
         {/* Statistics */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className="card-dark p-6 text-center">
+            <div key={index} className="card-dark p-6 text-center hover:border-[#c9a227]/40 transition-all duration-300">
               <stat.icon size={40} className="text-[#c9a227] mx-auto mb-4" />
               <div className="text-2xl font-[family-name:var(--font-display)] text-white mb-1">
                 <strong>{stat.value}</strong> {stat.label}
@@ -456,7 +456,7 @@ function ExperienceMusicale({ onImageClick }: { onImageClick: (src: string, alt:
         </div>
 
         {/* FAQ Section */}
-        <div className="card-dark p-8">
+        <div className="card-dark p-8 hover:border-[#c9a227]/40 transition-all duration-300">
           <h3 className="font-[family-name:var(--font-display)] text-2xl text-white mb-8 text-center">
             Questions fréquentes sur notre <span className="text-[#c9a227]">animation musicale</span>
           </h3>
@@ -567,7 +567,7 @@ function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) =
             <p className="text-[#888]">Formule cérémonie laïque</p>
           </div>
 
-          <div className="card-dark overflow-hidden">
+          <div className="card-dark overflow-hidden hover:border-[#c9a227]/40 transition-all duration-300">
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image */}
               <div
@@ -616,7 +616,7 @@ function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) =
           </div>
 
           {/* Description détaillée */}
-          <div className="mt-8 card-dark p-8">
+          <div className="mt-8 card-dark p-8 hover:border-[#c9a227]/40 transition-all duration-300">
             <p className="text-[#aaa] leading-relaxed mb-6">
               Afin de faire de cette cérémonie un moment unique, rempli d&apos;émotion et de douceur,
               une attention particulière a été portée à l&apos;univers musical qui l&apos;accompagne.
@@ -660,7 +660,7 @@ function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) =
           {formules.map((formule) => (
             <div
               key={formule.name}
-              className={`relative card-dark p-8 ${
+              className={`relative card-dark p-8 hover:border-[#c9a227]/40 transition-all duration-300 ${
                 formule.popular ? 'border-[#c9a227]/40 scale-105 md:scale-110' : ''
               }`}
             >
@@ -702,7 +702,7 @@ function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) =
         </div>
 
         {/* Encart informations pratiques */}
-        <div className="mt-12 card-dark p-8 border-[#c9a227]/30">
+        <div className="mt-12 card-dark p-8 border-[#c9a227]/30 hover:border-[#c9a227]/50 transition-all duration-300">
           <h3 className="font-[family-name:var(--font-display)] text-xl text-white mb-6 flex items-center gap-3">
             <Sparkles size={24} className="text-[#c9a227]" />
             Informations pratiques
@@ -840,7 +840,7 @@ function Testimonials() {
         {/* Testimonial grid - 3 columns on large screens */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="card-dark p-5 relative">
+            <div key={index} className="card-dark p-5 relative hover:border-[#c9a227]/40 transition-all duration-300">
               <Quote size={24} className="absolute top-4 right-4 text-[#c9a227]/10" />
               {/* Stars */}
               <div className="flex mb-3">
@@ -979,7 +979,7 @@ function Contact() {
           </div>
 
           {/* Form */}
-          <div className="card-dark p-8">
+          <div className="card-dark p-8 hover:border-[#c9a227]/40 transition-all duration-300">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name & Email */}
               <div className="grid sm:grid-cols-2 gap-4">
@@ -1232,7 +1232,7 @@ function Photobooth({ onImageClick }: { onImageClick: (src: string, alt: string)
           {/* Infos à droite */}
           <div className="space-y-4">
             {/* Description */}
-            <div className="card-dark p-6">
+            <div className="card-dark p-6 hover:border-[#c9a227]/40 transition-all duration-300">
               <p className="text-[#aaa] text-sm leading-relaxed mb-4">
                 Appareil reflex professionnel, écran tactile 15&quot; et imprimante instantanée.
                 Vos invités repartent avec leurs souvenirs imprimés sur place.
@@ -1248,13 +1248,13 @@ function Photobooth({ onImageClick }: { onImageClick: (src: string, alt: string)
             </div>
 
             {/* Inclus Conte de Fées */}
-            <div className="card-dark p-4">
+            <div className="card-dark p-4 hover:border-[#c9a227]/40 transition-all duration-300">
               <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-1">Inclus dans</p>
               <p className="text-white font-[family-name:var(--font-display)]">Conte de Fées</p>
             </div>
 
             {/* Location seule */}
-            <div className="card-dark p-4 border-[#c9a227]/30">
+            <div className="card-dark p-4 border-[#c9a227]/30 hover:border-[#c9a227]/50 transition-all duration-300">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-1">Location seule</p>
@@ -1366,7 +1366,7 @@ function AnimaJet() {
         </div>
 
         {/* Included notice */}
-        <div className="card-dark p-6 border-[#c9a227]/30 text-center">
+        <div className="card-dark p-6 border-[#c9a227]/30 text-center hover:border-[#c9a227]/50 transition-all duration-300">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <div className="flex items-center gap-3">
               <Check size={24} className="text-[#c9a227]" />
@@ -1450,7 +1450,7 @@ function EtincellesFroides({ onImageClick }: { onImageClick: (src: string, alt: 
 
             <div className="grid sm:grid-cols-3 gap-4">
               {securite.map((item, index) => (
-                <div key={index} className="card-dark p-4 text-center">
+                <div key={index} className="card-dark p-4 text-center hover:border-[#c9a227]/40 transition-all duration-300">
                   <item.icon size={28} className="text-[#c9a227] mx-auto mb-2" />
                   <h4 className="text-white font-medium text-sm mb-1 flex items-center justify-center gap-1">
                     <Check size={14} className="text-green-500" />
@@ -1466,7 +1466,7 @@ function EtincellesFroides({ onImageClick }: { onImageClick: (src: string, alt: 
         </div>
 
         {/* Disclaimer */}
-        <div className="card-dark p-6 border-[#c9a227]/20">
+        <div className="card-dark p-6 border-[#c9a227]/20 hover:border-[#c9a227]/40 transition-all duration-300">
           <div className="flex items-start gap-4">
             <ShieldCheck size={24} className="text-[#c9a227] shrink-0 mt-1" />
             <p className="text-[#888] text-sm leading-relaxed">
@@ -1508,7 +1508,7 @@ function AutresEvenements() {
           {/* Events Grid */}
           <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-3">
             {events.map((event, index) => (
-              <div key={index} className="card-dark p-4 text-center hover:border-[#c9a227]/30 transition-colors">
+              <div key={index} className="card-dark p-4 text-center hover:border-[#c9a227]/40 transition-all duration-300">
                 <event.icon size={28} className="text-[#c9a227] mx-auto mb-2" />
                 <h3 className="text-white text-sm font-medium mb-1">{event.title}</h3>
                 <p className="text-[#888] text-xs">{event.description}</p>
@@ -1518,7 +1518,7 @@ function AutresEvenements() {
         </div>
 
         {/* Forfait Anniversaire */}
-        <div className="card-dark p-6 border-[#c9a227]/30">
+        <div className="card-dark p-6 border-[#c9a227]/30 hover:border-[#c9a227]/50 transition-all duration-300">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <Cake size={32} className="text-[#c9a227] shrink-0" />
