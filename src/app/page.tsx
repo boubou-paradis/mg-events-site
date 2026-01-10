@@ -608,7 +608,7 @@ function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) =
                 <p className="text-sm text-[#888] leading-relaxed mb-4">
                   Le tout intégralement sur batterie pour vous offrir le cadre de votre choix.
                 </p>
-                <p className="text-xs text-[#666] italic">
+                <p className="text-sm text-[#c9a227] font-medium">
                   La cérémonie doit être sur le même lieu de réception. Officiant non compris.
                 </p>
               </div>
