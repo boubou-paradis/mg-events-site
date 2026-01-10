@@ -30,6 +30,12 @@ const eventTypeLabels: Record<string, string> = {
   autre: "Autre",
 };
 
+function formatDate(dateString: string): string {
+  if (!dateString) return 'Non precisee';
+  const [year, month, day] = dateString.split('-');
+  return `${day}/${month}/${year}`;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const data: ContactFormData = await request.json();
@@ -92,7 +98,7 @@ export async function POST(request: NextRequest) {
             <h2 style="color: #333;">Details de l'evenement</h2>
             <ul style="list-style: none; padding: 0;">
               <li><strong>Type:</strong> ${eventTypeLabels[data.eventType] || data.eventType}</li>
-              <li><strong>Date:</strong> ${data.date || 'Non precisee'}</li>
+              <li><strong>Date:</strong> ${formatDate(data.date)}</li>
               <li><strong>Lieu:</strong> ${data.location || 'Non precise'}</li>
               <li><strong>Formule souhaitee:</strong> ${formuleLabels[data.formule] || data.formule || 'Non specifiee'}</li>
             </ul>
