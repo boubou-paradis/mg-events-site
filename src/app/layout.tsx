@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -121,18 +122,6 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <meta name="google-site-verification" content="bG7T2SAL139z-XpkOLLwMcXnpU2_sT2Hcb04bJuOsDU" />
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFW78JJ08Z"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-NFW78JJ08Z');
-            `,
-          }}
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -143,6 +132,20 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
+        {/* Google Tag (gtag.js) - Google Analytics + Google Ads */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17731993014"
+          strategy="afterInteractive"
+        />
+        <Script id="google-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17731993014');
+            gtag('config', 'G-NFW78JJ08Z');
+          `}
+        </Script>
       </body>
     </html>
   );
