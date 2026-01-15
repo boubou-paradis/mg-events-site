@@ -54,26 +54,33 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "EntertainmentBusiness",
+  "@id": "https://www.mg-events35.com/#organization",
   "name": "MG Events Animation",
-  "description": "DJ animateur de mariage en Bretagne. Animations interactives, photobooth vintage, effets spéciaux.",
+  "description": "DJ animateur mariage en Bretagne. Plus de 20 ans d'expérience. Animation musicale, sonorisation, mise en lumière, photobooth vintage, étincelles froides pour mariages et événements en Ille-et-Vilaine, Morbihan, Loire-Atlantique.",
   "image": "https://www.mg-events35.com/images/logo.png",
+  "logo": "https://www.mg-events35.com/images/logo.png",
   "url": "https://www.mg-events35.com",
   "telephone": "+33648106166",
   "email": "mg.events35@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "10 Lan Lande des Couëdies",
+    "streetAddress": "10, La Lande des Couédies",
     "addressLocality": "Bains-sur-Oust",
     "postalCode": "35600",
+    "addressRegion": "Bretagne",
     "addressCountry": "FR"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "47.7083",
-    "longitude": "-2.0614"
+    "latitude": 47.6931,
+    "longitude": -2.08544
   },
   "areaServed": [
+    {
+      "@type": "State",
+      "name": "Bretagne"
+    },
     {
       "@type": "AdministrativeArea",
       "name": "Ille-et-Vilaine"
@@ -95,22 +102,60 @@ const jsonLd = {
       "name": "Mayenne"
     }
   ],
-  "priceRange": "1200€ - 1690€",
+  "priceRange": "€€",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "45",
+    "ratingValue": "5.0",
     "bestRating": "5",
-    "worstRating": "1"
+    "worstRating": "1",
+    "ratingCount": "45",
+    "reviewCount": "45"
   },
   "sameAs": [
-    "https://www.facebook.com/MGevents35/"
+    "https://www.facebook.com/MGevents35/",
+    "https://www.mariages.net/musique-mariage/mg-events-animation--e233666"
   ],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     "opens": "09:00",
     "closes": "21:00"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Formules DJ Mariage",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Formule Éclat d'Amour",
+          "description": "Sonorisation cocktail, repas et soirée dansante, 2 micros, 4 éclairages, vidéoprojecteur, AnimaJet inclus"
+        },
+        "price": "1200",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Formule Rêve en Blanc",
+          "description": "Formule complète avec ambiance RGBW, boule à facettes, fumée lourde et étincelles froides"
+        },
+        "price": "1490",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Formule Conte de Fées",
+          "description": "Expérience premium avec photobooth vintage et 150 impressions incluses"
+        },
+        "price": "1690",
+        "priceCurrency": "EUR"
+      }
+    ]
   }
 };
 
