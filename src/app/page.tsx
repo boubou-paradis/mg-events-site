@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // ============ LIGHTBOX MODAL ============
 function ImageLightbox({
@@ -1484,14 +1485,30 @@ function EtincellesFroides({ onImageClick }: { onImageClick: (src: string, alt: 
 // ============ AUTRES EVENEMENTS ============
 function AutresEvenements() {
   const events = [
-    { icon: Cake, title: 'Anniversaire', description: 'Ambiance sur-mesure' },
-    { icon: Mic2, title: 'Karaoké', description: 'Soirées inoubliables' },
-    { icon: Building2, title: 'CE / Entreprise', description: 'Séminaires, galas' },
-    { icon: GlassWater, title: 'Soirée privée', description: 'Bar, discothèque' },
+    { icon: Cake, title: 'Anniversaire', description: 'Ambiance sur-mesure', href: '/animation-anniversaire-rennes' },
+    { icon: Mic2, title: 'Karaoké', description: 'Soirées inoubliables', href: '#contact' },
+    { icon: Building2, title: 'CE / Entreprise', description: 'Séminaires, galas', href: '/dj-soiree-entreprise-rennes' },
+    { icon: GlassWater, title: 'Soirée privée', description: 'Bar, discothèque', href: '#contact' },
+  ];
+
+  const villesEntreprise = [
+    { name: 'Rennes', slug: 'rennes' },
+    { name: 'Nantes', slug: 'nantes' },
+    { name: 'Saint-Malo', slug: 'saint-malo' },
+    { name: 'Vannes', slug: 'vannes' },
+    { name: 'Brest', slug: 'brest' },
+  ];
+
+  const villesAnniversaire = [
+    { name: 'Rennes', slug: 'rennes' },
+    { name: 'Nantes', slug: 'nantes' },
+    { name: 'Vannes', slug: 'vannes' },
+    { name: 'Brest', slug: 'brest' },
+    { name: 'Laval', slug: 'laval' },
   ];
 
   return (
-    <section className="py-16 bg-[#141414]">
+    <section id="autres-evenements" className="py-16 bg-[#141414]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header + Events Grid inline */}
         <div className="grid lg:grid-cols-3 gap-8 mb-8">
@@ -1508,17 +1525,17 @@ function AutresEvenements() {
           {/* Events Grid */}
           <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-3">
             {events.map((event, index) => (
-              <div key={index} className="card-dark p-4 text-center hover:border-[#c9a227]/40 transition-all duration-300">
+              <Link key={index} href={event.href} className="card-dark p-4 text-center hover:border-[#c9a227]/40 transition-all duration-300">
                 <event.icon size={28} className="text-[#c9a227] mx-auto mb-2" />
                 <h3 className="text-white text-sm font-medium mb-1">{event.title}</h3>
                 <p className="text-[#888] text-xs">{event.description}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
 
         {/* Forfait Anniversaire */}
-        <div className="card-dark p-6 border-[#c9a227]/30 hover:border-[#c9a227]/50 transition-all duration-300">
+        <div className="card-dark p-6 border-[#c9a227]/30 hover:border-[#c9a227]/50 transition-all duration-300 mb-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <Cake size={32} className="text-[#c9a227] shrink-0" />
@@ -1542,6 +1559,47 @@ function AutresEvenements() {
             </div>
           </div>
         </div>
+
+        {/* Liens vers les pages par ville */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Entreprise */}
+          <div className="card-dark p-5">
+            <h3 className="text-white font-medium mb-3 flex items-center gap-2">
+              <Building2 size={18} className="text-[#c9a227]" />
+              DJ Soirée Entreprise par ville
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {villesEntreprise.map((ville) => (
+                <Link
+                  key={ville.slug}
+                  href={`/dj-soiree-entreprise-${ville.slug}`}
+                  className="text-xs px-3 py-1 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
+                >
+                  {ville.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Anniversaire */}
+          <div className="card-dark p-5">
+            <h3 className="text-white font-medium mb-3 flex items-center gap-2">
+              <Cake size={18} className="text-[#c9a227]" />
+              Animation Anniversaire par ville
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {villesAnniversaire.map((ville) => (
+                <Link
+                  key={ville.slug}
+                  href={`/animation-anniversaire-${ville.slug}`}
+                  className="text-xs px-3 py-1 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
+                >
+                  {ville.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -1557,11 +1615,20 @@ function Footer() {
     { label: 'Mayenne', href: '/dj-mariage-mayenne' },
   ];
 
+  const villesMariage = [
+    { name: 'Rennes', slug: 'rennes' },
+    { name: 'Saint-Malo', slug: 'saint-malo' },
+    { name: 'Nantes', slug: 'nantes' },
+    { name: 'Vannes', slug: 'vannes' },
+    { name: 'Brest', slug: 'brest' },
+    { name: 'Laval', slug: 'laval' },
+  ];
+
   return (
     <footer className="py-16 bg-[#0a0a0a] border-t border-[#c9a227]/10">
       <div className="max-w-7xl mx-auto px-6">
         {/* Main Footer Grid */}
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-5 gap-8 mb-12">
           {/* Logo & Contact */}
           <div className="md:col-span-1">
             <Image
@@ -1578,15 +1645,29 @@ function Footer() {
             </p>
           </div>
 
-          {/* Zones */}
+          {/* Zones départements */}
           <div>
-            <h4 className="text-white font-medium mb-4">Zones d&apos;intervention</h4>
+            <h4 className="text-white font-medium mb-4">Par département</h4>
             <ul className="space-y-2">
               {zones.map((zone) => (
                 <li key={zone.href}>
-                  <a href={zone.href} className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                  <Link href={zone.href} className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
                     DJ Mariage {zone.label}
-                  </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Zones villes */}
+          <div>
+            <h4 className="text-white font-medium mb-4">Par ville</h4>
+            <ul className="space-y-2">
+              {villesMariage.map((ville) => (
+                <li key={ville.slug}>
+                  <Link href={`/dj-mariage-${ville.slug}`} className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                    DJ Mariage {ville.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -1596,11 +1677,10 @@ function Footer() {
           <div>
             <h4 className="text-white font-medium mb-4">Blog</h4>
             <ul className="space-y-2">
-              <li><a href="/blog/comment-choisir-dj-mariage-bretagne" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Choisir son DJ mariage</a></li>
-              <li><a href="/blog/ouverture-de-bal-conseils" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Ouverture de bal</a></li>
-              <li><a href="/blog/etincelles-froides-mariage-securite" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Étincelles froides</a></li>
-              <li><a href="/blog/animations-mariage-originales-2026" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Animations 2026</a></li>
-              <li><a href="/blog" className="text-[#c9a227] text-sm hover:underline">Tous les articles →</a></li>
+              <li><Link href="/blog/comment-choisir-dj-mariage-bretagne" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Choisir son DJ mariage</Link></li>
+              <li><Link href="/blog/ouverture-de-bal-conseils" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Ouverture de bal</Link></li>
+              <li><Link href="/blog/etincelles-froides-mariage-securite" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Étincelles froides</Link></li>
+              <li><Link href="/blog" className="text-[#c9a227] text-sm hover:underline">Tous les articles →</Link></li>
             </ul>
           </div>
 
@@ -1608,9 +1688,9 @@ function Footer() {
           <div>
             <h4 className="text-white font-medium mb-4">Informations</h4>
             <ul className="space-y-2">
-              <li><a href="/mentions-legales" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Mentions légales</a></li>
-              <li><a href="/cgv" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">CGV</a></li>
-              <li><a href="/confidentialite" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Confidentialité</a></li>
+              <li><Link href="/mentions-legales" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Mentions légales</Link></li>
+              <li><Link href="/cgv" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">CGV</Link></li>
+              <li><Link href="/confidentialite" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Confidentialité</Link></li>
               <li>
                 <a href="https://www.facebook.com/MGevents35/" target="_blank" rel="noopener noreferrer" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
                   Facebook
