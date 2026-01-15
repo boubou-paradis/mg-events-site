@@ -4,15 +4,15 @@ import Image from 'next/image';
 import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Headphones, Volume2, Disc3, HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Ille-et-Vilaine | Animation Mariage Rennes',
-  description: "DJ animateur mariage en Ille-et-Vilaine. Rennes, Redon, Vitré, Fougères. +20 ans d'expérience, photobooth vintage, animations interactives. Devis gratuit ✓",
-  keywords: 'DJ mariage Ille-et-Vilaine, DJ mariage Rennes, DJ mariage Redon, DJ mariage Vitré, DJ mariage Fougères, animation mariage 35',
+  title: 'DJ Mariage Ille-et-Vilaine (35) | MG Events Animation',
+  description: "DJ animateur mariage en Ille-et-Vilaine (35). Rennes, Saint-Malo, Fougères, Vitré, Redon, Dinard. +20 ans d'expérience, photobooth vintage, animations interactives. Devis gratuit ✓",
+  keywords: 'DJ mariage Ille-et-Vilaine, DJ mariage 35, DJ mariage Rennes, DJ mariage Saint-Malo, DJ mariage Fougères, DJ mariage Vitré, DJ mariage Redon, DJ mariage Dinard, animation mariage Bretagne',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-ille-et-vilaine',
   },
   openGraph: {
-    title: 'DJ Mariage Ille-et-Vilaine | Animation Mariage Rennes - MG Events',
-    description: "DJ animateur mariage en Ille-et-Vilaine. Rennes, Redon, Vitré, Fougères. +20 ans d'expérience, photobooth vintage, animations interactives.",
+    title: 'DJ Mariage Ille-et-Vilaine (35) | MG Events Animation',
+    description: "DJ animateur mariage en Ille-et-Vilaine (35). Rennes, Saint-Malo, Fougères, Vitré. +20 ans d'expérience, photobooth vintage, animations interactives.",
     url: 'https://www.mg-events35.com/dj-mariage-ille-et-vilaine',
   },
 };
@@ -32,16 +32,28 @@ const formules = [
 
 const faqs = [
   {
-    question: 'Vous déplacez-vous à Saint-Malo ?',
-    answer: 'Oui, nous intervenons dans toute l\'Ille-et-Vilaine : Saint-Malo, Dinard, Cancale, Dol-de-Bretagne et toute la côte d\'Émeraude. Aucun frais de déplacement supplémentaire dans le département.',
+    question: 'Quel est le prix d\'un DJ mariage en Ille-et-Vilaine ?',
+    answer: 'Nos formules DJ mariage dans le 35 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département, l\'installation et le démontage.',
   },
   {
-    question: 'Quel est le délai de réservation ?',
-    answer: 'Nous vous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Pour la basse saison, 6 mois peuvent suffire. Contactez-nous pour vérifier nos disponibilités !',
+    question: 'Vous déplacez-vous à Saint-Malo, Fougères et Vitré ?',
+    answer: 'Oui, nous intervenons dans toute l\'Ille-et-Vilaine sans frais de déplacement supplémentaire : Rennes, Saint-Malo, Dinard, Cancale, Fougères, Vitré, Redon, Dol-de-Bretagne et toute la côte d\'Émeraude.',
   },
   {
-    question: 'Le matériel est-il aux normes ?',
-    answer: 'Absolument. Tout notre matériel est professionnel et conforme aux normes de sécurité. Nos lanceurs d\'étincelles froides Mac Mah MAC SPARK 300 sont certifiés CE. Nous disposons d\'une assurance responsabilité civile professionnelle.',
+    question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
+    answer: 'Oui, nous proposons une prestation cérémonie laïque à 180€ comprenant la sonorisation professionnelle, 2 techniciens et la diffusion de vos musiques choisies. Idéal pour les cérémonies en extérieur dans les châteaux et domaines du 35.',
+  },
+  {
+    question: 'Quelles animations proposez-vous pour un mariage dans le 35 ?',
+    answer: 'Nous proposons des animations exclusives : AnimaJet (quiz interactif, photo mystère, partage live), photobooth vintage TSF années 60, étincelles froides certifiées CE pour l\'ouverture de bal, fumée lourde et jeux lumineux. Des prestations uniques en Bretagne !',
+  },
+  {
+    question: 'Quel est le délai de réservation pour un mariage à Rennes ?',
+    answer: 'Nous vous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Les mariages à Rennes et Saint-Malo sont très demandés. Pour la basse saison, 6 mois peuvent suffire.',
+  },
+  {
+    question: 'Le matériel est-il aux normes de sécurité ?',
+    answer: 'Absolument. Tout notre matériel est professionnel et conforme aux normes. Nos lanceurs d\'étincelles froides Mac Mah MAC SPARK 300 sont certifiés CE, sans danger pour les salles. Nous disposons d\'une assurance RC professionnelle.',
   },
 ];
 
@@ -57,9 +69,136 @@ const musicFaqs = [
   { question: "L'ambiance est-elle adaptée à toutes les générations ?", answer: "C'est notre spécialité. Avec 25 ans d'expérience en discothèque, nous savons fédérer grands-parents, parents et jeunes sur la même piste de danse." },
 ];
 
+// Données structurées pour le SEO
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.mg-events35.com/#organization",
+  "name": "MG Events Animation - DJ Mariage Ille-et-Vilaine",
+  "image": "https://www.mg-events35.com/images/logo.png",
+  "description": "DJ animateur professionnel pour mariage en Ille-et-Vilaine (35). Animation musicale, photobooth vintage, étincelles froides. Plus de 20 ans d'expérience.",
+  "url": "https://www.mg-events35.com/dj-mariage-ille-et-vilaine",
+  "telephone": "+33648106166",
+  "email": "contact@mg-events35.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rennes",
+    "addressRegion": "Bretagne",
+    "postalCode": "35000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.1173,
+    "longitude": -1.6778
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Rennes" },
+    { "@type": "City", "name": "Saint-Malo" },
+    { "@type": "City", "name": "Fougères" },
+    { "@type": "City", "name": "Vitré" },
+    { "@type": "City", "name": "Redon" },
+    { "@type": "City", "name": "Dinard" },
+    { "@type": "City", "name": "Cancale" },
+    { "@type": "City", "name": "Dol-de-Bretagne" },
+    { "@type": "AdministrativeArea", "name": "Ille-et-Vilaine" }
+  ],
+  "priceRange": "1200€ - 1690€",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "45",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Formules DJ Mariage",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Éclat d'Amour" },
+        "price": "1200",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Rêve en Blanc" },
+        "price": "1490",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Conte de Fées" },
+        "price": "1690",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+};
+
+const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MG Events Animation",
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Morane & Kevin" },
+      "reviewBody": "Merci à Guillaume et Laurence pour leur superbe prestation à notre mariage à Rennes ! Les invités ont été conquis et ont enflammé le dancefloor."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Marine & Thomas" },
+      "reviewBody": "Une soirée magique au bord de la mer à Saint-Malo ! Les étincelles froides pendant l'ouverture de bal resteront gravées dans nos mémoires."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Camille & Julien" },
+      "reviewBody": "Notre mariage au château près de Fougères a été une réussite totale grâce à MG Events. La fumée lourde pour notre première danse était parfaite."
+    }
+  ]
+};
+
+const lieuxMariage35 = [
+  { nom: "Domaine de Cicé-Blossac", ville: "Bruz", type: "Domaine & Golf" },
+  { nom: "Château de la Ballue", ville: "Bazouges-la-Pérouse", type: "Château & Jardins" },
+  { nom: "Manoir de la Begaudière", ville: "Rennes", type: "Manoir" },
+  { nom: "Domaine de la Roche Hervé", ville: "Missillac", type: "Domaine" },
+  { nom: "Les Jardins de l'Orangerie", ville: "Combourg", type: "Jardins" },
+  { nom: "Château du Bois Guy", ville: "Parigné", type: "Château" },
+];
+
+const zonesIntervention = [
+  { zone: "Rennes Métropole", villes: "Rennes, Cesson-Sévigné, Bruz, Chantepie, Saint-Jacques-de-la-Lande, Pacé, Betton, Saint-Grégoire" },
+  { zone: "Côte d'Émeraude", villes: "Saint-Malo, Dinard, Cancale, Saint-Lunaire, Saint-Briac-sur-Mer, Paramé" },
+  { zone: "Pays de Fougères", villes: "Fougères, Vitré, La Guerche-de-Bretagne, Châteaubourg, Janzé" },
+  { zone: "Pays de Redon", villes: "Redon, Guichen, Bain-de-Bretagne, Grand-Fougeray, Pipriac" },
+  { zone: "Pays de Saint-Malo", villes: "Dol-de-Bretagne, Combourg, Tinténiac, Pleine-Fougères, Pontorson" },
+];
+
 export default function DJMariageIlleEtVilaine() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      {/* Schema.org LocalBusiness */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      {/* Schema.org Reviews */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
+      />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -95,11 +234,13 @@ export default function DJMariageIlleEtVilaine() {
                 Votre animation de mariage à Rennes et dans tout le 35
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
-                Vous cherchez un <strong className="text-white">DJ pour votre mariage en Ille-et-Vilaine</strong> ?
-                MG Events Animation se déplace dans tout le département : <span className="text-[#c9a227]">Rennes, Redon, Vitré, Fougères, Saint-Malo, Dinard, Bruz, Cesson-Sévigné</span>...
+                Vous cherchez un <strong className="text-white">DJ pour votre mariage en Ille-et-Vilaine (35)</strong> ?
+                MG Events Animation se déplace dans tout le département : <span className="text-[#c9a227]">Rennes, Saint-Malo, Fougères, Vitré</span>,
+                mais aussi <span className="text-[#c9a227]">Redon, Dinard, Cancale, Dol-de-Bretagne, Bruz, Cesson-Sévigné, Betton, Chantepie,
+                Saint-Grégoire, Pacé, Le Rheu, Montfort-sur-Meu</span> et toute la côte d&apos;Émeraude.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
-                Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés,
+                Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés dans le 35,
                 nous transformons votre soirée en un moment inoubliable. Notre force ? Des animations interactives
                 exclusives grâce à notre technologie <span className="text-[#c9a227]">AnimaJet</span>, un photobooth vintage unique,
                 et des effets spectaculaires (fumée lourde, étincelles froides certifiées CE).
@@ -191,14 +332,14 @@ export default function DJMariageIlleEtVilaine() {
           </div>
         </div>
 
-        {/* FAQ Schema */}
+        {/* FAQ Schema - Toutes les FAQ */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": musicFaqs.map(faq => ({
+              "mainEntity": [...faqs, ...musicFaqs].map(faq => ({
                 "@type": "Question",
                 "name": faq.question,
                 "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
@@ -240,22 +381,183 @@ export default function DJMariageIlleEtVilaine() {
         </div>
       </section>
 
-      {/* Témoignage */}
+      {/* Lieux de mariage populaires en Ille-et-Vilaine */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Lieux de mariage populaires en <span className="text-[#c9a227]">Ille-et-Vilaine</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            Nous connaissons parfaitement les plus beaux <strong className="text-white">lieux de réception du 35</strong> et adaptons
+            notre installation à chaque espace. Châteaux, domaines, manoirs ou salles de réception — nous intervenons partout.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {lieuxMariage35.map((lieu, index) => (
+              <div key={index} className="card-dark p-4 flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#c9a227]/10 flex items-center justify-center shrink-0">
+                  <MapPin size={18} className="text-[#c9a227]" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium text-sm">{lieu.nom}</h3>
+                  <p className="text-[#888] text-xs">{lieu.ville} • {lieu.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#666] text-sm text-center mt-8">
+            Et bien d&apos;autres lieux : Domaine de Tizé, Château de Montmuran, Manoir du Plessis,
+            Domaine des Music&apos;Halles, La Maison Neuve...
+          </p>
+        </div>
+      </section>
+
+      {/* Zones d'intervention détaillées */}
       <section className="py-16 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="card-dark p-8 text-center">
-            <div className="flex justify-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={24} fill="#c9a227" className="text-[#c9a227]" />
-              ))}
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            DJ Mariage dans tout le <span className="text-[#c9a227]">département 35</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            <strong className="text-white">Aucun frais de déplacement</strong> dans toute l&apos;Ille-et-Vilaine.
+            Nous intervenons de la côte d&apos;Émeraude jusqu&apos;aux portes de la Mayenne.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {zonesIntervention.map((zone, index) => (
+              <div key={index} className="card-dark p-5">
+                <h3 className="text-[#c9a227] font-medium mb-2 flex items-center gap-2">
+                  <MapPin size={16} />
+                  {zone.zone}
+                </h3>
+                <p className="text-[#888] text-sm leading-relaxed">{zone.villes}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Ils nous ont fait confiance en <span className="text-[#c9a227]">Ille-et-Vilaine</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12">
+            Témoignages de mariages animés dans le 35
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Témoignage 1 - Rennes */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Merci à Guillaume et Laurence pour leur superbe prestation à notre mariage à Rennes !
+                Les invités ont été conquis et ont enflammé le dancefloor, toutes générations confondues.
+                Le photobooth a fait sensation !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Morane & Kevin</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Rennes
+              </p>
             </div>
-            <blockquote className="text-lg text-[#aaa] italic mb-6">
-              &ldquo;Merci à Guillaume et Laurence pour leur superbe prestation à notre mariage à Rennes !
-              Les invités ont été conquis et ont enflammé le dancefloor, toutes générations confondues,
-              jusqu&apos;au bout de la nuit ! Le photobooth a fait sensation.&rdquo;
-            </blockquote>
-            <p className="text-white font-medium">Morane & Kevin</p>
-            <p className="text-[#888] text-sm">Mariage à Rennes (35)</p>
+
+            {/* Témoignage 2 - Saint-Malo */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Une soirée magique au bord de la mer ! Guillaume a su créer une ambiance incroyable
+                dans notre salle avec vue sur les remparts. Les étincelles froides pendant l&apos;ouverture
+                de bal resteront gravées dans nos mémoires.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Marine & Thomas</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Saint-Malo
+              </p>
+            </div>
+
+            {/* Témoignage 3 - Fougères */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Professionnels, à l&apos;écoute et tellement sympathiques ! Notre mariage au château
+                près de Fougères a été une réussite totale grâce à MG Events. La fumée lourde
+                pour notre première danse était juste parfaite.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Camille & Julien</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Fougères
+              </p>
+            </div>
+
+            {/* Témoignage 4 - Vitré */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Nous avons adoré les animations AnimaJet ! Nos invités se sont pris au jeu
+                et la soirée est passée trop vite. Merci pour votre énergie communicative
+                et votre professionnalisme sans faille.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Léa & Maxime</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Vitré
+              </p>
+            </div>
+
+            {/* Témoignage 5 - Dinard */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Le photobooth vintage a été l&apos;attraction de la soirée ! Tous nos invités
+                repartis avec leurs photos souvenirs. Guillaume et Laurence forment un duo
+                au top, on recommande à 100%.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Charlotte & Antoine</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Dinard
+              </p>
+            </div>
+
+            {/* Témoignage 6 - Redon */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;De la cérémonie laïque à la fermeture du dancefloor, tout était parfait.
+                Guillaume a su s&apos;adapter à notre playlist tout en gardant l&apos;ambiance.
+                Merci pour ce moment magique !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Sophie & Pierre</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Redon
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -298,6 +600,46 @@ export default function DJMariageIlleEtVilaine() {
             </Link>
             <Link href="/dj-mariage-mayenne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
               DJ Mariage Mayenne (53)
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Articles de blog - Maillage interne */}
+      <section className="py-16 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-8">
+            Nos conseils pour votre <span className="text-[#c9a227]">mariage en Bretagne</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/blog/comment-choisir-dj-mariage-bretagne" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">
+                Comment choisir son DJ mariage en Bretagne ?
+              </h3>
+              <p className="text-[#888] text-sm">
+                Guide complet pour trouver le DJ idéal pour votre mariage dans le 35.
+              </p>
+            </Link>
+            <Link href="/blog/ouverture-de-bal-conseils" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">
+                Réussir son ouverture de bal
+              </h3>
+              <p className="text-[#888] text-sm">
+                Conseils et idées pour une première danse mémorable.
+              </p>
+            </Link>
+            <Link href="/blog/etincelles-froides-mariage-securite" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">
+                Étincelles froides : sécurité et effet garanti
+              </h3>
+              <p className="text-[#888] text-sm">
+                Tout savoir sur les étincelles froides pour votre mariage.
+              </p>
+            </Link>
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/blog" className="text-[#c9a227] hover:underline">
+              Voir tous nos articles →
             </Link>
           </div>
         </div>

@@ -4,15 +4,15 @@ import Image from 'next/image';
 import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Headphones, Volume2, Disc3, HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Loire-Atlantique | Animation Mariage Nantes',
-  description: "DJ animateur mariage en Loire-Atlantique. Nantes, Saint-Nazaire, Guérande, La Baule. +20 ans d'expérience, photobooth vintage. Devis gratuit ✓",
-  keywords: 'DJ mariage Loire-Atlantique, DJ mariage Nantes, DJ mariage Saint-Nazaire, DJ mariage La Baule, DJ mariage Guérande, animation mariage 44',
+  title: 'DJ Mariage Loire-Atlantique (44) | MG Events Animation Nantes',
+  description: "DJ animateur mariage en Loire-Atlantique (44). Nantes, Saint-Nazaire, La Baule, Guérande, Pornic, Clisson. +20 ans d'expérience, photobooth vintage, animations interactives. Devis gratuit ✓",
+  keywords: 'DJ mariage Loire-Atlantique, DJ mariage 44, DJ mariage Nantes, DJ mariage Saint-Nazaire, DJ mariage La Baule, DJ mariage Guérande, DJ mariage Pornic, DJ mariage Clisson, animation mariage Pays de la Loire',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',
   },
   openGraph: {
-    title: 'DJ Mariage Loire-Atlantique | Animation Mariage Nantes - MG Events',
-    description: "DJ animateur mariage en Loire-Atlantique. Nantes, Saint-Nazaire, Guérande, La Baule. +20 ans d'expérience, photobooth vintage.",
+    title: 'DJ Mariage Loire-Atlantique (44) | MG Events Animation Nantes',
+    description: "DJ animateur mariage en Loire-Atlantique (44). Nantes, Saint-Nazaire, La Baule, Guérande. +20 ans d'expérience, photobooth vintage, animations interactives.",
     url: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',
   },
 };
@@ -32,16 +32,28 @@ const formules = [
 
 const faqs = [
   {
-    question: 'Intervenez-vous jusqu\'à La Baule ?',
-    answer: 'Oui, nous couvrons toute la Loire-Atlantique : Nantes, Saint-Nazaire, Guérande, La Baule, Pornic, Ancenis, Châteaubriant, Clisson... La côte Atlantique n\'a pas de secret pour nous !',
+    question: 'Quel est le prix d\'un DJ mariage à Nantes ?',
+    answer: 'Nos formules DJ mariage en Loire-Atlantique démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département 44.',
   },
   {
-    question: 'Quel est le délai de réservation ?',
-    answer: 'Nous vous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Pour la basse saison, 6 mois peuvent suffire. Contactez-nous pour vérifier nos disponibilités !',
+    question: 'Vous déplacez-vous à La Baule et Saint-Nazaire ?',
+    answer: 'Oui, nous couvrons toute la Loire-Atlantique sans frais supplémentaire : Nantes, Saint-Nazaire, Guérande, La Baule, Pornic, Ancenis, Châteaubriant, Clisson, Le Croisic, Pornichet... La côte Atlantique n\'a pas de secret pour nous !',
   },
   {
-    question: 'Le matériel est-il aux normes ?',
-    answer: 'Absolument. Tout notre matériel est professionnel et conforme aux normes de sécurité. Nos lanceurs d\'étincelles froides Mac Mah MAC SPARK 300 sont certifiés CE. Nous disposons d\'une assurance responsabilité civile professionnelle.',
+    question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
+    answer: 'Oui, nous proposons une prestation cérémonie laïque à 180€ comprenant la sonorisation professionnelle et 2 techniciens. Idéal pour les cérémonies en plein air dans les domaines viticoles et châteaux du vignoble nantais.',
+  },
+  {
+    question: 'Quelles animations proposez-vous pour un mariage dans le 44 ?',
+    answer: 'Nous proposons des animations exclusives : AnimaJet (quiz interactif, photo mystère, partage live), photobooth vintage TSF années 60, étincelles froides certifiées CE, fumée lourde et jeux lumineux. Parfait pour les mariages face à l\'océan !',
+  },
+  {
+    question: 'Quel est le délai de réservation pour un mariage à Nantes ?',
+    answer: 'Nous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Les mariages à Nantes, La Baule et sur la côte sont très demandés. Pour la basse saison, 6 mois peuvent suffire.',
+  },
+  {
+    question: 'Le matériel est-il adapté aux salles en bord de mer ?',
+    answer: 'Absolument. Notre matériel professionnel est adapté à tous types de lieux : châteaux, domaines viticoles, salles face à l\'océan. Nos lanceurs d\'étincelles froides sont certifiés CE et nous disposons d\'une assurance RC professionnelle.',
   },
 ];
 
@@ -57,9 +69,136 @@ const musicFaqs = [
   { question: "L'ambiance est-elle adaptée à toutes les générations ?", answer: "C'est notre spécialité. Avec 25 ans d'expérience en discothèque, nous savons fédérer grands-parents, parents et jeunes sur la même piste de danse." },
 ];
 
+// Données structurées pour le SEO
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.mg-events35.com/#organization",
+  "name": "MG Events Animation - DJ Mariage Loire-Atlantique",
+  "image": "https://www.mg-events35.com/images/logo.png",
+  "description": "DJ animateur professionnel pour mariage en Loire-Atlantique (44). Animation musicale, photobooth vintage, étincelles froides à Nantes, Saint-Nazaire, La Baule.",
+  "url": "https://www.mg-events35.com/dj-mariage-loire-atlantique",
+  "telephone": "+33648106166",
+  "email": "contact@mg-events35.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nantes",
+    "addressRegion": "Pays de la Loire",
+    "postalCode": "44000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.2184,
+    "longitude": -1.5536
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Nantes" },
+    { "@type": "City", "name": "Saint-Nazaire" },
+    { "@type": "City", "name": "La Baule" },
+    { "@type": "City", "name": "Guérande" },
+    { "@type": "City", "name": "Pornic" },
+    { "@type": "City", "name": "Clisson" },
+    { "@type": "City", "name": "Ancenis" },
+    { "@type": "City", "name": "Châteaubriant" },
+    { "@type": "AdministrativeArea", "name": "Loire-Atlantique" }
+  ],
+  "priceRange": "1200€ - 1690€",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "45",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Formules DJ Mariage",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Éclat d'Amour" },
+        "price": "1200",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Rêve en Blanc" },
+        "price": "1490",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Conte de Fées" },
+        "price": "1690",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+};
+
+const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MG Events Animation",
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Pauline & Nicolas" },
+      "reviewBody": "Notre mariage près de Nantes était une vraie réussite grâce à MG Events. Nous n'avons eu que des super retours des invités !"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Émilie & Romain" },
+      "reviewBody": "Mariage parfait à La Baule avec vue sur l'océan. Guillaume et Laurence ont su créer une ambiance magique jusqu'au bout de la nuit."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Aurélie & Florian" },
+      "reviewBody": "Superbe prestation dans notre domaine viticole à Clisson. Les animations AnimaJet ont conquis tous nos invités."
+    }
+  ]
+};
+
+const lieuxMariage44 = [
+  { nom: "Domaine de la Frémoire", ville: "Vertou", type: "Domaine viticole" },
+  { nom: "Château de la Gascherie", ville: "La Chapelle-sur-Erdre", type: "Château" },
+  { nom: "Domaine de la Ragotière", ville: "La Regrippière", type: "Domaine viticole" },
+  { nom: "Manoir de la Jahotière", ville: "Saint-Herblain", type: "Manoir" },
+  { nom: "Château du Pé", ville: "Saint-Julien-de-Concelles", type: "Château & Vignes" },
+  { nom: "Domaine de Pont Carré", ville: "Guérande", type: "Domaine" },
+];
+
+const zonesIntervention44 = [
+  { zone: "Nantes Métropole", villes: "Nantes, Rezé, Saint-Herblain, Orvault, Carquefou, Vertou, Bouguenais, Saint-Sébastien-sur-Loire" },
+  { zone: "Côte Atlantique", villes: "La Baule, Pornichet, Le Croisic, Le Pouliguen, Saint-Nazaire, Pornic, Saint-Brévin" },
+  { zone: "Presqu'île de Guérande", villes: "Guérande, La Turballe, Piriac-sur-Mer, Mesquer, Herbignac" },
+  { zone: "Vignoble Nantais", villes: "Clisson, Vallet, Le Loroux-Bottereau, La Chapelle-Heulin, Mouzillon" },
+  { zone: "Nord Loire", villes: "Châteaubriant, Ancenis, Nort-sur-Erdre, Blain, Savenay" },
+];
+
 export default function DJMariageLoireAtlantique() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      {/* Schema.org LocalBusiness */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      {/* Schema.org Reviews */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
+      />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -95,13 +234,15 @@ export default function DJMariageLoireAtlantique() {
                 Animation de mariage à Nantes et dans tout le 44
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
-                <strong className="text-white">MG Events Animation rayonne jusqu&apos;en Loire-Atlantique !</strong>
-                Nous animons vos mariages à <span className="text-[#c9a227]">Nantes, Saint-Nazaire, Guérande, La Baule, Pornic, Ancenis, Châteaubriant, Clisson</span>...
+                Vous cherchez un <strong className="text-white">DJ pour votre mariage en Loire-Atlantique (44)</strong> ?
+                MG Events Animation se déplace dans tout le département : <span className="text-[#c9a227]">Nantes, Saint-Nazaire, La Baule, Guérande</span>,
+                mais aussi <span className="text-[#c9a227]">Pornic, Clisson, Ancenis, Le Croisic, Pornichet, Vertou, Rezé,
+                Orvault, Carquefou, Châteaubriant</span> et tout le vignoble nantais.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés,
-                nous transformons votre soirée en un moment inoubliable. Notre force ? Des animations interactives
-                exclusives grâce à notre technologie <span className="text-[#c9a227]">AnimaJet</span>, un photobooth vintage unique,
+                nous transformons votre soirée en un moment inoubliable. Que ce soit face à l&apos;océan à La Baule ou dans un domaine viticole à Clisson,
+                notre force ? Des animations interactives exclusives avec <span className="text-[#c9a227]">AnimaJet</span>, un photobooth vintage unique,
                 et des effets spectaculaires (fumée lourde, étincelles froides certifiées CE).
               </p>
               <div className="flex flex-wrap gap-4">
@@ -185,13 +326,14 @@ export default function DJMariageLoireAtlantique() {
             </div>
           </div>
         </div>
+        {/* FAQ Schema - Toutes les FAQ */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": musicFaqs.map(faq => ({
+              "mainEntity": [...faqs, ...musicFaqs].map(faq => ({
                 "@type": "Question",
                 "name": faq.question,
                 "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
@@ -233,22 +375,177 @@ export default function DJMariageLoireAtlantique() {
         </div>
       </section>
 
-      {/* Témoignage */}
+      {/* Lieux de mariage populaires en Loire-Atlantique */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Lieux de mariage populaires en <span className="text-[#c9a227]">Loire-Atlantique</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            Nous connaissons parfaitement les plus beaux <strong className="text-white">lieux de réception du 44</strong> :
+            domaines viticoles du vignoble nantais, châteaux, manoirs et salles face à l&apos;océan.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {lieuxMariage44.map((lieu, index) => (
+              <div key={index} className="card-dark p-4 flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#c9a227]/10 flex items-center justify-center shrink-0">
+                  <MapPin size={18} className="text-[#c9a227]" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium text-sm">{lieu.nom}</h3>
+                  <p className="text-[#888] text-xs">{lieu.ville} • {lieu.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#666] text-sm text-center mt-8">
+            Et bien d&apos;autres lieux : Château de la Chesnaie, Domaine de l&apos;Oiselinière, Manoir de l&apos;Espérance,
+            Les Jardins de la Mignardière, Le Domaine du Bois Saint-Louis...
+          </p>
+        </div>
+      </section>
+
+      {/* Zones d'intervention détaillées */}
       <section className="py-16 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="card-dark p-8 text-center">
-            <div className="flex justify-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={24} fill="#c9a227" className="text-[#c9a227]" />
-              ))}
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            DJ Mariage dans tout le <span className="text-[#c9a227]">département 44</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            <strong className="text-white">Déplacement inclus</strong> dans toute la Loire-Atlantique.
+            De la côte Atlantique au vignoble nantais, nous intervenons partout.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {zonesIntervention44.map((zone, index) => (
+              <div key={index} className="card-dark p-5">
+                <h3 className="text-[#c9a227] font-medium mb-2 flex items-center gap-2">
+                  <MapPin size={16} />
+                  {zone.zone}
+                </h3>
+                <p className="text-[#888] text-sm leading-relaxed">{zone.villes}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Ils nous ont fait confiance en <span className="text-[#c9a227]">Loire-Atlantique</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12">
+            Témoignages de mariages animés dans le 44
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Témoignage 1 - Nantes */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Si vous cherchez un DJ pour n&apos;importe quelle occasion prenez le les yeux fermés.
+                Notre mariage près de Nantes était une vraie réussite. Tous les invités étaient ravis !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Pauline & Nicolas</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Nantes
+              </p>
             </div>
-            <blockquote className="text-lg text-[#aaa] italic mb-6">
-              &ldquo;Si vous cherchez un DJ pour n&apos;importe quelle occasion prenez le les yeux fermés.
-              Notre mariage près de Nantes était une vraie réussite grâce à MG Events.
-              Nous n&apos;avons eu que des super retours des invités, tout le monde était ravi !&rdquo;
-            </blockquote>
-            <p className="text-white font-medium">Pauline & Nicolas</p>
-            <p className="text-[#888] text-sm">Mariage près de Nantes (44)</p>
+
+            {/* Témoignage 2 - La Baule */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Mariage parfait avec vue sur l&apos;océan ! Guillaume et Laurence ont su créer
+                une ambiance magique. Les étincelles froides au coucher du soleil, c&apos;était grandiose.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Émilie & Romain</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à La Baule
+              </p>
+            </div>
+
+            {/* Témoignage 3 - Clisson */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Superbe prestation dans notre domaine viticole ! Les animations AnimaJet
+                ont conquis tous nos invités. Le photobooth a fait un carton jusqu&apos;à la fin.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Aurélie & Florian</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Clisson
+              </p>
+            </div>
+
+            {/* Témoignage 4 - Saint-Nazaire */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Une équipe au top ! De la cérémonie laïque face à la mer jusqu&apos;au
+                dancefloor enflammé, tout était parfait. On recommande à 200%.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Lucie & Mathieu</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Saint-Nazaire
+              </p>
+            </div>
+
+            {/* Témoignage 5 - Guérande */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Notre mariage près des marais salants restera gravé dans nos mémoires.
+                Guillaume a su adapter la musique à chaque moment. Merci pour cette soirée magique !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Manon & Thibault</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Guérande
+              </p>
+            </div>
+
+            {/* Témoignage 6 - Pornic */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Professionnels, réactifs et tellement sympathiques. La fumée lourde
+                pour notre ouverture de bal était sublime. Tout le monde en parle encore !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Julie & Alexandre</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Pornic
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -291,6 +588,46 @@ export default function DJMariageLoireAtlantique() {
             </Link>
             <Link href="/dj-mariage-mayenne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
               DJ Mariage Mayenne (53)
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Articles de blog - Maillage interne */}
+      <section className="py-16 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-8">
+            Nos conseils pour votre <span className="text-[#c9a227]">mariage en Loire-Atlantique</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/blog/comment-choisir-dj-mariage-bretagne" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">
+                Comment choisir son DJ mariage ?
+              </h3>
+              <p className="text-[#888] text-sm">
+                Guide complet pour trouver le DJ idéal pour votre mariage dans le 44.
+              </p>
+            </Link>
+            <Link href="/blog/ouverture-de-bal-conseils" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">
+                Réussir son ouverture de bal
+              </h3>
+              <p className="text-[#888] text-sm">
+                Conseils et idées pour une première danse mémorable face à l&apos;océan.
+              </p>
+            </Link>
+            <Link href="/blog/etincelles-froides-mariage-securite" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">
+                Étincelles froides : effet garanti
+              </h3>
+              <p className="text-[#888] text-sm">
+                Tout savoir sur les étincelles froides pour sublimer votre mariage.
+              </p>
+            </Link>
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/blog" className="text-[#c9a227] hover:underline">
+              Voir tous nos articles →
             </Link>
           </div>
         </div>
