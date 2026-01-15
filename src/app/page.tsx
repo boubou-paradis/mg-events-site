@@ -1485,9 +1485,9 @@ function EtincellesFroides({ onImageClick }: { onImageClick: (src: string, alt: 
 // ============ AUTRES EVENEMENTS ============
 function AutresEvenements() {
   const events = [
-    { icon: Cake, title: 'Anniversaire', description: 'Ambiance sur-mesure', href: '/animation-anniversaire-rennes' },
+    { icon: Cake, title: 'Anniversaire', description: 'Ambiance sur-mesure', href: '/animation-anniversaire/rennes' },
     { icon: Mic2, title: 'Karaoké', description: 'Soirées inoubliables', href: '#contact' },
-    { icon: Building2, title: 'CE / Entreprise', description: 'Séminaires, galas', href: '/dj-soiree-entreprise-rennes' },
+    { icon: Building2, title: 'CE / Entreprise', description: 'Séminaires, galas', href: '/dj-soiree-entreprise/rennes' },
     { icon: GlassWater, title: 'Soirée privée', description: 'Bar, discothèque', href: '#contact' },
   ];
 
@@ -1572,7 +1572,7 @@ function AutresEvenements() {
               {villesEntreprise.map((ville) => (
                 <Link
                   key={ville.slug}
-                  href={`/dj-soiree-entreprise-${ville.slug}`}
+                  href={`/dj-soiree-entreprise/${ville.slug}`}
                   className="text-xs px-3 py-1 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
                 >
                   {ville.name}
@@ -1591,7 +1591,7 @@ function AutresEvenements() {
               {villesAnniversaire.map((ville) => (
                 <Link
                   key={ville.slug}
-                  href={`/animation-anniversaire-${ville.slug}`}
+                  href={`/animation-anniversaire/${ville.slug}`}
                   className="text-xs px-3 py-1 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
                 >
                   {ville.name}
@@ -1665,7 +1665,7 @@ function Footer() {
             <ul className="space-y-2">
               {villesMariage.map((ville) => (
                 <li key={ville.slug}>
-                  <Link href={`/dj-mariage-${ville.slug}`} className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                  <Link href={`/dj-mariage/${ville.slug}`} className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
                     DJ Mariage {ville.name}
                   </Link>
                 </li>

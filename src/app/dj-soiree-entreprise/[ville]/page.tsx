@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Star, Mic2, Camera, PartyPopper, Music, Phone, Mail, MapPin, ChevronDown, Cake, Gift, Sparkles, HelpCircle } from 'lucide-react';
-import { getCityBySlug, getBirthdayCitySlugs, type City } from '@/data/cities';
+import { ArrowLeft, Star, Mic2, Camera, Users, Music, Phone, Mail, MapPin, ChevronDown, Building2, Presentation, Award, HelpCircle } from 'lucide-react';
+import { getCityBySlug, getEnterpriseCitySlugs, type City } from '@/data/cities';
 import { notFound } from 'next/navigation';
 
-// Génération statique des pages anniversaire (5 villes principales)
+// Génération statique des pages entreprise (10 villes)
 export async function generateStaticParams() {
-  return getBirthdayCitySlugs().map((ville) => ({
+  return getEnterpriseCitySlugs().map((ville) => ({
     ville,
   }));
 }
@@ -17,84 +17,84 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   const { ville } = await params;
   const city = getCityBySlug(ville);
 
-  if (!city || !city.forBirthday) {
+  if (!city || !city.forEnterprise) {
     return { title: 'Page non trouvée' };
   }
 
   return {
-    title: `Animation Anniversaire ${city.name} | DJ Fête Privée ${city.departmentCode} | MG Events`,
-    description: `DJ animateur pour anniversaire à ${city.name}. Animation musicale, karaoké, photobooth. Fêtes privées mémorables. Devis gratuit ✓`,
-    keywords: `DJ anniversaire ${city.name}, animation anniversaire ${city.name}, fête privée ${city.name}, DJ soirée ${city.name}, animation ${city.departmentCode}`,
+    title: `DJ Soirée Entreprise ${city.name} | Animation Corporate ${city.departmentCode} | MG Events`,
+    description: `DJ animateur pour soirée d'entreprise à ${city.name}. Séminaires, team building, soirées corporate. Animation professionnelle, photobooth logo. Devis gratuit ✓`,
+    keywords: `DJ entreprise ${city.name}, animation corporate ${city.name}, soirée entreprise ${city.name}, team building ${city.name}, DJ séminaire ${city.departmentCode}`,
     alternates: {
-      canonical: `https://www.mg-events35.com/animation-anniversaire-${city.slug}`,
+      canonical: `https://www.mg-events35.com/dj-soiree-entreprise/${city.slug}`,
     },
     openGraph: {
-      title: `Animation Anniversaire ${city.name} | MG Events Animation`,
-      description: `DJ animateur pour anniversaire à ${city.name}. Animation musicale, karaoké, photobooth.`,
-      url: `https://www.mg-events35.com/animation-anniversaire-${city.slug}`,
+      title: `DJ Soirée Entreprise ${city.name} | MG Events Animation`,
+      description: `DJ animateur pour soirée d'entreprise à ${city.name}. Séminaires, team building, animations interactives.`,
+      url: `https://www.mg-events35.com/dj-soiree-entreprise/${city.slug}`,
     },
   };
 }
 
 const pointsForts = [
-  { icon: Mic2, title: 'Animation sur mesure', description: "Adaptée à l'âge et aux goûts des invités" },
-  { icon: PartyPopper, title: 'Ambiance garantie', description: 'Jeux, karaoké et moments festifs' },
-  { icon: Camera, title: 'Photobooth vintage', description: 'Souvenirs photos pour tous les invités' },
-  { icon: Music, title: 'Playlist personnalisée', description: 'Vos morceaux préférés pour un moment unique' },
+  { icon: Mic2, title: "Expérience corporate", description: "Animation de nombreux événements d'entreprise" },
+  { icon: Users, title: 'Team building musical', description: 'Activités interactives pour renforcer la cohésion' },
+  { icon: Camera, title: 'Photobooth personnalisé', description: 'Photos avec logo entreprise, partage instantané' },
+  { icon: Music, title: 'AnimaJet interactif', description: 'Quiz, blind test et animations digitales' },
 ];
 
 const formules = [
-  { name: 'Essentiel', price: '600', description: 'Animation musicale (4h)' },
-  { name: 'Festif', price: '900', description: 'Animation complète avec jeux', popular: true },
-  { name: 'VIP', price: '1200', description: 'Expérience premium avec photobooth' },
+  { name: 'Cocktail', price: '800', description: "Animation musicale d'ambiance (4h)" },
+  { name: 'Corporate', price: '1200', description: 'Soirée complète avec jeux interactifs', popular: true },
+  { name: 'Premium', price: '1600', description: 'Expérience complète avec photobooth' },
 ];
 
-const birthdayFeatures = [
-  { icon: Cake, value: 'Tous les âges', label: '30, 40, 50 ans...', description: 'Chaque anniversaire mérite une fête à la hauteur' },
-  { icon: Gift, value: 'Sur mesure', label: 'Vos envies', description: 'Playlist, animations et ambiance personnalisées' },
-  { icon: Sparkles, value: 'Effets', label: 'spectaculaires', description: 'Fumée lourde et étincelles froides disponibles' },
+const corporateStats = [
+  { icon: Building2, value: 'Entreprises', label: 'de toutes tailles', description: 'PME, ETI, grands groupes : nous adaptons nos prestations' },
+  { icon: Presentation, value: 'Événements', label: 'sur mesure', description: 'Séminaires, team building, soirées de fin d\'année, lancements produit' },
+  { icon: Award, value: 'Qualité', label: 'professionnelle', description: 'Matériel haut de gamme, ponctualité, discrétion' },
 ];
 
-// FAQs pour anniversaire
-function generateBirthdayFaqs(city: City) {
+// Génère les FAQs pour les événements entreprise
+function generateEnterpriseFaqs(city: City) {
   return [
     {
-      question: `Quel est le tarif d'un DJ pour un anniversaire à ${city.name} ?`,
-      answer: `Nos formules animation anniversaire à ${city.name} démarrent à 600€ TTC (4h d'animation) et vont jusqu'à 1200€ TTC (formule VIP avec photobooth). Le déplacement à ${city.name} est inclus.`,
+      question: `Quel est le tarif d'un DJ pour une soirée d'entreprise à ${city.name} ?`,
+      answer: `Nos formules animation corporate à ${city.name} démarrent à 800€ TTC (formule Cocktail 4h) et vont jusqu'à 1600€ TTC (formule Premium avec photobooth personnalisé). Les tarifs incluent le déplacement et l'installation.`,
     },
     {
-      question: 'À partir de combien de personnes intervenez-vous ?',
-      answer: `Nous intervenons à partir de 30 personnes pour garantir une ambiance festive. Pour les événements plus intimistes, contactez-nous pour étudier votre demande.`,
+      question: 'Pouvez-vous personnaliser l\'animation avec notre branding ?',
+      answer: `Absolument ! Nous intégrons votre logo sur le photobooth, les animations AnimaJet et pouvons créer des quiz/blind tests personnalisés autour de votre entreprise ou de votre secteur d'activité.`,
     },
     {
-      question: 'Proposez-vous du karaoké ?',
-      answer: `Oui ! Le karaoké est disponible en option (150€) ou inclus dans la formule Festif. Avec des milliers de titres disponibles, c'est idéal pour créer des moments de partage mémorables.`,
+      question: `Intervenez-vous dans les hôtels et centres de congrès de ${city.name} ?`,
+      answer: `Oui, nous intervenons régulièrement dans les espaces corporate de ${city.name} : hôtels, centres de congrès, salles de réception. Nous nous adaptons à chaque lieu et à ses contraintes techniques.`,
     },
     {
-      question: `Intervenez-vous à domicile à ${city.name} ?`,
-      answer: `Oui, nous intervenons chez vous si l'espace le permet, mais aussi dans les salles des fêtes, restaurants privatisés ou domaines de ${city.name} et environs.`,
+      question: 'Proposez-vous des animations team building ?',
+      answer: `Oui ! Nos animations interactives AnimaJet sont parfaites pour le team building : blind test musical, quiz personnalisé, défis par équipes. Idéal pour renforcer la cohésion d'équipe tout en s'amusant.`,
     },
     {
-      question: 'Quelles animations proposez-vous pour un anniversaire ?',
-      answer: `Nous proposons : quiz musical personnalisé, karaoké, blind test, jeux interactifs AnimaJet, photobooth vintage. Nous adaptons les animations à l'âge des participants et à vos envies.`,
+      question: 'Quel est le délai de réservation pour un événement corporate ?',
+      answer: `Pour les événements d'entreprise, nous recommandons 2 à 3 mois d'avance minimum. Les périodes de fin d'année (novembre-décembre) sont très demandées pour les soirées de Noël.`,
     },
     {
-      question: 'Peut-on personnaliser la playlist ?',
-      answer: `Absolument ! Nous créons ensemble la playlist idéale avec vos morceaux préférés et ceux qui marqueront les esprits. Nous nous adaptons aussi en direct aux réactions de vos invités.`,
+      question: 'Facturez-vous en HT ou TTC ?',
+      answer: `Nos tarifs affichés sont TTC. Nous fournissons une facture complète avec TVA déductible pour votre comptabilité d'entreprise. Paiement par virement ou chèque.`,
     },
   ];
 }
 
-// Schema LocalBusiness
-function generateBirthdaySchema(city: City) {
+// Schema LocalBusiness pour entreprise
+function generateEnterpriseSchema(city: City) {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": `https://www.mg-events35.com/animation-anniversaire-${city.slug}#organization`,
-    "name": `MG Events Animation - Anniversaire ${city.name}`,
+    "@id": `https://www.mg-events35.com/dj-soiree-entreprise/${city.slug}#organization`,
+    "name": `MG Events Animation - DJ Soirée Entreprise ${city.name}`,
     "image": "https://www.mg-events35.com/images/logo.png",
-    "description": `DJ animateur pour anniversaire à ${city.name}. Animation musicale, karaoké, photobooth. Fêtes privées mémorables.`,
-    "url": `https://www.mg-events35.com/animation-anniversaire-${city.slug}`,
+    "description": `DJ animateur pour soirée d'entreprise à ${city.name}. Animation corporate, team building, photobooth personnalisé. Plus de 20 ans d'expérience.`,
+    "url": `https://www.mg-events35.com/dj-soiree-entreprise/${city.slug}`,
     "telephone": "+33648106166",
     "email": "contact@mg-events35.com",
     "address": {
@@ -109,10 +109,14 @@ function generateBirthdaySchema(city: City) {
       "latitude": city.latitude,
       "longitude": city.longitude
     },
-    "priceRange": "600€ - 1200€",
+    "areaServed": [
+      { "@type": "City", "name": city.name },
+      ...city.nearbyCommunes.slice(0, 5).map(commune => ({ "@type": "City", "name": commune })),
+    ],
+    "priceRange": "800€ - 1600€",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Formules Animation Anniversaire",
+      "name": "Formules Animation Corporate",
       "itemListElement": formules.map(f => ({
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": `Formule ${f.name}` },
@@ -123,23 +127,23 @@ function generateBirthdaySchema(city: City) {
   };
 }
 
-export default async function AnimationAnniversaire({ params }: { params: Promise<{ ville: string }> }) {
+export default async function DJSoireeEntreprise({ params }: { params: Promise<{ ville: string }> }) {
   const { ville } = await params;
   const city = getCityBySlug(ville);
 
-  if (!city || !city.forBirthday) {
+  if (!city || !city.forEnterprise) {
     notFound();
   }
 
-  const faqs = generateBirthdayFaqs(city);
-  const birthdaySchema = generateBirthdaySchema(city);
+  const faqs = generateEnterpriseFaqs(city);
+  const enterpriseSchema = generateEnterpriseSchema(city);
 
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
       {/* Schema.org */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(birthdaySchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(enterpriseSchema) }}
       />
 
       {/* Header */}
@@ -171,21 +175,27 @@ export default async function AnimationAnniversaire({ params }: { params: Promis
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-                Animation Anniversaire <span className="text-[#c9a227]">{city.name}</span>
+                DJ Soirée Entreprise <span className="text-[#c9a227]">{city.name}</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                DJ pour votre fête d&apos;anniversaire à {city.name}
+                Animation musicale pour vos événements corporate à {city.name}
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
-                Vous organisez un <strong className="text-white">anniversaire à {city.name}</strong> ?
-                MG Events Animation transforme votre fête en un moment inoubliable avec une
-                <span className="text-[#c9a227]"> animation musicale sur mesure</span>.
+                Vous organisez une <strong className="text-white">soirée d&apos;entreprise à {city.name}</strong> ?
+                MG Events Animation propose des prestations sur mesure pour vos événements corporate :
+                <span className="text-[#c9a227]"> séminaires, team building, soirées de fin d&apos;année, lancements produit</span>.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
-                30 ans, 40 ans, 50 ans ou plus — chaque anniversaire mérite une célébration à la hauteur !
-                <strong className="text-white"> Karaoké, quiz musical, photobooth</strong>, playlist personnalisée :
-                nous créons l&apos;ambiance qui vous ressemble.
+                Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong>, nous créons une ambiance professionnelle
+                et conviviale. Notre technologie <span className="text-[#c9a227]">AnimaJet</span> permet des animations interactives
+                (quiz, blind test) personnalisables avec votre branding.
               </p>
+              {city.businessAreas && (
+                <p className="text-[#888] leading-relaxed mb-8">
+                  Nous intervenons dans les zones d&apos;activité de {city.name} :
+                  <span className="text-[#c9a227]"> {city.businessAreas.join(', ')}</span>.
+                </p>
+              )}
               <div className="flex flex-wrap gap-4">
                 <Link href="/#contact" className="btn-gold inline-flex items-center gap-2">
                   <Mail size={18} />
@@ -200,8 +210,8 @@ export default async function AnimationAnniversaire({ params }: { params: Promis
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20">
                 <Image
-                  src="/images/gallery-3.jpg"
-                  alt={`Animation anniversaire ${city.name}`}
+                  src="/images/gallery-5.jpg"
+                  alt={`DJ soirée entreprise ${city.name}`}
                   fill
                   className="object-cover"
                 />
@@ -215,7 +225,7 @@ export default async function AnimationAnniversaire({ params }: { params: Promis
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-12">
-            Une fête <span className="text-[#c9a227]">inoubliable</span> à {city.name}
+            Une animation <span className="text-[#c9a227]">corporate sur mesure</span>
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {pointsForts.map((point, index) => (
@@ -229,68 +239,68 @@ export default async function AnimationAnniversaire({ params }: { params: Promis
         </div>
       </section>
 
-      {/* Services anniversaire */}
+      {/* Nos services corporate */}
       <section className="py-16 bg-[#141414]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
-            Nos services <span className="text-[#c9a227]">anniversaire</span>
+            Nos services pour les <span className="text-[#c9a227]">entreprises</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            Des animations adaptées à tous les âges et toutes les envies
+            Des prestations adaptées à tous vos événements professionnels à {city.name}
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {birthdayFeatures.map((feat, index) => (
+            {corporateStats.map((stat, index) => (
               <div key={index} className="card-dark p-6 text-center">
-                <feat.icon size={40} className="text-[#c9a227] mx-auto mb-4" />
+                <stat.icon size={40} className="text-[#c9a227] mx-auto mb-4" />
                 <div className="text-xl font-[family-name:var(--font-display)] text-white mb-1">
-                  <strong>{feat.value}</strong> {feat.label}
+                  <strong>{stat.value}</strong> {stat.label}
                 </div>
-                <p className="text-[#888] text-sm">{feat.description}</p>
+                <p className="text-[#888] text-sm">{stat.description}</p>
               </div>
             ))}
           </div>
 
-          {/* Animations disponibles */}
+          {/* Types d'événements */}
           <div className="grid md:grid-cols-2 gap-6">
             <div className="card-dark p-6">
               <h3 className="text-[#c9a227] font-medium mb-4 flex items-center gap-2">
-                <Mic2 size={20} />
-                Karaoké
+                <Presentation size={20} />
+                Séminaires & Conventions
               </h3>
               <p className="text-[#888] text-sm leading-relaxed">
-                Des milliers de titres disponibles pour que chacun puisse monter sur scène !
-                Du classique aux derniers hits, en français et en anglais.
+                Animation musicale d&apos;ambiance pour vos pauses, cocktails et soirées de gala.
+                Sonorisation professionnelle pour vos interventions.
               </p>
             </div>
             <div className="card-dark p-6">
               <h3 className="text-[#c9a227] font-medium mb-4 flex items-center gap-2">
-                <Music size={20} />
-                Quiz & Blind Test
+                <Users size={20} />
+                Team Building
               </h3>
               <p className="text-[#888] text-sm leading-relaxed">
-                Animations interactives pour mettre l&apos;ambiance : quiz musical générationnel,
-                blind test par équipes, défis musicaux.
+                Animations interactives pour renforcer la cohésion : blind test musical,
+                quiz personnalisé, défis par équipes avec notre technologie AnimaJet.
               </p>
             </div>
             <div className="card-dark p-6">
               <h3 className="text-[#c9a227] font-medium mb-4 flex items-center gap-2">
-                <Camera size={20} />
-                Photobooth Vintage
+                <Star size={20} />
+                Soirées de fin d&apos;année
               </h3>
               <p className="text-[#888] text-sm leading-relaxed">
-                Notre photobooth style TSF années 60 avec accessoires, impressions illimitées
-                et partage numérique instantané.
+                Soirée de Noël ou nouvel an mémorable pour vos équipes.
+                Photobooth avec logo, animations festives, playlist sur mesure.
               </p>
             </div>
             <div className="card-dark p-6">
               <h3 className="text-[#c9a227] font-medium mb-4 flex items-center gap-2">
-                <Sparkles size={20} />
-                Effets Spéciaux
+                <Award size={20} />
+                Lancements & Inaugurations
               </h3>
               <p className="text-[#888] text-sm leading-relaxed">
-                Fumée lourde et étincelles froides certifiées CE pour des moments magiques
-                (soufflage des bougies, entrée surprise...).
+                Animation musicale pour vos événements exceptionnels :
+                lancement produit, inauguration, anniversaire d&apos;entreprise.
               </p>
             </div>
           </div>
@@ -301,10 +311,10 @@ export default async function AnimationAnniversaire({ params }: { params: Promis
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
-            Nos <span className="text-[#c9a227]">formules anniversaire</span>
+            Nos <span className="text-[#c9a227]">formules corporate</span>
           </h2>
           <p className="text-[#888] text-center mb-12">
-            Des prestations pour tous les budgets
+            Tarifs HT sur devis • TVA déductible
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {formules.map((formule, index) => (
@@ -333,7 +343,7 @@ export default async function AnimationAnniversaire({ params }: { params: Promis
       <section className="py-16 bg-[#141414]">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-12">
-            Questions <span className="text-[#c9a227]">fréquentes</span> - Anniversaire
+            Questions <span className="text-[#c9a227]">fréquentes</span> - Événements corporate
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -369,7 +379,7 @@ export default async function AnimationAnniversaire({ params }: { params: Promis
       <section className="py-20 bg-gradient-to-b from-[#141414] to-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white mb-6">
-            Fêtez votre anniversaire en <span className="text-[#c9a227]">grand</span> à {city.name}
+            Organisez un événement <span className="text-[#c9a227]">mémorable</span> à {city.name}
           </h2>
           <p className="text-[#888] mb-8">
             Contactez-nous pour discuter de votre projet et recevoir un devis personnalisé.

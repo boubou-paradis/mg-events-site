@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
     description: `DJ animateur mariage à ${city.name} (${city.departmentCode}). ${nearbyText} et environs. +20 ans d'expérience, photobooth vintage, étincelles froides. Devis gratuit ✓`,
     keywords: `DJ mariage ${city.name}, DJ mariage ${city.departmentCode}, animation mariage ${city.name}, DJ ${city.name}, sono mariage ${city.name}`,
     alternates: {
-      canonical: `https://www.mg-events35.com/dj-mariage-${city.slug}`,
+      canonical: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     },
     openGraph: {
       title: `DJ Mariage ${city.name} | MG Events Animation`,
       description: `DJ animateur mariage à ${city.name}. +20 ans d'expérience, photobooth vintage, animations interactives.`,
-      url: `https://www.mg-events35.com/dj-mariage-${city.slug}`,
+      url: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     },
   };
 }
@@ -98,7 +98,7 @@ function generateLocalBusinessSchema(city: City) {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": `https://www.mg-events35.com/dj-mariage-${city.slug}#organization`,
+    "@id": `https://www.mg-events35.com/dj-mariage/${city.slug}#organization`,
     "name": `MG Events Animation - DJ Mariage ${city.name}`,
     "image": "https://www.mg-events35.com/images/logo.png",
     "description": `DJ animateur professionnel pour mariage à ${city.name} (${city.departmentCode}). Animation musicale, photobooth vintage, étincelles froides. Plus de 20 ans d'expérience.`,
@@ -501,7 +501,7 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
               {otherCities.map((otherCity) => (
                 <Link
                   key={otherCity.slug}
-                  href={`/dj-mariage-${otherCity.slug}`}
+                  href={`/dj-mariage/${otherCity.slug}`}
                   className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
                 >
                   DJ Mariage {otherCity.name}
