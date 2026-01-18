@@ -430,11 +430,11 @@ function ExperienceMusicale({ onImageClick }: { onImageClick: (src: string, alt:
           <div className="relative">
             <div
               className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20 cursor-zoom-in"
-              onClick={() => onImageClick('/images/gallery-8.jpg', 'DJ professionnel aux platines - MG Events Animation')}
+              onClick={() => onImageClick('/images/console-dj-pro.jpg', 'Console DJ professionnelle - MG Events Animation')}
             >
               <Image
-                src="/images/gallery-8.jpg"
-                alt="DJ professionnel aux platines - MG Events Animation"
+                src="/images/console-dj-pro.jpg"
+                alt="Console DJ professionnelle - MG Events Animation"
                 fill
                 className="object-cover"
               />
@@ -1136,10 +1136,14 @@ function Gallery({ onImageClick }: { onImageClick: (src: string, alt: string) =>
     { src: '/images/gallery-2.jpg', alt: 'Première danse avec fontaine étincelles' },
     { src: '/images/gallery-3.jpg', alt: 'Vue DJ avec invités et guirlandes' },
     { src: '/images/gallery-4.jpg', alt: 'Setup scène complet avec logo MG' },
+    { src: '/images/scene-anniversaire-1.jpg', alt: 'Scène anniversaire avec jeux de lumières et écran géant' },
+    { src: '/images/scene-anniversaire-2.jpg', alt: 'Ambiance soirée avec photobooth et lumières' },
+    { src: '/images/scene-anniversaire-3.jpg', alt: 'Vue d\'ensemble salle de réception avec décoration lumineuse' },
+    { src: '/images/console-dj-pro.jpg', alt: 'Console DJ professionnelle avec platines Pioneer' },
     { src: '/images/gallery-5.jpg', alt: 'Piste de danse grange avec lumières' },
     { src: '/images/gallery-6.jpg', alt: 'Table champagne avec LOVE lumineux' },
     { src: '/images/gallery-7.jpg', alt: 'Jeux de lumière avec lustre' },
-    { src: '/images/gallery-8.jpg', alt: 'Console DJ professionnelle' },
+    { src: '/images/gallery-8.jpg', alt: 'Setup DJ complet' },
   ];
 
   return (
