@@ -1370,6 +1370,26 @@ function AnimaJet() {
           ))}
         </div>
 
+        {/* Video promo AnimaJet */}
+        <div className="mb-12">
+          <div className="card-dark p-6 hover:border-[#c9a227]/40 transition-all duration-300">
+            <h3 className="text-white font-[family-name:var(--font-display)] text-xl mb-4 text-center">
+              <span className="text-[#c9a227]">AnimaJet</span> en action
+            </h3>
+            <div className="relative rounded-xl overflow-hidden bg-black/50">
+              <video
+                className="w-full max-w-4xl mx-auto rounded-xl"
+                controls
+                preload="metadata"
+                poster="/images/animajet-logo.png"
+              >
+                <source src="/promo-animajet.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas la lecture de vidéos.
+              </video>
+            </div>
+          </div>
+        </div>
+
         {/* Included notice */}
         <div className="card-dark p-6 border-[#c9a227]/30 text-center hover:border-[#c9a227]/50 transition-all duration-300">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
