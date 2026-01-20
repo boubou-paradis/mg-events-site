@@ -75,6 +75,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog/top-salles-mariage-ille-et-vilaine`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
     // Pages légales
     {
       url: `${baseUrl}/mentions-legales`,

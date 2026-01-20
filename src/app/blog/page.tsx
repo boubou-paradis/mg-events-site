@@ -13,10 +13,18 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: 'top-salles-mariage-ille-et-vilaine',
+    title: 'Top 5 des salles de mariage en Ille-et-Vilaine',
+    excerpt: 'Découvrez les plus belles salles de mariage du 35 : Domaine de Cicé-Blossac, Château de la Ballue, Manoir de la Begaudière... Notre sélection d\'expert.',
+    image: '/images/gallery-1.jpg',
+    date: '20 janvier 2026',
+    readTime: '10 min',
+  },
+  {
     slug: 'comment-choisir-dj-mariage-bretagne',
     title: 'Comment choisir son DJ de mariage en Bretagne ?',
     excerpt: 'Le choix du DJ est crucial pour la réussite de votre soirée de mariage. Découvrez nos conseils pour faire le bon choix : expérience, matériel, feeling...',
-    image: '/images/gallery-1.jpg',
+    image: '/images/gallery-2.jpg',
     date: '15 janvier 2026',
     readTime: '8 min',
   },
