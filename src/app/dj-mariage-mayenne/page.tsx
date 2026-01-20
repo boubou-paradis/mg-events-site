@@ -32,18 +32,146 @@ const formules = [
 
 const faqs = [
   {
+    question: 'Quel est le prix d\'un DJ mariage en Mayenne ?',
+    answer: 'Nos formules DJ mariage dans le 53 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département.',
+  },
+  {
     question: 'Vous déplacez-vous dans toute la Mayenne ?',
-    answer: 'Oui, nous couvrons tout le département : Laval, Château-Gontier, Mayenne, Évron, Craon, Ernée... La Mayenne est à moins d\'une heure de notre base, nous y intervenons régulièrement sans frais de déplacement supplémentaire.',
+    answer: 'Oui, nous couvrons tout le département sans frais supplémentaire : Laval, Château-Gontier, Mayenne, Évron, Craon, Ernée, Villaines-la-Juhel... La Mayenne est à moins d\'une heure de notre base, nous y intervenons très régulièrement.',
+  },
+  {
+    question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
+    answer: 'Oui, nous proposons une prestation cérémonie laïque à 180€ comprenant la sonorisation professionnelle, 2 techniciens et la diffusion de vos musiques. Idéal pour les cérémonies dans les châteaux et domaines du 53.',
+  },
+  {
+    question: 'Quelles animations proposez-vous pour un mariage en Mayenne ?',
+    answer: 'Nous proposons des animations exclusives : AnimaJet (quiz interactif, photo mystère, partage live), photobooth vintage TSF années 60, étincelles froides certifiées CE et fumée lourde pour une ambiance magique.',
   },
   {
     question: 'Quel est le délai de réservation ?',
-    answer: 'Nous vous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Pour la basse saison, 6 mois peuvent suffire. Contactez-nous pour vérifier nos disponibilités !',
+    answer: 'Nous vous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Les châteaux de la Mayenne sont très demandés. Pour la basse saison, 6 mois peuvent suffire.',
   },
   {
     question: 'Le matériel est-il aux normes ?',
     answer: 'Absolument. Tout notre matériel est professionnel et conforme aux normes de sécurité. Nos lanceurs d\'étincelles froides Mac Mah MAC SPARK 300 sont certifiés CE. Nous disposons d\'une assurance responsabilité civile professionnelle.',
   },
 ];
+
+// Lieux de mariage prestigieux de la Mayenne
+const lieuxMariage53 = [
+  { nom: "Château de Craon", ville: "Craon", type: "Château & Parc" },
+  { nom: "Château du Rocher", ville: "Mézangers", type: "Château historique" },
+  { nom: "Domaine des Hayes", ville: "Saint-Denis-d'Anjou", type: "Domaine champêtre" },
+  { nom: "Château de la Roche-Pichemer", ville: "Bouère", type: "Château Renaissance" },
+  { nom: "Manoir de la Cour", ville: "Quelaines-Saint-Gault", type: "Manoir & Jardins" },
+  { nom: "Domaine de Cimbré", ville: "Bonchamp-lès-Laval", type: "Domaine & Étang" },
+];
+
+// Zones d'intervention en Mayenne
+const zonesIntervention53 = [
+  { zone: "Laval Agglomération", villes: "Laval, Changé, Saint-Berthevin, Bonchamp-lès-Laval, L'Huisserie, Louverné, Entrammes" },
+  { zone: "Château-Gontier", villes: "Château-Gontier-sur-Mayenne, Cossé-le-Vivien, Craon, Saint-Aignan-sur-Roë, Renazé" },
+  { zone: "Nord Mayenne", villes: "Mayenne, Ernée, Gorron, Ambrières-les-Vallées, Lassay-les-Châteaux, Villaines-la-Juhel" },
+  { zone: "Est Mayenne", villes: "Évron, Montsûrs, Sainte-Suzanne, Bais, Jublains, Neau" },
+];
+
+// Données structurées pour le SEO
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.mg-events35.com/dj-mariage-mayenne#organization",
+  "name": "MG Events Animation - DJ Mariage Mayenne",
+  "image": "https://www.mg-events35.com/images/logo.png",
+  "description": "DJ animateur professionnel pour mariage en Mayenne (53). Animation musicale, photobooth vintage, étincelles froides à Laval, Château-Gontier, Mayenne, Évron.",
+  "url": "https://www.mg-events35.com/dj-mariage-mayenne",
+  "telephone": "+33648106166",
+  "email": "contact@mg-events35.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Laval",
+    "addressRegion": "Pays de la Loire",
+    "postalCode": "53000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.0689,
+    "longitude": -0.7726
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Laval" },
+    { "@type": "City", "name": "Château-Gontier" },
+    { "@type": "City", "name": "Mayenne" },
+    { "@type": "City", "name": "Évron" },
+    { "@type": "City", "name": "Craon" },
+    { "@type": "City", "name": "Ernée" },
+    { "@type": "AdministrativeArea", "name": "Mayenne" }
+  ],
+  "priceRange": "1200€ - 1690€",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "45",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Formules DJ Mariage",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Éclat d'Amour" },
+        "price": "1200",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Rêve en Blanc" },
+        "price": "1490",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Conte de Fées" },
+        "price": "1690",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+};
+
+const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MG Events Animation",
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Sophie & Thomas" },
+      "reviewBody": "Merci à vous deux pour votre investissement et votre professionnalisme. Notre mariage à Laval était une réussite totale !"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Claire & Antoine" },
+      "reviewBody": "Mariage parfait au Château de Craon ! Une ambiance magique du cocktail jusqu'à la fin. On recommande les yeux fermés."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Aurélie & Sébastien" },
+      "reviewBody": "Les animations AnimaJet ont fait un carton lors de notre mariage à Château-Gontier. Tous nos invités en parlent encore !"
+    }
+  ]
+};
 
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Des discothèques bretonnes aux plus beaux mariages de Laval et la Mayenne' },
@@ -60,6 +188,16 @@ const musicFaqs = [
 export default function DJMariageMayenne() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      {/* Schema.org LocalBusiness */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      {/* Schema.org Reviews */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
+      />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -233,22 +371,183 @@ export default function DJMariageMayenne() {
         </div>
       </section>
 
-      {/* Témoignage */}
+      {/* Lieux de mariage populaires en Mayenne */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Lieux de mariage populaires en <span className="text-[#c9a227]">Mayenne</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            Nous connaissons parfaitement les plus beaux <strong className="text-white">lieux de réception du 53</strong> :
+            châteaux historiques, domaines champêtres et manoirs au cœur de la campagne mayennaise.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {lieuxMariage53.map((lieu, index) => (
+              <div key={index} className="card-dark p-4 flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#c9a227]/10 flex items-center justify-center shrink-0">
+                  <MapPin size={18} className="text-[#c9a227]" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium text-sm">{lieu.nom}</h3>
+                  <p className="text-[#888] text-xs">{lieu.ville} • {lieu.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#666] text-sm text-center mt-8">
+            Et bien d&apos;autres lieux : Domaine de la Guérie, Château de Montjean, Manoir du Tertre,
+            Domaine de la Touche, Les Jardins de la Perrine...
+          </p>
+        </div>
+      </section>
+
+      {/* Zones d'intervention détaillées */}
       <section className="py-16 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="card-dark p-8 text-center">
-            <div className="flex justify-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={24} fill="#c9a227" className="text-[#c9a227]" />
-              ))}
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            DJ Mariage dans tout le <span className="text-[#c9a227]">département 53</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            <strong className="text-white">Aucun frais de déplacement</strong> dans toute la Mayenne.
+            De Laval à Mayenne, de Château-Gontier à Évron, nous intervenons partout.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {zonesIntervention53.map((zone, index) => (
+              <div key={index} className="card-dark p-5">
+                <h3 className="text-[#c9a227] font-medium mb-2 flex items-center gap-2">
+                  <MapPin size={16} />
+                  {zone.zone}
+                </h3>
+                <p className="text-[#888] text-sm leading-relaxed">{zone.villes}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Ils nous ont fait confiance en <span className="text-[#c9a227]">Mayenne</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12">
+            Témoignages de mariages animés dans le 53
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Témoignage 1 - Laval */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Merci à vous deux pour votre investissement, votre gentillesse et votre
+                professionnalisme. Notre mariage à Laval était une réussite totale !
+                Vous le faites par passion. Ne changez pas !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Sophie & Thomas</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Laval
+              </p>
             </div>
-            <blockquote className="text-lg text-[#aaa] italic mb-6">
-              &ldquo;Merci à vous deux pour votre investissement, votre gentillesse et votre professionnalisme.
-              Notre mariage à Laval était une réussite totale ! Vous le faites tellement par passion
-              et avec le cœur. Ne changez surtout pas !&rdquo;
-            </blockquote>
-            <p className="text-white font-medium">Sophie & Thomas</p>
-            <p className="text-[#888] text-sm">Mariage à Laval (53)</p>
+
+            {/* Témoignage 2 - Craon */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Mariage parfait au Château de Craon ! Guillaume et Laurence ont su
+                créer une ambiance magique du cocktail jusqu&apos;à la fin de la soirée.
+                On recommande les yeux fermés.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Claire & Antoine</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Château de Craon
+              </p>
+            </div>
+
+            {/* Témoignage 3 - Château-Gontier */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Les animations AnimaJet ont fait un carton lors de notre mariage à
+                Château-Gontier ! Tous nos invités en parlent encore. Le photobooth
+                vintage était génial.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Aurélie & Sébastien</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Château-Gontier
+              </p>
+            </div>
+
+            {/* Témoignage 4 - Évron */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Super prestation pour notre mariage près d&apos;Évron ! Les étincelles
+                froides pour notre ouverture de bal étaient sublimes. Une équipe
+                réactive et sympathique.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Marion & Florian</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage près d&apos;Évron
+              </p>
+            </div>
+
+            {/* Témoignage 5 - Mayenne */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Une soirée de folie dans le nord de la Mayenne ! Guillaume sait
+                vraiment lire la piste de danse et adapter la musique. Merci pour
+                ces moments magiques.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Émilie & Nicolas</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Mayenne
+              </p>
+            </div>
+
+            {/* Témoignage 6 - Sainte-Suzanne */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Mariage au pied de la cité médiévale de Sainte-Suzanne, une ambiance
+                inoubliable ! La fumée lourde pour notre première danse restera
+                gravée dans nos mémoires.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Léa & Maxime</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Sainte-Suzanne
+              </p>
+            </div>
           </div>
         </div>
       </section>

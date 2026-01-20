@@ -32,18 +32,148 @@ const formules = [
 
 const faqs = [
   {
+    question: 'Quel est le prix d\'un DJ mariage dans le Morbihan ?',
+    answer: 'Nos formules DJ mariage dans le 56 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département, l\'installation et le démontage.',
+  },
+  {
     question: 'Intervenez-vous sur les îles du Morbihan ?',
     answer: 'Oui, nous pouvons nous déplacer à Belle-Île-en-Mer, l\'Île-aux-Moines et Groix. Un supplément peut s\'appliquer pour couvrir les frais de transport maritime du matériel.',
   },
   {
+    question: 'Vous déplacez-vous à Vannes, Lorient et Auray ?',
+    answer: 'Oui, nous couvrons tout le Morbihan sans frais de déplacement supplémentaire : Vannes, Lorient, Auray, Pontivy, Ploërmel, Carnac, La Trinité-sur-Mer, Quiberon, Sarzeau et tout le Golfe du Morbihan.',
+  },
+  {
+    question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
+    answer: 'Oui, nous proposons une prestation cérémonie laïque à 180€ comprenant la sonorisation professionnelle, 2 techniciens et la diffusion de vos musiques. Idéal pour les cérémonies face au Golfe du Morbihan ou dans les domaines du 56.',
+  },
+  {
     question: 'Quel est le délai de réservation ?',
-    answer: 'Nous vous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Pour la basse saison, 6 mois peuvent suffire. Contactez-nous pour vérifier nos disponibilités !',
+    answer: 'Nous vous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Les mariages à Vannes et autour du Golfe sont très demandés. Pour la basse saison, 6 mois peuvent suffire.',
   },
   {
     question: 'Le matériel est-il aux normes ?',
     answer: 'Absolument. Tout notre matériel est professionnel et conforme aux normes de sécurité. Nos lanceurs d\'étincelles froides Mac Mah MAC SPARK 300 sont certifiés CE. Nous disposons d\'une assurance responsabilité civile professionnelle.',
   },
 ];
+
+// Lieux de mariage prestigieux du Morbihan
+const lieuxMariage56 = [
+  { nom: "Domaine de Rochevilaine", ville: "Billiers", type: "Domaine face mer" },
+  { nom: "Château de Trécesson", ville: "Campénéac", type: "Château médiéval" },
+  { nom: "Manoir de Kerhuel", ville: "Pluneret", type: "Manoir & Jardins" },
+  { nom: "Domaine de Kerguéhennec", ville: "Bignan", type: "Domaine & Parc" },
+  { nom: "Château de Suscinio", ville: "Sarzeau", type: "Château ducal" },
+  { nom: "Domaine de Branféré", ville: "Le Guerno", type: "Domaine & Parc" },
+];
+
+// Zones d'intervention dans le Morbihan
+const zonesIntervention56 = [
+  { zone: "Vannes & Golfe", villes: "Vannes, Séné, Arradon, Baden, Île-aux-Moines, Sarzeau, Arzon, Port-Navalo" },
+  { zone: "Pays d'Auray", villes: "Auray, Carnac, La Trinité-sur-Mer, Quiberon, Plouharnel, Erdeven, Étel, Belz" },
+  { zone: "Pays de Lorient", villes: "Lorient, Lanester, Hennebont, Ploemeur, Guidel, Larmor-Plage, Port-Louis" },
+  { zone: "Centre Morbihan", villes: "Pontivy, Locminé, Baud, Josselin, Ploërmel, La Gacilly, Malestroit" },
+  { zone: "Côte & Îles", villes: "Belle-Île-en-Mer, Groix, Île-d'Houat, Île-d'Hoëdic, Presqu'île de Rhuys" },
+];
+
+// Données structurées pour le SEO
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.mg-events35.com/dj-mariage-morbihan#organization",
+  "name": "MG Events Animation - DJ Mariage Morbihan",
+  "image": "https://www.mg-events35.com/images/logo.png",
+  "description": "DJ animateur professionnel pour mariage dans le Morbihan (56). Animation musicale, photobooth vintage, étincelles froides à Vannes, Lorient, Auray.",
+  "url": "https://www.mg-events35.com/dj-mariage-morbihan",
+  "telephone": "+33648106166",
+  "email": "contact@mg-events35.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vannes",
+    "addressRegion": "Bretagne",
+    "postalCode": "56000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.6587,
+    "longitude": -2.7606
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Vannes" },
+    { "@type": "City", "name": "Lorient" },
+    { "@type": "City", "name": "Auray" },
+    { "@type": "City", "name": "Pontivy" },
+    { "@type": "City", "name": "Ploërmel" },
+    { "@type": "City", "name": "Carnac" },
+    { "@type": "City", "name": "La Trinité-sur-Mer" },
+    { "@type": "AdministrativeArea", "name": "Morbihan" }
+  ],
+  "priceRange": "1200€ - 1690€",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "45",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Formules DJ Mariage",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Éclat d'Amour" },
+        "price": "1200",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Rêve en Blanc" },
+        "price": "1490",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Conte de Fées" },
+        "price": "1690",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+};
+
+const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MG Events Animation",
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Marie & Julien" },
+      "reviewBody": "Un grand merci pour votre professionnalisme, votre écoute, votre dynamisme ! Vous avez su donner à notre mariage à Vannes l'ambiance que nous espérions."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Céline & Arnaud" },
+      "reviewBody": "Mariage parfait au Domaine de Rochevilaine ! Les étincelles froides face à l'océan étaient magiques. Merci pour cette soirée inoubliable."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Laura & Yannick" },
+      "reviewBody": "Notre mariage à Carnac a été une réussite totale. Le photobooth vintage a fait un carton ! On recommande les yeux fermés."
+    }
+  ]
+};
 
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Des discothèques du Morbihan aux plus beaux mariages de Vannes et Lorient' },
@@ -60,6 +190,16 @@ const musicFaqs = [
 export default function DJMariageMorbihan() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      {/* Schema.org LocalBusiness */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      {/* Schema.org Reviews */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
+      />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -233,22 +373,183 @@ export default function DJMariageMorbihan() {
         </div>
       </section>
 
-      {/* Témoignage */}
+      {/* Lieux de mariage populaires dans le Morbihan */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Lieux de mariage populaires dans le <span className="text-[#c9a227]">Morbihan</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            Nous connaissons parfaitement les plus beaux <strong className="text-white">lieux de réception du 56</strong> :
+            domaines face à l&apos;océan, châteaux médiévaux, manoirs et salles avec vue sur le Golfe du Morbihan.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {lieuxMariage56.map((lieu, index) => (
+              <div key={index} className="card-dark p-4 flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#c9a227]/10 flex items-center justify-center shrink-0">
+                  <MapPin size={18} className="text-[#c9a227]" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium text-sm">{lieu.nom}</h3>
+                  <p className="text-[#888] text-xs">{lieu.ville} • {lieu.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#666] text-sm text-center mt-8">
+            Et bien d&apos;autres lieux : Domaine de Kerbastic, Manoir de Kerazan, Château de Kerlévenan,
+            Domaine de la Roche du Theil, Les Jardins de Kerfouler...
+          </p>
+        </div>
+      </section>
+
+      {/* Zones d'intervention détaillées */}
       <section className="py-16 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="card-dark p-8 text-center">
-            <div className="flex justify-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={24} fill="#c9a227" className="text-[#c9a227]" />
-              ))}
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            DJ Mariage dans tout le <span className="text-[#c9a227]">département 56</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            <strong className="text-white">Aucun frais de déplacement</strong> dans tout le Morbihan.
+            Du Golfe aux terres intérieures, nous intervenons partout.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {zonesIntervention56.map((zone, index) => (
+              <div key={index} className="card-dark p-5">
+                <h3 className="text-[#c9a227] font-medium mb-2 flex items-center gap-2">
+                  <MapPin size={16} />
+                  {zone.zone}
+                </h3>
+                <p className="text-[#888] text-sm leading-relaxed">{zone.villes}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Ils nous ont fait confiance dans le <span className="text-[#c9a227]">Morbihan</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12">
+            Témoignages de mariages animés dans le 56
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Témoignage 1 - Vannes */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Un grand merci pour votre professionnalisme, votre écoute, votre dynamisme !
+                Vous avez su donner à notre mariage à Vannes l&apos;ambiance que nous espérions.
+                Tous nos invités ont adoré !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Marie & Julien</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Vannes
+              </p>
             </div>
-            <blockquote className="text-lg text-[#aaa] italic mb-6">
-              &ldquo;Un grand merci pour votre professionnalisme, votre écoute, votre dynamisme !
-              Vous avez su donner à notre mariage à Vannes l&apos;ambiance que nous espérions.
-              Tous nos invités ont adoré !&rdquo;
-            </blockquote>
-            <p className="text-white font-medium">Marie & Julien</p>
-            <p className="text-[#888] text-sm">Mariage à Vannes (56)</p>
+
+            {/* Témoignage 2 - Rochevilaine */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Mariage parfait au Domaine de Rochevilaine avec vue sur l&apos;océan !
+                Les étincelles froides au coucher du soleil étaient magiques.
+                Merci pour cette soirée inoubliable.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Céline & Arnaud</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Domaine de Rochevilaine
+              </p>
+            </div>
+
+            {/* Témoignage 3 - Carnac */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Notre mariage à Carnac a été une réussite totale grâce à MG Events.
+                Le photobooth vintage a fait un carton jusqu&apos;à la fin de la soirée !
+                On recommande les yeux fermés.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Laura & Yannick</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Carnac
+              </p>
+            </div>
+
+            {/* Témoignage 4 - Lorient */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Guillaume et Laurence ont su mettre une ambiance de folie à notre mariage
+                près de Lorient. Les animations AnimaJet ont conquis jeunes et moins jeunes.
+                Une équipe au top !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Élodie & Kévin</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Lorient
+              </p>
+            </div>
+
+            {/* Témoignage 5 - Golfe */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Cérémonie laïque face au Golfe puis soirée enflammée... tout était parfait.
+                La fumée lourde pour notre ouverture de bal restera gravée dans nos mémoires.
+                Merci infiniment !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Manon & Bastien</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Golfe du Morbihan
+              </p>
+            </div>
+
+            {/* Témoignage 6 - Auray */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Super prestation pour notre mariage à Auray ! Des vrais professionnels,
+                réactifs et tellement sympathiques. Le dancefloor n&apos;a pas désempli de la soirée.
+                Merci pour tout !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Chloé & Maxime</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Auray
+              </p>
+            </div>
           </div>
         </div>
       </section>

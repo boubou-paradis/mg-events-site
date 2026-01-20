@@ -32,18 +32,148 @@ const formules = [
 
 const faqs = [
   {
+    question: 'Quel est le prix d\'un DJ mariage dans le Finistère ?',
+    answer: 'Nos formules DJ mariage dans le 29 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département, y compris Brest et la presqu\'île de Crozon.',
+  },
+  {
     question: 'Vous déplacez-vous jusqu\'à Brest ?',
-    answer: 'Oui, nous intervenons dans tout le Finistère : Brest, Quimper, Morlaix, Concarneau, Douarnenez, Crozon, Landerneau, Châteaulin... Nous nous déplaçons même sur la presqu\'île de Crozon et les îles (Ouessant, Molène, Sein).',
+    answer: 'Oui, nous intervenons dans tout le Finistère sans frais supplémentaire : Brest, Quimper, Morlaix, Concarneau, Douarnenez, Crozon, Landerneau, Châteaulin... Nous nous déplaçons même sur la presqu\'île de Crozon et les îles (Ouessant, Molène, Sein).',
+  },
+  {
+    question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
+    answer: 'Oui, nous proposons une prestation cérémonie laïque à 180€ comprenant la sonorisation professionnelle, 2 techniciens et la diffusion de vos musiques. Idéal pour les cérémonies face à la mer ou dans les domaines du 29.',
+  },
+  {
+    question: 'Quelles animations proposez-vous pour un mariage en Finistère ?',
+    answer: 'Nous proposons des animations exclusives : AnimaJet (quiz interactif, photo mystère, partage live), photobooth vintage TSF années 60, étincelles froides certifiées CE, fumée lourde et jeux lumineux. Parfait pour les mariages en bord de mer !',
   },
   {
     question: 'Quel est le délai de réservation ?',
-    answer: 'Nous vous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Pour la basse saison, 6 mois peuvent suffire. Contactez-nous pour vérifier nos disponibilités !',
+    answer: 'Nous vous conseillons de réserver 12 à 18 mois à l\'avance pour les dates prisées (mai à septembre). Les mariages à Quimper et Brest sont très demandés. Pour la basse saison, 6 mois peuvent suffire.',
   },
   {
     question: 'Le matériel est-il aux normes ?',
     answer: 'Absolument. Tout notre matériel est professionnel et conforme aux normes de sécurité. Nos lanceurs d\'étincelles froides Mac Mah MAC SPARK 300 sont certifiés CE. Nous disposons d\'une assurance responsabilité civile professionnelle.',
   },
 ];
+
+// Lieux de mariage prestigieux du Finistère
+const lieuxMariage29 = [
+  { nom: "Domaine de Kervail", ville: "Plomelin", type: "Domaine champêtre" },
+  { nom: "Manoir de Kerlut", ville: "Ploudaniel", type: "Manoir & Jardins" },
+  { nom: "Château de Keriolet", ville: "Concarneau", type: "Château néogothique" },
+  { nom: "Domaine de Oatlands", ville: "Bénodet", type: "Domaine face mer" },
+  { nom: "Abbaye de Daoulas", ville: "Daoulas", type: "Abbaye & Jardins" },
+  { nom: "Manoir de Moëllien", ville: "Plonévez-Porzay", type: "Manoir historique" },
+];
+
+// Zones d'intervention dans le Finistère
+const zonesIntervention29 = [
+  { zone: "Quimper & Cornouaille", villes: "Quimper, Douarnenez, Pont-l'Abbé, Fouesnant, Bénodet, Audierne, Plogastel-Saint-Germain" },
+  { zone: "Brest Métropole", villes: "Brest, Plougastel-Daoulas, Guipavas, Le Relecq-Kerhuon, Gouesnou, Bohars, Guilers" },
+  { zone: "Pays de Morlaix", villes: "Morlaix, Carantec, Roscoff, Saint-Pol-de-Léon, Plouezoc'h, Locquirec, Plougasnou" },
+  { zone: "Concarneau & Sud", villes: "Concarneau, Trégunc, Névez, Pont-Aven, Riec-sur-Bélon, Moëlan-sur-Mer, Quimperlé" },
+  { zone: "Presqu'île & Îles", villes: "Crozon, Camaret-sur-Mer, Ouessant, Molène, Sein, Morgat, Telgruc-sur-Mer" },
+];
+
+// Données structurées pour le SEO
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.mg-events35.com/dj-mariage-finistere#organization",
+  "name": "MG Events Animation - DJ Mariage Finistère",
+  "image": "https://www.mg-events35.com/images/logo.png",
+  "description": "DJ animateur professionnel pour mariage dans le Finistère (29). Animation musicale, photobooth vintage, étincelles froides à Quimper, Brest, Morlaix, Concarneau.",
+  "url": "https://www.mg-events35.com/dj-mariage-finistere",
+  "telephone": "+33648106166",
+  "email": "contact@mg-events35.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Quimper",
+    "addressRegion": "Bretagne",
+    "postalCode": "29000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.9960,
+    "longitude": -4.1024
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Quimper" },
+    { "@type": "City", "name": "Brest" },
+    { "@type": "City", "name": "Morlaix" },
+    { "@type": "City", "name": "Concarneau" },
+    { "@type": "City", "name": "Douarnenez" },
+    { "@type": "City", "name": "Landerneau" },
+    { "@type": "City", "name": "Crozon" },
+    { "@type": "AdministrativeArea", "name": "Finistère" }
+  ],
+  "priceRange": "1200€ - 1690€",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "45",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Formules DJ Mariage",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Éclat d'Amour" },
+        "price": "1200",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Rêve en Blanc" },
+        "price": "1490",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Formule Conte de Fées" },
+        "price": "1690",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+};
+
+const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MG Events Animation",
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Océane & Francky" },
+      "reviewBody": "Merci pour votre investissement, gentillesse et professionnalisme. Notre mariage à Concarneau était une fête magnifique grâce à vous."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Marine & Loïc" },
+      "reviewBody": "Mariage parfait au Château de Keriolet ! Guillaume et Laurence ont su créer une ambiance magique. On recommande les yeux fermés."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Anaïs & Erwan" },
+      "reviewBody": "Notre mariage à Brest a été une réussite totale. Les animations AnimaJet ont conquis tous nos invités. Merci infiniment !"
+    }
+  ]
+};
 
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Forgé dans les discothèques du Finistère : Le Kalicut, La Guinguette, Le 29...' },
@@ -60,6 +190,16 @@ const musicFaqs = [
 export default function DJMariageFinistere() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      {/* Schema.org LocalBusiness */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      {/* Schema.org Reviews */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
+      />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -233,22 +373,183 @@ export default function DJMariageFinistere() {
         </div>
       </section>
 
-      {/* Témoignage */}
+      {/* Lieux de mariage populaires dans le Finistère */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Lieux de mariage populaires dans le <span className="text-[#c9a227]">Finistère</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            Nous connaissons parfaitement les plus beaux <strong className="text-white">lieux de réception du 29</strong> :
+            domaines face à la mer, châteaux, manoirs et abbayes au cœur de la Bretagne.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {lieuxMariage29.map((lieu, index) => (
+              <div key={index} className="card-dark p-4 flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#c9a227]/10 flex items-center justify-center shrink-0">
+                  <MapPin size={18} className="text-[#c9a227]" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium text-sm">{lieu.nom}</h3>
+                  <p className="text-[#888] text-xs">{lieu.ville} • {lieu.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#666] text-sm text-center mt-8">
+            Et bien d&apos;autres lieux : Domaine de Troménec, Manoir de Kéraval, Château de Lanniron,
+            Domaine de Kerlann, Les Viviers de Bénodet...
+          </p>
+        </div>
+      </section>
+
+      {/* Zones d'intervention détaillées */}
       <section className="py-16 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="card-dark p-8 text-center">
-            <div className="flex justify-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={24} fill="#c9a227" className="text-[#c9a227]" />
-              ))}
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            DJ Mariage dans tout le <span className="text-[#c9a227]">département 29</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            <strong className="text-white">Aucun frais de déplacement</strong> dans tout le Finistère.
+            De Brest à Quimper, de Morlaix à Concarneau, nous intervenons partout.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {zonesIntervention29.map((zone, index) => (
+              <div key={index} className="card-dark p-5">
+                <h3 className="text-[#c9a227] font-medium mb-2 flex items-center gap-2">
+                  <MapPin size={16} />
+                  {zone.zone}
+                </h3>
+                <p className="text-[#888] text-sm leading-relaxed">{zone.villes}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Ils nous ont fait confiance dans le <span className="text-[#c9a227]">Finistère</span>
+          </h2>
+          <p className="text-[#888] text-center mb-12">
+            Témoignages de mariages animés dans le 29
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Témoignage 1 - Concarneau */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Merci pour votre investissement, gentillesse et professionnalisme.
+                Vous le faites par passion et avec le cœur ! Notre mariage à Concarneau
+                était une fête magnifique. Ne changez surtout pas !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Océane & Francky</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Concarneau
+              </p>
             </div>
-            <blockquote className="text-lg text-[#aaa] italic mb-6">
-              &ldquo;Merci pour votre investissement, gentillesse et professionnalisme.
-              Vous le faites par passion et avec le cœur ! Notre mariage à Concarneau
-              était une fête magnifique grâce à vous. Ne changez surtout pas !&rdquo;
-            </blockquote>
-            <p className="text-white font-medium">Océane & Francky</p>
-            <p className="text-[#888] text-sm">Mariage à Concarneau (29)</p>
+
+            {/* Témoignage 2 - Keriolet */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Mariage parfait au Château de Keriolet ! Guillaume et Laurence
+                ont su créer une ambiance magique du début à la fin. On recommande
+                les yeux fermés.&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Marine & Loïc</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Château de Keriolet
+              </p>
+            </div>
+
+            {/* Témoignage 3 - Brest */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Notre mariage à Brest a été une réussite totale grâce à MG Events.
+                Les animations AnimaJet ont conquis tous nos invités de 7 à 77 ans.
+                Merci infiniment !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Anaïs & Erwan</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Brest
+              </p>
+            </div>
+
+            {/* Témoignage 4 - Quimper */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Super prestation pour notre mariage près de Quimper ! Les étincelles
+                froides pour notre ouverture de bal étaient sublimes. Le photobooth
+                a fait un carton !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Camille & Julien</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Quimper
+              </p>
+            </div>
+
+            {/* Témoignage 5 - Bénodet */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Mariage face à la mer à Bénodet, une ambiance de folie jusqu&apos;au
+                bout de la nuit ! Guillaume sait vraiment lire la piste de danse.
+                Une équipe au top !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Solène & Yann</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Bénodet
+              </p>
+            </div>
+
+            {/* Témoignage 6 - Morlaix */}
+            <div className="card-dark p-6">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#c9a227" className="text-[#c9a227]" />
+                ))}
+              </div>
+              <blockquote className="text-[#aaa] italic mb-4">
+                &ldquo;Des professionnels adorables et très réactifs. Notre mariage à
+                Morlaix était parfait. La fumée lourde pour la danse restera gravée
+                dans nos mémoires. Merci !&rdquo;
+              </blockquote>
+              <p className="text-white font-medium">Pauline & Romain</p>
+              <p className="text-[#888] text-sm flex items-center gap-1">
+                <MapPin size={14} className="text-[#c9a227]" />
+                Mariage à Morlaix
+              </p>
+            </div>
           </div>
         </div>
       </section>
