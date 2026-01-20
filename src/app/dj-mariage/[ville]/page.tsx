@@ -93,6 +93,34 @@ function generateCityFaqs(city: City) {
   ];
 }
 
+// Génère le schema BreadcrumbList pour le fil d'Ariane
+function generateBreadcrumbSchema(city: City) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://www.mg-events35.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": `DJ Mariage ${city.department}`,
+        "item": `https://www.mg-events35.com/dj-mariage-${city.departmentSlug}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": `DJ Mariage ${city.name}`,
+        "item": `https://www.mg-events35.com/dj-mariage/${city.slug}`
+      }
+    ]
+  };
+}
+
 // Génère le schema LocalBusiness pour la ville
 function generateLocalBusinessSchema(city: City) {
   return {
@@ -187,6 +215,7 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
   }
 
   const faqs = generateCityFaqs(city);
+  const breadcrumbSchema = generateBreadcrumbSchema(city);
   const localBusinessSchema = generateLocalBusinessSchema(city);
   const reviewsSchema = generateReviewsSchema(city);
   const otherCities = getOtherCitiesInDepartment(city);
@@ -194,6 +223,11 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
 
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      {/* Schema.org BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Schema.org LocalBusiness */}
       <script
         type="application/ld+json"

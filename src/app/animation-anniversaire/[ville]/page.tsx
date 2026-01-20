@@ -85,6 +85,28 @@ function generateBirthdayFaqs(city: City) {
   ];
 }
 
+// Schema BreadcrumbList pour le fil d'Ariane
+function generateBreadcrumbSchema(city: City) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://www.mg-events35.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": `Animation Anniversaire ${city.name}`,
+        "item": `https://www.mg-events35.com/animation-anniversaire/${city.slug}`
+      }
+    ]
+  };
+}
+
 // Schema LocalBusiness
 function generateBirthdaySchema(city: City) {
   return {
@@ -132,11 +154,17 @@ export default async function AnimationAnniversaire({ params }: { params: Promis
   }
 
   const faqs = generateBirthdayFaqs(city);
+  const breadcrumbSchema = generateBreadcrumbSchema(city);
   const birthdaySchema = generateBirthdaySchema(city);
 
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
-      {/* Schema.org */}
+      {/* Schema.org BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {/* Schema.org LocalBusiness */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(birthdaySchema) }}

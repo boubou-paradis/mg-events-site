@@ -52,6 +52,30 @@ export const metadata: Metadata = {
   },
 };
 
+const videoJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "AnimaJet - Animations interactives pour mariage par MG Events",
+  "description": "Découvrez AnimaJet, notre technologie exclusive d'animations interactives pour mariages en Bretagne : quiz musical, photo mystère, partage live. Une expérience unique pour votre soirée de mariage.",
+  "thumbnailUrl": "https://www.mg-events35.com/images/animajet-thumbnail.jpg",
+  "uploadDate": "2025-01-01",
+  "duration": "PT1M30S",
+  "contentUrl": "https://www.mg-events35.com/promo-animajet.mp4",
+  "embedUrl": "https://www.mg-events35.com/promo-animajet.mp4",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MG Events Animation",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.mg-events35.com/images/logo.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "WatchAction",
+    "target": "https://www.mg-events35.com/#animajet"
+  }
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "EntertainmentBusiness",
@@ -174,6 +198,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
         />
       </head>
       <body className="antialiased">
