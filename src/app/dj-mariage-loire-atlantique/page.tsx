@@ -570,6 +570,36 @@ export default function DJMariageLoireAtlantique() {
         </div>
       </section>
 
+      {/* Villes d'intervention en Loire-Atlantique */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-4">
+            DJ Mariage dans les <span className="text-[#c9a227]">villes de Loire-Atlantique</span>
+          </h2>
+          <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
+            Nous intervenons dans toutes les villes du département 44. Découvrez nos prestations près de chez vous.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            <Link href="/dj-mariage/nantes" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+              <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
+              <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Nantes</span>
+            </Link>
+            <Link href="/dj-mariage/saint-nazaire" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+              <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
+              <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Saint-Nazaire</span>
+            </Link>
+            <Link href="/dj-mariage/la-baule" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+              <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
+              <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">La Baule</span>
+            </Link>
+            <Link href="/dj-mariage/guerande" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+              <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
+              <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Guérande</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Autres départements */}
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">

@@ -574,6 +574,36 @@ export default function DJMariageMorbihan() {
         </div>
       </section>
 
+      {/* Villes d'intervention en Morbihan */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-4">
+            DJ Mariage dans les <span className="text-[#c9a227]">villes du Morbihan</span>
+          </h2>
+          <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
+            Nous intervenons dans toutes les villes du département 56. Découvrez nos prestations près de chez vous.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            <Link href="/dj-mariage/vannes" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+              <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
+              <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Vannes</span>
+            </Link>
+            <Link href="/dj-mariage/lorient" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+              <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
+              <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Lorient</span>
+            </Link>
+            <Link href="/dj-mariage/pontivy" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+              <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
+              <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Pontivy</span>
+            </Link>
+            <Link href="/dj-mariage/auray" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+              <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
+              <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Auray</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Autres départements */}
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
