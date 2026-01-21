@@ -1645,6 +1645,8 @@ function Footer() {
     { name: 'Nantes', slug: 'nantes' },
     { name: 'Vannes', slug: 'vannes' },
     { name: 'Brest', slug: 'brest' },
+    { name: 'Lorient', slug: 'lorient' },
+    { name: 'Quimper', slug: 'quimper' },
     { name: 'Laval', slug: 'laval' },
   ];
 
@@ -1694,6 +1696,7 @@ function Footer() {
                   </Link>
                 </li>
               ))}
+              <li><Link href="/zones-intervention" className="text-[#c9a227] text-sm hover:underline">Toutes nos zones →</Link></li>
             </ul>
           </div>
 

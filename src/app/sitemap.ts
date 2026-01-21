@@ -44,6 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    // Page zones d'intervention
+    {
+      url: `${baseUrl}/zones-intervention`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // Blog
     {
       url: `${baseUrl}/blog`,
