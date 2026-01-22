@@ -154,8 +154,10 @@ function Header() {
             </div>
 
             <a href="/blog" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Blog</a>
-            <a href="/partenaires" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Partenaires</a>
             <a href="#contact" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Contact</a>
+            <a href="/partenaires" className="btn-gold">
+              Partenaires
+            </a>
             <a href="#contact" className="btn-gold">
               Devis gratuit
             </a>
@@ -188,8 +190,10 @@ function Header() {
               </div>
 
               <a href="/blog" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2 border-t border-[#c9a227]/10 pt-4">Blog</a>
-              <a href="/partenaires" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2">Partenaires</a>
               <a href="#contact" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2">Contact</a>
+              <a href="/partenaires" onClick={() => setIsOpen(false)} className="btn-gold text-center mt-2">
+                Partenaires
+              </a>
               <a href="#contact" className="btn-gold text-center mt-2">
                 Devis gratuit
               </a>
