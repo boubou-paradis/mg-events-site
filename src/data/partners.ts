@@ -85,6 +85,18 @@ export const partners: Partner[] = [
     website: 'https://www.traiteurducentre.com/',
     phone: '02 23 27 82 21',
   },
+  {
+    id: 'gael-o-broches',
+    name: 'Gaël o Broches',
+    category: 'traiteur',
+    categoryLabel: 'Traiteur',
+    description: 'Cuisinier passionné depuis plus de 30 ans, Gaël vous propose de partager son amour de la cuisine autour de bons produits et à des prix abordables. Un moment de convivialité garanti pour vos événements, avec une spécialité : les cuissons à la broche.',
+    specialties: ['Cuisson à la broche', 'Repas convivial', 'Événement privé', 'Prix abordables'],
+    zone: 'Morbihan (56) - Allaire et environs',
+    website: 'https://gaelobroches.wixsite.com/gaelobroches',
+    phone: '06 83 47 42 69',
+    email: 'gaelobroches@free.fr',
+  },
 ];
 
 export const categoryIcons: Record<Partner['category'], string> = {
