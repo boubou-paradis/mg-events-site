@@ -74,6 +74,17 @@ export const partners: Partner[] = [
     phone: '02 97 75 17 32',
     email: 'lerelaisdumaquis@orange.fr',
   },
+  {
+    id: 'traiteur-faligot',
+    name: 'Traiteur Faligot',
+    category: 'traiteur',
+    categoryLabel: 'Traiteur Gastronomique',
+    description: 'Le Chef Jérôme Faligot et sa brigade artisanale vous proposent une cuisine gastronomique fait maison, dans une recherche perpétuelle pour surprendre, inventer et moderniser. Basé à Betton près de Rennes, Traiteur Faligot sublime vos événements avec des prestations sur mesure et une pâtisserie d\'exception.',
+    specialties: ['Mariage', 'Repas d\'entreprise', 'Séminaire', 'Cocktail', 'Buffet à thème', 'Pièce montée', 'Repas de gala'],
+    zone: 'Ille-et-Vilaine (35) - Betton, Rennes, Saint-Malo',
+    website: 'https://www.traiteurducentre.com/',
+    phone: '02 23 27 82 21',
+  },
 ];
 
 export const categoryIcons: Record<Partner['category'], string> = {
