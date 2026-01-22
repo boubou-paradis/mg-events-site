@@ -23,12 +23,28 @@ import {
 import { partners, Partner } from '@/data/partners';
 
 export const metadata: Metadata = {
-  title: 'Nos Partenaires de Confiance | MG Events Animation DJ Mariage Bretagne',
-  description: 'Découvrez nos partenaires de confiance pour votre mariage en Bretagne : photographes, salles de réception, traiteurs... Des professionnels recommandés par MG Events.',
+  title: 'Nos Partenaires de Confiance | Photographes, Traiteurs, Fleuristes Mariage Bretagne',
+  description: 'Découvrez nos partenaires de confiance pour votre mariage en Bretagne : photographes professionnels, traiteurs gastronomiques, fleuristes artisans. Prestataires recommandés par MG Events en Ille-et-Vilaine et Morbihan.',
+  keywords: ['partenaires mariage bretagne', 'photographe mariage bretagne', 'traiteur mariage morbihan', 'fleuriste mariage', 'prestataires mariage rennes', 'prestataires mariage vannes'],
+  alternates: {
+    canonical: 'https://www.mgevents-animation.fr/partenaires',
+  },
   openGraph: {
-    title: 'Nos Partenaires de Confiance | MG Events Animation',
-    description: 'Découvrez nos partenaires de confiance pour votre mariage en Bretagne : photographes, salles de réception, traiteurs...',
+    title: 'Nos Partenaires de Confiance | MG Events Animation Bretagne',
+    description: 'Photographes, traiteurs, fleuristes : découvrez nos partenaires de confiance pour votre mariage en Bretagne. Professionnels recommandés par MG Events.',
     type: 'website',
+    url: 'https://www.mgevents-animation.fr/partenaires',
+    siteName: 'MG Events Animation',
+    locale: 'fr_FR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nos Partenaires de Confiance | MG Events Animation',
+    description: 'Photographes, traiteurs, fleuristes : découvrez nos partenaires pour votre mariage en Bretagne.',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -393,15 +409,41 @@ export default function PartenairesPage() {
       </main>
       <Footer />
 
-      {/* Schema.org JSON-LD */}
+      {/* Schema.org BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://www.mgevents-animation.fr"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Nos Partenaires",
+                "item": "https://www.mgevents-animation.fr/partenaires"
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Schema.org ItemList - Partenaires */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "name": "Partenaires MG Events Animation",
-            "description": "Liste des partenaires de confiance recommandés par MG Events Animation pour votre mariage en Bretagne",
+            "name": "Partenaires de confiance MG Events Animation",
+            "description": "Photographes, traiteurs et fleuristes recommandés par MG Events pour votre mariage en Bretagne",
+            "numberOfItems": partners.length,
             "itemListElement": partners.map((partner, index) => ({
               "@type": "ListItem",
               "position": index + 1,
@@ -410,7 +452,14 @@ export default function PartenairesPage() {
                 "name": partner.name,
                 "description": partner.description,
                 "url": partner.website,
-                "areaServed": partner.zone,
+                "areaServed": {
+                  "@type": "Place",
+                  "name": partner.zone
+                },
+                ...(partner.phone && { "telephone": partner.phone }),
+                ...(partner.email && { "email": partner.email }),
+                "priceRange": "€€",
+                "knowsAbout": partner.specialties,
               }
             }))
           })
