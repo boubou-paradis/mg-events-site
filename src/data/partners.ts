@@ -51,6 +51,17 @@ export const partners: Partner[] = [
     website: 'https://www.leglobetraiteur.fr/',
     facebook: 'https://www.facebook.com/globetraiteur',
   },
+  {
+    id: 'lun-des-sens',
+    name: 'L\'Un des Sens',
+    category: 'traiteur',
+    categoryLabel: 'Restaurant & Traiteur',
+    description: 'L\'Un des Sens, restaurant et traiteur à Vezin-le-Coquet près de Rennes, vous accompagne pour tous vos événements. Repas de famille, anniversaires, repas associatifs : profitez de menus personnalisés sur place ou en prestation traiteur. Livraison de plats chauds à domicile possible (minimum 10 personnes).',
+    specialties: ['Repas de famille', 'Anniversaire', 'Repas associatif', 'Menu personnalisé', 'Livraison plats chauds'],
+    zone: 'Ille-et-Vilaine (35) - Vezin-le-Coquet, Rennes et environs',
+    website: 'http://restolundessens.wifeo.com/',
+    phone: '02 99 64 52 77',
+  },
 ];
 
 export const categoryIcons: Record<Partner['category'], string> = {
