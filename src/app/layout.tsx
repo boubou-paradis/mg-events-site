@@ -58,7 +58,7 @@ const videoJsonLd = {
   "name": "AnimaJet - Animations interactives pour mariage par MG Events",
   "description": "Découvrez AnimaJet, notre technologie exclusive d'animations interactives pour mariages en Bretagne : quiz musical, photo mystère, partage live. Une expérience unique pour votre soirée de mariage.",
   "thumbnailUrl": "https://www.mg-events35.com/images/animajet-thumbnail.jpg",
-  "uploadDate": "2025-01-01",
+  "uploadDate": "2025-01-01T00:00:00+01:00",
   "duration": "PT1M30S",
   "contentUrl": "https://www.mg-events35.com/promo-animajet.mp4",
   "embedUrl": "https://www.mg-events35.com/promo-animajet.mp4",
