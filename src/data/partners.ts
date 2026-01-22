@@ -97,6 +97,19 @@ export const partners: Partner[] = [
     phone: '06 83 47 42 69',
     email: 'gaelobroches@free.fr',
   },
+  {
+    id: 'les-fleurs-de-sidonie',
+    name: 'Les Fleurs de Sidonie',
+    category: 'fleuriste',
+    categoryLabel: 'Fleuriste',
+    description: 'Artisan fleuriste à La Gacilly, Les Fleurs de Sidonie vous propose de la qualité au prix juste. Créations florales sur mesure pour vos mariages, bouquets, compositions et décoration florale. Un savoir-faire artisanal pour sublimer vos événements avec des fleurs fraîches et de saison.',
+    specialties: ['Mariage', 'Décoration florale', 'Bouquets', 'Compositions', 'Livraison'],
+    zone: 'Morbihan (56) - La Gacilly et environs',
+    website: 'https://www.facebook.com/LesFleursdeSidonie/',
+    phone: '02 23 10 34 96',
+    email: 'lesfleursdesidonie@orange.fr',
+    facebook: 'https://www.facebook.com/LesFleursdeSidonie/',
+  },
 ];
 
 export const categoryIcons: Record<Partner['category'], string> = {
