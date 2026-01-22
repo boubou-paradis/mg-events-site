@@ -62,6 +62,18 @@ export const partners: Partner[] = [
     website: 'http://restolundessens.wifeo.com/',
     phone: '02 99 64 52 77',
   },
+  {
+    id: 'relais-du-maquis',
+    name: 'Le Relais du Maquis',
+    category: 'traiteur',
+    categoryLabel: 'Restaurant & Traiteur',
+    description: 'Le Relais du Maquis, restaurant-traiteur à Saint Marcel dans le Morbihan, idéalement situé entre la légendaire forêt de Brocéliande et le magnifique golfe du Morbihan. L\'invitation d\'une réception réussie pour vos mariages, réceptions privées ou professionnelles, cocktails et repas de famille. Service traiteur disponible dans toutes les salles de la région.',
+    specialties: ['Mariage', 'Réception privée', 'Réception professionnelle', 'Cocktail', 'Repas de famille', 'Service traiteur extérieur'],
+    zone: 'Morbihan (56) - Saint Marcel, Brocéliande, Golfe du Morbihan',
+    website: 'https://www.lerelaisdumaquis.com/',
+    phone: '02 97 75 17 32',
+    email: 'lerelaisdumaquis@orange.fr',
+  },
 ];
 
 export const categoryIcons: Record<Partner['category'], string> = {
