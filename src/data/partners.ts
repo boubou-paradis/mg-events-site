@@ -40,6 +40,17 @@ export const partners: Partner[] = [
     facebook: 'https://www.facebook.com/danslobjectifdeMorgane/',
     instagram: 'https://www.instagram.com/danslobjectifdemorgane',
   },
+  {
+    id: 'globe-traiteur',
+    name: 'Globe Traiteur',
+    category: 'traiteur',
+    categoryLabel: 'Traiteur & Organisateur événementiel',
+    description: 'Globe Traiteur, un monde de couleurs et de saveurs ! Organisateur d\'événements culinaires basé en Centre Bretagne, Globe Traiteur sublime vos mariages avec des prestations complètes : consultation personnalisée, dégustation préalable, service soigné et coordination le jour J. Une équipe passionnée au service de votre réception.',
+    specialties: ['Mariage', 'Réception', 'Séminaire entreprise', 'Anniversaire', 'Vente à emporter'],
+    zone: 'Morbihan (56) - Centre Bretagne (Pontivy, Locminé)',
+    website: 'https://www.leglobetraiteur.fr/',
+    facebook: 'https://www.facebook.com/globetraiteur',
+  },
 ];
 
 export const categoryIcons: Record<Partner['category'], string> = {
