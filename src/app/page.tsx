@@ -95,6 +95,8 @@ import {
   Headphones,
   Volume2,
   Disc3,
+  Printer,
+  ListMusic,
 } from 'lucide-react';
 
 // ============ HEADER ============
@@ -1293,14 +1295,26 @@ function AnimaJet() {
       description: 'Vos invités partagent leurs plus beaux moments instantanément sur grand écran. Toute la soirée capturée, tous ensemble.',
     },
     {
-      icon: Music,
-      title: 'Quiz Musical Interactif',
-      description: 'Qui reconnaîtra le titre en premier ? Ambiance garantie et fous rires assurés pour toutes les générations.',
+      icon: Monitor,
+      title: 'Diaporama sur grand écran',
+      description: 'Les photos de vos invités défilent en direct sur grand écran, créant une ambiance unique et participative tout au long de la soirée.',
     },
     {
       icon: HelpCircle,
-      title: 'Photo Mystère',
-      description: 'Un jeu original qui fera deviner vos invités et créera des moments de complicité inoubliables.',
+      title: 'Jeux interactifs',
+      description: 'Quizz, Photo Mystère, Roue de la fortune… Des animations originales qui fera deviner vos invités et créera des moments de complicité inoubliables.',
+    },
+    {
+      icon: Printer,
+      title: 'Impression photo instantanée',
+      description: 'Vos invités impriment leurs photos directement depuis leur téléphone ! Mode auto ou validation manuelle, vous gardez le contrôle.',
+      isNew: true,
+    },
+    {
+      icon: ListMusic,
+      title: 'Blind Test intégré',
+      description: 'Créez des quizz musicaux en 2 clics ! Ajoutez un extrait audio à vos questions, la musique se lance automatiquement quand la bonne réponse s\'affiche.',
+      isNew: true,
     },
   ];
 
@@ -1339,24 +1353,31 @@ function AnimaJet() {
             </h2>
 
             <p className="text-[#888] mb-6">
-              Une technologie exclusive développée par nos soins
+              Une technologie exclusive qui évolue sans cesse
             </p>
 
             <p className="text-[#aaa] text-lg leading-relaxed">
               Offrez à vos invités une expérience inédite grâce à <span className="text-[#c9a227] font-medium">AnimaJet</span>,
-              notre plateforme d&apos;animation interactive créée spécialement pour révolutionner vos soirées.
+              notre plateforme d&apos;animation interactive. Partage de photos, diaporama, jeux interactifs, impression photo et maintenant <span className="text-[#c9a227] font-medium">Blind Test</span> — tout pour une soirée inoubliable.
             </p>
           </div>
         </div>
 
         {/* Features */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
           {features.map((feature, index) => (
             <div
               key={index}
               className="relative group"
             >
-              <div className="card-dark p-8 h-full hover:border-[#c9a227]/40 transition-all duration-300">
+              <div className="card-dark p-8 h-full hover:border-[#c9a227]/40 transition-all duration-300 relative overflow-hidden">
+                {/* Badge Nouveau */}
+                {'isNew' in feature && feature.isNew && (
+                  <div className="absolute top-4 right-4 px-2.5 py-1 bg-gradient-to-r from-[#c9a227] to-[#d4af37] rounded-full">
+                    <span className="text-[#0a0a0a] text-xs font-bold uppercase tracking-wider">Nouveau</span>
+                  </div>
+                )}
+
                 {/* Icon with glow effect */}
                 <div className="relative mb-6 flex justify-center md:justify-start">
                   <div className="absolute inset-0 bg-[#c9a227]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
