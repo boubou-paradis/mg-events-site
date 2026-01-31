@@ -1962,8 +1962,8 @@ export default function Home() {
         <Testimonials />
         <Formules onImageClick={openLightbox} />
         <AutresEvenements />
-        <ZonesMariage />
         <Contact />
+        <ZonesMariage />
       </main>
       <Footer />
 
