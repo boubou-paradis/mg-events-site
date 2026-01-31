@@ -1656,6 +1656,99 @@ function AutresEvenements() {
   );
 }
 
+// ============ ZONES DJ MARIAGE BRETAGNE (SEO) ============
+function ZonesMariage() {
+  const departements = [
+    { label: 'Ille-et-Vilaine (35)', href: '/dj-mariage-ille-et-vilaine' },
+    { label: 'Morbihan (56)', href: '/dj-mariage-morbihan' },
+    { label: 'Finistère (29)', href: '/dj-mariage-finistere' },
+    { label: 'Loire-Atlantique (44)', href: '/dj-mariage-loire-atlantique' },
+    { label: 'Mayenne (53)', href: '/dj-mariage-mayenne' },
+  ];
+
+  const villes = [
+    { name: 'Rennes', slug: 'rennes' },
+    { name: 'Vannes', slug: 'vannes' },
+    { name: 'Nantes', slug: 'nantes' },
+    { name: 'Brest', slug: 'brest' },
+    { name: 'Saint-Malo', slug: 'saint-malo' },
+    { name: 'Lorient', slug: 'lorient' },
+    { name: 'Quimper', slug: 'quimper' },
+    { name: 'Laval', slug: 'laval' },
+  ];
+
+  return (
+    <section id="zones-mariage" className="py-16 bg-[#0a0a0a]">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h2 className="section-title text-white mb-3">
+            Votre DJ mariage en <span className="text-gradient-gold">Bretagne</span>
+          </h2>
+          <p className="text-[#888] max-w-2xl mx-auto">
+            MG Events intervient dans toute la Bretagne et les départements limitrophes pour animer votre mariage
+          </p>
+        </div>
+
+        {/* Grille départements + villes */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Par département */}
+          <div className="card-dark p-6">
+            <h3 className="text-white font-medium mb-4 flex items-center gap-2">
+              <MapPin size={20} className="text-[#c9a227]" />
+              DJ Mariage par département
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {departements.map((dept) => (
+                <Link
+                  key={dept.href}
+                  href={dept.href}
+                  className="flex items-center gap-2 px-4 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/50 transition-all duration-300"
+                >
+                  <span className="text-sm">{dept.label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Par ville */}
+          <div className="card-dark p-6">
+            <h3 className="text-white font-medium mb-4 flex items-center gap-2">
+              <Building2 size={20} className="text-[#c9a227]" />
+              DJ Mariage par ville
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {villes.map((ville) => (
+                <Link
+                  key={ville.slug}
+                  href={`/dj-mariage/${ville.slug}`}
+                  className="text-center px-3 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/50 transition-all duration-300"
+                >
+                  <span className="text-sm">{ville.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Lien vers toutes les zones */}
+        <div className="text-center mt-8">
+          <Link
+            href="/zones-intervention"
+            className="inline-flex items-center gap-2 text-[#c9a227] hover:underline transition-colors"
+          >
+            Découvrir toutes nos zones d&apos;intervention
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ FOOTER ============
 function Footer() {
   const zones = [
@@ -1787,6 +1880,7 @@ export default function Home() {
         <Testimonials />
         <Formules onImageClick={openLightbox} />
         <AutresEvenements />
+        <ZonesMariage />
         <Contact />
       </main>
       <Footer />
