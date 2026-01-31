@@ -97,6 +97,7 @@ import {
   Disc3,
   Printer,
   ListMusic,
+  Info,
 } from 'lucide-react';
 
 // ============ HEADER ============
@@ -1309,6 +1310,7 @@ function AnimaJet() {
       title: 'Impression photo instantanée',
       description: 'Vos invités impriment leurs photos directement depuis leur téléphone ! Mode auto ou validation manuelle, vous gardez le contrôle.',
       isNew: true,
+      note: 'Disponible avec la formule Conte de Fées ou Photobooth en option',
     },
     {
       icon: ListMusic,
@@ -1392,6 +1394,12 @@ function AnimaJet() {
                 <p className="text-[#888] leading-relaxed text-center md:text-left">
                   {feature.description}
                 </p>
+                {'note' in feature && feature.note && (
+                  <p className="text-[#c9a227] text-xs mt-3 flex items-center gap-1 justify-center md:justify-start">
+                    <Info size={12} />
+                    {feature.note}
+                  </p>
+                )}
               </div>
             </div>
           ))}
