@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   description: 'DJ mariage Bretagne à partir de 1200€ - Découvrez notre approche : votre soirée, vos invités au centre, une prestation complète du vin d\'honneur jusqu\'au bout de la nuit. 25 ans d\'expérience.',
   keywords: ['philosophie', 'DJ mariage bretagne', 'valeurs', 'engagement', 'expérience', 'MG Events', 'tarif DJ mariage'],
   alternates: {
-    canonical: 'https://www.mgevents-animation.fr/philosophie',
+    canonical: 'https://www.mg-events35.com/philosophie',
   },
   openGraph: {
     title: 'Notre Philosophie | MG Events Animation',
     description: 'C\'est votre soirée. Simplement. Découvrez notre approche unique du métier de DJ animateur en Bretagne.',
     type: 'website',
-    url: 'https://www.mgevents-animation.fr/philosophie',
+    url: 'https://www.mg-events35.com/philosophie',
     siteName: 'MG Events Animation',
     locale: 'fr_FR',
   },
@@ -414,13 +414,13 @@ export default function PhilosophiePage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Accueil",
-                "item": "https://www.mgevents-animation.fr"
+                "item": "https://www.mg-events35.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Notre Philosophie",
-                "item": "https://www.mgevents-animation.fr/philosophie"
+                "item": "https://www.mg-events35.com/philosophie"
               }
             ]
           })
@@ -436,7 +436,7 @@ export default function PhilosophiePage() {
             "@type": "AboutPage",
             "name": "Notre Philosophie | MG Events Animation",
             "description": "Découvrez la philosophie de MG Events Animation : 25 ans d'expérience au service de votre soirée. DJ mariage en Bretagne.",
-            "url": "https://www.mgevents-animation.fr/philosophie",
+            "url": "https://www.mg-events35.com/philosophie",
             "mainEntity": {
               "@type": "LocalBusiness",
               "name": "MG Events Animation",

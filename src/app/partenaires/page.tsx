@@ -27,13 +27,13 @@ export const metadata: Metadata = {
   description: 'Découvrez nos partenaires de confiance pour votre mariage en Bretagne : photographes professionnels, traiteurs gastronomiques, fleuristes artisans. Prestataires recommandés par MG Events en Ille-et-Vilaine et Morbihan.',
   keywords: ['partenaires mariage bretagne', 'photographe mariage bretagne', 'traiteur mariage morbihan', 'fleuriste mariage', 'prestataires mariage rennes', 'prestataires mariage vannes'],
   alternates: {
-    canonical: 'https://www.mgevents-animation.fr/partenaires',
+    canonical: 'https://www.mg-events35.com/partenaires',
   },
   openGraph: {
     title: 'Nos Partenaires de Confiance | MG Events Animation Bretagne',
     description: 'Photographes, traiteurs, fleuristes : découvrez nos partenaires de confiance pour votre mariage en Bretagne. Professionnels recommandés par MG Events.',
     type: 'website',
-    url: 'https://www.mgevents-animation.fr/partenaires',
+    url: 'https://www.mg-events35.com/partenaires',
     siteName: 'MG Events Animation',
     locale: 'fr_FR',
   },
@@ -422,13 +422,13 @@ export default function PartenairesPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Accueil",
-                "item": "https://www.mgevents-animation.fr"
+                "item": "https://www.mg-events35.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Nos Partenaires",
-                "item": "https://www.mgevents-animation.fr/partenaires"
+                "item": "https://www.mg-events35.com/partenaires"
               }
             ]
           })
