@@ -137,21 +137,31 @@ function Header() {
 
             {/* Zones Dropdown */}
             <div className="relative" onMouseEnter={() => setZonesOpen(true)} onMouseLeave={() => setZonesOpen(false)}>
-              <button className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors flex items-center gap-1">
+              <button className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors flex items-center gap-1 py-2">
                 Zones
                 <ChevronDown size={14} className={`transition-transform ${zonesOpen ? 'rotate-180' : ''}`} />
               </button>
               {zonesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg shadow-xl py-2">
-                  {zones.map((zone) => (
-                    <a
-                      key={zone.href}
-                      href={zone.href}
-                      className="block px-4 py-2 text-sm text-[#aaa] hover:text-[#c9a227] hover:bg-[#c9a227]/5 transition-colors"
-                    >
-                      {zone.label}
-                    </a>
-                  ))}
+                <div className="absolute top-full left-0 pt-2 w-56">
+                  <div className="bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg shadow-xl py-2">
+                    {zones.map((zone) => (
+                      <a
+                        key={zone.href}
+                        href={zone.href}
+                        className="block px-4 py-2 text-sm text-[#aaa] hover:text-[#c9a227] hover:bg-[#c9a227]/5 transition-colors"
+                      >
+                        {zone.label}
+                      </a>
+                    ))}
+                    <div className="border-t border-[#c9a227]/10 mt-2 pt-2">
+                      <a
+                        href="/zones-intervention"
+                        className="block px-4 py-2 text-sm text-[#c9a227] hover:bg-[#c9a227]/5 transition-colors"
+                      >
+                        Toutes les zones →
+                      </a>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
