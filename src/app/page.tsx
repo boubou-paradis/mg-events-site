@@ -358,6 +358,13 @@ function About({ onImageClick }: { onImageClick: (src: string, alt: string) => v
                 </div>
               ))}
             </div>
+
+            {/* CTA vers philosophie */}
+            <div className="mt-8">
+              <Link href="/philosophie" className="btn-outline inline-block">
+                Découvrir notre approche
+              </Link>
+            </div>
           </div>
         </div>
       </div>

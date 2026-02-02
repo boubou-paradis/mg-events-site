@@ -11,8 +11,8 @@ import { AnimatedSection, ScrollIndicator } from './components';
 
 export const metadata: Metadata = {
   title: 'Notre Philosophie | MG Events Animation DJ Mariage Bretagne',
-  description: 'Découvrez la philosophie de MG Events Animation : 25 ans d\'expérience au service de votre soirée. DJ mariage en Bretagne, une seule conviction : c\'est votre soirée.',
-  keywords: ['philosophie', 'DJ mariage bretagne', 'valeurs', 'engagement', 'expérience', 'MG Events'],
+  description: 'DJ mariage Bretagne à partir de 1200€ - Découvrez notre approche : votre soirée, vos invités au centre, une prestation complète du vin d\'honneur jusqu\'au bout de la nuit. 25 ans d\'expérience.',
+  keywords: ['philosophie', 'DJ mariage bretagne', 'valeurs', 'engagement', 'expérience', 'MG Events', 'tarif DJ mariage'],
   alternates: {
     canonical: 'https://www.mgevents-animation.fr/philosophie',
   },
