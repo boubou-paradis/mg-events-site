@@ -309,20 +309,34 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
         </div>
       </section>
 
-      {/* Points forts */}
+      {/* Contenu SEO unique - Description locale */}
       <section className="py-16 bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-12">
-            Pourquoi choisir <span className="text-[#c9a227]">MG Events</span> pour votre mariage à {city.name} ?
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white mb-8">
+            Se marier à <span className="text-[#c9a227]">{city.name}</span> : notre expertise locale
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pointsForts.map((point, index) => (
-              <div key={index} className="card-dark p-6 text-center">
-                <point.icon size={40} className="text-[#c9a227] mx-auto mb-4" />
-                <h3 className="text-white font-medium mb-2">{point.title}</h3>
-                <p className="text-[#888] text-sm">{point.description}</p>
-              </div>
+          <div className="prose prose-invert prose-lg max-w-none">
+            {city.seoDescription.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="text-[#aaa] leading-relaxed mb-6">
+                {paragraph}
+              </p>
             ))}
+          </div>
+
+          {/* Points forts locaux */}
+          <div className="mt-10 card-dark p-6">
+            <h3 className="text-[#c9a227] font-medium mb-4 flex items-center gap-2">
+              <Star size={20} />
+              Pourquoi choisir {city.name} pour votre mariage ?
+            </h3>
+            <ul className="space-y-3">
+              {city.localHighlights.map((highlight, index) => (
+                <li key={index} className="flex items-start gap-3 text-[#aaa]">
+                  <Check size={18} className="text-[#c9a227] shrink-0 mt-1" />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
