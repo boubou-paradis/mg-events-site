@@ -88,6 +88,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    // Page philosophie
+    {
+      url: `${baseUrl}/philosophie`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
     // Pages légales
     {
       url: `${baseUrl}/mentions-legales`,

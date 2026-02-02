@@ -1917,6 +1917,7 @@ function Footer() {
           <div>
             <h4 className="text-white font-medium mb-4">Informations</h4>
             <ul className="space-y-2">
+              <li><Link href="/philosophie" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Notre philosophie</Link></li>
               <li><Link href="/partenaires" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Nos partenaires</Link></li>
               <li><Link href="/mentions-legales" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Mentions légales</Link></li>
               <li><Link href="/cgv" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">CGV</Link></li>
