@@ -211,7 +211,7 @@ export default function PhilosophiePage() {
       <main className="min-h-screen bg-[#0a0a0a]">
         {/* HERO */}
         <section
-          className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative"
+          className="min-h-[60vh] flex flex-col justify-center items-center text-center px-6 pt-32 relative"
           aria-labelledby="hero-title"
         >
           {/* Background glow */}
@@ -238,8 +238,8 @@ export default function PhilosophiePage() {
         </section>
 
         {/* LA QUESTION */}
-        <AnimatedSection className="max-w-3xl mx-auto px-6 py-24">
-          <div className="gold-line mx-auto mb-12" />
+        <AnimatedSection className="max-w-[1100px] mx-auto px-6 py-12">
+          <div className="gold-line mx-auto mb-8" />
           <h2 className="section-title text-white mb-8">
             La seule question <span className="text-gradient-gold">qui compte</span>
           </h2>
@@ -255,8 +255,8 @@ export default function PhilosophiePage() {
         </AnimatedSection>
 
         {/* NOTRE CONVICTION */}
-        <AnimatedSection className="max-w-3xl mx-auto px-6 py-24">
-          <div className="gold-line mx-auto mb-12" />
+        <AnimatedSection className="max-w-[1100px] mx-auto px-6 py-12">
+          <div className="gold-line mx-auto mb-8" />
           <h2 className="section-title text-white mb-8">
             Une conviction <span className="text-gradient-gold">simple</span>
           </h2>
@@ -268,7 +268,7 @@ export default function PhilosophiePage() {
           </p>
 
           {/* Citation */}
-          <blockquote className="relative bg-[#1a1a1a] border-l-4 border-[#c9a227] p-8 my-8">
+          <blockquote className="relative bg-[#1a1a1a] border-l-4 border-[#c9a227] p-6 my-6">
             <span
               className="absolute top-0 left-4 font-[family-name:var(--font-display)] text-8xl text-[#c9a227] opacity-15 leading-none select-none"
               aria-hidden="true"
@@ -282,13 +282,13 @@ export default function PhilosophiePage() {
         </AnimatedSection>
 
         {/* NOS ENGAGEMENTS */}
-        <AnimatedSection className="max-w-3xl mx-auto px-6 py-24">
-          <div className="gold-line mx-auto mb-12" />
-          <h2 className="section-title text-white mb-12">
+        <AnimatedSection className="max-w-[1100px] mx-auto px-6 py-12">
+          <div className="gold-line mx-auto mb-8" />
+          <h2 className="section-title text-white mb-8">
             Ce qu&apos;on <span className="text-gradient-gold">vous promet</span>
           </h2>
 
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
             {engagements.map((engagement) => {
               const IconComponent = engagement.icon;
               return (
@@ -312,8 +312,8 @@ export default function PhilosophiePage() {
         </AnimatedSection>
 
         {/* TARIF */}
-        <AnimatedSection className="max-w-3xl mx-auto px-6 py-24">
-          <div className="gold-line mx-auto mb-12" />
+        <AnimatedSection className="max-w-[1100px] mx-auto px-6 py-12">
+          <div className="gold-line mx-auto mb-8" />
           <h2 className="section-title text-white mb-8">
             Un tarif <span className="text-gradient-gold">juste</span>
           </h2>
@@ -322,28 +322,28 @@ export default function PhilosophiePage() {
           </p>
 
           {/* Chiffres */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 my-12 text-center">
-            <div className="p-2 sm:p-4">
-              <div className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl md:text-5xl text-[#c9a227]">
+          <div className="flex flex-wrap justify-between items-start gap-6 my-8 py-6 border-y border-[#c9a227]/10">
+            <div className="flex-1 min-w-[120px] text-center">
+              <div className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-[#c9a227]">
                 25+
               </div>
-              <div className="text-[10px] sm:text-xs font-mono tracking-[0.1em] uppercase text-[#888] mt-2">
+              <div className="text-xs font-mono tracking-[0.1em] uppercase text-[#888] mt-2">
                 Années d&apos;expérience
               </div>
             </div>
-            <div className="p-2 sm:p-4">
-              <div className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl md:text-5xl text-[#c9a227]">
+            <div className="flex-1 min-w-[120px] text-center">
+              <div className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-[#c9a227]">
                 1200€
               </div>
-              <div className="text-[10px] sm:text-xs font-mono tracking-[0.1em] uppercase text-[#888] mt-2">
+              <div className="text-xs font-mono tracking-[0.1em] uppercase text-[#888] mt-2">
                 À partir de
               </div>
             </div>
-            <div className="p-2 sm:p-4">
-              <div className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl md:text-5xl text-[#c9a227]">
+            <div className="flex-1 min-w-[120px] text-center">
+              <div className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-[#c9a227]">
                 100%
               </div>
-              <div className="text-[10px] sm:text-xs font-mono tracking-[0.1em] uppercase text-[#888] mt-2">
+              <div className="text-xs font-mono tracking-[0.1em] uppercase text-[#888] mt-2">
                 Centré sur vous
               </div>
             </div>
@@ -368,7 +368,7 @@ export default function PhilosophiePage() {
         </AnimatedSection>
 
         {/* CTA FINAL */}
-        <AnimatedSection className="text-center px-6 py-32 relative">
+        <AnimatedSection className="text-center px-6 py-16 relative">
           {/* Background glow */}
           <div
             className="absolute inset-0 pointer-events-none"

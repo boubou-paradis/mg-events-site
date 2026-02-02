@@ -47,10 +47,10 @@ export function AnimatedSection({
 export function ScrollIndicator() {
   return (
     <div
-      className="absolute bottom-8 flex flex-col items-center animate-fade-up delay-500"
+      className="mt-12 flex flex-col items-center animate-fade-up delay-500"
       aria-hidden="true"
     >
-      <span className="text-xs tracking-[0.2em] uppercase text-[#9a7b1a] mb-3">
+      <span className="text-xs tracking-[0.2em] uppercase text-[#9a7b1a] mb-2">
         Lire la suite
       </span>
       <ChevronDown className="w-5 h-5 text-[#9a7b1a] animate-bounce" />
