@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, ArrowLeft, Phone, Mail } from 'lucide-react';
-import { cities, getCitiesByDepartment } from '@/data/cities';
+import { MapPin, ArrowLeft, Phone, Mail, Building2, Cake } from 'lucide-react';
+import { cities, getCitiesByDepartment, getCitiesForEnterprise, getCitiesForBirthday } from '@/data/cities';
 
 export const metadata: Metadata = {
   title: 'Zones d\'intervention DJ Mariage Bretagne | MG Events',
@@ -132,6 +132,68 @@ export default function ZonesIntervention() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Soirées entreprise */}
+      <section className="py-16 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="card-dark p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <Building2 size={28} className="text-[#c9a227]" />
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-white">
+                DJ <span className="text-[#c9a227]">soirée entreprise</span>
+              </h2>
+            </div>
+            <p className="text-[#aaa] mb-8">
+              Animation de soirées d&apos;entreprise, séminaires, team building, galas et événements professionnels dans les principales villes de Bretagne.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              {getCitiesForEnterprise().map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/dj-soiree-entreprise/${city.slug}`}
+                  className="flex items-center gap-2 p-3 bg-[#1a1a1a] rounded-lg border border-[#c9a227]/10 hover:border-[#c9a227]/40 transition-colors group"
+                >
+                  <Building2 size={16} className="text-[#c9a227] shrink-0" />
+                  <span className="text-[#aaa] group-hover:text-[#c9a227] transition-colors text-sm font-medium truncate">
+                    {city.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Animation anniversaire */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="card-dark p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <Cake size={28} className="text-[#c9a227]" />
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-white">
+                Animation <span className="text-[#c9a227]">anniversaire</span>
+              </h2>
+            </div>
+            <p className="text-[#aaa] mb-8">
+              DJ et animation pour vos anniversaires marquants : 18 ans, 30 ans, 40 ans, 50 ans... Une fête mémorable dans les grandes villes bretonnes.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              {getCitiesForBirthday().map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/animation-anniversaire/${city.slug}`}
+                  className="flex items-center gap-2 p-3 bg-[#1a1a1a] rounded-lg border border-[#c9a227]/10 hover:border-[#c9a227]/40 transition-colors group"
+                >
+                  <Cake size={16} className="text-[#c9a227] shrink-0" />
+                  <span className="text-[#aaa] group-hover:text-[#c9a227] transition-colors text-sm font-medium truncate">
+                    {city.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
