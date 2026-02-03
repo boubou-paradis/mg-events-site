@@ -117,6 +117,26 @@ const localBusinessSchema = {
     "bestRating": "5",
     "worstRating": "1"
   },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Pauline & Nicolas" },
+      "reviewBody": "Notre mariage près de Nantes était une vraie réussite grâce à MG Events. Nous n'avons eu que des super retours des invités !"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Émilie & Romain" },
+      "reviewBody": "Mariage parfait à La Baule avec vue sur l'océan. Guillaume et Laurence ont su créer une ambiance magique jusqu'au bout de la nuit."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Aurélie & Florian" },
+      "reviewBody": "Superbe prestation dans notre domaine viticole à Clisson. Les animations AnimaJet ont conquis tous nos invités."
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Formules DJ Mariage",
@@ -143,32 +163,6 @@ const localBusinessSchema = {
   }
 };
 
-const reviewsSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "MG Events Animation",
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Pauline & Nicolas" },
-      "reviewBody": "Notre mariage près de Nantes était une vraie réussite grâce à MG Events. Nous n'avons eu que des super retours des invités !"
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Émilie & Romain" },
-      "reviewBody": "Mariage parfait à La Baule avec vue sur l'océan. Guillaume et Laurence ont su créer une ambiance magique jusqu'au bout de la nuit."
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Aurélie & Florian" },
-      "reviewBody": "Superbe prestation dans notre domaine viticole à Clisson. Les animations AnimaJet ont conquis tous nos invités."
-    }
-  ]
-};
-
 const lieuxMariage44 = [
   { nom: "Domaine de la Frémoire", ville: "Vertou", type: "Domaine viticole" },
   { nom: "Château de la Gascherie", ville: "La Chapelle-sur-Erdre", type: "Château" },
@@ -189,15 +183,10 @@ const zonesIntervention44 = [
 export default function DJMariageLoireAtlantique() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
-      {/* Schema.org LocalBusiness */}
+      {/* Schema.org LocalBusiness avec Reviews intégrées */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      {/* Schema.org Reviews */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
       />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">

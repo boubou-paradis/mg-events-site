@@ -123,6 +123,26 @@ const localBusinessSchema = {
     "bestRating": "5",
     "worstRating": "1"
   },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Marie & Julien" },
+      "reviewBody": "Un grand merci pour votre professionnalisme, votre écoute, votre dynamisme ! Vous avez su donner à notre mariage à Vannes l'ambiance que nous espérions."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Céline & Arnaud" },
+      "reviewBody": "Mariage parfait au Domaine de Rochevilaine ! Les étincelles froides face à l'océan étaient magiques. Merci pour cette soirée inoubliable."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Laura & Yannick" },
+      "reviewBody": "Notre mariage à Carnac a été une réussite totale. Le photobooth vintage a fait un carton ! On recommande les yeux fermés."
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Formules DJ Mariage",
@@ -149,32 +169,6 @@ const localBusinessSchema = {
   }
 };
 
-const reviewsSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "MG Events Animation",
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Marie & Julien" },
-      "reviewBody": "Un grand merci pour votre professionnalisme, votre écoute, votre dynamisme ! Vous avez su donner à notre mariage à Vannes l'ambiance que nous espérions."
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Céline & Arnaud" },
-      "reviewBody": "Mariage parfait au Domaine de Rochevilaine ! Les étincelles froides face à l'océan étaient magiques. Merci pour cette soirée inoubliable."
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Laura & Yannick" },
-      "reviewBody": "Notre mariage à Carnac a été une réussite totale. Le photobooth vintage a fait un carton ! On recommande les yeux fermés."
-    }
-  ]
-};
-
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Des discothèques du Morbihan aux plus beaux mariages de Vannes et Lorient' },
   { icon: Disc3, value: 'Répertoire', label: 'musical complet', description: "80's, rock, variété française, hits actuels, électro... toutes les générations" },
@@ -190,15 +184,10 @@ const musicFaqs = [
 export default function DJMariageMorbihan() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
-      {/* Schema.org LocalBusiness */}
+      {/* Schema.org LocalBusiness avec Reviews intégrées */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      {/* Schema.org Reviews */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
       />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">

@@ -121,6 +121,26 @@ const localBusinessSchema = {
     "bestRating": "5",
     "worstRating": "1"
   },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Sophie & Thomas" },
+      "reviewBody": "Merci à vous deux pour votre investissement et votre professionnalisme. Notre mariage à Laval était une réussite totale !"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Claire & Antoine" },
+      "reviewBody": "Mariage parfait au Château de Craon ! Une ambiance magique du cocktail jusqu'à la fin. On recommande les yeux fermés."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Aurélie & Sébastien" },
+      "reviewBody": "Les animations AnimaJet ont fait un carton lors de notre mariage à Château-Gontier. Tous nos invités en parlent encore !"
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Formules DJ Mariage",
@@ -147,32 +167,6 @@ const localBusinessSchema = {
   }
 };
 
-const reviewsSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "MG Events Animation",
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Sophie & Thomas" },
-      "reviewBody": "Merci à vous deux pour votre investissement et votre professionnalisme. Notre mariage à Laval était une réussite totale !"
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Claire & Antoine" },
-      "reviewBody": "Mariage parfait au Château de Craon ! Une ambiance magique du cocktail jusqu'à la fin. On recommande les yeux fermés."
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Aurélie & Sébastien" },
-      "reviewBody": "Les animations AnimaJet ont fait un carton lors de notre mariage à Château-Gontier. Tous nos invités en parlent encore !"
-    }
-  ]
-};
-
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Des discothèques bretonnes aux plus beaux mariages de Laval et la Mayenne' },
   { icon: Disc3, value: 'Répertoire', label: 'musical complet', description: "80's, rock, variété française, hits actuels, électro... toutes les générations" },
@@ -188,15 +182,10 @@ const musicFaqs = [
 export default function DJMariageMayenne() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
-      {/* Schema.org LocalBusiness */}
+      {/* Schema.org LocalBusiness avec Reviews intégrées */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      {/* Schema.org Reviews */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
       />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">

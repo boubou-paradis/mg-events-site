@@ -117,6 +117,26 @@ const localBusinessSchema = {
     "bestRating": "5",
     "worstRating": "1"
   },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Morane & Kevin" },
+      "reviewBody": "Merci à Guillaume et Laurence pour leur superbe prestation à notre mariage à Rennes ! Les invités ont été conquis et ont enflammé le dancefloor."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Marine & Thomas" },
+      "reviewBody": "Une soirée magique au bord de la mer à Saint-Malo ! Les étincelles froides pendant l'ouverture de bal resteront gravées dans nos mémoires."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Camille & Julien" },
+      "reviewBody": "Notre mariage au château près de Fougères a été une réussite totale grâce à MG Events. La fumée lourde pour notre première danse était parfaite."
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Formules DJ Mariage",
@@ -143,32 +163,6 @@ const localBusinessSchema = {
   }
 };
 
-const reviewsSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "MG Events Animation",
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Morane & Kevin" },
-      "reviewBody": "Merci à Guillaume et Laurence pour leur superbe prestation à notre mariage à Rennes ! Les invités ont été conquis et ont enflammé le dancefloor."
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Marine & Thomas" },
-      "reviewBody": "Une soirée magique au bord de la mer à Saint-Malo ! Les étincelles froides pendant l'ouverture de bal resteront gravées dans nos mémoires."
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Camille & Julien" },
-      "reviewBody": "Notre mariage au château près de Fougères a été une réussite totale grâce à MG Events. La fumée lourde pour notre première danse était parfaite."
-    }
-  ]
-};
-
 const lieuxMariage35 = [
   { nom: "Domaine de Cicé-Blossac", ville: "Bruz", type: "Domaine & Golf" },
   { nom: "Château de la Ballue", ville: "Bazouges-la-Pérouse", type: "Château & Jardins" },
@@ -189,15 +183,10 @@ const zonesIntervention = [
 export default function DJMariageIlleEtVilaine() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
-      {/* Schema.org LocalBusiness */}
+      {/* Schema.org LocalBusiness avec Reviews intégrées */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      {/* Schema.org Reviews */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
       />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">

@@ -123,6 +123,26 @@ const localBusinessSchema = {
     "bestRating": "5",
     "worstRating": "1"
   },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Océane & Francky" },
+      "reviewBody": "Merci pour votre investissement, gentillesse et professionnalisme. Notre mariage à Concarneau était une fête magnifique grâce à vous."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Marine & Loïc" },
+      "reviewBody": "Mariage parfait au Château de Keriolet ! Guillaume et Laurence ont su créer une ambiance magique. On recommande les yeux fermés."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Anaïs & Erwan" },
+      "reviewBody": "Notre mariage à Brest a été une réussite totale. Les animations AnimaJet ont conquis tous nos invités. Merci infiniment !"
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Formules DJ Mariage",
@@ -149,32 +169,6 @@ const localBusinessSchema = {
   }
 };
 
-const reviewsSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "MG Events Animation",
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Océane & Francky" },
-      "reviewBody": "Merci pour votre investissement, gentillesse et professionnalisme. Notre mariage à Concarneau était une fête magnifique grâce à vous."
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Marine & Loïc" },
-      "reviewBody": "Mariage parfait au Château de Keriolet ! Guillaume et Laurence ont su créer une ambiance magique. On recommande les yeux fermés."
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Anaïs & Erwan" },
-      "reviewBody": "Notre mariage à Brest a été une réussite totale. Les animations AnimaJet ont conquis tous nos invités. Merci infiniment !"
-    }
-  ]
-};
-
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Forgé dans les discothèques du Finistère : Le Kalicut, La Guinguette, Le 29...' },
   { icon: Disc3, value: 'Répertoire', label: 'musical complet', description: "80's, rock, variété française, hits actuels, électro... toutes les générations" },
@@ -190,15 +184,10 @@ const musicFaqs = [
 export default function DJMariageFinistere() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
-      {/* Schema.org LocalBusiness */}
+      {/* Schema.org LocalBusiness avec Reviews intégrées */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      {/* Schema.org Reviews */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
       />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">

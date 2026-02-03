@@ -130,7 +130,7 @@ function generateLocalBusinessSchema(city: City) {
     "name": `MG Events Animation - DJ Mariage ${city.name}`,
     "image": "https://www.mg-events35.com/images/logo.png",
     "description": `DJ animateur professionnel pour mariage à ${city.name} (${city.departmentCode}). Animation musicale, photobooth vintage, étincelles froides. Plus de 20 ans d'expérience.`,
-    "url": `https://www.mg-events35.com/dj-mariage-${city.slug}`,
+    "url": `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     "telephone": "+33648106166",
     "email": "contact@mg-events35.com",
     "address": {
@@ -164,6 +164,12 @@ function generateLocalBusinessSchema(city: City) {
       "bestRating": "5",
       "worstRating": "1"
     },
+    "review": city.testimonials.map(t => ({
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": t.author },
+      "reviewBody": t.text
+    })),
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Formules DJ Mariage",
@@ -174,21 +180,6 @@ function generateLocalBusinessSchema(city: City) {
         "priceCurrency": "EUR"
       }))
     }
-  };
-}
-
-// Génère le schema Reviews pour la ville
-function generateReviewsSchema(city: City) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "MG Events Animation",
-    "review": city.testimonials.map(t => ({
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": t.author },
-      "reviewBody": t.text
-    }))
   };
 }
 
@@ -217,7 +208,6 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
   const faqs = generateCityFaqs(city);
   const breadcrumbSchema = generateBreadcrumbSchema(city);
   const localBusinessSchema = generateLocalBusinessSchema(city);
-  const reviewsSchema = generateReviewsSchema(city);
   const otherCities = getOtherCitiesInDepartment(city);
   const otherDepartments = departments.filter(d => d.code !== city.departmentCode);
 
@@ -228,15 +218,10 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {/* Schema.org LocalBusiness */}
+      {/* Schema.org LocalBusiness avec Reviews intégrées */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      {/* Schema.org Reviews */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
       />
 
       {/* Header */}
