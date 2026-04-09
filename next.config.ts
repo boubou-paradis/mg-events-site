@@ -56,6 +56,47 @@ const nextConfig: NextConfig = {
         destination: '/sitemap.xml',
         permanent: true,
       },
+      // Redirections anciennes URLs (ancien site) vers pages actuelles
+      {
+        source: '/services',
+        destination: '/dj-mariage',
+        permanent: true,
+      },
+      {
+        source: '/politique-de-confidentialit%C3%A9',
+        destination: '/confidentialite',
+        permanent: true,
+      },
+      {
+        source: '/politique-de-cookies',
+        destination: '/confidentialite',
+        permanent: true,
+      },
+      {
+        source: '/mentions-l%C3%A9gales',
+        destination: '/mentions-legales',
+        permanent: true,
+      },
+      {
+        source: '/nous-contacter',
+        destination: '/#contact',
+        permanent: true,
+      },
+      {
+        source: '/notre-mission',
+        destination: '/philosophie',
+        permanent: true,
+      },
+      {
+        source: '/termes-et-conditions',
+        destination: '/cgv',
+        permanent: true,
+      },
+      {
+        source: '/book-online',
+        destination: '/#contact',
+        permanent: true,
+      },
     ]
   },
 };
