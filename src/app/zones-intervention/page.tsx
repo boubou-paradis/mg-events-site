@@ -198,6 +198,48 @@ export default function ZonesIntervention() {
         </div>
       </section>
 
+      {/* Pages locales dédiées */}
+      <section className="py-16 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-4">
+            Nos <span className="text-[#c9a227]">pages locales dédiées</span>
+          </h2>
+          <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
+            Des pages approfondies pour les villes à fort potentiel, avec contenu local, salles et FAQ spécifiques.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/dj-mariage-laval"
+              className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
+            >
+              <MapPin size={16} className="text-[#c9a227]" />
+              DJ Mariage Laval (Mayenne)
+            </Link>
+            <Link
+              href="/dj-morlaix"
+              className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
+            >
+              <MapPin size={16} className="text-[#c9a227]" />
+              DJ Mariage Morlaix (Finistère)
+            </Link>
+            <Link
+              href="/dj-mariage/rennes"
+              className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
+            >
+              <MapPin size={16} className="text-[#c9a227]" />
+              DJ Mariage Rennes
+            </Link>
+            <Link
+              href="/dj-mariage/nantes"
+              className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
+            >
+              <MapPin size={16} className="text-[#c9a227]" />
+              DJ Mariage Nantes
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-b from-[#141414] to-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-6 text-center">

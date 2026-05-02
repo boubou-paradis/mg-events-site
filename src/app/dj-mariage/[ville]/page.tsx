@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Headphones, Volume2, Disc3, HelpCircle } from 'lucide-react';
+import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Headphones, Volume2, Disc3, HelpCircle, Calendar, Users, Lightbulb } from 'lucide-react';
 import { cities, getCityBySlug, getAllCitySlugs, getCitiesByDepartment, type City } from '@/data/cities';
 import { notFound } from 'next/navigation';
 
@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   const nearbyText = city.nearbyCommunes.slice(0, 3).join(', ');
 
   return {
-    title: `DJ Mariage ${city.name} | Animation Mariage ${city.departmentCode} | MG Events`,
-    description: `DJ animateur mariage à ${city.name} (${city.departmentCode}). ${nearbyText} et environs. +20 ans d'expérience, photobooth vintage, étincelles froides. Devis gratuit ✓`,
+    title: `DJ Mariage ${city.name} | Animation Soirée ${city.department} - MG Events`,
+    description: `DJ mariage à ${city.name} — 25 ans d'expérience, AnimaJet exclusif, photobooth vintage. ${nearbyText} et environs. Devis gratuit sous 24h ✓`,
     keywords: `DJ mariage ${city.name}, DJ mariage ${city.departmentCode}, animation mariage ${city.name}, DJ ${city.name}, sono mariage ${city.name}`,
     alternates: {
       canonical: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
@@ -63,6 +63,17 @@ const musicFaqs = [
   { question: "L'ambiance est-elle adaptée à toutes les générations ?", answer: "C'est notre spécialité. Avec 25 ans d'expérience en discothèque, nous savons fédérer grands-parents, parents et jeunes sur la même piste de danse." },
 ];
 
+const servicesInclus = [
+  { icon: Calendar, title: 'Rendez-vous de préparation', description: 'Entretien personnalisé pour construire votre programme, playlist et timing de soirée' },
+  { icon: Users, title: 'Coordination prestataires', description: 'Liaison avec votre traiteur, photographe, fleuriste et wedding planner' },
+  { icon: Mic2, title: 'Cérémonie laïque', description: 'Sonorisation complète de votre cérémonie (option à 180€, 2 techniciens dédiés)' },
+  { icon: Volume2, title: 'Vin d\'honneur & repas', description: 'Ambiance musicale douce pour l\'apéritif, fond sonore élégant pendant le dîner' },
+  { icon: Lightbulb, title: 'Éclairage professionnel', description: 'Mise en lumière : lyres mobiles, wash LED, lasers, stroboscopes et effets spéciaux' },
+  { icon: Sparkles, title: 'AnimaJet exclusif', description: 'Quiz interactif, photo mystère sur grand écran, blind test live — unique en Bretagne' },
+  { icon: Music, title: 'Programmation sur mesure', description: 'Playlist co-construite avec vous, adaptée en direct aux envies de la piste de danse' },
+  { icon: Star, title: 'Animation intergénérationnelle', description: 'Fédérer de 7 à 77 ans sur la même piste de danse : notre marque de fabrique depuis 25 ans' },
+];
+
 // Génère les FAQs spécifiques à la ville
 function generateCityFaqs(city: City) {
   return [
@@ -85,6 +96,18 @@ function generateCityFaqs(city: City) {
     {
       question: `Quel est le délai de réservation pour un mariage à ${city.name} ?`,
       answer: `Nous vous conseillons de réserver 12 à 18 mois à l'avance pour les dates prisées (mai à septembre). ${city.name} est une destination prisée pour les mariages. Pour la basse saison, 6 mois peuvent suffire.`,
+    },
+    {
+      question: `Comment choisir son DJ pour un mariage à ${city.name} ?`,
+      answer: `Pour bien choisir votre DJ mariage à ${city.name}, vérifiez : l'expérience réelle en mariage (pas seulement en discothèque), les avis vérifiables de mariés dans la région, la qualité du matériel son et lumière, et la capacité à gérer toutes les générations. Rencontrez le DJ avant de signer, discutez de votre playlist et testez sa réactivité. Chez MG Events, nous proposons une rencontre préalable gratuite pour construire votre soirée sur mesure.`,
+    },
+    {
+      question: `Comment se déroule la préparation avec votre DJ avant le mariage à ${city.name} ?`,
+      answer: `Nous organisons un rendez-vous de préparation personnalisé (en visio ou présentiel) 2 à 3 mois avant votre mariage à ${city.name}. Nous construisons ensemble votre programme : playlist, timing de soirée, animations, ouverture de bal. Vous complétez notre formulaire pour noter vos préférences musicales et vos "interdits de passer". Le jour J, nous arrivons 2h à 3h avant le début pour installation et tests son/lumière.`,
+    },
+    {
+      question: 'Quel matériel utilisez-vous pour la sonorisation et l\'éclairage ?',
+      answer: `Nous utilisons du matériel professionnel haut de gamme : enceintes actives, caisson de basse, mélangeur numérique, platines Denon. Pour l'éclairage : lyres mobiles, wash LED, lasers, machine à fumée lourde, stroboscopes. Pour les effets : lanceurs d'étincelles froides Mac Mah MAC SPARK 300 certifiés CE. Tout est adapté à la taille et à l'acoustique de votre salle à ${city.name}.`,
     },
     {
       question: 'Le matériel est-il aux normes de sécurité ?',
@@ -419,9 +442,49 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
         </div>
       </section>
 
+      {/* Services inclus */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Ce qui est <span className="text-[#c9a227]">inclus</span> dans votre prestation
+          </h2>
+          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
+            De la cérémonie laïque à la soirée dansante — une animation élégante et sur mesure,
+            avec une coordination complète avec vos prestataires.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+            {servicesInclus.map((service, index) => (
+              <div key={index} className="card-dark p-5">
+                <service.icon size={30} className="text-[#c9a227] mb-3" />
+                <h3 className="text-white font-medium mb-2 text-sm">{service.title}</h3>
+                <p className="text-[#888] text-xs leading-relaxed">{service.description}</p>
+              </div>
+            ))}
+          </div>
+          {/* Wedding planner callout */}
+          <div className="card-dark p-6 border-[#c9a227]/30">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+              <Users size={30} className="text-[#c9a227] shrink-0" />
+              <div className="flex-1">
+                <h3 className="text-white font-medium mb-1">Vous êtes wedding planner ou organisateur de mariage ?</h3>
+                <p className="text-[#888] text-sm">
+                  Nous collaborons régulièrement avec les wedding planners de {city.name} et de la région.
+                  Coordination en amont, communication le jour J, respect strict des timings — nous nous intégrons
+                  parfaitement à votre organisation. Contactez-nous pour discuter d&apos;un partenariat.
+                </p>
+              </div>
+              <Link href="/#contact" className="btn-gold shrink-0 text-sm inline-flex items-center gap-2">
+                <Mail size={16} />
+                Nous contacter
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lieux de mariage populaires */}
       {city.weddingVenues.length > 0 && (
-        <section className="py-16 bg-[#141414]">
+        <section className="py-16 bg-[#0a0a0a]">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
               Lieux de mariage populaires à <span className="text-[#c9a227]">{city.name}</span>

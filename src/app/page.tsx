@@ -1901,6 +1901,21 @@ function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/dj-mariage-laval" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                  DJ Mariage Laval
+                </Link>
+              </li>
+              <li>
+                <Link href="/dj-morlaix" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                  DJ Mariage Morlaix
+                </Link>
+              </li>
+              <li>
+                <Link href="/dj-mariage-bretagne" className="text-[#c9a227] text-sm hover:underline">
+                  DJ Mariage Bretagne →
+                </Link>
+              </li>
             </ul>
           </div>
 

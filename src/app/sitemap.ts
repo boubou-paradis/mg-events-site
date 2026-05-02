@@ -44,6 +44,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    // Pages régionales et locales (fort potentiel SEO)
+    {
+      url: `${baseUrl}/dj-mariage-bretagne`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/lieux-reception-bretagne`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/dj-mariage-laval`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/dj-morlaix`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
     // Page zones d'intervention
     {
       url: `${baseUrl}/zones-intervention`,

@@ -44,27 +44,40 @@ export const cities: City[] = [
     latitude: 48.1173,
     longitude: -1.6778,
     population: '220 000',
-    seoDescription: `Rennes, capitale de la Bretagne, offre un cadre exceptionnel pour célébrer votre mariage. Entre patrimoine historique et dynamisme moderne, la métropole rennaise séduit les couples en quête d'un mariage alliant tradition et originalité. Les domaines viticoles de Bruz, les manoirs du pays rennais et les salles contemporaines du centre-ville offrent une diversité de lieux unique en Bretagne.
+    seoDescription: `Rennes, capitale de la Bretagne, est la métropole de référence pour les mariages haut de gamme dans le Grand Ouest. Avec son patrimoine historique, son accessibilité exceptionnelle (TGV Paris-Rennes en 1h25) et une offre de domaines et châteaux parmi les plus denses de France, la métropole rennaise séduit chaque année des centaines de couples de toute la région — et au-delà.
 
-La région rennaise compte parmi les plus prisées pour les mariages haut de gamme. Le Domaine de Cicé-Blossac, avec son golf et ses jardins à la française, accueille chaque année des dizaines de cérémonies. Les couples apprécient également la proximité des forêts de Rennes et de Liffré pour des photos de mariage en pleine nature, à seulement quelques minutes du centre-ville.
+Chercher un DJ mariage à Rennes, c'est chercher quelqu'un qui connaît vraiment le territoire. Les salles ont chacune leurs contraintes acoustiques : la pierre apparente du Manoir de la Begaudière réverbère différemment des volumes contemporains du Florian. Le Domaine de Cicé-Blossac, à Bruz, avec son golf 18 trous et ses jardins à la française, est l'un des lieux les plus prisés du 35 — et nous y avons animé de nombreuses soirées. Chaque fois, nous arrivons avec une installation adaptée à l'espace, jamais du matériel "générique".
 
-En tant que DJ mariage à Rennes depuis plus de 20 ans, nous connaissons parfaitement les contraintes acoustiques de chaque salle, les meilleurs prestataires locaux et les traditions bretonnes qui font la différence. Du fest-noz revisité aux tubes internationaux, nous adaptons notre programmation à votre vision tout en garantissant une piste de danse pleine du cocktail jusqu'au bout de la nuit.`,
+L'offre de lieux de réception autour de Rennes est remarquable : châteaux Renaissance des Marches de Bretagne, manoirs du pays rennais cachés dans les vallons, domaines champêtres de la forêt de Rennes, salles contemporaines en périphérie de la métropole. Le Château de Montmuran (classé Monument Historique), le Domaine de Tizé à Thorigné-Fouillard avec ses étangs, ou encore le Château du Bois Guy à Parigné dans son écrin de forêt privée — chaque lieu raconte une histoire différente et mérite une animation à sa hauteur.
+
+Rennes, c'est aussi une ville vivante avec une scène culturelle forte. Les couples rennais ont souvent des attentes musicales éclectiques : electro, rock alternatif, variété française, bretonne revisitée, hits des 80s et 90s... Notre répertoire couvre tous ces univers. Et avec notre expérience de 25 ans en discothèque, nous savons lire une piste de danse et adapter la programmation en temps réel — pas seulement suivre une playlist figée.
+
+Notre technologie exclusive AnimaJet ajoute une dimension participative que peu de DJ proposent à Rennes : quiz interactif en direct, photos mystère partagées sur grand écran, blind test live... Des animations qui fédèrent toutes les générations et font vraiment partie du souvenir du mariage.
+
+Au-delà de la soirée dansante, nous proposons la sonorisation de cérémonie laïque (à 180€), idéale pour les cérémonies en extérieur au Domaine de Cicé-Blossac ou dans les jardins des manoirs rennais. Deux techniciens dédiés, retransmission en direct des musiques que vous avez choisies, sonorisation discrète mais puissante.
+
+En tant que DJ mariage à Rennes depuis plus de 20 ans, nous avons constitué un réseau de partenaires de confiance dans la métropole : photographes, vidéastes, wedding planners, traiteurs. Cette connaissance de l'écosystème local garantit une coordination parfaite le jour J, et souvent des recommandations croisées qui facilitent l'organisation.`,
     localHighlights: [
-      'Capitale bretonne avec un large choix de domaines et châteaux à moins de 30 minutes',
-      'Excellente accessibilité TGV Paris-Rennes en 1h25 pour vos invités',
-      'Tradition du fest-noz moderne : nous intégrons des sets bretons revisités sur demande',
-      'Réseau de prestataires premium : photographes, traiteurs, fleuristes que nous recommandons',
+      'Capitale bretonne : le plus grand choix de domaines, châteaux et manoirs de la région',
+      'TGV Paris-Rennes en 1h25 — accessibilité maximale pour vos invités nationaux',
+      'Tradition bretonne intégrée : sets fest-noz revisités sur demande',
+      'Réseau partenaires premium : photographes, traiteurs, fleuristes rennais recommandés',
+      'À 45 min de Fougères, Vitré, Saint-Malo — idéal pour un mariage en Ille-et-Vilaine',
     ],
-    nearbyCommunes: ['Cesson-Sévigné', 'Bruz', 'Chantepie', 'Saint-Jacques-de-la-Lande', 'Pacé', 'Betton', 'Saint-Grégoire', 'Vezin-le-Coquet'],
+    nearbyCommunes: ['Cesson-Sévigné', 'Bruz', 'Chantepie', 'Saint-Jacques-de-la-Lande', 'Pacé', 'Betton', 'Saint-Grégoire', 'Vezin-le-Coquet', 'Le Rheu', 'Montfort-sur-Meu', 'Acigné', 'Chartres-de-Bretagne', 'Thorigné-Fouillard', 'Vern-sur-Seiche', 'Corps-Nuds', 'Noyal-sur-Vilaine', 'Liffré'],
     weddingVenues: [
-      { nom: 'Domaine de Cicé-Blossac', ville: 'Bruz', type: 'Domaine & Golf', description: 'Cadre prestigieux avec golf 18 trous et jardins à la française' },
-      { nom: 'Manoir de la Begaudière', ville: 'Rennes', type: 'Manoir', description: 'Manoir du XVIIe siècle avec parc arboré en plein cœur de Rennes' },
-      { nom: 'Château du Bois Guy', ville: 'Parigné', type: 'Château', description: 'Château romantique avec étang et forêt privée' },
-      { nom: 'Le Florian', ville: 'Rennes', type: 'Salle de réception', description: 'Salle moderne avec grande capacité et équipements dernière génération' },
+      { nom: 'Domaine de Cicé-Blossac', ville: 'Bruz', type: 'Domaine & Golf', description: 'Golf 18 trous et jardins à la française — le lieu le plus demandé du 35' },
+      { nom: 'Manoir de la Begaudière', ville: 'Rennes', type: 'Manoir XVIIe', description: 'Manoir historique avec parc arboré en plein cœur de Rennes' },
+      { nom: 'Château du Bois Guy', ville: 'Parigné', type: 'Château', description: 'Château romantique avec étang et forêt privée, 45 min de Rennes' },
+      { nom: 'Domaine de Tizé', ville: 'Thorigné-Fouillard', type: 'Domaine', description: 'Domaine avec étangs et espaces verts à 15 min du centre de Rennes' },
+      { nom: 'Château de Montmuran', ville: 'Les Iffs', type: 'Château historique', description: 'Château médiéval classé Monument Historique, 30 min de Rennes' },
+      { nom: 'Le Florian', ville: 'Rennes', type: 'Salle de réception', description: 'Grande capacité, équipements modernes, parking — pour les grands mariages' },
     ],
     testimonials: [
-      { author: 'Morane & Kevin', text: "Merci à Guillaume et Laurence pour leur superbe prestation à notre mariage à Rennes ! Les invités ont été conquis et ont enflammé le dancefloor.", venue: 'Domaine de Cicé-Blossac' },
-      { author: 'Sophie & Maxime', text: "Une soirée inoubliable au Manoir de la Begaudière. L'ambiance était parfaite du début à la fin !", venue: 'Manoir de la Begaudière' },
+      { author: 'Morane & Kevin', text: "Merci à Guillaume et Laurence pour leur superbe prestation à notre mariage à Rennes ! Les invités ont été conquis et ont enflammé le dancefloor toute la nuit.", venue: 'Domaine de Cicé-Blossac' },
+      { author: 'Sophie & Maxime', text: "Une soirée inoubliable au Manoir de la Begaudière. L'ambiance était parfaite du début à la fin, toutes les générations ont dansé !", venue: 'Manoir de la Begaudière' },
+      { author: 'Camille & Thomas', text: "Les étincelles froides pour notre ouverture de bal au Château du Bois Guy, c'était magique. Le photobooth vintage a fait sensation auprès de nos invités.", venue: 'Château du Bois Guy' },
+      { author: 'Lucie & Antoine', text: "AnimaJet c'est une idée de génie — le quiz interactif a mis une ambiance de folie ! Nos invités en parlent encore. Merci MG Events pour cette soirée parfaite à Rennes.", venue: 'Domaine de Tizé' },
     ],
     forEnterprise: true,
     businessAreas: ['Rennes Atalante', 'Saint-Grégoire Business Park', 'Cesson-Sévigné', 'Zone ViaSilva'],
