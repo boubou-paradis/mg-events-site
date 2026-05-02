@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     default: "MG Events Animation | DJ Mariage Bretagne",
     template: "%s | MG Events Animation",
   },
-  description: "DJ animateur mariage en Bretagne. +20 ans d'expérience, animations interactives AnimaJet, photobooth vintage, étincelles froides. Devis gratuit. Finistère, Morbihan, Ille-et-Vilaine, Loire-Atlantique, Mayenne.",
-  keywords: "DJ mariage Bretagne, animation mariage, DJ Rennes, DJ Vannes, DJ Nantes, DJ Quimper, DJ Brest, sonorisation mariage, photobooth mariage, étincelles froides mariage",
+  description: "DJ mariage Bretagne — 25 ans d'expérience, AnimaJet exclusif, photobooth vintage, étincelles froides certifiées CE. Animation élégante de la cérémonie laïque à la soirée dansante. Devis gratuit ✓",
+  keywords: "DJ mariage Bretagne, animation mariage Bretagne, DJ Rennes, DJ Vannes, DJ Nantes, DJ Quimper, DJ Brest, sonorisation mariage Bretagne, photobooth vintage mariage, étincelles froides mariage, cérémonie laïque sonorisation, AnimaJet animation interactive",
   authors: [{ name: "MG Events Animation" }],
   creator: "MG Events Animation",
   publisher: "MG Events Animation",
@@ -50,6 +50,52 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.mg-events35.com",
   },
+};
+
+const weddingServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Wedding DJ & Animation",
+  "name": "DJ Mariage & Animation de Soirée — MG Events Animation",
+  "description": "Animation musicale professionnelle pour mariages en Bretagne et Grand Ouest. De la cérémonie laïque à la soirée dansante : sonorisation, éclairage professionnel, photobooth vintage, étincelles froides, AnimaJet. 25 ans d'expérience.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "@id": "https://www.mg-events35.com/#organization",
+    "name": "MG Events Animation"
+  },
+  "areaServed": [
+    { "@type": "State", "name": "Bretagne" },
+    { "@type": "AdministrativeArea", "name": "Ille-et-Vilaine" },
+    { "@type": "AdministrativeArea", "name": "Finistère" },
+    { "@type": "AdministrativeArea", "name": "Morbihan" },
+    { "@type": "AdministrativeArea", "name": "Loire-Atlantique" },
+    { "@type": "AdministrativeArea", "name": "Mayenne" }
+  ],
+  "category": "Wedding Entertainment",
+  "audience": { "@type": "Audience", "audienceType": "Mariés et futurs mariés" },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Formule Éclat d'Amour",
+      "description": "Sonorisation cocktail, repas et soirée dansante, 2 micros, éclairages, AnimaJet inclus",
+      "price": "1200",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Formule Rêve en Blanc",
+      "description": "Formule complète avec ambiance RGBW, boule à facettes, fumée lourde et étincelles froides certifiées CE",
+      "price": "1490",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Formule Conte de Fées",
+      "description": "Expérience premium avec photobooth vintage TSF années 60 et 150 impressions incluses",
+      "price": "1690",
+      "priceCurrency": "EUR"
+    }
+  ]
 };
 
 const videoJsonLd = {
@@ -198,6 +244,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(weddingServiceJsonLd) }}
         />
         <script
           type="application/ld+json"

@@ -317,11 +317,11 @@ function About({ onImageClick }: { onImageClick: (src: string, alt: string) => v
           <div className="relative">
             <div
               className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
-              onClick={() => onImageClick('/images/gallery-2.jpg', 'Setup DJ MG Events')}
+              onClick={() => onImageClick('/images/gallery-2.jpg', 'Setup DJ professionnel sonorisation mariage - MG Events Animation')}
             >
               <Image
                 src="/images/gallery-2.jpg"
-                alt="Setup DJ MG Events"
+                alt="Setup DJ professionnel sonorisation mariage - MG Events Animation"
                 fill
                 className="object-cover"
               />
@@ -1247,7 +1247,7 @@ function Photobooth({ onImageClick }: { onImageClick: (src: string, alt: string)
               onClick={() => onImageClick('/images/photobooth-1.jpg', 'Photobooth face')}
             >
               <div className="relative aspect-[4/3]">
-                <Image src="/images/photobooth-1.jpg" alt="Photobooth face" fill className="object-cover" />
+                <Image src="/images/photobooth-1.jpg" alt="Photobooth vintage TSF années 60 - mariage Bretagne MG Events" fill className="object-cover" />
               </div>
             </div>
             <div
@@ -1255,7 +1255,7 @@ function Photobooth({ onImageClick }: { onImageClick: (src: string, alt: string)
               onClick={() => onImageClick('/images/photobooth-3.jpg', 'Photobooth côté')}
             >
               <div className="relative aspect-[4/3]">
-                <Image src="/images/photobooth-3.jpg" alt="Photobooth côté" fill className="object-cover" />
+                <Image src="/images/photobooth-3.jpg" alt="Photobooth vintage TSF - impressions photos instantanées mariage" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -1352,7 +1352,7 @@ function AnimaJet() {
               <div className="absolute inset-0 bg-[#c9a227]/10 rounded-full blur-3xl" />
               <Image
                 src="/images/animajet-logo.png"
-                alt="AnimaJet"
+                alt="AnimaJet - système d'animations interactives exclusif pour mariages en Bretagne"
                 width={350}
                 height={175}
                 className="relative"
