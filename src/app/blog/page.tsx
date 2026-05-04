@@ -13,6 +13,14 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: 'photobooth-vintage-mariage-bretagne',
+    title: 'Photobooth vintage mariage : guide complet 2026',
+    excerpt: 'Tout savoir sur le photobooth vintage TSF pour votre mariage en Bretagne. Style années 60, impressions instantanées, personnalisation et intégration AnimaJet.',
+    image: '/images/photobooth-2.jpg',
+    date: '4 mai 2026',
+    readTime: '8 min',
+  },
+  {
     slug: 'top-salles-mariage-ille-et-vilaine',
     title: 'Top 5 des salles de mariage en Ille-et-Vilaine',
     excerpt: 'Découvrez les plus belles salles de mariage du 35 : Domaine de Cicé-Blossac, Château de la Ballue, Manoir de la Begaudière... Notre sélection d\'expert.',
@@ -62,7 +70,13 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center">
-              <img src="/images/logo.png" alt="MG Events Animation DJ Mariage Bretagne" className="h-14 w-auto" />
+              <Image
+                src="/images/logo.png"
+                alt="MG Events Animation DJ Mariage Bretagne"
+                width={200}
+                height={80}
+                className="h-14 w-auto"
+              />
             </Link>
             <div className="hidden md:flex items-center gap-6">
               <Link href="/" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Accueil</Link>

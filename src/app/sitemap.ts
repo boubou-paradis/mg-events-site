@@ -78,6 +78,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Blog
     {
+      url: `${baseUrl}/blog/photobooth-vintage-mariage-bretagne`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: today,
       changeFrequency: 'weekly',

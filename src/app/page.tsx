@@ -307,6 +307,32 @@ function Hero() {
   );
 }
 
+// ============ QUICK NAV ============
+function QuickNav() {
+  const links = [
+    { href: '#about', label: 'Notre histoire' },
+    { href: '#formules', label: 'Formules & Tarifs' },
+    { href: '#photobooth', label: 'Photobooth Vintage' },
+    { href: '#animajet', label: 'AnimaJet' },
+    { href: '#testimonials', label: 'Avis clients' },
+    { href: '#contact', label: 'Nous contacter' },
+  ];
+
+  return (
+    <nav className="py-3 bg-[#141414] border-b border-[#c9a227]/10" aria-label="Navigation rapide">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
+          {links.map((link) => (
+            <a key={link.href} href={link.href} className="text-sm text-[#888] hover:text-[#c9a227] transition-colors py-1">
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+}
+
 // ============ ABOUT ============
 function About({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
   return (
@@ -1338,7 +1364,7 @@ function AnimaJet() {
   ];
 
   return (
-    <section className="py-16 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="animajet" className="py-16 bg-[#0a0a0a] relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#c9a227]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#c9a227]/5 rounded-full blur-3xl" />
@@ -1986,6 +2012,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <QuickNav />
         <About onImageClick={openLightbox} />
         <ExperienceMusicale onImageClick={openLightbox} />
         <Gallery onImageClick={openLightbox} />

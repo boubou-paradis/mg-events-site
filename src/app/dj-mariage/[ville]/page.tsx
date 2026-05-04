@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Headphones, Volume2, Disc3, HelpCircle, Calendar, Users, Lightbulb } from 'lucide-react';
+import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Headphones, Volume2, Disc3, HelpCircle, Calendar, Users, Lightbulb, Monitor } from 'lucide-react';
 import { cities, getCityBySlug, getAllCitySlugs, getCitiesByDepartment, type City } from '@/data/cities';
 import { notFound } from 'next/navigation';
 
@@ -252,7 +252,13 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center">
-              <img src="/images/logo.png" alt="MG Events Animation DJ Mariage Bretagne" className="h-14 w-auto" />
+              <Image
+                src="/images/logo.png"
+                alt="MG Events Animation DJ Mariage Bretagne"
+                width={200}
+                height={80}
+                className="h-14 w-auto"
+              />
             </Link>
             <div className="hidden md:flex items-center gap-6">
               <Link href="/" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Accueil</Link>
@@ -309,6 +315,7 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
                   src="/images/gallery-1.jpg"
                   alt={`DJ mariage ambiance dancefloor ${city.name}`}
                   fill
+                  priority
                   className="object-cover"
                 />
               </div>
@@ -478,6 +485,42 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
                 Nous contacter
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Animations exclusives */}
+      <section className="py-16 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-4">
+            Nos <span className="text-[#c9a227]">animations exclusives</span> pour votre mariage
+          </h2>
+          <p className="text-[#888] text-center mb-10 max-w-2xl mx-auto">
+            Au-delà de la musique, des animations uniques qui font la différence
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <Link href="/#photobooth" className="card-dark p-6 group hover:border-[#c9a227]/40 transition-colors">
+              <Camera size={32} className="text-[#c9a227] mb-3" />
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors text-lg">
+                Photobooth Vintage TSF
+              </h3>
+              <p className="text-[#888] text-sm leading-relaxed">
+                Notre cabine photobooth style TSF années 60, avec impressions instantanées sur place.
+                Un souvenir unique et authentique pour chacun de vos invités — inclus dans la formule Conte de Fées.
+              </p>
+              <span className="text-[#c9a227] text-sm mt-4 inline-block">Voir le photobooth →</span>
+            </Link>
+            <Link href="/#animajet" className="card-dark p-6 group hover:border-[#c9a227]/40 transition-colors">
+              <Monitor size={32} className="text-[#c9a227] mb-3" />
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors text-lg">
+                AnimaJet — Exclusivité Bretagne
+              </h3>
+              <p className="text-[#888] text-sm leading-relaxed">
+                Quiz interactif, photo mystère, blind test musical en direct sur grand écran.
+                Une technologie d&apos;animation exclusive, unique en Bretagne, pour faire vibrer tous vos invités.
+              </p>
+              <span className="text-[#c9a227] text-sm mt-4 inline-block">Découvrir AnimaJet →</span>
+            </Link>
           </div>
         </div>
       </section>
