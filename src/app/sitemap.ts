@@ -69,6 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/dj-mariage-quimper`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
     // Page zones d'intervention
     {
       url: `${baseUrl}/zones-intervention`,

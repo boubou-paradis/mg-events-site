@@ -52,11 +52,13 @@ L'offre de lieux de réception autour de Rennes est remarquable : châteaux Rena
 
 Rennes, c'est aussi une ville vivante avec une scène culturelle forte. Les couples rennais ont souvent des attentes musicales éclectiques : electro, rock alternatif, variété française, bretonne revisitée, hits des 80s et 90s... Notre répertoire couvre tous ces univers. Et avec notre expérience de 25 ans en discothèque, nous savons lire une piste de danse et adapter la programmation en temps réel — pas seulement suivre une playlist figée.
 
-Notre technologie exclusive AnimaJet ajoute une dimension participative que peu de DJ proposent à Rennes : quiz interactif en direct, photos mystère partagées sur grand écran, blind test live... Des animations qui fédèrent toutes les générations et font vraiment partie du souvenir du mariage.
+Notre technologie exclusive AnimaJet ajoute une dimension participative que peu de DJ proposent à Rennes : quiz interactif en direct, photos mystère partagées sur grand écran, blind test live, roue de la destinée... Des animations que vos concurrents locaux ne proposent pas — et qui font vraiment partie du souvenir du mariage.
 
 Au-delà de la soirée dansante, nous proposons la sonorisation de cérémonie laïque (à 180€), idéale pour les cérémonies en extérieur au Domaine de Cicé-Blossac ou dans les jardins des manoirs rennais. Deux techniciens dédiés, retransmission en direct des musiques que vous avez choisies, sonorisation discrète mais puissante.
 
-En tant que DJ mariage à Rennes depuis plus de 20 ans, nous avons constitué un réseau de partenaires de confiance dans la métropole : photographes, vidéastes, wedding planners, traiteurs. Cette connaissance de l'écosystème local garantit une coordination parfaite le jour J, et souvent des recommandations croisées qui facilitent l'organisation.`,
+En tant que DJ mariage à Rennes depuis plus de 20 ans, nous avons constitué un réseau de partenaires de confiance dans la métropole : photographes, vidéastes, wedding planners, traiteurs. Cette connaissance de l'écosystème local garantit une coordination parfaite le jour J, et souvent des recommandations croisées qui facilitent l'organisation.
+
+Concrètement, un mariage rennais avec MG Events, c'est : un rendez-vous de préparation personnalisé pour construire votre programme musical et le timing de votre soirée, une coordination avec votre traiteur et votre photographe, une animation élégante et sur mesure de la cérémonie laïque à la soirée dansante — avec cet équilibre musical entre les générations qui est notre marque de fabrique depuis plus de 25 ans. Le vin d'honneur en musique douce, le repas en fond sonore élégant, puis l'explosion de la piste de danse : chaque moment de votre journée est pensé. Quel budget pour un DJ mariage à Rennes ? Nos formules démarrent à 1200€ TTC (formule Éclat d'Amour), 1490€ pour la formule Rêve en Blanc, et 1690€ pour la formule Conte de Fées incluant le photobooth vintage TSF. Des tarifs transparents, sans surprise — déplacement à Rennes et dans toute l'Ille-et-Vilaine inclus.`,
     localHighlights: [
       'Capitale bretonne : le plus grand choix de domaines, châteaux et manoirs de la région',
       'TGV Paris-Rennes en 1h25 — accessibilité maximale pour vos invités nationaux',
@@ -72,6 +74,8 @@ En tant que DJ mariage à Rennes depuis plus de 20 ans, nous avons constitué un
       { nom: 'Domaine de Tizé', ville: 'Thorigné-Fouillard', type: 'Domaine', description: 'Domaine avec étangs et espaces verts à 15 min du centre de Rennes' },
       { nom: 'Château de Montmuran', ville: 'Les Iffs', type: 'Château historique', description: 'Château médiéval classé Monument Historique, 30 min de Rennes' },
       { nom: 'Le Florian', ville: 'Rennes', type: 'Salle de réception', description: 'Grande capacité, équipements modernes, parking — pour les grands mariages' },
+      { nom: 'Manoir du Plessis', ville: 'Cesson-Sévigné', type: 'Manoir & Jardins', description: 'Manoir de caractère à 10 min de Rennes, cadre intime et verdoyant' },
+      { nom: 'Château de la Ballue', ville: 'Bazouges-la-Pérouse', type: 'Château historique', description: 'Château du XVIIe avec jardins labyrinthiques à la française, 45 min de Rennes' },
     ],
     testimonials: [
       { author: 'Morane & Kevin', text: "Merci à Guillaume et Laurence pour leur superbe prestation à notre mariage à Rennes ! Les invités ont été conquis et ont enflammé le dancefloor toute la nuit.", venue: 'Domaine de Cicé-Blossac' },
@@ -192,24 +196,32 @@ En tant que DJ mariage expérimenté à Vitré, nous apprécions particulièreme
     latitude: 47.6514,
     longitude: -2.0847,
     population: '10 000',
-    seoDescription: `Redon, au confluent de la Vilaine et de l'Oust, est une ville d'eau au patrimoine fluvial unique en Bretagne. L'ancienne abbaye bénédictine Saint-Sauveur, le port de plaisance et les quais bordés de maisons d'armateurs créent une atmosphère paisible et romantique. Cette position de carrefour, aux confins de trois départements, en fait un lieu de réception idéal pour rassembler famille et amis de toute la région.
+    seoDescription: `Redon, au confluent de la Vilaine et de l'Oust, est une ville d'eau au patrimoine fluvial unique en Bretagne. L'ancienne abbaye bénédictine Saint-Sauveur, le port de plaisance et les quais bordés de maisons d'armateurs créent une atmosphère paisible et romantique. Cette position de carrefour, aux confins de trois départements (Ille-et-Vilaine, Morbihan, Loire-Atlantique), en fait un lieu de réception idéal pour rassembler famille et amis de toute la région.
 
-Le pays de Redon offre un cadre bucolique préservé avec ses marais, ses prairies et ses chemins de halage le long des canaux. Les domaines locaux, souvent d'anciennes propriétés de négociants en sel ou en vin, combinent élégance discrète et prix raisonnables. C'est l'endroit parfait pour un mariage champêtre authentique, loin de l'agitation des grandes villes.
+Le pays de Redon offre un cadre bucolique préservé avec ses marais, ses prairies et ses chemins de halage le long des canaux de Bretagne. Les domaines locaux, souvent d'anciennes propriétés de négociants en sel ou en vin, combinent élégance discrète et tarifs plus accessibles que sur la côte. C'est l'endroit parfait pour un mariage champêtre authentique dans un cadre de châteaux, domaines et demeures de caractère, loin de l'agitation des grandes villes.
 
-Basés à Bains-sur-Oust, à quelques kilomètres de Redon, nous sommes véritablement le DJ mariage local par excellence. Notre connaissance intime du territoire, des salles de réception et des prestataires redonnais nous permet de vous accompagner avec une expertise de proximité inégalée.`,
+Basés à Bains-sur-Oust, à 15 kilomètres de Redon, nous sommes véritablement le DJ mariage le plus proche du pays redonnais. Notre connaissance intime du territoire, des salles de réception et des prestataires locaux nous permet de vous accompagner avec une expertise de proximité inégalée. Nous intervenons régulièrement à Redon, Allaire, Saint-Nicolas-de-Redon, Guémené-Penfao, Pipriac, Grand-Fougeray et dans tous les villages alentour — sans frais de déplacement.
+
+Notre technologie exclusive AnimaJet ajoute une dimension participative rare dans la région : quiz interactif en direct, partage de photos sur grand écran, blind test live, roue de la destinée. Des animations qui fédèrent toutes les générations — et aucun concurrent local ne peut vous proposer ça. Avec 25 ans d'expérience DJ, de la cérémonie laïque à la soirée dansante, nous vous garantissons une animation élégante et sur mesure, avec une coordination parfaite avec vos autres prestataires.`,
     localHighlights: [
-      'Notre base : nous sommes installés à Bains-sur-Oust, à 15 min de Redon',
-      'Carrefour de 3 départements : idéal pour rassembler vos invités',
-      'Cadre fluvial unique avec canaux et marais préservés',
-      'Tarifs des domaines plus accessibles que sur la côte',
+      'Notre base : nous sommes installés à Bains-sur-Oust, à 15 min de Redon — le DJ mariage local',
+      'Carrefour de 3 départements (35, 56, 44) : idéal pour rassembler vos invités',
+      'Cadre fluvial unique avec canaux, marais et chemins de halage préservés',
+      'Tarifs des domaines plus accessibles que sur la côte, cadre authentique garanti',
     ],
-    nearbyCommunes: ['Guichen', 'Bain-de-Bretagne', 'Grand-Fougeray', 'Pipriac', 'Saint-Nicolas-de-Redon', 'Allaire'],
+    nearbyCommunes: ['Guichen', 'Bain-de-Bretagne', 'Grand-Fougeray', 'Pipriac', 'Saint-Nicolas-de-Redon', 'Allaire', 'Bains-sur-Oust', 'Guémené-Penfao', 'Herbignac', 'La Chapelle-de-Brain', 'Malansac', 'Saint-Just'],
     weddingVenues: [
       { nom: 'Abbaye Saint-Sauveur', ville: 'Redon', type: 'Lieu historique', description: 'Abbaye bénédictine du IXe siècle avec cloître roman' },
       { nom: 'Domaine de la Vilaine', ville: 'Redon', type: 'Domaine', description: 'Propriété au bord de la Vilaine avec parc arboré' },
+      { nom: 'Château de Bienassis', ville: 'Erquy', type: 'Château', description: 'Château avec douves et jardins à la française' },
+      { nom: 'Manoir de la Molière', ville: 'Allaire', type: 'Manoir & Étang', description: 'Manoir entouré d\'étangs, cadre romantique préservé' },
+      { nom: 'Domaine du Bois d\'Amont', ville: 'Saint-Nicolas-de-Redon', type: 'Domaine champêtre', description: 'Domaine champêtre avec prairie et grange rénovée' },
+      { nom: 'La Ferme de la Bouvardière', ville: 'Pipriac', type: 'Ferme de caractère', description: 'Ferme bretonne rénovée avec salle de réception en pierres' },
     ],
     testimonials: [
-      { author: 'Claire & Antoine', text: "Superbe prestation pour notre mariage au bord de la Vilaine. Merci MG Events !" },
+      { author: 'Claire & Antoine', text: "Superbe prestation pour notre mariage au bord de la Vilaine. Guillaume et Laurence ont créé une ambiance parfaite du vin d'honneur jusqu'à la fermeture. Merci MG Events !" },
+      { author: 'Marie & Kevin', text: "AnimaJet a mis tout le monde d'accord : les grands-parents, les enfants, tout le monde a joué au quiz ! Notre mariage à Allaire restera gravé dans les mémoires.", venue: 'Domaine près d\'Allaire' },
+      { author: 'Céline & Florent', text: "Les étincelles froides pour notre ouverture de bal c'était féerique. Et la sono parfaitement adaptée à la grange en pierres. Un duo vraiment professionnel.", venue: 'Pipriac' },
     ],
     forEnterprise: false,
     forBirthday: false,
