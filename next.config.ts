@@ -59,7 +59,7 @@ const nextConfig: NextConfig = {
       // Redirections anciennes URLs (ancien site) vers pages actuelles
       {
         source: '/services',
-        destination: '/dj-mariage',
+        destination: '/zones-intervention',
         permanent: true,
       },
       {
