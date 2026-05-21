@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /_next/static/
+Disallow: /api/
 
 Sitemap: https://www.mg-events35.com/sitemap.xml
 
