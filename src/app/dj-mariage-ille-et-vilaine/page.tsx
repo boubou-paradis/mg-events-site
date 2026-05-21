@@ -587,7 +587,7 @@ export default function DJMariageIlleEtVilaine() {
             Nous intervenons dans toutes les villes du département 35. Découvrez nos prestations près de chez vous.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <Link href="/dj-mariage/rennes" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+            <Link href="/dj-mariage-rennes" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
               <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
               <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Rennes</span>
             </Link>

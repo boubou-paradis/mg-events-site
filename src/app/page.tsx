@@ -1928,6 +1928,11 @@ function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/dj-mariage-rennes" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                  DJ Mariage Rennes
+                </Link>
+              </li>
+              <li>
                 <Link href="/dj-mariage-laval" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
                   DJ Mariage Laval
                 </Link>
