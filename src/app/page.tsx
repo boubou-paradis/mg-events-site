@@ -1483,6 +1483,13 @@ function AnimaJet() {
             </p>
           </div>
         </div>
+
+        {/* Lien vers le cluster AnimaJet */}
+        <div className="text-center mt-10">
+          <Link href="/animations-interactives-mariage" className="btn-gold inline-block">
+            Découvrir toutes nos animations interactives →
+          </Link>
+        </div>
       </div>
     </section>
   );

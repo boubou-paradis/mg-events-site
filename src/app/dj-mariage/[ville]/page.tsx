@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Headphones, Volume2, Disc3, HelpCircle, Calendar, Users, Lightbulb, Monitor } from 'lucide-react';
 import { cities, getCityBySlug, getAllCitySlugs, getCitiesByDepartment, type City } from '@/data/cities';
+import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 import { notFound } from 'next/navigation';
 
 // Génération statique de toutes les pages ville
@@ -524,6 +525,9 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
           </div>
         </div>
       </section>
+
+      {/* Maillage AnimaJet — bloc varie selon la ville (anti-duplication) */}
+      <AnimaJetMeshBlock cityName={city.name} />
 
       {/* Lieux de mariage populaires */}
       {city.weddingVenues.length > 0 && (

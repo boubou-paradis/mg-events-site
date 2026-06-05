@@ -13,6 +13,46 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: 'animations-interactives-revolution-mariage',
+    title: 'Pourquoi les animations interactives révolutionnent les mariages modernes',
+    excerpt: 'Quiz, blind test, partage photo en direct : les animations interactives transforment les mariages. Découvrez pourquoi vos invités ne veulent plus être de simples spectateurs.',
+    image: '/images/animajet-jeux-interactifs-mariage.png',
+    date: '2 juin 2026',
+    readTime: '9 min',
+  },
+  {
+    slug: 'idees-animation-mariage-originale-2026',
+    title: "10 idées d'animations de mariage originales en 2026",
+    excerpt: 'Quiz interactif, blind test, mur photo, partage photo en direct, roue de la destinée... Notre sélection pour un mariage vraiment mémorable.',
+    image: '/images/gallery-4.jpg',
+    date: '3 juin 2026',
+    readTime: '10 min',
+  },
+  {
+    slug: 'occuper-invites-cocktail-mariage',
+    title: 'Comment occuper les invités pendant le cocktail de mariage',
+    excerpt: "Le vin d'honneur est souvent un moment creux pendant les photos de couple. Nos idées d'animations interactives pour un cocktail sans temps mort.",
+    image: '/images/gallery-8.jpg',
+    date: '4 juin 2026',
+    readTime: '8 min',
+  },
+  {
+    slug: 'quiz-ou-blind-test-mariage',
+    title: 'Quiz ou blind test : quelle animation choisir pour son mariage ?',
+    excerpt: 'On compare les deux animations interactives stars du mariage : déroulé, ambiance, public, moment idéal. Et pourquoi ne pas choisir les deux ?',
+    image: '/images/gallery-2.jpg',
+    date: '4 juin 2026',
+    readTime: '8 min',
+  },
+  {
+    slug: 'album-photo-collaboratif-mariage',
+    title: 'Comment créer un album photo collaboratif pendant un mariage',
+    excerpt: 'Vos invités partagent leurs clichés via QR Code, affichage en direct sur écran géant et récupération de centaines de photos après la soirée.',
+    image: '/images/gallery-7.jpg',
+    date: '5 juin 2026',
+    readTime: '9 min',
+  },
+  {
     slug: 'photobooth-vintage-mariage-bretagne',
     title: 'Photobooth vintage mariage : guide complet 2026',
     excerpt: 'Tout savoir sur le photobooth vintage TSF pour votre mariage en Bretagne. Style années 60, impressions instantanées, personnalisation et intégration AnimaJet.',

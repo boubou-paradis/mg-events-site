@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { cities } from '@/data/cities'
+import { allClusterPages } from '@/data/animajet'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.mg-events35.com'
@@ -131,6 +132,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    // Nouveaux articles blog — cluster AnimaJet
+    {
+      url: `${baseUrl}/blog/animations-interactives-revolution-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/idees-animation-mariage-originale-2026`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/occuper-invites-cocktail-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/quiz-ou-blind-test-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/album-photo-collaboratif-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
     // Page philosophie
     {
       url: `${baseUrl}/philosophie`,
@@ -187,5 +219,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }))
 
-  return [...staticPages, ...djMariagePages, ...entreprisePages, ...anniversairePages]
+  // Cluster AnimaJet (pilier + pages satellites)
+  const clusterPages: MetadataRoute.Sitemap = allClusterPages.map((page) => ({
+    url: `${baseUrl}/${page.slug}`,
+    lastModified: today,
+    changeFrequency: 'monthly' as const,
+    priority: page.priority,
+  }))
+
+  return [...staticPages, ...clusterPages, ...djMariagePages, ...entreprisePages, ...anniversairePages]
 }

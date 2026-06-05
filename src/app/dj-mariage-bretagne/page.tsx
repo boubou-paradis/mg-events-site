@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Calendar, Users, Lightbulb, Volume2 } from 'lucide-react';
+import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Bretagne | Animation Soirée 29, 35, 56, 44 - MG Events',
@@ -456,6 +457,9 @@ export default function DJMariageBretagne() {
           </div>
         </div>
       </section>
+
+      {/* Maillage AnimaJet */}
+      <AnimaJetMeshBlock cityName="Bretagne" placeLabel="en Bretagne" />
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-b from-[#141414] to-[#0a0a0a]">
