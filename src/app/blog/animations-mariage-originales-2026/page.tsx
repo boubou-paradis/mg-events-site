@@ -189,16 +189,16 @@ export default function Article() {
               </p>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
-                5. AnimaJet : notre exclusivité bretonne
+                5. AnimaJet : la plateforme que nous avons développée
               </h2>
               <p>
-                Chez MG Events, nous avons développé <strong className="text-white">AnimaJet</strong>,
-                une plateforme d&apos;animation interactive unique en Bretagne. Elle regroupe toutes les animations
+                Chez MG Events, nous avons conçu et développé <strong className="text-white">AnimaJet</strong>,
+                notre propre plateforme d&apos;animation interactive. Elle regroupe toutes les animations
                 dont nous avons parlé : partage photo, quiz musical, photo mystère...
               </p>
               <p>
                 Le tout accessible depuis le smartphone de vos invités, sans application à télécharger,
-                avec un affichage en direct sur grand écran. Une technologie exclusive qui fait vraiment
+                avec un affichage en direct sur grand écran. Une plateforme que nous maîtrisons de A à Z et qui fait vraiment
                 la différence !
               </p>
 

@@ -189,7 +189,7 @@ export default function Article() {
                 </h3>
                 <p className="text-[#888] mb-6">
                   Chez MG Events, nous cochons toutes les cases : +20 ans d&apos;expérience, matériel pro,
-                  animations exclusives et un vrai accompagnement personnalisé.
+                  animations originales et un vrai accompagnement personnalisé.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/#formules" className="btn-outline">

@@ -1378,7 +1378,7 @@ function AnimaJet() {
               <div className="absolute inset-0 bg-[#c9a227]/10 rounded-full blur-3xl" />
               <Image
                 src="/images/animajet-logo.png"
-                alt="AnimaJet - système d'animations interactives exclusif pour mariages en Bretagne"
+                alt="AnimaJet - plateforme d'animations interactives conçue et développée par MG Events pour mariages en Bretagne"
                 width={350}
                 height={175}
                 className="relative"
@@ -1390,7 +1390,7 @@ function AnimaJet() {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#c9a227]/20 to-[#c9a227]/10 border border-[#c9a227]/30 rounded-full mb-6">
               <Zap size={16} className="text-[#c9a227]" />
-              <span className="text-[#c9a227] text-sm font-medium">Exclusivité MG Events</span>
+              <span className="text-[#c9a227] text-sm font-medium">Conçu &amp; développé par MG Events</span>
             </div>
 
             <h2 className="section-title text-white mb-4">
@@ -1398,7 +1398,7 @@ function AnimaJet() {
             </h2>
 
             <p className="text-[#888] mb-6">
-              Une technologie exclusive qui évolue sans cesse
+              Notre plateforme maison, qui évolue sans cesse
             </p>
 
             <p className="text-[#aaa] text-lg leading-relaxed">
@@ -1479,7 +1479,7 @@ function AnimaJet() {
             </div>
             <span className="hidden sm:inline text-[#666]">—</span>
             <p className="text-[#888]">
-              Une exclusivité MG Events en Bretagne
+              Notre plateforme, conçue et développée par MG Events
             </p>
           </div>
         </div>

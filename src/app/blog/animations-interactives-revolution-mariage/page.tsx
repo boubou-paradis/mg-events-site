@@ -134,7 +134,7 @@ export default function Article() {
       </p>
       <p>
         Chez MG Events, nous avons fait ce pari très tôt en développant <Link href="/animations-interactives-mariage" className="text-[#c9a227] hover:underline">AnimaJet</Link>,
-        notre plateforme exclusive d&apos;animations interactives. Parce qu&apos;un mariage, en 2026, ne se regarde plus : il se joue, ensemble.
+        notre propre plateforme d&apos;animations interactives, conçue et développée maison. Parce qu&apos;un mariage, en 2026, ne se regarde plus : il se joue, ensemble.
       </p>
     </BlogArticleShell>
   );

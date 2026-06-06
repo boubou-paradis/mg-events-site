@@ -115,8 +115,8 @@ const differentiateurs = [
   },
   {
     icon: Music,
-    title: 'AnimaJet exclusif',
-    desc: 'Quiz interactif, photo mystère sur grand écran, blind test live — unique en Bretagne',
+    title: 'AnimaJet, notre création',
+    desc: 'Quiz interactif, photo mystère sur grand écran, blind test live — conçu et développé par MG Events',
   },
 ];
 
@@ -138,7 +138,7 @@ const faqs = [
   },
   {
     question: 'Qu\'est-ce qui vous différencie des autres DJ mariages en Bretagne ?',
-    answer: 'Trois choses : (1) 25 ans d\'expérience terrain forgée dans les discothèques bretonnes — une capacité à lire une piste de danse que les DJ d\'occasion n\'ont pas ; (2) AnimaJet, notre système d\'animation interactif exclusif en Bretagne (quiz, photo mystère, blind test) ; (3) des tarifs transparents affichés sur le site. Pas de mauvaises surprises.',
+    answer: 'Trois choses : (1) 25 ans d\'expérience terrain forgée dans les discothèques bretonnes — une capacité à lire une piste de danse que les DJ d\'occasion n\'ont pas ; (2) AnimaJet, notre propre système d\'animation interactif que nous avons conçu et développé (quiz, photo mystère, blind test) ; (3) des tarifs transparents affichés sur le site. Pas de mauvaises surprises.',
   },
   {
     question: 'Proposez-vous l\'animation de cérémonie laïque en Bretagne ?',
@@ -231,9 +231,9 @@ export default function DJMariageBretagne() {
                 est ce qui fait la différence entre un DJ de cérémonie et un vrai animateur de soirée.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
-                Et avec notre technologie exclusive <span className="text-[#c9a227]">AnimaJet</span> — quiz interactif,
-                photo mystère sur grand écran, blind test live — nous ajoutons une dimension participative
-                que très peu de DJs bretons peuvent offrir. <strong className="text-white">De la cérémonie laïque à la soirée dansante</strong>,
+                Et avec <span className="text-[#c9a227]">AnimaJet</span> — quiz interactif,
+                photo mystère sur grand écran, blind test live —, la plateforme que nous avons conçue et développée, nous ajoutons une dimension participative
+                au cœur de votre soirée. <strong className="text-white">De la cérémonie laïque à la soirée dansante</strong>,
                 une prestation complète, élégante, coordonnée avec tous vos prestataires.
               </p>
               <div className="flex flex-wrap gap-4">

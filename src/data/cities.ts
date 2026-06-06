@@ -52,7 +52,7 @@ L'offre de lieux de réception autour de Rennes est remarquable : châteaux Rena
 
 Rennes, c'est aussi une ville vivante avec une scène culturelle forte. Les couples rennais ont souvent des attentes musicales éclectiques : electro, rock alternatif, variété française, bretonne revisitée, hits des 80s et 90s... Notre répertoire couvre tous ces univers. Et avec notre expérience de 25 ans en discothèque, nous savons lire une piste de danse et adapter la programmation en temps réel — pas seulement suivre une playlist figée.
 
-Notre technologie exclusive AnimaJet ajoute une dimension participative que peu de DJ proposent à Rennes : quiz interactif en direct, photos mystère partagées sur grand écran, blind test live, roue de la destinée... Des animations que vos concurrents locaux ne proposent pas — et qui font vraiment partie du souvenir du mariage.
+Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, ajoute une dimension participative à votre mariage à Rennes : quiz interactif en direct, photos mystère partagées sur grand écran, blind test live, roue de la destinée... Des animations qui font vraiment partie du souvenir du mariage.
 
 Au-delà de la soirée dansante, nous proposons la sonorisation de cérémonie laïque (à 180€), idéale pour les cérémonies en extérieur au Domaine de Cicé-Blossac ou dans les jardins des manoirs rennais. Deux techniciens dédiés, retransmission en direct des musiques que vous avez choisies, sonorisation discrète mais puissante.
 

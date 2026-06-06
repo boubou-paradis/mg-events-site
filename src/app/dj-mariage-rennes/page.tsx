@@ -6,7 +6,7 @@ import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Rennes | Animation Soirée Ille-et-Vilaine - MG Events',
-  description: "DJ mariage Rennes : animation sur mesure, 25 ans d'expérience, AnimaJet exclusif. Domaine de Cicé-Blossac, Château de Montmuran, manoirs rennais. Devis gratuit sous 24h ✓",
+  description: "DJ mariage Rennes : animation sur mesure, 25 ans d'expérience, AnimaJet notre plateforme maison. Domaine de Cicé-Blossac, Château de Montmuran, manoirs rennais. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Rennes, DJ Rennes mariage, animation mariage Rennes, DJ mariage 35, animation soirée Rennes, DJ Ille-et-Vilaine, animation mariage Rennes Bretagne',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-rennes',
@@ -22,7 +22,7 @@ const pointsForts = [
   { icon: Mic2, title: '+25 ans d\'expérience', description: 'DJ depuis 1999, discothèques bretonnes et mariages dans le 35' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
-  { icon: Music, title: 'AnimaJet exclusif', description: 'Animations interactives uniques dans le Grand Ouest' },
+  { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
 ];
 
 const formules = [
@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     question: 'Qu\'est-ce qui différencie MG Events des autres DJs à Rennes ?',
-    answer: 'Trois choses que nos concurrents rennais ne proposent pas en même temps : 25 ans d\'expérience en discothèque (une école du dancefloor que les DJs "mariage only" n\'ont pas), AnimaJet en exclusivité dans le Grand Ouest (quiz interactif, photo mystère, blind test live — vos invités deviennent acteurs de la fête), et une transparence tarifaire totale. Pas de surprise le jour J, pas de prestation "au forfait" qu\'on découvre en cours de route. Guillaume et Laurence s\'investissent personnellement dans chaque mariage — ce n\'est pas une agence qui sous-traite.',
+    answer: 'Trois choses réunies : 25 ans d\'expérience en discothèque (une école du dancefloor que les DJs "mariage only" n\'ont pas), AnimaJet, notre propre plateforme d\'animation interactive que nous avons conçue et développée (quiz interactif, photo mystère, blind test live — vos invités deviennent acteurs de la fête), et une transparence tarifaire totale. Pas de surprise le jour J, pas de prestation "au forfait" qu\'on découvre en cours de route. Guillaume et Laurence s\'investissent personnellement dans chaque mariage — ce n\'est pas une agence qui sous-traite.',
   },
 ];
 
@@ -86,7 +86,7 @@ const localBusinessSchema = {
   '@id': 'https://www.mg-events35.com/dj-mariage-rennes#organization',
   name: 'MG Events Animation - DJ Mariage Rennes',
   image: 'https://www.mg-events35.com/images/logo.png',
-  description: 'DJ animateur professionnel pour mariage à Rennes et dans toute l\'Ille-et-Vilaine (35). Animation musicale, AnimaJet exclusif, photobooth vintage TSF, étincelles froides. 25 ans d\'expérience en discothèques bretonnes.',
+  description: 'DJ animateur professionnel pour mariage à Rennes et dans toute l\'Ille-et-Vilaine (35). Animation musicale, AnimaJet notre plateforme maison, photobooth vintage TSF, étincelles froides. 25 ans d\'expérience en discothèques bretonnes.',
   url: 'https://www.mg-events35.com/dj-mariage-rennes',
   telephone: '+33648106166',
   email: 'contact@mg-events35.com',
@@ -165,13 +165,13 @@ const localBusinessSchema = {
 
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Des discothèques bretonnes aux plus beaux châteaux et domaines du 35' },
-  { icon: Disc3, value: 'AnimaJet', label: 'exclusif', description: 'Quiz, photo mystère, blind test live — unique dans le Grand Ouest' },
+  { icon: Disc3, value: 'AnimaJet', label: 'notre création', description: 'Quiz, photo mystère, blind test live — développé maison' },
   { icon: Volume2, value: 'Matériel', label: 'professionnel', description: 'Son et lumière adaptés aux manoirs et domaines rennais' },
 ];
 
 const differentiateurs = [
   '25 ans de discothèques : une lecture du dancefloor que les DJs "mariage only" n\'ont pas',
-  'AnimaJet exclusif dans le Grand Ouest : quiz, photo mystère, blind test live',
+  'AnimaJet, notre plateforme maison : quiz, photo mystère, blind test live',
   'Photobooth vintage TSF années 60 avec impressions sur place',
   'Étincelles froides certifiées CE pour une ouverture de bal spectaculaire',
   'Cérémonie laïque sonorisée (180€) par 2 techniciens dédiés',
@@ -249,7 +249,7 @@ export default function DJMariageRennes() {
               </p>
               <p className="text-[#888] leading-relaxed mb-6">
                 Avec <strong className="text-white">plus de 25 ans de carrière DJ</strong> — discothèques bretonnes depuis 1999 —
-                et notre technologie exclusive <span className="text-[#c9a227]">AnimaJet</span>, nous transformons votre réception en
+                et <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, nous transformons votre réception en
                 une soirée inoubliable. Une <strong className="text-white">animation élégante et sur mesure</strong>,
                 avec coordination complète avec vos prestataires : traiteur, photographe, wedding planner.
               </p>
@@ -350,11 +350,11 @@ export default function DJMariageRennes() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="card-dark p-8">
             <h2 className="font-[family-name:var(--font-display)] text-3xl text-white mb-4 text-center">
-              AnimaJet : <span className="text-[#c9a227]">l&apos;animation interactive exclusive à Rennes</span>
+              AnimaJet : <span className="text-[#c9a227]">l&apos;animation interactive que nous avons développée</span>
             </h2>
             <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
-              Unique dans le Grand Ouest, notre système AnimaJet transforme votre soirée rennaise en expérience participative.
-              Vos invités deviennent acteurs de la fête — aucun DJ concurrent à Rennes ne peut vous proposer ça.
+              Conçu et développé par MG Events, notre système AnimaJet transforme votre soirée rennaise en expérience participative.
+              Vos invités deviennent acteurs de la fête — une plateforme que nous maîtrisons de A à Z, puisque nous l&apos;avons créée.
             </p>
             <div className="grid sm:grid-cols-4 gap-4">
               <div className="bg-[#1a1a1a] rounded-lg p-4 text-center">

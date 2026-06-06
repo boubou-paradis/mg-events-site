@@ -22,7 +22,7 @@ const pointsForts = [
   { icon: Mic2, title: '+20 ans d\'expérience', description: 'Plus de 100 mariages animés en Bretagne' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
-  { icon: Music, title: 'AnimaJet exclusif', description: 'Animations interactives uniques en Bretagne' },
+  { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
 ];
 
 const formules = [
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     question: 'Quelles animations proposez-vous pour un mariage dans le 35 ?',
-    answer: 'Nous proposons des animations exclusives : AnimaJet (quiz interactif, photo mystère, partage live), photobooth vintage TSF années 60, étincelles froides certifiées CE pour l\'ouverture de bal, fumée lourde et jeux lumineux. Des prestations uniques en Bretagne !',
+    answer: 'Nous proposons nos animations signature : AnimaJet (quiz interactif, photo mystère, partage live), notre plateforme que nous avons développée, photobooth vintage TSF années 60, étincelles froides certifiées CE pour l\'ouverture de bal, fumée lourde et jeux lumineux. Des prestations qui font la différence !',
   },
   {
     question: 'Quel est le délai de réservation pour un mariage à Rennes ?',
@@ -238,7 +238,7 @@ export default function DJMariageIlleEtVilaine() {
               <p className="text-[#888] leading-relaxed mb-8">
                 Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés dans le 35,
                 nous transformons votre soirée en un moment inoubliable. Notre force ? Des animations interactives
-                exclusives grâce à notre technologie <span className="text-[#c9a227]">AnimaJet</span>, un photobooth vintage unique,
+                grâce à <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, un photobooth vintage,
                 et des effets spectaculaires (fumée lourde, étincelles froides certifiées CE).
               </p>
               <div className="flex flex-wrap gap-4">

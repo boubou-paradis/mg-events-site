@@ -6,14 +6,14 @@ import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Laval | Animation Soirée Mayenne - MG Events',
-  description: "DJ mariage à Laval et dans toute la Mayenne. Château-Gontier, Évron, Craon, Bonchamp-lès-Laval. 25 ans d'expérience, AnimaJet exclusif, photobooth vintage. Devis gratuit sous 24h ✓",
+  description: "DJ mariage à Laval et dans toute la Mayenne. Château-Gontier, Évron, Craon, Bonchamp-lès-Laval. 25 ans d'expérience, AnimaJet notre plateforme maison, photobooth vintage. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Laval, DJ Laval, DJ mariage Mayenne, animation mariage Laval, DJ Château-Gontier, DJ mariage 53, animation soirée Laval',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-laval',
   },
   openGraph: {
     title: 'DJ Mariage Laval | Animation Soirée Mayenne - MG Events',
-    description: "DJ mariage à Laval et dans toute la Mayenne. 25 ans d'expérience, AnimaJet exclusif, photobooth vintage. Devis gratuit ✓",
+    description: "DJ mariage à Laval et dans toute la Mayenne. 25 ans d'expérience, AnimaJet notre plateforme maison, photobooth vintage. Devis gratuit ✓",
     url: 'https://www.mg-events35.com/dj-mariage-laval',
   },
 };
@@ -22,7 +22,7 @@ const pointsForts = [
   { icon: Mic2, title: '+25 ans d\'expérience', description: 'DJ depuis 1999, discothèques bretonnes et mariages' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
-  { icon: Music, title: 'AnimaJet exclusif', description: 'Animations interactives uniques dans le Grand Ouest' },
+  { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
 ];
 
 const formules = [
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     question: 'Quelles animations proposez-vous pour un mariage à Laval ?',
-    answer: 'Nous proposons des animations exclusives : AnimaJet (quiz interactif, photo mystère, partage live sur grand écran), photobooth vintage TSF années 60 avec impressions sur place, étincelles froides certifiées CE pour une ouverture de bal spectaculaire, fumée lourde et jeux lumineux LED. Des animations que vos invités ne sont pas prêts d\'oublier !',
+    answer: 'Nous proposons nos animations signature : AnimaJet (quiz interactif, photo mystère, partage live sur grand écran), notre plateforme que nous avons développée, photobooth vintage TSF années 60 avec impressions sur place, étincelles froides certifiées CE pour une ouverture de bal spectaculaire, fumée lourde et jeux lumineux LED. Des animations que vos invités ne sont pas prêts d\'oublier !',
   },
   {
     question: 'Quel délai de réservation pour un mariage à Laval ?',
@@ -84,7 +84,7 @@ const localBusinessSchema = {
   '@id': 'https://www.mg-events35.com/dj-mariage-laval#organization',
   name: 'MG Events Animation - DJ Mariage Laval',
   image: 'https://www.mg-events35.com/images/logo.png',
-  description: 'DJ animateur professionnel pour mariage à Laval et dans toute la Mayenne (53). Animation musicale, AnimaJet exclusif, photobooth vintage, étincelles froides. 25 ans d\'expérience.',
+  description: 'DJ animateur professionnel pour mariage à Laval et dans toute la Mayenne (53). Animation musicale, AnimaJet notre plateforme maison, photobooth vintage, étincelles froides. 25 ans d\'expérience.',
   url: 'https://www.mg-events35.com/dj-mariage-laval',
   telephone: '+33648106166',
   email: 'contact@mg-events35.com',
@@ -156,7 +156,7 @@ const localBusinessSchema = {
 
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Des discothèques bretonnes aux plus beaux châteaux de la Mayenne' },
-  { icon: Disc3, value: 'AnimaJet', label: 'exclusif', description: 'Animations interactives uniques : quiz, photo mystère, partage live' },
+  { icon: Disc3, value: 'AnimaJet', label: 'notre création', description: 'Animations interactives développées maison : quiz, photo mystère, partage live' },
   { icon: Volume2, value: 'Matériel', label: 'professionnel', description: 'Son et lumière adaptés aux salles et domaines du 53' },
 ];
 
@@ -230,7 +230,7 @@ export default function DJMariageLaval() {
               </p>
               <p className="text-[#888] leading-relaxed mb-6">
                 Avec <strong className="text-white">25 ans de carrière DJ</strong>, des centaines de mariages animés dans le Grand Ouest
-                et notre technologie exclusive <span className="text-[#c9a227]">AnimaJet</span>, nous transformons votre réception en
+                et <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, nous transformons votre réception en
                 une soirée inoubliable. Animations interactives, photobooth vintage TSF, étincelles froides, fumée lourde —
                 tout le spectacle qu&apos;on n&apos;attendait pas à Laval, et pourtant.
               </p>
@@ -312,9 +312,9 @@ export default function DJMariageLaval() {
               AnimaJet : <span className="text-[#c9a227]">l&apos;animation interactive qui change tout</span>
             </h3>
             <p className="text-[#888] text-center mb-6 max-w-2xl mx-auto">
-              Unique dans le Grand Ouest, notre système AnimaJet transforme votre soirée en expérience participative.
+              Conçu et développé par MG Events, notre système AnimaJet transforme votre soirée en expérience participative.
               Vos invités deviennent acteurs de la fête : quiz musicaux en direct, photos mystère partagées sur grand écran,
-              blind tests sur tablettes... Une animation que peu de DJs en Mayenne peuvent vous proposer.
+              blind tests sur tablettes... Une plateforme que nous maîtrisons de A à Z, puisque nous l&apos;avons créée.
             </p>
             <div className="grid sm:grid-cols-3 gap-4">
               <div className="bg-[#1a1a1a] rounded-lg p-4 text-center">

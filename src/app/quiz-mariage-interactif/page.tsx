@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Quiz mariage interactif | Animation jeu sur smartphone — AnimaJet',
   description:
-    "Un quiz de mariage interactif et personnalisé : vos invités jouent depuis leur smartphone, le classement s'affiche en direct sur écran géant. Sans application. Exclusivité MG Events en Bretagne.",
+    "Un quiz de mariage interactif et personnalisé : vos invités jouent depuis leur smartphone, le classement s'affiche en direct sur écran géant. Sans application. Conçu et développé par MG Events.",
   keywords:
     'quiz mariage interactif, quiz mariage, jeu interactif mariage, animation quiz mariage, quiz personnalisé mariage, quiz invités mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },

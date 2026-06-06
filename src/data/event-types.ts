@@ -41,7 +41,7 @@ export const eventTypes: Record<string, EventType> = {
       { icon: 'Mic2', title: "+20 ans d'expérience", description: 'Plus de 100 mariages animés en Bretagne' },
       { icon: 'Sparkles', title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
       { icon: 'Camera', title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
-      { icon: 'Music', title: 'AnimaJet exclusif', description: 'Animations interactives uniques en Bretagne' },
+      { icon: 'Music', title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
     ],
     faqs: [
       {

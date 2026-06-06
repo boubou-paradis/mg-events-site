@@ -303,8 +303,8 @@ export default function Article() {
               </h2>
               <p>
                 Chez MG Events, nous avons poussé le concept encore plus loin en combinant notre photobooth vintage
-                avec <strong className="text-white">AnimaJet</strong>, notre technologie d&apos;animation interactive
-                exclusive en Bretagne.
+                avec <strong className="text-white">AnimaJet</strong>, la plateforme d&apos;animation interactive
+                que nous avons conçue et développée.
               </p>
               <p>
                 Concrètement, vos invités peuvent :

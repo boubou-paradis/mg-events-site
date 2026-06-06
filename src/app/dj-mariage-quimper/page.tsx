@@ -6,14 +6,14 @@ import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Quimper | Animation Soirée Finistère - MG Events',
-  description: "DJ mariage à Quimper et dans tout le Finistère Sud. Concarneau, Bénodet, Fouesnant, Pont-l'Abbé, Douarnenez. 25 ans d'expérience, AnimaJet exclusif, photobooth vintage. Devis gratuit sous 24h ✓",
+  description: "DJ mariage à Quimper et dans tout le Finistère Sud. Concarneau, Bénodet, Fouesnant, Pont-l'Abbé, Douarnenez. 25 ans d'expérience, AnimaJet notre plateforme maison, photobooth vintage. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Quimper, DJ Quimper, DJ mariage Finistère, animation mariage Quimper, DJ Concarneau, DJ mariage 29, animation soirée Quimper, DJ Cornouaille',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-quimper',
   },
   openGraph: {
     title: 'DJ Mariage Quimper | Animation Soirée Finistère - MG Events',
-    description: "DJ mariage à Quimper et dans tout le Finistère Sud. 25 ans d'expérience, AnimaJet exclusif, photobooth vintage. Devis gratuit ✓",
+    description: "DJ mariage à Quimper et dans tout le Finistère Sud. 25 ans d'expérience, AnimaJet notre plateforme maison, photobooth vintage. Devis gratuit ✓",
     url: 'https://www.mg-events35.com/dj-mariage-quimper',
   },
 };
@@ -22,7 +22,7 @@ const pointsForts = [
   { icon: Mic2, title: '+25 ans d\'expérience', description: 'DJ depuis 1999, discothèques finistériennes et mariages' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
-  { icon: Music, title: 'AnimaJet exclusif', description: 'Animations interactives uniques dans le Grand Ouest' },
+  { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
 ];
 
 const formules = [
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     question: 'Quelles animations proposez-vous pour un mariage à Quimper ?',
-    answer: 'Nous proposons des animations exclusives : AnimaJet (quiz interactif, photo mystère, partage live sur grand écran, roue de la destinée), photobooth vintage TSF années 60 avec impressions sur place, étincelles froides certifiées CE pour une ouverture de bal féerique, fumée lourde et jeux lumineux LED. Des animations que vos invités cornouaillais ne sont pas prêts d\'oublier !',
+    answer: 'Nous proposons nos animations signature : AnimaJet (quiz interactif, photo mystère, partage live sur grand écran, roue de la destinée), notre plateforme que nous avons développée, photobooth vintage TSF années 60 avec impressions sur place, étincelles froides certifiées CE pour une ouverture de bal féerique, fumée lourde et jeux lumineux LED. Des animations que vos invités cornouaillais ne sont pas prêts d\'oublier !',
   },
   {
     question: 'Quel délai de réservation pour un mariage en Cornouaille ?',
@@ -84,7 +84,7 @@ const localBusinessSchema = {
   '@id': 'https://www.mg-events35.com/dj-mariage-quimper#organization',
   name: 'MG Events Animation - DJ Mariage Quimper',
   image: 'https://www.mg-events35.com/images/logo.png',
-  description: 'DJ animateur professionnel pour mariage à Quimper et dans tout le Finistère Sud (29). Animation musicale, AnimaJet exclusif, photobooth vintage, étincelles froides. 25 ans d\'expérience en discothèques bretonnes.',
+  description: 'DJ animateur professionnel pour mariage à Quimper et dans tout le Finistère Sud (29). Animation musicale, AnimaJet notre plateforme maison, photobooth vintage, étincelles froides. 25 ans d\'expérience en discothèques bretonnes.',
   url: 'https://www.mg-events35.com/dj-mariage-quimper',
   telephone: '+33648106166',
   email: 'contact@mg-events35.com',
@@ -156,7 +156,7 @@ const localBusinessSchema = {
 
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Des discothèques finistériennes aux plus beaux châteaux de Cornouaille' },
-  { icon: Disc3, value: 'AnimaJet', label: 'exclusif', description: 'Quiz, photo mystère, blind test, roue de la destinée — unique en Bretagne' },
+  { icon: Disc3, value: 'AnimaJet', label: 'notre création', description: 'Quiz, photo mystère, blind test, roue de la destinée — développé maison' },
   { icon: Volume2, value: 'Matériel', label: 'professionnel', description: 'Son et lumière adaptés aux manoirs et châteaux du 29' },
 ];
 
@@ -230,7 +230,7 @@ export default function DJMariageQuimper() {
               </p>
               <p className="text-[#888] leading-relaxed mb-6">
                 Avec <strong className="text-white">plus de 25 ans de carrière DJ</strong> — discothèques bretonnes et finistériennes depuis 1999 —
-                et notre technologie exclusive <span className="text-[#c9a227]">AnimaJet</span>, nous transformons votre réception en
+                et <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, nous transformons votre réception en
                 une soirée inoubliable. De la cérémonie laïque à la soirée dansante : une animation élégante et sur mesure,
                 avec une coordination complète avec vos prestataires.
               </p>
@@ -314,8 +314,8 @@ export default function DJMariageQuimper() {
               AnimaJet : <span className="text-[#c9a227]">l&apos;animation interactive qui change tout</span>
             </h3>
             <p className="text-[#888] text-center mb-6 max-w-2xl mx-auto">
-              Exclusif dans le Grand Ouest, notre système AnimaJet transforme votre soirée en expérience participative.
-              Vos invités deviennent acteurs de la fête — aucun concurrent en Cornouaille ne peut vous proposer ça.
+              Conçu et développé par MG Events, notre système AnimaJet transforme votre soirée en expérience participative.
+              Vos invités deviennent acteurs de la fête — une plateforme que nous maîtrisons de A à Z, puisque nous l&apos;avons créée.
             </p>
             <div className="grid sm:grid-cols-4 gap-4">
               <div className="bg-[#1a1a1a] rounded-lg p-4 text-center">

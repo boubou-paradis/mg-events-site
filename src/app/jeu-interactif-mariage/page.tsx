@@ -25,7 +25,7 @@ const faqs = [
   {
     question: 'Quels jeux interactifs propose AnimaJet pour un mariage ?',
     answer:
-      "AnimaJet réunit une palette complète : quiz personnalisé, blind test musical, roue de la destinée (gages et défis), photo mystère (image qui se révèle), bon ordre (jeu de classement) et jeux de rapidité. On combine ceux qui correspondent à l'ambiance que vous souhaitez.",
+      "AnimaJet réunit une palette complète : quiz personnalisé, blind test musical, roue de la destinée (gages et défis), photo mystère (image qui se révèle), bon ordre (deux équipes s'affrontent pour reconstituer un code à l'écran) et jeux de rapidité. On combine ceux qui correspondent à l'ambiance que vous souhaitez.",
   },
   {
     question: 'Comment choisir les jeux pour notre mariage ?',
@@ -85,8 +85,8 @@ export default function JeuInteractifMariage() {
           <p>
             Le <strong className="text-white">quiz</strong> teste qui connaît le mieux les mariés. Le <strong className="text-white">blind test</strong> fait rugir
             la salle sur les premières notes. La <strong className="text-white">roue de la destinée</strong> distribue gages et défis pour des fous rires garantis.
-            La <strong className="text-white">photo mystère</strong> dévoile peu à peu une image à deviner. Le <strong className="text-white">bon ordre</strong> met
-            les tablées au défi de reconstituer une chronologie. Et les <strong className="text-white">jeux de rapidité</strong> récompensent les réflexes les plus vifs.
+            La <strong className="text-white">photo mystère</strong> dévoile peu à peu une image à deviner. Le <strong className="text-white">bon ordre</strong> oppose
+            deux équipes de cinq invités qui doivent reconstituer un code affiché à l&apos;écran, la plus rapide l&apos;emporte. Et les <strong className="text-white">jeux de rapidité</strong> récompensent les réflexes les plus vifs.
           </p>
           <p>
             Tous se jouent <span className="text-[#c9a227]">depuis le smartphone, sans application</span>, et s&apos;affichent sur l&apos;écran géant. En les combinant,

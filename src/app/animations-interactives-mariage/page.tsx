@@ -99,7 +99,7 @@ const pillarFaqs = [
   {
     question: "Peut-on personnaliser les quiz et les jeux à notre histoire ?",
     answer:
-      "Oui, c'est même recommandé. Quiz sur la rencontre des mariés, photos d'enfance dans la photo mystère, anecdotes dans le bon ordre... Plus c'est personnalisé, plus l'émotion et les rires sont au rendez-vous. Nous préparons tout cela ensemble avant le jour J.",
+      "Oui, c'est même recommandé. Quiz sur la rencontre des mariés, photos d'enfance dans la photo mystère, vos musiques marquantes dans le blind test... Plus c'est personnalisé, plus l'émotion et les rires sont au rendez-vous. Nous préparons tout cela ensemble avant le jour J.",
   },
 ];
 
@@ -176,7 +176,7 @@ export default function AnimationsInteractivesMariage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block px-3 py-1 bg-[#c9a227]/10 border border-[#c9a227]/30 text-[#c9a227] text-xs uppercase tracking-widest rounded-full mb-6">
-                Exclusivité MG Events
+                Conçu &amp; développé par MG Events
               </span>
               <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl text-white mb-6">
                 Animations interactives de <span className="text-[#c9a227]">mariage</span>
@@ -187,7 +187,7 @@ export default function AnimationsInteractivesMariage() {
               <p className="text-[#888] leading-relaxed mb-6">
                 Et si, le jour de votre mariage, le smartphone de vos invités devenait l&apos;outil de la fête plutôt qu&apos;une distraction ?
                 C&apos;est exactement ce que permet <strong className="text-white">AnimaJet</strong>, notre plateforme d&apos;
-                <strong className="text-white">animations interactives</strong> développée par MG Events et unique dans le Grand Ouest.
+                <strong className="text-white">animations interactives</strong> que nous avons conçue et développée nous-mêmes.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Quiz personnalisé, blind test musical, photo mystère, roue de la destinée, partage de photos en direct, mur photo événementiel...
@@ -238,8 +238,8 @@ export default function AnimationsInteractivesMariage() {
               on rejoint le jeu, et l&apos;écran géant au centre de la salle devient le théâtre commun où tout le monde se retrouve.
             </p>
             <p>
-              AnimaJet réunit toutes ces animations dans une seule plateforme, pensée spécifiquement pour les mariages. C&apos;est une
-              <strong className="text-white"> exclusivité MG Events</strong> : aucun autre DJ du Grand Ouest ne propose cette technologie. Et surtout,
+              AnimaJet réunit toutes ces animations dans une seule plateforme, pensée spécifiquement pour les mariages. C&apos;est
+              <strong className="text-white"> notre création</strong> : nous l&apos;avons développée nous-mêmes et nous la maîtrisons de A à Z. Et surtout,
               elle est <span className="text-[#c9a227]">incluse dans toutes nos formules</span>, dès la formule Éclat d&apos;Amour à 1200€ TTC.
             </p>
           </div>
@@ -387,20 +387,20 @@ export default function AnimationsInteractivesMariage() {
         </div>
       </section>
 
-      {/* Exclusivité / différenciateur */}
+      {/* Différenciateur : créateur de la plateforme */}
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="card-dark p-8 border-[#c9a227]/30">
             <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mb-6 text-center">
-              Une animation que vos <span className="text-[#c9a227]">concurrents ne peuvent pas copier</span>
+              L&apos;animation conçue et pilotée par <span className="text-[#c9a227]">celui qui l&apos;a développée</span>
             </h2>
             <p className="text-[#888] mb-6 text-center max-w-2xl mx-auto">
-              AnimaJet n&apos;est pas un gadget acheté sur étagère : c&apos;est une plateforme propriétaire développée par MG Events,
-              affinée mariage après mariage. Voici ce qui la rend unique dans le Grand Ouest :
+              AnimaJet n&apos;est pas un gadget acheté sur étagère : c&apos;est une plateforme que nous avons développée nous-mêmes,
+              affinée mariage après mariage. Voici ce qui fait la différence :
             </p>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
-                'Plateforme exclusive, indisponible chez les autres DJ de Bretagne',
+                'Plateforme que nous avons conçue et développée, maîtrisée de A à Z',
                 'Aucune application à installer pour vos invités',
                 'Quiz et jeux personnalisés à votre histoire',
                 'Participation depuis le smartphone via QR Code unique',

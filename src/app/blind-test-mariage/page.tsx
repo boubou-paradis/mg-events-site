@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Blind test mariage | Animation musicale interactive — AnimaJet',
   description:
-    "Le blind test de mariage interactif : vos invités reconnaissent les titres et buzzent depuis leur smartphone, score en direct sur écran géant. Toutes générations. Exclusivité MG Events en Bretagne.",
+    "Le blind test de mariage interactif : vos invités reconnaissent les titres et buzzent depuis leur smartphone, score en direct sur écran géant. Toutes générations. Conçu et développé par MG Events.",
   keywords:
     'blind test mariage, blind test interactif mariage, animation musicale mariage, jeu musical mariage, quiz musical mariage, blind test soirée',
   alternates: { canonical: `${BASE}/${SLUG}` },

@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight } from 'lucide-react';
 import { getCityMeshFeatures } from '@/data/animajet';
 import AnimaJetIcon from './AnimaJetIcon';
 
-// Bloc de maillage interne "Animations interactives exclusives avec AnimaJet"
+// Bloc de maillage interne "Animations interactives avec AnimaJet"
 // à insérer sur les pages villes/départements. Le contenu varie selon le lieu (anti-duplication).
 // placeLabel permet de gérer la préposition correcte (ex: "à Rennes", "en Ille-et-Vilaine").
 export default function AnimaJetMeshBlock({
@@ -24,10 +24,10 @@ export default function AnimaJetMeshBlock({
         <div className="card-dark p-8 border-[#c9a227]/30">
           <div className="flex items-center justify-center gap-2 mb-3">
             <Sparkles size={20} className="text-[#c9a227]" />
-            <span className="text-[#c9a227] text-sm uppercase tracking-widest">Exclusivité MG Events</span>
+            <span className="text-[#c9a227] text-sm uppercase tracking-widest">Conçu &amp; développé par MG Events</span>
           </div>
           <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl text-white text-center mb-4">
-            Animations interactives exclusives avec <span className="text-[#c9a227]">AnimaJet</span>
+            Animations interactives avec <span className="text-[#c9a227]">AnimaJet</span>
           </h2>
           <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
             Pour votre mariage {location}, AnimaJet transforme vos invités en acteurs de la fête.

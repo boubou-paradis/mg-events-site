@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
 
   return {
     title: `DJ Mariage ${city.name} | Animation Soirée ${city.department} - MG Events`,
-    description: `DJ mariage à ${city.name} — 25 ans d'expérience, AnimaJet exclusif, photobooth vintage. ${nearbyText} et environs. Devis gratuit sous 24h ✓`,
+    description: `DJ mariage à ${city.name} — 25 ans d'expérience, AnimaJet notre plateforme d'animations interactives maison, photobooth vintage. ${nearbyText} et environs. Devis gratuit sous 24h ✓`,
     keywords: `DJ mariage ${city.name}, DJ mariage ${city.departmentCode}, animation mariage ${city.name}, DJ ${city.name}, sono mariage ${city.name}`,
     alternates: {
       canonical: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
@@ -43,7 +43,7 @@ const pointsForts = [
   { icon: Mic2, title: "+20 ans d'expérience", description: 'Plus de 100 mariages animés en Bretagne' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
-  { icon: Music, title: 'AnimaJet exclusif', description: 'Animations interactives uniques en Bretagne' },
+  { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
 ];
 
 const formules = [
@@ -70,7 +70,7 @@ const servicesInclus = [
   { icon: Mic2, title: 'Cérémonie laïque', description: 'Sonorisation complète de votre cérémonie (option à 180€, 2 techniciens dédiés)' },
   { icon: Volume2, title: 'Vin d\'honneur & repas', description: 'Ambiance musicale douce pour l\'apéritif, fond sonore élégant pendant le dîner' },
   { icon: Lightbulb, title: 'Éclairage professionnel', description: 'Mise en lumière : lyres mobiles, wash LED, lasers, stroboscopes et effets spéciaux' },
-  { icon: Sparkles, title: 'AnimaJet exclusif', description: 'Quiz interactif, photo mystère sur grand écran, blind test live — unique en Bretagne' },
+  { icon: Sparkles, title: 'AnimaJet, notre création', description: 'Quiz interactif, photo mystère sur grand écran, blind test live — conçu et développé par MG Events' },
   { icon: Music, title: 'Programmation sur mesure', description: 'Playlist co-construite avec vous, adaptée en direct aux envies de la piste de danse' },
   { icon: Star, title: 'Animation intergénérationnelle', description: 'Fédérer de 7 à 77 ans sur la même piste de danse : notre marque de fabrique depuis 25 ans' },
 ];
@@ -92,7 +92,7 @@ function generateCityFaqs(city: City) {
     },
     {
       question: `Quelles animations proposez-vous pour un mariage à ${city.name} ?`,
-      answer: `Nous proposons des animations exclusives : AnimaJet (quiz interactif, photo mystère, partage live), photobooth vintage TSF années 60, étincelles froides certifiées CE pour l'ouverture de bal, fumée lourde et jeux lumineux.`,
+      answer: `Nous proposons nos animations signature : AnimaJet (quiz interactif, photo mystère, partage live), notre plateforme que nous avons développée, photobooth vintage TSF années 60, étincelles froides certifiées CE pour l'ouverture de bal, fumée lourde et jeux lumineux.`,
     },
     {
       question: `Quel est le délai de réservation pour un mariage à ${city.name} ?`,
@@ -296,7 +296,7 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
               <p className="text-[#888] leading-relaxed mb-8">
                 Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés en Bretagne,
                 nous transformons votre soirée en un moment inoubliable. Notre force ? Des animations interactives
-                exclusives grâce à notre technologie <span className="text-[#c9a227]">AnimaJet</span>, un photobooth vintage unique,
+                grâce à <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, un photobooth vintage,
                 et des effets spectaculaires (fumée lourde, étincelles froides certifiées CE).
               </p>
               <div className="flex flex-wrap gap-4">
@@ -490,11 +490,11 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
         </div>
       </section>
 
-      {/* Animations exclusives */}
+      {/* Animations signature */}
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-4">
-            Nos <span className="text-[#c9a227]">animations exclusives</span> pour votre mariage
+            Nos <span className="text-[#c9a227]">animations signature</span> pour votre mariage
           </h2>
           <p className="text-[#888] text-center mb-10 max-w-2xl mx-auto">
             Au-delà de la musique, des animations uniques qui font la différence
@@ -514,11 +514,11 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
             <Link href="/#animajet" className="card-dark p-6 group hover:border-[#c9a227]/40 transition-colors">
               <Monitor size={32} className="text-[#c9a227] mb-3" />
               <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors text-lg">
-                AnimaJet — Exclusivité Bretagne
+                AnimaJet — notre création maison
               </h3>
               <p className="text-[#888] text-sm leading-relaxed">
                 Quiz interactif, photo mystère, blind test musical en direct sur grand écran.
-                Une technologie d&apos;animation exclusive, unique en Bretagne, pour faire vibrer tous vos invités.
+                Une plateforme d&apos;animation que nous avons conçue et développée, pour faire vibrer tous vos invités.
               </p>
               <span className="text-[#c9a227] text-sm mt-4 inline-block">Découvrir AnimaJet →</span>
             </Link>

@@ -1,5 +1,5 @@
 // Données centrales du cluster SEO AnimaJet
-// AnimaJet est la plateforme d'animations interactives propriétaire de MG Events.
+// AnimaJet est la plateforme d'animations interactives conçue et développée par MG Events.
 // Ce module centralise les features, les pages du cluster, la galerie média et
 // le mapping ville -> animation vedette (pour le maillage local sans duplication).
 
@@ -72,9 +72,9 @@ export const animajetFeatures: AnimaJetFeature[] = [
     id: 'bon-ordre',
     name: 'Bon Ordre',
     icon: 'ListOrdered',
-    tagline: 'Le jeu de classement collaboratif',
+    tagline: 'Deux équipes s\'affrontent en direct',
     description:
-      "Remettre dans le bon ordre les étapes de l'histoire des mariés, des chansons par date de sortie, des photos par année... Un défi logique et amusant qui fait réfléchir toute la tablée.",
+      "Deux équipes de cinq invités montent sur scène et s'affrontent : elles doivent remettre dans le bon ordre le code affiché sur l'écran géant. L'équipe la plus rapide marque les points. Un défi nerveux et fédérateur qui met toute la salle en effervescence.",
   },
   {
     id: 'rapidite',
@@ -315,7 +315,7 @@ export const animajetCoreFaqs = [
   {
     question: "Qu'est-ce qu'AnimaJet exactement ?",
     answer:
-      "AnimaJet est la plateforme d'animations interactives développée par MG Events. Elle réunit quiz, blind test, roue de la destinée, photo mystère, partage photo en direct et mur photo événementiel. Les invités participent depuis leur smartphone, sans application à télécharger, et tout s'affiche en direct sur écran géant. C'est une exclusivité MG Events, unique dans le Grand Ouest.",
+      "AnimaJet est la plateforme d'animations interactives développée par MG Events. Elle réunit quiz, blind test, roue de la destinée, photo mystère, partage photo en direct et mur photo événementiel. Les invités participent depuis leur smartphone, sans application à télécharger, et tout s'affiche en direct sur écran géant. C'est notre plateforme : nous l'avons conçue et développée nous-mêmes, et nous la maîtrisons de A à Z.",
   },
   {
     question: 'Faut-il télécharger une application pour participer ?',
@@ -330,6 +330,6 @@ export const animajetCoreFaqs = [
   {
     question: "AnimaJet est-il inclus dans les formules MG Events ?",
     answer:
-      "Oui, AnimaJet est inclus dès la formule Éclat d'Amour (1200€ TTC). Nos formules Rêve en Blanc (1490€) et Conte de Fées (1690€) ajoutent éclairage, effets et photobooth vintage. Le déplacement en Bretagne et dans le Grand Ouest est inclus, sans surprise tarifaire.",
+      "Oui, AnimaJet est inclus dès la formule Éclat d'Amour (1200€ TTC). La formule Rêve en Blanc (1490€) ajoute éclairage d'ambiance et effets (boule à facettes, machine à fumée, étincelles froides), et la formule Conte de Fées (1690€) y ajoute le photobooth vintage. Le déplacement en Bretagne et dans le Grand Ouest est inclus, sans surprise tarifaire.",
   },
 ];

@@ -6,14 +6,14 @@ import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Morlaix | Animation Soirée Finistère - MG Events',
-  description: "DJ mariage à Morlaix et dans le Finistère Nord. Roscoff, Saint-Pol-de-Léon, Carantec, Plougasnou, Landivisiau. 25 ans d'expérience discothèques Finistère, AnimaJet exclusif. Devis gratuit ✓",
+  description: "DJ mariage à Morlaix et dans le Finistère Nord. Roscoff, Saint-Pol-de-Léon, Carantec, Plougasnou, Landivisiau. 25 ans d'expérience discothèques Finistère, AnimaJet notre plateforme maison. Devis gratuit ✓",
   keywords: 'DJ mariage Morlaix, DJ Morlaix, DJ mariage Finistère Nord, animation mariage Morlaix, DJ Roscoff, DJ Saint-Pol-de-Léon, DJ mariage 29, animation soirée Morlaix',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-morlaix',
   },
   openGraph: {
     title: 'DJ Mariage Morlaix | Animation Soirée Finistère - MG Events',
-    description: "DJ mariage à Morlaix et dans le Finistère Nord. 25 ans d'expérience discothèques Finistère, AnimaJet exclusif. Devis gratuit ✓",
+    description: "DJ mariage à Morlaix et dans le Finistère Nord. 25 ans d'expérience discothèques Finistère, AnimaJet notre plateforme maison. Devis gratuit ✓",
     url: 'https://www.mg-events35.com/dj-morlaix',
   },
 };
@@ -22,7 +22,7 @@ const pointsForts = [
   { icon: Mic2, title: '+25 ans en discothèque', description: 'Forgé sur les scènes du Finistère depuis 1999' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
-  { icon: Music, title: 'AnimaJet exclusif', description: 'Animations interactives uniques en Bretagne' },
+  { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
 ];
 
 const formules = [
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     question: 'Quelles animations proposez-vous pour un mariage à Morlaix ?',
-    answer: 'Nos animations exclusives : AnimaJet (quiz interactif, photo mystère partagée sur grand écran, blind test en direct), photobooth vintage TSF années 60 avec impressions immédiates, étincelles froides certifiées CE pour l\'ouverture de bal, fumée lourde et jeux lumineux LED. Des prestations qui font la différence dans le Finistère.',
+    answer: 'Nos animations signature : AnimaJet (quiz interactif, photo mystère partagée sur grand écran, blind test en direct), notre plateforme que nous avons développée, photobooth vintage TSF années 60 avec impressions immédiates, étincelles froides certifiées CE pour l\'ouverture de bal, fumée lourde et jeux lumineux LED. Des prestations qui font la différence dans le Finistère.',
   },
   {
     question: 'Quel délai de réservation pour un mariage à Morlaix ?',
@@ -84,7 +84,7 @@ const localBusinessSchema = {
   '@id': 'https://www.mg-events35.com/dj-morlaix#organization',
   name: 'MG Events Animation - DJ Mariage Morlaix',
   image: 'https://www.mg-events35.com/images/logo.png',
-  description: 'DJ animateur professionnel pour mariage à Morlaix et dans le Finistère Nord (29). Animation musicale, AnimaJet exclusif, photobooth vintage, étincelles froides. 25 ans d\'expérience.',
+  description: 'DJ animateur professionnel pour mariage à Morlaix et dans le Finistère Nord (29). Animation musicale, AnimaJet notre plateforme maison, photobooth vintage, étincelles froides. 25 ans d\'expérience.',
   url: 'https://www.mg-events35.com/dj-morlaix',
   telephone: '+33648106166',
   email: 'contact@mg-events35.com',
@@ -156,7 +156,7 @@ const localBusinessSchema = {
 
 const musicStats = [
   { icon: Headphones, value: '+25 ans', label: "d'expérience DJ", description: 'Forgé dans les discothèques du Finistère : Le Kalicut, La Guinguette, Le 29...' },
-  { icon: Disc3, value: 'AnimaJet', label: 'exclusif', description: 'Animations interactives uniques : quiz, photo mystère, blind test live' },
+  { icon: Disc3, value: 'AnimaJet', label: 'notre création', description: 'Animations interactives développées maison : quiz, photo mystère, blind test live' },
   { icon: Volume2, value: 'Matériel', label: 'professionnel', description: 'Son et lumière adaptés aux salles du Finistère Nord' },
 ];
 
@@ -236,8 +236,8 @@ export default function DJMorlaix() {
               <p className="text-[#888] leading-relaxed mb-8">
                 De l&apos;insolite <strong className="text-white">Château du Taureau</strong> (forteresse Vauban accessible en bateau)
                 aux manoirs du Léon, en passant par les fermes rénovées de la baie de Carantec —
-                nous connaissons les contraintes de chaque lieu et arrivons préparés. Et notre technologie exclusive
-                <span className="text-[#c9a227]"> AnimaJet</span> transforme chaque soirée en expérience participative mémorable.
+                nous connaissons les contraintes de chaque lieu et arrivons préparés. Et
+                <span className="text-[#c9a227]"> AnimaJet</span>, la plateforme que nous avons conçue et développée, transforme chaque soirée en expérience participative mémorable.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/#contact" className="btn-gold inline-flex items-center gap-2">
