@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "En quoi AnimaJet est-il plus moderne qu'un DJ classique ?",
     answer:
-      "Un DJ classique fait danser ; AnimaJet ajoute une couche interactive que peu de prestataires maîtrisent. Vos invités ne sont plus seulement spectateurs : ils jouent, votent, partagent, et tout s'affiche sur écran géant. C'est cette dimension participative qui fait la modernité.",
+      "Un DJ classique fait danser ; AnimaJet ajoute une couche interactive. Vos invités ne sont plus seulement spectateurs : ils jouent, votent, partagent, et tout s'affiche sur écran géant. C'est cette dimension participative qui fait la modernité.",
   },
   {
     question: 'Une animation moderne plaît-elle aussi aux invités plus âgés ?',

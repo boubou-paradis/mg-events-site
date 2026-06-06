@@ -94,7 +94,7 @@ const pillarFaqs = [
   {
     question: 'Les animations interactives remplacent-elles le DJ ?',
     answer:
-      "Au contraire, elles le complètent. AnimaJet est piloté en direct par le DJ, qui enchaîne musique et animations au bon moment pour maintenir l'énergie. Vous gardez un vrai DJ professionnel aux platines — avec, en plus, une dimension participative que peu de prestataires proposent.",
+      "Au contraire, elles le complètent. AnimaJet est piloté en direct par le DJ, qui enchaîne musique et animations au bon moment pour maintenir l'énergie. Vous gardez un vrai DJ professionnel aux platines — avec, en plus, une vraie dimension participative pour vos invités.",
   },
   {
     question: "Peut-on personnaliser les quiz et les jeux à notre histoire ?",
