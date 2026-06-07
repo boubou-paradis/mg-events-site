@@ -9,6 +9,8 @@ interface ContactFormData {
   email: string;
   phone: string;
   address: string;
+  postalCode: string;
+  city: string;
   date: string;
   location: string;
   eventType: string;
@@ -92,7 +94,7 @@ export async function POST(request: NextRequest) {
               <li><strong>Nom:</strong> ${data.name}</li>
               <li><strong>Email:</strong> ${data.email}</li>
               <li><strong>Telephone:</strong> ${data.phone}</li>
-              ${data.address ? `<li><strong>Adresse postale:</strong> ${data.address}</li>` : ''}
+              ${[data.address, [data.postalCode, data.city].filter(Boolean).join(' ')].filter(Boolean).join(', ') ? `<li><strong>Adresse postale:</strong> ${[data.address, [data.postalCode, data.city].filter(Boolean).join(' ')].filter(Boolean).join(', ')}</li>` : ''}
             </ul>
 
             <h2 style="color: #333;">Details de l'evenement</h2>

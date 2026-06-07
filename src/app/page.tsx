@@ -930,6 +930,8 @@ function Contact() {
     email: '',
     phone: '',
     address: '',
+    postalCode: '',
+    city: '',
     date: '',
     location: '',
     eventType: 'mariage',
@@ -960,6 +962,8 @@ function Contact() {
           email: '',
           phone: '',
           address: '',
+          postalCode: '',
+          city: '',
           date: '',
           location: '',
           eventType: 'mariage',
@@ -1096,7 +1100,7 @@ function Contact() {
                 />
               </div>
 
-              {/* Adresse postale */}
+              {/* Adresse postale (pour l'envoi du devis) */}
               <div>
                 <label className="block text-sm text-[#888] mb-2">Adresse postale (pour l&apos;envoi du devis)</label>
                 <input
@@ -1104,8 +1108,38 @@ function Contact() {
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                   className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
-                  placeholder="Numéro, rue, code postal, ville"
+                  placeholder="Numéro et rue"
                 />
+              </div>
+
+              {/* Code postal & Ville */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm text-[#888] mb-2">Code postal *</label>
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    required
+                    pattern="[0-9]{5}"
+                    maxLength={5}
+                    title="Le code postal doit contenir 5 chiffres"
+                    value={formData.postalCode}
+                    onChange={(e) => setFormData({ ...formData, postalCode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
+                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
+                    placeholder="35600"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm text-[#888] mb-2">Ville *</label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.city}
+                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
+                    placeholder="Bains-sur-Oust"
+                  />
+                </div>
               </div>
 
               {/* Event type & Formule */}
