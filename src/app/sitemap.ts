@@ -4,7 +4,10 @@ import { allClusterPages } from '@/data/animajet'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.mg-events35.com'
-  const today = new Date().toISOString().split('T')[0]
+  // Date de dernière mise à jour réelle du contenu — à actualiser manuellement
+  // lors d'un ajout ou d'une refonte de page (ne pas remettre new Date() :
+  // une date qui change à chaque build fait perdre toute valeur au lastmod).
+  const today = '2026-06-10'
 
   // Pages statiques principales
   const staticPages: MetadataRoute.Sitemap = [

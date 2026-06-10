@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Politique de Confidentialité',
+  description: "Politique de confidentialité et protection des données personnelles (RGPD) de MG Events Animation.",
+  alternates: { canonical: 'https://www.mg-events35.com/confidentialite' },
+};
 
 export default function Confidentialite() {
   return (

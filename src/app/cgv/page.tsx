@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Conditions Générales de Vente',
+  description: "Conditions générales de vente des prestations DJ et animation de MG Events Animation — mariages et événements en Bretagne.",
+  alternates: { canonical: 'https://www.mg-events35.com/cgv' },
+};
 
 export default function CGV() {
   return (

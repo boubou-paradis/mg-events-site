@@ -1,7 +1,22 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Outfit, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mg-events35.com'),
@@ -105,7 +120,7 @@ const videoJsonLd = {
   "description": "Découvrez AnimaJet, la plateforme d'animations interactives que MG Events a conçue et développée, pour vos mariages en Bretagne : quiz musical, photo mystère, partage live. Une expérience participative pour votre soirée de mariage.",
   "thumbnailUrl": "https://www.mg-events35.com/images/animajet-thumbnail.jpg",
   "uploadDate": "2025-01-01T00:00:00+01:00",
-  "duration": "PT1M30S",
+  "duration": "PT40S",
   "contentUrl": "https://www.mg-events35.com/promo-animajet.mp4",
   "embedUrl": "https://www.mg-events35.com/promo-animajet.mp4",
   "publisher": {
@@ -235,12 +250,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${outfit.variable} ${playfair.variable}`}>
       <head>
         <meta name="google-site-verification" content="bG7T2SAL139z-XpkOLLwMcXnpU2_sT2Hcb04bJuOsDU" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
