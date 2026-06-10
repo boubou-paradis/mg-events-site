@@ -4,16 +4,16 @@ import { Outfit, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
+// Polices variables : sans option weight, next/font charge un seul fichier
+// par famille couvrant toutes les graisses (au lieu d'un fichier par graisse)
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-outfit",
   display: "swap",
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   variable: "--font-playfair",
   display: "swap",
 });
