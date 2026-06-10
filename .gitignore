@@ -48,3 +48,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# fichiers locaux hors projet
+/clip mg events.mp4
+/promo animajet.mp4
+/photos recente/
+/lighthouse-report.json
+nul
