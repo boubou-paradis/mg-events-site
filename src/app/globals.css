@@ -90,14 +90,17 @@
 }
 
 @layer utilities {
+  /* opacity 0.01 (et non 0) : un élément à opacité 0 est ignoré par Chrome
+     comme candidat LCP — le titre du hero serait alors comptabilisé bien trop
+     tard et le score LCP s'effondre. Visuellement identique. */
   .animate-fade-up {
     animation: fadeUp 0.8s ease-out forwards;
-    opacity: 0;
+    opacity: 0.01;
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 1s ease-out forwards;
-    opacity: 0;
+    opacity: 0.01;
   }
   
   .delay-100 { animation-delay: 0.1s; }

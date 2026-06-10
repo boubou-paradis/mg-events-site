@@ -77,7 +77,7 @@ function Hero() {
         </p>
         
         {/* Zone */}
-        <p className="animate-fade-up delay-300 text-sm text-[#666] mb-10 tracking-widest uppercase">
+        <p className="animate-fade-up delay-300 text-sm text-[#8a8a8a] mb-10 tracking-widest uppercase">
           Finistère • Morbihan • Ille-et-Vilaine • Loire-Atlantique • Mayenne
         </p>
 
@@ -97,21 +97,21 @@ function Hero() {
         <div className="animate-fade-up delay-500 mt-16 grid grid-cols-4 gap-6 max-w-2xl mx-auto">
           <div className="text-center">
             <div className="text-3xl sm:text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">20+</div>
-            <div className="text-xs text-[#666] uppercase tracking-wider mt-1">Années</div>
+            <div className="text-xs text-[#8a8a8a] uppercase tracking-wider mt-1">Années</div>
           </div>
           <div className="text-center">
             <div className="text-3xl sm:text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">100+</div>
-            <div className="text-xs text-[#666] uppercase tracking-wider mt-1">Mariages</div>
+            <div className="text-xs text-[#8a8a8a] uppercase tracking-wider mt-1">Mariages</div>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center gap-1 text-3xl sm:text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">
               45<Star size={18} fill="#c9a227" className="ml-1" />
             </div>
-            <div className="text-xs text-[#666] uppercase tracking-wider mt-1">Avis 5★</div>
+            <div className="text-xs text-[#8a8a8a] uppercase tracking-wider mt-1">Avis 5★</div>
           </div>
           <div className="text-center">
             <div className="text-3xl sm:text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">100%</div>
-            <div className="text-xs text-[#666] uppercase tracking-wider mt-1">Recommandé</div>
+            <div className="text-xs text-[#8a8a8a] uppercase tracking-wider mt-1">Recommandé</div>
           </div>
         </div>
       </div>
@@ -733,7 +733,7 @@ function Testimonials() {
                   </div>
                   <span className="text-white text-sm font-medium">{testimonial.name}</span>
                 </div>
-                <span className="text-[#666] text-xs">— {testimonial.platform}</span>
+                <span className="text-[#8a8a8a] text-xs">— {testimonial.platform}</span>
               </div>
             </div>
           ))}
@@ -1043,7 +1043,7 @@ function AnimaJet() {
                 AnimaJet <span className="text-[#c9a227]">inclus dans toutes nos formules</span>
               </p>
             </div>
-            <span className="hidden sm:inline text-[#666]">—</span>
+            <span className="hidden sm:inline text-[#8a8a8a]">—</span>
             <p className="text-[#888]">
               Notre plateforme, conçue et développée par MG Events
             </p>
@@ -1222,7 +1222,7 @@ function AutresEvenements() {
                     Oct-Avril
                   </span>
                 </div>
-                <p className="text-[#888] text-sm">Animation complète + vidéo projecteur • <span className="text-[#666] italic">Détails sur demande</span></p>
+                <p className="text-[#888] text-sm">Animation complète + vidéo projecteur • <span className="text-[#8a8a8a] italic">Détails sur demande</span></p>
               </div>
             </div>
             <div className="flex items-center gap-4 shrink-0">
@@ -1485,8 +1485,8 @@ function Footer() {
             />
             <p className="text-[#888] text-sm mb-4">DJ animateur mariage en Bretagne depuis plus de 20 ans.</p>
             <p className="text-[#888] text-sm">
-              <a href="tel:+33648106166" className="text-[#c9a227] hover:underline">06 48 10 61 66</a><br />
-              <a href="mailto:mg.events35@gmail.com" className="text-[#c9a227] hover:underline">mg.events35@gmail.com</a>
+              <a href="tel:+33648106166" className="inline-block py-1 text-[#c9a227] hover:underline">06 48 10 61 66</a><br />
+              <a href="mailto:mg.events35@gmail.com" className="inline-block py-1 text-[#c9a227] hover:underline">mg.events35@gmail.com</a>
             </p>
           </div>
 
@@ -1575,10 +1575,10 @@ function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[#c9a227]/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-[#666]">
+          <p className="text-sm text-[#8a8a8a]">
             © {new Date().getFullYear()} MG Events Animation - DJ Mariage Bretagne - Tous droits réservés
           </p>
-          <p className="text-xs text-[#444]">
+          <p className="text-xs text-[#8a8a8a]">
             Rennes • Vannes • Nantes • Quimper • Brest • Laval
           </p>
         </div>

@@ -100,7 +100,7 @@ export default function HomeHeader() {
 
               {/* Mobile Zones */}
               <div className="border-t border-[#c9a227]/10 pt-4">
-                <p className="text-xs text-[#666] uppercase tracking-wider mb-2">Zones d&apos;intervention</p>
+                <p className="text-xs text-[#8a8a8a] uppercase tracking-wider mb-2">Zones d&apos;intervention</p>
                 {zones.map((zone) => (
                   <a key={zone.href} href={zone.href} className="block text-[#aaa] hover:text-[#c9a227] transition-colors py-1.5 text-sm">
                     {zone.label}

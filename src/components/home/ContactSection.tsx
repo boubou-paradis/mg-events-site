@@ -87,7 +87,7 @@ export default function ContactSection() {
                   <Phone size={20} className="text-[#c9a227]" />
                 </div>
                 <div>
-                  <div className="text-xs text-[#666] uppercase tracking-wider">Téléphone</div>
+                  <div className="text-xs text-[#8a8a8a] uppercase tracking-wider">Téléphone</div>
                   <div className="text-white">06 48 10 61 66</div>
                 </div>
               </a>
@@ -100,7 +100,7 @@ export default function ContactSection() {
                   <Mail size={20} className="text-[#c9a227]" />
                 </div>
                 <div>
-                  <div className="text-xs text-[#666] uppercase tracking-wider">Email</div>
+                  <div className="text-xs text-[#8a8a8a] uppercase tracking-wider">Email</div>
                   <div className="text-white">mg.events35@gmail.com</div>
                 </div>
               </a>
@@ -110,7 +110,7 @@ export default function ContactSection() {
                   <MapPin size={20} className="text-[#c9a227]" />
                 </div>
                 <div>
-                  <div className="text-xs text-[#666] uppercase tracking-wider">Zone d&apos;intervention</div>
+                  <div className="text-xs text-[#8a8a8a] uppercase tracking-wider">Zone d&apos;intervention</div>
                   <div className="text-white">Bretagne & Grand Ouest</div>
                 </div>
               </div>
@@ -137,8 +137,9 @@ export default function ContactSection() {
               {/* Name & Email */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm text-[#888] mb-2">Nom complet *</label>
+                  <label htmlFor="contact-name" className="block text-sm text-[#888] mb-2">Nom complet *</label>
                   <input
+                    id="contact-name"
                     type="text"
                     required
                     value={formData.name}
@@ -148,8 +149,9 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-[#888] mb-2">Email *</label>
+                  <label htmlFor="contact-email" className="block text-sm text-[#888] mb-2">Email *</label>
                   <input
+                    id="contact-email"
                     type="email"
                     required
                     value={formData.email}
@@ -163,8 +165,9 @@ export default function ContactSection() {
               {/* Phone & Date */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm text-[#888] mb-2">Téléphone *</label>
+                  <label htmlFor="contact-phone" className="block text-sm text-[#888] mb-2">Téléphone *</label>
                   <input
+                    id="contact-phone"
                     type="tel"
                     required
                     value={formData.phone}
@@ -174,8 +177,9 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-[#888] mb-2">Date de l&apos;événement</label>
+                  <label htmlFor="contact-date" className="block text-sm text-[#888] mb-2">Date de l&apos;événement</label>
                   <input
+                    id="contact-date"
                     type="date"
                     value={formData.date}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
@@ -186,8 +190,9 @@ export default function ContactSection() {
 
               {/* Location */}
               <div>
-                <label className="block text-sm text-[#888] mb-2">Lieu de réception</label>
+                <label htmlFor="contact-location" className="block text-sm text-[#888] mb-2">Lieu de réception</label>
                 <input
+                    id="contact-location"
                   type="text"
                   value={formData.location}
                   onChange={(e) => setFormData({ ...formData, location: e.target.value })}
@@ -198,8 +203,9 @@ export default function ContactSection() {
 
               {/* Adresse postale (pour l'envoi du devis) */}
               <div>
-                <label className="block text-sm text-[#888] mb-2">Adresse postale (pour l&apos;envoi du devis)</label>
+                <label htmlFor="contact-address" className="block text-sm text-[#888] mb-2">Adresse postale (pour l&apos;envoi du devis)</label>
                 <input
+                    id="contact-address"
                   type="text"
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
@@ -211,8 +217,9 @@ export default function ContactSection() {
               {/* Code postal & Ville */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm text-[#888] mb-2">Code postal *</label>
+                  <label htmlFor="contact-postal" className="block text-sm text-[#888] mb-2">Code postal *</label>
                   <input
+                    id="contact-postal"
                     type="text"
                     inputMode="numeric"
                     required
@@ -226,8 +233,9 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-[#888] mb-2">Ville *</label>
+                  <label htmlFor="contact-city" className="block text-sm text-[#888] mb-2">Ville *</label>
                   <input
+                    id="contact-city"
                     type="text"
                     required
                     value={formData.city}
@@ -241,8 +249,9 @@ export default function ContactSection() {
               {/* Event type & Formule */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm text-[#888] mb-2">Type d&apos;événement</label>
+                  <label htmlFor="contact-event-type" className="block text-sm text-[#888] mb-2">Type d&apos;événement</label>
                   <select
+                    id="contact-event-type"
                     value={formData.eventType}
                     onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
                     className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white focus:border-[#c9a227] focus:outline-none transition-colors"
@@ -254,8 +263,9 @@ export default function ContactSection() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm text-[#888] mb-2">Formule souhaitée</label>
+                  <label htmlFor="contact-formule" className="block text-sm text-[#888] mb-2">Formule souhaitée</label>
                   <select
+                    id="contact-formule"
                     value={formData.formule}
                     onChange={(e) => setFormData({ ...formData, formule: e.target.value })}
                     className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white focus:border-[#c9a227] focus:outline-none transition-colors"
@@ -270,8 +280,9 @@ export default function ContactSection() {
 
               {/* Message */}
               <div>
-                <label className="block text-sm text-[#888] mb-2">Votre message</label>
+                <label htmlFor="contact-message" className="block text-sm text-[#888] mb-2">Votre message</label>
                 <textarea
+                    id="contact-message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={4}
@@ -300,7 +311,7 @@ export default function ContactSection() {
                 </div>
               )}
 
-              <p className="text-xs text-[#666] text-center">
+              <p className="text-xs text-[#8a8a8a] text-center">
                 Réponse garantie sous 24h • Devis gratuit et sans engagement
               </p>
             </form>
