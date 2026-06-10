@@ -1,83 +1,18 @@
-'use client';
-
-import { useState, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
-// ============ LIGHTBOX MODAL ============
-function ImageLightbox({
-  src,
-  alt,
-  isOpen,
-  onClose
-}: {
-  src: string;
-  alt: string;
-  isOpen: boolean;
-  onClose: () => void;
-}) {
-  if (!isOpen) return null;
-
-  return (
-    <div
-      className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 cursor-zoom-out"
-      onClick={onClose}
-    >
-      <button
-        onClick={onClose}
-        className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors z-10"
-        aria-label="Fermer"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      <div className="relative max-w-[90vw] max-h-[90vh] animate-fade-up">
-        <Image
-          src={src}
-          alt={alt}
-          width={1920}
-          height={1080}
-          className="object-contain max-h-[90vh] w-auto h-auto rounded-lg"
-          onClick={(e) => e.stopPropagation()}
-        />
-        <p className="text-white/70 text-center mt-4 text-sm">{alt}</p>
-      </div>
-    </div>
-  );
-}
-
-// Hook pour gérer la lightbox
-function useLightbox() {
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
-
-  const openLightbox = useCallback((src: string, alt: string) => {
-    setLightbox({ src, alt });
-    document.body.style.overflow = 'hidden';
-  }, []);
-
-  const closeLightbox = useCallback(() => {
-    setLightbox(null);
-    document.body.style.overflow = '';
-  }, []);
-
-  return { lightbox, openLightbox, closeLightbox };
-}
+import HomeHeader from '@/components/home/HomeHeader';
+import ContactSection from '@/components/home/ContactSection';
+import LightboxTrigger from '@/components/home/LightboxTrigger';
 
 import {
   Mic2,
   PartyPopper,
-  Camera,
   Lightbulb,
   Monitor,
   Star,
-  Phone,
   Mail,
   MapPin,
   ChevronDown,
-  Menu,
-  X,
   Check,
   Quote,
   Cake,
@@ -99,124 +34,6 @@ import {
   ListMusic,
   Info,
 } from 'lucide-react';
-
-// ============ HEADER ============
-function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [zonesOpen, setZonesOpen] = useState(false);
-
-  const zones = [
-    { label: 'Ille-et-Vilaine (35)', href: '/dj-mariage-ille-et-vilaine' },
-    { label: 'Morbihan (56)', href: '/dj-mariage-morbihan' },
-    { label: 'Finistère (29)', href: '/dj-mariage-finistere' },
-    { label: 'Loire-Atlantique (44)', href: '/dj-mariage-loire-atlantique' },
-    { label: 'Mayenne (53)', href: '/dj-mariage-mayenne' },
-  ];
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#hero" className="flex items-center">
-            <Image
-              src="/images/logo.png"
-              alt="MG Events Animation DJ Mariage Bretagne"
-              width={240}
-              height={96}
-              sizes="(max-width: 768px) 200px, 240px"
-              className="h-20 md:h-24 w-auto"
-              priority
-            />
-          </a>
-
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#about" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">À propos</a>
-            <a href="#formules" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Formules</a>
-
-            {/* Zones Dropdown */}
-            <div className="relative" onMouseEnter={() => setZonesOpen(true)} onMouseLeave={() => setZonesOpen(false)}>
-              <button className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors flex items-center gap-1 py-2">
-                Zones
-                <ChevronDown size={14} className={`transition-transform ${zonesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {zonesOpen && (
-                <div className="absolute top-full left-0 pt-2 w-56">
-                  <div className="bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg shadow-xl py-2">
-                    {zones.map((zone) => (
-                      <a
-                        key={zone.href}
-                        href={zone.href}
-                        className="block px-4 py-2 text-sm text-[#aaa] hover:text-[#c9a227] hover:bg-[#c9a227]/5 transition-colors"
-                      >
-                        {zone.label}
-                      </a>
-                    ))}
-                    <div className="border-t border-[#c9a227]/10 mt-2 pt-2">
-                      <a
-                        href="/zones-intervention"
-                        className="block px-4 py-2 text-sm text-[#c9a227] hover:bg-[#c9a227]/5 transition-colors"
-                      >
-                        Toutes les zones →
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <a href="/blog" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Blog</a>
-            <a href="#contact" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Contact</a>
-            <a href="/partenaires" className="btn-gold">
-              Partenaires
-            </a>
-            <a href="#contact" className="btn-gold">
-              Devis gratuit
-            </a>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-white"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Nav */}
-        {isOpen && (
-          <nav className="md:hidden pt-6 pb-4 border-t border-[#c9a227]/10 mt-4">
-            <div className="flex flex-col gap-4">
-              <a href="#about" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2">À propos</a>
-              <a href="#formules" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2">Formules</a>
-
-              {/* Mobile Zones */}
-              <div className="border-t border-[#c9a227]/10 pt-4">
-                <p className="text-xs text-[#666] uppercase tracking-wider mb-2">Zones d&apos;intervention</p>
-                {zones.map((zone) => (
-                  <a key={zone.href} href={zone.href} className="block text-[#aaa] hover:text-[#c9a227] transition-colors py-1.5 text-sm">
-                    {zone.label}
-                  </a>
-                ))}
-              </div>
-
-              <a href="/blog" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2 border-t border-[#c9a227]/10 pt-4">Blog</a>
-              <a href="#contact" onClick={() => setIsOpen(false)} className="text-[#aaa] hover:text-[#c9a227] transition-colors py-2">Contact</a>
-              <a href="/partenaires" onClick={() => setIsOpen(false)} className="btn-gold text-center mt-2">
-                Partenaires
-              </a>
-              <a href="#contact" className="btn-gold text-center mt-2">
-                Devis gratuit
-              </a>
-            </div>
-          </nav>
-        )}
-      </div>
-    </header>
-  );
-}
 
 // ============ HERO ============
 function Hero() {
@@ -334,16 +151,17 @@ function QuickNav() {
 }
 
 // ============ ABOUT ============
-function About({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
+function About() {
   return (
     <section id="about" className="py-16 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="relative">
-            <div
-              className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
-              onClick={() => onImageClick('/images/gallery-2.jpg', 'Setup DJ professionnel sonorisation mariage - MG Events Animation')}
+            <LightboxTrigger
+              src="/images/gallery-2.jpg"
+              alt="Setup DJ professionnel sonorisation mariage - MG Events Animation"
+              className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
             >
               <Image
                 src="/images/gallery-2.jpg"
@@ -351,7 +169,7 @@ function About({ onImageClick }: { onImageClick: (src: string, alt: string) => v
                 fill
                 className="object-cover"
               />
-            </div>
+            </LightboxTrigger>
             {/* Decorative frame */}
             <div className="absolute -bottom-4 -right-4 w-full h-full border border-[#c9a227]/20 rounded-lg -z-10" />
           </div>
@@ -409,7 +227,7 @@ function About({ onImageClick }: { onImageClick: (src: string, alt: string) => v
 }
 
 // ============ EXPERIENCE MUSICALE ============
-function ExperienceMusicale({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
+function ExperienceMusicale() {
   const stats = [
     {
       icon: Headphones,
@@ -480,9 +298,10 @@ function ExperienceMusicale({ onImageClick }: { onImageClick: (src: string, alt:
 
           {/* Image */}
           <div className="relative">
-            <div
-              className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20 cursor-zoom-in"
-              onClick={() => onImageClick('/images/console-dj-pro.jpg', 'Console DJ professionnelle - MG Events Animation')}
+            <LightboxTrigger
+              src="/images/console-dj-pro.jpg"
+              alt="Console DJ professionnelle - MG Events Animation"
+              className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20 cursor-zoom-in"
             >
               <Image
                 src="/images/console-dj-pro.jpg"
@@ -490,7 +309,7 @@ function ExperienceMusicale({ onImageClick }: { onImageClick: (src: string, alt:
                 fill
                 className="object-cover"
               />
-            </div>
+            </LightboxTrigger>
             <div className="absolute -bottom-4 -left-4 w-full h-full border border-[#c9a227]/20 rounded-lg -z-10" />
           </div>
         </div>
@@ -552,7 +371,7 @@ function ExperienceMusicale({ onImageClick }: { onImageClick: (src: string, alt:
 }
 
 // ============ FORMULES ============
-function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
+function Formules() {
   const formules = [
     {
       name: 'Éclat d\'Amour',
@@ -623,9 +442,10 @@ function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) =
           <div className="card-dark overflow-hidden hover:border-[#c9a227]/40 transition-all duration-300">
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image */}
-              <div
+              <LightboxTrigger
+                src="/images/ceremonie-laique.jpg"
+                alt="Cérémonie laïque en extérieur"
                 className="relative h-72 lg:h-auto min-h-[300px] cursor-zoom-in"
-                onClick={() => onImageClick('/images/ceremonie-laique.jpg', 'Cérémonie laïque en extérieur')}
               >
                 <Image
                   src="/images/ceremonie-laique.jpg"
@@ -633,7 +453,7 @@ function Formules({ onImageClick }: { onImageClick: (src: string, alt: string) =
                   fill
                   className="object-cover"
                 />
-              </div>
+              </LightboxTrigger>
               {/* Content */}
               <div className="p-8">
                 <div className="flex items-center justify-between mb-6">
@@ -923,300 +743,8 @@ function Testimonials() {
   );
 }
 
-// ============ CONTACT ============
-function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    address: '',
-    postalCode: '',
-    city: '',
-    date: '',
-    location: '',
-    eventType: 'mariage',
-    formule: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          address: '',
-          postalCode: '',
-          city: '',
-          date: '',
-          location: '',
-          eventType: 'mariage',
-          formule: '',
-          message: '',
-        });
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  return (
-    <section id="contact" className="py-16 bg-[#0a0a0a]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Info */}
-          <div>
-            <div className="gold-line mb-6" />
-            <h2 className="section-title text-white mb-6">
-              Parlons de votre <span className="text-gradient-gold">projet</span>
-            </h2>
-            <p className="text-[#888] mb-8 leading-relaxed">
-              Chaque événement est unique. Contactez-nous pour discuter de vos envies 
-              et recevoir un devis personnalisé sous 24h.
-            </p>
-
-            {/* Contact info */}
-            <div className="space-y-6">
-              <a
-                href="tel:+33648106166"
-                className="flex items-center gap-4 text-[#aaa] hover:text-[#c9a227] transition-colors"
-              >
-                <div className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#c9a227]/20 flex items-center justify-center">
-                  <Phone size={20} className="text-[#c9a227]" />
-                </div>
-                <div>
-                  <div className="text-xs text-[#666] uppercase tracking-wider">Téléphone</div>
-                  <div className="text-white">06 48 10 61 66</div>
-                </div>
-              </a>
-
-              <a 
-                href="mailto:mg.events35@gmail.com" 
-                className="flex items-center gap-4 text-[#aaa] hover:text-[#c9a227] transition-colors"
-              >
-                <div className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#c9a227]/20 flex items-center justify-center">
-                  <Mail size={20} className="text-[#c9a227]" />
-                </div>
-                <div>
-                  <div className="text-xs text-[#666] uppercase tracking-wider">Email</div>
-                  <div className="text-white">mg.events35@gmail.com</div>
-                </div>
-              </a>
-
-              <div className="flex items-center gap-4 text-[#aaa]">
-                <div className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#c9a227]/20 flex items-center justify-center">
-                  <MapPin size={20} className="text-[#c9a227]" />
-                </div>
-                <div>
-                  <div className="text-xs text-[#666] uppercase tracking-wider">Zone d&apos;intervention</div>
-                  <div className="text-white">Bretagne & Grand Ouest</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Form */}
-          <div className="card-dark p-8 hover:border-[#c9a227]/40 transition-all duration-300">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name & Email */}
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm text-[#888] mb-2">Nom complet *</label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
-                    placeholder="Votre nom"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm text-[#888] mb-2">Email *</label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
-                    placeholder="votre@email.com"
-                  />
-                </div>
-              </div>
-
-              {/* Phone & Date */}
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm text-[#888] mb-2">Téléphone *</label>
-                  <input
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
-                    placeholder="06 XX XX XX XX"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm text-[#888] mb-2">Date de l&apos;événement</label>
-                  <input
-                    type="date"
-                    value={formData.date}
-                    onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
-                  />
-                </div>
-              </div>
-
-              {/* Location */}
-              <div>
-                <label className="block text-sm text-[#888] mb-2">Lieu de réception</label>
-                <input
-                  type="text"
-                  value={formData.location}
-                  onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                  className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
-                  placeholder="Nom de la salle ou adresse"
-                />
-              </div>
-
-              {/* Adresse postale (pour l'envoi du devis) */}
-              <div>
-                <label className="block text-sm text-[#888] mb-2">Adresse postale (pour l&apos;envoi du devis)</label>
-                <input
-                  type="text"
-                  value={formData.address}
-                  onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                  className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
-                  placeholder="Numéro et rue"
-                />
-              </div>
-
-              {/* Code postal & Ville */}
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm text-[#888] mb-2">Code postal *</label>
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    required
-                    pattern="[0-9]{5}"
-                    maxLength={5}
-                    title="Le code postal doit contenir 5 chiffres"
-                    value={formData.postalCode}
-                    onChange={(e) => setFormData({ ...formData, postalCode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
-                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
-                    placeholder="35600"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm text-[#888] mb-2">Ville *</label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.city}
-                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
-                    placeholder="Bains-sur-Oust"
-                  />
-                </div>
-              </div>
-
-              {/* Event type & Formule */}
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm text-[#888] mb-2">Type d&apos;événement</label>
-                  <select
-                    value={formData.eventType}
-                    onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white focus:border-[#c9a227] focus:outline-none transition-colors"
-                  >
-                    <option value="mariage">Mariage</option>
-                    <option value="anniversaire">Anniversaire</option>
-                    <option value="entreprise">Événement d&apos;entreprise</option>
-                    <option value="autre">Autre</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm text-[#888] mb-2">Formule souhaitée</label>
-                  <select
-                    value={formData.formule}
-                    onChange={(e) => setFormData({ ...formData, formule: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white focus:border-[#c9a227] focus:outline-none transition-colors"
-                  >
-                    <option value="">Je ne sais pas encore</option>
-                    <option value="eclat">Éclat d&apos;Amour (1200€)</option>
-                    <option value="reve">Rêve en Blanc (1490€)</option>
-                    <option value="conte">Conte de Fées (1690€)</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Message */}
-              <div>
-                <label className="block text-sm text-[#888] mb-2">Votre message</label>
-                <textarea
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={4}
-                  className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors resize-none"
-                  placeholder="Parlez-nous de votre projet, vos envies, vos questions..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="btn-gold w-full disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
-              </button>
-
-              {submitStatus === 'success' && (
-                <div className="p-4 bg-green-900/20 border border-green-500/30 rounded text-green-400 text-sm text-center">
-                  Merci ! Votre demande a bien été envoyée. Nous vous recontactons sous 24h.
-                </div>
-              )}
-
-              {submitStatus === 'error' && (
-                <div className="p-4 bg-red-900/20 border border-red-500/30 rounded text-red-400 text-sm text-center">
-                  Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.
-                </div>
-              )}
-
-              <p className="text-xs text-[#666] text-center">
-                Réponse garantie sous 24h • Devis gratuit et sans engagement
-              </p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // ============ GALLERY ============
-function Gallery({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
+function Gallery() {
   const images = [
     { src: '/images/gallery-1.jpg', alt: 'Couple dansant dans la fumée avec jeux de lumières' },
     { src: '/images/gallery-2.jpg', alt: 'Première danse avec fontaine étincelles' },
@@ -1248,10 +776,11 @@ function Gallery({ onImageClick }: { onImageClick: (src: string, alt: string) =>
         {/* Gallery Grid - Balanced 4 columns */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {images.map((image, index) => (
-            <div
+            <LightboxTrigger
               key={index}
+              src={image.src}
+              alt={image.alt}
               className="relative overflow-hidden rounded-lg border border-[#c9a227]/10 group cursor-zoom-in"
-              onClick={() => onImageClick(image.src, image.alt)}
             >
               <div className="relative aspect-square">
                 <Image
@@ -1262,7 +791,7 @@ function Gallery({ onImageClick }: { onImageClick: (src: string, alt: string) =>
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-            </div>
+            </LightboxTrigger>
           ))}
         </div>
       </div>
@@ -1271,7 +800,7 @@ function Gallery({ onImageClick }: { onImageClick: (src: string, alt: string) =>
 }
 
 // ============ PHOTOBOOTH ============
-function Photobooth({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
+function Photobooth() {
   return (
     <section id="photobooth" className="py-16 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto px-6">
@@ -1288,9 +817,10 @@ function Photobooth({ onImageClick }: { onImageClick: (src: string, alt: string)
           {/* Photos à gauche */}
           <div className="lg:col-span-2 grid grid-cols-2 gap-4">
             {/* Main photo */}
-            <div
+            <LightboxTrigger
+              src="/images/photobooth-2.jpg"
+              alt="Photobooth en action"
               className="col-span-2 relative rounded-lg overflow-hidden border border-[#c9a227]/10 group cursor-zoom-in"
-              onClick={() => onImageClick('/images/photobooth-2.jpg', 'Photobooth en action')}
             >
               <div className="relative aspect-[16/9]">
                 <Image
@@ -1300,24 +830,26 @@ function Photobooth({ onImageClick }: { onImageClick: (src: string, alt: string)
                   className="object-cover"
                 />
               </div>
-            </div>
+            </LightboxTrigger>
             {/* Thumbnails */}
-            <div
+            <LightboxTrigger
+              src="/images/photobooth-1.jpg"
+              alt="Photobooth vintage TSF années 60 - mariage Bretagne MG Events"
               className="relative rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
-              onClick={() => onImageClick('/images/photobooth-1.jpg', 'Photobooth face')}
             >
               <div className="relative aspect-[4/3]">
                 <Image src="/images/photobooth-1.jpg" alt="Photobooth vintage TSF années 60 - mariage Bretagne MG Events" fill className="object-cover" />
               </div>
-            </div>
-            <div
+            </LightboxTrigger>
+            <LightboxTrigger
+              src="/images/photobooth-3.jpg"
+              alt="Photobooth vintage TSF - impressions photos instantanées mariage"
               className="relative rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
-              onClick={() => onImageClick('/images/photobooth-3.jpg', 'Photobooth côté')}
             >
               <div className="relative aspect-[4/3]">
                 <Image src="/images/photobooth-3.jpg" alt="Photobooth vintage TSF - impressions photos instantanées mariage" fill className="object-cover" />
               </div>
-            </div>
+            </LightboxTrigger>
           </div>
 
           {/* Infos à droite */}
@@ -1493,7 +1025,7 @@ function AnimaJet() {
                 className="w-full max-w-4xl mx-auto rounded-xl"
                 controls
                 preload="metadata"
-                poster="/images/animajet-logo.png"
+                poster="/images/animajet-thumbnail.jpg"
               >
                 <source src="/promo-animajet.mp4" type="video/mp4" />
                 Votre navigateur ne supporte pas la lecture de vidéos.
@@ -1530,7 +1062,7 @@ function AnimaJet() {
 }
 
 // ============ ETINCELLES FROIDES ============
-function EtincellesFroides({ onImageClick }: { onImageClick: (src: string, alt: string) => void }) {
+function EtincellesFroides() {
   const securite = [
     {
       icon: Award,
@@ -1566,9 +1098,10 @@ function EtincellesFroides({ onImageClick }: { onImageClick: (src: string, alt: 
         <div className="grid lg:grid-cols-3 gap-6 mb-8">
           {/* Image */}
           <div className="relative">
-            <div
+            <LightboxTrigger
+              src="/images/etincelles-ouverture-bal.jpg"
+              alt="Étincelles froides lors d'une ouverture de bal"
               className="relative aspect-[3/4] rounded-lg overflow-hidden border border-[#c9a227]/20 cursor-zoom-in"
-              onClick={() => onImageClick('/images/etincelles-ouverture-bal.jpg', 'Étincelles froides lors d\'une ouverture de bal')}
             >
               <Image
                 src="/images/etincelles-ouverture-bal.jpg"
@@ -1576,7 +1109,7 @@ function EtincellesFroides({ onImageClick }: { onImageClick: (src: string, alt: 
                 fill
                 className="object-cover"
               />
-            </div>
+            </LightboxTrigger>
             {/* Badge CE */}
             <div className="absolute bottom-4 right-4 bg-[#0a0a0a] border-2 border-[#c9a227] rounded-full p-3">
               <ShieldCheck size={20} className="text-[#c9a227]" />
@@ -2056,35 +1589,25 @@ function Footer() {
 
 // ============ PAGE ============
 export default function Home() {
-  const { lightbox, openLightbox, closeLightbox } = useLightbox();
-
   return (
     <>
-      <Header />
+      <HomeHeader />
       <main>
         <Hero />
         <QuickNav />
-        <About onImageClick={openLightbox} />
-        <ExperienceMusicale onImageClick={openLightbox} />
-        <Gallery onImageClick={openLightbox} />
-        <Photobooth onImageClick={openLightbox} />
+        <About />
+        <ExperienceMusicale />
+        <Gallery />
+        <Photobooth />
         <AnimaJet />
-        <EtincellesFroides onImageClick={openLightbox} />
+        <EtincellesFroides />
         <Testimonials />
-        <Formules onImageClick={openLightbox} />
+        <Formules />
         <AutresEvenements />
-        <Contact />
+        <ContactSection />
         <ZonesMariage />
       </main>
       <Footer />
-
-      {/* Lightbox Modal */}
-      <ImageLightbox
-        src={lightbox?.src || ''}
-        alt={lightbox?.alt || ''}
-        isOpen={!!lightbox}
-        onClose={closeLightbox}
-      />
     </>
   );
 }

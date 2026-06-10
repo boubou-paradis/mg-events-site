@@ -16,6 +16,41 @@ interface ContactFormData {
   eventType: string;
   formule: string;
   message: string;
+  website?: string; // honeypot : doit rester vide
+}
+
+// Échappe les caractères HTML pour éviter toute injection dans l'email
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Rate limiting en mémoire par IP (best effort sur serverless :
+// chaque instance a sa propre Map, mais ça bloque les rafales d'un même bot)
+const submissions = new Map<string, number[]>();
+const RATE_LIMIT = 5; // max 5 envois...
+const RATE_WINDOW_MS = 10 * 60 * 1000; // ...par 10 minutes
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const recent = (submissions.get(ip) || []).filter((t) => now - t < RATE_WINDOW_MS);
+  if (recent.length >= RATE_LIMIT) {
+    submissions.set(ip, recent);
+    return true;
+  }
+  recent.push(now);
+  submissions.set(ip, recent);
+  // Évite que la Map grossisse indéfiniment
+  if (submissions.size > 1000) {
+    for (const [key, times] of submissions) {
+      if (times.every((t) => now - t >= RATE_WINDOW_MS)) submissions.delete(key);
+    }
+  }
+  return false;
 }
 
 const formuleLabels: Record<string, string> = {
@@ -42,10 +77,37 @@ export async function POST(request: NextRequest) {
   try {
     const data: ContactFormData = await request.json();
 
+    // Honeypot : un humain ne voit pas ce champ, un bot le remplit.
+    // On répond "succès" pour ne pas signaler le filtre au bot.
+    if (data.website) {
+      return NextResponse.json({ success: true });
+    }
+
+    // Rate limiting par IP
+    const ip = (request.headers.get('x-forwarded-for') || 'unknown').split(',')[0].trim();
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: 'Trop de demandes. Veuillez réessayer dans quelques minutes.' },
+        { status: 429 }
+      );
+    }
+
     // Validation basique
     if (!data.name || !data.email || !data.phone) {
       return NextResponse.json(
         { error: 'Les champs nom, email et telephone sont requis.' },
+        { status: 400 }
+      );
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      return NextResponse.json(
+        { error: 'Adresse email invalide.' },
+        { status: 400 }
+      );
+    }
+    if (data.message && data.message.length > 5000) {
+      return NextResponse.json(
+        { error: 'Message trop long (5000 caractères maximum).' },
         { status: 400 }
       );
     }
@@ -78,6 +140,24 @@ export async function POST(request: NextRequest) {
 
     // 2. Envoyer email de notification (si Resend configuré)
     if (resend) {
+      // Toutes les valeurs saisies par l'utilisateur sont échappées avant
+      // interpolation dans le HTML de l'email
+      const safe = {
+        name: escapeHtml(data.name),
+        email: escapeHtml(data.email),
+        phone: escapeHtml(data.phone),
+        address: escapeHtml(data.address || ''),
+        postalCode: escapeHtml(data.postalCode || ''),
+        city: escapeHtml(data.city || ''),
+        location: escapeHtml(data.location || ''),
+        eventType: escapeHtml(eventTypeLabels[data.eventType] || data.eventType || ''),
+        formule: escapeHtml(formuleLabels[data.formule] || data.formule || 'Non specifiee'),
+        message: escapeHtml(data.message || ''),
+      };
+      const fullAddress = [safe.address, [safe.postalCode, safe.city].filter(Boolean).join(' ')]
+        .filter(Boolean)
+        .join(', ');
+
       await resend.emails.send({
         from: 'MG Events <onboarding@resend.dev>',
         to: 'mgevents.ecommerce@gmail.com',
@@ -91,24 +171,24 @@ export async function POST(request: NextRequest) {
 
             <h2 style="color: #333;">Coordonnees</h2>
             <ul style="list-style: none; padding: 0;">
-              <li><strong>Nom:</strong> ${data.name}</li>
-              <li><strong>Email:</strong> ${data.email}</li>
-              <li><strong>Telephone:</strong> ${data.phone}</li>
-              ${[data.address, [data.postalCode, data.city].filter(Boolean).join(' ')].filter(Boolean).join(', ') ? `<li><strong>Adresse postale:</strong> ${[data.address, [data.postalCode, data.city].filter(Boolean).join(' ')].filter(Boolean).join(', ')}</li>` : ''}
+              <li><strong>Nom:</strong> ${safe.name}</li>
+              <li><strong>Email:</strong> ${safe.email}</li>
+              <li><strong>Telephone:</strong> ${safe.phone}</li>
+              ${fullAddress ? `<li><strong>Adresse postale:</strong> ${fullAddress}</li>` : ''}
             </ul>
 
             <h2 style="color: #333;">Details de l'evenement</h2>
             <ul style="list-style: none; padding: 0;">
-              <li><strong>Type:</strong> ${eventTypeLabels[data.eventType] || data.eventType}</li>
+              <li><strong>Type:</strong> ${safe.eventType}</li>
               <li><strong>Date:</strong> ${formatDate(data.date)}</li>
-              <li><strong>Lieu:</strong> ${data.location || 'Non precise'}</li>
-              <li><strong>Formule souhaitee:</strong> ${formuleLabels[data.formule] || data.formule || 'Non specifiee'}</li>
+              <li><strong>Lieu:</strong> ${safe.location || 'Non precise'}</li>
+              <li><strong>Formule souhaitee:</strong> ${safe.formule}</li>
             </ul>
 
-            ${data.message ? `
+            ${safe.message ? `
             <h2 style="color: #333;">Message</h2>
             <p style="background: #f5f5f5; padding: 15px; border-radius: 5px;">
-              ${data.message.replace(/\n/g, '<br>')}
+              ${safe.message.replace(/\n/g, '<br>')}
             </p>
             ` : ''}
 
