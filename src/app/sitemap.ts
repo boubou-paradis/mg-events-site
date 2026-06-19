@@ -85,6 +85,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.85,
     },
+    // Prestation Livre d'Or Audio
+    {
+      url: `${baseUrl}/livre-dor-audio`,
+      lastModified: '2026-06-19',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // Page zones d'intervention
     {
       url: `${baseUrl}/zones-intervention`,

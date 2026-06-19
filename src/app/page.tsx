@@ -33,6 +33,8 @@ import {
   Printer,
   ListMusic,
   Info,
+  Phone,
+  Heart,
 } from 'lucide-react';
 
 // ============ HERO ============
@@ -130,6 +132,7 @@ function QuickNav() {
     { href: '#about', label: 'Notre histoire' },
     { href: '#formules', label: 'Formules & Tarifs' },
     { href: '#photobooth', label: 'Photobooth Vintage' },
+    { href: '#livre-dor-audio', label: 'Livre d\'Or Audio' },
     { href: '#animajet', label: 'AnimaJet' },
     { href: '#testimonials', label: 'Avis clients' },
     { href: '#contact', label: 'Nous contacter' },
@@ -400,6 +403,7 @@ function Formules() {
         'Boule à facettes 50cm',
         'Machine à fumée lourde',
         '2 lanceurs étincelles froides',
+        'Livre d\'Or Audio (téléphone rétro à messages)',
       ],
       popular: true,
     },
@@ -888,6 +892,97 @@ function Photobooth() {
                   <span className="text-[#888] text-sm">€</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ============ LIVRE D'OR AUDIO ============
+function LivreOrAudio() {
+  return (
+    <section id="livre-dor-audio" className="py-16 bg-[#141414]">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header compact */}
+        <div className="text-center mb-10">
+          <span className="inline-flex items-center gap-2 text-xs text-[#c9a227] uppercase tracking-wider mb-3">
+            <Sparkles size={14} /> Nouveauté
+          </span>
+          <h2 className="section-title text-white mb-2">
+            Le <span className="text-gradient-gold">Livre d&apos;Or Audio</span>
+          </h2>
+          <p className="text-[#888]">Un téléphone rétro où vos invités laissent un message vocal pour la vie</p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Image */}
+          <LightboxTrigger
+            src="/images/livre-dor-audio-mariage.png"
+            alt="Livre d'or audio - téléphone rétro vintage pour messages vocaux des invités au mariage - MG Events"
+            className="relative h-80 lg:h-[420px] rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
+          >
+            <Image
+              src="/images/livre-dor-audio-mariage.png"
+              alt="Livre d'or audio - téléphone rétro vintage pour messages vocaux des invités au mariage - MG Events"
+              fill
+              className="object-contain"
+            />
+          </LightboxTrigger>
+
+          {/* Contenu */}
+          <div>
+            <div className="card-dark p-8 hover:border-[#c9a227]/40 transition-all duration-300">
+              <p className="text-[#aaa] leading-relaxed mb-4">
+                Imaginez : posé sur une jolie table, un <strong className="text-white">téléphone rétro</strong> attend
+                vos invités. Il suffit de décrocher le combiné pour laisser, en toute intimité, un
+                <strong className="text-white"> message vocal</strong> aux mariés. Une déclaration émue, une anecdote
+                qui fait rire, les rires d&apos;enfants, une chanson improvisée… autant de
+                <span className="text-[#c9a227]"> souvenirs audio authentiques</span> que vous réécouterez avec émotion
+                des années après votre mariage.
+              </p>
+              <p className="text-[#aaa] leading-relaxed mb-4">
+                Bien plus vivant qu&apos;un livre d&apos;or papier, le Livre d&apos;Or Audio capture les voix, les
+                intonations et la spontanéité de ceux que vous aimez. Son look <strong className="text-white">vintage</strong>
+                {' '}s&apos;intègre naturellement à tous les décors, du mariage champêtre à la réception la plus élégante.
+                À la fin de la soirée, nous vous remettons l&apos;intégralité des messages : un trésor sonore à conserver
+                pour toujours.
+              </p>
+
+              <ul className="space-y-2 mb-6">
+                {[
+                  'Téléphone rétro fourni, prêt à l\'emploi',
+                  'Messages vocaux remis après le mariage',
+                  'Aucune manipulation pour vos invités : on décroche, on parle',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-[#aaa]">
+                    <Heart size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Disponibilité */}
+              <div className="grid sm:grid-cols-2 gap-3 mb-6">
+                <div className="card-dark p-4">
+                  <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-1">Inclus dans</p>
+                  <p className="text-white font-[family-name:var(--font-display)] text-sm">Rêve en Blanc &amp; Conte de Fées</p>
+                </div>
+                <div className="card-dark p-4 border-[#c9a227]/30">
+                  <div className="flex items-center justify-between">
+                    <p className="text-xs text-[#c9a227] uppercase tracking-wider">Location seule</p>
+                    <div className="text-right">
+                      <span className="text-2xl font-[family-name:var(--font-display)] text-[#c9a227]">40</span>
+                      <span className="text-[#888] text-sm">€</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <Link href="/livre-dor-audio" className="btn-outline inline-flex items-center gap-2">
+                <Phone size={16} /> En savoir plus sur le Livre d&apos;Or Audio
+              </Link>
             </div>
           </div>
         </div>
@@ -1559,6 +1654,8 @@ function Footer() {
           <div>
             <h4 className="text-white font-medium mb-4">Informations</h4>
             <ul className="space-y-2">
+              <li><Link href="/livre-dor-audio" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Livre d&apos;Or Audio</Link></li>
+              <li><Link href="/animations-interactives-mariage" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Animations interactives</Link></li>
               <li><Link href="/philosophie" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Notre philosophie</Link></li>
               <li><Link href="/partenaires" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Nos partenaires</Link></li>
               <li><Link href="/mentions-legales" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Mentions légales</Link></li>
@@ -1599,6 +1696,7 @@ export default function Home() {
         <ExperienceMusicale />
         <Gallery />
         <Photobooth />
+        <LivreOrAudio />
         <AnimaJet />
         <EtincellesFroides />
         <Testimonials />
