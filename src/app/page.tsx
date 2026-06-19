@@ -929,6 +929,12 @@ function LivreOrAudio() {
               fill
               className="object-contain"
             />
+            {/* Ruban promo "Nouveau" */}
+            <div className="absolute top-0 right-0 z-20 h-28 w-28 overflow-hidden pointer-events-none">
+              <span className="absolute top-6 -right-8 w-40 rotate-45 bg-[#c9a227] py-1 text-center text-xs font-semibold uppercase tracking-widest text-[#0a0a0a] shadow-lg">
+                Nouveau
+              </span>
+            </div>
           </LightboxTrigger>
 
           {/* Contenu */}

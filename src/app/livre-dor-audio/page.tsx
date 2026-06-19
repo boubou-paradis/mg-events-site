@@ -147,7 +147,7 @@ export default function LivreOrAudioPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20 bg-[#141414]">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20 bg-[#141414]">
                 <Image
                   src="/images/livre-dor-audio-mariage.png"
                   alt="Livre d'or audio - téléphone rétro vintage pour messages vocaux des invités au mariage - MG Events"
@@ -155,6 +155,12 @@ export default function LivreOrAudioPage() {
                   className="object-contain"
                   priority
                 />
+                {/* Ruban promo "Nouveau" */}
+                <div className="absolute top-0 right-0 z-20 h-28 w-28 overflow-hidden pointer-events-none">
+                  <span className="absolute top-6 -right-8 w-40 rotate-45 bg-[#c9a227] py-1 text-center text-xs font-semibold uppercase tracking-widest text-[#0a0a0a] shadow-lg">
+                    Nouveau
+                  </span>
+                </div>
               </div>
             </div>
           </div>
