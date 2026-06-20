@@ -410,6 +410,11 @@ export default function DJMariageRennes() {
           <p className="text-[#888] text-center mt-8 text-sm">
             Option cérémonie laïque sonorisée : <span className="text-white font-medium">+180€</span> — 2 techniciens, sonorisation professionnelle
           </p>
+          <p className="text-[#888] text-center mt-3 text-sm">
+            <span className="text-[#c9a227] font-medium">Nouveauté</span> — sublimez la sortie des mariés avec notre{' '}
+            <Link href="/feu-artifice-jour" className="text-[#c9a227] hover:underline">feu d&apos;artifice de jour</Link>{' '}
+            (poudre Holi, 4 couleurs au choix, 120€)
+          </p>
         </div>
       </section>
 

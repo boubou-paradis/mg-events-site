@@ -35,6 +35,7 @@ import {
   Info,
   Phone,
   Heart,
+  Palette,
 } from 'lucide-react';
 
 // ============ HERO ============
@@ -133,6 +134,7 @@ function QuickNav() {
     { href: '#formules', label: 'Formules & Tarifs' },
     { href: '#photobooth', label: 'Photobooth Vintage' },
     { href: '#livre-dor-audio', label: 'Livre d\'Or Audio' },
+    { href: '#feu-artifice-jour', label: 'Feu d\'Artifice de Jour' },
     { href: '#animajet', label: 'AnimaJet' },
     { href: '#testimonials', label: 'Avis clients' },
     { href: '#contact', label: 'Nous contacter' },
@@ -1259,6 +1261,131 @@ function EtincellesFroides() {
   );
 }
 
+// ============ FEU D'ARTIFICE DE JOUR ============
+function FeuArtificeJour() {
+  const couleurs = [
+    { label: 'Rose', className: 'bg-pink-500' },
+    { label: 'Bleu', className: 'bg-sky-500' },
+    { label: 'Jaune', className: 'bg-yellow-400' },
+    { label: 'Vert', className: 'bg-green-500' },
+    { label: 'Violet', className: 'bg-violet-500' },
+    { label: 'Orange', className: 'bg-orange-500' },
+  ];
+
+  return (
+    <section id="feu-artifice-jour" className="py-16 bg-[#0a0a0a] relative overflow-hidden">
+      {/* Halos colorés (clin d'œil à la poudre Holi) */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-fuchsia-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl" />
+
+      <div className="max-w-7xl mx-auto px-6 relative">
+        {/* Header compact */}
+        <div className="text-center mb-10">
+          <span className="inline-flex items-center gap-2 px-3 py-1 mb-3 bg-[#c9a227] text-[#0a0a0a] text-xs font-semibold uppercase tracking-wider rounded-full">
+            <Sparkles size={14} /> Nouveauté
+          </span>
+          <h2 className="section-title text-white mb-2">
+            Feu d&apos;Artifice de Jour — <span className="text-gradient-gold">Explosion de Couleurs</span>
+          </h2>
+          <p className="text-[#888]">Un tir de poudre Holi qui explose en couleurs au plus beau moment de votre mariage</p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Image */}
+          <LightboxTrigger
+            src="/images/feu-artifice-jour-mariage.png"
+            alt="Feu d'artifice de jour - tir de poudre Holi colorée lors d'une cérémonie de mariage en Bretagne - MG Events"
+            className="relative h-80 lg:h-[420px] rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
+          >
+            <Image
+              src="/images/feu-artifice-jour-mariage.png"
+              alt="Feu d'artifice de jour - tir de poudre Holi colorée lors d'une cérémonie de mariage en Bretagne - MG Events"
+              fill
+              className="object-contain"
+            />
+            {/* Ruban promo "Nouveauté" */}
+            <div className="absolute top-0 left-0 z-20 h-32 w-32 overflow-hidden pointer-events-none">
+              <span className="absolute top-7 -left-9 w-44 -rotate-45 bg-[#c9a227] py-1 text-center text-[11px] font-semibold uppercase leading-tight tracking-wider text-[#0a0a0a] shadow-lg">
+                Nouveauté
+              </span>
+            </div>
+          </LightboxTrigger>
+
+          {/* Contenu */}
+          <div>
+            <div className="card-dark p-8 hover:border-[#c9a227]/40 transition-all duration-300">
+              <p className="text-[#aaa] leading-relaxed mb-4">
+                Et si vos plus belles photos prenaient des couleurs ? Le <strong className="text-white">feu
+                d&apos;artifice de jour</strong> propulse un nuage de <strong className="text-white">poudre
+                Holi</strong> à plusieurs mètres de hauteur grâce à un tir de <strong className="text-white">4
+                canons de 80 cm</strong>, déclenchés de façon synchronisée. Un effet
+                <span className="text-[#c9a227]"> spectaculaire en plein jour</span>, là où les feux
+                d&apos;artifice classiques ne peuvent rien.
+              </p>
+              <p className="text-[#aaa] leading-relaxed mb-6">
+                Parfait pour la <strong className="text-white">fin de cérémonie laïque</strong>, la
+                <strong className="text-white"> sortie des mariés</strong> ou la
+                <strong className="text-white"> photo de groupe</strong> : tout le monde réuni, une explosion
+                de couleurs, et des clichés joyeux et inoubliables. Vous composez votre tir avec 4 couleurs au
+                choix, en accord avec votre thème.
+              </p>
+
+              {/* Couleurs */}
+              <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-3 flex items-center gap-2">
+                <Palette size={14} /> Couleurs au choix
+              </p>
+              <div className="flex flex-wrap gap-3 mb-6">
+                {couleurs.map((c) => (
+                  <span key={c.label} className="inline-flex items-center gap-2 text-sm text-[#aaa]">
+                    <span className={`w-3 h-3 rounded-full ${c.className}`} />
+                    {c.label}
+                  </span>
+                ))}
+              </div>
+
+              <ul className="space-y-2 mb-6">
+                {[
+                  '4 canons de poudre Holi de 80 cm, tir synchronisé',
+                  'Poudre colorée non toxique, effet visible en plein jour',
+                  'Idéal cérémonie laïque, sortie des mariés, photo de groupe',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-[#aaa]">
+                    <Check size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Tarif */}
+              <div className="card-dark p-4 border-[#c9a227]/30 mb-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-1">Le tir</p>
+                    <p className="text-[#888] text-xs">4 couleurs au choix • sur demande</p>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">120</span>
+                    <span className="text-[#888] text-sm ml-1">€</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <a href="#contact" className="btn-gold inline-flex items-center gap-2">
+                  <Mail size={16} /> Nous contacter pour plus d&apos;informations
+                </a>
+                <Link href="/feu-artifice-jour" className="btn-outline inline-flex items-center gap-2">
+                  En savoir plus <ChevronDown size={16} className="-rotate-90" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ AUTRES EVENEMENTS ============
 function AutresEvenements() {
   const events = [
@@ -1661,6 +1788,7 @@ function Footer() {
             <h4 className="text-white font-medium mb-4">Informations</h4>
             <ul className="space-y-2">
               <li><Link href="/livre-dor-audio" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Livre d&apos;Or Audio</Link></li>
+              <li><Link href="/feu-artifice-jour" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Feu d&apos;Artifice de Jour</Link></li>
               <li><Link href="/animations-interactives-mariage" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Animations interactives</Link></li>
               <li><Link href="/philosophie" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Notre philosophie</Link></li>
               <li><Link href="/partenaires" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Nos partenaires</Link></li>
@@ -1705,6 +1833,7 @@ export default function Home() {
         <LivreOrAudio />
         <AnimaJet />
         <EtincellesFroides />
+        <FeuArtificeJour />
         <Testimonials />
         <Formules />
         <AutresEvenements />

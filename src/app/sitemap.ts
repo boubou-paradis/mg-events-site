@@ -92,6 +92,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // Prestation Feu d'Artifice de Jour (poudre Holi)
+    {
+      url: `${baseUrl}/feu-artifice-jour`,
+      lastModified: '2026-06-20',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // Page zones d'intervention
     {
       url: `${baseUrl}/zones-intervention`,
