@@ -315,6 +315,29 @@ export default function DJMariageBretagne() {
               </Link>
             </div>
           </div>
+
+          {/* Nouveauté : Feu d'Artifice de Jour */}
+          <div className="card-dark p-6 border-[#c9a227]/30 mt-5">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+              <Sparkles size={30} className="text-[#c9a227] shrink-0" />
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-1">
+                  <h3 className="text-white font-medium">Feu d&apos;Artifice de Jour — Explosion de Couleurs</h3>
+                  <span className="px-2 py-0.5 bg-[#c9a227] text-[#0a0a0a] text-xs font-semibold uppercase tracking-wider rounded-full">
+                    Nouveauté
+                  </span>
+                </div>
+                <p className="text-[#888] text-sm">
+                  Un tir de 4 canons de poudre Holi, couleurs au choix, déclenché de façon synchronisée pour
+                  sublimer la fin de cérémonie laïque ou la sortie des mariés. Spectaculaire en plein jour —
+                  120€ pour 4 couleurs au choix.
+                </p>
+              </div>
+              <Link href="/feu-artifice-jour" className="btn-outline shrink-0 text-sm inline-flex items-center gap-2">
+                En savoir plus
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

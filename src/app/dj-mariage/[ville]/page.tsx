@@ -522,6 +522,21 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
               </p>
               <span className="text-[#c9a227] text-sm mt-4 inline-block">Découvrir AnimaJet →</span>
             </Link>
+            <Link href="/feu-artifice-jour" className="card-dark p-6 group hover:border-[#c9a227]/40 transition-colors relative sm:col-span-2">
+              <span className="absolute top-4 right-4 px-2.5 py-1 bg-[#c9a227] text-[#0a0a0a] text-xs font-semibold uppercase tracking-wider rounded-full">
+                Nouveauté
+              </span>
+              <Sparkles size={32} className="text-[#c9a227] mb-3" />
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors text-lg">
+                Feu d&apos;Artifice de Jour — Explosion de Couleurs
+              </h3>
+              <p className="text-[#888] text-sm leading-relaxed">
+                Un tir de 4 canons de poudre Holi, couleurs au choix, déclenché de façon synchronisée pour
+                sublimer la fin de cérémonie laïque ou la sortie des mariés à {city.name}. Un effet
+                spectaculaire en plein jour, idéal pour des photos de groupe inoubliables — 120€ pour 4 couleurs.
+              </p>
+              <span className="text-[#c9a227] text-sm mt-4 inline-block">Découvrir le feu d&apos;artifice de jour →</span>
+            </Link>
           </div>
         </div>
       </section>

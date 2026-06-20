@@ -366,6 +366,11 @@ export default function DJMariageMorbihan() {
               </div>
             ))}
           </div>
+          <p className="text-[#888] text-center mt-8 text-sm">
+            <span className="text-[#c9a227] font-medium">Nouveauté</span> — sublimez la sortie des mariés avec notre{' '}
+            <Link href="/feu-artifice-jour" className="text-[#c9a227] hover:underline">feu d&apos;artifice de jour</Link>{' '}
+            (poudre Holi, 4 couleurs au choix, 120€)
+          </p>
         </div>
       </section>
 
