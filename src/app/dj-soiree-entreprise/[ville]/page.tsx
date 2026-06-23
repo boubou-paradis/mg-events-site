@@ -25,6 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
     title: `DJ Soirée Entreprise ${city.name} | Animation Corporate ${city.departmentCode} | MG Events`,
     description: `DJ animateur pour soirée d'entreprise à ${city.name}. Séminaires, team building, soirées corporate. Animation professionnelle, photobooth logo. Devis gratuit ✓`,
     keywords: `DJ entreprise ${city.name}, animation corporate ${city.name}, soirée entreprise ${city.name}, team building ${city.name}, DJ séminaire ${city.departmentCode}`,
+    // noindex tant que le contenu n'est pas unique par ville : évite l'index bloat
+    // de pages quasi-dupliquées qui pénalise l'indexation des pages principales.
+    // follow conservé pour laisser circuler le maillage interne.
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `https://www.mg-events35.com/dj-soiree-entreprise/${city.slug}`,
     },

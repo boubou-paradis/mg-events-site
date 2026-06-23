@@ -25,6 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
     title: `Animation Anniversaire ${city.name} | DJ Fête Privée ${city.departmentCode} | MG Events`,
     description: `DJ animateur pour anniversaire à ${city.name}. Animation musicale, karaoké, photobooth. Fêtes privées mémorables. Devis gratuit ✓`,
     keywords: `DJ anniversaire ${city.name}, animation anniversaire ${city.name}, fête privée ${city.name}, DJ soirée ${city.name}, animation ${city.departmentCode}`,
+    // noindex tant que le contenu n'est pas unique par ville : évite l'index bloat
+    // de pages quasi-dupliquées qui pénalise l'indexation des pages principales.
+    // follow conservé pour laisser circuler le maillage interne.
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `https://www.mg-events35.com/animation-anniversaire/${city.slug}`,
     },

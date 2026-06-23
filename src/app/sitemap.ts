@@ -222,25 +222,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // Pages dynamiques soirée entreprise (villes avec forEnterprise: true)
-  const entreprisePages: MetadataRoute.Sitemap = cities
-    .filter((city) => city.forEnterprise)
-    .map((city) => ({
-      url: `${baseUrl}/dj-soiree-entreprise/${city.slug}`,
-      lastModified: today,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }))
-
-  // Pages dynamiques anniversaire (villes avec forBirthday: true)
-  const anniversairePages: MetadataRoute.Sitemap = cities
-    .filter((city) => city.forBirthday)
-    .map((city) => ({
-      url: `${baseUrl}/animation-anniversaire/${city.slug}`,
-      lastModified: today,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }))
+  // Pages entreprise et anniversaire VOLONTAIREMENT exclues du sitemap :
+  // elles sont en noindex (contenu quasi-dupliqué d'une ville à l'autre).
+  // À réintégrer ici une fois dotées d'un contenu local unique par ville.
 
   // Cluster AnimaJet (pilier + pages satellites)
   const clusterPages: MetadataRoute.Sitemap = allClusterPages.map((page) => ({
@@ -250,5 +234,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: page.priority,
   }))
 
-  return [...staticPages, ...clusterPages, ...djMariagePages, ...entreprisePages, ...anniversairePages]
+  return [...staticPages, ...clusterPages, ...djMariagePages]
 }

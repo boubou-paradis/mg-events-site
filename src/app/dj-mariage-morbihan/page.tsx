@@ -601,6 +601,10 @@ export default function DJMariageMorbihan() {
               <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
               <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Auray</span>
             </Link>
+            <Link href="/dj-mariage/ploermel" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+              <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
+              <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Ploërmel</span>
+            </Link>
           </div>
         </div>
       </section>
