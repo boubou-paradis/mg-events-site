@@ -529,6 +529,41 @@ Notre expérience de DJ mariage à Auray et dans le pays carnacois nous a appris
     forEnterprise: false,
     forBirthday: false,
   },
+  {
+    name: 'Ploërmel',
+    slug: 'ploermel',
+    department: 'Morbihan',
+    departmentCode: '56',
+    departmentSlug: 'morbihan',
+    postalCode: '56800',
+    latitude: 47.9314,
+    longitude: -2.3969,
+    population: '10 000',
+    seoDescription: `Ploërmel, cœur historique du centre Bretagne aux portes de la forêt de Brocéliande, offre aux couples un cadre de mariage entre légende arthurienne et nature préservée. Sa vieille ville médiévale — maisons à pans de bois, horloge astronomique, vitraux de l'église Saint-Armel — et la proximité immédiate du Lac au Duc, le plus grand plan d'eau intérieur du Morbihan, en font une destination de réception aussi romantique qu'authentique.
+
+Le pays de Ploërmel concentre quelques-uns des lieux les plus emblématiques de Bretagne intérieure. Le Château de Josselin, forteresse médiévale dominant l'Oust à un quart d'heure, compte parmi les plus beaux décors de mariage de la région. Les rives boisées du Lac au Duc, le golf et les domaines de Taupont et Loyat, ou encore les manoirs nichés en lisière de Brocéliande proposent des cadres variés — du château de caractère à la réception champêtre face à l'eau.
+
+DJ mariage à Ploërmel, c'est savoir composer avec ces lieux singuliers : l'acoustique des grandes salles de château, les contraintes des réceptions en extérieur au bord du lac, l'ambiance intimiste des domaines de campagne. Notre position centrale en Bretagne nous permet d'intervenir à Ploërmel et dans tout le centre Morbihan — Josselin, Malestroit, Guer, Mauron, La Gacilly — sans frais de déplacement supplémentaire.
+
+Au-delà de la soirée dansante, nous adaptons nos animations à l'esprit du lieu : sets variété et hits internationaux pour faire danser toutes les générations, touches de musique bretonne et fest-noz revisité chères au centre Bretagne, et notre plateforme AnimaJet (quiz interactif, photo mystère, blind test live) pour une réception participative. Avec 25 ans d'expérience derrière les platines, nous lisons la piste de danse et adaptons la programmation en temps réel.`,
+    localHighlights: [
+      'Lac au Duc : plus grand plan d\'eau du Morbihan, cadre nature pour réceptions au bord de l\'eau',
+      'Château de Josselin à 15 min : décor médiéval d\'exception sur l\'Oust',
+      'Aux portes de Brocéliande : l\'imaginaire arthurien pour un mariage féérique',
+      'Position centrale en Bretagne : déplacement inclus dans tout le centre Morbihan',
+    ],
+    nearbyCommunes: ['Josselin', 'Taupont', 'Loyat', 'Campénéac', 'Guer', 'Malestroit', 'Mauron', 'La Gacilly', 'Guégon'],
+    weddingVenues: [
+      { nom: 'Château de Josselin', ville: 'Josselin', type: 'Château médiéval', description: 'Forteresse classée dominant l\'Oust, l\'un des plus beaux châteaux de Bretagne' },
+      { nom: 'Le Roi Arthur', ville: 'Ploërmel', type: 'Hôtel & Golf', description: 'Hôtel-spa et golf au bord du Lac au Duc, réceptions face à l\'eau' },
+      { nom: 'Château de Crévy', ville: 'La Chapelle-Caro', type: 'Château', description: 'Château de caractère et parc à proximité de Malestroit' },
+    ],
+    testimonials: [
+      { author: 'Anaïs & Gwendal', text: "Mariage magique au bord du Lac au Duc à Ploërmel. Guillaume a su faire danser nos invités de 7 à 77 ans, merci MG Events !" },
+    ],
+    forEnterprise: false,
+    forBirthday: false,
+  },
 
   // ========== FINISTÈRE (29) ==========
   {
