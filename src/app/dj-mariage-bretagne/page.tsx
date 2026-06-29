@@ -3,6 +3,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Calendar, Users, Lightbulb, Volume2 } from 'lucide-react';
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
+import { getCityBySlug } from '@/data/cities';
+
+// Slug dé-accentué (NFD) — évite que les accents (é, è, â…) deviennent des "-"
+const citySlug = (name: string) =>
+  name
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Bretagne | Animation Soirée 29, 35, 56, 44 - MG Events',
@@ -369,15 +379,31 @@ export default function DJMariageBretagne() {
                   </Link>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {dept.cities.map((city) => (
-                    <Link
-                      key={city}
-                      href={`/dj-mariage/${city.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-')}`}
-                      className="px-3 py-1 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors text-sm"
-                    >
-                      {city}
-                    </Link>
-                  ))}
+                  {dept.cities.map((city) => {
+                    const slug = citySlug(city);
+                    // N'afficher un lien que si la ville a une page dédiée
+                    // (repli sur "-ville" pour les noms identiques à un département, ex. Mayenne)
+                    const pageSlug = getCityBySlug(slug)
+                      ? slug
+                      : getCityBySlug(`${slug}-ville`)
+                        ? `${slug}-ville`
+                        : null;
+                    const base =
+                      'px-3 py-1 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] text-sm transition-colors';
+                    return pageSlug ? (
+                      <Link
+                        key={city}
+                        href={`/dj-mariage/${pageSlug}`}
+                        className={`${base} hover:text-[#c9a227] hover:border-[#c9a227]/40`}
+                      >
+                        {city}
+                      </Link>
+                    ) : (
+                      <span key={city} className={base}>
+                        {city}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             ))}
