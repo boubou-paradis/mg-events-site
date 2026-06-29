@@ -530,6 +530,38 @@ Notre expérience de DJ mariage à Auray et dans le pays carnacois nous a appris
     forBirthday: false,
   },
   {
+    name: 'La Trinité-sur-Mer',
+    slug: 'la-trinite-sur-mer',
+    department: 'Morbihan',
+    departmentCode: '56',
+    departmentSlug: 'morbihan',
+    postalCode: '56470',
+    latitude: 47.5853,
+    longitude: -3.0297,
+    population: '1 600',
+    seoDescription: `La Trinité-sur-Mer, port de plaisance mythique de la voile française et terre d'Éric Tabarly, offre un cadre de mariage rare où l'élégance nautique rencontre la douceur du Morbihan. Les coques blanches alignées dans la baie, les terrasses face à la rivière de Crac'h et le célèbre pont de Kerisper composent un décor chic et lumineux, idéal pour un mariage bord de mer raffiné.
+
+Au-delà du port, la presqu'île trinitaine déploie des plages de sable fin — Kervilen, Men Dù, la Mer Blanche — et, à quelques minutes seulement, les alignements mégalithiques de Carnac, uniques au monde. Cette proximité immédiate entre océan, patrimoine préhistorique et villages de caractère (Carnac, Locmariaquer, Crac'h) permet des séances photo d'une variété exceptionnelle, du lever de soleil sur les menhirs aux couchers de soleil sur les bateaux.
+
+Notre expérience de DJ mariage à La Trinité-sur-Mer et dans le pays d'Auray nous a appris à composer avec les spécificités d'une destination prisée : la gestion du vent marin pour la sonorisation en extérieur, le choix des créneaux pour profiter de la lumière dorée de la baie de Quiberon, la coordination avec les hôtels de charme et domaines locaux. Cette connaissance fine du territoire fait toute la différence pour une soirée réussie au plus près de l'eau.`,
+    localHighlights: [
+      'Port de plaisance mythique de la voile (cité d\'Éric Tabarly) : décor nautique chic',
+      'Plages de Kervilen et Men Dù : sable fin pour des photos de mariage en bord de mer',
+      'Alignements de Carnac à 5 min : décor mégalithique unique au monde',
+      'Pont de Kerisper sur la rivière de Crac\'h : panorama romantique au crépuscule',
+    ],
+    nearbyCommunes: ['Carnac', 'Crac\'h', 'Saint-Philibert', 'Locmariaquer', 'Quiberon', 'Auray'],
+    weddingVenues: [
+      { nom: 'Le Lodge Kerisper', ville: 'La Trinité-sur-Mer', type: 'Hôtel de charme', description: 'Maison de capitaine du XIXe restaurée, jardin et piscine, prisée pour les mariages intimistes' },
+      { nom: 'Hôtel Le Diana', ville: 'Carnac-Plage', type: 'Hôtel 4★ front de mer', description: 'Réceptions face à l\'océan sur la grande plage de Carnac, à 10 min' },
+    ],
+    testimonials: [
+      { author: 'Camille & Antoine', text: "Un mariage les pieds dans l'eau à La Trinité, ambiance nautique parfaite. MG Events a su faire danser tout le monde jusqu'au bout de la nuit !" },
+    ],
+    forEnterprise: false,
+    forBirthday: false,
+  },
+  {
     name: 'Ploërmel',
     slug: 'ploermel',
     department: 'Morbihan',
