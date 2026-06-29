@@ -74,7 +74,7 @@ const musicFaqs = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.mg-events35.com/#organization",
+  "@id": "https://www.mg-events35.com/dj-mariage-loire-atlantique#organization",
   "name": "MG Events Animation - DJ Mariage Loire-Atlantique",
   "image": "https://www.mg-events35.com/images/logo.png",
   "description": "DJ animateur professionnel pour mariage en Loire-Atlantique (44). Animation musicale, photobooth vintage, étincelles froides à Nantes, Saint-Nazaire, La Baule.",

@@ -74,7 +74,7 @@ const musicFaqs = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.mg-events35.com/#organization",
+  "@id": "https://www.mg-events35.com/dj-mariage-ille-et-vilaine#organization",
   "name": "MG Events Animation - DJ Mariage Ille-et-Vilaine",
   "image": "https://www.mg-events35.com/images/logo.png",
   "description": "DJ animateur professionnel pour mariage en Ille-et-Vilaine (35). Animation musicale, photobooth vintage, étincelles froides. Plus de 20 ans d'expérience.",
