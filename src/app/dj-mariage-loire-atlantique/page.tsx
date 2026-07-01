@@ -227,13 +227,19 @@ export default function DJMariageLoireAtlantique() {
                 DJ Mariage <span className="text-[#c9a227]">Loire-Atlantique</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Animation de mariage à Nantes et dans tout le 44
+                Votre DJ animateur de mariage à Nantes et dans tout le 44
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
-                Vous cherchez un <strong className="text-white">DJ pour votre mariage en Loire-Atlantique (44)</strong> ?
+                Vous cherchez un <strong className="text-white">DJ animateur pour votre mariage en Loire-Atlantique (44)</strong> ?
                 MG Events Animation se déplace dans tout le département : <span className="text-[#c9a227]">Nantes, Saint-Nazaire, La Baule, Guérande</span>,
                 mais aussi <span className="text-[#c9a227]">Pornic, Clisson, Ancenis, Le Croisic, Pornichet, Vertou, Rezé,
                 Orvault, Carquefou, Châteaubriant</span> et tout le vignoble nantais.
+              </p>
+              <p className="text-[#888] leading-relaxed mb-8">
+                Véritable <strong className="text-white">animateur de soirée en Loire-Atlantique</strong>, nous assurons
+                l&apos;<strong className="text-white">animation mariage dans le 44</strong> de bout en bout :
+                <strong className="text-white"> sonorisation de mariage</strong> professionnelle, éclairage sur mesure,
+                prise de micro et animations interactives pour faire danser toutes les générations.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés,

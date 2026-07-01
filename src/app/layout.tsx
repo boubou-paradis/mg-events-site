@@ -110,7 +110,20 @@ const weddingServiceJsonLd = {
       "price": "1690",
       "priceCurrency": "EUR"
     }
-  ]
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Prestations DJ animateur & animation de mariage",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DJ animateur de mariage", "description": "DJ animateur professionnel : animation de soirée, prise de micro, lecture de la piste de danse, 25 ans d'expérience." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sonorisation & éclairage professionnel", "description": "Sonorisation de mariage haut de gamme et éclairage sur mesure : cérémonie laïque, vin d'honneur, repas et soirée dansante." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photobooth vintage TSF", "description": "Cabine photobooth style TSF années 60 avec impressions instantanées personnalisées." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AnimaJet — animations interactives", "description": "Plateforme d'animations interactives conçue et développée par MG Events : quiz, blind test, photo mystère sur grand écran." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Effets spéciaux", "description": "Étincelles froides certifiées CE et fumée lourde pour l'ouverture de bal." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Feu d'Artifice de Jour", "description": "Tir de poudre Holi colorée pour la sortie des mariés et la photo de groupe." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Livre d'Or Audio", "description": "Téléphone rétro à messages vocaux : vos invités laissent un souvenir audio à réécouter pour la vie." } }
+    ]
+  }
 };
 
 const videoJsonLd = {

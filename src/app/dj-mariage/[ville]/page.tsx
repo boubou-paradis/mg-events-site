@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
 
   return {
     title: `DJ Mariage ${city.name} | Animation Soirée ${city.department} - MG Events`,
-    description: `DJ mariage à ${city.name} — 25 ans d'expérience, AnimaJet notre plateforme d'animations interactives maison, photobooth vintage. ${nearbyText} et environs. Devis gratuit sous 24h ✓`,
-    keywords: `DJ mariage ${city.name}, DJ mariage ${city.departmentCode}, animation mariage ${city.name}, DJ ${city.name}, sono mariage ${city.name}`,
+    description: `DJ animateur mariage à ${city.name} — 25 ans d'expérience, animations interactives AnimaJet, sonorisation et photobooth vintage. ${nearbyText} et environs. Devis gratuit sous 24h ✓`,
+    keywords: `DJ mariage ${city.name}, DJ animateur ${city.name}, animation mariage ${city.name}, animateur de soirée ${city.name}, sonorisation mariage ${city.name}, DJ mariage ${city.departmentCode}, DJ ${city.name}`,
     alternates: {
       canonical: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     },
@@ -353,6 +353,34 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* DJ animateur & services d'animation (SEO variantes) */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white mb-6">
+            Votre <span className="text-[#c9a227]">DJ animateur</span> à {city.name} et en {city.department}
+          </h2>
+          <div className="space-y-5 text-[#aaa] leading-relaxed">
+            <p>
+              Chez MG Events, nous sommes bien plus qu&apos;un simple DJ : nous sommes votre
+              <strong className="text-white"> DJ animateur de mariage à {city.name}</strong>. Notre rôle ne se
+              limite pas à enchaîner les morceaux — nous orchestrons toute votre <strong className="text-white">animation de soirée</strong>,
+              du lancement du vin d&apos;honneur jusqu&apos;au dernier slow. En véritable
+              <strong className="text-white"> animateur de soirée de mariage</strong>, nous prenons le micro avec justesse,
+              rythmons les temps forts (entrée des mariés, discours, jeux, ouverture de bal) et fédérons vos invités,
+              de 7 à 77 ans, autour de la piste de danse.
+            </p>
+            <p>
+              Notre prestation d&apos;<strong className="text-white">animation mariage à {city.name}</strong> comprend une
+              <strong className="text-white"> sonorisation professionnelle</strong> calibrée pour chaque moment, un
+              <strong className="text-white"> éclairage sur mesure</strong> adapté à votre salle, et nos animations
+              interactives AnimaJet (quiz, blind test, photo mystère). En amont, nous coordonnons le déroulé avec
+              votre traiteur, votre photographe et votre wedding planner pour un jour J parfaitement fluide. Un seul
+              <strong className="text-white"> prestataire événementiel</strong> pour votre musique, votre son, vos lumières et vos animations.
+            </p>
           </div>
         </div>
       </section>

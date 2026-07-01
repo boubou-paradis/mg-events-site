@@ -228,11 +228,17 @@ export default function DJMariageMorbihan() {
                 DJ Mariage <span className="text-[#c9a227]">Morbihan</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Animation de mariage à Vannes, Lorient et dans tout le 56
+                Votre DJ animateur de mariage à Vannes, Lorient et dans tout le 56
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
                 Votre <strong className="text-white">mariage dans le Morbihan</strong> mérite une animation à la hauteur !
                 MG Events Animation intervient à <span className="text-[#c9a227]">Vannes, Lorient, Pontivy, Auray, Ploërmel, La Trinité-sur-Mer, Carnac, Belle-Île</span>...
+              </p>
+              <p className="text-[#888] leading-relaxed mb-8">
+                Véritable <strong className="text-white">animateur de soirée dans le Morbihan</strong>, nous assurons
+                l&apos;<strong className="text-white">animation mariage dans le 56</strong> de bout en bout :
+                <strong className="text-white"> sonorisation de mariage</strong> professionnelle, éclairage sur mesure,
+                prise de micro et animations interactives pour faire danser toutes les générations.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés,

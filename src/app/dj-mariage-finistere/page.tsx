@@ -228,11 +228,15 @@ export default function DJMariageFinistere() {
                 DJ Mariage <span className="text-[#c9a227]">Finistère</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Votre DJ de mariage à Quimper, Brest et dans tout le 29
+                Votre DJ animateur de mariage à Quimper, Brest et dans tout le 29
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
                 Du nord au sud du <strong className="text-white">Finistère</strong>, MG Events Animation fait vibrer vos soirées !
-                Nous intervenons à <span className="text-[#c9a227]">Quimper, Brest, Morlaix, Concarneau, Douarnenez, Crozon, Landerneau, Châteaulin</span>...
+                <strong className="text-white"> DJ animateur en Finistère</strong> et véritable
+                <strong className="text-white"> animateur de soirée</strong>, nous assurons l&apos;animation mariage à
+                <span className="text-[#c9a227]"> Brest</span>, l&apos;animation mariage à
+                <span className="text-[#c9a227]"> Quimper</span>, ainsi qu&apos;à Morlaix, Concarneau, Douarnenez, Crozon, Landerneau et Châteaulin —
+                sonorisation professionnelle et éclairage inclus.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés,

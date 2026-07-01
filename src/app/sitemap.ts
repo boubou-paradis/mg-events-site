@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Date de dernière mise à jour réelle du contenu — à actualiser manuellement
   // lors d'un ajout ou d'une refonte de page (ne pas remettre new Date() :
   // une date qui change à chaque build fait perdre toute valeur au lastmod).
-  const today = '2026-06-10'
+  const today = '2026-07-01'
 
   // Pages statiques principales
   const staticPages: MetadataRoute.Sitemap = [

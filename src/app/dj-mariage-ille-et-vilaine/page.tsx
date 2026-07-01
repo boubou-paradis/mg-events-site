@@ -227,13 +227,19 @@ export default function DJMariageIlleEtVilaine() {
                 DJ Mariage <span className="text-[#c9a227]">Ille-et-Vilaine</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Votre animation de mariage à Rennes et dans tout le 35
+                Votre DJ animateur de mariage à Rennes et dans tout le 35
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
-                Vous cherchez un <strong className="text-white">DJ pour votre mariage en Ille-et-Vilaine (35)</strong> ?
+                Vous cherchez un <strong className="text-white">DJ animateur pour votre mariage en Ille-et-Vilaine (35)</strong> ?
                 MG Events Animation se déplace dans tout le département : <span className="text-[#c9a227]">Rennes, Saint-Malo, Fougères, Vitré</span>,
                 mais aussi <span className="text-[#c9a227]">Redon, Dinard, Cancale, Dol-de-Bretagne, Bruz, Cesson-Sévigné, Betton, Chantepie,
                 Saint-Grégoire, Pacé, Le Rheu, Montfort-sur-Meu</span> et toute la côte d&apos;Émeraude.
+              </p>
+              <p className="text-[#888] leading-relaxed mb-8">
+                Véritable <strong className="text-white">animateur de soirée en Ille-et-Vilaine</strong>, nous assurons
+                l&apos;<strong className="text-white">animation mariage dans le 35</strong> de bout en bout :
+                <strong className="text-white"> sonorisation de mariage</strong> professionnelle, éclairage sur mesure,
+                prise de micro et animations interactives pour faire danser toutes les générations.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés dans le 35,

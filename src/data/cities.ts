@@ -407,26 +407,37 @@ Notre connaissance du territoire guérandais nous permet de vous conseiller sur 
     latitude: 47.6559,
     longitude: -2.7603,
     population: '55 000',
-    seoDescription: `Vannes, porte d'entrée du Golfe du Morbihan, combine charme médiéval et douceur maritime. Ses remparts fleuris, ses maisons à colombages et son port de plaisance composent un décor de mariage enchanteur. Le Golfe du Morbihan, "petite mer" aux 40 îles, offre des panoramas exceptionnels accessibles en quelques minutes depuis le centre historique.
+    seoDescription: `Vannes, porte d'entrée du Golfe du Morbihan, est l'une des destinations de mariage les plus prisées de Bretagne Sud. Ses remparts fleuris, ses maisons à colombages, son port de plaisance et la "petite mer" aux 40 îles composent un décor romantique unique. Chercher un DJ mariage à Vannes, c'est chercher un professionnel qui connaît vraiment le territoire, ses domaines face au Golfe et l'exigence d'une clientèle habituée aux belles réceptions.
 
-La région vannetaise regorge de domaines d'exception face au Golfe. Le Domaine de Rochevilaine à Billiers, les châteaux d'Arradon et de Séné, les manoirs de la presqu'île de Rhuys accueillent des mariages dans des cadres à couper le souffle. La lumière particulière du Golfe, changeante au fil des marées, garantit des photos de mariage uniques.
+La région vannetaise regorge de lieux d'exception. Le Domaine de Rochevilaine à Billiers, les châteaux et manoirs d'Arradon, de Séné et de la presqu'île de Rhuys, les domaines du pays de Vannes accueillent des mariages dans des cadres à couper le souffle. La lumière du Golfe, changeante au fil des marées, garantit des photos inoubliables — et une animation mariage à Vannes à la hauteur de ces décors.
 
-Notre expertise de DJ mariage à Vannes s'appuie sur une connaissance fine du territoire morbihannais. Nous connaissons les contraintes de chaque lieu : vent sur les terrasses face au Golfe, acoustique des salles en pierre, coordination avec les marées pour les transferts en bateau. Cette maîtrise locale fait la différence pour une journée sans accroc.`,
+En tant que DJ animateur à Vannes, notre rôle va bien au-delà de la musique. Nous orchestrons toute l'animation de votre soirée : prise de parole au micro avec justesse, coordination des temps forts (entrée des mariés, discours, jeux, ouverture de bal), lecture de la piste de danse en temps réel grâce à 25 ans d'expérience en discothèque. Un vrai animateur de soirée qui fédère vos invités de 7 à 77 ans, sans jamais forcer l'ambiance.
+
+Notre prestation comprend une sonorisation professionnelle haut de gamme, calibrée pour chaque moment — fond sonore feutré pendant le repas, son puissant et maîtrisé pour enflammer le dancefloor — et un éclairage sur mesure adapté à votre salle (lyres, wash LED, effets). La sonorisation de mariage à Vannes doit composer avec des lieux variés : terrasses ventées face au Golfe, salles en pierre à l'acoustique délicate, domaines en extérieur. Notre matériel et notre installation s'adaptent à chaque configuration.
+
+DJ Morbihan de proximité, nous intervenons à Vannes et dans tout le département sans frais de déplacement supplémentaire : Auray, Lorient, Ploërmel, Pontivy, Locminé, Sarzeau, le Golfe et la presqu'île de Rhuys. Cette couverture fait de nous un partenaire naturel pour l'animation mariage dans le Morbihan, avec la même exigence de qualité partout.
+
+Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, ajoute une dimension participative rare : quiz interactif en direct, photo mystère sur grand écran, blind test live, partage de photos. Au-delà de la soirée dansante, nous proposons la sonorisation de cérémonie laïque (180€) avec deux techniciens dédiés, idéale pour les cérémonies en extérieur face au Golfe. Quel budget pour un DJ mariage à Vannes ? Nos formules démarrent à 1200€ TTC (Éclat d'Amour), 1490€ (Rêve en Blanc) et 1690€ (Conte de Fées avec photobooth vintage) — déplacement à Vannes et dans le Morbihan inclus, tarifs transparents et sans surprise.`,
     localHighlights: [
-      'Golfe du Morbihan : "petite mer" aux paysages féeriques',
+      'Golfe du Morbihan : "petite mer" aux paysages féeriques et domaines face à l\'eau',
       'Domaines face au Golfe avec couchers de soleil spectaculaires',
       'Centre médiéval préservé pour cérémonie civile à la mairie',
-      'Possibilité de transfert en bateau pour cérémonie sur une île',
+      'Sonorisation adaptée aux terrasses ventées et salles en pierre du Golfe',
+      'DJ Morbihan de proximité : Auray, Lorient, Ploërmel, Pontivy inclus sans frais',
     ],
-    nearbyCommunes: ['Arradon', 'Séné', 'Theix-Noyalo', 'Ploeren', 'Plescop', 'Saint-Avé', 'Meucon'],
+    nearbyCommunes: ['Arradon', 'Séné', 'Theix-Noyalo', 'Ploeren', 'Plescop', 'Saint-Avé', 'Meucon', 'Sarzeau', 'Baden', 'Le Bono', 'Elven', 'Grand-Champ'],
     weddingVenues: [
       { nom: 'Domaine de Rochevilaine', ville: 'Billiers', type: 'Domaine vue mer', description: 'Relais & Châteaux avec spa et falaises face à l\'océan' },
       { nom: 'Château de Kerlarec', ville: 'Arradon', type: 'Château', description: 'Château romantique avec vue panoramique sur le Golfe' },
       { nom: 'Manoir de Kerhuel', ville: 'Pluneret', type: 'Manoir', description: 'Manoir breton authentique avec parc et étang' },
+      { nom: 'Château de Suscinio', ville: 'Sarzeau', type: 'Château ducal', description: 'Château médiéval face aux marais de la presqu\'île de Rhuys' },
+      { nom: 'Domaine de Kerguéhennec', ville: 'Bignan', type: 'Domaine & Parc', description: 'Château classique avec parc de sculptures, 30 min de Vannes' },
+      { nom: 'Île-aux-Moines', ville: 'Golfe du Morbihan', type: 'Réception sur île', description: 'Réception insulaire accessible en bateau, cadre exceptionnel' },
     ],
     testimonials: [
-      { author: 'Anaïs & Romain', text: "Mariage magique dans le Golfe du Morbihan. L'ambiance créée par MG Events était exceptionnelle !" },
-      { author: 'Julie & Yann', text: "Les étincelles froides au Domaine de Rochevilaine resteront notre plus beau souvenir. Merci !" },
+      { author: 'Anaïs & Romain', text: "Mariage magique dans le Golfe du Morbihan. L'ambiance créée par MG Events était exceptionnelle, un vrai DJ animateur qui a fait danser tout le monde !" },
+      { author: 'Julie & Yann', text: "Les étincelles froides au Domaine de Rochevilaine resteront notre plus beau souvenir. Sonorisation impeccable et animation au top. Merci !", venue: 'Domaine de Rochevilaine' },
+      { author: 'Marion & Steven', text: "Guillaume et Laurence ont assuré l'animation de notre mariage à Vannes du vin d'honneur jusqu'au bout de la nuit. Professionnels, à l'écoute, on recommande à 200% !", venue: 'Mariage à Vannes' },
     ],
     forEnterprise: true,
     businessAreas: ['Parc du Golfe', 'Zone de Kerlann'],

@@ -69,14 +69,14 @@ function Hero() {
           MG Events Animation
         </p>
         <h1 className="animate-fade-up delay-150 font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal mb-6">
-          <span className="text-white">DJ Mariage</span>
+          <span className="text-white">DJ Animateur Mariage</span>
           <br />
           <span className="text-gradient-gold">Bretagne</span>
         </h1>
 
         {/* Subtitle */}
         <p className="animate-fade-up delay-200 text-lg sm:text-xl text-[#888] max-w-2xl mx-auto mb-4">
-          Plus de 20 ans d&apos;expérience au service de vos plus belles soirées
+          Animateur de soirée de mariage — plus de 20 ans d&apos;expérience au service de vos plus belles soirées
         </p>
         
         {/* Zone */}
@@ -131,6 +131,7 @@ function Hero() {
 function QuickNav() {
   const links = [
     { href: '#about', label: 'Notre histoire' },
+    { href: '#services', label: 'Nos services' },
     { href: '#formules', label: 'Formules & Tarifs' },
     { href: '#photobooth', label: 'Photobooth Vintage' },
     { href: '#livre-dor-audio', label: 'Livre d\'Or Audio' },
@@ -197,9 +198,17 @@ function About() {
                 Guillaume a su développer un savoir-faire unique pour créer des ambiances mémorables.
               </p>
               <p>
-                Notre philosophie ? <span className="text-[#c9a227]">Écouter vos envies</span>, comprendre votre univers, 
-                et transformer votre soirée en un moment inoubliable où chaque invité, 
+                Notre philosophie ? <span className="text-[#c9a227]">Écouter vos envies</span>, comprendre votre univers,
+                et transformer votre soirée en un moment inoubliable où chaque invité,
                 de 7 à 77 ans, trouvera son bonheur sur la piste de danse.
+              </p>
+              <p>
+                <strong className="text-white">DJ animateur professionnel</strong>, MG Events assure l&apos;
+                <strong className="text-white">animation de soirée de mariage</strong> de A à Z partout en Bretagne :
+                sonorisation haut de gamme, éclairage professionnel, animations interactives et prise de micro maîtrisée.
+                Forts de <strong className="text-white">25 ans d&apos;expérience en discothèque</strong>, nous sommes votre
+                <strong className="text-white"> prestataire mariage en Bretagne</strong> pour une animation
+                événementielle sur-mesure — de la cérémonie laïque au dernier morceau de la nuit.
               </p>
             </div>
 
@@ -225,6 +234,52 @@ function About() {
               </Link>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ============ NOS SERVICES ============
+function NosServices() {
+  const services = [
+    { icon: Mic2, title: 'DJ Animateur de mariage', description: 'Musique et animation de soirée orchestrées de A à Z, micro maîtrisé et lecture de la piste.', href: '/dj-mariage-bretagne' },
+    { icon: PartyPopper, title: 'Animation de soirée sur-mesure', description: 'Jeux, ambiance et temps forts rythmés pour fédérer tous vos invités de 7 à 77 ans.', href: '#experience' },
+    { icon: Volume2, title: 'Sonorisation & éclairage professionnel', description: 'Son haut de gamme calibré à chaque moment et mise en lumière adaptée à votre salle.', href: '#formules' },
+    { icon: Printer, title: 'Photobooth vintage', description: 'Cabine TSF années 60, impressions instantanées et souvenirs personnalisés pour vos invités.', href: '#photobooth' },
+    { icon: Monitor, title: 'Animations interactives AnimaJet', description: 'Quiz, blind test et photo mystère sur grand écran — notre plateforme conçue maison.', href: '#animajet' },
+    { icon: Flame, title: 'Effets spéciaux', description: 'Étincelles froides certifiées CE et fumée lourde pour une ouverture de bal spectaculaire.', href: '#formules' },
+    { icon: Palette, title: 'Feu d\'Artifice de Jour', description: 'Tir de poudre Holi colorée pour sublimer la sortie des mariés et la photo de groupe.', href: '/feu-artifice-jour' },
+    { icon: Phone, title: 'Livre d\'Or Audio', description: 'Téléphone rétro où vos invités laissent un message vocal à réécouter pour la vie.', href: '/livre-dor-audio' },
+  ];
+
+  return (
+    <section id="services" className="py-16 bg-[#141414]">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-10">
+          <div className="gold-line mx-auto mb-6" />
+          <h2 className="section-title text-white mb-2">
+            Nos <span className="text-gradient-gold">services</span>
+          </h2>
+          <p className="text-[#888] max-w-2xl mx-auto">
+            Un seul prestataire pour votre DJ animateur, la sonorisation, l&apos;éclairage et toutes vos animations de mariage
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {services.map((service) => (
+            <Link
+              key={service.title}
+              href={service.href}
+              className="card-dark p-6 group hover:border-[#c9a227]/40 transition-all duration-300"
+            >
+              <service.icon size={32} className="text-[#c9a227] mb-4" />
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-[#888] text-sm leading-relaxed">{service.description}</p>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
@@ -1827,6 +1882,7 @@ export default function Home() {
         <Hero />
         <QuickNav />
         <About />
+        <NosServices />
         <ExperienceMusicale />
         <Gallery />
         <Photobooth />
