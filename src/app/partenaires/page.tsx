@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { createElement } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -108,15 +109,13 @@ function Header() {
 
 // ============ PARTNER CARD ============
 function PartnerCard({ partner }: { partner: Partner }) {
-  const IconComponent = getCategoryIcon(partner.category);
-
   return (
     <article className="card-dark p-8 hover:border-[#c9a227]/40 transition-all duration-300">
       {/* Header */}
       <div className="flex items-start gap-4 mb-6">
         {/* Category Icon */}
         <div className="w-16 h-16 bg-gradient-to-br from-[#c9a227]/20 to-[#c9a227]/5 rounded-2xl flex items-center justify-center border border-[#c9a227]/20 shrink-0">
-          <IconComponent size={28} className="text-[#c9a227]" />
+          {createElement(getCategoryIcon(partner.category), { size: 28, className: 'text-[#c9a227]' })}
         </div>
 
         <div className="flex-1">

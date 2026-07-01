@@ -246,9 +246,9 @@ function NosServices() {
     { icon: Mic2, title: 'DJ Animateur de mariage', description: 'Musique et animation de soirée orchestrées de A à Z, micro maîtrisé et lecture de la piste.', href: '/dj-mariage-bretagne' },
     { icon: PartyPopper, title: 'Animation de soirée sur-mesure', description: 'Jeux, ambiance et temps forts rythmés pour fédérer tous vos invités de 7 à 77 ans.', href: '#experience' },
     { icon: Volume2, title: 'Sonorisation & éclairage professionnel', description: 'Son haut de gamme calibré à chaque moment et mise en lumière adaptée à votre salle.', href: '#formules' },
-    { icon: Printer, title: 'Photobooth vintage', description: 'Cabine TSF années 60, impressions instantanées et souvenirs personnalisés pour vos invités.', href: '#photobooth' },
+    { icon: Printer, title: 'Photobooth vintage', description: 'Cabine TSF années 60, impressions instantanées et souvenirs personnalisés pour vos invités.', href: '/photobooth-mariage' },
     { icon: Monitor, title: 'Animations interactives AnimaJet', description: 'Quiz, blind test et photo mystère sur grand écran — notre plateforme conçue maison.', href: '#animajet' },
-    { icon: Flame, title: 'Effets spéciaux', description: 'Étincelles froides certifiées CE et fumée lourde pour une ouverture de bal spectaculaire.', href: '#formules' },
+    { icon: Flame, title: 'Effets spéciaux', description: 'Étincelles froides certifiées CE et fumée lourde pour une ouverture de bal spectaculaire.', href: '/etincelles-froides-mariage' },
     { icon: Palette, title: 'Feu d\'Artifice de Jour', description: 'Tir de poudre Holi colorée pour sublimer la sortie des mariés et la photo de groupe.', href: '/feu-artifice-jour' },
     { icon: Phone, title: 'Livre d\'Or Audio', description: 'Téléphone rétro où vos invités laissent un message vocal à réécouter pour la vie.', href: '/livre-dor-audio' },
   ];
@@ -487,7 +487,10 @@ function Formules() {
             Nos <span className="text-gradient-gold">Formules</span>
           </h2>
           <p className="text-[#888]">
-            Prestations sur-mesure pour s&apos;adapter à vos envies et votre budget
+            Prestations sur-mesure pour s&apos;adapter à vos envies et votre budget —{' '}
+            <Link href="/tarifs-dj-mariage" className="text-[#c9a227] hover:underline">
+              comprendre nos tarifs en détail
+            </Link>
           </p>
         </div>
 
@@ -1756,7 +1759,7 @@ function Footer() {
     <footer className="py-16 bg-[#0a0a0a] border-t border-[#c9a227]/10">
       <div className="max-w-7xl mx-auto px-6">
         {/* Main Footer Grid */}
-        <div className="grid md:grid-cols-5 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
           {/* Logo & Contact */}
           <div className="md:col-span-1">
             <Image
@@ -1766,7 +1769,7 @@ function Footer() {
               height={48}
               className="h-12 w-auto mb-4"
             />
-            <p className="text-[#888] text-sm mb-4">DJ animateur mariage en Bretagne depuis plus de 20 ans.</p>
+            <p className="text-[#888] text-sm mb-4">DJ animateur mariage en Bretagne depuis plus de 25 ans.</p>
             <p className="text-[#888] text-sm">
               <a href="tel:+33648106166" className="inline-block py-1 text-[#c9a227] hover:underline">06 48 10 61 66</a><br />
               <a href="mailto:mg.events35@gmail.com" className="inline-block py-1 text-[#c9a227] hover:underline">mg.events35@gmail.com</a>
@@ -1827,13 +1830,29 @@ function Footer() {
             </ul>
           </div>
 
+          {/* Prestations */}
+          <div>
+            <h4 className="text-white font-medium mb-4">Prestations</h4>
+            <ul className="space-y-2">
+              <li><Link href="/tarifs-dj-mariage" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Tarifs DJ mariage</Link></li>
+              <li><Link href="/photobooth-mariage" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Photobooth mariage</Link></li>
+              <li><Link href="/sonorisation-ceremonie-laique" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Cérémonie laïque</Link></li>
+              <li><Link href="/fumee-lourde-mariage" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Fumée lourde</Link></li>
+              <li><Link href="/etincelles-froides-mariage" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Étincelles froides</Link></li>
+              <li><Link href="/dj-soiree-entreprise" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Soirée entreprise</Link></li>
+              <li><Link href="/dj-anniversaire-bretagne" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Anniversaire</Link></li>
+            </ul>
+          </div>
+
           {/* Blog */}
           <div>
             <h4 className="text-white font-medium mb-4">Blog</h4>
             <ul className="space-y-2">
               <li><Link href="/blog/comment-choisir-dj-mariage-bretagne" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Choisir son DJ mariage</Link></li>
+              <li><Link href="/blog/prix-dj-mariage-bretagne" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Prix d&apos;un DJ mariage</Link></li>
+              <li><Link href="/blog/questions-a-poser-dj-mariage" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Questions à poser</Link></li>
               <li><Link href="/blog/ouverture-de-bal-conseils" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Ouverture de bal</Link></li>
-              <li><Link href="/blog/etincelles-froides-mariage-securite" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Étincelles froides</Link></li>
+              <li><Link href="/blog/planning-soiree-mariage" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">Planning de soirée</Link></li>
               <li><Link href="/blog" className="text-[#c9a227] text-sm hover:underline">Tous les articles →</Link></li>
             </ul>
           </div>

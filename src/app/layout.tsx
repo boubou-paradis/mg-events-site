@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   publisher: "MG Events Animation",
   openGraph: {
     title: "MG Events Animation - DJ Mariage Bretagne",
-    description: "DJ animateur mariage en Bretagne. +20 ans d'expérience, animations interactives, photobooth vintage.",
+    description: "DJ animateur mariage en Bretagne. 25 ans d'expérience, animations interactives, photobooth vintage.",
     url: "https://www.mg-events35.com",
     siteName: "MG Events Animation",
     images: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MG Events Animation - DJ Mariage Bretagne",
-    description: "DJ animateur mariage en Bretagne. +20 ans d'expérience.",
+    description: "DJ animateur mariage en Bretagne. 25 ans d'expérience.",
     images: ["https://www.mg-events35.com/images/hero-bg.jpg"],
   },
   robots: {

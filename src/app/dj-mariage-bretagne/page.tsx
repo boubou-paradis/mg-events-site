@@ -507,6 +507,41 @@ export default function DJMariageBretagne() {
         </div>
       </section>
 
+      {/* Maillage prestations */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-8">
+            Nos prestations pour votre <span className="text-[#c9a227]">mariage</span>
+          </h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <Link href="/tarifs-dj-mariage" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Tarifs DJ mariage</h3>
+              <p className="text-[#888] text-sm">Formules de 1200€ à 1690€ TTC, affichées en toute transparence.</p>
+            </Link>
+            <Link href="/photobooth-mariage" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Photobooth vintage</h3>
+              <p className="text-[#888] text-sm">La cabine TSF années 60 avec impressions instantanées.</p>
+            </Link>
+            <Link href="/sonorisation-ceremonie-laique" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Cérémonie laïque</h3>
+              <p className="text-[#888] text-sm">Sonorisation sur batterie et techniciens dédiés, partout en Bretagne.</p>
+            </Link>
+            <Link href="/fumee-lourde-mariage" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Fumée lourde</h3>
+              <p className="text-[#888] text-sm">Le nuage au sol pour une ouverture de bal spectaculaire.</p>
+            </Link>
+            <Link href="/etincelles-froides-mariage" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Étincelles froides</h3>
+              <p className="text-[#888] text-sm">Machines certifiées CE pour encadrer votre première danse.</p>
+            </Link>
+            <Link href="/livre-dor-audio" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Livre d&apos;Or Audio</h3>
+              <p className="text-[#888] text-sm">Le téléphone rétro à messages vocaux de vos invités.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Maillage AnimaJet */}
       <AnimaJetMeshBlock cityName="Bretagne" placeLabel="en Bretagne" />
 

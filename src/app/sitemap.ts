@@ -99,12 +99,105 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // Page tarifs (forte intention commerciale)
+    {
+      url: `${baseUrl}/tarifs-dj-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // Pages prestations
+    {
+      url: `${baseUrl}/photobooth-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/sonorisation-ceremonie-laique`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/fumee-lourde-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/etincelles-froides-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/dj-soiree-entreprise`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/dj-anniversaire-bretagne`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
     // Page zones d'intervention
     {
       url: `${baseUrl}/zones-intervention`,
       lastModified: today,
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    // Blog — nouveaux articles juillet 2026
+    {
+      url: `${baseUrl}/blog/prix-dj-mariage-bretagne`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/questions-a-poser-dj-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/planning-soiree-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/animation-repas-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/playlist-mariage-toutes-generations`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/erreurs-animation-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/dj-ou-playlist-spotify-mariage`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/musique-vin-honneur`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
     // Blog
     {

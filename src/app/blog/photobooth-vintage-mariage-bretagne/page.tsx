@@ -106,11 +106,11 @@ export default function Article() {
           <div className="card-dark p-6 mb-10 border-[#c9a227]/20">
             <p className="text-[#c9a227] text-sm font-medium uppercase tracking-wider mb-4">Dans cet article</p>
             <ol className="space-y-2 text-sm text-[#aaa]">
-              <li><a href="#qu-est-ce-qu-un-photobooth-vintage" className="hover:text-[#c9a227] transition-colors">1. Qu'est-ce qu'un photobooth vintage TSF ?</a></li>
+              <li><a href="#qu-est-ce-qu-un-photobooth-vintage" className="hover:text-[#c9a227] transition-colors">1. Qu&apos;est-ce qu&apos;un photobooth vintage TSF ?</a></li>
               <li><a href="#pourquoi-choisir" className="hover:text-[#c9a227] transition-colors">2. Pourquoi choisir un photobooth pour votre mariage ?</a></li>
               <li><a href="#notre-photobooth" className="hover:text-[#c9a227] transition-colors">3. Notre photobooth TSF : ce qui le rend unique</a></li>
               <li><a href="#vintage-vs-moderne" className="hover:text-[#c9a227] transition-colors">4. Photobooth vintage vs photobooth moderne</a></li>
-              <li><a href="#animajet" className="hover:text-[#c9a227] transition-colors">5. L'alliance photobooth + AnimaJet</a></li>
+              <li><a href="#animajet" className="hover:text-[#c9a227] transition-colors">5. L&apos;alliance photobooth + AnimaJet</a></li>
               <li><a href="#faq" className="hover:text-[#c9a227] transition-colors">6. Questions fréquentes</a></li>
             </ol>
           </div>
