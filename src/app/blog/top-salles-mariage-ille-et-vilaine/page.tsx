@@ -306,7 +306,7 @@ export default function Article() {
               <div>
                 <p className="text-white font-medium">Guillaume - MG Events Animation</p>
                 <p className="text-[#888] text-sm">
-                  DJ animateur depuis plus de 20 ans, nous avons animé des mariages dans la plupart
+                  DJ animateur depuis 25 ans, nous avons animé des mariages dans la plupart
                   de ces lieux d&apos;exception en Ille-et-Vilaine.
                 </p>
               </div>

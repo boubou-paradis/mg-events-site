@@ -94,6 +94,9 @@ export default function Article() {
                 Le choix du DJ est l&apos;une des décisions les plus importantes pour la réussite de votre soirée de mariage.
                 C&apos;est lui qui donnera le tempo, créera l&apos;ambiance et fera danser vos invités jusqu&apos;au bout de la nuit.
                 Mais comment s&apos;y retrouver parmi toutes les offres ? Voici notre guide complet pour faire le bon choix.
+                Et si vous cherchez directement un{' '}
+                <Link href="/dj-mariage-bretagne" className="text-[#c9a227] hover:underline">DJ mariage Bretagne</Link>{' '}
+                disponible à votre date, découvrez nos prestations dans les quatre départements bretons.
               </p>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
@@ -171,15 +174,21 @@ export default function Article() {
               </p>
               <p>
                 Comparez les devis en détail : qu&apos;est-ce qui est inclus ? Sonorisation cocktail ? Éclairages ? Animations ?
-                Un devis transparent est le signe d&apos;un professionnel sérieux.
+                Un devis transparent est le signe d&apos;un professionnel sérieux. Chez MG Events, nos{' '}
+                <Link href="/tarifs-dj-mariage" className="text-[#c9a227] hover:underline">tarifs DJ mariage</Link>{' '}
+                sont affichés publiquement : de 1200€ à 1690€ TTC, tout inclus, sans surprise.
               </p>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
                 6. Les services complémentaires
               </h2>
               <p>
-                Certains DJ proposent des services qui font la différence : photobooth, animations interactives,
-                effets spéciaux (fumée lourde, étincelles froides). Ces extras peuvent transformer une bonne soirée
+                Certains DJ proposent des services qui font la différence :{' '}
+                <Link href="/photobooth-mariage" className="text-[#c9a227] hover:underline">photobooth</Link>,{' '}
+                <Link href="/animations-interactives-mariage" className="text-[#c9a227] hover:underline">animations interactives</Link>,
+                effets spéciaux (<Link href="/fumee-lourde-mariage" className="text-[#c9a227] hover:underline">fumée lourde</Link>,{' '}
+                <Link href="/etincelles-froides-mariage" className="text-[#c9a227] hover:underline">étincelles froides</Link>).
+                Ces extras peuvent transformer une bonne soirée
                 en un moment <span className="text-[#c9a227]">vraiment inoubliable</span>.
               </p>
 
@@ -188,12 +197,12 @@ export default function Article() {
                   Besoin d&apos;un DJ pour votre mariage en Bretagne ?
                 </h3>
                 <p className="text-[#888] mb-6">
-                  Chez MG Events, nous cochons toutes les cases : +20 ans d&apos;expérience, matériel pro,
+                  Chez MG Events, nous cochons toutes les cases : 25 ans d&apos;expérience, matériel pro,
                   animations originales et un vrai accompagnement personnalisé.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/#formules" className="btn-outline">
-                    Découvrir nos formules
+                  <Link href="/dj-mariage-bretagne" className="btn-outline">
+                    Votre DJ mariage en Bretagne
                   </Link>
                   <Link href="/#contact" className="btn-gold">
                     Demander un devis
@@ -212,7 +221,7 @@ export default function Article() {
               <div>
                 <p className="text-white font-medium">Guillaume - MG Events Animation</p>
                 <p className="text-[#888] text-sm">
-                  DJ animateur depuis plus de 20 ans, passionné par les mariages et les belles fêtes en Bretagne.
+                  DJ animateur depuis 25 ans, passionné par les mariages et les belles fêtes en Bretagne.
                 </p>
               </div>
             </div>

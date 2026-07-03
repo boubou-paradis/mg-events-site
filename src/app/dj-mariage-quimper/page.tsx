@@ -5,8 +5,8 @@ import { ArrowLeft, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, Ch
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Quimper | Animation Soirée Finistère - MG Events',
-  description: "DJ mariage à Quimper et dans tout le Finistère Sud. Concarneau, Bénodet, Fouesnant, Pont-l'Abbé, Douarnenez. 25 ans d'expérience, AnimaJet notre plateforme maison, photobooth vintage. Devis gratuit sous 24h ✓",
+  title: 'DJ Quimper · Mariage & Soirée · Avis 5★ · Dès 1200€',
+  description: "DJ à Quimper pour mariage et soirée, dans tout le Finistère Sud : Concarneau, Bénodet, Fouesnant, Pont-l'Abbé, Douarnenez. Avis 5★, formules dès 1200€ TTC. 25 ans d'expérience, AnimaJet, photobooth vintage. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Quimper, DJ Quimper, DJ mariage Finistère, animation mariage Quimper, DJ Concarneau, DJ mariage 29, animation soirée Quimper, DJ Cornouaille',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-quimper',
@@ -525,7 +525,7 @@ export default function DJMariageQuimper() {
             <Link href="/dj-mariage-finistere" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
               DJ Mariage Finistère (29)
             </Link>
-            <Link href="/dj-mariage-rennes" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
+            <Link href="/dj-mariage/rennes" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
               DJ Mariage Rennes
             </Link>
             <Link href="/dj-mariage-morbihan" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">

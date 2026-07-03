@@ -5,21 +5,21 @@ import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, Map
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Ille-et-Vilaine (35) | MG Events Animation',
-  description: "DJ animateur mariage en Ille-et-Vilaine (35). Rennes, Saint-Malo, Fougères, Vitré, Redon, Dinard. +20 ans d'expérience, photobooth vintage, animations interactives. Devis gratuit ✓",
+  title: 'DJ Mariage Ille-et-Vilaine (35) · Avis 5★ · Dès 1200€',
+  description: "DJ animateur mariage en Ille-et-Vilaine (35) : Rennes, Saint-Malo, Fougères, Vitré, Redon, Dinard. Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, photobooth vintage. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Ille-et-Vilaine, DJ mariage 35, DJ mariage Rennes, DJ mariage Saint-Malo, DJ mariage Fougères, DJ mariage Vitré, DJ mariage Redon, DJ mariage Dinard, animation mariage Bretagne',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-ille-et-vilaine',
   },
   openGraph: {
     title: 'DJ Mariage Ille-et-Vilaine (35) | MG Events Animation',
-    description: "DJ animateur mariage en Ille-et-Vilaine (35). Rennes, Saint-Malo, Fougères, Vitré. +20 ans d'expérience, photobooth vintage, animations interactives.",
+    description: "DJ animateur mariage en Ille-et-Vilaine (35). Rennes, Saint-Malo, Fougères, Vitré. 25 ans d'expérience, photobooth vintage, animations interactives.",
     url: 'https://www.mg-events35.com/dj-mariage-ille-et-vilaine',
   },
 };
 
 const pointsForts = [
-  { icon: Mic2, title: '+20 ans d\'expérience', description: 'Plus de 100 mariages animés en Bretagne' },
+  { icon: Mic2, title: '25 ans d\'expérience', description: 'Plus de 100 mariages animés en Bretagne' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
   { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
@@ -77,7 +77,7 @@ const localBusinessSchema = {
   "@id": "https://www.mg-events35.com/dj-mariage-ille-et-vilaine#organization",
   "name": "MG Events Animation - DJ Mariage Ille-et-Vilaine",
   "image": "https://www.mg-events35.com/images/logo.png",
-  "description": "DJ animateur professionnel pour mariage en Ille-et-Vilaine (35). Animation musicale, photobooth vintage, étincelles froides. Plus de 20 ans d'expérience.",
+  "description": "DJ animateur professionnel pour mariage en Ille-et-Vilaine (35). Animation musicale, photobooth vintage, étincelles froides. 25 ans d'expérience.",
   "url": "https://www.mg-events35.com/dj-mariage-ille-et-vilaine",
   "telephone": "+33648106166",
   "email": "contact@mg-events35.com",
@@ -242,7 +242,7 @@ export default function DJMariageIlleEtVilaine() {
                 prise de micro et animations interactives pour faire danser toutes les générations.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
-                Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés dans le 35,
+                Avec <strong className="text-white">25 ans d&apos;expérience</strong> et plus de 100 mariages animés dans le 35,
                 nous transformons votre soirée en un moment inoubliable. Notre force ? Des animations interactives
                 grâce à <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, un photobooth vintage,
                 et des effets spectaculaires (fumée lourde, étincelles froides certifiées CE).
@@ -599,7 +599,7 @@ export default function DJMariageIlleEtVilaine() {
             Nous intervenons dans toutes les villes du département 35. Découvrez nos prestations près de chez vous.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <Link href="/dj-mariage-rennes" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
+            <Link href="/dj-mariage/rennes" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
               <MapPin size={20} className="text-[#c9a227] mx-auto mb-2" />
               <span className="text-white group-hover:text-[#c9a227] transition-colors font-medium">Rennes</span>
             </Link>
@@ -645,6 +645,9 @@ export default function DJMariageIlleEtVilaine() {
             </Link>
             <Link href="/dj-mariage-mayenne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
               DJ Mariage Mayenne (53)
+            </Link>
+            <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
+              DJ Mariage Bretagne
             </Link>
           </div>
         </div>

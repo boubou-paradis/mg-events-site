@@ -106,7 +106,7 @@ function Footer() {
               height={48}
               className="h-12 w-auto mb-4"
             />
-            <p className="text-[#888] text-sm mb-4">DJ animateur mariage en Bretagne depuis plus de 20 ans.</p>
+            <p className="text-[#888] text-sm mb-4">DJ animateur mariage en Bretagne depuis 25 ans.</p>
             <p className="text-[#888] text-sm">
               <a href="tel:+33648106166" className="text-[#c9a227] hover:underline">06 48 10 61 66</a><br />
               <a href="mailto:mg.events35@gmail.com" className="text-[#c9a227] hover:underline">mg.events35@gmail.com</a>

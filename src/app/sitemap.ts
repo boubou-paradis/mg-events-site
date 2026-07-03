@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Date de dernière mise à jour réelle du contenu — à actualiser manuellement
   // lors d'un ajout ou d'une refonte de page (ne pas remettre new Date() :
   // une date qui change à chaque build fait perdre toute valeur au lastmod).
-  const today = '2026-07-01'
+  const today = '2026-07-03'
 
   // Pages statiques principales
   const staticPages: MetadataRoute.Sitemap = [
@@ -56,22 +56,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/dj-mariage-rennes`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/lieux-reception-bretagne`,
       lastModified: today,
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/dj-mariage-laval`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.85,
     },
     {
       url: `${baseUrl}/dj-morlaix`,

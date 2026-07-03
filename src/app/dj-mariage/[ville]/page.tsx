@@ -25,22 +25,22 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   const nearbyText = city.nearbyCommunes.slice(0, 3).join(', ');
 
   return {
-    title: `DJ Mariage ${city.name} | Animation Soirée ${city.department} - MG Events`,
-    description: `DJ animateur mariage à ${city.name} — 25 ans d'expérience, animations interactives AnimaJet, sonorisation et photobooth vintage. ${nearbyText} et environs. Devis gratuit sous 24h ✓`,
+    title: `DJ & Animation Mariage ${city.name} · Avis 5★ · Dès 1200€`,
+    description: `DJ animateur mariage à ${city.name} (${city.department}) — Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, AnimaJet, photobooth vintage. ${nearbyText} et environs. Devis gratuit sous 24h ✓`,
     keywords: `DJ mariage ${city.name}, DJ animateur ${city.name}, animation mariage ${city.name}, animateur de soirée ${city.name}, sonorisation mariage ${city.name}, DJ mariage ${city.departmentCode}, DJ ${city.name}`,
     alternates: {
       canonical: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     },
     openGraph: {
       title: `DJ Mariage ${city.name} | MG Events Animation`,
-      description: `DJ animateur mariage à ${city.name}. +20 ans d'expérience, photobooth vintage, animations interactives.`,
+      description: `DJ animateur mariage à ${city.name}. Avis 5★, dès 1200€. 25 ans d'expérience, photobooth vintage, animations interactives.`,
       url: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     },
   };
 }
 
 const pointsForts = [
-  { icon: Mic2, title: "+20 ans d'expérience", description: 'Plus de 100 mariages animés en Bretagne' },
+  { icon: Mic2, title: "25 ans d'expérience", description: 'Plus de 100 mariages animés en Bretagne' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
   { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
@@ -153,7 +153,7 @@ function generateLocalBusinessSchema(city: City) {
     "@id": `https://www.mg-events35.com/dj-mariage/${city.slug}#organization`,
     "name": `MG Events Animation - DJ Mariage ${city.name}`,
     "image": "https://www.mg-events35.com/images/logo.png",
-    "description": `DJ animateur professionnel pour mariage à ${city.name} (${city.departmentCode}). Animation musicale, photobooth vintage, étincelles froides. Plus de 20 ans d'expérience.`,
+    "description": `DJ animateur professionnel pour mariage à ${city.name} (${city.departmentCode}). Animation musicale, photobooth vintage, étincelles froides. 25 ans d'expérience.`,
     "url": `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     "telephone": "+33648106166",
     "email": "contact@mg-events35.com",
@@ -294,7 +294,7 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
                 <span className="text-[#c9a227]"> {city.nearbyCommunes.join(', ')}</span>.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
-                Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés en Bretagne,
+                Avec <strong className="text-white">25 ans d&apos;expérience</strong> et plus de 100 mariages animés en Bretagne,
                 nous transformons votre soirée en un moment inoubliable. Notre force ? Des animations interactives
                 grâce à <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, un photobooth vintage,
                 et des effets spectaculaires (fumée lourde, étincelles froides certifiées CE).
@@ -714,6 +714,12 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
                 DJ Mariage {dept.name} ({dept.code})
               </Link>
             ))}
+            <Link
+              href="/dj-mariage-bretagne"
+              className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
+            >
+              DJ Mariage Bretagne
+            </Link>
           </div>
         </div>
       </section>

@@ -56,6 +56,18 @@ const nextConfig: NextConfig = {
         destination: '/sitemap.xml',
         permanent: true,
       },
+      // Consolidation SEO juillet 2026 : pages doublons fusionnées vers les
+      // pages villes dynamiques (Google positionnait les deux versions)
+      {
+        source: '/dj-mariage-rennes',
+        destination: '/dj-mariage/rennes',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage-laval',
+        destination: '/dj-mariage/laval',
+        permanent: true,
+      },
       // Redirections anciennes URLs (ancien site) vers pages actuelles
       {
         source: '/services',

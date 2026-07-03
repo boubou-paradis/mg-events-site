@@ -216,7 +216,7 @@ export default function ZonesIntervention() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/dj-mariage-laval"
+              href="/dj-mariage/laval"
               className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
             >
               <MapPin size={16} className="text-[#c9a227]" />
@@ -230,7 +230,7 @@ export default function ZonesIntervention() {
               DJ Mariage Morlaix (Finistère)
             </Link>
             <Link
-              href="/dj-mariage-rennes"
+              href="/dj-mariage/rennes"
               className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
             >
               <MapPin size={16} className="text-[#c9a227]" />

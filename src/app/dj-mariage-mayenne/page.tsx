@@ -5,21 +5,21 @@ import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, Map
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Mayenne | Animation Mariage Laval',
-  description: "DJ animateur mariage en Mayenne. Laval, Château-Gontier, Mayenne. +20 ans d'expérience, animations interactives, photobooth vintage. Devis gratuit ✓",
+  title: 'DJ Mariage Mayenne & Laval (53) · Avis 5★ · Dès 1200€',
+  description: "DJ animateur mariage en Mayenne : Laval, Château-Gontier, Évron, Craon. Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, animations interactives, photobooth vintage. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Mayenne, DJ mariage Laval, DJ mariage Château-Gontier, animation mariage 53, DJ mariage Évron',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-mayenne',
   },
   openGraph: {
     title: 'DJ Mariage Mayenne | Animation Mariage Laval - MG Events',
-    description: "DJ animateur mariage en Mayenne. Laval, Château-Gontier, Mayenne. +20 ans d'expérience, animations interactives, photobooth vintage.",
+    description: "DJ animateur mariage en Mayenne. Laval, Château-Gontier, Mayenne. 25 ans d'expérience, animations interactives, photobooth vintage.",
     url: 'https://www.mg-events35.com/dj-mariage-mayenne',
   },
 };
 
 const pointsForts = [
-  { icon: Mic2, title: '+20 ans d\'expérience', description: 'Plus de 100 mariages animés en Bretagne' },
+  { icon: Mic2, title: '25 ans d\'expérience', description: 'Plus de 100 mariages animés en Bretagne' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
   { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
@@ -239,7 +239,7 @@ export default function DJMariageMayenne() {
                 prise de micro et animations interactives pour faire danser toutes les générations.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
-                Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés,
+                Avec <strong className="text-white">25 ans d&apos;expérience</strong> et plus de 100 mariages animés,
                 nous transformons votre soirée en un moment inoubliable. Notre force ? Des animations interactives
                 grâce à <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, un photobooth vintage,
                 et des effets spectaculaires (fumée lourde, étincelles froides certifiées CE).
@@ -623,6 +623,9 @@ export default function DJMariageMayenne() {
             </Link>
             <Link href="/dj-mariage-loire-atlantique" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
               DJ Mariage Loire-Atlantique (44)
+            </Link>
+            <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
+              DJ Mariage Bretagne
             </Link>
           </div>
         </div>

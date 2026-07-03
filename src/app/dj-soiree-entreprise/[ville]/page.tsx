@@ -119,7 +119,7 @@ function generateEnterpriseSchema(city: City) {
     "@id": `https://www.mg-events35.com/dj-soiree-entreprise/${city.slug}#organization`,
     "name": `MG Events Animation - DJ Soirée Entreprise ${city.name}`,
     "image": "https://www.mg-events35.com/images/logo.png",
-    "description": `DJ animateur pour soirée d'entreprise à ${city.name}. Animation corporate, team building, photobooth personnalisé. Plus de 20 ans d'expérience.`,
+    "description": `DJ animateur pour soirée d'entreprise à ${city.name}. Animation corporate, team building, photobooth personnalisé. 25 ans d'expérience.`,
     "url": `https://www.mg-events35.com/dj-soiree-entreprise/${city.slug}`,
     "telephone": "+33648106166",
     "email": "contact@mg-events35.com",
@@ -224,7 +224,7 @@ export default async function DJSoireeEntreprise({ params }: { params: Promise<{
                 <span className="text-[#c9a227]"> séminaires, team building, soirées de fin d&apos;année, lancements produit</span>.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
-                Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong>, nous créons une ambiance professionnelle
+                Avec <strong className="text-white">25 ans d&apos;expérience</strong>, nous créons une ambiance professionnelle
                 et conviviale. Notre technologie <span className="text-[#c9a227]">AnimaJet</span> permet des animations interactives
                 (quiz, blind test) personnalisables avec votre branding.
               </p>

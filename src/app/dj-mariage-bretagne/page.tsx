@@ -15,8 +15,8 @@ const citySlug = (name: string) =>
     .replace(/^-+|-+$/g, '');
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Bretagne | Animation Soirée 29, 35, 56, 44 - MG Events',
-  description: "DJ mariage en Bretagne : animation élégante sur mesure, sonorisation et éclairage professionnels. Ille-et-Vilaine, Finistère, Morbihan, Loire-Atlantique. 25 ans d'expérience en discothèques bretonnes. Devis gratuit ✓",
+  title: 'DJ Mariage Bretagne · Avis 5★ · Dès 1200€',
+  description: "DJ mariage en Bretagne — Avis 5★, formules transparentes dès 1200€ TTC tout inclus. Ille-et-Vilaine, Finistère, Morbihan, Loire-Atlantique. 25 ans d'expérience, AnimaJet, photobooth vintage. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Bretagne, DJ mariage breton, animation mariage Bretagne, DJ Bretagne mariage, sono mariage Bretagne, animation soirée Bretagne, DJ 35 29 56 44',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-bretagne',

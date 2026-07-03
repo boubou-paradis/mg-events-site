@@ -76,7 +76,7 @@ function Hero() {
 
         {/* Subtitle */}
         <p className="animate-fade-up delay-200 text-lg sm:text-xl text-[#888] max-w-2xl mx-auto mb-4">
-          Animateur de soirée de mariage — plus de 20 ans d&apos;expérience au service de vos plus belles soirées
+          Animateur de soirée de mariage — 25 ans d&apos;expérience au service de vos plus belles soirées
         </p>
         
         {/* Zone */}
@@ -191,10 +191,10 @@ function About() {
             <div className="space-y-4 text-[#aaa] leading-relaxed">
               <p>
                 <strong className="text-white">Guillaume et Laurence</strong>, un duo passionné et complémentaire, 
-                mettent leur expertise au service de vos événements depuis plus de 20 ans.
+                mettent leur expertise au service de vos événements depuis 25 ans.
               </p>
               <p>
-                Fort d&apos;une expérience de plus de 20 ans dans le monde de la nuit et de l&apos;animation, 
+                Fort d&apos;une expérience de 25 ans dans le monde de la nuit et de l&apos;animation, 
                 Guillaume a su développer un savoir-faire unique pour créer des ambiances mémorables.
               </p>
               <p>
@@ -1788,12 +1788,12 @@ function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/dj-mariage-rennes" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                <Link href="/dj-mariage/rennes" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
                   DJ Mariage Rennes
                 </Link>
               </li>
               <li>
-                <Link href="/dj-mariage-laval" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                <Link href="/dj-mariage/laval" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
                   DJ Mariage Laval
                 </Link>
               </li>

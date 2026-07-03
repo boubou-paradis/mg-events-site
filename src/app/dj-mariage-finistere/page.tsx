@@ -5,21 +5,21 @@ import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, Map
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Finistère | Animation Mariage Quimper Brest',
-  description: "DJ animateur mariage dans le Finistère. Quimper, Brest, Morlaix, Concarneau. +20 ans d'expérience, animations interactives développées maison. Devis gratuit ✓",
+  title: 'DJ Mariage Finistère (29) · Avis 5★ · Dès 1200€',
+  description: "DJ animateur mariage dans le Finistère : Quimper, Brest, Morlaix, Concarneau. Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, animations interactives développées maison. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Finistère, DJ mariage Quimper, DJ mariage Brest, DJ mariage Morlaix, DJ mariage Concarneau, animation mariage 29',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-finistere',
   },
   openGraph: {
     title: 'DJ Mariage Finistère | Animation Mariage Quimper Brest - MG Events',
-    description: "DJ animateur mariage dans le Finistère. Quimper, Brest, Morlaix, Concarneau. +20 ans d'expérience, animations interactives développées maison.",
+    description: "DJ animateur mariage dans le Finistère. Quimper, Brest, Morlaix, Concarneau. 25 ans d'expérience, animations interactives développées maison.",
     url: 'https://www.mg-events35.com/dj-mariage-finistere',
   },
 };
 
 const pointsForts = [
-  { icon: Mic2, title: '+20 ans d\'expérience', description: 'Plus de 100 mariages animés en Bretagne' },
+  { icon: Mic2, title: '25 ans d\'expérience', description: 'Plus de 100 mariages animés en Bretagne' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
   { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
@@ -239,7 +239,7 @@ export default function DJMariageFinistere() {
                 sonorisation professionnelle et éclairage inclus.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
-                Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés,
+                Avec <strong className="text-white">25 ans d&apos;expérience</strong> et plus de 100 mariages animés,
                 nous transformons votre soirée en un moment inoubliable. Notre force ? Des animations interactives
                 grâce à <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, un photobooth vintage,
                 et des effets spectaculaires (fumée lourde, étincelles froides certifiées CE).
@@ -627,6 +627,9 @@ export default function DJMariageFinistere() {
             </Link>
             <Link href="/dj-mariage-mayenne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
               DJ Mariage Mayenne (53)
+            </Link>
+            <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
+              DJ Mariage Bretagne
             </Link>
           </div>
         </div>

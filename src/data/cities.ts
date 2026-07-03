@@ -56,7 +56,7 @@ Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, a
 
 Au-delà de la soirée dansante, nous proposons la sonorisation de cérémonie laïque (à 180€), idéale pour les cérémonies en extérieur au Domaine de Cicé-Blossac ou dans les jardins des manoirs rennais. Deux techniciens dédiés, retransmission en direct des musiques que vous avez choisies, sonorisation discrète mais puissante.
 
-En tant que DJ mariage à Rennes depuis plus de 20 ans, nous avons constitué un réseau de partenaires de confiance dans la métropole : photographes, vidéastes, wedding planners, traiteurs. Cette connaissance de l'écosystème local garantit une coordination parfaite le jour J, et souvent des recommandations croisées qui facilitent l'organisation.
+En tant que DJ mariage à Rennes depuis 25 ans, nous avons constitué un réseau de partenaires de confiance dans la métropole : photographes, vidéastes, wedding planners, traiteurs. Cette connaissance de l'écosystème local garantit une coordination parfaite le jour J, et souvent des recommandations croisées qui facilitent l'organisation.
 
 Concrètement, un mariage rennais avec MG Events, c'est : un rendez-vous de préparation personnalisé pour construire votre programme musical et le timing de votre soirée, une coordination avec votre traiteur et votre photographe, une animation élégante et sur mesure de la cérémonie laïque à la soirée dansante — avec cet équilibre musical entre les générations qui est notre marque de fabrique depuis plus de 25 ans. Le vin d'honneur en musique douce, le repas en fond sonore élégant, puis l'explosion de la piste de danse : chaque moment de votre journée est pensé. Quel budget pour un DJ mariage à Rennes ? Nos formules démarrent à 1200€ TTC (formule Éclat d'Amour), 1490€ pour la formule Rêve en Blanc, et 1690€ pour la formule Conte de Fées incluant le photobooth vintage TSF. Des tarifs transparents, sans surprise — déplacement à Rennes et dans toute l'Ille-et-Vilaine inclus.`,
     localHighlights: [
@@ -240,7 +240,7 @@ Notre technologie exclusive AnimaJet ajoute une dimension participative rare dan
 
 La promenade du Clair de Lune, les plages de l'Écluse et de Saint-Énogat, les pointes rocheuses offrent des décors de photos de mariage variés et spectaculaires. Les hôtels de luxe dinardais perpétuent la tradition d'accueil haut de gamme qui a fait la réputation de la station auprès de l'aristocratie britannique dès le XIXe siècle.
 
-Un mariage à Dinard demande une expertise particulière : gestion des cocktails en terrasse face au vent marin, adaptation aux espaces souvent intimes des villas Belle Époque, coordination avec les prestataires locaux habitués à l'exigence de la clientèle. Notre expérience de plus de 20 ans sur la Côte d'Émeraude nous permet de relever ces défis avec professionnalisme.`,
+Un mariage à Dinard demande une expertise particulière : gestion des cocktails en terrasse face au vent marin, adaptation aux espaces souvent intimes des villas Belle Époque, coordination avec les prestataires locaux habitués à l'exigence de la clientèle. Notre expérience de 25 ans sur la Côte d'Émeraude nous permet de relever ces défis avec professionnalisme.`,
     localHighlights: [
       'Station balnéaire chic avec villas Belle Époque classées',
       'Vue exceptionnelle sur Saint-Malo et la baie de la Rance',
@@ -752,24 +752,35 @@ Notre expérience de DJ mariage à Concarneau inclut une parfaite connaissance d
     latitude: 48.0734,
     longitude: -0.7695,
     population: '52 000',
-    seoDescription: `Laval, préfecture de la Mayenne, est une ville d'art et d'histoire lovée dans les méandres de la rivière éponyme. Son château médiéval surplombant les quais, ses ruelles du vieux Laval et son patrimoine Renaissance (maison du Grand Veneur) en font une destination de mariage élégante et accessible. À la croisée de la Bretagne, de la Normandie et des Pays de la Loire, Laval facilite le rassemblement de vos invités.
+    seoDescription: `Vous cherchez un DJ à Laval pour votre mariage, votre soirée ou votre événement ? MG Events Animation intervient à Laval et dans toute la Mayenne : Château-Gontier-sur-Mayenne, Évron, Craon, Ernée, Bonchamp-lès-Laval, Mayenne ville... Guillaume et Laurence, duo DJ animateur fort de 25 ans d'expérience, se déplacent dans tout le département 53 sans frais supplémentaire.
 
-La Mayenne, département le plus rural de l'Ouest, offre un cadre champêtre authentique avec ses bocages, ses vergers et ses manoirs discrets. Les prix des domaines et des prestataires y sont sensiblement inférieurs à ceux des zones côtières, permettant d'organiser un mariage de qualité avec un budget maîtrisé. La gastronomie mayennaise, entre produits laitiers et charcuteries du terroir, régalera vos convives.
+Laval, préfecture de la Mayenne, est une ville d'art et d'histoire lovée dans les méandres de la rivière éponyme. Son château médiéval surplombant les quais, ses ruelles du vieux Laval et son patrimoine Renaissance (maison du Grand Veneur) en font une destination de mariage élégante et accessible. À la croisée de la Bretagne, de la Normandie et des Pays de la Loire, Laval facilite le rassemblement de vos invités.
 
-Notre proximité avec la Mayenne (à 1h de notre base) fait de Laval une destination privilégiée pour nos prestations. Nous connaissons bien les lieux de réception lavallois et travaillons régulièrement avec les traiteurs et photographes locaux. Cette synergie garantit une coordination parfaite le jour de votre mariage.`,
+La Mayenne, département le plus rural de l'Ouest, offre un cadre champêtre authentique avec ses bocages, ses vergers et ses manoirs discrets. Les prix des domaines et des prestataires y sont sensiblement inférieurs à ceux des zones côtières, permettant d'organiser un mariage de qualité avec un budget maîtrisé. Le Château de Craon, le Domaine de Cimbré à Bonchamp-lès-Laval, le Château du Rocher à Mézangers ou le Château de la Roche-Pichemer comptent parmi les lieux de réception où nous animons régulièrement des mariages. La gastronomie mayennaise, entre produits laitiers et charcuteries du terroir, régalera vos convives.
+
+Notre proximité avec la Mayenne (à 1h de notre base) fait de Laval une destination privilégiée pour nos prestations de DJ mariage. Nous connaissons bien les lieux de réception lavallois et travaillons régulièrement avec les traiteurs et photographes locaux. Cette synergie garantit une coordination parfaite le jour de votre mariage. Nos formules démarrent à 1200€ TTC, déplacement dans tout le 53 inclus, et la sonorisation de cérémonie laïque (180€, 2 techniciens) est très demandée dans les domaines mayennais.`,
     localHighlights: [
       'Carrefour Bretagne-Normandie-Pays de la Loire : facile pour tous vos invités',
       'Tarifs attractifs : domaines et prestataires moins chers que sur la côte',
       'Vieux Laval pittoresque avec château et quais de la Mayenne',
       'À 1h de Rennes, 1h30 du Mans, 2h30 de Paris en TGV',
     ],
-    nearbyCommunes: ['Saint-Berthevin', 'Changé', 'L\'Huisserie', 'Bonchamp-lès-Laval', 'Louverné', 'Entrammes'],
+    nearbyCommunes: ['Saint-Berthevin', 'Changé', 'L\'Huisserie', 'Bonchamp-lès-Laval', 'Louverné', 'Entrammes', 'Château-Gontier-sur-Mayenne', 'Évron', 'Craon', 'Ernée', 'Montsûrs', 'Sainte-Suzanne'],
     weddingVenues: [
       { nom: 'Château de Laval', ville: 'Laval', type: 'Château', description: 'Château médiéval dominant la Mayenne avec donjon cylindrique' },
       { nom: 'Domaine du Tertre', ville: 'Laval', type: 'Domaine', description: 'Domaine rural avec grange rénovée et parc paysager' },
+      { nom: 'Château de Craon', ville: 'Craon', type: 'Château & Parc', description: 'La "Versailles de la Mayenne" et son parc de 40 hectares' },
+      { nom: 'Domaine de Cimbré', ville: 'Bonchamp-lès-Laval', type: 'Domaine & Étang', description: 'Domaine avec étang aux portes de Laval, cadre champêtre' },
+      { nom: 'Château du Rocher', ville: 'Mézangers', type: 'Château historique', description: 'Château Renaissance près d\'Évron, cour d\'honneur remarquable' },
+      { nom: 'Manoir de la Cour', ville: 'Quelaines-Saint-Gault', type: 'Manoir & Jardins', description: 'Manoir de caractère au sud de Laval, réceptions intimistes' },
+      { nom: 'Château de la Roche-Pichemer', ville: 'Bouère', type: 'Château Renaissance', description: 'Château Renaissance entre Laval et Sablé-sur-Sarthe' },
+      { nom: 'Domaine des Hayes', ville: 'Saint-Denis-d\'Anjou', type: 'Domaine champêtre', description: 'Domaine champêtre du sud Mayenne, grange et prairies' },
     ],
     testimonials: [
       { author: 'Caroline & Vincent', text: "Superbe animation pour notre mariage à Laval. MG Events a su s'adapter à tous nos invités !" },
+      { author: 'Sophie & Thomas', text: "Merci à Guillaume et Laurence pour leur investissement et professionnalisme. Notre mariage à Laval était une réussite totale. Vous le faites par passion — ne changez pas !" },
+      { author: 'Claire & Antoine', text: "Mariage parfait au Château de Craon ! Une ambiance magique du cocktail jusqu'à la fermeture. Guillaume a su lire notre piste de danse et maintenir l'énergie jusqu'au bout." },
+      { author: 'Marion & Florian', text: "Les étincelles froides pour notre ouverture de bal au Domaine de Cimbré, c'était féerique. Une équipe ultra-professionnelle et vraiment sympa. Merci pour tout !" },
     ],
     forEnterprise: true,
     businessAreas: ['Zone des Touches', 'Parc d\'activités de la Maillarderie'],

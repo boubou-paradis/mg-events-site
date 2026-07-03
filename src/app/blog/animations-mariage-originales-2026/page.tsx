@@ -253,7 +253,7 @@ export default function Article() {
               <div>
                 <p className="text-white font-medium">Guillaume - MG Events Animation</p>
                 <p className="text-[#888] text-sm">
-                  DJ animateur depuis plus de 20 ans, passionné par les mariages et les belles fêtes en Bretagne.
+                  DJ animateur depuis 25 ans, passionné par les mariages et les belles fêtes en Bretagne.
                 </p>
               </div>
             </div>

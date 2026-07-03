@@ -5,21 +5,21 @@ import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, Map
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Loire-Atlantique (44) | MG Events Animation Nantes',
-  description: "DJ animateur mariage en Loire-Atlantique (44). Nantes, Saint-Nazaire, La Baule, Guérande, Pornic, Clisson. +20 ans d'expérience, photobooth vintage, animations interactives. Devis gratuit ✓",
+  title: 'DJ Mariage Loire-Atlantique (44) · Avis 5★ · Dès 1200€',
+  description: "DJ animateur mariage en Loire-Atlantique (44) : Nantes, Saint-Nazaire, La Baule, Guérande, Pornic, Clisson. Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, photobooth vintage. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Loire-Atlantique, DJ mariage 44, DJ mariage Nantes, DJ mariage Saint-Nazaire, DJ mariage La Baule, DJ mariage Guérande, DJ mariage Pornic, DJ mariage Clisson, animation mariage Pays de la Loire',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',
   },
   openGraph: {
     title: 'DJ Mariage Loire-Atlantique (44) | MG Events Animation Nantes',
-    description: "DJ animateur mariage en Loire-Atlantique (44). Nantes, Saint-Nazaire, La Baule, Guérande. +20 ans d'expérience, photobooth vintage, animations interactives.",
+    description: "DJ animateur mariage en Loire-Atlantique (44). Nantes, Saint-Nazaire, La Baule, Guérande. 25 ans d'expérience, photobooth vintage, animations interactives.",
     url: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',
   },
 };
 
 const pointsForts = [
-  { icon: Mic2, title: '+20 ans d\'expérience', description: 'Plus de 100 mariages animés en Bretagne' },
+  { icon: Mic2, title: '25 ans d\'expérience', description: 'Plus de 100 mariages animés en Bretagne' },
   { icon: Sparkles, title: 'Effets spectaculaires', description: 'Étincelles froides certifiées CE, fumée lourde' },
   { icon: Camera, title: 'Photobooth vintage', description: 'Style TSF années 60, impressions sur place' },
   { icon: Music, title: 'AnimaJet, notre création', description: 'Animations interactives conçues et développées par MG Events' },
@@ -242,7 +242,7 @@ export default function DJMariageLoireAtlantique() {
                 prise de micro et animations interactives pour faire danser toutes les générations.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
-                Avec plus de <strong className="text-white">20 ans d&apos;expérience</strong> et plus de 100 mariages animés,
+                Avec <strong className="text-white">25 ans d&apos;expérience</strong> et plus de 100 mariages animés,
                 nous transformons votre soirée en un moment inoubliable. Que ce soit face à l&apos;océan à La Baule ou dans un domaine viticole à Clisson,
                 notre force ? Des animations interactives avec <span className="text-[#c9a227]">AnimaJet</span>, la plateforme que nous avons conçue et développée, un photobooth vintage,
                 et des effets spectaculaires (fumée lourde, étincelles froides certifiées CE).
@@ -625,6 +625,9 @@ export default function DJMariageLoireAtlantique() {
             </Link>
             <Link href="/dj-mariage-mayenne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
               DJ Mariage Mayenne (53)
+            </Link>
+            <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
+              DJ Mariage Bretagne
             </Link>
           </div>
         </div>
