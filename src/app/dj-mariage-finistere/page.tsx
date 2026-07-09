@@ -6,7 +6,7 @@ import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Finistère (29) · Avis 5★ · Dès 1200€',
-  description: "DJ animateur mariage dans le Finistère : Quimper, Brest, Morlaix, Concarneau. Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, animations interactives développées maison. Devis gratuit sous 24h ✓",
+  description: "DJ animateur mariage dans le Finistère (29) : Quimper, Brest, Morlaix, Concarneau. Avis 5★, dès 1200€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Finistère, DJ mariage Quimper, DJ mariage Brest, DJ mariage Morlaix, DJ mariage Concarneau, animation mariage 29',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-finistere',

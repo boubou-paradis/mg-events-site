@@ -7,9 +7,9 @@ const SLUG = 'feu-artifice-jour-mariage-poudre-holi';
 const BASE = 'https://www.mg-events35.com';
 
 export const metadata: Metadata = {
-  title: 'Feu d\'artifice de jour mariage : la poudre Holi explose en couleurs | MG Events',
+  title: 'Feu d\'artifice de jour mariage : la poudre Holi explose en couleurs',
   description:
-    "Le feu d'artifice de jour à la poudre Holi : l'animation originale qui colore la sortie des mariés et la cérémonie laïque en plein jour. Fonctionnement, couleurs, moments idéaux et tarif (120€).",
+    "Le feu d'artifice de jour à la poudre Holi colore la sortie des mariés et la cérémonie laïque. Fonctionnement, couleurs, moments idéaux, tarif 120€.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     title: "Feu d'artifice de jour mariage : la poudre Holi explose en couleurs",

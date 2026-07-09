@@ -5,7 +5,7 @@ import { MapPin, ArrowLeft, Phone, Mail, Building2, Cake } from 'lucide-react';
 import { cities, getCitiesByDepartment, getCitiesForEnterprise, getCitiesForBirthday } from '@/data/cities';
 
 export const metadata: Metadata = {
-  title: 'Zones d\'intervention DJ Mariage Bretagne | MG Events',
+  title: 'Zones d\'intervention DJ Mariage Bretagne',
   description: 'DJ mariage en Bretagne : Ille-et-Vilaine, Morbihan, Finistère, Loire-Atlantique, Mayenne. Découvrez toutes nos zones d\'intervention. Devis gratuit ✓',
   alternates: {
     canonical: 'https://www.mg-events35.com/zones-intervention',

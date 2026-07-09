@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Photos des invités mariage | Récupérez tous les clichés — AnimaJet',
   description:
-    "Centralisez les photos de vos invités le jour du mariage : chacun partage ses clichés via QR Code, vous récupérez des centaines de souvenirs après la soirée. Sans application. MG Events Bretagne.",
+    "Centralisez les photos de vos invités le jour du mariage via QR Code, sans application. Récupérez des centaines de souvenirs après la soirée.",
   keywords:
     'photos invités mariage, récupérer photos invités mariage, album photo invités mariage, collecte photos mariage, photos mariage QR code, photos partagées mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },

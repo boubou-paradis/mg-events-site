@@ -22,11 +22,9 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
     return { title: 'Page non trouvée' };
   }
 
-  const nearbyText = city.nearbyCommunes.slice(0, 3).join(', ');
-
   return {
     title: `DJ & Animation Mariage ${city.name} · Avis 5★ · Dès 1200€`,
-    description: `DJ animateur mariage à ${city.name} (${city.department}) — Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, AnimaJet, photobooth vintage. ${nearbyText} et environs. Devis gratuit sous 24h ✓`,
+    description: `DJ animateur mariage à ${city.name} (${city.departmentCode}) — Avis 5★, formules dès 1200€ TTC. 25 ans d'expérience, AnimaJet, photobooth. Devis gratuit sous 24h ✓`,
     keywords: `DJ mariage ${city.name}, DJ animateur ${city.name}, animation mariage ${city.name}, animateur de soirée ${city.name}, sonorisation mariage ${city.name}, DJ mariage ${city.departmentCode}, DJ ${city.name}`,
     alternates: {
       canonical: `https://www.mg-events35.com/dj-mariage/${city.slug}`,

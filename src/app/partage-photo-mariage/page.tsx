@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Partage photo mariage en direct | Photos sur écran géant — AnimaJet',
   description:
-    "Partage de photos en direct pendant votre mariage : vos invités envoient leurs clichés depuis leur smartphone, ils s'affichent instantanément sur écran géant. Récupérez des centaines de photos. MG Events Bretagne.",
+    "Partage de photos en direct pendant votre mariage : les clichés des invités s'affichent sur écran géant. Récupérez des centaines de photos.",
   keywords:
     'partage photo mariage, partage photo direct mariage, photos mariage écran géant, diaporama live mariage, partage photo invités mariage, photo live mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },

@@ -10,9 +10,9 @@ const SLUG = 'feu-artifice-jour';
 const BASE = 'https://www.mg-events35.com';
 
 export const metadata: Metadata = {
-  title: 'Feu d\'Artifice de Jour Mariage Bretagne | Poudre Holi Cérémonie - MG Events',
+  title: 'Feu d\'Artifice de Jour Mariage Bretagne | Poudre Holi Cérémonie',
   description:
-    "Le feu d'artifice de jour : un tir de 4 canons de poudre Holi qui explose en couleurs au moment fort de votre cérémonie. Spectaculaire en plein jour, idéal pour la sortie des mariés et la photo de groupe. 120€ pour 4 couleurs au choix.",
+    "Un tir de 4 canons de poudre Holi qui explose en couleurs au moment fort de votre cérémonie. Idéal sortie des mariés et photo de groupe. 120€, 4 couleurs.",
   keywords:
     "feu d'artifice de jour mariage, poudre Holi mariage, explosion couleurs cérémonie, feu artifice cérémonie laïque, canon poudre Holi mariage Bretagne, animation originale mariage, feu d'artifice diurne, poudre colorée mariage",
   alternates: { canonical: `${BASE}/${SLUG}` },

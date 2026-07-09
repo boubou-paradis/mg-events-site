@@ -6,7 +6,7 @@ import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Loire-Atlantique (44) · Avis 5★ · Dès 1200€',
-  description: "DJ animateur mariage en Loire-Atlantique (44) : Nantes, Saint-Nazaire, La Baule, Guérande, Pornic, Clisson. Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, photobooth vintage. Devis gratuit sous 24h ✓",
+  description: "DJ animateur mariage en Loire-Atlantique (44) : Nantes, Saint-Nazaire, La Baule, Guérande. Avis 5★, dès 1200€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Loire-Atlantique, DJ mariage 44, DJ mariage Nantes, DJ mariage Saint-Nazaire, DJ mariage La Baule, DJ mariage Guérande, DJ mariage Pornic, DJ mariage Clisson, animation mariage Pays de la Loire',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',

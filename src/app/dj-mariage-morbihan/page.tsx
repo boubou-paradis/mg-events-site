@@ -6,7 +6,7 @@ import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Morbihan (56) · Avis 5★ · Dès 1200€',
-  description: "DJ animateur mariage dans le Morbihan : Vannes, Lorient, Pontivy, Auray. Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, photobooth vintage, animations interactives. Devis gratuit sous 24h ✓",
+  description: "DJ animateur mariage dans le Morbihan (56) : Vannes, Lorient, Pontivy, Auray. Avis 5★, dès 1200€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Morbihan, DJ mariage Vannes, DJ mariage Lorient, DJ mariage Auray, DJ mariage Pontivy, animation mariage 56',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-morbihan',

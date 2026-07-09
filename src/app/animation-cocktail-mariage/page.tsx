@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Animation cocktail mariage | Occuper les invités au vin d\'honneur — AnimaJet',
   description:
-    "Animez le cocktail et le vin d'honneur de votre mariage : quiz, blind test et partage photo interactifs pour occuper vos invités pendant les photos de couple. Sans application. MG Events Bretagne.",
+    "Animez le cocktail et le vin d'honneur : quiz, blind test et partage photo pour occuper vos invités pendant les photos de couple. Sans application.",
   keywords:
     'animation cocktail mariage, animation vin d\'honneur, occuper invités cocktail mariage, animation apéritif mariage, animation pendant photos mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },

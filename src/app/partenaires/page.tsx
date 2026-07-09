@@ -25,7 +25,7 @@ import { partners, Partner } from '@/data/partners';
 
 export const metadata: Metadata = {
   title: 'Nos Partenaires de Confiance | Photographes, Traiteurs, Fleuristes Mariage Bretagne',
-  description: 'Découvrez nos partenaires de confiance pour votre mariage en Bretagne : photographes professionnels, traiteurs gastronomiques, fleuristes artisans. Prestataires recommandés par MG Events en Ille-et-Vilaine et Morbihan.',
+  description: 'Photographes, traiteurs gastronomiques et fleuristes artisans : les prestataires de confiance recommandés par MG Events pour votre mariage en Bretagne.',
   keywords: ['partenaires mariage bretagne', 'photographe mariage bretagne', 'traiteur mariage morbihan', 'fleuriste mariage', 'prestataires mariage rennes', 'prestataires mariage vannes'],
   alternates: {
     canonical: 'https://www.mg-events35.com/partenaires',

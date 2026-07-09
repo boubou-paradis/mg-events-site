@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { ArrowLeft, MapPin, Phone, Mail, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Les Plus Beaux Lieux de Réception pour votre Mariage en Bretagne | MG Events',
-  description: "Châteaux, domaines, manoirs et demeures de caractère pour votre mariage en Bretagne. Ille-et-Vilaine, Finistère, Morbihan, Loire-Atlantique, Mayenne. MG Events intervient dans tous ces lieux.",
+  title: 'Les Plus Beaux Lieux de Réception pour votre Mariage en Bretagne',
+  description: "Châteaux, domaines, manoirs et demeures de caractère pour votre mariage en Bretagne : Ille-et-Vilaine, Finistère, Morbihan, Loire-Atlantique, Mayenne.",
   keywords: 'lieux réception mariage Bretagne, château mariage Bretagne, domaine mariage Bretagne, manoir mariage Bretagne, salle mariage Bretagne, lieux mariage Ille-et-Vilaine Finistère Morbihan',
   alternates: {
     canonical: 'https://www.mg-events35.com/lieux-reception-bretagne',

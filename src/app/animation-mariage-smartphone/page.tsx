@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Animation mariage smartphone | Jeu sur téléphone sans appli — AnimaJet',
   description:
-    "Animation de mariage sur smartphone : vos invités jouent depuis leur téléphone via un simple QR Code, sans application à télécharger. Quiz, blind test, partage photo sur écran géant. MG Events Bretagne.",
+    "Animation de mariage sur smartphone : vos invités jouent via un simple QR Code, sans application. Quiz, blind test, partage photo sur écran géant.",
   keywords:
     'animation mariage smartphone, jeu mariage téléphone, animation mariage sans application, jeu mariage smartphone, animation mariage QR code, animation mariage téléphone',
   alternates: { canonical: `${BASE}/${SLUG}` },

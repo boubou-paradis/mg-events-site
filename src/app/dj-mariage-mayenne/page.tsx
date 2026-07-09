@@ -6,7 +6,7 @@ import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
   title: 'DJ Mariage Mayenne & Laval (53) · Avis 5★ · Dès 1200€',
-  description: "DJ animateur mariage en Mayenne : Laval, Château-Gontier, Évron, Craon. Avis 5★, formules dès 1200€ TTC tout inclus. 25 ans d'expérience, animations interactives, photobooth vintage. Devis gratuit sous 24h ✓",
+  description: "DJ animateur mariage en Mayenne (53) : Laval, Château-Gontier, Évron, Craon. Avis 5★, dès 1200€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Mayenne, DJ mariage Laval, DJ mariage Château-Gontier, animation mariage 53, DJ mariage Évron',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-mayenne',

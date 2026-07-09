@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Animation digitale mariage | Quiz, photo & écran géant — AnimaJet',
   description:
-    "L'animation digitale de mariage AnimaJet : smartphone, QR Code, écran géant. Quiz, blind test, partage photo en direct et mur photo connectés, sans application. MG Events Bretagne & Grand Ouest.",
+    "L'animation digitale de mariage AnimaJet : smartphone, QR Code, écran géant. Quiz, blind test, partage photo et mur photo, sans application.",
   keywords:
     'animation digitale mariage, animation connectée mariage, animation numérique mariage, animation high-tech mariage, animation interactive digitale mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },

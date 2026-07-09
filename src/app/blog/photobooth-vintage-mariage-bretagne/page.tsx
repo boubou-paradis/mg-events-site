@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { ArrowLeft, Calendar, Clock, User, Check, Camera, Printer, Star, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Photobooth vintage mariage Bretagne : guide complet 2026 | MG Events',
-  description: 'Tout savoir sur le photobooth vintage TSF pour votre mariage en Bretagne. Style années 60, impressions instantanées, intégration AnimaJet. Découvrez notre photobooth unique.',
+  title: 'Photobooth vintage mariage Bretagne : guide complet 2026',
+  description: 'Tout savoir sur le photobooth vintage TSF pour votre mariage en Bretagne : style années 60, impressions instantanées, intégration AnimaJet.',
   alternates: {
     canonical: 'https://www.mg-events35.com/blog/photobooth-vintage-mariage-bretagne',
   },

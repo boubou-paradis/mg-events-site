@@ -30,7 +30,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Animations interactives mariage | AnimaJet — Quiz, Blind Test, Mur Photo',
   description:
-    "AnimaJet : la plateforme d'animations interactives de mariage par MG Events. Quiz, blind test, partage photo en direct, mur photo, roue de la destinée. Participation smartphone sans application, écran géant. Bretagne & Grand Ouest.",
+    "AnimaJet : la plateforme d'animations interactives de mariage par MG Events. Quiz, blind test, partage photo, mur photo. Sans application, sur écran géant.",
   keywords:
     'animation interactive mariage, animation digitale mariage, quiz mariage interactif, blind test mariage, mur photo mariage, partage photo mariage, animation mariage smartphone, AnimaJet',
   alternates: { canonical: `${BASE}/animations-interactives-mariage` },

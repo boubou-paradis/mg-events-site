@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Jeu interactif mariage | Animations sur écran géant — AnimaJet',
   description:
-    "Les jeux interactifs de mariage AnimaJet : quiz, blind test, roue de la destinée, photo mystère, bon ordre et jeux de rapidité. Vos invités jouent sur smartphone, sur écran géant. MG Events Bretagne.",
+    "Les jeux interactifs de mariage AnimaJet : quiz, blind test, roue de la destinée, photo mystère. Vos invités jouent sur smartphone, sur écran géant.",
   keywords:
     'jeu interactif mariage, jeux mariage, animation jeu mariage, jeux soirée mariage, jeux invités mariage, roue de la destinée mariage, photo mystère mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },

@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Animation moderne mariage | Idées originales 2026 — AnimaJet',
   description:
-    "Une animation de mariage moderne et originale : animations interactives sur smartphone, partage photo en direct, mur photo, quiz et blind test sur écran géant. Loin des animations ringardes. MG Events Bretagne.",
+    "Une animation de mariage moderne et originale : jeux interactifs sur smartphone, partage photo en direct, quiz et blind test sur écran géant.",
   keywords:
     'animation moderne mariage, animation originale mariage, animation mariage tendance, animation mariage 2026, idée animation mariage moderne, animation soirée mariage originale',
   alternates: { canonical: `${BASE}/${SLUG}` },

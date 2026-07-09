@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: "MG Events Animation | DJ Mariage Bretagne",
     template: "%s | MG Events Animation",
   },
-  description: "DJ mariage Bretagne — Avis 5★, formules transparentes dès 1200€ TTC. 25 ans d'expérience, AnimaJet notre plateforme d'animations interactives maison, photobooth vintage, étincelles froides certifiées CE. Devis gratuit sous 24h ✓",
+  description: "DJ mariage Bretagne — Avis 5★, formules transparentes dès 1200€ TTC. 25 ans d'expérience, AnimaJet, photobooth vintage. Devis gratuit sous 24h ✓",
   keywords: "DJ mariage Bretagne, animation mariage Bretagne, DJ Rennes, DJ Vannes, DJ Nantes, DJ Quimper, DJ Brest, sonorisation mariage Bretagne, photobooth vintage mariage, étincelles froides mariage, cérémonie laïque sonorisation, AnimaJet animation interactive",
   authors: [{ name: "MG Events Animation" }],
   creator: "MG Events Animation",
