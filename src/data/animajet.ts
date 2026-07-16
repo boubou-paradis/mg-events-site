@@ -162,9 +162,22 @@ export const animajetClusterPages: ClusterPage[] = [
 
 export const allClusterPages: ClusterPage[] = [animajetPillar, ...animajetClusterPages];
 
-// Renvoie les liens de maillage croisé pour une page du cluster (toutes sauf la page courante).
+// Renvoie les liens de maillage croisé pour une page du cluster.
+// Rotation cyclique déterministe : chaque satellite pointe vers le pilier + les
+// satellites qui le suivent dans la liste (en boucle). Garantit que TOUTES les
+// pages apparaissent dans le "related" d'autres pages — évite les satellites
+// orphelins (0 lien interne -> "explorée, actuellement non indexée" dans GSC).
 export function getRelatedClusterPages(currentSlug: string, limit = 6): ClusterPage[] {
-  return allClusterPages.filter((p) => p.slug !== currentSlug).slice(0, limit);
+  const sats = animajetClusterPages;
+  const idx = sats.findIndex((p) => p.slug === currentSlug);
+  // Page hors cluster (ou pilier) : repli sur les premiers satellites.
+  if (idx === -1) return sats.slice(0, limit);
+  const rotated: ClusterPage[] = [];
+  for (let i = 1; i < sats.length && rotated.length < limit - 1; i++) {
+    rotated.push(sats[(idx + i) % sats.length]);
+  }
+  // Toujours garder un lien montant vers le pilier en tête.
+  return [animajetPillar, ...rotated];
 }
 
 // ---------------------------------------------------------------------------
