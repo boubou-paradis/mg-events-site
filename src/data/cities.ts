@@ -415,7 +415,7 @@ En tant que DJ animateur à Vannes, notre rôle va bien au-delà de la musique. 
 
 Notre prestation comprend une sonorisation professionnelle haut de gamme, calibrée pour chaque moment — fond sonore feutré pendant le repas, son puissant et maîtrisé pour enflammer le dancefloor — et un éclairage sur mesure adapté à votre salle (lyres, wash LED, effets). La sonorisation de mariage à Vannes doit composer avec des lieux variés : terrasses ventées face au Golfe, salles en pierre à l'acoustique délicate, domaines en extérieur. Notre matériel et notre installation s'adaptent à chaque configuration.
 
-DJ Morbihan de proximité, nous intervenons à Vannes et dans tout le département sans frais de déplacement supplémentaire : Auray, Lorient, Ploërmel, Pontivy, Locminé, Sarzeau, le Golfe et la presqu'île de Rhuys. Cette couverture fait de nous un partenaire naturel pour l'animation mariage dans le Morbihan, avec la même exigence de qualité partout.
+DJ Morbihan de proximité, nous intervenons à Vannes et dans tout le département : Auray, Lorient, Ploërmel, Pontivy, Locminé, Sarzeau, le Golfe et la presqu'île de Rhuys. Cette couverture fait de nous un partenaire naturel pour l'animation mariage dans le Morbihan, avec la même exigence de qualité partout.
 
 Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, ajoute une dimension participative rare : quiz interactif en direct, photo mystère sur grand écran, blind test live, partage de photos. Au-delà de la soirée dansante, nous proposons la sonorisation de cérémonie laïque (180€) avec deux techniciens dédiés, idéale pour les cérémonies en extérieur face au Golfe. Quel budget pour un DJ mariage à Vannes ? Nos formules démarrent à 1200€ TTC (Éclat d'Amour), 1490€ (Rêve en Blanc) et 1690€ (Conte de Fées avec photobooth vintage) — déplacement à Vannes et dans le Morbihan inclus, tarifs transparents et sans surprise.`,
     localHighlights: [
@@ -423,7 +423,7 @@ Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, a
       'Domaines face au Golfe avec couchers de soleil spectaculaires',
       'Centre médiéval préservé pour cérémonie civile à la mairie',
       'Sonorisation adaptée aux terrasses ventées et salles en pierre du Golfe',
-      'DJ Morbihan de proximité : Auray, Lorient, Ploërmel, Pontivy inclus sans frais',
+      'DJ Morbihan de proximité : Auray, Lorient, Ploërmel, Pontivy',
     ],
     nearbyCommunes: ['Arradon', 'Séné', 'Theix-Noyalo', 'Ploeren', 'Plescop', 'Saint-Avé', 'Meucon', 'Sarzeau', 'Baden', 'Le Bono', 'Elven', 'Grand-Champ'],
     weddingVenues: [
@@ -752,7 +752,7 @@ Notre expérience de DJ mariage à Concarneau inclut une parfaite connaissance d
     latitude: 48.0734,
     longitude: -0.7695,
     population: '52 000',
-    seoDescription: `Vous cherchez un DJ à Laval pour votre mariage, votre soirée ou votre événement ? MG Events Animation intervient à Laval et dans toute la Mayenne : Château-Gontier-sur-Mayenne, Évron, Craon, Ernée, Bonchamp-lès-Laval, Mayenne ville... Guillaume et Laurence, duo DJ animateur fort de 25 ans d'expérience, se déplacent dans tout le département 53 sans frais supplémentaire.
+    seoDescription: `Vous cherchez un DJ à Laval pour votre mariage, votre soirée ou votre événement ? MG Events Animation intervient à Laval et dans toute la Mayenne : Château-Gontier-sur-Mayenne, Évron, Craon, Ernée, Bonchamp-lès-Laval, Mayenne ville... Guillaume et Laurence, duo DJ animateur fort de 25 ans d'expérience, se déplacent dans tout le département 53.
 
 Laval, préfecture de la Mayenne, est une ville d'art et d'histoire lovée dans les méandres de la rivière éponyme. Son château médiéval surplombant les quais, ses ruelles du vieux Laval et son patrimoine Renaissance (maison du Grand Veneur) en font une destination de mariage élégante et accessible. À la croisée de la Bretagne, de la Normandie et des Pays de la Loire, Laval facilite le rassemblement de vos invités.
 

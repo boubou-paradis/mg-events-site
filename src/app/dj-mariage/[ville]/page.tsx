@@ -78,11 +78,11 @@ function generateCityFaqs(city: City) {
   return [
     {
       question: `Quel est le prix d'un DJ mariage à ${city.name} ?`,
-      answer: `Nos formules DJ mariage à ${city.name} démarrent à 1200€ TTC (formule Éclat d'Amour) et vont jusqu'à 1690€ TTC (formule Conte de Fées avec photobooth). Ces tarifs incluent le déplacement à ${city.name} et environs, l'installation et le démontage.`,
+      answer: `Nos formules DJ mariage à ${city.name} démarrent à 1200€ TTC (formule Éclat d'Amour) et vont jusqu'à 1690€ TTC (formule Conte de Fées avec photobooth). Ces tarifs incluent l'installation et le démontage.`,
     },
     {
       question: `Vous déplacez-vous à ${city.name} et ses environs ?`,
-      answer: `Oui, nous intervenons à ${city.name} et dans toutes les communes environnantes sans frais supplémentaire : ${city.nearbyCommunes.join(', ')}.`,
+      answer: `Oui, nous intervenons à ${city.name} et dans toutes les communes environnantes : ${city.nearbyCommunes.join(', ')}.`,
     },
     {
       question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -605,7 +605,7 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
             DJ Mariage à <span className="text-[#c9a227]">{city.name}</span> et environs
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Aucun frais de déplacement supplémentaire</strong> pour {city.name} et les communes environnantes.
+            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35) ; au-delà, 0,66 € du kilomètre, indiqué sur votre devis.
           </p>
           <div className="card-dark p-6">
             <h3 className="text-[#c9a227] font-medium mb-4 flex items-center gap-2">
@@ -716,7 +716,7 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
               href="/dj-mariage-bretagne"
               className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
             >
-              DJ Mariage Bretagne
+              Nos prestations en Bretagne
             </Link>
           </div>
         </div>
@@ -731,7 +731,7 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/comment-choisir-dj-mariage-bretagne" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
               <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">
-                Comment choisir son DJ mariage en Bretagne ?
+                Les critères pour choisir son DJ de mariage
               </h3>
               <p className="text-[#888] text-sm">
                 Guide complet pour trouver le DJ idéal pour votre mariage.
