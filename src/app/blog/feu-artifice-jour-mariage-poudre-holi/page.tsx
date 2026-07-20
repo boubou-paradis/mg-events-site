@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: 'Quel est le tarif du feu d\'artifice de jour ?',
-    a: "Le feu d'artifice de jour est proposé à 120€ pour un tir de 4 couleurs au choix. C'est une nouveauté disponible sur demande : contactez-nous pour vérifier la disponibilité à la date de votre mariage en Bretagne.",
+    a: "Le feu d'artifice de jour est proposé à 120€ pour un tir de 4 couleurs au choix, en supplément d'une formule DJ ou animation MG Events (cette option n'est pas proposée seule). C'est une nouveauté disponible sur demande : contactez-nous pour vérifier la disponibilité à la date de votre mariage en Bretagne.",
   },
 ];
 
@@ -318,8 +318,13 @@ export default function Article() {
                 <p className="text-white font-medium mb-2">Le tarif</p>
                 <p className="text-[#888]">
                   Le feu d&apos;artifice de jour est proposé à <strong className="text-[#c9a227]">120€ pour un
-                  tir de 4 couleurs au choix</strong>. C&apos;est une nouveauté disponible sur demande :
-                  pensez à nous en parler tôt pour réserver votre date.
+                  tir de 4 couleurs au choix</strong>, en supplément de votre formule DJ ou animation
+                  MG Events. C&apos;est une nouveauté disponible sur demande : pensez à nous en parler tôt
+                  lors de la préparation de votre soirée.
+                </p>
+                <p className="text-[#888] text-sm mt-3 pt-3 border-t border-[#c9a227]/20">
+                  À noter : cette option est réservée à nos clients et n&apos;est pas proposée seule (ni
+                  location, ni installation indépendante).
                 </p>
               </div>
 
@@ -340,9 +345,9 @@ export default function Article() {
                   Envie d&apos;une <span className="text-[#c9a227]">explosion de couleurs</span> pour votre mariage en Bretagne ?
                 </h3>
                 <p className="text-[#888] mb-8 max-w-xl mx-auto">
-                  Le feu d&apos;artifice de jour est une nouveauté à 120€ pour 4 couleurs au choix, disponible
-                  sur demande. Contactez-nous pour vérifier la disponibilité de votre date et recevoir plus
-                  d&apos;informations.
+                  Le feu d&apos;artifice de jour est une nouveauté à 120€ pour 4 couleurs au choix, à ajouter
+                  à votre formule DJ MG Events (option non disponible seule). Contactez-nous pour vérifier la
+                  disponibilité de votre date et recevoir plus d&apos;informations.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/feu-artifice-jour" className="btn-outline">

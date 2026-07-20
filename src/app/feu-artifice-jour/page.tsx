@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, ChevronDown, Mail, Phone, ArrowRight, Check } from 'lucide-react';
+import { ArrowLeft, ChevronDown, Mail, Phone, ArrowRight, Check, Lock } from 'lucide-react';
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import { Section, SectionTitle, Prose, CheckList, Steps } from '@/components/animajet/ClusterSections';
@@ -12,20 +12,25 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Feu d\'Artifice de Jour Mariage Bretagne | Poudre Holi Cérémonie',
   description:
-    "Un tir de 4 canons de poudre Holi qui explose en couleurs au moment fort de votre cérémonie. Idéal sortie des mariés et photo de groupe. 120€, 4 couleurs.",
+    "Un tir de 4 canons de poudre Holi qui explose en couleurs au moment fort de votre cérémonie. 120€, 4 couleurs — option réservée à nos clients DJ, non disponible seule.",
   keywords:
     "feu d'artifice de jour mariage, poudre Holi mariage, explosion couleurs cérémonie, feu artifice cérémonie laïque, canon poudre Holi mariage Bretagne, animation originale mariage, feu d'artifice diurne, poudre colorée mariage",
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
     title: "Feu d'Artifice de Jour mariage — explosion de couleurs en poudre Holi | MG Events",
     description:
-      "4 canons de poudre Holi, couleurs au choix, déclenchement synchronisé. Un effet spectaculaire en plein jour pour des photos inoubliables. 120€ pour 4 couleurs au choix.",
+      "4 canons de poudre Holi, couleurs au choix, déclenchement synchronisé. Un effet spectaculaire en plein jour pour des photos inoubliables. 120€, en complément d'une formule DJ MG Events uniquement.",
     url: `${BASE}/${SLUG}`,
     images: [{ url: `${BASE}/images/feu-artifice-jour-mariage.png` }],
   },
 };
 
 const faqs = [
+  {
+    question: 'Puis-je réserver uniquement le feu d\'artifice de jour, sans prestation DJ ?',
+    answer:
+      "Non, le feu d'artifice de jour est une option exclusivement proposée aux clients ayant réservé une formule DJ ou animation avec MG Events. Nous ne proposons pas ce service de manière indépendante (ni location, ni installation seule).",
+  },
   {
     question: 'Comment fonctionne le feu d\'artifice de jour ?',
     answer:
@@ -49,7 +54,7 @@ const faqs = [
   {
     question: 'Quel est le tarif ?',
     answer:
-      "Le feu d'artifice de jour est proposé à 120€ pour un tir de 4 couleurs au choix. C'est une nouveauté disponible sur demande : contactez-nous pour plus d'informations et pour vérifier la disponibilité à la date de votre mariage.",
+      "Le feu d'artifice de jour est proposé à 120€ pour un tir de 4 couleurs au choix, en supplément de votre formule DJ ou animation MG Events. C'est une nouveauté disponible sur demande : contactez-nous pour plus d'informations et pour vérifier la disponibilité à la date de votre mariage.",
   },
 ];
 
@@ -59,7 +64,7 @@ const serviceSchema = {
   name: 'Feu d\'Artifice de Jour pour mariage (poudre Holi)',
   serviceType: "Animation mariage — feu d'artifice de jour / explosion de couleurs en poudre Holi",
   description:
-    "Tir de 4 canons de poudre Holi colorée, déclenché de façon synchronisée lors d'un mariage. Effet spectaculaire en plein jour, idéal pour la fin de cérémonie laïque, la sortie des mariés et la photo de groupe. Nouveauté MG Events, sur demande.",
+    "Tir de 4 canons de poudre Holi colorée, déclenché de façon synchronisée lors d'un mariage. Effet spectaculaire en plein jour, idéal pour la fin de cérémonie laïque, la sortie des mariés et la photo de groupe. Nouveauté MG Events, sur demande. Important : il s'agit d'une option complémentaire, proposée exclusivement aux clients ayant réservé une formule DJ ou animation MG Events. Ce service n'est pas disponible seul, ni en location ni en installation indépendante.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'MG Events Animation',
@@ -71,7 +76,14 @@ const serviceSchema = {
     '@type': 'Offer',
     price: '120',
     priceCurrency: 'EUR',
-    description: 'Tir de feu d\'artifice de jour : 4 canons de poudre Holi, 4 couleurs au choix. Sur demande.',
+    description:
+      "Tir de feu d'artifice de jour : 4 canons de poudre Holi, 4 couleurs au choix. Sur demande. Option additionnelle réservée aux clients ayant réservé une formule DJ ou animation MG Events — non commercialisée seule.",
+    availability: 'https://schema.org/LimitedAvailability',
+  },
+  isRelatedTo: {
+    '@type': 'Service',
+    name: 'Prestation DJ animateur mariage MG Events',
+    url: `${BASE}/tarifs-dj-mariage`,
   },
 };
 
@@ -129,6 +141,15 @@ export default function FeuArtificeJourPage() {
               <h2 className="text-xl text-[#aaa] mb-6">
                 Un nuage de poudre Holi qui explose en couleurs au plus beau moment de votre mariage
               </h2>
+              {/* Mention d'exclusivité (lecture en diagonale) */}
+              <p className="flex items-start gap-3 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] p-4 text-sm leading-relaxed text-[#e8e8ea] mb-6">
+                <Lock size={18} className="mt-0.5 shrink-0 text-[#c9a227]" aria-hidden="true" />
+                <span>
+                  Cette prestation est proposée <strong className="text-[#c9a227]">exclusivement en
+                  complément d&apos;une formule DJ/animation MG Events</strong> — elle n&apos;est pas
+                  disponible en location ou installation seule.
+                </span>
+              </p>
               <div className="text-[#888] leading-relaxed mb-8 space-y-4">
                 <p>
                   Imaginez la sortie des mariés ou la fin de votre cérémonie laïque sublimée par un
@@ -140,7 +161,7 @@ export default function FeuArtificeJourPage() {
               <div className="flex flex-wrap gap-4">
                 <Link href="/#contact" className="btn-gold inline-flex items-center gap-2">
                   <Mail size={18} />
-                  Nous contacter pour plus d&apos;informations
+                  Demander un devis DJ + Feu d&apos;Artifice de Jour
                 </Link>
                 <a href="tel:+33648106166" className="btn-outline inline-flex items-center gap-2">
                   <Phone size={18} />
@@ -162,6 +183,17 @@ export default function FeuArtificeJourPage() {
                   <span className="absolute top-7 -left-9 w-44 -rotate-45 bg-[#c9a227] py-1 text-center text-[11px] font-semibold uppercase leading-tight tracking-wider text-[#0a0a0a] shadow-lg">
                     Nouveauté
                   </span>
+                </div>
+
+                {/* Badge d'exclusivité en overlay — SPÉCIFIQUE à cette page, ne pas déplacer dans un composant partagé */}
+                <div className="absolute inset-x-0 bottom-0 z-20 border-t-2 border-[#c9a227] bg-[#1a1a2e]/95 px-4 py-3 shadow-[0_-8px_24px_rgba(0,0,0,0.45)] pointer-events-none sm:px-6 sm:py-4">
+                  <p className="flex items-center justify-center gap-2 text-center text-[13px] font-semibold uppercase leading-snug tracking-wide text-[#c9a227] sm:text-base">
+                    <Lock size={16} className="shrink-0" aria-hidden="true" />
+                    Offre exclusivement réservée à nos clients
+                  </p>
+                  <p className="mt-1 text-center text-[11px] font-medium uppercase tracking-[0.18em] text-white sm:text-sm">
+                    Non disponible seul
+                  </p>
                 </div>
               </div>
             </div>
@@ -241,6 +273,7 @@ export default function FeuArtificeJourPage() {
               'Idéal pour la fin de cérémonie laïque et la sortie des mariés',
               'Des photos de groupe colorées et inoubliables',
               'Une animation originale qui surprend vos invités',
+              'Une option qui se greffe à votre formule DJ MG Events',
             ]}
           />
         </div>
@@ -249,8 +282,13 @@ export default function FeuArtificeJourPage() {
         <div className="mt-8 grid sm:grid-cols-2 gap-4">
           <div className="card-dark p-6">
             <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-2">Disponibilité</p>
-            <p className="text-white font-[family-name:var(--font-display)] text-lg mb-1">Nouveauté — sur demande</p>
-            <p className="text-[#888] text-sm">Contactez-nous pour vérifier la disponibilité à votre date.</p>
+            <p className="text-white font-[family-name:var(--font-display)] text-lg mb-1">
+              Réservé à nos clients — sur demande
+            </p>
+            <p className="text-[#888] text-sm">
+              Option ajoutée à votre formule DJ/animation MG Events. Contactez-nous pour vérifier la
+              disponibilité à votre date.
+            </p>
           </div>
           <div className="card-dark p-6 border-[#c9a227]/30">
             <div className="flex items-center justify-between mb-1">
@@ -262,7 +300,7 @@ export default function FeuArtificeJourPage() {
             </div>
             <p className="text-[#888] text-sm flex items-start gap-2">
               <Check size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
-              Pour un tir de 4 couleurs au choix.
+              Pour un tir de 4 couleurs au choix, en supplément de votre formule.
             </p>
           </div>
         </div>
@@ -294,15 +332,21 @@ export default function FeuArtificeJourPage() {
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white mb-6">
             Une <span className="text-[#c9a227]">explosion de couleurs</span> pour votre grand jour
           </h2>
-          <p className="text-[#888] mb-8">
-            Le feu d&apos;artifice de jour est une nouveauté proposée à 120€ pour un tir de 4 couleurs au
-            choix. Disponible sur demande — contactez-nous pour plus d&apos;informations et pour réserver
-            votre date.
+          <p className="text-[#888] mb-4">
+            Ajoutez le feu d&apos;artifice de jour à votre formule DJ MG Events : 120€ pour un tir de 4
+            couleurs au choix, sur demande et selon disponibilité à votre date.
+          </p>
+          <p className="text-sm text-[#e8e8ea] mb-8 inline-flex items-start gap-2 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-4 py-3 text-left">
+            <Lock size={16} className="mt-0.5 shrink-0 text-[#c9a227]" aria-hidden="true" />
+            <span>
+              Option réservée à nos clients : elle n&apos;est pas proposée seule, ni en location ni en
+              installation indépendante.
+            </span>
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/#contact" className="btn-gold inline-flex items-center gap-2">
               <Mail size={18} />
-              Nous contacter pour plus d&apos;informations
+              Demander un devis DJ + Feu d&apos;Artifice de Jour
             </Link>
             <Link href="/#formules" className="btn-outline inline-flex items-center gap-2">
               Voir nos formules <ArrowRight size={16} />

@@ -83,7 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Prestation Feu d'Artifice de Jour (poudre Holi)
     {
       url: `${baseUrl}/feu-artifice-jour`,
-      lastModified: '2026-06-20',
+      lastModified: '2026-07-20',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
@@ -190,7 +190,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog
     {
       url: `${baseUrl}/blog/feu-artifice-jour-mariage-poudre-holi`,
-      lastModified: '2026-06-20',
+      lastModified: '2026-07-20',
       changeFrequency: 'monthly',
       priority: 0.75,
     },
