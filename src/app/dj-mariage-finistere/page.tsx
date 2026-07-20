@@ -34,11 +34,11 @@ const formules = [
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage dans le Finistère ?',
-    answer: 'Nos formules DJ mariage dans le 29 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département, y compris Brest et la presqu\'île de Crozon.',
+    answer: 'Nos formules DJ mariage dans le 29 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
   },
   {
     question: 'Vous déplacez-vous jusqu\'à Brest ?',
-    answer: 'Oui, nous intervenons dans tout le Finistère sans frais supplémentaire : Brest, Quimper, Morlaix, Concarneau, Douarnenez, Crozon, Landerneau, Châteaulin... Nous nous déplaçons même sur la presqu\'île de Crozon et les îles (Ouessant, Molène, Sein).',
+    answer: 'Oui, nous intervenons dans tout le Finistère : Brest, Quimper, Morlaix, Concarneau, Douarnenez, Crozon, Landerneau, Châteaulin... Nous nous déplaçons même sur la presqu\'île de Crozon et les îles (Ouessant, Molène, Sein).',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -415,7 +415,7 @@ export default function DJMariageFinistere() {
             DJ Mariage dans tout le <span className="text-[#c9a227]">département 29</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Aucun frais de déplacement</strong> dans tout le Finistère.
+            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
             De Brest à Quimper, de Morlaix à Concarneau, nous intervenons partout.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -629,7 +629,7 @@ export default function DJMariageFinistere() {
               DJ Mariage Mayenne (53)
             </Link>
             <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
-              DJ Mariage Bretagne
+              DJ de mariage en Bretagne
             </Link>
           </div>
         </div>

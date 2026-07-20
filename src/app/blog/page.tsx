@@ -142,8 +142,8 @@ const articles = [
   },
   {
     slug: 'comment-choisir-dj-mariage-bretagne',
-    title: 'Comment choisir son DJ de mariage en Bretagne ?',
-    excerpt: 'Le choix du DJ est crucial pour la réussite de votre soirée de mariage. Découvrez nos conseils pour faire le bon choix : expérience, matériel, feeling...',
+    title: 'Comment choisir le bon DJ pour son mariage ?',
+    excerpt: 'Les 10 critères qui séparent un vrai professionnel d\'un prestataire d\'occasion : expérience, matériel de secours, contrat, préparation musicale, avis vérifiables...',
     image: '/images/gallery-2.jpg',
     date: '15 janvier 2026',
     readTime: '8 min',

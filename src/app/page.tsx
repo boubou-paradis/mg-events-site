@@ -1809,7 +1809,7 @@ function Footer() {
               </li>
               <li>
                 <Link href="/dj-mariage-bretagne" className="text-[#c9a227] text-sm hover:underline">
-                  DJ Mariage Bretagne →
+                  Notre prestation DJ pour votre mariage →
                 </Link>
               </li>
             </ul>

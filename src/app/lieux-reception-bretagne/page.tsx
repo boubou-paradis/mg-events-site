@@ -150,7 +150,7 @@ export default function LieuxReceptionBretagne() {
             </Link>
             <div className="hidden md:flex items-center gap-6">
               <Link href="/" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Accueil</Link>
-              <Link href="/dj-mariage-bretagne" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">DJ Mariage Bretagne</Link>
+              <Link href="/dj-mariage-bretagne" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">DJ de mariage en Bretagne</Link>
               <Link href="/blog" className="text-sm text-[#aaa] hover:text-[#c9a227] transition-colors">Blog</Link>
               <Link href="/#contact" className="btn-gold">Devis gratuit</Link>
             </div>
@@ -164,7 +164,7 @@ export default function LieuxReceptionBretagne() {
         <div className="max-w-7xl mx-auto px-6 relative">
           <Link href="/dj-mariage-bretagne" className="inline-flex items-center gap-2 text-[#888] hover:text-[#c9a227] transition-colors mb-8">
             <ArrowLeft size={16} />
-            DJ Mariage Bretagne
+            Retour à nos prestations mariage
           </Link>
 
           <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-white mb-6">

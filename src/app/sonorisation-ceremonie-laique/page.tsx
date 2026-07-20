@@ -273,7 +273,7 @@ export default function SonorisationCeremonieLaiquePage() {
           {[
             { href: '/blog/musique-vin-honneur', title: "Musique du vin d'honneur", desc: "L'ambiance juste après la cérémonie" },
             { href: '/tarifs-dj-mariage', title: 'Tarifs DJ mariage', desc: 'Formules et options en toute transparence' },
-            { href: '/dj-mariage-bretagne', title: 'DJ mariage Bretagne', desc: 'La prestation complète, de la cérémonie à la piste' },
+            { href: '/dj-mariage-bretagne', title: 'Animation de mariage en Bretagne', desc: 'La prestation complète, de la cérémonie à la piste' },
             { href: '/feu-artifice-jour', title: "Feu d'Artifice de Jour", desc: 'La poudre Holi pour la sortie de cérémonie' },
             { href: '/blog/planning-soiree-mariage', title: 'Planning de soirée', desc: 'Le bon timing du jour J' },
             { href: '/lieux-reception-bretagne', title: 'Lieux de réception en Bretagne', desc: 'Domaines et châteaux propices aux cérémonies' },

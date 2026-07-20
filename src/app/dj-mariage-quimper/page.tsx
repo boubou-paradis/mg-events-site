@@ -34,11 +34,11 @@ const formules = [
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage à Quimper ?',
-    answer: 'Nos formules DJ mariage à Quimper démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement à Quimper et dans tout le Finistère Sud, l\'installation complète son et lumière, et le démontage.',
+    answer: 'Nos formules DJ mariage à Quimper démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent l\'installation complète son et lumière, et le démontage.',
   },
   {
     question: 'Vous vous déplacez à Concarneau, Bénodet et Fouesnant ?',
-    answer: 'Oui, nous intervenons dans tout le Finistère Sud sans frais supplémentaire : Quimper, Concarneau, Fouesnant, Bénodet, Pont-l\'Abbé, Douarnenez, Audierne, Plomelin, Ergué-Gabéric, Rosporden, Quimperlé, Trégunc, Névez, Clohars-Carnoët et l\'ensemble de la Cornouaille.',
+    answer: 'Oui, nous intervenons dans tout le Finistère Sud : Quimper, Concarneau, Fouesnant, Bénodet, Pont-l\'Abbé, Douarnenez, Audierne, Plomelin, Ergué-Gabéric, Rosporden, Quimperlé, Trégunc, Névez, Clohars-Carnoët et l\'ensemble de la Cornouaille.',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -224,7 +224,7 @@ export default function DJMariageQuimper() {
               </h2>
               <p className="text-[#888] leading-relaxed mb-6">
                 Vous préparez votre mariage à <strong className="text-white">Quimper ou en Cornouaille</strong> ?
-                MG Events Animation se déplace dans tout le Finistère Sud sans frais supplémentaire :
+                MG Events Animation se déplace dans tout le Finistère Sud :
                 <span className="text-[#c9a227]"> Quimper, Concarneau, Fouesnant, Bénodet, Pont-l&apos;Abbé, Douarnenez</span>,
                 mais aussi Audierne, Plomelin, Ergué-Gabéric, Rosporden et l&apos;ensemble de la Cornouaille.
               </p>
@@ -412,7 +412,7 @@ export default function DJMariageQuimper() {
             DJ Mariage dans tout le <span className="text-[#c9a227]">Finistère Sud</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Aucun frais de déplacement</strong> dans toute la Cornouaille.
+            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
             De Quimper à Douarnenez, de Bénodet à Quimperlé, nous intervenons partout dans le 29.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
@@ -532,7 +532,7 @@ export default function DJMariageQuimper() {
               DJ Mariage Morbihan (56)
             </Link>
             <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
-              DJ Mariage Bretagne
+              Organiser l&apos;ambiance de votre mariage
             </Link>
             <Link href="/#contact" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
               Nos services →

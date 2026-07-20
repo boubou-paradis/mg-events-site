@@ -264,7 +264,7 @@ export default function FumeeLourdeMariagePage() {
             { href: '/etincelles-froides-mariage', title: 'Étincelles froides', desc: "L'autre effet star de l'ouverture de bal" },
             { href: '/blog/ouverture-de-bal-conseils', title: "Réussir son ouverture de bal", desc: 'Musique, chorégraphie et timing' },
             { href: '/tarifs-dj-mariage', title: 'Tarifs DJ mariage', desc: 'Formules et options en détail' },
-            { href: '/dj-mariage-bretagne', title: 'DJ mariage Bretagne', desc: 'La prestation complète' },
+            { href: '/dj-mariage-bretagne', title: 'Découvrir les formules mariage', desc: 'La prestation complète' },
             { href: '/blog/planning-soiree-mariage', title: 'Planning de soirée', desc: 'Placer l\'ouverture de bal au bon moment' },
             { href: '/feu-artifice-jour', title: "Feu d'Artifice de Jour", desc: "L'effet spectaculaire version plein jour" },
           ].map((link) => (

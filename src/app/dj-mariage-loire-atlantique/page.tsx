@@ -34,11 +34,11 @@ const formules = [
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage à Nantes ?',
-    answer: 'Nos formules DJ mariage en Loire-Atlantique démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département 44.',
+    answer: 'Nos formules DJ mariage en Loire-Atlantique démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
   },
   {
     question: 'Vous déplacez-vous à La Baule et Saint-Nazaire ?',
-    answer: 'Oui, nous couvrons toute la Loire-Atlantique sans frais supplémentaire : Nantes, Saint-Nazaire, Guérande, La Baule, Pornic, Ancenis, Châteaubriant, Clisson, Le Croisic, Pornichet... La côte Atlantique n\'a pas de secret pour nous !',
+    answer: 'Oui, nous couvrons toute la Loire-Atlantique : Nantes, Saint-Nazaire, Guérande, La Baule, Pornic, Ancenis, Châteaubriant, Clisson, Le Croisic, Pornichet... La côte Atlantique n\'a pas de secret pour nous !',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -627,7 +627,7 @@ export default function DJMariageLoireAtlantique() {
               DJ Mariage Mayenne (53)
             </Link>
             <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
-              DJ Mariage Bretagne
+              Nos prestations en Bretagne
             </Link>
           </div>
         </div>

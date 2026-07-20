@@ -34,11 +34,11 @@ const formules = [
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage à Morlaix ?',
-    answer: 'Nos formules DJ mariage à Morlaix démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement à Morlaix et dans tout le Finistère Nord, l\'installation son et lumière complète, et le démontage.',
+    answer: 'Nos formules DJ mariage à Morlaix démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent l\'installation son et lumière complète, et le démontage.',
   },
   {
     question: 'Vous déplacez-vous à Roscoff, Saint-Pol-de-Léon et Carantec ?',
-    answer: 'Oui, nous intervenons dans tout le Finistère Nord sans frais supplémentaire : Morlaix, Roscoff, Saint-Pol-de-Léon, Carantec, Plougasnou, Landivisiau, Landerneau, Saint-Thégonnec-Loc-Eguiner... Tout le pays de Morlaix et le Léon sont couverts.',
+    answer: 'Oui, nous intervenons dans tout le Finistère Nord : Morlaix, Roscoff, Saint-Pol-de-Léon, Carantec, Plougasnou, Landivisiau, Landerneau, Saint-Thégonnec-Loc-Eguiner... Tout le pays de Morlaix et le Léon sont couverts.',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -226,7 +226,7 @@ export default function DJMorlaix() {
                 Votre mariage à <strong className="text-white">Morlaix ou dans le Finistère Nord</strong> mérite un DJ qui connaît
                 vraiment le territoire. MG Events Animation se déplace à
                 <span className="text-[#c9a227]"> Morlaix, Roscoff, Saint-Pol-de-Léon, Carantec, Plougasnou, Landivisiau</span>
-                et dans tout le pays de Léon — sans frais de déplacement supplémentaire.
+                et dans tout le pays de Léon.
               </p>
               <p className="text-[#888] leading-relaxed mb-6">
                 Notre ancrage dans le Finistère est réel : <strong className="text-white">25 ans de scène dans les discothèques du 29</strong>,
@@ -399,7 +399,7 @@ export default function DJMorlaix() {
             DJ Mariage dans tout le <span className="text-[#c9a227]">Finistère Nord</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Aucun frais de déplacement</strong> dans tout le Finistère.
+            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
             De Morlaix à Roscoff, de Landivisiau à Plougasnou, nous intervenons partout.
           </p>
           <div className="grid md:grid-cols-2 gap-6">

@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Pages régionales et locales (fort potentiel SEO)
     {
       url: `${baseUrl}/dj-mariage-bretagne`,
-      lastModified: today,
+      lastModified: '2026-07-20',
       changeFrequency: 'monthly',
       priority: 0.9,
     },
@@ -90,7 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Page tarifs (forte intention commerciale)
     {
       url: `${baseUrl}/tarifs-dj-mariage`,
-      lastModified: today,
+      lastModified: '2026-07-20',
       changeFrequency: 'monthly',
       priority: 0.9,
     },
@@ -134,7 +134,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Page zones d'intervention
     {
       url: `${baseUrl}/zones-intervention`,
-      lastModified: today,
+      lastModified: '2026-07-20',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
@@ -208,7 +208,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog/comment-choisir-dj-mariage-bretagne`,
-      lastModified: today,
+      lastModified: '2026-07-20',
       changeFrequency: 'monthly',
       priority: 0.7,
     },

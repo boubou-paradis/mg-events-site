@@ -5,13 +5,15 @@ import { MapPin, ArrowLeft, Phone, Mail, Building2, Cake } from 'lucide-react';
 import { cities, getCitiesByDepartment, getCitiesForEnterprise, getCitiesForBirthday } from '@/data/cities';
 
 export const metadata: Metadata = {
-  title: 'Zones d\'intervention DJ Mariage Bretagne',
-  description: 'DJ mariage en Bretagne : Ille-et-Vilaine, Morbihan, Finistère, Loire-Atlantique, Mayenne. Découvrez toutes nos zones d\'intervention. Devis gratuit ✓',
+  // Intention "zone d'intervention / déplacement" — volontairement PAS "DJ mariage Bretagne",
+  // qui reste réservé à /dj-mariage-bretagne.
+  title: 'Zones d\'intervention : où nous nous déplaçons',
+  description: 'Nos secteurs d\'intervention en Ille-et-Vilaine, Morbihan, Finistère, Loire-Atlantique et Mayenne : villes couvertes, rayon de déplacement et frais.',
   alternates: {
     canonical: 'https://www.mg-events35.com/zones-intervention',
   },
   openGraph: {
-    title: 'Zones d\'intervention | MG Events - DJ Mariage Bretagne',
+    title: 'Nos zones d\'intervention et notre rayon de déplacement',
     description: 'Toutes nos zones d\'intervention pour votre mariage en Bretagne et départements limitrophes.',
     url: 'https://www.mg-events35.com/zones-intervention',
   },
@@ -35,7 +37,7 @@ export default function ZonesIntervention() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo.png"
-                alt="MG Events Animation DJ Mariage Bretagne"
+                alt="MG Events Animation"
                 width={200}
                 height={80}
                 className="h-14 w-auto"
@@ -63,9 +65,27 @@ export default function ZonesIntervention() {
           <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-white mb-6">
             Nos zones <span className="text-[#c9a227]">d&apos;intervention</span>
           </h1>
-          <p className="text-xl text-[#aaa] max-w-3xl">
-            MG Events Animation se déplace dans toute la Bretagne et les départements limitrophes pour animer votre mariage, anniversaire ou événement d&apos;entreprise.
+          <p className="text-xl text-[#aaa] max-w-3xl mb-4">
+            MG Events Animation intervient principalement en Ille-et-Vilaine, dans le Morbihan, le Finistère,
+            la Loire-Atlantique et la Mayenne — et selon le projet dans les autres départements bretons.
           </p>
+          <p className="text-[#888] max-w-3xl mb-6">
+            <strong className="text-white">Le déplacement est inclus dans nos formules jusqu&apos;à 100 km
+            aller-retour</strong>, au départ de Redon (35). Au-delà, les kilomètres supplémentaires sont facturés
+            <strong className="text-white"> 0,66 € du kilomètre</strong> — le montant exact figure toujours sur
+            votre devis, sans surprise le jour J.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/dj-mariage-bretagne" className="btn-gold text-sm">
+              Notre prestation DJ pour votre mariage
+            </Link>
+            <Link href="/tarifs-dj-mariage" className="btn-outline text-sm">
+              Consulter les prestations et tarifs
+            </Link>
+            <Link href="/#contact" className="btn-outline text-sm">
+              Vérifier votre date
+            </Link>
+          </div>
         </div>
       </section>
 

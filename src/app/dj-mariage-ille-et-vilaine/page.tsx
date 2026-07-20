@@ -34,11 +34,11 @@ const formules = [
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage en Ille-et-Vilaine ?',
-    answer: 'Nos formules DJ mariage dans le 35 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département, l\'installation et le démontage.',
+    answer: 'Nos formules DJ mariage dans le 35 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent l\'installation et le démontage.',
   },
   {
     question: 'Vous déplacez-vous à Saint-Malo, Fougères et Vitré ?',
-    answer: 'Oui, nous intervenons dans toute l\'Ille-et-Vilaine sans frais de déplacement supplémentaire : Rennes, Saint-Malo, Dinard, Cancale, Fougères, Vitré, Redon, Dol-de-Bretagne et toute la côte d\'Émeraude.',
+    answer: 'Oui, nous intervenons dans toute l\'Ille-et-Vilaine : Rennes, Saint-Malo, Dinard, Cancale, Fougères, Vitré, Redon, Dol-de-Bretagne et toute la côte d\'Émeraude.',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -425,7 +425,7 @@ export default function DJMariageIlleEtVilaine() {
             DJ Mariage dans tout le <span className="text-[#c9a227]">département 35</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Aucun frais de déplacement</strong> dans toute l&apos;Ille-et-Vilaine.
+            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
             Nous intervenons de la côte d&apos;Émeraude jusqu&apos;aux portes de la Mayenne.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -647,7 +647,7 @@ export default function DJMariageIlleEtVilaine() {
               DJ Mariage Mayenne (53)
             </Link>
             <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
-              DJ Mariage Bretagne
+              Toute notre zone bretonne
             </Link>
           </div>
         </div>
@@ -662,7 +662,7 @@ export default function DJMariageIlleEtVilaine() {
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/comment-choisir-dj-mariage-bretagne" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
               <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">
-                Comment choisir son DJ mariage en Bretagne ?
+                Les critères pour choisir son DJ de mariage
               </h3>
               <p className="text-[#888] text-sm">
                 Guide complet pour trouver le DJ idéal pour votre mariage dans le 35.

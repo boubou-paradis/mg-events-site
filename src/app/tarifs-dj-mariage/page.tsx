@@ -9,7 +9,9 @@ const SLUG = 'tarifs-dj-mariage';
 const BASE = 'https://www.mg-events35.com';
 
 export const metadata: Metadata = {
-  title: 'Tarif DJ Mariage Bretagne | Prix, formules & devis gratuit',
+  // Intention "prix" assumée : on évite la collision exacte "DJ Mariage Bretagne"
+  // (réservée à /dj-mariage-bretagne). "Bretagne" reste présent dans le H1 et le corps.
+  title: 'Tarif DJ mariage : prix, formules et devis gratuit',
   description:
     "Tarifs DJ mariage en Bretagne : formules de 1200€ à 1690€ TTC, cérémonie laïque 180€, photobooth vintage 240€. Prix transparents, ce qui est inclus, devis gratuit sous 24h.",
   keywords:
@@ -134,7 +136,7 @@ const faqs = [
   {
     question: 'Y a-t-il des frais de déplacement ?',
     answer:
-      "Nous sommes basés près de Redon (Ille-et-Vilaine) et intervenons dans toute la Bretagne et les départements limitrophes (35, 56, 29, 44, 53). Le devis précise toujours les conditions exactes selon votre lieu de réception : demandez votre devis gratuit, il est personnalisé et sans engagement.",
+      "Nos formules incluent le déplacement jusqu'à 100 km aller-retour au départ de Redon (Ille-et-Vilaine). Au-delà, les kilomètres supplémentaires sont facturés 0,66 € du kilomètre. Nous intervenons en Ille-et-Vilaine, dans le Morbihan, le Finistère, la Loire-Atlantique et la Mayenne : le devis indique toujours le montant exact selon votre lieu de réception, sans surprise.",
   },
   {
     question: "Jusqu'à quelle heure le DJ anime-t-il la soirée ?",
@@ -399,7 +401,7 @@ export default function TarifsDjMariagePage() {
         </SectionTitle>
         <div className="grid sm:grid-cols-2 gap-4">
           {[
-            { href: '/dj-mariage-bretagne', title: 'DJ mariage Bretagne', desc: 'Notre prestation dans toute la région' },
+            { href: '/dj-mariage-bretagne', title: 'MG Events Animation en Bretagne', desc: 'Notre prestation dans toute la région' },
             { href: '/photobooth-mariage', title: 'Photobooth vintage', desc: 'La cabine TSF années 60 en détail' },
             { href: '/sonorisation-ceremonie-laique', title: 'Cérémonie laïque', desc: 'Sonorisation complète à 180€' },
             { href: '/blog/questions-a-poser-dj-mariage', title: 'Questions à poser à son DJ', desc: 'La checklist avant de signer' },

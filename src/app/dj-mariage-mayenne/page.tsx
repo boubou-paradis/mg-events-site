@@ -34,11 +34,11 @@ const formules = [
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage en Mayenne ?',
-    answer: 'Nos formules DJ mariage dans le 53 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département.',
+    answer: 'Nos formules DJ mariage dans le 53 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
   },
   {
     question: 'Vous déplacez-vous dans toute la Mayenne ?',
-    answer: 'Oui, nous couvrons tout le département sans frais supplémentaire : Laval, Château-Gontier, Mayenne, Évron, Craon, Ernée, Villaines-la-Juhel... La Mayenne est à moins d\'une heure de notre base, nous y intervenons très régulièrement.',
+    answer: 'Oui, nous couvrons tout le département : Laval, Château-Gontier, Mayenne, Évron, Craon, Ernée, Villaines-la-Juhel... La Mayenne est à moins d\'une heure de notre base, nous y intervenons très régulièrement.',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -415,7 +415,7 @@ export default function DJMariageMayenne() {
             DJ Mariage dans tout le <span className="text-[#c9a227]">département 53</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Aucun frais de déplacement</strong> dans toute la Mayenne.
+            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
             De Laval à Mayenne, de Château-Gontier à Évron, nous intervenons partout.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
@@ -625,7 +625,7 @@ export default function DJMariageMayenne() {
               DJ Mariage Loire-Atlantique (44)
             </Link>
             <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
-              DJ Mariage Bretagne
+              Découvrir les formules mariage
             </Link>
           </div>
         </div>

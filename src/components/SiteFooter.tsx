@@ -8,7 +8,7 @@ const prestations = [
   { href: '/etincelles-froides-mariage', label: 'Étincelles froides' },
   { href: '/dj-soiree-entreprise', label: 'Soirée entreprise' },
   { href: '/dj-anniversaire-bretagne', label: 'Anniversaire' },
-  { href: '/dj-mariage-bretagne', label: 'DJ mariage Bretagne' },
+  { href: '/dj-mariage-bretagne', label: 'DJ mariage en Bretagne' },
 ];
 
 // Pied de page réutilisable, identique au footer inline des pages existantes.

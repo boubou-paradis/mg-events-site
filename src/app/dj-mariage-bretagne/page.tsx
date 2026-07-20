@@ -15,9 +15,13 @@ const citySlug = (name: string) =>
     .replace(/^-+|-+$/g, '');
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Bretagne · Avis 5★ · Dès 1200€',
-  description: "DJ mariage en Bretagne — Avis 5★, formules transparentes dès 1200€ TTC. 25 ans d'expérience, AnimaJet, photobooth vintage. Devis gratuit sous 24h ✓",
-  keywords: 'DJ mariage Bretagne, DJ mariage breton, animation mariage Bretagne, DJ Bretagne mariage, sono mariage Bretagne, animation soirée Bretagne, DJ 35 29 56 44',
+  // Page COMMERCIALE de référence sur les requêtes régionales ("dj mariage bretagne",
+  // "dj bretagne mariage", "dj bretagne"). L'intention informative est portée par
+  // /blog/comment-choisir-dj-mariage-bretagne — ne pas recroiser les deux champs lexicaux.
+  title: 'DJ Mariage Bretagne – Animation, tarifs et devis',
+  description:
+    "DJ de mariage en Bretagne avec 25 ans d'expérience. Découvrez nos formules, animations, tarifs et demandez la disponibilité de votre date.",
+  keywords: 'DJ mariage Bretagne, DJ Bretagne mariage, DJ bretagne, DJ animateur mariage Bretagne, prestation DJ mariage Bretagne, tarif DJ mariage Bretagne, devis DJ mariage Bretagne, animation DJ mariage Bretagne',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-bretagne',
   },
@@ -68,42 +72,72 @@ const localBusinessSchema = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5',
-    reviewCount: '52',
+    // Aligné sur le nœud #organization du layout (45) — ne pas diverger d'une page à l'autre.
+    reviewCount: '45',
     bestRating: '5',
     worstRating: '1',
   },
 };
 
-const departments = [
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.mg-events35.com' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'DJ mariage en Bretagne',
+      item: 'https://www.mg-events35.com/dj-mariage-bretagne',
+    },
+  ],
+};
+
+// Séparation stricte région administrative / départements limitrophes.
+// Les Côtes-d'Armor (22) ne figurent PAS ici : aucune ville, aucune page et aucune donnée
+// dans le projet ne permet d'affirmer une couverture réelle. Ne pas les ajouter sans validation.
+const departmentGroups = [
   {
-    name: 'Ille-et-Vilaine (35)',
-    slug: 'ille-et-vilaine',
-    cities: ['Rennes', 'Saint-Malo', 'Fougères', 'Vitré', 'Redon', 'Dinard'],
-    description: 'Capitale régionale Rennes, côte d\'Émeraude, châteaux des Marches de Bretagne',
+    label: 'Région Bretagne',
+    note: 'Les départements bretons où nous intervenons régulièrement.',
+    departments: [
+      {
+        name: 'Ille-et-Vilaine (35)',
+        slug: 'ille-et-vilaine',
+        cities: ['Rennes', 'Saint-Malo', 'Fougères', 'Vitré', 'Redon', 'Dinard'],
+        description: "Capitale régionale Rennes, côte d'Émeraude, châteaux des Marches de Bretagne",
+      },
+      {
+        name: 'Finistère (29)',
+        slug: 'finistere',
+        cities: ['Brest', 'Quimper', 'Morlaix', 'Concarneau', 'Douarnenez'],
+        description: "Pointe bretonne, presqu'île de Crozon, domaines face à l'Atlantique",
+      },
+      {
+        name: 'Morbihan (56)',
+        slug: 'morbihan',
+        cities: ['Vannes', 'Lorient', 'Pontivy', 'Auray', 'La Trinité-sur-Mer'],
+        description: "Golfe du Morbihan, rivières d'Étel, châteaux et manoirs côtiers",
+      },
+    ],
   },
   {
-    name: 'Finistère (29)',
-    slug: 'finistere',
-    cities: ['Brest', 'Quimper', 'Morlaix', 'Concarneau', 'Douarnenez'],
-    description: 'Pointe bretonne, presqu\'île de Crozon, domaines face à l\'Atlantique',
-  },
-  {
-    name: 'Morbihan (56)',
-    slug: 'morbihan',
-    cities: ['Vannes', 'Lorient', 'Pontivy', 'Auray', 'La Trinité-sur-Mer'],
-    description: 'Golfe du Morbihan, rivières d\'Étel, châteaux et manoirs côtiers',
-  },
-  {
-    name: 'Loire-Atlantique (44)',
-    slug: 'loire-atlantique',
-    cities: ['Nantes', 'Saint-Nazaire', 'La Baule', 'Guérande', 'Ancenis'],
-    description: 'Vignoble du Muscadet, châteaux de l\'Erdre, presqu\'île guérandaise',
-  },
-  {
-    name: 'Mayenne (53)',
-    slug: 'mayenne',
-    cities: ['Laval', 'Château-Gontier', 'Évron', 'Craon', 'Mayenne'],
-    description: 'Châteaux de la Mayenne, bocage authentique, domaines champêtres',
+    label: 'Bretagne historique et départements limitrophes',
+    note: "Hors région administrative Bretagne, mais dans notre zone de déplacement habituelle.",
+    departments: [
+      {
+        name: 'Loire-Atlantique (44)',
+        slug: 'loire-atlantique',
+        cities: ['Nantes', 'Saint-Nazaire', 'La Baule', 'Guérande', 'Ancenis'],
+        description: "Vignoble du Muscadet, châteaux de l'Erdre, presqu'île guérandaise",
+      },
+      {
+        name: 'Mayenne (53)',
+        slug: 'mayenne',
+        cities: ['Laval', 'Château-Gontier', 'Évron', 'Craon', 'Mayenne'],
+        description: 'Châteaux de la Mayenne, bocage authentique, domaines champêtres',
+      },
+    ],
   },
 ];
 
@@ -140,14 +174,14 @@ const servicesInclus = [
 const faqs = [
   {
     question: 'Combien coûte un DJ mariage en Bretagne ?',
-    answer: 'Nos formules DJ mariage en Bretagne démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs comprennent le déplacement dans toute la Bretagne, la sonorisation, l\'éclairage, l\'installation et le démontage. Aucun frais caché.',
+    answer: 'Nos formules DJ mariage en Bretagne démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs comprennent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
   },
   {
-    question: 'Intervenez-vous dans toute la Bretagne ?',
-    answer: 'Oui, nous couvrons toute la Bretagne historique et les départements limitrophes : Ille-et-Vilaine (35), Finistère (29), Morbihan (56), Loire-Atlantique (44) et Mayenne (53). De Rennes à Brest, de Saint-Malo à Nantes, nous nous déplaçons sans frais supplémentaire dans un rayon de 150 km.',
+    question: 'Dans quels départements intervenez-vous ?',
+    answer: "Nous intervenons régulièrement dans trois départements bretons — Ille-et-Vilaine (35), Finistère (29) et Morbihan (56) — ainsi qu'en Loire-Atlantique (44) et en Mayenne (53), qui relèvent de la Bretagne historique et de nos départements limitrophes. Le déplacement est inclus dans nos formules jusqu'à 100 km aller-retour au départ de Redon (35) ; au-delà, les kilomètres supplémentaires sont facturés 0,66 € du kilomètre et figurent sur votre devis. Pour les Côtes-d'Armor ou une commune plus éloignée, contactez-nous : nous étudions chaque projet au cas par cas.",
   },
   {
-    question: 'Qu\'est-ce qui vous différencie des autres DJ mariages en Bretagne ?',
+    question: 'Qu\'est-ce qui vous différencie des autres DJ mariage en Bretagne ?',
     answer: 'Trois choses : (1) 25 ans d\'expérience terrain forgée dans les discothèques bretonnes — une capacité à lire une piste de danse que les DJ d\'occasion n\'ont pas ; (2) AnimaJet, notre propre système d\'animation interactif que nous avons conçu et développé (quiz, photo mystère, blind test) ; (3) des tarifs transparents affichés sur le site. Pas de mauvaises surprises.',
   },
   {
@@ -170,6 +204,10 @@ export default function DJMariageBretagne() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
@@ -221,18 +259,36 @@ export default function DJMariageBretagne() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-                DJ Mariage <span className="text-[#c9a227]">en Bretagne</span>
+                DJ mariage <span className="text-[#c9a227]">en Bretagne</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Animation élégante sur mesure dans les 5 départements — châteaux, domaines et demeures de caractère
+                25 ans d&apos;expérience, des formules de 1 200 € à 1 690 € et des animations exclusives pour votre
+                mariage en Bretagne.
               </h2>
+
+              {/* Réassurance immédiate — données réelles du site uniquement */}
+              <div className="flex flex-wrap gap-x-6 gap-y-2 mb-6 text-sm">
+                <span className="inline-flex items-center gap-2 text-[#aaa]">
+                  <Star size={16} fill="#c9a227" className="text-[#c9a227]" />
+                  45 avis clients 5/5
+                </span>
+                <span className="inline-flex items-center gap-2 text-[#aaa]">
+                  <MapPin size={16} className="text-[#c9a227]" />
+                  Ille-et-Vilaine, Morbihan, Finistère, Loire-Atlantique, Mayenne
+                </span>
+                <span className="inline-flex items-center gap-2 text-[#aaa]">
+                  <Mic2 size={16} className="text-[#c9a227]" />
+                  Depuis 1999
+                </span>
+              </div>
               <p className="text-[#888] leading-relaxed mb-6">
                 La Bretagne est l&apos;une des régions les plus riches de France pour les mariages :
                 châteaux médiévaux, manoirs en granit, domaines face à l&apos;océan, fermes de caractère rénovées,
                 abbayes et demeures historiques... Chaque mariage breton a son décor unique.
-                <strong className="text-white"> MG Events Animation se déplace dans toute la Bretagne</strong> —
-                Ille-et-Vilaine, Finistère, Morbihan, Loire-Atlantique et Mayenne — pour apporter
-                une animation à la hauteur de ces lieux d&apos;exception.
+                <strong className="text-white"> MG Events Animation intervient principalement en Ille-et-Vilaine,
+                dans le Morbihan, le Finistère, la Loire-Atlantique et la Mayenne</strong> — et selon le projet dans
+                les autres départements bretons — pour apporter une animation à la hauteur de ces lieux
+                d&apos;exception.
               </p>
               <p className="text-[#888] leading-relaxed mb-6">
                 Notre ancrage breton est authentique : <strong className="text-white">25 ans de carrière DJ dans les discothèques de Bretagne</strong>,
@@ -249,7 +305,10 @@ export default function DJMariageBretagne() {
               <div className="flex flex-wrap gap-4">
                 <Link href="/#contact" className="btn-gold inline-flex items-center gap-2">
                   <Mail size={18} />
-                  Demander un devis gratuit
+                  Vérifier la disponibilité de ma date
+                </Link>
+                <Link href="/tarifs-dj-mariage" className="btn-outline inline-flex items-center gap-2">
+                  Voir les formules et tarifs
                 </Link>
                 <a href="tel:+33648106166" className="btn-outline inline-flex items-center gap-2">
                   <Phone size={18} />
@@ -261,7 +320,7 @@ export default function DJMariageBretagne() {
               <div className="aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20">
                 <Image
                   src="/images/gallery-1.jpg"
-                  alt="DJ mariage animation soirée Bretagne"
+                  alt="DJ animateur MG Events en pleine soirée de mariage dans un domaine breton"
                   fill
                   className="object-cover"
                 />
@@ -355,20 +414,29 @@ export default function DJMariageBretagne() {
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
-            Nos zones d&apos;intervention <span className="text-[#c9a227]">en Bretagne</span>
+            Nos zones d&apos;intervention <span className="text-[#c9a227]">pour les mariages</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            5 départements, plus de 50 villes couvertes. <strong className="text-white">Aucun frais de déplacement</strong>
-            dans un rayon de 150 km.
+            5 départements couverts régulièrement.{' '}
+            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ
+            de Redon (35) ; au-delà, 0,66 € du kilomètre, indiqué sur le devis.
           </p>
+          {departmentGroups.map((group) => (
+          <div key={group.label} className="mb-12 last:mb-0">
+            <div className="mb-6">
+              <h3 className="font-[family-name:var(--font-display)] text-2xl text-[#c9a227] mb-1">
+                {group.label}
+              </h3>
+              <p className="text-[#888] text-sm">{group.note}</p>
+            </div>
           <div className="space-y-6">
-            {departments.map((dept) => (
+            {group.departments.map((dept) => (
               <div key={dept.slug} className="card-dark p-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                   <div>
-                    <h3 className="font-[family-name:var(--font-display)] text-xl text-white">
+                    <h4 className="font-[family-name:var(--font-display)] text-xl text-white">
                       <span className="text-[#c9a227]">{dept.name}</span>
-                    </h3>
+                    </h4>
                     <p className="text-[#888] text-sm mt-1">{dept.description}</p>
                   </div>
                   <Link
@@ -408,6 +476,17 @@ export default function DJMariageBretagne() {
               </div>
             ))}
           </div>
+          </div>
+          ))}
+
+          {/* Renvoi vers le guide informatif — ancre volontairement non commerciale */}
+          <p className="text-[#888] text-sm text-center mt-10 max-w-3xl mx-auto">
+            Vous comparez encore plusieurs prestataires ?{' '}
+            <Link href="/blog/comment-choisir-dj-mariage-bretagne" className="text-[#c9a227] hover:underline">
+              Consultez notre guide pour bien choisir votre DJ
+            </Link>{' '}
+            — les 10 critères à vérifier et les questions à poser avant de signer.
+          </p>
         </div>
       </section>
 
@@ -492,8 +571,8 @@ export default function DJMariageBretagne() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/comment-choisir-dj-mariage-bretagne" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
-              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Comment choisir son DJ mariage en Bretagne ?</h3>
-              <p className="text-[#888] text-sm">Guide complet pour trouver le DJ idéal pour votre mariage.</p>
+              <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Les critères pour choisir son DJ de mariage</h3>
+              <p className="text-[#888] text-sm">Notre guide en 10 points et les questions à poser avant de signer.</p>
             </Link>
             <Link href="/blog/animations-mariage-originales-2026" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
               <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Animations mariage originales 2026</h3>

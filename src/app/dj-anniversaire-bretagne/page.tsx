@@ -294,7 +294,7 @@ export default function DjAnniversaireBretagnePage() {
             { href: '/photobooth-mariage', title: 'Photobooth vintage', desc: 'Des souvenirs imprimés pour vos invités' },
             { href: '/livre-dor-audio', title: "Livre d'Or Audio", desc: 'Les messages vocaux de vos proches' },
             { href: '/dj-soiree-entreprise', title: 'DJ soirée entreprise', desc: 'Séminaires, galas et soirées CE/CSE' },
-            { href: '/dj-mariage-bretagne', title: 'DJ mariage Bretagne', desc: 'Notre prestation mariage complète' },
+            { href: '/dj-mariage-bretagne', title: 'Consulter les prestations DJ mariage', desc: 'Notre prestation mariage complète' },
             { href: '/zones-intervention', title: "Zones d'intervention", desc: 'Bretagne et départements limitrophes' },
           ].map((link) => (
             <Link key={link.href} href={link.href} className="card-dark p-4 hover:border-[#c9a227]/30 transition-colors">

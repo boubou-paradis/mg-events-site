@@ -286,7 +286,7 @@ export default function PhotoboothMariagePage() {
             { href: '/livre-dor-audio', title: "Livre d'Or Audio", desc: 'Le téléphone rétro à messages vocaux' },
             { href: '/animations-interactives-mariage', title: 'Animations interactives AnimaJet', desc: 'Quiz, blind test et photo live' },
             { href: '/tarifs-dj-mariage', title: 'Tarifs DJ mariage', desc: 'Formules et options en toute transparence' },
-            { href: '/dj-mariage-bretagne', title: 'DJ mariage Bretagne', desc: 'Notre prestation complète' },
+            { href: '/dj-mariage-bretagne', title: 'Notre prestation DJ pour votre mariage', desc: 'Formules, animations et zones couvertes' },
             { href: '/mur-photo-mariage', title: 'Mur photo en direct', desc: 'Les photos des invités sur grand écran' },
           ].map((link) => (
             <Link key={link.href} href={link.href} className="card-dark p-4 hover:border-[#c9a227]/30 transition-colors">

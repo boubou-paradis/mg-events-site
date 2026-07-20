@@ -34,7 +34,7 @@ const formules = [
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage dans le Morbihan ?',
-    answer: 'Nos formules DJ mariage dans le 56 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent le déplacement dans tout le département, l\'installation et le démontage.',
+    answer: 'Nos formules DJ mariage dans le 56 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent l\'installation et le démontage.',
   },
   {
     question: 'Intervenez-vous sur les îles du Morbihan ?',
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     question: 'Vous déplacez-vous à Vannes, Lorient et Auray ?',
-    answer: 'Oui, nous couvrons tout le Morbihan sans frais de déplacement supplémentaire : Vannes, Lorient, Auray, Pontivy, Ploërmel, Carnac, La Trinité-sur-Mer, Quiberon, Sarzeau et tout le Golfe du Morbihan.',
+    answer: 'Oui, nous couvrons tout le Morbihan : Vannes, Lorient, Auray, Pontivy, Ploërmel, Carnac, La Trinité-sur-Mer, Quiberon, Sarzeau et tout le Golfe du Morbihan.',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -417,7 +417,7 @@ export default function DJMariageMorbihan() {
             DJ Mariage dans tout le <span className="text-[#c9a227]">département 56</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Aucun frais de déplacement</strong> dans tout le Morbihan.
+            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
             Du Golfe aux terres intérieures, nous intervenons partout.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -635,7 +635,7 @@ export default function DJMariageMorbihan() {
               DJ Mariage Mayenne (53)
             </Link>
             <Link href="/dj-mariage-bretagne" className="px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors">
-              DJ Mariage Bretagne
+              Animation de mariage en Bretagne
             </Link>
           </div>
         </div>

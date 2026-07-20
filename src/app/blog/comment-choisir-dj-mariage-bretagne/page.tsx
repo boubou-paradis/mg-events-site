@@ -3,17 +3,118 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Calendar, User, Clock, Check } from 'lucide-react';
 
+const ARTICLE_URL = 'https://www.mg-events35.com/blog/comment-choisir-dj-mariage-bretagne';
+
 export const metadata: Metadata = {
-  title: 'Comment choisir son DJ de mariage en Bretagne ? Guide 2026',
-  description: 'Le choix du DJ est crucial pour la réussite de votre mariage. Découvrez nos conseils pour bien choisir : expérience, matériel, feeling, références, prix.',
+  // Intention INFORMATIVE assumée : pas de "Bretagne" dans le title ni le H1.
+  // La page commerciale /dj-mariage-bretagne reste seule cible sur les requêtes régionales.
+  title: 'Comment choisir son DJ de mariage ? 10 critères',
+  description:
+    'Découvrez les critères essentiels pour choisir un DJ de mariage fiable : expérience, matériel, ambiance, contrat, tarifs, avis et questions à poser.',
+  keywords:
+    'comment choisir son DJ de mariage, choisir un DJ mariage, critères DJ mariage, questions à poser à un DJ, trouver un bon DJ mariage, contrat DJ mariage, matériel DJ mariage',
   alternates: {
-    canonical: 'https://www.mg-events35.com/blog/comment-choisir-dj-mariage-bretagne',
+    canonical: ARTICLE_URL,
   },
+  openGraph: {
+    type: 'article',
+    title: 'Comment choisir son DJ de mariage ? Les 10 critères essentiels',
+    description:
+      "Expérience, matériel de secours, contrat, préparation musicale, avis vérifiables : le guide complet pour choisir un DJ de mariage sans mauvaise surprise.",
+    url: ARTICLE_URL,
+    images: [{ url: 'https://www.mg-events35.com/images/gallery-1.jpg' }],
+    publishedTime: '2026-01-15',
+    modifiedTime: '2026-07-20',
+    authors: ['Guillaume — MG Events Animation'],
+  },
+};
+
+// Ordre identique à celui des sections de l'article.
+const criteres = [
+  'Une véritable expérience du mariage, pas seulement de la soirée',
+  'Le matériel principal… et surtout le matériel de secours',
+  "La qualité de l'échange humain dès le premier contact",
+  'Des avis et des références réellement vérifiables',
+  'La transparence des prestations et des tarifs',
+  'La capacité à animer sans être envahissant',
+  'La préparation musicale en amont du jour J',
+  'La gestion des demandes des invités pendant la soirée',
+  'La coordination avec vos autres prestataires',
+  'Un contrat écrit et une assurance responsabilité civile',
+];
+
+const faqs = [
+  {
+    question: 'Quelles questions poser à un DJ de mariage avant de signer ?',
+    answer:
+      "Demandez combien de mariages il a animés, s'il dispose de matériel de secours, ce que couvre exactement son assurance, comment se déroule la préparation musicale, qui sera physiquement présent le jour J, et ce qui est inclus ou non dans le tarif annoncé. Un professionnel sérieux répond à ces questions sans détour et vous remet un contrat écrit.",
+  },
+  {
+    question: 'Faut-il obligatoirement un contrat avec son DJ de mariage ?',
+    answer:
+      "Oui. Le contrat protège les deux parties : il fixe la date, les horaires, le montant, les conditions d'annulation et le contenu précis de la prestation. Vérifiez également que le DJ possède une assurance responsabilité civile professionnelle — de nombreux lieux de réception l'exigent avant d'autoriser une installation.",
+  },
+  {
+    question: 'Combien de temps à l’avance réserver son DJ de mariage ?',
+    answer:
+      "Pour un samedi entre mai et septembre, comptez 12 à 18 mois d'avance : ce sont les dates qui partent le plus vite. En basse saison ou en semaine, 6 mois suffisent généralement. Dès que votre lieu de réception est réservé, contactez les DJ qui vous intéressent pour vérifier leur disponibilité.",
+  },
+  {
+    question: 'Pourquoi le matériel de secours est-il un critère important ?',
+    answer:
+      "Une table de mixage, un ampli ou un micro peuvent tomber en panne — c'est rare, mais cela arrive. Un DJ professionnel transporte systématiquement un second jeu d'équipement pour pouvoir reprendre en quelques minutes. Sans matériel de secours, une panne signifie la fin de la soirée : posez toujours la question.",
+  },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'Comment choisir le bon DJ pour son mariage ?',
+  description:
+    'Les critères essentiels pour choisir un DJ de mariage fiable : expérience, matériel, ambiance, contrat, tarifs, avis et questions à poser.',
+  image: 'https://www.mg-events35.com/images/gallery-1.jpg',
+  datePublished: '2026-01-15',
+  dateModified: '2026-07-20',
+  author: {
+    '@type': 'Person',
+    name: 'Guillaume',
+    worksFor: { '@type': 'Organization', name: 'MG Events Animation' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'MG Events Animation',
+    logo: { '@type': 'ImageObject', url: 'https://www.mg-events35.com/images/logo.png' },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': ARTICLE_URL },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.mg-events35.com' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.mg-events35.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Comment choisir son DJ de mariage', item: ARTICLE_URL },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
 };
 
 export default function Article() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#c9a227]/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -21,7 +122,7 @@ export default function Article() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo.png"
-                alt="MG Events Animation DJ Mariage Bretagne"
+                alt="MG Events Animation"
                 width={200}
                 height={80}
                 className="h-14 w-auto"
@@ -42,7 +143,7 @@ export default function Article() {
         <div className="relative h-[400px]">
           <Image
             src="/images/gallery-1.jpg"
-            alt="DJ mariage Bretagne ambiance dancefloor"
+            alt="Ambiance de dancefloor lors d'une soirée de mariage animée par un DJ professionnel"
             fill
             className="object-cover"
           />
@@ -73,7 +174,7 @@ export default function Article() {
             </div>
 
             <h1 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-white mb-4">
-              Comment choisir son DJ de mariage en <span className="text-[#c9a227]">Bretagne</span> ?
+              Comment choisir le <span className="text-[#c9a227]">bon DJ</span> pour son mariage ?
             </h1>
 
             <div className="flex items-center gap-3">
@@ -91,13 +192,47 @@ export default function Article() {
           <div className="prose prose-invert max-w-none">
             <div className="text-[#aaa] leading-relaxed space-y-6">
               <p className="text-lg">
-                Le choix du DJ est l&apos;une des décisions les plus importantes pour la réussite de votre soirée de mariage.
-                C&apos;est lui qui donnera le tempo, créera l&apos;ambiance et fera danser vos invités jusqu&apos;au bout de la nuit.
-                Mais comment s&apos;y retrouver parmi toutes les offres ? Voici notre guide complet pour faire le bon choix.
-                Et si vous cherchez directement un{' '}
-                <Link href="/dj-mariage-bretagne" className="text-[#c9a227] hover:underline">DJ mariage Bretagne</Link>{' '}
-                disponible à votre date, découvrez nos prestations dans les quatre départements bretons.
+                Choisir son DJ de mariage, c&apos;est choisir la personne qui tiendra le micro et le tempo pendant
+                l&apos;un des jours les plus importants de votre vie. Le bon critère n&apos;est pas le prix, ni la
+                taille de la sono : c&apos;est la <strong className="text-white">capacité à lire une salle</strong> et
+                à s&apos;adapter en temps réel. Voici les <strong className="text-white">10 critères</strong> qui
+                séparent un vrai professionnel d&apos;un prestataire d&apos;occasion — et les questions à poser avant
+                de signer quoi que ce soit.
               </p>
+
+              {/* Résumé rapide — répond immédiatement à l'intention informative */}
+              <div className="card-dark p-6 my-8">
+                <p className="text-white font-medium mb-4">Les 10 critères en un coup d&apos;œil</p>
+                <ol className="space-y-2">
+                  {criteres.map((c, i) => (
+                    <li key={c} className="flex items-start gap-3 text-[#aaa] text-sm">
+                      <span className="shrink-0 w-6 h-6 rounded-full bg-[#c9a227]/15 text-[#c9a227] text-xs font-semibold flex items-center justify-center mt-0.5">
+                        {i + 1}
+                      </span>
+                      {c}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* CTA commercial — unique usage fort de l'ancre régionale */}
+              <div className="card-dark p-6 my-8 border-[#c9a227]/30">
+                <h2 className="font-[family-name:var(--font-display)] text-xl text-white mb-2">
+                  Vous recherchez directement un DJ pour votre mariage en Bretagne ?
+                </h2>
+                <p className="text-[#888] text-sm mb-5">
+                  Découvrez les formules MG Events Animation, les prestations incluses, les tarifs et vérifiez la
+                  disponibilité de votre date.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href="/dj-mariage-bretagne" className="btn-gold text-sm">
+                    Découvrir notre prestation DJ mariage Bretagne
+                  </Link>
+                  <Link href="/#contact" className="btn-outline text-sm">
+                    Vérifier la disponibilité de ma date
+                  </Link>
+                </div>
+              </div>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
                 1. L&apos;expérience : le critère numéro un
@@ -114,7 +249,7 @@ export default function Article() {
               </p>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
-                2. Le matériel professionnel
+                2. Le matériel principal — et surtout le matériel de secours
               </h2>
               <p>
                 Un bon DJ investit dans du matériel de qualité. La sonorisation doit être adaptée à la taille de votre salle,
@@ -139,7 +274,7 @@ export default function Article() {
               </div>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
-                3. Le feeling lors du premier contact
+                3. La qualité de l&apos;échange humain
               </h2>
               <p>
                 Votre DJ sera présent pendant l&apos;un des plus beaux jours de votre vie. Il est essentiel que le courant passe !
@@ -153,7 +288,7 @@ export default function Article() {
               </ul>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
-                4. Les références et avis
+                4. Des avis et références réellement vérifiables
               </h2>
               <p>
                 Consultez les avis en ligne sur <strong className="text-white">Mariages.net</strong>, Google ou Facebook.
@@ -165,7 +300,7 @@ export default function Article() {
               </p>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
-                5. Le rapport qualité-prix
+                5. La transparence des prestations et des tarifs
               </h2>
               <p>
                 Le prix d&apos;un DJ mariage en Bretagne varie généralement entre <span className="text-[#c9a227]">800€ et 2000€</span> selon
@@ -180,7 +315,81 @@ export default function Article() {
               </p>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
-                6. Les services complémentaires
+                6. La capacité à animer sans être envahissant
+              </h2>
+              <p>
+                C&apos;est le critère le plus difficile à évaluer avant le jour J, et pourtant celui que les mariés
+                regrettent le plus souvent. Un DJ trop présent au micro, qui commente chaque moment ou impose ses
+                animations, peut dénaturer complètement une réception. À l&apos;inverse, un DJ totalement effacé ne
+                lancera jamais une piste hésitante.
+              </p>
+              <p>
+                Demandez-lui <strong className="text-white">comment il conçoit son rôle au micro</strong> et à quelle
+                fréquence il intervient. La bonne réponse tient en une phrase : il prend la parole quand c&apos;est
+                utile — annonces, transitions, moments forts — et se fait oublier le reste du temps. Méfiez-vous de
+                celui qui vend un « show » sans jamais vous demander ce que vous, vous souhaitez.
+              </p>
+
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
+                7. La préparation musicale en amont
+              </h2>
+              <p>
+                Un mariage réussi se prépare bien avant le jour J. Un professionnel vous propose un
+                <strong className="text-white"> rendez-vous de préparation</strong> pour construire ensemble le fil
+                musical : entrée des mariés, repas, ouverture de bal, montée en puissance, fin de soirée.
+              </p>
+              <p>
+                Vérifiez qu&apos;il accepte vos <strong className="text-white">titres imposés</strong> comme vos
+                <strong className="text-white"> titres interdits</strong> — cette seconde liste est souvent plus
+                importante que la première. Un DJ qui refuse toute contrainte musicale, ou qui au contraire se
+                contente de jouer votre playlist sans rien apporter, passe à côté de son métier.
+              </p>
+
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
+                8. La gestion des demandes des invités
+              </h2>
+              <p>
+                Le soir même, vos invités viendront demander des titres. Certains seront de bonnes idées, d&apos;autres
+                casseront net la dynamique de la piste. Demandez au DJ comment il gère ces sollicitations : accepte-t-il
+                tout ? Filtre-t-il selon l&apos;ambiance du moment ? Vous a-t-il demandé votre position sur le sujet ?
+              </p>
+              <p>
+                La réponse en dit long sur son expérience. Un DJ aguerri sait accueillir une demande avec le sourire,
+                la placer au bon moment… ou l&apos;écarter avec tact quand elle viderait le dancefloor.
+              </p>
+
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
+                9. La coordination avec vos autres prestataires
+              </h2>
+              <p>
+                Le DJ ne travaille jamais seul : il doit se caler avec le traiteur pour le service, le photographe
+                pour les moments clés, le lieu de réception pour les contraintes techniques, et le cas échéant avec
+                votre wedding planner.
+              </p>
+              <p>
+                Posez la question directement : <em>prend-il contact avec les autres prestataires avant le jour J ?</em>
+                Un DJ qui arrive sans avoir échangé avec personne découvrira les contraintes en direct — heure limite
+                de sonorisation, puissance électrique disponible, timing du service. C&apos;est exactement ce qui
+                produit les fins de soirée écourtées.
+              </p>
+
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
+                10. Le contrat et l&apos;assurance
+              </h2>
+              <p>
+                Aucune prestation sérieuse ne se conclut sans <strong className="text-white">contrat écrit</strong>.
+                Il doit mentionner la date, les horaires précis, le montant et l&apos;échéancier, le détail de ce qui
+                est inclus, et les conditions d&apos;annulation des deux côtés.
+              </p>
+              <p>
+                Vérifiez également l&apos;<strong className="text-white">assurance responsabilité civile
+                professionnelle</strong> : de nombreux châteaux et domaines l&apos;exigent avant d&apos;autoriser une
+                installation. Un prestataire qui ne peut pas produire son attestation vous expose, vous, en cas
+                d&apos;incident.
+              </p>
+
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
+                Les services complémentaires qui font la différence
               </h2>
               <p>
                 Certains DJ proposent des services qui font la différence :{' '}
@@ -192,20 +401,33 @@ export default function Article() {
                 en un moment <span className="text-[#c9a227]">vraiment inoubliable</span>.
               </p>
 
+              {/* FAQ visible — support du schema FAQPage déclaré en tête de page */}
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
+                Questions fréquentes sur le choix d&apos;un DJ
+              </h2>
+              <div className="space-y-4 not-prose">
+                {faqs.map((f) => (
+                  <div key={f.question} className="card-dark p-6">
+                    <h3 className="text-white font-medium mb-3">{f.question}</h3>
+                    <p className="text-[#888] text-sm leading-relaxed">{f.answer}</p>
+                  </div>
+                ))}
+              </div>
+
               <div className="card-dark p-8 my-12 border-[#c9a227]/30 text-center">
                 <h3 className="font-[family-name:var(--font-display)] text-2xl text-white mb-4">
-                  Besoin d&apos;un DJ pour votre mariage en Bretagne ?
+                  Ces critères, nous les cochons tous
                 </h3>
                 <p className="text-[#888] mb-6">
-                  Chez MG Events, nous cochons toutes les cases : 25 ans d&apos;expérience, matériel pro,
-                  animations originales et un vrai accompagnement personnalisé.
+                  25 ans d&apos;expérience, matériel de secours systématique, rendez-vous de préparation, contrat
+                  détaillé et tarifs affichés publiquement.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/dj-mariage-bretagne" className="btn-outline">
-                    Votre DJ mariage en Bretagne
+                    Voir les formules MG Events
                   </Link>
                   <Link href="/#contact" className="btn-gold">
-                    Demander un devis
+                    Vérifier votre date
                   </Link>
                 </div>
               </div>
@@ -251,7 +473,7 @@ export default function Article() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <Link href="/" className="text-[#c9a227] hover:underline">
-              ← MG Events - DJ Mariage Bretagne
+              ← Retour à l&apos;accueil MG Events Animation
             </Link>
             <div className="flex items-center gap-4 text-sm text-[#666]">
               <Link href="/mentions-legales" className="hover:text-[#c9a227] transition-colors">Mentions légales</Link>
