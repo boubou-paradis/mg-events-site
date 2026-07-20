@@ -273,7 +273,7 @@ export default function TarifsDjMariagePage() {
               <p className="text-[#888] text-sm mb-4">{formule.description}</p>
               <p className="mb-6">
                 <span className="text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">{formule.price}</span>
-                <span className="text-[#888] ml-2">€ TTC</span>
+                <span className="text-[#888] ml-2">€ TTC<span className="text-[#c9a227] font-semibold align-super text-base ml-0.5">*</span></span>
               </p>
               <ul className="space-y-2 mb-6 flex-1">
                 {formule.features.map((item) => (
@@ -286,6 +286,15 @@ export default function TarifsDjMariagePage() {
               <p className="text-[#888] text-sm italic border-l-2 border-[#c9a227]/30 pl-4">{formule.pourQui}</p>
             </div>
           ))}
+        </div>
+
+        {/* Note kilométrage — se rapporte à l'astérisque des 3 formules */}
+        <div className="mt-6 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
+          <p className="text-sm text-[#e8e8ea] leading-relaxed">
+            <span className="text-[#c9a227] font-semibold">*&nbsp;Frais de déplacement</span> — Trajet
+            aller-retour jusqu&apos;à <strong className="text-white">100&nbsp;km inclus</strong>, au départ de
+            Redon&nbsp;(35). Au-delà, <strong className="text-white">0,66&nbsp;€/km</strong> supplémentaire.
+          </p>
         </div>
       </Section>
 

@@ -617,7 +617,7 @@ function Formules() {
                 <span className="text-4xl font-[family-name:var(--font-display)] text-[#c9a227]">
                   {formule.price}
                 </span>
-                <span className="text-[#888] ml-2">€ TTC</span>
+                <span className="text-[#888] ml-2">€ TTC<span className="text-[#c9a227] font-semibold align-super text-base ml-0.5">*</span></span>
               </div>
 
               <ul className="space-y-3 mb-8">
@@ -637,6 +637,16 @@ function Formules() {
               </a>
             </div>
           ))}
+        </div>
+
+        {/* Note kilométrage — se rapporte à l'astérisque des 3 formules.
+            mt généreux : la carte "populaire" agrandie (scale-110) déborde vers le bas. */}
+        <div className="mt-12 md:mt-16 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
+          <p className="text-sm text-[#e8e8ea] leading-relaxed">
+            <span className="text-[#c9a227] font-semibold">*&nbsp;Frais de déplacement</span> — Trajet
+            aller-retour jusqu&apos;à <strong className="text-white">100&nbsp;km inclus</strong>, au départ de
+            Redon&nbsp;(35). Au-delà, <strong className="text-white">0,66&nbsp;€/km</strong> supplémentaire.
+          </p>
         </div>
 
         {/* Encart informations pratiques */}
