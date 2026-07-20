@@ -36,6 +36,7 @@ import {
   Phone,
   Heart,
   Palette,
+  Lock,
 } from 'lucide-react';
 
 // ============ HERO ============
@@ -1367,6 +1368,18 @@ function FeuArtificeJour() {
                 Nouveauté
               </span>
             </div>
+
+            {/* Badge d'exclusivité — même style que /feu-artifice-jour.
+                SPÉCIFIQUE à cette section, ne pas déplacer dans un composant partagé. */}
+            <div className="absolute inset-x-0 bottom-0 z-20 border-t-2 border-[#c9a227] bg-[#1a1a2e]/95 px-4 py-3 shadow-[0_-8px_24px_rgba(0,0,0,0.45)] pointer-events-none sm:px-6 sm:py-4">
+              <p className="flex items-center justify-center gap-2 text-center text-[13px] font-semibold uppercase leading-snug tracking-wide text-[#c9a227] sm:text-base">
+                <Lock size={16} className="shrink-0" aria-hidden="true" />
+                Offre exclusivement réservée à nos clients
+              </p>
+              <p className="mt-1 text-center text-[11px] font-medium uppercase tracking-[0.18em] text-white sm:text-sm">
+                Non disponible seul
+              </p>
+            </div>
           </LightboxTrigger>
 
           {/* Contenu */}
@@ -1426,6 +1439,11 @@ function FeuArtificeJour() {
                     <span className="text-[#888] text-sm ml-1">€</span>
                   </div>
                 </div>
+                <p className="mt-3 pt-3 border-t border-[#c9a227]/20 text-xs text-[#aaa] flex items-start gap-2">
+                  <Lock size={13} className="text-[#c9a227] mt-0.5 shrink-0" aria-hidden="true" />
+                  Réservé aux clients MG Events — en complément d&apos;une formule DJ/animation,
+                  non disponible seul.
+                </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
