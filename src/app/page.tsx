@@ -1826,12 +1826,12 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/dj-morlaix" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                <Link href="/dj-mariage/morlaix" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
                   DJ Mariage Morlaix
                 </Link>
               </li>
               <li>
-                <Link href="/dj-mariage-quimper" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                <Link href="/dj-mariage/quimper" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
                   DJ Mariage Quimper
                 </Link>
               </li>

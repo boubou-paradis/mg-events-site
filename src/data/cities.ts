@@ -10,6 +10,12 @@ export interface City {
   latitude: number;
   longitude: number;
   population?: string;
+  // Overrides SEO facultatifs (title/description) — utilisés pour les villes dont
+  // une ancienne page autonome bien positionnée a été consolidée ici : on conserve
+  // le title/description qui captait la requête courte "DJ <ville>". Sinon le
+  // template dynamique fournit les valeurs par défaut.
+  metaTitle?: string;
+  metaDescription?: string;
   // Contenu SEO unique par ville
   seoDescription: string; // 2-3 paragraphes uniques sur les mariages dans cette ville
   localHighlights: string[]; // Points forts locaux (3-4 bullet points)
@@ -653,6 +659,8 @@ Nous intervenons régulièrement en Finistère nord malgré la distance depuis n
     latitude: 47.9959,
     longitude: -4.0967,
     population: '63 000',
+    metaTitle: 'DJ Quimper · Mariage & Soirée · Avis 5★ · Dès 1200€',
+    metaDescription: "DJ à Quimper pour mariage et soirée, dans tout le Finistère Sud : Concarneau, Bénodet, Fouesnant. Avis 5★, dès 1200€ TTC. Devis gratuit sous 24h ✓",
     seoDescription: `Quimper, capitale historique de la Cornouaille, est le berceau de la culture bretonne avec sa cathédrale gothique, ses faïenceries réputées et ses ruelles médiévales au confluent de l'Odet et du Steir. Le Festival de Cornouaille en témoigne chaque été : ici, la tradition bretonne est vivante et fière. Un mariage quimpérois, c'est l'assurance d'une dimension culturelle authentique.
 
 La Cornouaille offre des paysages d'une variété exceptionnelle : baie de Bénodet et plages de Fouesnant au sud, pointe du Raz et cap Sizun à l'ouest, montagnes Noires à l'intérieur. Les châteaux et manoirs cornouaillais, souvent construits en granit bleu de Locronan, présentent une architecture typique et des cadres préservés loin de la standardisation.
@@ -664,13 +672,18 @@ Notre approche du mariage en Cornouaille intègre naturellement la culture local
       'Proximité de Bénodet, Fouesnant, pointe du Raz pour escapades',
       'Faïenceries de Quimper : cadeaux d\'invités typiques et élégants',
     ],
-    nearbyCommunes: ['Ergué-Gabéric', 'Pluguffan', 'Plomelin', 'Fouesnant', 'Bénodet', 'Concarneau'],
+    nearbyCommunes: ['Ergué-Gabéric', 'Pluguffan', 'Plomelin', 'Fouesnant', 'Bénodet', 'Concarneau', 'Pont-l\'Abbé', 'Douarnenez', 'Quimperlé', 'Rosporden'],
     weddingVenues: [
+      { nom: 'Château de Lanniron', ville: 'Quimper', type: 'Château & Jardins', description: 'Ancienne résidence des évêques, jardins remarquables en bord d\'Odet' },
       { nom: 'Manoir de Kerhuel', ville: 'Plonéour-Lanvern', type: 'Manoir', description: 'Manoir du XVIe avec chapelle privée et jardins clos' },
       { nom: 'Château de Guilguiffin', ville: 'Landudec', type: 'Château', description: 'Château de granit avec tours et parc romantique' },
+      { nom: 'Manoir du Stang', ville: 'La Forêt-Fouesnant', type: 'Manoir & Bois', description: 'Manoir entouré de bois et d\'étangs, cadre romantique' },
+      { nom: 'Domaine de Kerampensal', ville: 'Elliant', type: 'Domaine champêtre', description: 'Domaine champêtre pour réceptions au vert' },
     ],
     testimonials: [
       { author: 'Marion & Sébastien', text: "Excellente prestation DJ pour notre mariage en Cornouaille. Ambiance bretonne garantie !" },
+      { author: 'Anaïg & Corentin', text: "Une soirée magique au Château de Lanniron. Guillaume a su marier tradition bretonne et hits contemporains, les invités ont dansé jusqu'à la fermeture.", venue: 'Château de Lanniron' },
+      { author: 'Rozenn & Pierrick', text: "Mariage à Fouesnant avec vue sur mer. Les étincelles froides pour notre première danse étaient féeriques. Merci à Guillaume et Laurence !", venue: 'Mariage à Fouesnant' },
     ],
     forEnterprise: true,
     businessAreas: ['Zone de Créac\'h Gwen'],
@@ -686,24 +699,33 @@ Notre approche du mariage en Cornouaille intègre naturellement la culture local
     latitude: 48.5778,
     longitude: -3.8278,
     population: '15 000',
+    metaTitle: 'DJ Morlaix · Mariage & Soirée · Avis 5★ · Dès 1200€',
+    metaDescription: "DJ à Morlaix pour mariage et soirée, dans le Finistère Nord : Roscoff, Saint-Pol-de-Léon, Carantec. Avis 5★, dès 1200€ TTC. Devis gratuit sous 24h ✓",
     seoDescription: `Morlaix, dominée par son viaduc monumental, est une cité de caractère nichée au fond d'un estuaire. Ses maisons à pondalez (maisons à lanterne), son port de plaisance et sa baie parsemée d'îlots créent un décor unique en Bretagne. Le château du Taureau, forteresse Vauban accessible en bateau, offre même la possibilité d'un mariage sur une île fortifiée au milieu de la baie.
 
 La région morlaisienne combine monts d'Arrée sauvages et côtes découpées de la baie. Les enclos paroissiaux de la vallée de l'Élorn (Saint-Thégonnec, Guimiliau) témoignent de la richesse historique du Léon. Les manoirs et fermes rénovées du pays proposent des cadres authentiques où la pierre de taille et les poutres apparentes créent une atmosphère chaleureuse.
 
-Un mariage à Morlaix, c'est choisir un Finistère confidentiel, loin des flux touristiques de la pointe du Raz ou de Concarneau. Nous apprécions particulièrement les cérémonies dans cette région préservée où l'accueil breton prend tout son sens. Notre matériel traverse la Bretagne pour offrir la même qualité de prestation qu'aux portes de Rennes.`,
+Un mariage à Morlaix, c'est choisir un Finistère confidentiel, loin des flux touristiques de la pointe du Raz ou de Concarneau. Nous apprécions particulièrement les cérémonies dans cette région préservée où l'accueil breton prend tout son sens. Notre matériel traverse la Bretagne pour offrir la même qualité de prestation qu'aux portes de Rennes.
+
+Notre ancrage dans le Finistère est réel : plus de 25 ans de scène dans les discothèques du 29 avant de nous consacrer aux mariages. Cette formation terrain — des milliers de soirées à lire des pistes de danse exigeantes — nous a appris à sentir le moment où l'ambiance bascule et à ne jamais la laisser retomber, que ce soit dans une grange rénovée du Léon, un manoir en pierre de taille ou face à la baie de Morlaix.`,
     localHighlights: [
       'Château du Taureau : mariage possible sur forteresse insulaire',
       'Viaduc monumental et maisons à pondalez pour photos originales',
       'Enclos paroissiaux classés à proximité pour cérémonie religieuse',
       'Monts d\'Arrée sauvages pour photos nature authentique',
     ],
-    nearbyCommunes: ['Saint-Martin-des-Champs', 'Plourin-lès-Morlaix', 'Garlan', 'Plouigneau', 'Lanmeur'],
+    nearbyCommunes: ['Saint-Martin-des-Champs', 'Plourin-lès-Morlaix', 'Garlan', 'Plouigneau', 'Lanmeur', 'Roscoff', 'Saint-Pol-de-Léon', 'Carantec', 'Landivisiau'],
     weddingVenues: [
       { nom: 'Château du Taureau', ville: 'Baie de Morlaix', type: 'Château insulaire', description: 'Forteresse Vauban sur îlot, accessible en bateau' },
       { nom: 'Manoir de Coat Amour', ville: 'Morlaix', type: 'Manoir', description: 'Manoir de caractère avec parc et vue sur la baie' },
+      { nom: 'Manoir de Kerlut', ville: 'Ploudaniel', type: 'Manoir breton', description: 'Manoir breton dans un écrin de verdure du Léon' },
+      { nom: 'Domaine de Keridreuff', ville: 'Saint-Martin-des-Champs', type: 'Domaine champêtre', description: 'Domaine champêtre aux portes de Morlaix' },
+      { nom: 'Ferme de Kerguélen', ville: 'Carantec', type: 'Ferme rénovée', description: 'Ferme rénovée avec vue mer vers l\'île Callot' },
     ],
     testimonials: [
-      { author: 'Solène & Erwan', text: "Animation musicale au top pour notre mariage à Morlaix. Merci pour cette soirée mémorable !" },
+      { author: 'Solène & Erwan', text: "Animation musicale au top pour notre mariage à Morlaix. Merci pour cette soirée mémorable !", venue: 'Mariage à Morlaix' },
+      { author: 'Pauline & Romain', text: "Des professionnels adorables et très réactifs. Notre mariage à Morlaix était parfait. La fumée lourde pour la danse restera gravée dans nos mémoires.", venue: 'Mariage à Morlaix' },
+      { author: 'Anaïs & Loïc', text: "Mariage face à la baie de Morlaix, une ambiance inoubliable ! Guillaume connaît parfaitement la région et ça se sent dans son approche.", venue: 'Mariage en baie de Morlaix' },
     ],
     forEnterprise: false,
     forBirthday: false,

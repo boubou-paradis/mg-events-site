@@ -254,7 +254,9 @@ export default function Article() {
                 </h3>
                 <p className="text-[#888] mb-6">
                   Il vous faut maintenant un DJ qui connaît ces lieux ! Chez MG Events, nous avons déjà animé
-                  des mariages dans la plupart de ces domaines. On connaît les contraintes techniques et on s&apos;adapte.
+                  des mariages dans la plupart de ces domaines, notamment comme{' '}
+                  <Link href="/dj-mariage/rennes" className="text-[#c9a227] hover:underline">DJ mariage à Rennes</Link>{' '}
+                  et ses environs. On connaît les contraintes techniques et on s&apos;adapte.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/dj-mariage-ille-et-vilaine" className="btn-outline">

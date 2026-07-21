@@ -68,6 +68,19 @@ const nextConfig: NextConfig = {
         destination: '/dj-mariage/laval',
         permanent: true,
       },
+      // Consolidation SEO juillet 2026 (2e vague) : pages villes autonomes fusionnées
+      // vers la route dynamique unique /dj-mariage/[ville] (règle "1 ville = 1 URL",
+      // déjà appliquée à Rennes/Laval). Contenu unique migré dans src/data/cities.ts.
+      {
+        source: '/dj-morlaix',
+        destination: '/dj-mariage/morlaix',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage-quimper',
+        destination: '/dj-mariage/quimper',
+        permanent: true,
+      },
       // Redirections anciennes URLs (ancien site) vers pages actuelles
       {
         source: '/services',

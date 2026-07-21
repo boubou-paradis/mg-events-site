@@ -320,7 +320,7 @@ export default function LieuxReceptionBretagne() {
               { label: 'Loire-Atlantique', href: '/dj-mariage-loire-atlantique' },
               { label: 'Mayenne', href: '/dj-mariage-mayenne' },
               { label: 'Laval', href: '/dj-mariage/laval' },
-              { label: 'Morlaix', href: '/dj-morlaix' },
+              { label: 'Morlaix', href: '/dj-mariage/morlaix' },
               { label: 'Bretagne', href: '/dj-mariage-bretagne' },
             ].map((link) => (
               <Link

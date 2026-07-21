@@ -243,7 +243,7 @@ export default function ZonesIntervention() {
               DJ Mariage Laval (Mayenne)
             </Link>
             <Link
-              href="/dj-morlaix"
+              href="/dj-mariage/morlaix"
               className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
             >
               <MapPin size={16} className="text-[#c9a227]" />
@@ -257,7 +257,7 @@ export default function ZonesIntervention() {
               DJ Mariage Rennes
             </Link>
             <Link
-              href="/dj-mariage-quimper"
+              href="/dj-mariage/quimper"
               className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
             >
               <MapPin size={16} className="text-[#c9a227]" />

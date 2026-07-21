@@ -61,18 +61,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/dj-morlaix`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/dj-mariage-quimper`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.85,
-    },
+    // Note : /dj-morlaix et /dj-mariage-quimper ont été consolidés (301) vers
+    // /dj-mariage/morlaix et /dj-mariage/quimper (route dynamique, incluse plus bas).
     // Prestation Livre d'Or Audio
     {
       url: `${baseUrl}/livre-dor-audio`,

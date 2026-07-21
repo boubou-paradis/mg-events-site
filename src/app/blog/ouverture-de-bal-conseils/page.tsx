@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { ArrowLeft, Calendar, User, Clock, Check } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Ouverture de bal : 10 conseils pour un moment magique',
-  description: 'L\'ouverture de bal est l\'un des moments les plus émouvants de votre mariage. Découvrez nos conseils : choix de la musique, chorégraphie, effets spéciaux.',
+  title: 'Ouverture de bal mariage : musique, chorégraphie et effets',
+  description: 'Réussir votre ouverture de bal de mariage : choix de la musique, chorégraphie simple ou surprise, fumée lourde et étincelles froides pour une première danse inoubliable.',
   alternates: {
     canonical: 'https://www.mg-events35.com/blog/ouverture-de-bal-conseils',
   },
@@ -149,12 +149,14 @@ export default function Article() {
               <p>
                 Cet effet crée un tapis de nuages à vos pieds, donnant l&apos;impression de danser sur les nuages.
                 <span className="text-[#c9a227]"> Un effet féérique</span> qui fait toujours sensation dans les photos et vidéos.
+                Découvrez notre <Link href="/fumee-lourde-mariage" className="text-[#c9a227] hover:underline">prestation de fumée lourde</Link>.
               </p>
 
               <h3 className="text-xl text-white mt-8 mb-4">Les étincelles froides</h3>
               <p>
                 Des fontaines d&apos;étincelles qui encadrent votre danse sans aucun danger. Effet spectaculaire garanti !
-                Chez MG Events, nous utilisons des machines <strong className="text-white">certifiées CE</strong> pour une sécurité totale.
+                Chez MG Events, nous utilisons des machines <strong className="text-white">certifiées CE</strong> pour une sécurité totale —
+                tout savoir sur nos <Link href="/etincelles-froides-mariage" className="text-[#c9a227] hover:underline">étincelles froides pour mariage</Link>.
               </p>
 
               <h3 className="text-xl text-white mt-8 mb-4">Le jeu de lumières</h3>
