@@ -163,3 +163,35 @@ curl -s https://www.mg-events35.com/dj-mariage/morlaix | grep -i '<title>'    # 
 curl -s https://www.mg-events35.com/sitemap.xml | grep -E 'dj-morlaix|dj-mariage-quimper'   # attendu : vide
 npm run indexnow
 ```
+
+---
+
+## 18. Vérifications POST-DÉPLOIEMENT PRODUCTION — 21 juillet 2026
+
+PR #1 mergée dans `main` (commit `4adfbf2`) → déploiement Vercel production. Contrôles exécutés sur `https://www.mg-events35.com` une fois le déploiement live.
+
+> Note : la **preview Vercel** de la PR était protégée par *Deployment Protection (Authentication SSO)* → inaccessible en anonyme. Les contrôles ont donc été faits directement sur la **production publique** (identique, même commit).
+
+| Contrôle | Attendu | Résultat |
+|---|---|---|
+| `/dj-morlaix` | 308 → `/dj-mariage/morlaix` | ✅ 308, loc = `/dj-mariage/morlaix` |
+| `/dj-mariage-quimper` | 308 → `/dj-mariage/quimper` | ✅ 308, loc = `/dj-mariage/quimper` |
+| Saut unique (pas de chaîne/boucle) | 1 hop | ✅ `hops=1` pour les deux |
+| Cibles finales | 200 | ✅ 200 / 200 |
+| Query string préservée | conservée | ✅ `?utm_source=google&utm_medium=wix_google_business_profile` transmis intact |
+| Title Morlaix | `DJ Morlaix · …` | ✅ `DJ Morlaix · Mariage & Soirée · Avis 5★ · Dès 1200€` |
+| Title Quimper | `DJ Quimper · …` | ✅ `DJ Quimper · Mariage & Soirée · Avis 5★ · Dès 1200€` |
+| Canonical Morlaix / Quimper | URL finale | ✅ auto-référentes (`/dj-mariage/morlaix`, `/dj-mariage/quimper`) |
+| Anciennes URL dans sitemap | absentes | ✅ absentes |
+| Nouvelles URL dans sitemap | présentes | ✅ `dj-mariage/morlaix` + `dj-mariage/quimper` (1×) |
+| `/blog/ouverture-de-bal-conseils` | 200 + nouveau title | ✅ 200, title « Ouverture de bal mariage : musique, chorégraphie et effets » |
+| Lien Rennes (top-salles) | 1 lien, non cassé | ✅ 1 balise `<a>` visible → `/dj-mariage/rennes` (200) ; le « 2 » d'un grep brut = payload RSC Next, pas un doublon |
+| Mobile / formulaires | inchangés | ✅ aucun code design/formulaire touché ; pages rendues en 200, endpoint `/api/contact` intact |
+
+**Conclusion : déploiement production validé, toutes les redirections et métadonnées conformes.**
+
+### Reste à faire (manuel, quand tu le décides)
+- GSC : Inspection d'URL + réindexation de `/dj-mariage/morlaix` et `/dj-mariage/quimper`.
+- Re-soumettre le sitemap dans GSC.
+- `npm run indexnow` (Bing/Copilot).
+- Surveiller sur 28 j la consolidation des requêtes « dj morlaix » / « dj quimper » / « dj mariage rennes ».
