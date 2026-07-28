@@ -38,7 +38,7 @@ const localBusinessSchema = {
   '@id': 'https://www.mg-events35.com/dj-mariage-bretagne#organization',
   name: 'MG Events Animation - DJ Mariage Bretagne',
   image: 'https://www.mg-events35.com/images/logo.png',
-  description: 'DJ animateur professionnel pour mariage en Bretagne. Animation élégante sur mesure, sonorisation et éclairage professionnels. 25 ans d\'expérience dans les discothèques et mariages bretons.',
+  description: 'DJ animateur professionnel pour mariage en Bretagne. Animation élégante sur mesure, sonorisation et éclairage professionnels. 25 ans d\'expérience dans les discothèques et mariages bretons. Basé à Redon (35) : les forfaits incluent jusqu\'à 100 km aller-retour, au-delà 0,66 €/km précisés sur le devis.',
   url: 'https://www.mg-events35.com/dj-mariage-bretagne',
   telephone: '+33648106166',
   email: 'contact@mg-events35.com',
@@ -186,7 +186,7 @@ const servicesInclus = [
 const faqs = [
   {
     question: 'Combien coûte un DJ mariage en Bretagne ?',
-    answer: 'Nos formules DJ mariage en Bretagne démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs comprennent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
+    answer: 'Nos formules DJ mariage en Bretagne démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs comprennent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35), la distance exacte étant calculée selon l\'adresse du lieu de réception ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
   },
   {
     question: 'Dans quels départements intervenez-vous ?',

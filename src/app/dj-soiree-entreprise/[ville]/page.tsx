@@ -64,7 +64,7 @@ function generateEnterpriseFaqs(city: City) {
   return [
     {
       question: `Quel est le tarif d'un DJ pour une soirée d'entreprise à ${city.name} ?`,
-      answer: `Nos formules animation corporate à ${city.name} démarrent à 800€ TTC (formule Cocktail 4h) et vont jusqu'à 1600€ TTC (formule Premium avec photobooth personnalisé). Les tarifs incluent le déplacement et l'installation.`,
+      answer: `Nos formules animation corporate à ${city.name} démarrent à 800€ TTC (formule Cocktail 4h) et vont jusqu'à 1600€ TTC (formule Premium avec photobooth personnalisé). Les tarifs incluent l'installation et le déplacement jusqu'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 €/km, précisé sur le devis.`,
     },
     {
       question: 'Pouvez-vous personnaliser l\'animation avec notre branding ?',

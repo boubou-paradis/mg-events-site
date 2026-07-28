@@ -64,7 +64,7 @@ function generateBirthdayFaqs(city: City) {
   return [
     {
       question: `Quel est le tarif d'un DJ pour un anniversaire à ${city.name} ?`,
-      answer: `Nos formules animation anniversaire à ${city.name} démarrent à 600€ TTC (4h d'animation) et vont jusqu'à 1200€ TTC (formule VIP avec photobooth). Le déplacement à ${city.name} est inclus.`,
+      answer: `Nos formules animation anniversaire à ${city.name} démarrent à 600€ TTC (4h d'animation) et vont jusqu'à 1200€ TTC (formule VIP avec photobooth). Les forfaits incluent le déplacement jusqu'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 €/km, précisé sur le devis.`,
     },
     {
       question: 'À partir de combien de personnes intervenez-vous ?',

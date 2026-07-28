@@ -50,7 +50,7 @@ const faqs = [
   {
     question: 'Ces animations modernes sont-elles incluses dans vos formules ?',
     answer:
-      "Oui, AnimaJet et l'ensemble de ses animations sont inclus dès la formule Éclat d'Amour (1200€ TTC), partout en Bretagne et dans le Grand Ouest.",
+      "Oui, AnimaJet et l'ensemble de ses animations sont inclus dès la formule Éclat d'Amour (1200€ TTC). MG Events est basé à Redon (35) : les forfaits incluent jusqu'à 100 km aller-retour, au-delà 0,66 €/km précisés sur le devis.",
   },
 ];
 

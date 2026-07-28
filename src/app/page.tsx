@@ -652,9 +652,11 @@ function Formules() {
             mt généreux : la carte "populaire" agrandie (scale-110) déborde vers le bas. */}
         <div className="mt-12 md:mt-16 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
           <p className="text-sm text-[#e8e8ea] leading-relaxed">
-            <span className="text-[#c9a227] font-semibold">*&nbsp;Frais de déplacement</span> — Trajet
-            aller-retour jusqu&apos;à <strong className="text-white">100&nbsp;km inclus</strong>, au départ de
-            Redon&nbsp;(35). Au-delà, <strong className="text-white">0,66&nbsp;€/km</strong> supplémentaire.
+            <span className="text-[#c9a227] font-semibold">*&nbsp;Frais de déplacement</span> — Tarifs incluant
+            jusqu&apos;à <strong className="text-white">100&nbsp;km aller-retour</strong> au départ de
+            Redon&nbsp;(35), la distance exacte étant calculée selon l&apos;adresse du lieu de réception. Au-delà,{' '}
+            <strong className="text-white">0,66&nbsp;€/km</strong> supplémentaire, précisé
+            sur le devis.
           </p>
         </div>
 

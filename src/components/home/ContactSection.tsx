@@ -115,6 +115,16 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
+
+            {/* Règle kilométrique — visible avant l'envoi de la demande */}
+            <div className="mt-8 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
+              <p className="text-sm text-[#e8e8ea] leading-relaxed">
+                <span className="text-[#c9a227] font-semibold">Frais de déplacement</span> — MG Events est basé à
+                Redon&nbsp;(35). Les forfaits incluent jusqu&apos;à{' '}
+                <strong className="text-white">100&nbsp;km aller-retour</strong>. Au-delà, les frais de déplacement
+                sont calculés à <strong className="text-white">0,66&nbsp;€/km</strong> et précisés sur le devis.
+              </p>
+            </div>
           </div>
 
           {/* Form */}
@@ -190,7 +200,7 @@ export default function ContactSection() {
 
               {/* Location */}
               <div>
-                <label htmlFor="contact-location" className="block text-sm text-[#888] mb-2">Lieu de réception</label>
+                <label htmlFor="contact-location" className="block text-sm text-[#888] mb-2">Lieu de réception *</label>
                 <input
                     id="contact-location"
                   type="text"
@@ -199,7 +209,13 @@ export default function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                   className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"
                   placeholder="Nom de la salle ou adresse"
+                  aria-describedby="contact-location-help"
                 />
+                <p id="contact-location-help" className="text-xs text-[#8a8a8a] mt-2 leading-relaxed">
+                  MG Events est basé à Redon. Les forfaits incluent jusqu&apos;à 100 km aller-retour, la distance
+                  exacte étant calculée selon l&apos;adresse du lieu de réception. Au-delà, les frais de déplacement
+                  sont calculés à 0,66 €/km et précisés sur le devis.
+                </p>
               </div>
 
               {/* Adresse postale (pour l'envoi du devis) */}

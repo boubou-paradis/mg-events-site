@@ -84,7 +84,7 @@ const localBusinessSchema = {
   "@id": "https://www.mg-events35.com/dj-mariage-morbihan#organization",
   "name": "MG Events Animation - DJ Mariage Morbihan",
   "image": "https://www.mg-events35.com/images/logo.png",
-  "description": "DJ animateur professionnel pour mariage dans le Morbihan (56). Animation musicale, photobooth vintage, étincelles froides à Vannes, Lorient, Auray.",
+  "description": "DJ animateur professionnel pour mariage dans le Morbihan (56). Animation musicale, photobooth vintage, étincelles froides à Vannes, Lorient, Auray. Basé à Redon (35) : les forfaits incluent jusqu'à 100 km aller-retour, au-delà 0,66 €/km précisés sur le devis.",
   "url": "https://www.mg-events35.com/dj-mariage-morbihan",
   "telephone": "+33648106166",
   "email": "contact@mg-events35.com",
@@ -364,13 +364,22 @@ export default function DJMariageMorbihan() {
                 <p className="text-[#888] text-sm mb-4">{formule.description}</p>
                 <div className="mb-4">
                   <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">{formule.price}</span>
-                  <span className="text-[#888] ml-2">€ TTC</span>
+                  <span className="text-[#888] ml-2">€ TTC<span className="text-[#c9a227] font-semibold align-super text-sm ml-0.5">*</span></span>
                 </div>
                 <Link href="/#formules" className="text-[#c9a227] text-sm hover:underline">
                   Voir le détail →
                 </Link>
               </div>
             ))}
+          </div>
+          {/* Note kilométrage — se rapporte à l'astérisque des 3 formules */}
+          <div className="mt-8 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
+            <p className="text-sm text-[#e8e8ea] leading-relaxed">
+              <span className="text-[#c9a227] font-semibold">*&nbsp;Frais de déplacement</span> — Tarifs incluant
+              jusqu&apos;à <strong className="text-white">100&nbsp;km aller-retour</strong> au départ de
+              Redon&nbsp;(35). Au-delà, <strong className="text-white">0,66&nbsp;€/km</strong> supplémentaire,
+              précisé sur le devis.
+            </p>
           </div>
           <p className="text-[#888] text-center mt-8 text-sm">
             <span className="text-[#c9a227] font-medium">Nouveauté</span> — sublimez la sortie des mariés avec notre{' '}
@@ -416,10 +425,18 @@ export default function DJMariageMorbihan() {
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
             Les secteurs du <span className="text-[#c9a227]">département 56</span>
           </h2>
-          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
-            Du Golfe aux terres intérieures, nous intervenons partout.
-          </p>
+          <div className="max-w-3xl mx-auto mb-12 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
+            <p className="text-sm text-[#e8e8ea] leading-relaxed">
+              <span className="text-[#c9a227] font-semibold">Frais de déplacement</span> — Les forfaits incluent
+              jusqu&apos;à <strong className="text-white">100 km aller-retour</strong> au départ de Redon (35).
+              Au-delà, <strong className="text-white">0,66 €/km</strong> supplémentaire, précisé sur le devis.
+            </p>
+            <p className="text-sm text-[#bdbdc4] leading-relaxed mt-3 pt-3 border-t border-[#c9a227]/20">
+              Seuls les secteurs du Morbihan situés dans un rayon approximatif de 100 km autour de Redon (Ploërmel, Vannes, Auray, Pontivy, La Trinité-sur-Mer) relèvent de notre zone
+              habituelle, entre 50 et 90 km de Redon ; Lorient (~110 km) est étudié au cas par cas. Aucun département n&apos;est couvert en totalité, ni comme zone habituelle, ni sans
+              frais de route : le calcul se fait sur la distance réelle jusqu&apos;à votre lieu de réception.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {zonesIntervention56.map((zone, index) => (
               <div key={index} className="card-dark p-5">

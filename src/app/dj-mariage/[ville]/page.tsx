@@ -86,7 +86,9 @@ function generateCityFaqs(city: City) {
   return [
     {
       question: `Quel est le prix d'un DJ mariage à ${city.name} ?`,
-      answer: `Nos formules DJ mariage à ${city.name} démarrent à 1200€ TTC (formule Éclat d'Amour) et vont jusqu'à 1690€ TTC (formule Conte de Fées avec photobooth). Ces tarifs incluent l'installation et le démontage.`,
+      answer: `Nos formules DJ mariage à ${city.name} démarrent à 1200€ TTC (formule Éclat d'Amour) et vont jusqu'à 1690€ TTC (formule Conte de Fées avec photobooth). Ces tarifs incluent l'installation et le démontage, ainsi que le déplacement jusqu'à 100 km aller-retour au départ de Redon (35). ${TRAVEL_RULE.exactDistance} Au-delà de 100 km aller-retour, les kilomètres supplémentaires sont facturés 0,66 €/km et indiqués clairement sur le devis${
+        prioritaire ? '.' : ` — ${city.name} se situant à environ ${city.distanceFromRedonKm} km de Redon, des frais de route s'ajoutent au prix de la formule.`
+      }`,
     },
     {
       question: `Vous déplacez-vous à ${city.name} et ses environs ?`,
@@ -161,7 +163,7 @@ function generateLocalBusinessSchema(city: City) {
     "@id": `https://www.mg-events35.com/dj-mariage/${city.slug}#organization`,
     "name": `MG Events Animation - DJ Mariage ${city.name}`,
     "image": "https://www.mg-events35.com/images/logo.png",
-    "description": `DJ animateur professionnel pour mariage à ${city.name} (${city.departmentCode}). Animation musicale, photobooth vintage, étincelles froides. 25 ans d'expérience.`,
+    "description": `DJ animateur professionnel pour mariage à ${city.name} (${city.departmentCode}). Animation musicale, photobooth vintage, étincelles froides. 25 ans d'expérience. ${TRAVEL_RULE.short}`,
     "url": `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     "telephone": "+33648106166",
     "email": "contact@mg-events35.com",
@@ -490,13 +492,27 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
                 <p className="text-[#888] text-sm mb-4">{formule.description}</p>
                 <div className="mb-4">
                   <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">{formule.price}</span>
-                  <span className="text-[#888] ml-2">€ TTC</span>
+                  <span className="text-[#888] ml-2">€ TTC<span className="text-[#c9a227] font-semibold align-super text-sm ml-0.5">*</span></span>
                 </div>
                 <Link href="/#formules" className="text-[#c9a227] text-sm hover:underline">
                   Voir le détail →
                 </Link>
               </div>
             ))}
+          </div>
+
+          {/* Note kilométrage — se rapporte à l'astérisque des 3 formules */}
+          <div className="mt-8 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
+            <p className="text-sm text-[#e8e8ea] leading-relaxed">
+              <span className="text-[#c9a227] font-semibold">*&nbsp;Frais de déplacement</span> — Tarifs incluant
+              jusqu&apos;à <strong className="text-white">100&nbsp;km aller-retour</strong> au départ de
+              Redon&nbsp;(35), la distance exacte étant calculée selon l&apos;adresse du lieu de réception. Au-delà,{' '}
+              <strong className="text-white">0,66&nbsp;€/km</strong> supplémentaire, précisé sur le devis.
+              {city.zone === 'etendue' && (
+                <> {city.name} étant à environ {city.distanceFromRedonKm}&nbsp;km de Redon, des frais de route
+                s&apos;appliquent et sont chiffrés avec vous avant toute réservation.</>
+              )}
+            </p>
           </div>
         </div>
       </section>
@@ -629,9 +645,30 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
             DJ Mariage à <span className="text-[#c9a227]">{city.name}</span> et environs
           </h2>
-          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35) ; au-delà, 0,66 € du kilomètre, indiqué sur votre devis.
+          <p className="text-[#888] text-center mb-8 max-w-3xl mx-auto">
+            MG Events est basé à <strong className="text-white">Redon (35)</strong> et intervient prioritairement dans
+            un rayon approximatif de 100 km autour de Redon. {city.name} se situe à environ{' '}
+            <strong className="text-white">{city.distanceFromRedonKm} km</strong> de notre base.
           </p>
+
+          {/* Règle kilométrique — visible avant tout envoi de demande */}
+          <div className="max-w-3xl mx-auto mb-8 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
+            <p className="text-sm text-[#e8e8ea] leading-relaxed">
+              <span className="text-[#c9a227] font-semibold">Frais de déplacement</span> —{' '}
+              <strong className="text-white">Les forfaits incluent jusqu&apos;à 100 km aller-retour</strong> au départ
+              de Redon&nbsp;(35). La distance exacte est calculée selon l&apos;adresse du lieu de réception. Au-delà,
+              les kilomètres supplémentaires sont facturés{' '}
+              <strong className="text-white">0,66&nbsp;€/km</strong> et indiqués clairement sur le devis.
+            </p>
+            {city.zone === 'etendue' && (
+              <p className="text-sm text-[#bdbdc4] leading-relaxed mt-3 pt-3 border-t border-[#c9a227]/20">
+                {city.name} se trouve en dehors de notre zone habituelle. Les prestations y sont étudiées au cas par
+                cas selon la date, la formule choisie et les contraintes logistiques. Des frais de déplacement et, si
+                nécessaire, d&apos;hébergement sont précisés sur le devis.
+              </p>
+            )}
+          </div>
+
           <div className="card-dark p-6">
             <h3 className="text-[#c9a227] font-medium mb-4 flex items-center gap-2">
               <MapPin size={18} />

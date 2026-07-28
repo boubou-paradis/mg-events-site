@@ -34,7 +34,7 @@ const formules = [
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage dans le Finistère ?',
-    answer: 'Nos formules DJ mariage dans le 29 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
+    answer: 'Nos formules DJ mariage dans le 29 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35), la distance exacte étant calculée selon l\'adresse du lieu de réception ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
   },
   {
     question: 'Vous déplacez-vous jusqu\'à Brest ?',
@@ -84,7 +84,7 @@ const localBusinessSchema = {
   "@id": "https://www.mg-events35.com/dj-mariage-finistere#organization",
   "name": "MG Events Animation - DJ Mariage Finistère",
   "image": "https://www.mg-events35.com/images/logo.png",
-  "description": "DJ animateur professionnel pour mariage dans le Finistère (29). Animation musicale, photobooth vintage, étincelles froides à Quimper, Brest, Morlaix, Concarneau.",
+  "description": "DJ animateur professionnel pour mariage dans le Finistère (29). Animation musicale, photobooth vintage, étincelles froides à Quimper, Brest, Morlaix, Concarneau. Basé à Redon (35) : les forfaits incluent jusqu'à 100 km aller-retour, au-delà 0,66 €/km précisés sur le devis.",
   "url": "https://www.mg-events35.com/dj-mariage-finistere",
   "telephone": "+33648106166",
   "email": "contact@mg-events35.com",
@@ -367,13 +367,23 @@ export default function DJMariageFinistere() {
                 <p className="text-[#888] text-sm mb-4">{formule.description}</p>
                 <div className="mb-4">
                   <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">{formule.price}</span>
-                  <span className="text-[#888] ml-2">€ TTC</span>
+                  <span className="text-[#888] ml-2">€ TTC<span className="text-[#c9a227] font-semibold align-super text-sm ml-0.5">*</span></span>
                 </div>
                 <Link href="/#formules" className="text-[#c9a227] text-sm hover:underline">
                   Voir le détail →
                 </Link>
               </div>
             ))}
+          </div>
+          {/* Note kilométrage — se rapporte à l'astérisque des 3 formules */}
+          <div className="mt-8 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
+            <p className="text-sm text-[#e8e8ea] leading-relaxed">
+              <span className="text-[#c9a227] font-semibold">*&nbsp;Frais de déplacement</span> — Tarifs incluant
+              jusqu&apos;à <strong className="text-white">100&nbsp;km aller-retour</strong> au départ de
+              Redon&nbsp;(35). Au-delà, <strong className="text-white">0,66&nbsp;€/km</strong> supplémentaire,
+              précisé sur le devis.
+            <span className="block mt-2 text-[#bdbdc4]">Ce département étant en dehors de notre zone habituelle, des frais de route s&apos;appliquent : ils sont chiffrés et validés avec vous avant toute réservation.</span>
+            </p>
           </div>
           <p className="text-[#888] text-center mt-8 text-sm">
             <span className="text-[#c9a227] font-medium">Nouveauté</span> — sublimez la sortie des mariés avec notre{' '}
@@ -419,10 +429,18 @@ export default function DJMariageFinistere() {
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
             Les secteurs du <span className="text-[#c9a227]">département 29</span>
           </h2>
-          <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
-            De Brest à Quimper, de Morlaix à Concarneau, nous intervenons partout.
-          </p>
+          <div className="max-w-3xl mx-auto mb-12 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
+            <p className="text-sm text-[#e8e8ea] leading-relaxed">
+              <span className="text-[#c9a227] font-semibold">Frais de déplacement</span> — Les forfaits incluent
+              jusqu&apos;à <strong className="text-white">100 km aller-retour</strong> au départ de Redon (35).
+              Au-delà, <strong className="text-white">0,66 €/km</strong> supplémentaire, précisé sur le devis.
+            </p>
+            <p className="text-sm text-[#bdbdc4] leading-relaxed mt-3 pt-3 border-t border-[#c9a227]/20">
+              Le Finistère se situant entre 175 et 235 km de Redon, il est en dehors de notre zone habituelle : les
+              prestations y sont étudiées au cas par cas selon la date, la formule choisie et les contraintes
+              logistiques. Des frais de déplacement et, si nécessaire, d&apos;hébergement sont précisés sur le devis.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {zonesIntervention29.map((zone, index) => (
               <div key={index} className="card-dark p-5">

@@ -343,6 +343,6 @@ export const animajetCoreFaqs = [
   {
     question: "AnimaJet est-il inclus dans les formules MG Events ?",
     answer:
-      "Oui, AnimaJet est inclus dès la formule Éclat d'Amour (1200€ TTC). La formule Rêve en Blanc (1490€) ajoute éclairage d'ambiance et effets (boule à facettes, machine à fumée, étincelles froides), et la formule Conte de Fées (1690€) y ajoute le photobooth vintage. Le déplacement en Bretagne et dans le Grand Ouest est inclus, sans surprise tarifaire.",
+      "Oui, AnimaJet est inclus dès la formule Éclat d'Amour (1200€ TTC). La formule Rêve en Blanc (1490€) ajoute éclairage d'ambiance et effets (boule à facettes, machine à fumée, étincelles froides), et la formule Conte de Fées (1690€) y ajoute le photobooth vintage. Côté déplacement, les forfaits incluent jusqu'à 100 km aller-retour au départ de Redon (35) ; au-delà, les kilomètres supplémentaires sont facturés 0,66 €/km et indiqués clairement sur le devis.",
   },
 ];

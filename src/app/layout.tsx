@@ -72,7 +72,7 @@ const weddingServiceJsonLd = {
   "@type": "Service",
   "serviceType": "Wedding DJ & Animation",
   "name": "DJ Mariage & Animation de Soirée — MG Events Animation",
-  "description": "Animation musicale professionnelle pour mariages en Bretagne et Grand Ouest. De la cérémonie laïque à la soirée dansante : sonorisation, éclairage professionnel, photobooth vintage, étincelles froides, AnimaJet. 25 ans d'expérience.",
+  "description": "Animation musicale professionnelle pour mariages, au départ de Redon (35). De la cérémonie laïque à la soirée dansante : sonorisation, éclairage professionnel, photobooth vintage, étincelles froides, AnimaJet. 25 ans d'expérience. Déplacement inclus jusqu'à 100 km aller-retour au départ de Redon ; au-delà, 0,66 €/km indiqué sur le devis.",
   "provider": {
     "@type": "LocalBusiness",
     "@id": "https://www.mg-events35.com/#organization",

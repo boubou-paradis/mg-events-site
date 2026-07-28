@@ -136,7 +136,7 @@ const faqs = [
   {
     question: 'Y a-t-il des frais de déplacement ?',
     answer:
-      "Nos formules incluent le déplacement jusqu'à 100 km aller-retour au départ de Redon (Ille-et-Vilaine). Au-delà, les kilomètres supplémentaires sont facturés 0,66 € du kilomètre. Nous intervenons en Ille-et-Vilaine, dans le Morbihan, le Finistère, la Loire-Atlantique et la Mayenne : le devis indique toujours le montant exact selon votre lieu de réception, sans surprise.",
+      "Oui, au-delà d'une certaine distance. Nos formules incluent le déplacement jusqu'à 100 km aller-retour au départ de Redon (Ille-et-Vilaine) — soit environ 50 km à l'aller et 50 km au retour. Au-delà, les kilomètres supplémentaires sont facturés 0,66 € du kilomètre. Attention : aucun département n'est couvert en totalité sans frais, le calcul se fait toujours sur la distance réelle jusqu'à votre lieu de réception. Le devis indique le montant exact, sans surprise.",
   },
   {
     question: "Jusqu'à quelle heure le DJ anime-t-il la soirée ?",
@@ -156,7 +156,7 @@ const serviceSchema = {
   name: 'Prestation DJ mariage en Bretagne — formules et tarifs',
   serviceType: 'DJ mariage, animation de soirée, sonorisation et éclairage',
   description:
-    "Formules DJ mariage transparentes de 1200€ à 1690€ TTC en Bretagne : sonorisation, éclairage, animations interactives, fumée lourde, étincelles froides, photobooth vintage.",
+    "Formules DJ mariage transparentes de 1200€ à 1690€ TTC en Bretagne : sonorisation, éclairage, animations interactives, fumée lourde, étincelles froides, photobooth vintage. Déplacement inclus jusqu'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 €/km indiqué sur le devis.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'MG Events Animation',
@@ -236,7 +236,13 @@ export default function TarifsDjMariagePage() {
             Combien coûte un DJ de mariage ? Chez MG Events Animation, la réponse est affichée noir sur
             blanc : trois formules de <strong className="text-white">1200€ à 1690€ TTC</strong>, des options
             claires et un devis gratuit personnalisé sous 24h. Pas de prix caché, pas de supplément
-            surprise le jour J.
+            surprise le jour J : les frais de déplacement éventuels sont chiffrés à l&apos;avance sur le devis.
+          </p>
+          <p className="text-[#888] text-sm leading-relaxed mb-8">
+            MG Events est basé à <strong className="text-white">Redon (35)</strong>. Les forfaits incluent
+            jusqu&apos;à <strong className="text-white">100 km aller-retour</strong> au départ de Redon ; au-delà, les
+            kilomètres supplémentaires sont facturés <strong className="text-white">0,66 €/km</strong> et indiqués
+            clairement sur le devis.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/#contact" className="btn-gold inline-flex items-center gap-2">
@@ -291,9 +297,11 @@ export default function TarifsDjMariagePage() {
         {/* Note kilométrage — se rapporte à l'astérisque des 3 formules */}
         <div className="mt-6 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-5 py-4">
           <p className="text-sm text-[#e8e8ea] leading-relaxed">
-            <span className="text-[#c9a227] font-semibold">*&nbsp;Frais de déplacement</span> — Trajet
-            aller-retour jusqu&apos;à <strong className="text-white">100&nbsp;km inclus</strong>, au départ de
-            Redon&nbsp;(35). Au-delà, <strong className="text-white">0,66&nbsp;€/km</strong> supplémentaire.
+            <span className="text-[#c9a227] font-semibold">*&nbsp;Frais de déplacement</span> — Tarifs incluant
+            jusqu&apos;à <strong className="text-white">100&nbsp;km aller-retour</strong> au départ de
+            Redon&nbsp;(35), la distance exacte étant calculée selon l&apos;adresse du lieu de réception. Au-delà,{' '}
+            <strong className="text-white">0,66&nbsp;€/km</strong> supplémentaire, précisé
+            sur le devis.
           </p>
         </div>
       </Section>
@@ -352,6 +360,7 @@ export default function TarifsDjMariagePage() {
               'Animations interactives AnimaJet (quiz, photo-live)',
               'Coordination avec traiteur, photographe et témoins',
               'Groupe WhatsApp dédié avec les témoins',
+              'Déplacement jusqu’à 100 km aller-retour au départ de Redon (35) — au-delà, 0,66 €/km sur devis',
             ]}
           />
         </div>

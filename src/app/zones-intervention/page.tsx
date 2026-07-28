@@ -80,10 +80,11 @@ export default function ZonesIntervention() {
             Aucun de ces départements n&apos;est couvert dans sa totalité.
           </p>
           <p className="text-[#888] max-w-3xl mb-6">
-            <strong className="text-white">Le déplacement est inclus dans nos formules jusqu&apos;à 100 km
-            aller-retour</strong>, au départ de Redon (35). Au-delà, les kilomètres supplémentaires sont facturés
-            <strong className="text-white"> 0,66 € du kilomètre</strong> — le montant exact figure toujours sur
-            votre devis, sans surprise le jour J.
+            Attention à ne pas confondre les deux notions : ce rayon approximatif de 100 km est notre{' '}
+            <em>zone commerciale</em>. Côté tarif, <strong className="text-white">les forfaits incluent jusqu&apos;à
+            100 km aller-retour</strong> au départ de Redon (soit environ 50 km aller et 50 km retour). La distance
+            exacte est calculée selon l&apos;adresse du lieu de réception ; au-delà, les kilomètres supplémentaires
+            sont facturés <strong className="text-white">0,66 €/km</strong> et indiqués clairement sur le devis.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/dj-mariage-bretagne" className="btn-gold text-sm">
