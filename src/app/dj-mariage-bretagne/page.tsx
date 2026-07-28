@@ -98,44 +98,56 @@ const breadcrumbSchema = {
 // dans le projet ne permet d'affirmer une couverture réelle. Ne pas les ajouter sans validation.
 const departmentGroups = [
   {
-    label: 'Région Bretagne',
-    note: 'Les départements bretons où nous intervenons régulièrement.',
+    label: 'Notre secteur habituel — rayon approximatif de 100 km autour de Redon (35)',
+    note: "Secteurs de l'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon. Aucun de ces départements n'est couvert dans sa totalité.",
     departments: [
       {
-        name: 'Ille-et-Vilaine (35)',
-        slug: 'ille-et-vilaine',
-        cities: ['Rennes', 'Saint-Malo', 'Fougères', 'Vitré', 'Redon', 'Dinard'],
-        description: "Capitale régionale Rennes, côte d'Émeraude, châteaux des Marches de Bretagne",
-      },
-      {
-        name: 'Finistère (29)',
-        slug: 'finistere',
-        cities: ['Brest', 'Quimper', 'Morlaix', 'Concarneau', 'Douarnenez'],
-        description: "Pointe bretonne, presqu'île de Crozon, domaines face à l'Atlantique",
-      },
-      {
-        name: 'Morbihan (56)',
+        name: 'Morbihan — secteurs proches (56)',
         slug: 'morbihan',
-        cities: ['Vannes', 'Lorient', 'Pontivy', 'Auray', 'La Trinité-sur-Mer'],
-        description: "Golfe du Morbihan, rivières d'Étel, châteaux et manoirs côtiers",
+        cities: ['Ploërmel', 'Vannes', 'Auray', 'La Trinité-sur-Mer', 'Pontivy'],
+        description: "Golfe du Morbihan, rivières d'Étel, châteaux et manoirs côtiers — 50 à 90 km de Redon",
+      },
+      {
+        name: 'Ille-et-Vilaine — secteurs proches (35)',
+        slug: 'ille-et-vilaine',
+        cities: ['Redon', 'Rennes'],
+        description: 'Pays de Redon et métropole rennaise — 0 à 70 km de Redon',
+      },
+      {
+        name: 'Loire-Atlantique — secteurs proches (44)',
+        slug: 'loire-atlantique',
+        cities: ['Saint-Nazaire', 'Guérande', 'La Baule', 'Nantes'],
+        description: "Presqu'île guérandaise, estuaire de la Loire, vignoble nantais — 60 à 80 km de Redon",
       },
     ],
   },
   {
-    label: 'Bretagne historique et départements limitrophes',
-    note: "Hors région administrative Bretagne, mais dans notre zone de déplacement habituelle.",
+    label: 'Hors secteur habituel — sur étude et sur devis',
+    note: "Au-delà du rayon approximatif de 100 km autour de Redon, la prestation est étudiée au cas par cas selon la date, la formule choisie et les contraintes logistiques. Des frais de déplacement et, si nécessaire, d'hébergement sont précisés sur le devis.",
     departments: [
       {
-        name: 'Loire-Atlantique (44)',
-        slug: 'loire-atlantique',
-        cities: ['Nantes', 'Saint-Nazaire', 'La Baule', 'Guérande', 'Ancenis'],
-        description: "Vignoble du Muscadet, châteaux de l'Erdre, presqu'île guérandaise",
+        name: 'Ille-et-Vilaine — secteurs éloignés (35)',
+        slug: 'ille-et-vilaine',
+        cities: ['Vitré', 'Fougères', 'Dinard', 'Saint-Malo'],
+        description: "Pays de Vitré, Marches de Bretagne, côte d'Émeraude — 110 à 140 km de Redon",
+      },
+      {
+        name: 'Morbihan — secteurs éloignés (56)',
+        slug: 'morbihan',
+        cities: ['Lorient'],
+        description: 'Pays de Lorient — environ 110 km de Redon',
       },
       {
         name: 'Mayenne (53)',
         slug: 'mayenne',
-        cities: ['Laval', 'Château-Gontier', 'Évron', 'Craon', 'Mayenne'],
-        description: 'Châteaux de la Mayenne, bocage authentique, domaines champêtres',
+        cities: ['Château-Gontier', 'Laval', 'Mayenne'],
+        description: 'Châteaux de la Mayenne, bocage authentique — 135 à 165 km de Redon',
+      },
+      {
+        name: 'Finistère (29)',
+        slug: 'finistere',
+        cities: ['Concarneau', 'Quimper', 'Morlaix', 'Brest'],
+        description: "Cornouaille, Léon, presqu'île de Crozon — 175 à 235 km de Redon",
       },
     ],
   },
@@ -178,7 +190,7 @@ const faqs = [
   },
   {
     question: 'Dans quels départements intervenez-vous ?',
-    answer: "Nous intervenons régulièrement dans trois départements bretons — Ille-et-Vilaine (35), Finistère (29) et Morbihan (56) — ainsi qu'en Loire-Atlantique (44) et en Mayenne (53), qui relèvent de la Bretagne historique et de nos départements limitrophes. Le déplacement est inclus dans nos formules jusqu'à 100 km aller-retour au départ de Redon (35) ; au-delà, les kilomètres supplémentaires sont facturés 0,66 € du kilomètre et figurent sur votre devis. Pour les Côtes-d'Armor ou une commune plus éloignée, contactez-nous : nous étudions chaque projet au cas par cas.",
+    answer: "MG Events est basé à Redon (35) et intervient prioritairement dans les secteurs de l'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon : Ploërmel, Vannes, Auray, Pontivy, Redon, Rennes, Saint-Nazaire, Guérande, La Baule, Nantes. Aucun de ces départements n'est couvert dans sa totalité. Le déplacement est inclus dans nos formules jusqu'à 100 km aller-retour au départ de Redon, la distance exacte étant calculée selon l'adresse du lieu de réception ; au-delà, les kilomètres supplémentaires sont facturés 0,66 € du kilomètre et figurent sur votre devis. Pour un lieu plus éloigné — Finistère, Mayenne, Côtes-d'Armor, Lorient, nord et est de l'Ille-et-Vilaine — la prestation est étudiée au cas par cas selon la date, la formule et les contraintes logistiques : des frais de déplacement et, si nécessaire, d'hébergement sont précisés sur le devis.",
   },
   {
     question: 'Qu\'est-ce qui vous différencie des autres DJ mariage en Bretagne ?',
@@ -417,9 +429,12 @@ export default function DJMariageBretagne() {
             Nos zones d&apos;intervention <span className="text-[#c9a227]">pour les mariages</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
-            5 départements couverts régulièrement.{' '}
-            <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ
-            de Redon (35) ; au-delà, 0,66 € du kilomètre, indiqué sur le devis.
+            MG Events est basé à <strong className="text-white">Redon (35)</strong> et intervient prioritairement dans
+            les secteurs de l&apos;Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon
+            approximatif de 100 km autour de Redon.{' '}
+            <strong className="text-white">Les forfaits incluent jusqu&apos;à 100 km aller-retour</strong> au départ
+            de Redon, la distance exacte étant calculée selon l&apos;adresse du lieu de réception ; au-delà, 0,66 € du
+            kilomètre, indiqué sur le devis. Attention : les 100 km inclus sont un trajet aller-retour, pas un rayon.
           </p>
           {departmentGroups.map((group) => (
           <div key={group.label} className="mb-12 last:mb-0">
@@ -603,7 +618,7 @@ export default function DJMariageBretagne() {
             </Link>
             <Link href="/sonorisation-ceremonie-laique" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
               <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Cérémonie laïque</h3>
-              <p className="text-[#888] text-sm">Sonorisation sur batterie et techniciens dédiés, partout en Bretagne.</p>
+              <p className="text-[#888] text-sm">Sonorisation sur batterie et techniciens dédiés, au départ de Redon (35).</p>
             </Link>
             <Link href="/fumee-lourde-mariage" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
               <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Fumée lourde</h3>

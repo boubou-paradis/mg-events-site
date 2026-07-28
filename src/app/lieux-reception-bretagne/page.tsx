@@ -173,7 +173,9 @@ export default function LieuxReceptionBretagne() {
           <p className="text-xl text-[#aaa] max-w-3xl mb-8">
             Châteaux, domaines, manoirs et demeures de caractère — une sélection de{' '}
             <strong className="text-white">{lieuxParDepartement.reduce((acc, d) => acc + d.lieux.length, 0)} lieux</strong>{' '}
-            dans les 5 départements où MG Events Animation intervient régulièrement.
+            dans les départements où MG Events Animation intervient. Basés à Redon (35), nous couvrons en priorité les secteurs de l&apos;Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un
+            rayon approximatif de 100 km ; au-delà, la prestation est étudiée au cas par cas et les frais de
+            déplacement sont précisés sur le devis.
           </p>
           <p className="text-[#888] max-w-3xl leading-relaxed">
             Chaque lieu de réception a ses spécificités : acoustique de la pierre apparente, configuration des espaces,

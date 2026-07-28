@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     question: 'Vous déplacez-vous à Vannes, Lorient et Auray ?',
-    answer: 'Oui, nous couvrons tout le Morbihan : Vannes, Lorient, Auray, Pontivy, Ploërmel, Carnac, La Trinité-sur-Mer, Quiberon, Sarzeau et tout le Golfe du Morbihan.',
+    answer: "MG Events est basé à Redon (35). Seuls les secteurs du Morbihan situés dans un rayon approximatif de 100 km autour de Redon relèvent de notre zone habituelle — Ploërmel (~50 km), Vannes (~60 km), Auray (~75 km), La Trinité-sur-Mer, Carnac, Sarzeau, Pontivy (~90 km) et le Golfe du Morbihan. Lorient, à environ 110 km, se situe au-delà : la prestation y est étudiée au cas par cas selon la date, la formule choisie et les contraintes logistiques. Les forfaits incluent jusqu'à 100 km aller-retour au départ de Redon ; la distance exacte est calculée selon l'adresse du lieu de réception et, au-delà, les kilomètres supplémentaires sont facturés 0,66 €/km sur le devis.",
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -228,7 +228,7 @@ export default function DJMariageMorbihan() {
                 DJ Mariage <span className="text-[#c9a227]">Morbihan</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Votre DJ animateur de mariage à Vannes, Lorient et dans tout le 56
+                Votre DJ animateur de mariage à Vannes, Ploërmel et Auray
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
                 Votre <strong className="text-white">mariage dans le Morbihan</strong> mérite une animation à la hauteur !
@@ -414,7 +414,7 @@ export default function DJMariageMorbihan() {
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
-            DJ Mariage dans tout le <span className="text-[#c9a227]">département 56</span>
+            Les secteurs du <span className="text-[#c9a227]">département 56</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
             <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
@@ -588,7 +588,7 @@ export default function DJMariageMorbihan() {
             DJ Mariage dans les <span className="text-[#c9a227]">villes du Morbihan</span>
           </h2>
           <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
-            Nous intervenons dans toutes les villes du département 56. Découvrez nos prestations près de chez vous.
+            Nos pages dédiées aux principales villes du 56. Seuls les secteurs situés dans un rayon approximatif de 100 km autour de Redon relèvent de notre zone habituelle ; Lorient se situe au-delà : la prestation y est étudiée au cas par cas.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             <Link href="/dj-mariage/vannes" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">

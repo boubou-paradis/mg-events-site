@@ -30,7 +30,7 @@ const faqs = [
   {
     question: 'Animez-vous les anniversaires en Bretagne ?',
     answer:
-      "Oui : anniversaires adultes (30, 40, 50, 60 ans et plus), fêtes de famille et soirées privées font partie de nos prestations régulières, dans toute la Bretagne et les départements limitrophes. Basés près de Redon, nous nous déplaçons avec tout le matériel son et lumière.",
+      "Oui : anniversaires adultes (30, 40, 50, 60 ans et plus), fêtes de famille et soirées privées font partie de nos prestations régulières. Basés à Redon (35), nous intervenons prioritairement dans les secteurs de l'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon, avec tout le matériel son et lumière. Les forfaits incluent jusqu'à 100 km aller-retour, la distance exacte étant calculée selon l'adresse du lieu de réception ; au-delà, 0,66 €/km, précisé sur le devis.",
   },
   {
     question: "Comment gérez-vous une soirée avec plusieurs générations d'invités ?",
@@ -71,7 +71,7 @@ const serviceSchema = {
     name: 'MG Events Animation',
     telephone: '+33648106166',
     url: BASE,
-    areaServed: 'Bretagne, Grand Ouest',
+    areaServed: "Secteurs de l'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon (35). Au-delà : sur étude et sur devis.",
   },
 };
 
@@ -237,11 +237,12 @@ export default function DjAnniversaireBretagnePage() {
       {/* Villes */}
       <Section bg="#141414" narrow>
         <SectionTitle center={false}>
-          Anniversaires dans <span className="text-[#c9a227]">toute la Bretagne</span>
+          Anniversaires <span className="text-[#c9a227]">autour de Redon</span>
         </SectionTitle>
         <p className="text-[#888] mb-6">
-          Nous animons vos anniversaires et soirées privées partout en Bretagne et dans les départements
-          limitrophes :
+          Basés à Redon (35), nous animons vos anniversaires et soirées privées prioritairement dans un rayon approximatif
+          de 100 km. Les forfaits incluent jusqu&apos;à 100 km aller-retour au départ de Redon, la distance exacte étant calculée selon l&apos;adresse du lieu de réception ; au-delà, 0,66 €/km,
+          précisé sur le devis.
         </p>
         <div className="flex flex-wrap gap-3">
           {birthdayCities.map((city) => (

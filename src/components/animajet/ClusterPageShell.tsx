@@ -164,7 +164,8 @@ export default function ClusterPageShell({
             Envie d&apos;un mariage <span className="text-[#c9a227]">vraiment interactif</span> ?
           </h2>
           <p className="text-[#888] mb-8">
-            AnimaJet est inclus dans toutes nos formules DJ mariage, partout en Bretagne et dans le Grand Ouest.
+            AnimaJet est inclus dans toutes nos formules DJ mariage. MG Events est basé à Redon (35) et intervient
+            prioritairement dans les secteurs de l&apos;Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon.
             Contactez-nous pour un devis personnalisé sous 24h.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

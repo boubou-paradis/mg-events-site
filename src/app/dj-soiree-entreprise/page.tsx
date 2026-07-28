@@ -54,9 +54,9 @@ const faqs = [
       "Oui : les impressions du photobooth sont personnalisables avec votre logo et le nom de votre événement. C'est un souvenir que vos collaborateurs emportent, et un vrai moment de cohésion pendant la soirée.",
   },
   {
-    question: "Intervenez-vous partout en Bretagne pour les soirées d'entreprise ?",
+    question: "Jusqu'où vous déplacez-vous pour les soirées d'entreprise ?",
     answer:
-      "Oui, nous intervenons dans toute la Bretagne et les départements limitrophes : Rennes, Nantes, Vannes, Saint-Malo, Laval et leurs environs. Basés près de Redon, nous nous déplaçons avec l'ensemble du matériel son et lumière.",
+      "Nous sommes basés à Redon (35) et intervenons prioritairement dans les secteurs de l'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon : Vannes, Rennes, Nantes, Saint-Nazaire, Ploërmel et leurs environs. Les forfaits incluent 100 km aller-retour au départ de Redon ; au-delà, 0,66 €/km, précisé sur le devis. Pour un lieu plus éloigné, la prestation est étudiée au cas par cas.",
   },
   {
     question: "Comment se passe la préparation d'une soirée d'entreprise ?",
@@ -77,7 +77,7 @@ const serviceSchema = {
     name: 'MG Events Animation',
     telephone: '+33648106166',
     url: BASE,
-    areaServed: 'Bretagne, Grand Ouest',
+    areaServed: "Secteurs de l'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon (35). Au-delà : sur étude et sur devis.",
   },
   offers: formules.map((f) => ({
     '@type': 'Offer',
@@ -263,11 +263,12 @@ export default function DjSoireeEntreprisePage() {
       {/* Villes */}
       <Section bg="#141414" narrow>
         <SectionTitle center={false}>
-          Soirées d&apos;entreprise dans <span className="text-[#c9a227]">toute la Bretagne</span>
+          Soirées d&apos;entreprise <span className="text-[#c9a227]">autour de Redon</span>
         </SectionTitle>
         <p className="text-[#888] mb-6">
-          Basés près de Redon, nous animons vos événements d&apos;entreprise partout en Bretagne et dans
-          les départements limitrophes :
+          Basés à Redon (35), nous animons vos événements d&apos;entreprise prioritairement dans un rayon approximatif
+          de 100 km. Les forfaits incluent jusqu&apos;à 100 km aller-retour au départ de Redon, la distance exacte étant calculée selon l&apos;adresse du lieu de réception ; au-delà,
+          0,66 €/km, précisé sur le devis.
         </p>
         <div className="flex flex-wrap gap-3">
           {enterpriseCities.map((city) => (

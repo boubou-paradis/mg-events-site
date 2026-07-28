@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, MapPin, ChevronDown, Headphones, Volume2, Disc3, HelpCircle, Calendar, Users, Lightbulb, Monitor } from 'lucide-react';
-import { cities, getCityBySlug, getAllCitySlugs, getCitiesByDepartment, type City } from '@/data/cities';
+import { cities, getCityBySlug, getAllCitySlugs, getCitiesByDepartment, getPriorityCities, TRAVEL_RULE, type City } from '@/data/cities';
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 import { notFound } from 'next/navigation';
 
@@ -22,9 +22,16 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
     return { title: 'Page non trouvée' };
   }
 
+  // Les villes hors secteur habituel ne doivent pas laisser croire à un DJ local
+  // ni à un déplacement inclus : la description par défaut le dit explicitement.
+  const defaultDescription =
+    city.zone === 'prioritaire'
+      ? `DJ animateur mariage à ${city.name} (${city.departmentCode}) — Avis 5★, formules dès 1200€ TTC. Basés à Redon (35), à ~${city.distanceFromRedonKm} km. Devis gratuit sous 24h ✓`
+      : `DJ animateur mariage à ${city.name} (${city.departmentCode}) — formules dès 1200€ TTC. Basés à Redon (35), à ~${city.distanceFromRedonKm} km : intervention sur étude, frais de route précisés sur le devis.`;
+
   return {
     title: city.metaTitle ?? `DJ & Animation Mariage ${city.name} · Avis 5★ · Dès 1200€`,
-    description: city.metaDescription ?? `DJ animateur mariage à ${city.name} (${city.departmentCode}) — Avis 5★, formules dès 1200€ TTC. 25 ans d'expérience, AnimaJet, photobooth. Devis gratuit sous 24h ✓`,
+    description: city.metaDescription ?? defaultDescription,
     keywords: `DJ mariage ${city.name}, DJ animateur ${city.name}, animation mariage ${city.name}, animateur de soirée ${city.name}, sonorisation mariage ${city.name}, DJ mariage ${city.departmentCode}, DJ ${city.name}`,
     alternates: {
       canonical: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
@@ -75,6 +82,7 @@ const servicesInclus = [
 
 // Génère les FAQs spécifiques à la ville
 function generateCityFaqs(city: City) {
+  const prioritaire = city.zone === 'prioritaire';
   return [
     {
       question: `Quel est le prix d'un DJ mariage à ${city.name} ?`,
@@ -82,7 +90,9 @@ function generateCityFaqs(city: City) {
     },
     {
       question: `Vous déplacez-vous à ${city.name} et ses environs ?`,
-      answer: `Oui, nous intervenons à ${city.name} et dans toutes les communes environnantes : ${city.nearbyCommunes.join(', ')}.`,
+      answer: prioritaire
+        ? `Oui. ${city.name} se situe à environ ${city.distanceFromRedonKm} km de Redon (35), où nous sommes basés : c'est notre secteur d'intervention habituel. Nous intervenons également dans les communes environnantes : ${city.nearbyCommunes.join(', ')}. ${TRAVEL_RULE.exactDistance} Les forfaits incluent jusqu'à 100 km aller-retour au départ de Redon ; au-delà, les kilomètres supplémentaires sont facturés 0,66 €/km et figurent sur le devis.`
+        : `MG Events est basé à Redon (35), à environ ${city.distanceFromRedonKm} km de ${city.name}. Ce secteur se situe en dehors de notre zone d'intervention habituelle : une prestation à ${city.name} ou dans les communes voisines (${city.nearbyCommunes.slice(0, 6).join(', ')}) est étudiée au cas par cas selon la date, la formule retenue et les contraintes logistiques. ${TRAVEL_RULE.exactDistance} Les frais de déplacement — et si nécessaire d'hébergement — sont indiqués clairement sur le devis.`,
     },
     {
       question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -210,13 +220,14 @@ function getOtherCitiesInDepartment(city: City): City[] {
   return getCitiesByDepartment(city.departmentCode).filter(c => c.slug !== city.slug);
 }
 
-// Départements pour le maillage
+// Départements pour le maillage — ordonnés par proximité réelle avec Redon (35)
+// pour éviter de diluer le signal géographique vers des secteurs lointains.
 const departments = [
-  { name: 'Ille-et-Vilaine', code: '35', slug: 'ille-et-vilaine' },
-  { name: 'Morbihan', code: '56', slug: 'morbihan' },
-  { name: 'Finistère', code: '29', slug: 'finistere' },
-  { name: 'Loire-Atlantique', code: '44', slug: 'loire-atlantique' },
-  { name: 'Mayenne', code: '53', slug: 'mayenne' },
+  { name: 'Morbihan', code: '56', slug: 'morbihan', priority: true },
+  { name: 'Ille-et-Vilaine', code: '35', slug: 'ille-et-vilaine', priority: true },
+  { name: 'Loire-Atlantique', code: '44', slug: 'loire-atlantique', priority: true },
+  { name: 'Mayenne', code: '53', slug: 'mayenne', priority: false },
+  { name: 'Finistère', code: '29', slug: 'finistere', priority: false },
 ];
 
 export default async function DJMariageVille({ params }: { params: Promise<{ ville: string }> }) {
@@ -288,8 +299,22 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
                 Vous cherchez un <strong className="text-white">DJ pour votre mariage à {city.name}</strong> ?
-                MG Events Animation se déplace à {city.name} et dans toutes les communes environnantes :
-                <span className="text-[#c9a227]"> {city.nearbyCommunes.join(', ')}</span>.
+                {city.zone === 'prioritaire' ? (
+                  <>
+                    {' '}MG Events Animation est basé à <strong className="text-white">Redon (35)</strong>, à environ{' '}
+                    {city.distanceFromRedonKm} km de {city.name} : vous êtes dans notre secteur d&apos;intervention
+                    habituel. Nous nous déplaçons aussi dans les communes environnantes :
+                    <span className="text-[#c9a227]"> {city.nearbyCommunes.join(', ')}</span>.
+                  </>
+                ) : (
+                  <>
+                    {' '}MG Events Animation est basé à <strong className="text-white">Redon (35)</strong>, à environ{' '}
+                    {city.distanceFromRedonKm} km de {city.name}. Ce secteur se situe en dehors de notre zone
+                    d&apos;intervention habituelle : une prestation y est <strong className="text-white">étudiée au cas
+                    par cas</strong>, selon la date, la formule retenue et les contraintes de déplacement. Les frais
+                    kilométriques sont indiqués clairement sur le devis.
+                  </>
+                )}
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Avec <strong className="text-white">25 ans d&apos;expérience</strong> et plus de 100 mariages animés en Bretagne,
@@ -598,7 +623,7 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
         </section>
       )}
 
-      {/* Zones d'intervention */}
+      {/* Zones d'intervention & frais de déplacement */}
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
@@ -610,12 +635,42 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
           <div className="card-dark p-6">
             <h3 className="text-[#c9a227] font-medium mb-4 flex items-center gap-2">
               <MapPin size={18} />
-              Communes desservies autour de {city.name}
+              Communes {city.zone === 'prioritaire' ? 'desservies' : 'concernées'} autour de {city.name}
             </h3>
             <p className="text-[#888] leading-relaxed">
               {city.nearbyCommunes.join(', ')}
             </p>
           </div>
+
+          {/* Recentrage du maillage : depuis une page hors zone, on renvoie vers le secteur prioritaire */}
+          {city.zone === 'etendue' && (
+            <div className="card-dark p-6 mt-6">
+              <h3 className="text-[#c9a227] font-medium mb-4 flex items-center gap-2">
+                <MapPin size={18} />
+                Notre secteur d&apos;intervention habituel, autour de Redon
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {getPriorityCities()
+                  .filter((c) => c.slug !== city.slug)
+                  .slice(0, 8)
+                  .map((c) => (
+                    <Link
+                      key={c.slug}
+                      href={`/dj-mariage/${c.slug}`}
+                      className="px-3 py-1.5 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors text-sm"
+                    >
+                      DJ Mariage {c.name}
+                    </Link>
+                  ))}
+                <Link
+                  href="/zones-intervention"
+                  className="px-3 py-1.5 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#c9a227] hover:border-[#c9a227]/40 transition-colors text-sm"
+                >
+                  Toutes nos zones →
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -699,9 +754,13 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
       {/* Autres départements */}
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-8">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-4">
             Nous intervenons aussi dans les départements voisins
           </h2>
+          <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto text-sm">
+            Secteur habituel : secteurs de l&apos;Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon (35) — jamais un département entier. Au-delà, la prestation est étudiée au cas par cas
+            et les frais de déplacement sont précisés sur le devis.
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
             {otherDepartments.map((dept) => (
               <Link

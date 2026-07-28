@@ -2,29 +2,37 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, ArrowLeft, Phone, Mail, Building2, Cake } from 'lucide-react';
-import { cities, getCitiesByDepartment, getCitiesForEnterprise, getCitiesForBirthday } from '@/data/cities';
+import {
+  getCitiesForEnterprise,
+  getCitiesForBirthday,
+  getPriorityCities,
+  getExtendedCities,
+} from '@/data/cities';
 
 export const metadata: Metadata = {
   // Intention "zone d'intervention / déplacement" — volontairement PAS "DJ mariage Bretagne",
   // qui reste réservé à /dj-mariage-bretagne.
   title: 'Zones d\'intervention : où nous nous déplaçons',
-  description: 'Nos secteurs d\'intervention en Ille-et-Vilaine, Morbihan, Finistère, Loire-Atlantique et Mayenne : villes couvertes, rayon de déplacement et frais.',
+  description: 'Basés à Redon (35) : secteurs de l\'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan dans un rayon approximatif de 100 km. Forfaits incluant 100 km aller-retour, puis 0,66 €/km.',
   alternates: {
     canonical: 'https://www.mg-events35.com/zones-intervention',
   },
   openGraph: {
-    title: 'Nos zones d\'intervention et notre rayon de déplacement',
-    description: 'Toutes nos zones d\'intervention pour votre mariage en Bretagne et départements limitrophes.',
+    title: 'Nos zones d\'intervention et nos frais de déplacement',
+    description: 'Basés à Redon (35) : secteurs de l\'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan dans un rayon approximatif de 100 km. Au-delà : sur étude et sur devis.',
     url: 'https://www.mg-events35.com/zones-intervention',
   },
 };
 
+// Départements ordonnés par proximité réelle avec Redon (35).
+// `priority` = le département compte des SECTEURS dans le rayon approximatif de
+// 100 km autour de Redon. Jamais le département entier.
 const departments = [
-  { name: 'Ille-et-Vilaine', code: '35', slug: 'ille-et-vilaine' },
-  { name: 'Morbihan', code: '56', slug: 'morbihan' },
-  { name: 'Finistère', code: '29', slug: 'finistere' },
-  { name: 'Loire-Atlantique', code: '44', slug: 'loire-atlantique' },
-  { name: 'Mayenne', code: '53', slug: 'mayenne' },
+  { name: 'Morbihan', code: '56', slug: 'morbihan', priority: true },
+  { name: 'Loire-Atlantique', code: '44', slug: 'loire-atlantique', priority: true },
+  { name: 'Ille-et-Vilaine', code: '35', slug: 'ille-et-vilaine', priority: true },
+  { name: 'Mayenne', code: '53', slug: 'mayenne', priority: false },
+  { name: 'Finistère', code: '29', slug: 'finistere', priority: false },
 ];
 
 export default function ZonesIntervention() {
@@ -66,8 +74,10 @@ export default function ZonesIntervention() {
             Nos zones <span className="text-[#c9a227]">d&apos;intervention</span>
           </h1>
           <p className="text-xl text-[#aaa] max-w-3xl mb-4">
-            MG Events Animation intervient principalement en Ille-et-Vilaine, dans le Morbihan, le Finistère,
-            la Loire-Atlantique et la Mayenne — et selon le projet dans les autres départements bretons.
+            MG Events Animation est basé à <strong className="text-white">Redon (35)</strong> et intervient
+            prioritairement dans les <strong className="text-white">secteurs de l&apos;Ille-et-Vilaine, de la
+            Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon</strong>.
+            Aucun de ces départements n&apos;est couvert dans sa totalité.
           </p>
           <p className="text-[#888] max-w-3xl mb-6">
             <strong className="text-white">Le déplacement est inclus dans nos formules jusqu&apos;à 100 km
@@ -89,76 +99,178 @@ export default function ZonesIntervention() {
         </div>
       </section>
 
-      {/* Départements et villes */}
+      {/* 1 — Zone d'intervention prioritaire */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="space-y-16">
-            {departments.map((dept) => {
-              const deptCities = getCitiesByDepartment(dept.code);
-              return (
-                <div key={dept.code} className="card-dark p-8">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
-                    <div>
-                      <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mb-2">
-                        <span className="text-[#c9a227]">{dept.name}</span> ({dept.code})
-                      </h2>
-                      <p className="text-[#888]">{deptCities.length} villes couvertes</p>
-                    </div>
-                    <Link
-                      href={`/dj-mariage-${dept.slug}`}
-                      className="btn-gold mt-4 md:mt-0 inline-flex items-center gap-2 w-fit"
-                    >
-                      Voir le département
-                    </Link>
-                  </div>
+          <div className="card-dark p-8 border-[#c9a227]/30">
+            <span className="inline-block px-3 py-1 bg-[#c9a227] text-[#0a0a0a] text-xs font-semibold uppercase tracking-wider rounded-full mb-4">
+              1 — Zone prioritaire
+            </span>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl text-white mb-4">
+              Notre secteur d&apos;intervention <span className="text-[#c9a227]">habituel</span>
+            </h2>
+            <p className="text-[#aaa] max-w-3xl mb-8">
+              MG Events intervient principalement dans les <strong className="text-white">secteurs de
+              l&apos;Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km
+              autour de Redon (35)</strong> — et non dans ces départements en totalité. C&apos;est là que nous animons
+              le plus grand nombre de mariages, que nous connaissons le mieux les salles et les prestataires, et que
+              nous sommes le plus réactifs. Les distances ci-dessous sont des distances routières approximatives
+              depuis Redon, données à titre indicatif : la distance retenue au devis est toujours celle de
+              l&apos;adresse exacte du lieu de réception.
+            </p>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    {deptCities.map((city) => (
-                      <Link
-                        key={city.slug}
-                        href={`/dj-mariage/${city.slug}`}
-                        className="flex items-center gap-2 p-3 bg-[#1a1a1a] rounded-lg border border-[#c9a227]/10 hover:border-[#c9a227]/40 transition-colors group"
-                      >
-                        <MapPin size={16} className="text-[#c9a227] shrink-0" />
-                        <span className="text-[#aaa] group-hover:text-[#c9a227] transition-colors text-sm font-medium truncate">
-                          {city.name}
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {getPriorityCities().map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/dj-mariage/${city.slug}`}
+                  className="flex items-center justify-between gap-2 p-3 bg-[#1a1a1a] rounded-lg border border-[#c9a227]/10 hover:border-[#c9a227]/40 transition-colors group"
+                >
+                  <span className="flex items-center gap-2 min-w-0">
+                    <MapPin size={16} className="text-[#c9a227] shrink-0" />
+                    <span className="text-[#aaa] group-hover:text-[#c9a227] transition-colors text-sm font-medium truncate">
+                      {city.name}
+                    </span>
+                  </span>
+                  <span className="text-[#666] text-xs shrink-0">
+                    {city.distanceFromRedonKm === 0 ? 'notre base' : `~${city.distanceFromRedonKm} km`}
+                  </span>
+                </Link>
+              ))}
+            </div>
 
-                  {/* Communes desservies */}
-                  <div className="mt-6 pt-6 border-t border-[#c9a227]/10">
-                    <p className="text-[#666] text-sm">
-                      <span className="text-[#888]">Communes également desservies :</span>{' '}
-                      {deptCities.flatMap(c => c.nearbyCommunes).filter((v, i, a) => a.indexOf(v) === i).slice(0, 15).join(', ')}...
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+            <div className="mt-6 pt-6 border-t border-[#c9a227]/10">
+              <p className="text-[#666] text-sm">
+                <span className="text-[#888]">Communes également desservies dans ce secteur :</span>{' '}
+                {getPriorityCities()
+                  .flatMap((c) => c.nearbyCommunes)
+                  .filter((v, i, a) => a.indexOf(v) === i)
+                  .slice(0, 20)
+                  .join(', ')}
+                ...
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Récapitulatif */}
+      {/* 2 — Déplacements inclus dans les forfaits */}
       <section className="py-16 bg-[#141414]">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-12">
-            En résumé : <span className="text-[#c9a227]">{cities.length} villes</span> dans 5 départements
-          </h2>
+          <div className="card-dark p-8 border-[#c9a227]/40 bg-[#1a1a2e]">
+            <span className="inline-block px-3 py-1 bg-[#c9a227] text-[#0a0a0a] text-xs font-semibold uppercase tracking-wider rounded-full mb-4">
+              2 — Déplacements inclus
+            </span>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl text-white mb-4">
+              Ce que les forfaits <span className="text-[#c9a227]">incluent exactement</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 mt-6">
+              <div className="rounded-lg bg-[#0a0a0a]/50 border border-[#c9a227]/20 p-5">
+                <p className="text-[#c9a227] text-sm uppercase tracking-wider mb-2">Inclus dans le prix</p>
+                <p className="text-white text-2xl font-[family-name:var(--font-display)] mb-2">
+                  100 km aller-retour
+                </p>
+                <p className="text-[#aaa] text-sm leading-relaxed">
+                  Au départ de Redon (35), soit environ 50 km à l&apos;aller et 50 km au retour. Ce n&apos;est pas un
+                  rayon de 100 km : c&apos;est bien le trajet total aller-retour. La distance exacte est calculée
+                  selon l&apos;adresse du lieu de réception — aucune ville n&apos;est comprise d&apos;office.
+                </p>
+              </div>
+              <div className="rounded-lg bg-[#0a0a0a]/50 border border-[#c9a227]/20 p-5">
+                <p className="text-[#c9a227] text-sm uppercase tracking-wider mb-2">Au-delà</p>
+                <p className="text-white text-2xl font-[family-name:var(--font-display)] mb-2">0,66 €/km</p>
+                <p className="text-[#aaa] text-sm leading-relaxed">
+                  Chaque kilomètre supplémentaire est facturé 0,66 € et le montant total figure clairement sur votre
+                  devis, avant toute réservation. Aucune surprise le jour J.
+                </p>
+              </div>
+            </div>
+            <p className="text-[#888] text-sm mt-6">
+              Aucun département n&apos;est couvert en totalité, ni comme zone habituelle, ni au forfait de base : le
+              calcul se fait toujours sur la distance réelle entre Redon et l&apos;adresse de votre lieu de réception.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-5 gap-6 text-center">
-            {departments.map((dept) => {
-              const count = getCitiesByDepartment(dept.code).length;
-              return (
-                <div key={dept.code} className="card-dark p-6">
-                  <p className="text-3xl font-bold text-[#c9a227] mb-2">{count}</p>
-                  <p className="text-white font-medium">{dept.name}</p>
-                  <p className="text-[#888] text-sm">({dept.code})</p>
-                </div>
-              );
-            })}
+      {/* 3 — Prestations plus éloignées */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="card-dark p-8">
+            <span className="inline-block px-3 py-1 bg-[#1a1a1a] border border-[#c9a227]/40 text-[#c9a227] text-xs font-semibold uppercase tracking-wider rounded-full mb-4">
+              3 — Prestations plus éloignées
+            </span>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl text-white mb-4">
+              En dehors de notre <span className="text-[#c9a227]">zone habituelle</span>
+            </h2>
+            <p className="text-[#aaa] max-w-3xl mb-6">
+              Pour les lieux situés en dehors de notre zone habituelle, les prestations sont étudiées au cas par cas
+              selon la date, la formule choisie et les contraintes logistiques. Des frais de déplacement et, si
+              nécessaire, d&apos;hébergement sont précisés sur le devis. Nous ne sommes pas un prestataire local de ces
+              secteurs, mais un déplacement reste possible quand le projet s&apos;y prête.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-[#888] text-sm mb-8 max-w-3xl">
+              {['la date et la disponibilité', 'la formule retenue', 'la distance réelle depuis Redon', 'les horaires de début et de fin', 'les contraintes logistiques et l\'accès à la salle', 'l\'éventuel besoin d\'hébergement de l\'équipe'].map((critere) => (
+                <li key={critere} className="flex items-start gap-2">
+                  <span className="text-[#c9a227] mt-0.5">•</span>
+                  {critere}
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-[#888] text-sm mb-4">Secteurs concernés (distance routière approximative depuis Redon) :</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {getExtendedCities().map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/dj-mariage/${city.slug}`}
+                  className="flex items-center justify-between gap-2 p-3 bg-[#1a1a1a] rounded-lg border border-[#c9a227]/10 hover:border-[#c9a227]/40 transition-colors group"
+                >
+                  <span className="flex items-center gap-2 min-w-0">
+                    <MapPin size={16} className="text-[#666] shrink-0" />
+                    <span className="text-[#888] group-hover:text-[#c9a227] transition-colors text-sm font-medium truncate">
+                      {city.name}
+                    </span>
+                  </span>
+                  <span className="text-[#666] text-xs shrink-0">~{city.distanceFromRedonKm} km</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pages départementales */}
+      <section className="py-16 bg-[#141414]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white text-center mb-4">
+            Nos pages <span className="text-[#c9a227]">par département</span>
+          </h2>
+          <p className="text-[#888] text-center mb-10 max-w-2xl mx-auto text-sm">
+            Les départements sont classés par proximité réelle avec Redon. « Secteurs proches » signifie qu&apos;une
+            partie seulement du département se situe dans le rayon approximatif de 100 km — jamais le département
+            entier. Ceux marqués « sur étude » sont intégralement en dehors du secteur habituel.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {departments.map((dept) => (
+              <Link
+                key={dept.code}
+                href={`/dj-mariage-${dept.slug}`}
+                className="card-dark p-5 text-center hover:border-[#c9a227]/40 transition-colors"
+              >
+                <p className="text-white font-medium">{dept.name}</p>
+                <p className="text-[#888] text-sm mb-2">({dept.code})</p>
+                <span
+                  className={`inline-block px-2 py-0.5 rounded-full text-[11px] uppercase tracking-wider ${
+                    dept.priority
+                      ? 'bg-[#c9a227]/15 text-[#c9a227]'
+                      : 'bg-[#1a1a1a] border border-[#666]/40 text-[#888]'
+                  }`}
+                >
+                  {dept.priority ? 'Secteurs proches' : 'Sur étude'}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -177,7 +289,10 @@ export default function ZonesIntervention() {
               Animation de soirées d&apos;entreprise, séminaires, team building, galas et événements professionnels dans les principales villes de Bretagne.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {getCitiesForEnterprise().map((city) => (
+              {getCitiesForEnterprise()
+                .slice()
+                .sort((a, b) => a.distanceFromRedonKm - b.distanceFromRedonKm)
+                .map((city) => (
                 <Link
                   key={city.slug}
                   href={`/dj-soiree-entreprise/${city.slug}`}
@@ -208,7 +323,10 @@ export default function ZonesIntervention() {
               DJ et animation pour vos anniversaires marquants : 18 ans, 30 ans, 40 ans, 50 ans... Une fête mémorable dans les grandes villes bretonnes.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {getCitiesForBirthday().map((city) => (
+              {getCitiesForBirthday()
+                .slice()
+                .sort((a, b) => a.distanceFromRedonKm - b.distanceFromRedonKm)
+                .map((city) => (
                 <Link
                   key={city.slug}
                   href={`/animation-anniversaire/${city.slug}`}
@@ -232,44 +350,22 @@ export default function ZonesIntervention() {
             Nos <span className="text-[#c9a227]">pages locales dédiées</span>
           </h2>
           <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
-            Des pages approfondies pour les villes à fort potentiel, avec contenu local, salles et FAQ spécifiques.
+            Des pages approfondies avec contenu local, salles et FAQ spécifiques — en priorité les villes de notre
+            rayon approximatif de 100 km autour de Redon.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/dj-mariage/laval"
-              className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
-            >
-              <MapPin size={16} className="text-[#c9a227]" />
-              DJ Mariage Laval (Mayenne)
-            </Link>
-            <Link
-              href="/dj-mariage/morlaix"
-              className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
-            >
-              <MapPin size={16} className="text-[#c9a227]" />
-              DJ Mariage Morlaix (Finistère)
-            </Link>
-            <Link
-              href="/dj-mariage/rennes"
-              className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
-            >
-              <MapPin size={16} className="text-[#c9a227]" />
-              DJ Mariage Rennes
-            </Link>
-            <Link
-              href="/dj-mariage/quimper"
-              className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
-            >
-              <MapPin size={16} className="text-[#c9a227]" />
-              DJ Mariage Quimper (Finistère)
-            </Link>
-            <Link
-              href="/dj-mariage/nantes"
-              className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
-            >
-              <MapPin size={16} className="text-[#c9a227]" />
-              DJ Mariage Nantes
-            </Link>
+            {getPriorityCities()
+              .slice(0, 6)
+              .map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/dj-mariage/${city.slug}`}
+                  className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-lg text-[#aaa] hover:text-[#c9a227] hover:border-[#c9a227]/40 transition-colors"
+                >
+                  <MapPin size={16} className="text-[#c9a227]" />
+                  DJ Mariage {city.name}
+                </Link>
+              ))}
           </div>
         </div>
       </section>
@@ -281,7 +377,8 @@ export default function ZonesIntervention() {
             Votre ville n&apos;est pas listée ?
           </h2>
           <p className="text-[#888] mb-8">
-            Pas de problème ! Nous nous déplaçons dans toute la région. Contactez-nous pour vérifier notre disponibilité.
+            Indiquez-nous votre lieu de réception, votre ville et votre code postal : nous vérifions notre
+            disponibilité et vous chiffrons précisément les éventuels frais de déplacement sur le devis.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/#contact" className="btn-gold inline-flex items-center gap-2">

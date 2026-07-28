@@ -5,8 +5,8 @@ import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, Map
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Mayenne & Laval (53) · Avis 5★ · Dès 1200€',
-  description: "DJ animateur mariage en Mayenne (53) : Laval, Château-Gontier, Évron, Craon. Avis 5★, dès 1200€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
+  title: 'DJ Mariage Mayenne & Laval (53) · Sur étude · Dès 1200€',
+  description: "DJ animateur mariage en Mayenne (53) : Laval, Château-Gontier, Évron, Craon. Basés à Redon (35), intervention étudiée au cas par cas — frais de route précisés sur le devis.",
   keywords: 'DJ mariage Mayenne, DJ mariage Laval, DJ mariage Château-Gontier, animation mariage 53, DJ mariage Évron',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-mayenne',
@@ -37,8 +37,8 @@ const faqs = [
     answer: 'Nos formules DJ mariage dans le 53 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
   },
   {
-    question: 'Vous déplacez-vous dans toute la Mayenne ?',
-    answer: 'Oui, nous couvrons tout le département : Laval, Château-Gontier, Mayenne, Évron, Craon, Ernée, Villaines-la-Juhel... La Mayenne est à moins d\'une heure de notre base, nous y intervenons très régulièrement.',
+    question: 'Vous déplacez-vous en Mayenne ?',
+    answer: 'MG Events est basé à Redon (35), à environ 140 km de Laval et 165 km de Mayenne : le département 53 se situe en dehors de notre zone d\'intervention habituelle. Nous y intervenons néanmoins régulièrement — Laval, Château-Gontier, Évron, Craon, Ernée — mais chaque demande est étudiée au cas par cas selon la date, la formule choisie et les contraintes logistiques. Les frais de déplacement sont précisés sur le devis.',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -226,11 +226,14 @@ export default function DJMariageMayenne() {
                 DJ Mariage <span className="text-[#c9a227]">Mayenne</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Votre DJ animateur de mariage à Laval et dans tout le 53
+                Une prestation dans le 53, étudiée au cas par cas
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
-                <strong className="text-white">La Mayenne aussi a droit à des soirées de folie !</strong>
-                MG Events Animation se déplace à <span className="text-[#c9a227]">Laval, Château-Gontier, Mayenne, Évron, Craon</span>...
+                <strong className="text-white">MG Events Animation est basé à Redon (35)</strong> : la Mayenne se
+                situe en dehors de notre secteur d&apos;intervention habituel (environ 100 km autour de Redon). Nous y
+                intervenons néanmoins régulièrement à <span className="text-[#c9a227]">Laval, Château-Gontier,
+                Mayenne, Évron, Craon</span>, sur étude et sur devis : les frais de déplacement sont calculés à
+                l&apos;avance et indiqués clairement, sans mauvaise surprise.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Véritable <strong className="text-white">animateur de soirée en Mayenne</strong>, nous assurons
@@ -412,7 +415,7 @@ export default function DJMariageMayenne() {
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
-            DJ Mariage dans tout le <span className="text-[#c9a227]">département 53</span>
+            Les secteurs du <span className="text-[#c9a227]">département 53</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
             <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
@@ -586,7 +589,8 @@ export default function DJMariageMayenne() {
             DJ Mariage dans les <span className="text-[#c9a227]">villes de Mayenne</span>
           </h2>
           <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
-            Nous intervenons dans toutes les villes du département 53. Découvrez nos prestations près de chez vous.
+            Nos pages dédiées aux principales villes du 53. Chaque prestation y est étudiée au cas par cas, avec les
+            frais de déplacement précisés sur le devis.
           </p>
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <Link href="/dj-mariage/laval" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">

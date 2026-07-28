@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: 'Vous déplacez-vous à Saint-Malo, Fougères et Vitré ?',
-    answer: 'Oui, nous intervenons dans toute l\'Ille-et-Vilaine : Rennes, Saint-Malo, Dinard, Cancale, Fougères, Vitré, Redon, Dol-de-Bretagne et toute la côte d\'Émeraude.',
+    answer: "MG Events est basé à Redon (35). Seuls les secteurs de l'Ille-et-Vilaine situés dans un rayon approximatif de 100 km autour de Redon relèvent de notre zone habituelle : Redon, Rennes et leurs environs. Vitré (~110 km), Fougères (~130 km), Dinard (~135 km) et Saint-Malo (~140 km) se situent au-delà : la prestation y est étudiée au cas par cas selon la date, la formule choisie et les contraintes logistiques. Des frais de déplacement et, si nécessaire, d'hébergement sont précisés sur le devis.",
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -227,11 +227,11 @@ export default function DJMariageIlleEtVilaine() {
                 DJ Mariage <span className="text-[#c9a227]">Ille-et-Vilaine</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Votre DJ animateur de mariage à Rennes et dans tout le 35
+                Votre DJ animateur de mariage à Redon, Rennes et dans le sud du 35
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
                 Vous cherchez un <strong className="text-white">DJ animateur pour votre mariage en Ille-et-Vilaine (35)</strong> ?
-                MG Events Animation se déplace dans tout le département : <span className="text-[#c9a227]">Rennes, Saint-Malo, Fougères, Vitré</span>,
+                MG Events Animation est basé à <strong className="text-white">Redon (35)</strong>. Seuls les <strong className="text-white">secteurs du 35 situés dans un rayon approximatif de 100 km autour de Redon</strong> relèvent de notre zone habituelle — <span className="text-[#c9a227]">Redon, Rennes</span> et leurs environs. Au-delà (<span className="text-[#c9a227]">Vitré, Fougères, Dinard, Saint-Malo</span>), la prestation est étudiée au cas par cas.
                 mais aussi <span className="text-[#c9a227]">Redon, Dinard, Cancale, Dol-de-Bretagne, Bruz, Cesson-Sévigné, Betton, Chantepie,
                 Saint-Grégoire, Pacé, Le Rheu, Montfort-sur-Meu</span> et toute la côte d&apos;Émeraude.
               </p>
@@ -422,7 +422,7 @@ export default function DJMariageIlleEtVilaine() {
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
-            DJ Mariage dans tout le <span className="text-[#c9a227]">département 35</span>
+            Les secteurs du <span className="text-[#c9a227]">département 35</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
             <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
@@ -596,7 +596,7 @@ export default function DJMariageIlleEtVilaine() {
             DJ Mariage dans les <span className="text-[#c9a227]">villes d&apos;Ille-et-Vilaine</span>
           </h2>
           <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
-            Nous intervenons dans toutes les villes du département 35. Découvrez nos prestations près de chez vous.
+            Nos pages dédiées aux principales villes du 35. Seuls les secteurs situés dans un rayon approximatif de 100 km autour de Redon relèvent de notre zone habituelle ; Vitré, Fougères, Dinard et Saint-Malo se situent au-delà : la prestation y est étudiée au cas par cas.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             <Link href="/dj-mariage/rennes" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">

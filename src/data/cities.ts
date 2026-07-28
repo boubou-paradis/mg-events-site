@@ -1,5 +1,34 @@
 // Configuration des villes pour les pages SEO
 
+/**
+ * Zone commerciale :
+ *  - 'prioritaire' : secteur d'environ 100 km autour de Redon (35), où MG Events
+ *    intervient habituellement. ATTENTION : ce n'est PAS la distance incluse dans
+ *    les forfaits (100 km ALLER-RETOUR, soit ~50 km aller — voir TRAVEL_RULE).
+ *  - 'etendue' : au-delà du secteur habituel. Prestation possible, mais étudiée
+ *    au cas par cas et chiffrée sur devis (kilomètres + hébergement éventuel).
+ */
+export type CityZone = 'prioritaire' | 'etendue';
+
+/**
+ * Règle tarifaire officielle, unique source de vérité pour tout le site.
+ * Ne jamais présenter les 100 km comme un rayon : ce sont 100 km aller-retour.
+ */
+export const TRAVEL_RULE = {
+  includedRoundTripKm: 100,
+  extraKmPrice: '0,66 €/km',
+  base: 'Redon (35)',
+  short: 'Déplacement inclus jusqu’à 100 km aller-retour au départ de Redon (35). Au-delà, les kilomètres supplémentaires sont facturés 0,66 €/km et indiqués clairement sur le devis.',
+  asterisk: '* Tarifs incluant jusqu’à 100 km aller-retour au départ de Redon. Au-delà, 0,66 €/km supplémentaire, précisé sur le devis.',
+  outsideArea: 'Pour les lieux situés en dehors de notre zone habituelle, les prestations sont étudiées au cas par cas selon la date, la formule choisie et les contraintes logistiques. Des frais de déplacement et, si nécessaire, d’hébergement sont précisés sur le devis.',
+  /**
+   * À rappeler partout où une distance approximative est citée : les distances
+   * ville-à-ville affichées sur le site sont indicatives. Ne JAMAIS en déduire
+   * qu'une ville est « comprise » dans les 100 km A/R inclus.
+   */
+  exactDistance: 'La distance exacte est calculée selon l’adresse du lieu de réception.',
+} as const;
+
 export interface City {
   name: string;
   slug: string;
@@ -10,6 +39,14 @@ export interface City {
   latitude: number;
   longitude: number;
   population?: string;
+  /**
+   * Distance routière approximative Redon → ville, en km (trajet aller).
+   * Sert à classer la ville en zone prioritaire ou étendue, et à afficher un
+   * discours honnête sur le déplacement. Ne pas confondre avec les 100 km A/R
+   * inclus dans les forfaits.
+   */
+  distanceFromRedonKm: number;
+  zone: CityZone;
   // Overrides SEO facultatifs (title/description) — utilisés pour les villes dont
   // une ancienne page autonome bien positionnée a été consolidée ici : on conserve
   // le title/description qui captait la requête courte "DJ <ville>". Sinon le
@@ -50,6 +87,8 @@ export const cities: City[] = [
     latitude: 48.1173,
     longitude: -1.6778,
     population: '220 000',
+    distanceFromRedonKm: 70,
+    zone: 'prioritaire',
     seoDescription: `Rennes, capitale de la Bretagne, est la métropole de référence pour les mariages haut de gamme dans le Grand Ouest. Avec son patrimoine historique, son accessibilité exceptionnelle (TGV Paris-Rennes en 1h25) et une offre de domaines et châteaux parmi les plus denses de France, la métropole rennaise séduit chaque année des centaines de couples de toute la région — et au-delà.
 
 Chercher un DJ mariage à Rennes, c'est chercher quelqu'un qui connaît vraiment le territoire. Les salles ont chacune leurs contraintes acoustiques : la pierre apparente du Manoir de la Begaudière réverbère différemment des volumes contemporains du Florian. Le Domaine de Cicé-Blossac, à Bruz, avec son golf 18 trous et ses jardins à la française, est l'un des lieux les plus prisés du 35 — et nous y avons animé de nombreuses soirées. Chaque fois, nous arrivons avec une installation adaptée à l'espace, jamais du matériel "générique".
@@ -103,6 +142,8 @@ Concrètement, un mariage rennais avec MG Events, c'est : un rendez-vous de pré
     latitude: 48.6493,
     longitude: -2.0049,
     population: '46 000',
+    distanceFromRedonKm: 140,
+    zone: 'etendue',
     seoDescription: `Saint-Malo, cité corsaire emblématique de la Côte d'Émeraude, offre un décor de mariage absolument unique en France. Les remparts séculaires, les plages de sable fin et la vue sur la baie créent une atmosphère romantique incomparable. Un mariage à Saint-Malo, c'est la promesse de photos exceptionnelles avec la mer en toile de fond et d'une ambiance iodée qui marque les esprits.
 
 Les lieux de réception malouins rivalisent de prestige : hôtels Belle Époque face à la mer, manoirs de corsaires dans l'intra-muros, domaines avec vue sur le large. Le Grand Hôtel des Thermes et ses terrasses panoramiques, le Domaine des Ormes et son château dans les terres, ou encore les salles privatisables des remparts offrent des options pour tous les styles de mariage.
@@ -138,6 +179,8 @@ Notre expérience de DJ mariage à Saint-Malo nous a appris à composer avec les
     latitude: 48.3525,
     longitude: -1.1987,
     population: '20 000',
+    distanceFromRedonKm: 130,
+    zone: 'etendue',
     seoDescription: `Fougères possède l'un des plus impressionnants châteaux médiévaux d'Europe, véritable joyau des Marches de Bretagne. Cette forteresse du XIe siècle et son quartier médiéval offrent un cadre de mariage féerique pour les couples amoureux d'histoire. La ville haute avec ses maisons à colombages et la ville basse dominée par les tours du château créent une atmosphère de conte de fées.
 
 Le pays de Fougères regorge de domaines et manoirs nichés dans la campagne vallonnée des Marches de Bretagne. À mi-chemin entre Rennes et le Mont-Saint-Michel, la région attire des couples de toute la France séduits par son authenticité préservée. Les forêts de Fougères et de Villecartier offrent des décors naturels exceptionnels pour vos photos de mariage.
@@ -170,6 +213,8 @@ Nous intervenons régulièrement dans le pays fougerais et connaissons les spéc
     latitude: 48.1244,
     longitude: -1.2125,
     population: '18 000',
+    distanceFromRedonKm: 110,
+    zone: 'etendue',
     seoDescription: `Vitré, classée "Petite Cité de Caractère" et "Plus Beaux Détours de France", offre un patrimoine médiéval remarquablement préservé. Son château triangulaire unique, ses ruelles pavées et ses maisons à pans de bois créent un décor de mariage hors du temps. La ville a conservé son authenticité avec plus de 100 maisons médiévales et Renaissance formant un ensemble architectural exceptionnel.
 
 Le pays vitréen, aux portes de la Bretagne, combine charme rural et accessibilité. À seulement 35 minutes de Rennes par l'autoroute, Vitré attire les couples souhaitant un mariage de caractère sans les contraintes logistiques des zones isolées. Les domaines environnants, souvent d'anciennes propriétés de la noblesse bretonne, proposent des cadres intimistes et élégants.
@@ -202,6 +247,8 @@ En tant que DJ mariage expérimenté à Vitré, nous apprécions particulièreme
     latitude: 47.6514,
     longitude: -2.0847,
     population: '10 000',
+    distanceFromRedonKm: 0,
+    zone: 'prioritaire',
     seoDescription: `Redon, au confluent de la Vilaine et de l'Oust, est une ville d'eau au patrimoine fluvial unique en Bretagne. L'ancienne abbaye bénédictine Saint-Sauveur, le port de plaisance et les quais bordés de maisons d'armateurs créent une atmosphère paisible et romantique. Cette position de carrefour, aux confins de trois départements (Ille-et-Vilaine, Morbihan, Loire-Atlantique), en fait un lieu de réception idéal pour rassembler famille et amis de toute la région.
 
 Le pays de Redon offre un cadre bucolique préservé avec ses marais, ses prairies et ses chemins de halage le long des canaux de Bretagne. Les domaines locaux, souvent d'anciennes propriétés de négociants en sel ou en vin, combinent élégance discrète et tarifs plus accessibles que sur la côte. C'est l'endroit parfait pour un mariage champêtre authentique dans un cadre de châteaux, domaines et demeures de caractère, loin de l'agitation des grandes villes.
@@ -242,6 +289,8 @@ Notre technologie exclusive AnimaJet ajoute une dimension participative rare dan
     latitude: 48.6328,
     longitude: -2.0700,
     population: '10 000',
+    distanceFromRedonKm: 135,
+    zone: 'etendue',
     seoDescription: `Dinard, la "Nice du Nord", a conservé tout le charme de la Belle Époque avec ses villas somptueuses, ses jardins exotiques et ses plages élégantes. Face à Saint-Malo de l'autre côté de la Rance, cette station balnéaire chic offre un cadre de mariage d'un raffinement rare. Les couchers de soleil sur la baie, les villas aux architectures extravagantes et l'atmosphère distinguée séduisent les couples en quête d'élégance.
 
 La promenade du Clair de Lune, les plages de l'Écluse et de Saint-Énogat, les pointes rocheuses offrent des décors de photos de mariage variés et spectaculaires. Les hôtels de luxe dinardais perpétuent la tradition d'accueil haut de gamme qui a fait la réputation de la station auprès de l'aristocratie britannique dès le XIXe siècle.
@@ -276,6 +325,8 @@ Un mariage à Dinard demande une expertise particulière : gestion des cocktails
     latitude: 47.2184,
     longitude: -1.5536,
     population: '320 000',
+    distanceFromRedonKm: 80,
+    zone: 'prioritaire',
     seoDescription: `Nantes, métropole créative et dynamique, combine patrimoine historique et effervescence contemporaine. L'ancien duché de Bretagne offre un choix incomparable de lieux de réception : châteaux des bords de l'Erdre, domaines viticoles du Muscadet, manoirs du vignoble nantais. La ville elle-même propose des espaces atypiques comme les Machines de l'Île ou des salles avec vue sur la Loire.
 
 La région nantaise est réputée pour la qualité de ses vignobles. Un mariage dans le pays du Muscadet, c'est l'occasion d'offrir à vos invités une expérience œnologique unique avec les vins locaux : Muscadet Sèvre-et-Maine, Gros Plant, coteaux d'Ancenis. Les domaines viticoles ouvrent leurs chais et leurs jardins pour des réceptions intimistes ou grandioses.
@@ -312,6 +363,8 @@ Notre expertise de DJ mariage à Nantes s'appuie sur une connaissance approfondi
     latitude: 47.2736,
     longitude: -2.2137,
     population: '72 000',
+    distanceFromRedonKm: 60,
+    zone: 'prioritaire',
     seoDescription: `Saint-Nazaire, ville portuaire tournée vers l'océan, offre des lieux de mariage résolument atypiques. L'héritage des grands paquebots se retrouve dans des espaces de réception uniques comme Escal'Atlantic, installé dans l'ancienne base sous-marine. Pour les couples en quête d'originalité, un mariage nazairien promet une expérience mémorable entre patrimoine industriel et horizons maritimes.
 
 La baie de Saint-Nazaire, avec sa vue sur le pont et l'estuaire de la Loire, crée des tableaux spectaculaires pour vos photos de mariage. À deux pas de La Baule et du littoral guérandais, Saint-Nazaire combine les avantages d'une ville active avec la proximité immédiate des plages et des marais salants.
@@ -345,6 +398,8 @@ Notre expérience de DJ à Saint-Nazaire nous a familiarisés avec les contraint
     latitude: 47.2869,
     longitude: -2.3929,
     population: '16 000',
+    distanceFromRedonKm: 75,
+    zone: 'prioritaire',
     seoDescription: `La Baule, avec sa baie de 9 kilomètres souvent citée parmi les plus belles d'Europe, incarne le luxe balnéaire à la française. Ses palaces Belle Époque, ses villas d'architectes et son front de mer élégant attirent une clientèle exigeante pour des mariages d'exception. Un mariage à La Baule, c'est l'assurance d'un cadre prestigieux avec l'océan Atlantique en toile de fond.
 
 Les établissements haut de gamme baulois sont rompus à l'organisation d'événements de prestige. L'Hermitage Barrière, le Royal Thalasso, le Castel Marie-Louise offrent des prestations all-inclusive avec hébergement, restauration gastronomique et espaces de réception face à la mer. Pour les mariages plus intimistes, les villas Belle Époque des parcs boisés de La Baule se privatisent avec élégance.
@@ -379,6 +434,8 @@ Un mariage à La Baule exige un DJ à la hauteur du cadre. Notre expérience des
     latitude: 47.3283,
     longitude: -2.4286,
     population: '16 000',
+    distanceFromRedonKm: 70,
+    zone: 'prioritaire',
     seoDescription: `Guérande, cité médiévale ceinte de remparts intacts, offre un décor de mariage digne d'un conte de fées. Ses ruelles pavées, ses échoppes d'artisans et sa collégiale Saint-Aubin créent une atmosphère hors du temps. À quelques kilomètres, les marais salants et leurs reflets argentés composent des paysages uniques pour des photos de mariage inoubliables.
 
 La presqu'île guérandaise combine patrimoine historique et richesse naturelle. Entre l'océan sauvage de la côte, les marais salants millénaires et la douceur du pays blanc, les possibilités de mise en scène pour votre mariage sont infinies. Les domaines locaux, souvent d'anciennes propriétés de paludiers ou de négociants en sel, offrent un charme authentique préservé.
@@ -413,6 +470,8 @@ Notre connaissance du territoire guérandais nous permet de vous conseiller sur 
     latitude: 47.6559,
     longitude: -2.7603,
     population: '55 000',
+    distanceFromRedonKm: 60,
+    zone: 'prioritaire',
     seoDescription: `Vannes, porte d'entrée du Golfe du Morbihan, est l'une des destinations de mariage les plus prisées de Bretagne Sud. Ses remparts fleuris, ses maisons à colombages, son port de plaisance et la "petite mer" aux 40 îles composent un décor romantique unique. Chercher un DJ mariage à Vannes, c'est chercher un professionnel qui connaît vraiment le territoire, ses domaines face au Golfe et l'exigence d'une clientèle habituée aux belles réceptions.
 
 La région vannetaise regorge de lieux d'exception. Le Domaine de Rochevilaine à Billiers, les châteaux et manoirs d'Arradon, de Séné et de la presqu'île de Rhuys, les domaines du pays de Vannes accueillent des mariages dans des cadres à couper le souffle. La lumière du Golfe, changeante au fil des marées, garantit des photos inoubliables — et une animation mariage à Vannes à la hauteur de ces décors.
@@ -421,7 +480,7 @@ En tant que DJ animateur à Vannes, notre rôle va bien au-delà de la musique. 
 
 Notre prestation comprend une sonorisation professionnelle haut de gamme, calibrée pour chaque moment — fond sonore feutré pendant le repas, son puissant et maîtrisé pour enflammer le dancefloor — et un éclairage sur mesure adapté à votre salle (lyres, wash LED, effets). La sonorisation de mariage à Vannes doit composer avec des lieux variés : terrasses ventées face au Golfe, salles en pierre à l'acoustique délicate, domaines en extérieur. Notre matériel et notre installation s'adaptent à chaque configuration.
 
-DJ Morbihan de proximité, nous intervenons à Vannes et dans tout le département : Auray, Lorient, Ploërmel, Pontivy, Locminé, Sarzeau, le Golfe et la presqu'île de Rhuys. Cette couverture fait de nous un partenaire naturel pour l'animation mariage dans le Morbihan, avec la même exigence de qualité partout.
+DJ Morbihan de proximité, nous intervenons régulièrement à Vannes et dans le Morbihan Sud et Centre : Auray, Ploërmel, Pontivy, Locminé, Sarzeau, le Golfe et la presqu'île de Rhuys. Vannes est à une heure environ de notre base de Redon, ce qui fait de nous un partenaire naturel pour l'animation mariage dans le secteur vannetais.
 
 Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, ajoute une dimension participative rare : quiz interactif en direct, photo mystère sur grand écran, blind test live, partage de photos. Au-delà de la soirée dansante, nous proposons la sonorisation de cérémonie laïque (180€) avec deux techniciens dédiés, idéale pour les cérémonies en extérieur face au Golfe. Quel budget pour un DJ mariage à Vannes ? Nos formules démarrent à 1200€ TTC (Éclat d'Amour), 1490€ (Rêve en Blanc) et 1690€ (Conte de Fées avec photobooth vintage) — déplacement à Vannes et dans le Morbihan inclus, tarifs transparents et sans surprise.`,
     localHighlights: [
@@ -459,6 +518,8 @@ Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, a
     latitude: 47.7485,
     longitude: -3.3700,
     population: '57 000',
+    distanceFromRedonKm: 110,
+    zone: 'etendue',
     seoDescription: `Lorient, ville aux cinq ports, mêle patrimoine maritime et modernité avec caractère. Reconstruite après la guerre, elle a su préserver des trésors aux alentours : le château de Locguénolé à Hennebont, les plages sauvages de Guidel et Ploemeur, les rias mystérieuses de la rivière d'Étel. Un mariage lorientais, c'est l'authenticité bretonne sans les foules touristiques.
 
 La région lorientaise offre des domaines de caractère à des tarifs plus accessibles que la côte sud. Les anciennes propriétés de capitaines au long cours, les manoirs cachés dans les vallons du Scorff et du Blavet, les salles avec vue sur la rade proposent des cadres variés pour tous les budgets. Le Festival Interceltique a donné à la ville une culture de l'événementiel bien rodée.
@@ -492,6 +553,8 @@ Notre expérience de DJ mariage à Lorient intègre naturellement la dimension c
     latitude: 48.0689,
     longitude: -2.9647,
     population: '15 000',
+    distanceFromRedonKm: 90,
+    zone: 'prioritaire',
     seoDescription: `Pontivy, au cœur géographique de la Bretagne, possède un double patrimoine : médiéval avec le château des Rohan, et napoléonien avec ses alignements de maisons uniformes. Cette ville de caractère, au confluent du Blavet et du canal de Nantes à Brest, offre un cadre de mariage authentique loin de l'agitation côtière.
 
 Le centre Bretagne recèle des trésors méconnus : le domaine de Kerguéhennec et son centre d'art contemporain, les forêts de Quénécan et de Pontcallec, les chapelles perdues dans la campagne. Ces décors préservés séduisent les couples en quête d'authenticité et de tranquillité, avec des budgets souvent plus doux que sur le littoral.
@@ -524,6 +587,8 @@ Un mariage à Pontivy, c'est choisir le cœur battant de la Bretagne. Nous appr�
     latitude: 47.6706,
     longitude: -2.9922,
     population: '14 000',
+    distanceFromRedonKm: 75,
+    zone: 'prioritaire',
     seoDescription: `Auray, avec son port de Saint-Goustan aux maisons à colombages et sa position stratégique entre Vannes et la presqu'île de Quiberon, séduit les couples amoureux d'authenticité. La rivière d'Auray, les alignements mégalithiques de Carnac à deux pas, la basilique de Sainte-Anne-d'Auray pour les mariages religieux : le pays d'Auray offre une richesse patrimoniale exceptionnelle.
 
 La région alréenne combine patrimoine préhistorique unique au monde et douceur de vivre morbihannaise. Les domaines et manoirs nichés entre les landes de Carnac et les rives du Golfe du Morbihan proposent des cadres intimistes et romantiques. La lumière particulière de la baie de Quiberon, les couchers de soleil sur les menhirs créent des tableaux photographiques inoubliables.
@@ -556,6 +621,8 @@ Notre expérience de DJ mariage à Auray et dans le pays carnacois nous a appris
     latitude: 47.5853,
     longitude: -3.0297,
     population: '1 600',
+    distanceFromRedonKm: 85,
+    zone: 'prioritaire',
     seoDescription: `La Trinité-sur-Mer, port de plaisance mythique de la voile française et terre d'Éric Tabarly, offre un cadre de mariage rare où l'élégance nautique rencontre la douceur du Morbihan. Les coques blanches alignées dans la baie, les terrasses face à la rivière de Crac'h et le célèbre pont de Kerisper composent un décor chic et lumineux, idéal pour un mariage bord de mer raffiné.
 
 Au-delà du port, la presqu'île trinitaine déploie des plages de sable fin — Kervilen, Men Dù, la Mer Blanche — et, à quelques minutes seulement, les alignements mégalithiques de Carnac, uniques au monde. Cette proximité immédiate entre océan, patrimoine préhistorique et villages de caractère (Carnac, Locmariaquer, Crac'h) permet des séances photo d'une variété exceptionnelle, du lever de soleil sur les menhirs aux couchers de soleil sur les bateaux.
@@ -588,6 +655,8 @@ Notre expérience de DJ mariage à La Trinité-sur-Mer et dans le pays d'Auray n
     latitude: 47.9314,
     longitude: -2.3969,
     population: '10 000',
+    distanceFromRedonKm: 50,
+    zone: 'prioritaire',
     seoDescription: `Ploërmel, cœur historique du centre Bretagne aux portes de la forêt de Brocéliande, offre aux couples un cadre de mariage entre légende arthurienne et nature préservée. Sa vieille ville médiévale — maisons à pans de bois, horloge astronomique, vitraux de l'église Saint-Armel — et la proximité immédiate du Lac au Duc, le plus grand plan d'eau intérieur du Morbihan, en font une destination de réception aussi romantique qu'authentique.
 
 Le pays de Ploërmel concentre quelques-uns des lieux les plus emblématiques de Bretagne intérieure. Le Château de Josselin, forteresse médiévale dominant l'Oust à un quart d'heure, compte parmi les plus beaux décors de mariage de la région. Les rives boisées du Lac au Duc, le golf et les domaines de Taupont et Loyat, ou encore les manoirs nichés en lisière de Brocéliande proposent des cadres variés — du château de caractère à la réception champêtre face à l'eau.
@@ -625,11 +694,13 @@ Au-delà de la soirée dansante, nous adaptons nos animations à l'esprit du lie
     latitude: 48.3904,
     longitude: -4.4861,
     population: '140 000',
+    distanceFromRedonKm: 235,
+    zone: 'etendue',
     seoDescription: `Brest, cité du bout du monde tournée vers l'océan, offre un cadre de mariage empreint d'embruns et de caractère. La rade de Brest, l'une des plus belles du monde, les abers sauvages aux alentours, le château médiéval face au port militaire : la ville conjugue puissance maritime et patrimoine historique. Pour les couples aventuriers, un mariage brestois promet authenticité et grand air.
 
 Le pays de Brest regorge de sites naturels exceptionnels : la pointe Saint-Mathieu et son abbaye face au large, la presqu'île de Crozon classée, les abers découpés du nord Finistère. Les domaines locaux, souvent d'anciennes propriétés de capitaines ou d'armateurs, offrent des vues imprenables sur la rade ou les côtes sauvages. Océanopolis propose même des réceptions atypiques au milieu des aquariums.
 
-Nous intervenons régulièrement en Finistère nord malgré la distance depuis notre base. La route Rennes-Brest, bien desservie, nous permet d'assurer des prestations sans surcoût prohibitif. Notre matériel est conçu pour résister à l'humidité marine et nos playlists intègrent volontiers la culture celtique chère aux Finistériens.`,
+MG Events est basé à Redon (35), à environ 235 km de Brest : le pays brestois se situe donc en dehors de notre secteur d'intervention habituel. Une prestation y reste possible, mais elle est étudiée au cas par cas selon la date, la formule retenue et les contraintes logistiques (horaires, accès à la salle, hébergement éventuel de l'équipe). Les frais de déplacement correspondants sont calculés et indiqués clairement sur le devis. Si vous nous écrivez pour un mariage à Brest, dites-nous simplement la date et le lieu : nous vous répondons sous 24h avec une proposition chiffrée précise.`,
     localHighlights: [
       'Rade de Brest parmi les plus belles baies du monde',
       'Pointe Saint-Mathieu, abers, presqu\'île de Crozon à proximité',
@@ -659,13 +730,17 @@ Nous intervenons régulièrement en Finistère nord malgré la distance depuis n
     latitude: 47.9959,
     longitude: -4.0967,
     population: '63 000',
+    distanceFromRedonKm: 185,
+    zone: 'etendue',
     metaTitle: 'DJ Quimper · Mariage & Soirée · Avis 5★ · Dès 1200€',
-    metaDescription: "DJ à Quimper pour mariage et soirée, dans tout le Finistère Sud : Concarneau, Bénodet, Fouesnant. Avis 5★, dès 1200€ TTC. Devis gratuit sous 24h ✓",
+    metaDescription: "DJ mariage et soirée à Quimper et en Cornouaille : Concarneau, Bénodet, Fouesnant. Basés à Redon, intervention sur étude. Avis 5★, dès 1200€ TTC + frais de route sur devis ✓",
     seoDescription: `Quimper, capitale historique de la Cornouaille, est le berceau de la culture bretonne avec sa cathédrale gothique, ses faïenceries réputées et ses ruelles médiévales au confluent de l'Odet et du Steir. Le Festival de Cornouaille en témoigne chaque été : ici, la tradition bretonne est vivante et fière. Un mariage quimpérois, c'est l'assurance d'une dimension culturelle authentique.
 
 La Cornouaille offre des paysages d'une variété exceptionnelle : baie de Bénodet et plages de Fouesnant au sud, pointe du Raz et cap Sizun à l'ouest, montagnes Noires à l'intérieur. Les châteaux et manoirs cornouaillais, souvent construits en granit bleu de Locronan, présentent une architecture typique et des cadres préservés loin de la standardisation.
 
-Notre approche du mariage en Cornouaille intègre naturellement la culture locale quand les couples le souhaitent. Un gavoté pour lancer la soirée, une plinn pour faire danser les grands-parents, des ballades en breton pour l'émotion : nous maîtrisons les codes de la fête bretonne tout en assurant une programmation contemporaine pour tous les publics.`,
+Notre approche du mariage en Cornouaille intègre naturellement la culture locale quand les couples le souhaitent. Un gavotte pour lancer la soirée, une plinn pour faire danser les grands-parents, des ballades en breton pour l'émotion : nous maîtrisons les codes de la fête bretonne tout en assurant une programmation contemporaine pour tous les publics.
+
+Une précision honnête sur la logistique : MG Events est basé à Redon (35), à environ 185 km de Quimper. La Cornouaille se situe donc en dehors de notre zone d'intervention habituelle. Une prestation à Quimper reste tout à fait possible, mais elle est étudiée au cas par cas selon la date, la formule choisie et les contraintes de déplacement — les frais kilométriques, et si nécessaire d'hébergement, sont indiqués clairement sur le devis. Aucune mauvaise surprise : vous connaissez le montant exact avant de signer.`,
     localHighlights: [
       'Capitale culturelle bretonne : traditions vivaces et authentiques',
       'Cathédrale Saint-Corentin et vieille ville médiévale pour photos',
@@ -699,15 +774,19 @@ Notre approche du mariage en Cornouaille intègre naturellement la culture local
     latitude: 48.5778,
     longitude: -3.8278,
     population: '15 000',
+    distanceFromRedonKm: 200,
+    zone: 'etendue',
     metaTitle: 'DJ Morlaix · Mariage & Soirée · Avis 5★ · Dès 1200€',
-    metaDescription: "DJ à Morlaix pour mariage et soirée, dans le Finistère Nord : Roscoff, Saint-Pol-de-Léon, Carantec. Avis 5★, dès 1200€ TTC. Devis gratuit sous 24h ✓",
+    metaDescription: "DJ mariage et soirée à Morlaix, Roscoff, Saint-Pol-de-Léon, Carantec. Basés à Redon, intervention sur étude. Avis 5★, dès 1200€ TTC + frais de route sur devis ✓",
     seoDescription: `Morlaix, dominée par son viaduc monumental, est une cité de caractère nichée au fond d'un estuaire. Ses maisons à pondalez (maisons à lanterne), son port de plaisance et sa baie parsemée d'îlots créent un décor unique en Bretagne. Le château du Taureau, forteresse Vauban accessible en bateau, offre même la possibilité d'un mariage sur une île fortifiée au milieu de la baie.
 
 La région morlaisienne combine monts d'Arrée sauvages et côtes découpées de la baie. Les enclos paroissiaux de la vallée de l'Élorn (Saint-Thégonnec, Guimiliau) témoignent de la richesse historique du Léon. Les manoirs et fermes rénovées du pays proposent des cadres authentiques où la pierre de taille et les poutres apparentes créent une atmosphère chaleureuse.
 
-Un mariage à Morlaix, c'est choisir un Finistère confidentiel, loin des flux touristiques de la pointe du Raz ou de Concarneau. Nous apprécions particulièrement les cérémonies dans cette région préservée où l'accueil breton prend tout son sens. Notre matériel traverse la Bretagne pour offrir la même qualité de prestation qu'aux portes de Rennes.
+Un mariage à Morlaix, c'est choisir un Finistère confidentiel, loin des flux touristiques de la pointe du Raz ou de Concarneau. Nous apprécions particulièrement les cérémonies dans cette région préservée où l'accueil breton prend tout son sens.
 
-Notre ancrage dans le Finistère est réel : plus de 25 ans de scène dans les discothèques du 29 avant de nous consacrer aux mariages. Cette formation terrain — des milliers de soirées à lire des pistes de danse exigeantes — nous a appris à sentir le moment où l'ambiance bascule et à ne jamais la laisser retomber, que ce soit dans une grange rénovée du Léon, un manoir en pierre de taille ou face à la baie de Morlaix.`,
+Notre expérience du terrain breton est réelle : plus de 25 ans de scène en discothèque avant de nous consacrer aux mariages. Cette formation — des milliers de soirées à lire des pistes de danse exigeantes — nous a appris à sentir le moment où l'ambiance bascule et à ne jamais la laisser retomber, que ce soit dans une grange rénovée du Léon, un manoir en pierre de taille ou face à la baie de Morlaix.
+
+Soyons transparents sur la distance : MG Events est basé à Redon (35), à environ 200 km de Morlaix. Le Finistère Nord se situe donc en dehors de notre secteur d'intervention habituel. Une prestation à Morlaix peut être étudiée selon la date, la formule retenue et les contraintes de déplacement — les frais kilométriques et, si l'horaire de fin l'impose, l'hébergement de l'équipe, sont chiffrés et indiqués clairement sur le devis. Écrivez-nous avec votre date et votre lieu de réception : nous vous disons rapidement si nous sommes disponibles et à quel coût exact.`,
     localHighlights: [
       'Château du Taureau : mariage possible sur forteresse insulaire',
       'Viaduc monumental et maisons à pondalez pour photos originales',
@@ -740,6 +819,8 @@ Notre ancrage dans le Finistère est réel : plus de 25 ans de scène dans les d
     latitude: 47.8744,
     longitude: -3.9186,
     population: '20 000',
+    distanceFromRedonKm: 175,
+    zone: 'etendue',
     seoDescription: `Concarneau et sa Ville Close, forteresse médiévale posée sur l'eau, offrent un décor de mariage absolument unique. Cette cité corsaire cernée de remparts, accessible par un pont depuis le port de pêche, concentre restaurants, galeries et espaces de réception dans un cadre hors du temps. Un mariage dans la Ville Close, c'est transporter vos invités dans un autre siècle.
 
 Le pays concarnois, entre Pont-Aven (cité des peintres) et les plages de sable fin de Trégunc et Fouesnant, offre une diversité de paysages remarquable. La lumière particulière qui a inspiré Gauguin et l'école de Pont-Aven baigne toujours ces rivages. Les domaines et manoirs de la région combinent architecture de granit et jardins luxuriants face à l'océan.
@@ -774,7 +855,9 @@ Notre expérience de DJ mariage à Concarneau inclut une parfaite connaissance d
     latitude: 48.0734,
     longitude: -0.7695,
     population: '52 000',
-    seoDescription: `Vous cherchez un DJ à Laval pour votre mariage, votre soirée ou votre événement ? MG Events Animation intervient à Laval et dans toute la Mayenne : Château-Gontier-sur-Mayenne, Évron, Craon, Ernée, Bonchamp-lès-Laval, Mayenne ville... Guillaume et Laurence, duo DJ animateur fort de 25 ans d'expérience, se déplacent dans tout le département 53.
+    distanceFromRedonKm: 140,
+    zone: 'etendue',
+    seoDescription: `Vous cherchez un DJ à Laval pour votre mariage, votre soirée ou votre événement ? MG Events Animation intervient à Laval et en Mayenne : Château-Gontier-sur-Mayenne, Évron, Craon, Ernée, Bonchamp-lès-Laval, Mayenne ville... Guillaume et Laurence, duo DJ animateur fort de 25 ans d'expérience, se déplacent depuis Redon (35) sur devis, frais de route précisés à l'avance.
 
 Laval, préfecture de la Mayenne, est une ville d'art et d'histoire lovée dans les méandres de la rivière éponyme. Son château médiéval surplombant les quais, ses ruelles du vieux Laval et son patrimoine Renaissance (maison du Grand Veneur) en font une destination de mariage élégante et accessible. À la croisée de la Bretagne, de la Normandie et des Pays de la Loire, Laval facilite le rassemblement de vos invités.
 
@@ -818,6 +901,8 @@ Notre proximité avec la Mayenne (à 1h de notre base) fait de Laval une destina
     latitude: 48.3028,
     longitude: -0.6144,
     population: '13 000',
+    distanceFromRedonKm: 165,
+    zone: 'etendue',
     seoDescription: `Mayenne, sous-préfecture tranquille au bord de la rivière du même nom, incarne la douceur de vivre de la campagne mayennaise. Son château carolingien, l'un des plus anciens du Grand Ouest, et sa basilique Notre-Dame témoignent d'une histoire millénaire. Pour les couples recherchant l'authenticité et la sérénité, un mariage à Mayenne offre un cadre bucolique préservé.
 
 Le nord de la Mayenne, aux confins de la Bretagne et de la Normandie, présente des paysages vallonnés parsemés de haies bocagères et de vergers de pommiers à cidre. Les fermes-manoirs et les domaines ruraux proposent des cadres intimistes où la nature est reine. L'accueil mayennais, simple et chaleureux, se retrouve chez tous les prestataires locaux.
@@ -850,6 +935,8 @@ Un mariage dans la campagne mayennaise, c'est offrir à vos invités une parenth
     latitude: 47.8261,
     longitude: -0.7031,
     population: '12 000',
+    distanceFromRedonKm: 135,
+    zone: 'etendue',
     seoDescription: `Château-Gontier, petite cité de caractère sur les bords de la Mayenne, charme par son patrimoine roman et son atmosphère paisible. Le prieuré Saint-Jean-Baptiste, les maisons anciennes du quartier Saint-Jean et les quais fleuris composent un décor de mariage plein de charme. Cette ville-jardin, récompensée par 4 fleurs, met un point d'honneur à l'esthétique de ses espaces publics.
 
 Le sud de la Mayenne, frontalier avec le Maine-et-Loire, offre un paysage de douceur angevine. Les vignobles du Haut-Anjou ne sont qu'à quelques kilomètres, permettant d'agrémenter votre mariage de vins locaux de qualité. Les domaines de la région, souvent d'anciennes propriétés agricoles rénovées avec goût, proposent des réceptions authentiques et conviviales.
@@ -894,6 +981,18 @@ export const getCitiesForBirthday = (): City[] => {
 export const getCitiesByDepartment = (departmentCode: string): City[] => {
   return cities.filter(city => city.departmentCode === departmentCode);
 };
+
+/** Villes du secteur habituel (~100 km autour de Redon), triées par proximité. */
+export const getPriorityCities = (): City[] =>
+  cities.filter(city => city.zone === 'prioritaire').sort((a, b) => a.distanceFromRedonKm - b.distanceFromRedonKm);
+
+/** Villes hors secteur habituel : prestation possible, mais sur étude et sur devis. */
+export const getExtendedCities = (): City[] =>
+  cities.filter(city => city.zone === 'etendue').sort((a, b) => a.distanceFromRedonKm - b.distanceFromRedonKm);
+
+/** Départements dont au moins une ville est dans le secteur prioritaire. */
+export const isPriorityDepartment = (departmentCode: string): boolean =>
+  cities.some(city => city.departmentCode === departmentCode && city.zone === 'prioritaire');
 
 // Slugs pour generateStaticParams
 export const getAllCitySlugs = (): string[] => {

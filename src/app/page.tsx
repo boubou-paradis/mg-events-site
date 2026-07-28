@@ -80,9 +80,11 @@ function Hero() {
           Animateur de soirée de mariage — 25 ans d&apos;expérience au service de vos plus belles soirées
         </p>
         
-        {/* Zone */}
+        {/* Zone — recentrée sur le secteur réel autour de Redon (35).
+            Jamais de département entier : on parle de « secteurs situés dans un rayon approximatif ». */}
         <p className="animate-fade-up delay-300 text-sm text-[#8a8a8a] mb-10 tracking-widest uppercase">
-          Finistère • Morbihan • Ille-et-Vilaine • Loire-Atlantique • Mayenne
+          Basés à Redon (35) • Secteurs de l&apos;Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan dans un rayon
+          approximatif de 100 km
         </p>
 
         {/* CTA */}
@@ -205,11 +207,18 @@ function About() {
               </p>
               <p>
                 <strong className="text-white">DJ animateur professionnel</strong>, MG Events assure l&apos;
-                <strong className="text-white">animation de soirée de mariage</strong> de A à Z partout en Bretagne :
+                <strong className="text-white">animation de soirée de mariage</strong> de A à Z :
                 sonorisation haut de gamme, éclairage professionnel, animations interactives et prise de micro maîtrisée.
                 Forts de <strong className="text-white">25 ans d&apos;expérience en discothèque</strong>, nous sommes votre
                 <strong className="text-white"> prestataire mariage en Bretagne</strong> pour une animation
                 événementielle sur-mesure — de la cérémonie laïque au dernier morceau de la nuit.
+              </p>
+              <p>
+                <strong className="text-white">MG Events est basé à Redon (35)</strong> et intervient prioritairement
+                dans les <strong className="text-white">secteurs de l&apos;Ille-et-Vilaine, de la Loire-Atlantique et
+                du Morbihan situés dans un rayon approximatif de 100 km autour de Redon</strong> : Ploërmel, Vannes,
+                Auray, Pontivy, Redon, Rennes, Saint-Nazaire, Guérande, La Baule, Nantes. Pour un lieu plus éloigné,
+                écrivez-nous : nous étudions la demande au cas par cas et chiffrons le déplacement sur le devis.
               </p>
             </div>
 
@@ -1597,61 +1606,49 @@ function AutresEvenements() {
 
 // ============ ZONES DJ MARIAGE BRETAGNE (SEO) ============
 function ZonesMariage() {
-  // Départements
+  // Départements — ordonnés par proximité réelle avec Redon (35).
+  // `sousEtude` : département hors du secteur d'intervention habituel.
   const departements = [
-    { label: 'Ille-et-Vilaine (35)', href: '/dj-mariage-ille-et-vilaine' },
-    { label: 'Morbihan (56)', href: '/dj-mariage-morbihan' },
-    { label: 'Finistère (29)', href: '/dj-mariage-finistere' },
-    { label: 'Loire-Atlantique (44)', href: '/dj-mariage-loire-atlantique' },
-    { label: 'Mayenne (53)', href: '/dj-mariage-mayenne' },
+    { label: 'Morbihan (56)', href: '/dj-mariage-morbihan', sousEtude: false },
+    { label: 'Ille-et-Vilaine (35)', href: '/dj-mariage-ille-et-vilaine', sousEtude: false },
+    { label: 'Loire-Atlantique (44)', href: '/dj-mariage-loire-atlantique', sousEtude: false },
+    { label: 'Mayenne (53)', href: '/dj-mariage-mayenne', sousEtude: true },
+    { label: 'Finistère (29)', href: '/dj-mariage-finistere', sousEtude: true },
   ];
 
-  // Toutes les villes DJ Mariage
+  // Villes situées dans le rayon approximatif de 100 km autour de Redon, triées
+  // par distance routière approximative. Le maillage site-wide de la page
+  // d'accueil est volontairement concentré ici pour limiter la dilution
+  // géographique ; les villes plus lointaines (Vitré, Lorient, Saint-Malo,
+  // Laval, Quimper…) restent accessibles via les pages départementales et
+  // /zones-intervention.
   const villesMariage = [
-    // Ille-et-Vilaine
-    { name: 'Rennes', slug: 'rennes' },
-    { name: 'Saint-Malo', slug: 'saint-malo' },
-    { name: 'Vitré', slug: 'vitre' },
-    { name: 'Fougères', slug: 'fougeres' },
     { name: 'Redon', slug: 'redon' },
-    // Morbihan
-    { name: 'Vannes', slug: 'vannes' },
-    { name: 'Lorient', slug: 'lorient' },
-    { name: 'Pontivy', slug: 'pontivy' },
-    { name: 'Auray', slug: 'auray' },
     { name: 'Ploërmel', slug: 'ploermel' },
-    // Finistère
-    { name: 'Brest', slug: 'brest' },
-    { name: 'Quimper', slug: 'quimper' },
-    { name: 'Morlaix', slug: 'morlaix' },
-    { name: 'Concarneau', slug: 'concarneau' },
-    // Loire-Atlantique
+    { name: 'Saint-Nazaire', slug: 'saint-nazaire' },
+    { name: 'Vannes', slug: 'vannes' },
+    { name: 'Guérande', slug: 'guerande' },
+    { name: 'Rennes', slug: 'rennes' },
+    { name: 'La Baule', slug: 'la-baule' },
+    { name: 'Auray', slug: 'auray' },
+    { name: 'Nantes', slug: 'nantes' },
+    { name: 'La Trinité-sur-Mer', slug: 'la-trinite-sur-mer' },
+    { name: 'Pontivy', slug: 'pontivy' },
+  ];
+
+  // Animation Anniversaire — secteurs du rayon approximatif de 100 km uniquement
+  const villesAnniversaire = [
+    { name: 'Vannes', slug: 'vannes' },
+    { name: 'Rennes', slug: 'rennes' },
+    { name: 'Nantes', slug: 'nantes' },
+  ];
+
+  // DJ Soirée Entreprise — secteurs du rayon approximatif de 100 km uniquement
+  const villesEntreprise = [
+    { name: 'Vannes', slug: 'vannes' },
+    { name: 'Rennes', slug: 'rennes' },
     { name: 'Nantes', slug: 'nantes' },
     { name: 'Saint-Nazaire', slug: 'saint-nazaire' },
-    { name: 'Guérande', slug: 'guerande' },
-    { name: 'La Baule', slug: 'la-baule' },
-    // Mayenne
-    { name: 'Laval', slug: 'laval' },
-    { name: 'Château-Gontier', slug: 'chateau-gontier' },
-    { name: 'Mayenne', slug: 'mayenne-ville' },
-  ];
-
-  // Animation Anniversaire
-  const villesAnniversaire = [
-    { name: 'Rennes', slug: 'rennes' },
-    { name: 'Nantes', slug: 'nantes' },
-    { name: 'Vannes', slug: 'vannes' },
-    { name: 'Brest', slug: 'brest' },
-    { name: 'Laval', slug: 'laval' },
-  ];
-
-  // DJ Soirée Entreprise
-  const villesEntreprise = [
-    { name: 'Rennes', slug: 'rennes' },
-    { name: 'Nantes', slug: 'nantes' },
-    { name: 'Saint-Malo', slug: 'saint-malo' },
-    { name: 'Vannes', slug: 'vannes' },
-    { name: 'Brest', slug: 'brest' },
   ];
 
   return (
@@ -1661,10 +1658,17 @@ function ZonesMariage() {
         <div className="text-center mb-12">
           <div className="gold-line mx-auto mb-6"></div>
           <h2 className="section-title text-white mb-4">
-            Votre DJ Mariage <span className="text-gradient-gold">partout en Bretagne</span>
+            Votre DJ Mariage <span className="text-gradient-gold">autour de Redon</span>
           </h2>
           <p className="text-[#888] max-w-2xl mx-auto">
-            Nous intervenons dans toute la Bretagne et le Grand Ouest pour vos mariages, anniversaires et événements d&apos;entreprise
+            MG Events est basé à <strong className="text-white">Redon (35)</strong> et intervient prioritairement dans
+            les secteurs de l&apos;Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon
+            approximatif de 100 km autour de Redon.
+          </p>
+          <p className="text-[#8a8a8a] text-sm max-w-2xl mx-auto mt-3">
+            Les forfaits incluent jusqu&apos;à <strong className="text-white">100 km aller-retour</strong> au départ de
+            Redon. La distance exacte est calculée selon l&apos;adresse du lieu de réception ; au-delà,{' '}
+            <strong className="text-white">0,66 €/km</strong> supplémentaire, précisé sur le devis.
           </p>
         </div>
 
@@ -1681,17 +1685,20 @@ function ZonesMariage() {
                 href={dept.href}
                 className="card-dark p-4 text-center hover:border-[#c9a227]/40 transition-all duration-300"
               >
-                <span className="text-[#aaa] hover:text-[#c9a227] text-sm">{dept.label}</span>
+                <span className="text-[#aaa] hover:text-[#c9a227] text-sm block">{dept.label}</span>
+                {dept.sousEtude && (
+                  <span className="text-[11px] text-[#8a8a8a] uppercase tracking-wider mt-1 block">Sur étude</span>
+                )}
               </Link>
             ))}
           </div>
         </div>
 
-        {/* Par ville - DJ Mariage */}
+        {/* Par ville - DJ Mariage (secteur habituel) */}
         <div className="mb-10">
           <h3 className="text-white font-medium mb-5 flex items-center gap-2">
             <Music size={20} className="text-[#c9a227]" />
-            DJ Mariage par ville
+            DJ Mariage par ville — rayon approximatif de 100 km autour de Redon
           </h3>
           <div className="flex flex-wrap gap-2">
             {villesMariage.map((ville) => (
@@ -1744,6 +1751,20 @@ function ZonesMariage() {
           </div>
         </div>
 
+        {/* Prestations plus éloignées */}
+        <div className="mb-10 rounded-lg border border-[#c9a227]/25 bg-[#0a0a0a] px-5 py-4">
+          <p className="text-sm text-[#aaa] leading-relaxed">
+            <span className="text-[#c9a227] font-semibold">Votre lieu est plus éloigné ?</span> Pour les lieux situés
+            en dehors de notre zone habituelle (Finistère, Mayenne, Côtes-d&apos;Armor, Lorient, nord et est de l&apos;Ille-et-Vilaine…), les
+            prestations sont étudiées au cas par cas selon la date, la formule choisie et les contraintes logistiques.
+            Des frais de déplacement et, si nécessaire, d&apos;hébergement sont précisés sur le devis.{' '}
+            <Link href="/zones-intervention" className="text-[#c9a227] hover:underline">
+              Voir le détail des zones
+            </Link>
+            .
+          </p>
+        </div>
+
         {/* CTA vers page complète */}
         <div className="text-center mt-8">
           <Link
@@ -1764,23 +1785,25 @@ function ZonesMariage() {
 
 // ============ FOOTER ============
 function Footer() {
+  // Ordonnés par proximité réelle avec Redon (35)
   const zones = [
-    { label: 'Ille-et-Vilaine', href: '/dj-mariage-ille-et-vilaine' },
     { label: 'Morbihan', href: '/dj-mariage-morbihan' },
-    { label: 'Finistère', href: '/dj-mariage-finistere' },
+    { label: 'Ille-et-Vilaine', href: '/dj-mariage-ille-et-vilaine' },
     { label: 'Loire-Atlantique', href: '/dj-mariage-loire-atlantique' },
     { label: 'Mayenne', href: '/dj-mariage-mayenne' },
+    { label: 'Finistère', href: '/dj-mariage-finistere' },
   ];
 
+  // Maillage site-wide recentré sur le rayon approximatif de 100 km autour de Redon.
   const villesMariage = [
-    { name: 'Rennes', slug: 'rennes' },
-    { name: 'Saint-Malo', slug: 'saint-malo' },
-    { name: 'Nantes', slug: 'nantes' },
+    { name: 'Redon', slug: 'redon' },
+    { name: 'Ploërmel', slug: 'ploermel' },
     { name: 'Vannes', slug: 'vannes' },
-    { name: 'Brest', slug: 'brest' },
-    { name: 'Lorient', slug: 'lorient' },
-    { name: 'Quimper', slug: 'quimper' },
-    { name: 'Laval', slug: 'laval' },
+    { name: 'Saint-Nazaire', slug: 'saint-nazaire' },
+    { name: 'Rennes', slug: 'rennes' },
+    { name: 'Nantes', slug: 'nantes' },
+    { name: 'La Baule', slug: 'la-baule' },
+    { name: 'Auray', slug: 'auray' },
   ];
 
   return (
@@ -1816,23 +1839,8 @@ function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/dj-mariage/rennes" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
-                  DJ Mariage Rennes
-                </Link>
-              </li>
-              <li>
-                <Link href="/dj-mariage/laval" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
-                  DJ Mariage Laval
-                </Link>
-              </li>
-              <li>
-                <Link href="/dj-mariage/morlaix" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
-                  DJ Mariage Morlaix
-                </Link>
-              </li>
-              <li>
-                <Link href="/dj-mariage/quimper" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
-                  DJ Mariage Quimper
+                <Link href="/zones-intervention" className="text-[#888] text-sm hover:text-[#c9a227] transition-colors">
+                  Zones &amp; frais de déplacement
                 </Link>
               </li>
               <li>
@@ -1912,7 +1920,7 @@ function Footer() {
             © {new Date().getFullYear()} MG Events Animation - DJ Mariage Bretagne - Tous droits réservés
           </p>
           <p className="text-xs text-[#8a8a8a]">
-            Rennes • Vannes • Nantes • Quimper • Brest • Laval
+            Basés à Redon (35) • Redon • Ploërmel • Vannes • Saint-Nazaire • Rennes • Nantes
           </p>
         </div>
       </div>

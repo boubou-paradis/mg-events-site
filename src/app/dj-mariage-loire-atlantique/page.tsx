@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: 'Vous déplacez-vous à La Baule et Saint-Nazaire ?',
-    answer: 'Oui, nous couvrons toute la Loire-Atlantique : Nantes, Saint-Nazaire, Guérande, La Baule, Pornic, Ancenis, Châteaubriant, Clisson, Le Croisic, Pornichet... La côte Atlantique n\'a pas de secret pour nous !',
+    answer: 'Nous sommes basés à Redon (35), à environ 60 km de Saint-Nazaire, 70 km de Guérande et 80 km de Nantes : le nord de la Loire-Atlantique fait partie de notre secteur d\'intervention habituel. Nous intervenons aussi à La Baule, Pornichet, Pornic, Ancenis, Châteaubriant ou Clisson. Les forfaits incluent 100 km aller-retour au départ de Redon ; au-delà, 0,66 €/km, indiqué sur le devis.',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -227,13 +227,15 @@ export default function DJMariageLoireAtlantique() {
                 DJ Mariage <span className="text-[#c9a227]">Loire-Atlantique</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Votre DJ animateur de mariage à Nantes et dans tout le 44
+                Votre DJ animateur de mariage à Saint-Nazaire, Nantes et dans le 44
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
                 Vous cherchez un <strong className="text-white">DJ animateur pour votre mariage en Loire-Atlantique (44)</strong> ?
-                MG Events Animation se déplace dans tout le département : <span className="text-[#c9a227]">Nantes, Saint-Nazaire, La Baule, Guérande</span>,
-                mais aussi <span className="text-[#c9a227]">Pornic, Clisson, Ancenis, Le Croisic, Pornichet, Vertou, Rezé,
-                Orvault, Carquefou, Châteaubriant</span> et tout le vignoble nantais.
+                MG Events Animation est basé à <strong className="text-white">Redon (35)</strong>, aux portes du 44 :
+                les secteurs du 44 situés dans un rayon approximatif de 100 km autour de Redon relèvent de notre zone habituelle —{' '}
+                <span className="text-[#c9a227]">Saint-Nazaire, Guérande, La Baule, Nantes</span>, mais aussi{' '}
+                <span className="text-[#c9a227]">Pornichet, Le Croisic, Pornic, Clisson, Ancenis, Vertou, Rezé,
+                Orvault, Carquefou, Châteaubriant</span> et le vignoble nantais.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Véritable <strong className="text-white">animateur de soirée en Loire-Atlantique</strong>, nous assurons
@@ -416,7 +418,7 @@ export default function DJMariageLoireAtlantique() {
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
-            DJ Mariage dans tout le <span className="text-[#c9a227]">département 44</span>
+            Les secteurs du <span className="text-[#c9a227]">département 44</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
             <strong className="text-white">Déplacement inclus</strong> dans toute la Loire-Atlantique.
@@ -584,7 +586,7 @@ export default function DJMariageLoireAtlantique() {
             DJ Mariage dans les <span className="text-[#c9a227]">villes de Loire-Atlantique</span>
           </h2>
           <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
-            Nous intervenons dans toutes les villes du département 44. Découvrez nos prestations près de chez vous.
+            Nos pages dédiées aux principales villes du 44. Seuls les secteurs situés dans un rayon approximatif de 100 km autour de Redon relèvent de notre zone habituelle — le département n&apos;est pas couvert en totalité.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             <Link href="/dj-mariage/nantes" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">

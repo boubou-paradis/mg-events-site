@@ -111,7 +111,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-xs text-[#8a8a8a] uppercase tracking-wider">Zone d&apos;intervention</div>
-                  <div className="text-white">Bretagne & Grand Ouest</div>
+                  <div className="text-white">Basés à Redon (35) — rayon approximatif de 100 km</div>
                 </div>
               </div>
             </div>
@@ -194,6 +194,7 @@ export default function ContactSection() {
                 <input
                     id="contact-location"
                   type="text"
+                  required
                   value={formData.location}
                   onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                   className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white placeholder-[#666] focus:border-[#c9a227] focus:outline-none transition-colors"

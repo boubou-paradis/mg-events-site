@@ -162,7 +162,7 @@ const serviceSchema = {
     name: 'MG Events Animation',
     telephone: '+33648106166',
     url: BASE,
-    areaServed: 'Bretagne, Grand Ouest',
+    areaServed: "Secteurs de l'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon (35). Au-delà : sur étude et sur devis.",
   },
   offers: [
     {

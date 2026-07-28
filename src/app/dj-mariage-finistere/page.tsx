@@ -5,8 +5,8 @@ import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, Map
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Finistère (29) · Avis 5★ · Dès 1200€',
-  description: "DJ animateur mariage dans le Finistère (29) : Quimper, Brest, Morlaix, Concarneau. Avis 5★, dès 1200€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
+  title: 'DJ Mariage Finistère (29) · Sur étude · Dès 1200€',
+  description: "DJ animateur mariage dans le Finistère (29) : Quimper, Brest, Morlaix, Concarneau. Basés à Redon (35), intervention étudiée au cas par cas — frais de route précisés sur le devis.",
   keywords: 'DJ mariage Finistère, DJ mariage Quimper, DJ mariage Brest, DJ mariage Morlaix, DJ mariage Concarneau, animation mariage 29',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-finistere',
@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: 'Vous déplacez-vous jusqu\'à Brest ?',
-    answer: 'Oui, nous intervenons dans tout le Finistère : Brest, Quimper, Morlaix, Concarneau, Douarnenez, Crozon, Landerneau, Châteaulin... Nous nous déplaçons même sur la presqu\'île de Crozon et les îles (Ouessant, Molène, Sein).',
+    answer: 'MG Events est basé à Redon (35), à 185 km environ de Quimper et 235 km de Brest : le Finistère se situe en dehors de notre zone d\'intervention habituelle. Une prestation à Brest, Quimper, Morlaix ou Concarneau reste possible, mais elle est étudiée au cas par cas selon la date, la formule choisie et les contraintes logistiques. Les frais de déplacement et, si nécessaire, d\'hébergement sont précisés sur le devis.',
   },
   {
     question: 'Proposez-vous la sonorisation de cérémonie laïque ?',
@@ -228,15 +228,20 @@ export default function DJMariageFinistere() {
                 DJ Mariage <span className="text-[#c9a227]">Finistère</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Votre DJ animateur de mariage à Quimper, Brest et dans tout le 29
+                Une prestation dans le 29, étudiée au cas par cas
               </h2>
               <p className="text-[#888] leading-relaxed mb-8">
-                Du nord au sud du <strong className="text-white">Finistère</strong>, MG Events Animation fait vibrer vos soirées !
-                <strong className="text-white"> DJ animateur en Finistère</strong> et véritable
-                <strong className="text-white"> animateur de soirée</strong>, nous assurons l&apos;animation mariage à
-                <span className="text-[#c9a227]"> Brest</span>, l&apos;animation mariage à
-                <span className="text-[#c9a227]"> Quimper</span>, ainsi qu&apos;à Morlaix, Concarneau, Douarnenez, Crozon, Landerneau et Châteaulin —
-                sonorisation professionnelle et éclairage inclus.
+                <strong className="text-white">MG Events Animation est basé à Redon (35)</strong> : le
+                <strong className="text-white"> Finistère</strong> se situe en dehors de notre secteur
+                d&apos;intervention habituel (environ 100 km autour de Redon). Nous y intervenons néanmoins pour des
+                projets qui s&apos;y prêtent — animation mariage à <span className="text-[#c9a227]">Quimper</span>,
+                <span className="text-[#c9a227]"> Brest</span>, Morlaix, Concarneau, Douarnenez ou Landerneau — avec
+                sonorisation professionnelle et éclairage.
+              </p>
+              <p className="text-[#888] leading-relaxed mb-8">
+                Chaque demande est étudiée selon la date, la formule choisie et les contraintes logistiques. Les frais
+                de déplacement et, si nécessaire, d&apos;hébergement sont chiffrés et indiqués clairement sur le devis.
+                Rien n&apos;est facturé sans avoir été annoncé.
               </p>
               <p className="text-[#888] leading-relaxed mb-8">
                 Avec <strong className="text-white">25 ans d&apos;expérience</strong> et plus de 100 mariages animés,
@@ -412,7 +417,7 @@ export default function DJMariageFinistere() {
       <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
-            DJ Mariage dans tout le <span className="text-[#c9a227]">département 29</span>
+            Les secteurs du <span className="text-[#c9a227]">département 29</span>
           </h2>
           <p className="text-[#888] text-center mb-12 max-w-3xl mx-auto">
             <strong className="text-white">Déplacement inclus jusqu&apos;à 100 km aller-retour</strong> au départ de Redon (35), puis 0,66 €/km — précisé sur votre devis.
@@ -586,7 +591,8 @@ export default function DJMariageFinistere() {
             DJ Mariage dans les <span className="text-[#c9a227]">villes du Finistère</span>
           </h2>
           <p className="text-[#888] text-center mb-8 max-w-2xl mx-auto">
-            Nous intervenons dans toutes les villes du département 29. Découvrez nos prestations près de chez vous.
+            Nos pages dédiées aux principales villes du 29. Chaque prestation y est étudiée au cas par cas, avec les
+            frais de déplacement précisés sur le devis.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             <Link href="/dj-mariage/brest" className="card-dark p-4 text-center group hover:border-[#c9a227]/40 transition-colors">
