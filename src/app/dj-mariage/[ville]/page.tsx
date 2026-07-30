@@ -227,12 +227,12 @@ function getOtherCitiesInDepartment(city: City): City[] {
 
 // Départements pour le maillage — ordonnés par proximité réelle avec Redon (35)
 // pour éviter de diluer le signal géographique vers des secteurs lointains.
+// Recentrage géo juillet 2026 : Finistère (29) et Mayenne (53) retirés
+// (trop loin de Redon) — ne plus les réintroduire ici.
 const departments = [
   { name: 'Morbihan', code: '56', slug: 'morbihan', priority: true },
   { name: 'Ille-et-Vilaine', code: '35', slug: 'ille-et-vilaine', priority: true },
   { name: 'Loire-Atlantique', code: '44', slug: 'loire-atlantique', priority: true },
-  { name: 'Mayenne', code: '53', slug: 'mayenne', priority: false },
-  { name: 'Finistère', code: '29', slug: 'finistere', priority: false },
 ];
 
 export default async function DJMariageVille({ params }: { params: Promise<{ ville: string }> }) {

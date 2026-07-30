@@ -12,9 +12,7 @@ export default function HomeHeader() {
   const zones = [
     { label: 'Ille-et-Vilaine (35)', href: '/dj-mariage-ille-et-vilaine' },
     { label: 'Morbihan (56)', href: '/dj-mariage-morbihan' },
-    { label: 'Finistère (29)', href: '/dj-mariage-finistere' },
     { label: 'Loire-Atlantique (44)', href: '/dj-mariage-loire-atlantique' },
-    { label: 'Mayenne (53)', href: '/dj-mariage-mayenne' },
   ];
 
   return (

@@ -58,10 +58,8 @@ const localBusinessSchema = {
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Bretagne' },
     { '@type': 'AdministrativeArea', name: 'Ille-et-Vilaine' },
-    { '@type': 'AdministrativeArea', name: 'Finistère' },
     { '@type': 'AdministrativeArea', name: 'Morbihan' },
     { '@type': 'AdministrativeArea', name: 'Loire-Atlantique' },
-    { '@type': 'AdministrativeArea', name: 'Mayenne' },
   ],
   priceRange: '1200€ - 1690€',
   openingHoursSpecification: {
@@ -97,6 +95,8 @@ const breadcrumbSchema = {
 // Séparation stricte région administrative / départements limitrophes.
 // Les Côtes-d'Armor (22) ne figurent PAS ici : aucune ville, aucune page et aucune donnée
 // dans le projet ne permet d'affirmer une couverture réelle. Ne pas les ajouter sans validation.
+// Recentrage géo juillet 2026 : Finistère (29) et Mayenne (53) retirés du groupe
+// "hors secteur" (trop loin de Redon, demandes non viables) — ne plus les réintroduire.
 const departmentGroups = [
   {
     label: 'Notre secteur habituel — rayon approximatif de 100 km autour de Redon (35)',
@@ -137,18 +137,6 @@ const departmentGroups = [
         slug: 'morbihan',
         cities: ['Lorient'],
         description: 'Pays de Lorient — environ 110 km de Redon',
-      },
-      {
-        name: 'Mayenne (53)',
-        slug: 'mayenne',
-        cities: ['Château-Gontier', 'Laval', 'Mayenne'],
-        description: 'Châteaux de la Mayenne, bocage authentique — 135 à 165 km de Redon',
-      },
-      {
-        name: 'Finistère (29)',
-        slug: 'finistere',
-        cities: ['Concarneau', 'Quimper', 'Morlaix', 'Brest'],
-        description: "Cornouaille, Léon, presqu'île de Crozon — 175 à 235 km de Redon",
       },
     ],
   },
@@ -191,7 +179,7 @@ const faqs = [
   },
   {
     question: 'Dans quels départements intervenez-vous ?',
-    answer: "MG Events est basé à Redon (35) et intervient prioritairement dans les secteurs de l'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon : Ploërmel, Vannes, Auray, Pontivy, Redon, Rennes, Saint-Nazaire, Guérande, La Baule, Nantes. Aucun de ces départements n'est couvert dans sa totalité. Le déplacement est inclus dans nos formules jusqu'à 100 km aller-retour au départ de Redon, la distance exacte étant calculée selon l'adresse du lieu de réception ; au-delà, les kilomètres supplémentaires sont facturés 0,66 € du kilomètre et figurent sur votre devis. Pour un lieu plus éloigné — Finistère, Mayenne, Côtes-d'Armor, Lorient, nord et est de l'Ille-et-Vilaine — la prestation est étudiée au cas par cas selon la date, la formule et les contraintes logistiques : des frais de déplacement et, si nécessaire, d'hébergement sont précisés sur le devis.",
+    answer: "MG Events est basé à Redon (35) et intervient prioritairement dans les secteurs de l'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan situés dans un rayon approximatif de 100 km autour de Redon : Ploërmel, Vannes, Auray, Pontivy, Redon, Rennes, Saint-Nazaire, Guérande, La Baule, Nantes. Aucun de ces départements n'est couvert dans sa totalité. Le déplacement est inclus dans nos formules jusqu'à 100 km aller-retour au départ de Redon, la distance exacte étant calculée selon l'adresse du lieu de réception ; au-delà, les kilomètres supplémentaires sont facturés 0,66 € du kilomètre et figurent sur votre devis. Pour un lieu plus éloigné — Côtes-d'Armor, Lorient, nord et est de l'Ille-et-Vilaine — la prestation est étudiée au cas par cas selon la date, la formule et les contraintes logistiques : des frais de déplacement et, si nécessaire, d'hébergement sont précisés sur le devis.",
   },
   {
     question: 'Qu\'est-ce qui vous différencie des autres DJ mariage en Bretagne ?',
@@ -287,7 +275,7 @@ export default function DJMariageBretagne() {
                 </span>
                 <span className="inline-flex items-center gap-2 text-[#aaa]">
                   <MapPin size={16} className="text-[#c9a227]" />
-                  Ille-et-Vilaine, Morbihan, Finistère, Loire-Atlantique, Mayenne
+                  Ille-et-Vilaine, Morbihan, Loire-Atlantique
                 </span>
                 <span className="inline-flex items-center gap-2 text-[#aaa]">
                   <Mic2 size={16} className="text-[#c9a227]" />
@@ -299,7 +287,7 @@ export default function DJMariageBretagne() {
                 châteaux médiévaux, manoirs en granit, domaines face à l&apos;océan, fermes de caractère rénovées,
                 abbayes et demeures historiques... Chaque mariage breton a son décor unique.
                 <strong className="text-white"> MG Events Animation intervient principalement en Ille-et-Vilaine,
-                dans le Morbihan, le Finistère, la Loire-Atlantique et la Mayenne</strong> — et selon le projet dans
+                dans le Morbihan et en Loire-Atlantique</strong> — et selon le projet dans
                 les autres départements bretons — pour apporter une animation à la hauteur de ces lieux
                 d&apos;exception.
               </p>

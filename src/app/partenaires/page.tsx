@@ -68,9 +68,7 @@ function Header() {
   const zones = [
     { label: 'Ille-et-Vilaine (35)', href: '/dj-mariage-ille-et-vilaine' },
     { label: 'Morbihan (56)', href: '/dj-mariage-morbihan' },
-    { label: 'Finistère (29)', href: '/dj-mariage-finistere' },
     { label: 'Loire-Atlantique (44)', href: '/dj-mariage-loire-atlantique' },
-    { label: 'Mayenne (53)', href: '/dj-mariage-mayenne' },
   ];
 
   return (
@@ -224,9 +222,7 @@ function Footer() {
   const zones = [
     { label: 'Ille-et-Vilaine', href: '/dj-mariage-ille-et-vilaine' },
     { label: 'Morbihan', href: '/dj-mariage-morbihan' },
-    { label: 'Finistère', href: '/dj-mariage-finistere' },
     { label: 'Loire-Atlantique', href: '/dj-mariage-loire-atlantique' },
-    { label: 'Mayenne', href: '/dj-mariage-mayenne' },
   ];
 
   const villesMariage = [
@@ -234,10 +230,10 @@ function Footer() {
     { name: 'Saint-Malo', slug: 'saint-malo' },
     { name: 'Nantes', slug: 'nantes' },
     { name: 'Vannes', slug: 'vannes' },
-    { name: 'Brest', slug: 'brest' },
+    { name: 'Redon', slug: 'redon' },
     { name: 'Lorient', slug: 'lorient' },
-    { name: 'Quimper', slug: 'quimper' },
-    { name: 'Laval', slug: 'laval' },
+    { name: 'Saint-Nazaire', slug: 'saint-nazaire' },
+    { name: 'Pontivy', slug: 'pontivy' },
   ];
 
   return (
@@ -325,7 +321,7 @@ function Footer() {
             © {new Date().getFullYear()} MG Events Animation - DJ Mariage Bretagne - Tous droits réservés
           </p>
           <p className="text-xs text-[#444]">
-            Rennes • Vannes • Nantes • Quimper • Brest • Laval
+            Rennes • Vannes • Nantes • Redon • Lorient • Saint-Malo
           </p>
         </div>
       </div>

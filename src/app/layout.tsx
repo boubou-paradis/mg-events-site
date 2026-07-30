@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | MG Events Animation",
   },
   description: "DJ mariage Bretagne — Avis 5★, formules transparentes dès 1200€ TTC. 25 ans d'expérience, AnimaJet, photobooth vintage. Devis gratuit sous 24h ✓",
-  keywords: "DJ mariage Bretagne, animation mariage Bretagne, DJ Rennes, DJ Vannes, DJ Nantes, DJ Quimper, DJ Brest, sonorisation mariage Bretagne, photobooth vintage mariage, étincelles froides mariage, cérémonie laïque sonorisation, AnimaJet animation interactive",
+  keywords: "DJ mariage Bretagne, animation mariage Bretagne, DJ Rennes, DJ Vannes, DJ Nantes, sonorisation mariage Bretagne, photobooth vintage mariage, étincelles froides mariage, cérémonie laïque sonorisation, AnimaJet animation interactive",
   authors: [{ name: "MG Events Animation" }],
   creator: "MG Events Animation",
   publisher: "MG Events Animation",
@@ -81,10 +81,8 @@ const weddingServiceJsonLd = {
   "areaServed": [
     { "@type": "State", "name": "Bretagne" },
     { "@type": "AdministrativeArea", "name": "Ille-et-Vilaine" },
-    { "@type": "AdministrativeArea", "name": "Finistère" },
     { "@type": "AdministrativeArea", "name": "Morbihan" },
-    { "@type": "AdministrativeArea", "name": "Loire-Atlantique" },
-    { "@type": "AdministrativeArea", "name": "Mayenne" }
+    { "@type": "AdministrativeArea", "name": "Loire-Atlantique" }
   ],
   "category": "Wedding Entertainment",
   "audience": { "@type": "Audience", "audienceType": "Mariés et futurs mariés" },
@@ -189,15 +187,7 @@ const jsonLd = {
     },
     {
       "@type": "AdministrativeArea",
-      "name": "Finistère"
-    },
-    {
-      "@type": "AdministrativeArea",
       "name": "Loire-Atlantique"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Mayenne"
     }
   ],
   "priceRange": "€€",

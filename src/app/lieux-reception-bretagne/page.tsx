@@ -5,8 +5,8 @@ import { ArrowLeft, MapPin, Phone, Mail, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Les Plus Beaux Lieux de Réception pour votre Mariage en Bretagne',
-  description: "Châteaux, domaines, manoirs et demeures de caractère pour votre mariage en Bretagne : Ille-et-Vilaine, Finistère, Morbihan, Loire-Atlantique, Mayenne.",
-  keywords: 'lieux réception mariage Bretagne, château mariage Bretagne, domaine mariage Bretagne, manoir mariage Bretagne, salle mariage Bretagne, lieux mariage Ille-et-Vilaine Finistère Morbihan',
+  description: "Châteaux, domaines, manoirs et demeures de caractère pour votre mariage en Bretagne : Ille-et-Vilaine, Morbihan, Loire-Atlantique.",
+  keywords: 'lieux réception mariage Bretagne, château mariage Bretagne, domaine mariage Bretagne, manoir mariage Bretagne, salle mariage Bretagne, lieux mariage Ille-et-Vilaine Morbihan',
   alternates: {
     canonical: 'https://www.mg-events35.com/lieux-reception-bretagne',
   },
@@ -57,25 +57,6 @@ const lieuxParDepartement = [
     ],
   },
   {
-    departement: 'Finistère (29)',
-    slug: 'finistere',
-    couleur: 'Pointe bretonne et côtes découpées',
-    lieux: [
-      { nom: 'Domaine de Kervail', commune: 'Plomelin', type: 'Domaine champêtre', detail: 'Domaine rural avec grange rénovée, étang et prairies — mariage champêtre en Cornouaille' },
-      { nom: 'Manoir de Moëllien', commune: 'Plonévez-Porzay', type: 'Manoir historique', detail: 'Manoir du XVIIe siècle en pleine campagne bigoudène, atmosphère romantique préservée' },
-      { nom: 'Château de Keriolet', commune: 'Concarneau', type: 'Château néogothique', detail: 'Architecture néogothique unique en Bretagne, jardins et dépendances face à la mer' },
-      { nom: 'Manoir de Kerlut', commune: 'Ploudaniel', type: 'Manoir & Jardins', detail: 'Manoir breton en pierres avec jardins soignés, à 30 min de Brest' },
-      { nom: 'Château du Taureau', commune: 'Baie de Morlaix', type: 'Forteresse insulaire Vauban', detail: 'Expérience unique : château sur îlot accessible en bateau au milieu de la baie de Morlaix' },
-      { nom: 'Abbaye de Daoulas', commune: 'Daoulas', type: 'Abbaye & Jardins médiévaux', detail: 'Cloître roman du XIIe siècle, jardins de plantes médicinales classés — mariage historique' },
-    ],
-    cityLinks: [
-      { name: 'Brest', slug: 'brest' },
-      { name: 'Quimper', slug: 'quimper' },
-      { name: 'Morlaix', slug: 'morlaix' },
-      { name: 'Concarneau', slug: 'concarneau' },
-    ],
-  },
-  {
     departement: 'Loire-Atlantique (44)',
     slug: 'loire-atlantique',
     couleur: 'Vignoble nantais et côte Atlantique',
@@ -91,22 +72,6 @@ const lieuxParDepartement = [
       { name: 'Saint-Nazaire', slug: 'saint-nazaire' },
       { name: 'La Baule', slug: 'la-baule' },
       { name: 'Guérande', slug: 'guerande' },
-    ],
-  },
-  {
-    departement: 'Mayenne (53)',
-    slug: 'mayenne',
-    couleur: 'Châteaux et bocage mayennais',
-    lieux: [
-      { nom: 'Château de Craon', commune: 'Craon', type: 'Château & Parc classé', detail: 'Château XVIIIe avec parc à l\'anglaise de 35 hectares — le plus beau château de la Mayenne' },
-      { nom: 'Domaine de Cimbré', commune: 'Bonchamp-lès-Laval', type: 'Domaine & Étang', detail: 'Domaine familial avec étang, prairie et dépendances rénovées, à 10 min de Laval' },
-      { nom: 'Château du Rocher', commune: 'Mézangers', type: 'Château historique', detail: 'Château médiéval remanié, environnement naturel exceptionnel dans la campagne mayennaise' },
-      { nom: 'Manoir de la Cour', commune: 'Quelaines-Saint-Gault', type: 'Manoir & Jardins', detail: 'Manoir élégant avec jardins à la française et dépendances — charme discret de la Mayenne' },
-    ],
-    cityLinks: [
-      { name: 'Laval', slug: 'laval' },
-      { name: 'Château-Gontier', slug: 'chateau-gontier' },
-      { name: 'Mayenne', slug: 'mayenne-ville' },
     ],
   },
 ];
@@ -317,12 +282,8 @@ export default function LieuxReceptionBretagne() {
           <div className="flex flex-wrap justify-center gap-3">
             {[
               { label: 'Ille-et-Vilaine', href: '/dj-mariage-ille-et-vilaine' },
-              { label: 'Finistère', href: '/dj-mariage-finistere' },
               { label: 'Morbihan', href: '/dj-mariage-morbihan' },
               { label: 'Loire-Atlantique', href: '/dj-mariage-loire-atlantique' },
-              { label: 'Mayenne', href: '/dj-mariage-mayenne' },
-              { label: 'Laval', href: '/dj-mariage/laval' },
-              { label: 'Morlaix', href: '/dj-mariage/morlaix' },
               { label: 'Bretagne', href: '/dj-mariage-bretagne' },
             ].map((link) => (
               <Link

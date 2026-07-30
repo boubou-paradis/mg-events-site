@@ -122,6 +122,80 @@ const nextConfig: NextConfig = {
         destination: '/#contact',
         permanent: true,
       },
+      // Recentrage géographique juillet 2026 : Finistère (29) et Mayenne (53)
+      // retirés définitivement de la zone d'intervention (trop éloignés de
+      // Redon, demandes non viables logistiquement). Redirection propre vers
+      // zones-intervention plutôt que 404 — ne pas recréer ces pages.
+      {
+        source: '/dj-mariage-finistere',
+        destination: '/zones-intervention',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage-mayenne',
+        destination: '/zones-intervention',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage/brest',
+        destination: '/zones-intervention',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage/quimper',
+        destination: '/zones-intervention',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage/morlaix',
+        destination: '/zones-intervention',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage/concarneau',
+        destination: '/zones-intervention',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage/laval',
+        destination: '/zones-intervention',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage/mayenne-ville',
+        destination: '/zones-intervention',
+        permanent: true,
+      },
+      {
+        source: '/dj-mariage/chateau-gontier',
+        destination: '/zones-intervention',
+        permanent: true,
+      },
+      {
+        source: '/dj-soiree-entreprise/brest',
+        destination: '/dj-soiree-entreprise',
+        permanent: true,
+      },
+      {
+        source: '/dj-soiree-entreprise/quimper',
+        destination: '/dj-soiree-entreprise',
+        permanent: true,
+      },
+      {
+        source: '/dj-soiree-entreprise/laval',
+        destination: '/dj-soiree-entreprise',
+        permanent: true,
+      },
+      {
+        source: '/animation-anniversaire/brest',
+        destination: '/dj-anniversaire-bretagne',
+        permanent: true,
+      },
+      {
+        source: '/animation-anniversaire/laval',
+        destination: '/dj-anniversaire-bretagne',
+        permanent: true,
+      },
     ]
   },
 };

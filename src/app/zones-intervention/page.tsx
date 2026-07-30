@@ -25,14 +25,12 @@ export const metadata: Metadata = {
 };
 
 // Départements ordonnés par proximité réelle avec Redon (35).
-// `priority` = le département compte des SECTEURS dans le rayon approximatif de
-// 100 km autour de Redon. Jamais le département entier.
+// Recentrage géo juillet 2026 : Finistère (29) et Mayenne (53) retirés
+// (trop loin de Redon) — ne plus les réintroduire ici.
 const departments = [
-  { name: 'Morbihan', code: '56', slug: 'morbihan', priority: true },
-  { name: 'Loire-Atlantique', code: '44', slug: 'loire-atlantique', priority: true },
-  { name: 'Ille-et-Vilaine', code: '35', slug: 'ille-et-vilaine', priority: true },
-  { name: 'Mayenne', code: '53', slug: 'mayenne', priority: false },
-  { name: 'Finistère', code: '29', slug: 'finistere', priority: false },
+  { name: 'Morbihan', code: '56', slug: 'morbihan' },
+  { name: 'Loire-Atlantique', code: '44', slug: 'loire-atlantique' },
+  { name: 'Ille-et-Vilaine', code: '35', slug: 'ille-et-vilaine' },
 ];
 
 export default function ZonesIntervention() {
@@ -250,9 +248,9 @@ export default function ZonesIntervention() {
           <p className="text-[#888] text-center mb-10 max-w-2xl mx-auto text-sm">
             Les départements sont classés par proximité réelle avec Redon. « Secteurs proches » signifie qu&apos;une
             partie seulement du département se situe dans le rayon approximatif de 100 km — jamais le département
-            entier. Ceux marqués « sur étude » sont intégralement en dehors du secteur habituel.
+            entier.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {departments.map((dept) => (
               <Link
                 key={dept.code}
@@ -261,14 +259,8 @@ export default function ZonesIntervention() {
               >
                 <p className="text-white font-medium">{dept.name}</p>
                 <p className="text-[#888] text-sm mb-2">({dept.code})</p>
-                <span
-                  className={`inline-block px-2 py-0.5 rounded-full text-[11px] uppercase tracking-wider ${
-                    dept.priority
-                      ? 'bg-[#c9a227]/15 text-[#c9a227]'
-                      : 'bg-[#1a1a1a] border border-[#666]/40 text-[#888]'
-                  }`}
-                >
-                  {dept.priority ? 'Secteurs proches' : 'Sur étude'}
+                <span className="inline-block px-2 py-0.5 rounded-full text-[11px] uppercase tracking-wider bg-[#c9a227]/15 text-[#c9a227]">
+                  Secteurs proches
                 </span>
               </Link>
             ))}

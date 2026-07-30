@@ -1497,15 +1497,12 @@ function AutresEvenements() {
     { name: 'Nantes', slug: 'nantes' },
     { name: 'Saint-Malo', slug: 'saint-malo' },
     { name: 'Vannes', slug: 'vannes' },
-    { name: 'Brest', slug: 'brest' },
   ];
 
   const villesAnniversaire = [
     { name: 'Rennes', slug: 'rennes' },
     { name: 'Nantes', slug: 'nantes' },
     { name: 'Vannes', slug: 'vannes' },
-    { name: 'Brest', slug: 'brest' },
-    { name: 'Laval', slug: 'laval' },
   ];
 
   return (
@@ -1609,21 +1606,19 @@ function AutresEvenements() {
 // ============ ZONES DJ MARIAGE BRETAGNE (SEO) ============
 function ZonesMariage() {
   // Départements — ordonnés par proximité réelle avec Redon (35).
-  // `sousEtude` : département hors du secteur d'intervention habituel.
+  // Recentrage géo juillet 2026 : Finistère (29) et Mayenne (53) retirés
+  // (trop loin de Redon) — ne plus les réintroduire ici.
   const departements = [
     { label: 'Morbihan (56)', href: '/dj-mariage-morbihan', sousEtude: false },
     { label: 'Ille-et-Vilaine (35)', href: '/dj-mariage-ille-et-vilaine', sousEtude: false },
     { label: 'Loire-Atlantique (44)', href: '/dj-mariage-loire-atlantique', sousEtude: false },
-    { label: 'Mayenne (53)', href: '/dj-mariage-mayenne', sousEtude: true },
-    { label: 'Finistère (29)', href: '/dj-mariage-finistere', sousEtude: true },
   ];
 
   // Villes situées dans le rayon approximatif de 100 km autour de Redon, triées
   // par distance routière approximative. Le maillage site-wide de la page
   // d'accueil est volontairement concentré ici pour limiter la dilution
-  // géographique ; les villes plus lointaines (Vitré, Lorient, Saint-Malo,
-  // Laval, Quimper…) restent accessibles via les pages départementales et
-  // /zones-intervention.
+  // géographique ; les villes plus lointaines (Vitré, Lorient, Saint-Malo…)
+  // restent accessibles via les pages départementales et /zones-intervention.
   const villesMariage = [
     { name: 'Redon', slug: 'redon' },
     { name: 'Ploërmel', slug: 'ploermel' },
@@ -1757,7 +1752,7 @@ function ZonesMariage() {
         <div className="mb-10 rounded-lg border border-[#c9a227]/25 bg-[#0a0a0a] px-5 py-4">
           <p className="text-sm text-[#aaa] leading-relaxed">
             <span className="text-[#c9a227] font-semibold">Votre lieu est plus éloigné ?</span> Pour les lieux situés
-            en dehors de notre zone habituelle (Finistère, Mayenne, Côtes-d&apos;Armor, Lorient, nord et est de l&apos;Ille-et-Vilaine…), les
+            en dehors de notre zone habituelle (Côtes-d&apos;Armor, Lorient, nord et est de l&apos;Ille-et-Vilaine…), les
             prestations sont étudiées au cas par cas selon la date, la formule choisie et les contraintes logistiques.
             Des frais de déplacement et, si nécessaire, d&apos;hébergement sont précisés sur le devis.{' '}
             <Link href="/zones-intervention" className="text-[#c9a227] hover:underline">
@@ -1792,8 +1787,6 @@ function Footer() {
     { label: 'Morbihan', href: '/dj-mariage-morbihan' },
     { label: 'Ille-et-Vilaine', href: '/dj-mariage-ille-et-vilaine' },
     { label: 'Loire-Atlantique', href: '/dj-mariage-loire-atlantique' },
-    { label: 'Mayenne', href: '/dj-mariage-mayenne' },
-    { label: 'Finistère', href: '/dj-mariage-finistere' },
   ];
 
   // Maillage site-wide recentré sur le rayon approximatif de 100 km autour de Redon.

@@ -31,19 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/dj-mariage-finistere`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/dj-mariage-loire-atlantique`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/dj-mariage-mayenne`,
       lastModified: today,
       changeFrequency: 'monthly',
       priority: 0.9,
@@ -61,8 +49,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    // Note : /dj-morlaix et /dj-mariage-quimper ont été consolidés (301) vers
-    // /dj-mariage/morlaix et /dj-mariage/quimper (route dynamique, incluse plus bas).
+    // Note : recentrage géo juillet 2026 — Finistère (29) et Mayenne (53)
+    // retirés (301 vers /zones-intervention), y compris leurs villes
+    // (Brest, Quimper, Morlaix, Concarneau, Laval, Mayenne-ville,
+    // Château-Gontier) qui ne sont plus dans cities.ts, donc plus dans
+    // djMariagePages plus bas.
     // Prestation Livre d'Or Audio
     {
       url: `${baseUrl}/livre-dor-audio`,

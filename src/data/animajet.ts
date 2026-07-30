@@ -313,9 +313,7 @@ export function buildClusterServiceSchema(opts: {
       { '@type': 'State', name: 'Bretagne' },
       { '@type': 'AdministrativeArea', name: 'Ille-et-Vilaine' },
       { '@type': 'AdministrativeArea', name: 'Morbihan' },
-      { '@type': 'AdministrativeArea', name: 'Finistère' },
       { '@type': 'AdministrativeArea', name: 'Loire-Atlantique' },
-      { '@type': 'AdministrativeArea', name: 'Mayenne' },
     ],
     isPartOf: { '@type': 'Service', name: 'AnimaJet', url: `${BASE_URL}/animations-interactives-mariage` },
   };
