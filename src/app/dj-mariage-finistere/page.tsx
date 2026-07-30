@@ -90,15 +90,16 @@ const localBusinessSchema = {
   "email": "contact@mg-events35.com",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Quimper",
+    "streetAddress": "10, La Lande des Couédies",
+    "addressLocality": "Bains-sur-Oust",
     "addressRegion": "Bretagne",
-    "postalCode": "29000",
+    "postalCode": "35600",
     "addressCountry": "FR"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 47.9960,
-    "longitude": -4.1024
+    "latitude": 47.6931,
+    "longitude": -2.08544
   },
   "areaServed": [
     { "@type": "City", "name": "Quimper" },

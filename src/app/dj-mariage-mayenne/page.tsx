@@ -89,15 +89,16 @@ const localBusinessSchema = {
   "email": "contact@mg-events35.com",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Laval",
-    "addressRegion": "Pays de la Loire",
-    "postalCode": "53000",
+    "streetAddress": "10, La Lande des Couédies",
+    "addressLocality": "Bains-sur-Oust",
+    "addressRegion": "Bretagne",
+    "postalCode": "35600",
     "addressCountry": "FR"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 48.0689,
-    "longitude": -0.7726
+    "latitude": 47.6931,
+    "longitude": -2.08544
   },
   "areaServed": [
     { "@type": "City", "name": "Laval" },

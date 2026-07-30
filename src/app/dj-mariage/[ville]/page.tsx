@@ -167,17 +167,20 @@ function generateLocalBusinessSchema(city: City) {
     "url": `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     "telephone": "+33648106166",
     "email": "contact@mg-events35.com",
+    // NAP réel de l'entreprise (Bains-sur-Oust / Redon) : ne jamais déclarer une
+    // adresse dans la ville cible, MG Events n'y a pas d'établissement.
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": city.name,
+      "streetAddress": "10, La Lande des Couédies",
+      "addressLocality": "Bains-sur-Oust",
       "addressRegion": "Bretagne",
-      "postalCode": city.postalCode,
+      "postalCode": "35600",
       "addressCountry": "FR"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": city.latitude,
-      "longitude": city.longitude
+      "latitude": 47.6931,
+      "longitude": -2.08544
     },
     "areaServed": [
       { "@type": "City", "name": city.name },
