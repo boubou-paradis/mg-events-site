@@ -89,6 +89,10 @@ export const cities: City[] = [
     population: '220 000',
     distanceFromRedonKm: 70,
     zone: 'prioritaire',
+    // Test CTR 28/08/2026 : "DJ Mariage Rennes" en tête de title (au lieu de
+    // "DJ & Animation Mariage Rennes") pour capter l'expression exacte dès le
+    // début du snippet. Template global ajoute " | MG Events Animation".
+    metaTitle: 'DJ Mariage Rennes · Avis 5★ · Dès 1200€',
     seoDescription: `Rennes, capitale de la Bretagne, est la métropole de référence pour les mariages haut de gamme dans le Grand Ouest. Avec son patrimoine historique, son accessibilité exceptionnelle (TGV Paris-Rennes en 1h25) et une offre de domaines et châteaux parmi les plus denses de France, la métropole rennaise séduit chaque année des centaines de couples de toute la région — et au-delà.
 
 Chercher un DJ mariage à Rennes, c'est chercher quelqu'un qui connaît vraiment le territoire. Les salles ont chacune leurs contraintes acoustiques : la pierre apparente du Manoir de la Begaudière réverbère différemment des volumes contemporains du Florian. Le Domaine de Cicé-Blossac, à Bruz, avec son golf 18 trous et ses jardins à la française, est l'un des lieux les plus prisés du 35 — et nous y avons animé de nombreuses soirées. Chaque fois, nous arrivons avec une installation adaptée à l'espace, jamais du matériel "générique".
