@@ -258,7 +258,7 @@ export default function EtincellesFroidesMariagePage() {
             { href: '/blog/ouverture-de-bal-conseils', title: "Réussir son ouverture de bal", desc: 'Musique, chorégraphie et timing' },
             { href: '/tarifs-dj-mariage', title: 'Tarifs DJ mariage', desc: 'Formules et options en détail' },
             { href: '/dj-mariage-bretagne', title: 'DJ de mariage en Bretagne', desc: 'La prestation complète' },
-            { href: '/feu-artifice-jour', title: "Feu d'Artifice de Jour", desc: 'La poudre Holi pour vos photos de jour' },
+            { href: '/feu-artifice-jour', title: "Feu d'Artifice de Jour", desc: 'La fumée colorée pour vos photos de jour' },
           ].map((link) => (
             <Link key={link.href} href={link.href} className="card-dark p-4 hover:border-[#c9a227]/30 transition-colors">
               <p className="text-white font-medium mb-1">{link.title}</p>

@@ -99,10 +99,10 @@ const options = [
     href: '/livre-dor-audio',
   },
   {
-    name: "Feu d'Artifice de Jour (poudre Holi)",
-    price: '120',
+    name: "Feu d'Artifice de Jour",
+    price: '180',
     detail:
-      'Tir de poudre colorée pour la sortie des mariés ou la photo de groupe, en plein jour. Sur demande.',
+      'Jets de fumée colorée pour la sortie des mariés ou la photo de groupe, en plein jour. Sur demande.',
     href: '/feu-artifice-jour',
   },
 ];

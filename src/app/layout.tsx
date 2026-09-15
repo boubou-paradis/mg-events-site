@@ -118,7 +118,7 @@ const weddingServiceJsonLd = {
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photobooth vintage TSF", "description": "Cabine photobooth style TSF années 60 avec impressions instantanées personnalisées." } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AnimaJet — animations interactives", "description": "Plateforme d'animations interactives conçue et développée par MG Events : quiz, blind test, photo mystère sur grand écran." } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Effets spéciaux", "description": "Étincelles froides certifiées CE et fumée lourde pour l'ouverture de bal." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Feu d'Artifice de Jour", "description": "Tir de poudre Holi colorée pour la sortie des mariés et la photo de groupe." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Feu d'Artifice de Jour", "description": "Jets de fumée colorée pour la sortie des mariés et la photo de groupe." } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Livre d'Or Audio", "description": "Téléphone rétro à messages vocaux : vos invités laissent un souvenir audio à réécouter pour la vie." } }
     ]
   }

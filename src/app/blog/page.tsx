@@ -79,7 +79,7 @@ const articles = [
   {
     slug: 'feu-artifice-jour-mariage-poudre-holi',
     title: "Feu d'artifice de jour : l'explosion de couleurs qui sublime votre mariage",
-    excerpt: "Nouveauté 2026 : le feu d'artifice de jour à la poudre Holi colore la sortie des mariés et la cérémonie laïque en plein jour. Concept, couleurs, moments idéaux et tarif (120€).",
+    excerpt: "Nouveauté 2026 : le feu d'artifice de jour à la fumée colorée sublime la sortie des mariés et la cérémonie laïque en plein jour. Concept, couleurs, moments idéaux et tarif (180€ TTC).",
     image: '/images/feu-artifice-jour-mariage.png',
     date: '20 juin 2026',
     readTime: '7 min',

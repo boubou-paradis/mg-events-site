@@ -259,7 +259,7 @@ function NosServices() {
     { icon: Printer, title: 'Photobooth vintage', description: 'Cabine TSF années 60, impressions instantanées et souvenirs personnalisés pour vos invités.', href: '/photobooth-mariage' },
     { icon: Monitor, title: 'Animations interactives AnimaJet', description: 'Quiz, blind test et photo mystère sur grand écran — notre plateforme conçue maison.', href: '#animajet' },
     { icon: Flame, title: 'Effets spéciaux', description: 'Étincelles froides certifiées CE et fumée lourde pour une ouverture de bal spectaculaire.', href: '/etincelles-froides-mariage' },
-    { icon: Palette, title: 'Feu d\'Artifice de Jour', description: 'Tir de poudre Holi colorée pour sublimer la sortie des mariés et la photo de groupe.', href: '/feu-artifice-jour' },
+    { icon: Palette, title: 'Feu d\'Artifice de Jour', description: 'Jets de fumée colorée pour sublimer la sortie des mariés et la photo de groupe.', href: '/feu-artifice-jour' },
     { icon: Phone, title: 'Livre d\'Or Audio', description: 'Téléphone rétro où vos invités laissent un message vocal à réécouter pour la vie.', href: '/livre-dor-audio' },
   ];
 
@@ -1354,7 +1354,7 @@ function FeuArtificeJour() {
 
   return (
     <section id="feu-artifice-jour" className="py-16 bg-[#0a0a0a] relative overflow-hidden">
-      {/* Halos colorés (clin d'œil à la poudre Holi) */}
+      {/* Halos colorés (clin d'œil à l'explosion de couleurs) */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-fuchsia-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl" />
 
@@ -1367,19 +1367,19 @@ function FeuArtificeJour() {
           <h2 className="section-title text-white mb-2">
             Feu d&apos;Artifice de Jour — <span className="text-gradient-gold">Explosion de Couleurs</span>
           </h2>
-          <p className="text-[#888]">Un tir de poudre Holi qui explose en couleurs au plus beau moment de votre mariage</p>
+          <p className="text-[#888]">Un tir de fumée colorée qui explose en couleurs au plus beau moment de votre mariage</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <LightboxTrigger
             src="/images/feu-artifice-jour-mariage.png"
-            alt="Feu d'artifice de jour - tir de poudre Holi colorée lors d'une cérémonie de mariage en Bretagne - MG Events"
+            alt="Feu d'artifice de jour - tir de fumée colorée lors d'une cérémonie de mariage en Bretagne - MG Events"
             className="relative h-80 lg:h-[420px] rounded-lg overflow-hidden border border-[#c9a227]/10 cursor-zoom-in"
           >
             <Image
               src="/images/feu-artifice-jour-mariage.png"
-              alt="Feu d'artifice de jour - tir de poudre Holi colorée lors d'une cérémonie de mariage en Bretagne - MG Events"
+              alt="Feu d'artifice de jour - tir de fumée colorée lors d'une cérémonie de mariage en Bretagne - MG Events"
               fill
               className="object-contain"
             />
@@ -1408,9 +1408,9 @@ function FeuArtificeJour() {
             <div className="card-dark p-8 hover:border-[#c9a227]/40 transition-all duration-300">
               <p className="text-[#aaa] leading-relaxed mb-4">
                 Et si vos plus belles photos prenaient des couleurs ? Le <strong className="text-white">feu
-                d&apos;artifice de jour</strong> propulse un nuage de <strong className="text-white">poudre
-                Holi</strong> à plusieurs mètres de hauteur grâce à un tir de <strong className="text-white">4
-                canons de 80 cm</strong>, déclenchés de façon synchronisée. Un effet
+                d&apos;artifice de jour</strong> propulse des <strong className="text-white">jets de fumée
+                colorée</strong> à plusieurs mètres de hauteur, avec un tir de <strong className="text-white">4
+                couleurs au choix</strong>, déclenché de façon synchronisée. Un effet
                 <span className="text-[#c9a227]"> spectaculaire en plein jour</span>, là où les feux
                 d&apos;artifice classiques ne peuvent rien.
               </p>
@@ -1437,8 +1437,8 @@ function FeuArtificeJour() {
 
               <ul className="space-y-2 mb-6">
                 {[
-                  '4 canons de poudre Holi de 80 cm, tir synchronisé',
-                  'Poudre colorée non toxique, effet visible en plein jour',
+                  'Jets de fumée colorée, tir synchronisé',
+                  '4 couleurs au choix, effet visible en plein jour',
                   'Idéal cérémonie laïque, sortie des mariés, photo de groupe',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-[#aaa]">
@@ -1456,8 +1456,8 @@ function FeuArtificeJour() {
                     <p className="text-[#888] text-xs">4 couleurs au choix • sur demande</p>
                   </div>
                   <div className="text-right">
-                    <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">120</span>
-                    <span className="text-[#888] text-sm ml-1">€</span>
+                    <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">180</span>
+                    <span className="text-[#888] text-sm ml-1">€ TTC</span>
                   </div>
                 </div>
                 <p className="mt-3 pt-3 border-t border-[#c9a227]/20 text-xs text-[#aaa] flex items-start gap-2">

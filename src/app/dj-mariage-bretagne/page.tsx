@@ -398,9 +398,9 @@ export default function DJMariageBretagne() {
                   </span>
                 </div>
                 <p className="text-[#888] text-sm">
-                  Un tir de 4 canons de poudre Holi, couleurs au choix, déclenché de façon synchronisée pour
+                  Un tir de jets de fumée colorée, 4 couleurs au choix, déclenché de façon synchronisée pour
                   sublimer la fin de cérémonie laïque ou la sortie des mariés. Spectaculaire en plein jour —
-                  120€ pour 4 couleurs au choix.
+                  180€ TTC pour 4 couleurs au choix.
                 </p>
               </div>
               <Link href="/feu-artifice-jour" className="btn-outline shrink-0 text-sm inline-flex items-center gap-2">

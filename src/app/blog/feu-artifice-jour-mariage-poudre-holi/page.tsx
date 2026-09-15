@@ -7,14 +7,14 @@ const SLUG = 'feu-artifice-jour-mariage-poudre-holi';
 const BASE = 'https://www.mg-events35.com';
 
 export const metadata: Metadata = {
-  title: 'Feu d\'artifice de jour mariage : la poudre Holi explose en couleurs',
+  title: 'Feu d\'artifice de jour mariage : l\'explosion de couleurs qui sublime votre mariage',
   description:
-    "Le feu d'artifice de jour à la poudre Holi colore la sortie des mariés et la cérémonie laïque. Fonctionnement, couleurs, moments idéaux, tarif 120€.",
+    "Le feu d'artifice de jour à la fumée colorée sublime la sortie des mariés et la cérémonie laïque. Fonctionnement, couleurs, moments idéaux, tarif 180€ TTC.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
-    title: "Feu d'artifice de jour mariage : la poudre Holi explose en couleurs",
+    title: "Feu d'artifice de jour mariage : l'explosion de couleurs qui sublime votre mariage",
     description:
-      "Tout savoir sur le feu d'artifice de jour à la poudre Holi pour un mariage en Bretagne : concept, couleurs, moments idéaux et tarif.",
+      "Tout savoir sur le feu d'artifice de jour à la fumée colorée pour un mariage en Bretagne : concept, couleurs, moments idéaux et tarif.",
     url: `${BASE}/blog/${SLUG}`,
     images: [{ url: `${BASE}/images/feu-artifice-jour-mariage.png` }],
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Le feu d\'artifice de jour est-il dangereux ?',
-    a: "Non. La poudre Holi est une poudre colorée fine et non toxique, projetée par des canons à air comprimé : il n'y a ni flamme, ni explosion pyrotechnique, ni chaleur. C'est une animation visuelle, sans danger pour vos invités, parfaite en extérieur.",
+    a: "Non. Les jets de fumée colorée utilisés sont non toxiques et projetés sans flamme, ni chaleur, ni explosion pyrotechnique. C'est une animation visuelle, sans danger pour vos invités, parfaite en extérieur.",
   },
   {
     q: 'Quelle est la différence avec les étincelles froides ?',
@@ -34,22 +34,22 @@ const faqs = [
     a: "Rose, bleu, jaune, vert, violet, orange… Notre formule comprend 4 couleurs au choix, que vous sélectionnez selon votre thème de mariage. Un même tir peut mélanger plusieurs teintes pour un effet arc-en-ciel.",
   },
   {
-    q: 'La poudre tache-t-elle les vêtements ?',
-    a: "La poudre Holi se dépose légèrement et se brosse facilement une fois sèche. Pour la robe de mariée, nous calons le positionnement et le sens du vent avec vous afin de maîtriser l'effet : on peut viser un nuage spectaculaire derrière les mariés sans les recouvrir, ou au contraire jouer le jeu des couleurs pour des photos plus folles.",
+    q: 'La fumée colorée tache-t-elle les vêtements ?',
+    a: "La fumée colorée se dissipe rapidement et ne laisse pas de trace durable. Pour la robe de mariée, nous calons le positionnement et le sens du vent avec vous afin de maîtriser l'effet : on peut viser un nuage spectaculaire derrière les mariés sans les recouvrir, ou au contraire jouer le jeu des couleurs pour des photos plus folles.",
   },
   {
     q: 'Quel est le tarif du feu d\'artifice de jour ?',
-    a: "Le feu d'artifice de jour est proposé à 120€ pour un tir de 4 couleurs au choix, en supplément d'une formule DJ ou animation MG Events (cette option n'est pas proposée seule). C'est une nouveauté disponible sur demande : contactez-nous pour vérifier la disponibilité à la date de votre mariage en Bretagne.",
+    a: "Le feu d'artifice de jour est proposé à 180€ TTC pour un tir de 4 couleurs au choix, en supplément d'une formule DJ ou animation MG Events (cette option n'est pas proposée seule). C'est une nouveauté disponible sur demande : contactez-nous pour vérifier la disponibilité à la date de votre mariage en Bretagne.",
   },
 ];
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: "Feu d'artifice de jour mariage : la poudre Holi explose en couleurs",
+  headline: "Feu d'artifice de jour mariage : l'explosion de couleurs qui sublime votre mariage",
   image: `${BASE}/images/feu-artifice-jour-mariage.png`,
   datePublished: '2026-06-20',
-  dateModified: '2026-06-20',
+  dateModified: '2026-09-15',
   author: { '@type': 'Person', name: 'Laurence — MG Events Animation' },
   publisher: {
     '@type': 'Organization',
@@ -58,7 +58,7 @@ const articleSchema = {
   },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `${BASE}/blog/${SLUG}` },
   description:
-    "Le feu d'artifice de jour à la poudre Holi : l'animation originale qui colore la sortie des mariés et la cérémonie laïque en plein jour.",
+    "Le feu d'artifice de jour à la fumée colorée : l'animation originale qui sublime la sortie des mariés et la cérémonie laïque en plein jour.",
 };
 
 const faqSchema = {
@@ -105,7 +105,7 @@ export default function Article() {
         <div className="relative h-[400px] bg-[#141414]">
           <Image
             src="/images/feu-artifice-jour-mariage.png"
-            alt="Feu d'artifice de jour - explosion de poudre Holi colorée lors d'un mariage en Bretagne - MG Events"
+            alt="Feu d'artifice de jour - explosion de fumée colorée lors d'un mariage en Bretagne - MG Events"
             fill
             className="object-contain"
             priority
@@ -148,7 +148,7 @@ export default function Article() {
 
             <p className="text-[#888] text-lg mb-6">
               Et si vos plus belles photos prenaient des couleurs ? Le feu d&apos;artifice de jour, à base de
-              poudre Holi, est l&apos;animation originale qui colore la sortie des mariés et la fin de cérémonie
+              fumée colorée, est l&apos;animation originale qui sublime la sortie des mariés et la fin de cérémonie
               laïque en plein jour. On vous explique tout : concept, couleurs, moments idéaux et tarif.
             </p>
 
@@ -168,7 +168,7 @@ export default function Article() {
             <p className="text-[#c9a227] text-sm font-medium uppercase tracking-wider mb-4">Dans cet article</p>
             <ol className="space-y-2 text-sm text-[#aaa]">
               <li><a href="#concept" className="hover:text-[#c9a227] transition-colors">1. Qu&apos;est-ce que le feu d&apos;artifice de jour ?</a></li>
-              <li><a href="#poudre-holi" className="hover:text-[#c9a227] transition-colors">2. La poudre Holi : d&apos;où vient cette explosion de couleurs ?</a></li>
+              <li><a href="#effet-fumee-coloree" className="hover:text-[#c9a227] transition-colors">2. La fumée colorée : d&apos;où vient cette explosion de couleurs ?</a></li>
               <li><a href="#pourquoi" className="hover:text-[#c9a227] transition-colors">3. Pourquoi l&apos;adopter pour votre mariage ?</a></li>
               <li><a href="#moments" className="hover:text-[#c9a227] transition-colors">4. À quel moment le déclencher ?</a></li>
               <li><a href="#fonctionnement" className="hover:text-[#c9a227] transition-colors">5. Comment ça fonctionne ?</a></li>
@@ -188,11 +188,11 @@ export default function Article() {
                 <strong className="text-white">feu d&apos;artifice de jour</strong> renverse les codes : il
                 explose en pleine lumière, au cœur de votre journée, là où se concentrent les émotions et les
                 photos. Plutôt que des gerbes de feu, il libère un nuage de{' '}
-                <strong className="text-white">poudre colorée</strong> qui monte à plusieurs mètres de hauteur
+                <strong className="text-white">fumée colorée</strong> qui monte à plusieurs mètres de hauteur
                 et reste suspendu quelques secondes — le temps de capter des clichés inoubliables.
               </p>
               <p>
-                Concrètement, ce sont <strong className="text-white">4 canons de poudre Holi de 80 cm</strong>,
+                Concrètement, ce sont des <strong className="text-white">jets de fumée colorée</strong>,
                 déclenchés de façon <span className="text-[#c9a227]">synchronisée</span>, qui transforment une
                 simple sortie de cérémonie en image de carte postale. L&apos;effet est immédiat, joyeux et
                 totalement visible en plein jour.
@@ -212,21 +212,19 @@ export default function Article() {
                 ))}
               </div>
 
-              <h2 id="poudre-holi" className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
-                2. La poudre Holi : d&apos;où vient cette explosion de couleurs ?
+              <h2 id="effet-fumee-coloree" className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
+                2. La fumée colorée : d&apos;où vient cette explosion de couleurs ?
               </h2>
               <p>
-                La <strong className="text-white">poudre Holi</strong> tire son nom de la célèbre{' '}
-                <strong className="text-white">fête indienne des couleurs</strong>, Holi, où l&apos;on se
-                couvre mutuellement de pigments éclatants pour célébrer le printemps, l&apos;amour et le
-                renouveau. C&apos;est une poudre fine, légère et <strong className="text-white">non
-                toxique</strong>, qui se disperse dans l&apos;air en formant de magnifiques nuages colorés.
+                L&apos;effet repose sur des <strong className="text-white">jets de fumée colorée</strong>,
+                légers et <strong className="text-white">non toxiques</strong>, qui se dispersent dans l&apos;air
+                en formant de magnifiques nuages colorés avant de se dissiper rapidement, sans laisser de trace.
               </p>
               <p>
-                Pour un mariage, cette symbolique tombe à pic : <span className="text-[#c9a227]">la joie, la
-                couleur et le renouveau</span>. Projetée par nos canons, la poudre capte la lumière du jour et
-                crée un rendu photo absolument unique — bien plus original qu&apos;un lâcher de ballons ou de
-                pétales, et infiniment plus spectaculaire.
+                Pour un mariage, l&apos;effet tombe à pic : <span className="text-[#c9a227]">la joie, la
+                couleur et la fête</span>. La fumée colorée capte la lumière du jour et crée un rendu photo
+                absolument unique — bien plus original qu&apos;un lâcher de ballons ou de pétales, et infiniment
+                plus spectaculaire.
               </p>
 
               <h2 id="pourquoi" className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
@@ -242,7 +240,7 @@ export default function Article() {
                   'Un effet spectaculaire et original, visible en plein jour',
                   'Des photos de groupe dynamiques, colorées et pleines de mouvement',
                   'Une animation qui surprend et fait participer tous vos invités',
-                  'Une poudre non toxique, sans flamme ni chaleur',
+                  'Une fumée colorée non toxique, sans flamme ni chaleur',
                   '4 couleurs à coordonner avec votre thème et votre décoration',
                   'Idéal en extérieur : jardins, châteaux, domaines bretons',
                 ].map((item) => (
@@ -301,7 +299,7 @@ export default function Article() {
               <div className="grid sm:grid-cols-3 gap-4 my-8">
                 {[
                   { step: '1', title: 'On choisit les couleurs', desc: 'Vous sélectionnez 4 couleurs en accord avec votre thème. On définit ensemble le moment du tir.' },
-                  { step: '2', title: 'On positionne les canons', desc: '4 canons de poudre Holi de 80 cm, placés selon le lieu, le vent et l\'angle du photographe.' },
+                  { step: '2', title: 'On positionne le dispositif', desc: 'Les jets de fumée colorée sont placés selon le lieu, le vent et l\'angle du photographe.' },
                   { step: '3', title: 'On déclenche en synchro', desc: 'Tir synchronisé au moment choisi : le nuage de couleurs explose en plein jour. Magique.' },
                 ].map((item) => (
                   <div key={item.step} className="card-dark p-6 relative">
@@ -317,7 +315,7 @@ export default function Article() {
               <div className="card-dark p-6 my-8 bg-gradient-to-r from-[#c9a227]/5 to-transparent border-[#c9a227]/20">
                 <p className="text-white font-medium mb-2">Le tarif</p>
                 <p className="text-[#888]">
-                  Le feu d&apos;artifice de jour est proposé à <strong className="text-[#c9a227]">120€ pour un
+                  Le feu d&apos;artifice de jour est proposé à <strong className="text-[#c9a227]">180€ TTC pour un
                   tir de 4 couleurs au choix</strong>, en supplément de votre formule DJ ou animation
                   MG Events. C&apos;est une nouveauté disponible sur demande : pensez à nous en parler tôt
                   lors de la préparation de votre soirée.
@@ -345,7 +343,7 @@ export default function Article() {
                   Envie d&apos;une <span className="text-[#c9a227]">explosion de couleurs</span> pour votre mariage en Bretagne ?
                 </h3>
                 <p className="text-[#888] mb-8 max-w-xl mx-auto">
-                  Le feu d&apos;artifice de jour est une nouveauté à 120€ pour 4 couleurs au choix, à ajouter
+                  Le feu d&apos;artifice de jour est une nouveauté à 180€ TTC pour 4 couleurs au choix, à ajouter
                   à votre formule DJ MG Events (option non disponible seule). Contactez-nous pour vérifier la
                   disponibilité de votre date et recevoir plus d&apos;informations.
                 </p>

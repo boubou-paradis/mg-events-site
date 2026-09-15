@@ -601,9 +601,9 @@ export default async function DJMariageVille({ params }: { params: Promise<{ vil
                 Feu d&apos;Artifice de Jour — Explosion de Couleurs
               </h3>
               <p className="text-[#888] text-sm leading-relaxed">
-                Un tir de 4 canons de poudre Holi, couleurs au choix, déclenché de façon synchronisée pour
+                Un tir de jets de fumée colorée, 4 couleurs au choix, déclenché de façon synchronisée pour
                 sublimer la fin de cérémonie laïque ou la sortie des mariés à {city.name}. Un effet
-                spectaculaire en plein jour, idéal pour des photos de groupe inoubliables — 120€ pour 4 couleurs.
+                spectaculaire en plein jour, idéal pour des photos de groupe inoubliables — 180€ TTC pour 4 couleurs.
               </p>
               <span className="text-[#c9a227] text-sm mt-4 inline-block">Découvrir le feu d&apos;artifice de jour →</span>
             </Link>

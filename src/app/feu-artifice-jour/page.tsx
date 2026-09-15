@@ -10,16 +10,16 @@ const SLUG = 'feu-artifice-jour';
 const BASE = 'https://www.mg-events35.com';
 
 export const metadata: Metadata = {
-  title: 'Feu d\'Artifice de Jour Mariage Bretagne | Poudre Holi Cérémonie',
+  title: 'Feu d\'Artifice de Jour Mariage Bretagne | Explosion de Couleurs',
   description:
-    "Un tir de 4 canons de poudre Holi qui explose en couleurs au moment fort de votre cérémonie. 120€, 4 couleurs — option réservée à nos clients DJ, non disponible seule.",
+    "Un tir de jets de fumée colorée qui explose en couleurs au moment fort de votre cérémonie. 180€ TTC, 4 couleurs — option réservée à nos clients DJ, non disponible seule.",
   keywords:
-    "feu d'artifice de jour mariage, poudre Holi mariage, explosion couleurs cérémonie, feu artifice cérémonie laïque, canon poudre Holi mariage Bretagne, animation originale mariage, feu d'artifice diurne, poudre colorée mariage",
+    "feu d'artifice de jour mariage, explosion couleurs cérémonie, feu artifice cérémonie laïque, fumée colorée mariage Bretagne, animation originale mariage, feu d'artifice diurne, jets de fumée colorée mariage",
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
-    title: "Feu d'Artifice de Jour mariage — explosion de couleurs en poudre Holi | MG Events",
+    title: "Feu d'Artifice de Jour mariage — explosion de couleurs | MG Events",
     description:
-      "4 canons de poudre Holi, couleurs au choix, déclenchement synchronisé. Un effet spectaculaire en plein jour pour des photos inoubliables. 120€, en complément d'une formule DJ MG Events uniquement.",
+      "Jets de fumée colorée, 4 couleurs au choix, déclenchement synchronisé. Un effet spectaculaire en plein jour pour des photos inoubliables. 180€ TTC, en complément d'une formule DJ MG Events uniquement.",
     url: `${BASE}/${SLUG}`,
     images: [{ url: `${BASE}/images/feu-artifice-jour-mariage.png` }],
   },
@@ -34,12 +34,12 @@ const faqs = [
   {
     question: 'Comment fonctionne le feu d\'artifice de jour ?',
     answer:
-      "Le feu d'artifice de jour repose sur 4 canons de poudre Holi de 80 cm. Au moment choisi, ils sont déclenchés de façon synchronisée et propulsent un nuage de poudre colorée à plusieurs mètres de hauteur. L'effet est immédiat, spectaculaire et totalement visible en plein jour, contrairement aux feux d'artifice classiques réservés à la nuit.",
+      "Le feu d'artifice de jour repose sur un tir de jets de fumée colorée. Au moment choisi, ils sont déclenchés de façon synchronisée et propulsent un nuage coloré à plusieurs mètres de hauteur. L'effet est immédiat, spectaculaire et totalement visible en plein jour, contrairement aux feux d'artifice classiques réservés à la nuit.",
   },
   {
-    question: "Qu'est-ce que la poudre Holi ?",
+    question: 'Est-ce sans danger pour mes invités et ma robe de mariée ?',
     answer:
-      "La poudre Holi est une poudre colorée fine, inspirée de la fête indienne des couleurs. Elle est non toxique, légère et se disperse dans l'air en formant de magnifiques nuages colorés. C'est elle qui crée l'effet « explosion de couleurs » de notre feu d'artifice de jour, pour un rendu photo absolument unique.",
+      "Oui : les jets de fumée colorée n'impliquent ni flamme, ni chaleur, ni explosion pyrotechnique. C'est une animation purement visuelle, sans danger, à réserver de préférence à l'extérieur. La fumée colorée se dissipe rapidement et ne laisse pas de trace durable.",
   },
   {
     question: 'Quelles couleurs sont disponibles ?',
@@ -54,17 +54,17 @@ const faqs = [
   {
     question: 'Quel est le tarif ?',
     answer:
-      "Le feu d'artifice de jour est proposé à 120€ pour un tir de 4 couleurs au choix, en supplément de votre formule DJ ou animation MG Events. C'est une nouveauté disponible sur demande : contactez-nous pour plus d'informations et pour vérifier la disponibilité à la date de votre mariage.",
+      "Le feu d'artifice de jour est proposé à 180€ TTC pour un tir de 4 couleurs au choix, en supplément de votre formule DJ ou animation MG Events. C'est une nouveauté disponible sur demande : contactez-nous pour plus d'informations et pour vérifier la disponibilité à la date de votre mariage.",
   },
 ];
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Feu d\'Artifice de Jour pour mariage (poudre Holi)',
-  serviceType: "Animation mariage — feu d'artifice de jour / explosion de couleurs en poudre Holi",
+  name: 'Feu d\'Artifice de Jour pour mariage (explosion de couleurs)',
+  serviceType: "Animation mariage — feu d'artifice de jour / explosion de couleurs",
   description:
-    "Tir de 4 canons de poudre Holi colorée, déclenché de façon synchronisée lors d'un mariage. Effet spectaculaire en plein jour, idéal pour la fin de cérémonie laïque, la sortie des mariés et la photo de groupe. Nouveauté MG Events, sur demande. Important : il s'agit d'une option complémentaire, proposée exclusivement aux clients ayant réservé une formule DJ ou animation MG Events. Ce service n'est pas disponible seul, ni en location ni en installation indépendante.",
+    "Tir de jets de fumée colorée, déclenché de façon synchronisée lors d'un mariage. Effet spectaculaire en plein jour, idéal pour la fin de cérémonie laïque, la sortie des mariés et la photo de groupe. Nouveauté MG Events, sur demande. Important : il s'agit d'une option complémentaire, proposée exclusivement aux clients ayant réservé une formule DJ ou animation MG Events. Ce service n'est pas disponible seul, ni en location ni en installation indépendante.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'MG Events Animation',
@@ -74,10 +74,10 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    price: '120',
+    price: '180',
     priceCurrency: 'EUR',
     description:
-      "Tir de feu d'artifice de jour : 4 canons de poudre Holi, 4 couleurs au choix. Sur demande. Option additionnelle réservée aux clients ayant réservé une formule DJ ou animation MG Events — non commercialisée seule.",
+      "Tir de feu d'artifice de jour : jets de fumée colorée, 4 couleurs au choix. Sur demande. Option additionnelle réservée aux clients ayant réservé une formule DJ ou animation MG Events — non commercialisée seule.",
     availability: 'https://schema.org/LimitedAvailability',
   },
   isRelatedTo: {
@@ -118,7 +118,7 @@ export default function FeuArtificeJourPage() {
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#c9a227]/5 to-transparent" />
-        {/* Halos colorés (clin d'œil à la poudre Holi) */}
+        {/* Halos colorés (clin d'œil à l'explosion de couleurs) */}
         <div className="absolute top-10 right-1/4 w-72 h-72 bg-fuchsia-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-6 relative">
@@ -139,7 +139,7 @@ export default function FeuArtificeJourPage() {
                 Feu d&apos;Artifice de Jour — <span className="text-[#c9a227]">Explosion de Couleurs</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                Un nuage de poudre Holi qui explose en couleurs au plus beau moment de votre mariage
+                Un tir de fumée colorée qui explose en couleurs au plus beau moment de votre mariage
               </h2>
               {/* Mention d'exclusivité (lecture en diagonale) */}
               <p className="flex items-start gap-3 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] p-4 text-sm leading-relaxed text-[#e8e8ea] mb-6">
@@ -152,8 +152,8 @@ export default function FeuArtificeJourPage() {
               </p>
               <div className="text-[#888] leading-relaxed mb-8 space-y-4">
                 <p>
-                  Imaginez la sortie des mariés ou la fin de votre cérémonie laïque sublimée par un
-                  tir de <strong className="text-white">4 canons de poudre Holi</strong> qui libèrent
+                  Imaginez la sortie des mariés ou la fin de votre cérémonie laïque sublimée par des
+                  <strong className="text-white"> jets de fumée colorée</strong> qui libèrent
                   un nuage coloré spectaculaire, en plein jour. Une image forte, joyeuse et
                   inoubliable — parfaite pour la photo de groupe.
                 </p>
@@ -173,7 +173,7 @@ export default function FeuArtificeJourPage() {
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#c9a227]/20 bg-[#141414]">
                 <Image
                   src="/images/feu-artifice-jour-mariage.png"
-                  alt="Feu d'artifice de jour - tir de poudre Holi colorée lors d'une cérémonie de mariage en Bretagne - MG Events"
+                  alt="Feu d'artifice de jour - tir de fumée colorée lors d'une cérémonie de mariage en Bretagne - MG Events"
                   fill
                   className="object-contain"
                   priority
@@ -211,11 +211,11 @@ export default function FeuArtificeJourPage() {
             Les feux d&apos;artifice classiques sont magnifiques… mais réservés à la nuit. Le{' '}
             <strong className="text-white">feu d&apos;artifice de jour</strong> renverse les codes : il
             explose en pleine lumière, au cœur de votre journée, là où se concentrent les émotions et les
-            photos. Le secret ? La <strong className="text-white">poudre Holi</strong>, cette poudre
-            colorée légère et non toxique inspirée de la célèbre fête indienne des couleurs.
+            photos. Le secret ? Des <strong className="text-white">jets de fumée colorée</strong>, légers
+            et non toxiques.
           </p>
           <p>
-            Au moment choisi, <strong className="text-white">4 canons de 80 cm</strong> sont déclenchés de
+            Au moment choisi, ils sont déclenchés de
             façon <span className="text-[#c9a227]">synchronisée</span> et projettent un nuage de couleurs à
             plusieurs mètres de hauteur. L&apos;effet est immédiat, joyeux et spectaculaire — un instant
             suspendu qui transforme une simple sortie de cérémonie en image de carte postale.
@@ -225,7 +225,7 @@ export default function FeuArtificeJourPage() {
 
       {/* Fonctionnement */}
       <Section bg="#141414">
-        <SectionTitle>Comment se déroule le <span className="text-[#c9a227]">tir de poudre Holi</span></SectionTitle>
+        <SectionTitle>Comment se déroule le <span className="text-[#c9a227]">tir de fumée colorée</span></SectionTitle>
         <Steps
           steps={[
             {
@@ -234,7 +234,7 @@ export default function FeuArtificeJourPage() {
             },
             {
               title: 'On synchronise le tir',
-              text: "Les 4 canons de poudre Holi (80 cm) sont positionnés et déclenchés de façon synchronisée par nos soins, en coordination avec votre photographe pour capter l'instant parfait.",
+              text: "Les jets de fumée colorée sont positionnés et déclenchés de façon synchronisée par nos soins, en coordination avec votre photographe pour capter l'instant parfait.",
             },
             {
               title: 'On immortalise',
@@ -258,7 +258,7 @@ export default function FeuArtificeJourPage() {
           </p>
           <p>
             C&apos;est aussi une <strong className="text-white">mine d&apos;or pour vos photos</strong> : la
-            poudre Holi capte magnifiquement la lumière du jour et donne des clichés dynamiques, colorés et
+            fumée colorée capte magnifiquement la lumière du jour et donne des clichés dynamiques, colorés et
             pleins de mouvement. La fin de cérémonie laïque, la sortie d&apos;église ou le cocktail prennent
             une toute autre dimension.
           </p>
@@ -267,7 +267,7 @@ export default function FeuArtificeJourPage() {
           <h3 className="text-[#c9a227] font-medium mb-4">Ce que le feu d&apos;artifice de jour apporte à votre mariage</h3>
           <CheckList
             items={[
-              '4 canons de poudre Holi de 80 cm, tir synchronisé',
+              'Jets de fumée colorée, tir synchronisé',
               '4 couleurs au choix selon votre thème',
               'Un effet spectaculaire visible en plein jour',
               'Idéal pour la fin de cérémonie laïque et la sortie des mariés',
@@ -294,8 +294,8 @@ export default function FeuArtificeJourPage() {
             <div className="flex items-center justify-between mb-1">
               <p className="text-xs text-[#c9a227] uppercase tracking-wider">Le tir</p>
               <div className="text-right">
-                <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">120</span>
-                <span className="text-[#888] ml-1">€</span>
+                <span className="text-3xl font-[family-name:var(--font-display)] text-[#c9a227]">180</span>
+                <span className="text-[#888] ml-1">€ TTC</span>
               </div>
             </div>
             <p className="text-[#888] text-sm flex items-start gap-2">
@@ -333,7 +333,7 @@ export default function FeuArtificeJourPage() {
             Une <span className="text-[#c9a227]">explosion de couleurs</span> pour votre grand jour
           </h2>
           <p className="text-[#888] mb-4">
-            Ajoutez le feu d&apos;artifice de jour à votre formule DJ MG Events : 120€ pour un tir de 4
+            Ajoutez le feu d&apos;artifice de jour à votre formule DJ MG Events : 180€ TTC pour un tir de 4
             couleurs au choix, sur demande et selon disponibilité à votre date.
           </p>
           <p className="text-sm text-[#e8e8ea] mb-8 inline-flex items-start gap-2 rounded-lg border border-[#c9a227]/40 bg-[#1a1a2e] px-4 py-3 text-left">
