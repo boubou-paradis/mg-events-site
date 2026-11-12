@@ -373,9 +373,9 @@ export default function ContactSection() {
                     className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#c9a227]/20 rounded text-white focus:border-[#c9a227] focus:outline-none transition-colors"
                   >
                     <option value="">Je ne sais pas encore</option>
-                    <option value="eclat">Éclat d&apos;Amour (1200€)</option>
-                    <option value="reve">Rêve en Blanc (1490€)</option>
-                    <option value="conte">Conte de Fées (1690€)</option>
+                    <option value="eclat">Éclat d&apos;Amour (1300€)</option>
+                    <option value="reve">Rêve en Blanc (1590€)</option>
+                    <option value="conte">Conte de Fées (1790€)</option>
                   </select>
                 </div>
               </div>

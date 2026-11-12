@@ -50,7 +50,7 @@ const faqs = [
   {
     question: "L'animation digitale est-elle incluse dans vos formules ?",
     answer:
-      "Oui. AnimaJet, notre solution d'animation digitale complète, est inclus dès la formule Éclat d'Amour (1200€ TTC), avec l'ensemble de ses animations connectées.",
+      "Oui. AnimaJet, notre solution d'animation digitale complète, est inclus dès la formule Éclat d'Amour (1300€ TTC), avec l'ensemble de ses animations connectées.",
   },
 ];
 

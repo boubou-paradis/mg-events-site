@@ -50,7 +50,7 @@ const faqs = [
   {
     question: 'Le quiz interactif est-il inclus dans vos formules ?',
     answer:
-      "Oui, le quiz fait partie d'AnimaJet, inclus dès la formule Éclat d'Amour à 1200€ TTC. Vous bénéficiez du quiz et de toutes les autres animations interactives sans supplément.",
+      "Oui, le quiz fait partie d'AnimaJet, inclus dès la formule Éclat d'Amour à 1300€ TTC. Vous bénéficiez du quiz et de toutes les autres animations interactives sans supplément.",
   },
 ];
 

@@ -50,7 +50,7 @@ const faqs = [
   {
     question: 'Le mur photo est-il inclus dans vos formules ?',
     answer:
-      "Oui, le mur photo événementiel fait partie d'AnimaJet, inclus dès la formule Éclat d'Amour (1200€ TTC), avec l'ensemble des autres animations interactives.",
+      "Oui, le mur photo événementiel fait partie d'AnimaJet, inclus dès la formule Éclat d'Amour (1300€ TTC), avec l'ensemble des autres animations interactives.",
   },
 ];
 

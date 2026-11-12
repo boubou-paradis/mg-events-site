@@ -26,11 +26,11 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   // ni à un déplacement inclus : la description par défaut le dit explicitement.
   const defaultDescription =
     city.zone === 'prioritaire'
-      ? `DJ animateur mariage à ${city.name} (${city.departmentCode}) — Avis 5★, formules dès 1200€ TTC. Basés à Redon (35), à ~${city.distanceFromRedonKm} km. Devis gratuit sous 24h ✓`
-      : `DJ animateur mariage à ${city.name} (${city.departmentCode}) — formules dès 1200€ TTC. Basés à Redon (35), à ~${city.distanceFromRedonKm} km : intervention sur étude, frais de route précisés sur le devis.`;
+      ? `DJ animateur mariage à ${city.name} (${city.departmentCode}) — Avis 5★, formules dès 1300€ TTC. Basés à Redon (35), à ~${city.distanceFromRedonKm} km. Devis gratuit sous 24h ✓`
+      : `DJ animateur mariage à ${city.name} (${city.departmentCode}) — formules dès 1300€ TTC. Basés à Redon (35), à ~${city.distanceFromRedonKm} km : intervention sur étude, frais de route précisés sur le devis.`;
 
   return {
-    title: city.metaTitle ?? `DJ & Animation Mariage ${city.name} · Avis 5★ · Dès 1200€`,
+    title: city.metaTitle ?? `DJ & Animation Mariage ${city.name} · Avis 5★ · Dès 1300€`,
     description: city.metaDescription ?? defaultDescription,
     keywords: `DJ mariage ${city.name}, DJ animateur ${city.name}, animation mariage ${city.name}, animateur de soirée ${city.name}, sonorisation mariage ${city.name}, DJ mariage ${city.departmentCode}, DJ ${city.name}`,
     alternates: {
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
     },
     openGraph: {
       title: `DJ Mariage ${city.name} | MG Events Animation`,
-      description: `DJ animateur mariage à ${city.name}. Avis 5★, dès 1200€. 25 ans d'expérience, photobooth vintage, animations interactives.`,
+      description: `DJ animateur mariage à ${city.name}. Avis 5★, dès 1300€. 25 ans d'expérience, photobooth vintage, animations interactives.`,
       url: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     },
   };
@@ -52,9 +52,9 @@ const pointsForts = [
 ];
 
 const formules = [
-  { name: "Éclat d'Amour", price: '1200', description: "L'essentiel pour une soirée réussie" },
-  { name: 'Rêve en Blanc', price: '1490', description: 'Notre formule la plus demandée', popular: true },
-  { name: 'Conte de Fées', price: '1690', description: "L'expérience complète avec photobooth" },
+  { name: "Éclat d'Amour", price: '1300', description: "L'essentiel pour une soirée réussie" },
+  { name: 'Rêve en Blanc', price: '1590', description: 'Notre formule la plus demandée', popular: true },
+  { name: 'Conte de Fées', price: '1790', description: "L'expérience complète avec photobooth" },
 ];
 
 const musicStats = [
@@ -86,7 +86,7 @@ function generateCityFaqs(city: City) {
   return [
     {
       question: `Quel est le prix d'un DJ mariage à ${city.name} ?`,
-      answer: `Nos formules DJ mariage à ${city.name} démarrent à 1200€ TTC (formule Éclat d'Amour) et vont jusqu'à 1690€ TTC (formule Conte de Fées avec photobooth). Ces tarifs incluent l'installation et le démontage, ainsi que le déplacement jusqu'à 100 km aller-retour au départ de Redon (35). ${TRAVEL_RULE.exactDistance} Au-delà de 100 km aller-retour, les kilomètres supplémentaires sont facturés 0,66 €/km et indiqués clairement sur le devis${
+      answer: `Nos formules DJ mariage à ${city.name} démarrent à 1300€ TTC (formule Éclat d'Amour) et vont jusqu'à 1790€ TTC (formule Conte de Fées avec photobooth). Ces tarifs incluent l'installation et le démontage, ainsi que le déplacement jusqu'à 100 km aller-retour au départ de Redon (35). ${TRAVEL_RULE.exactDistance} Au-delà de 100 km aller-retour, les kilomètres supplémentaires sont facturés 0,66 €/km et indiqués clairement sur le devis${
         prioritaire ? '.' : ` — ${city.name} se situant à environ ${city.distanceFromRedonKm} km de Redon, des frais de route s'ajoutent au prix de la formule.`
       }`,
     },
@@ -187,7 +187,7 @@ function generateLocalBusinessSchema(city: City) {
       ...city.nearbyCommunes.map(commune => ({ "@type": "City", "name": commune })),
       { "@type": "AdministrativeArea", "name": city.department }
     ],
-    "priceRange": "1200€ - 1690€",
+    "priceRange": "1300€ - 1790€",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],

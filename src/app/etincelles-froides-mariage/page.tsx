@@ -44,7 +44,7 @@ const faqs = [
   {
     question: 'Les étincelles froides sont-elles incluses dans vos formules ?',
     answer:
-      "Oui : 2 lanceurs d'étincelles froides sont inclus dès la formule Rêve en Blanc (1490€ TTC), avec la machine à fumée lourde. C'est le duo d'effets qui rend une ouverture de bal réellement spectaculaire.",
+      "Oui : 2 lanceurs d'étincelles froides sont inclus dès la formule Rêve en Blanc (1590€ TTC), avec la machine à fumée lourde. C'est le duo d'effets qui rend une ouverture de bal réellement spectaculaire.",
   },
   {
     question: 'Ça fait de la fumée ou des odeurs ?',
@@ -64,7 +64,7 @@ const serviceSchema = {
   name: 'Étincelles froides pour mariage en Bretagne',
   serviceType: 'Effet spécial mariage — étincelles froides certifiées CE',
   description:
-    "Gerbes d'étincelles froides pour ouverture de bal : machines Mac Mah MAC SPARK 300 certifiées CE, utilisables en intérieur. 2 lanceurs inclus dès la formule Rêve en Blanc (1490€ TTC).",
+    "Gerbes d'étincelles froides pour ouverture de bal : machines Mac Mah MAC SPARK 300 certifiées CE, utilisables en intérieur. 2 lanceurs inclus dès la formule Rêve en Blanc (1590€ TTC).",
   provider: {
     '@type': 'LocalBusiness',
     name: 'MG Events Animation',
@@ -216,7 +216,7 @@ export default function EtincellesFroidesMariagePage() {
           <CheckList
             items={[
               '2 lanceurs Mac Mah MAC SPARK 300 certifiés CE',
-              'Inclus dès la formule Rêve en Blanc (1490€ TTC)',
+              'Inclus dès la formule Rêve en Blanc (1590€ TTC)',
               'Utilisables en intérieur, sans flamme',
               'Placement et distances de sécurité gérés par nos soins',
               'Déclenchement synchronisé avec votre musique',
@@ -275,7 +275,7 @@ export default function EtincellesFroidesMariagePage() {
             Un moment que vos invités <span className="text-[#c9a227]">n&apos;oublieront pas</span>
           </h2>
           <p className="text-[#888] mb-8">
-            Étincelles froides et fumée lourde incluses dès la formule Rêve en Blanc (1490€ TTC).
+            Étincelles froides et fumée lourde incluses dès la formule Rêve en Blanc (1590€ TTC).
             Vérifions votre date : devis gratuit sous 24h.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -11,7 +11,7 @@ import { AnimatedSection, ScrollIndicator } from './components';
 
 export const metadata: Metadata = {
   title: 'Notre Philosophie · DJ Mariage Bretagne',
-  description: 'Votre soirée, vos invités au centre : notre approche du métier de DJ animateur mariage en Bretagne. 25 ans d\'expérience, formules dès 1200€.',
+  description: 'Votre soirée, vos invités au centre : notre approche du métier de DJ animateur mariage en Bretagne. 25 ans d\'expérience, formules dès 1300€.',
   keywords: ['philosophie', 'DJ mariage bretagne', 'valeurs', 'engagement', 'expérience', 'MG Events', 'tarif DJ mariage'],
   alternates: {
     canonical: 'https://www.mg-events35.com/philosophie',
@@ -331,7 +331,7 @@ export default function PhilosophiePage() {
             </div>
             <div className="flex-1 min-w-[120px] text-center">
               <div className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-[#c9a227]">
-                1200€
+                1300€
               </div>
               <div className="text-xs font-mono tracking-[0.1em] uppercase text-[#888] mt-2">
                 À partir de

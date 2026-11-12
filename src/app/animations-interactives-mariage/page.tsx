@@ -238,7 +238,7 @@ export default function AnimationsInteractivesMariage() {
             <p>
               AnimaJet réunit toutes ces animations dans une seule plateforme, pensée spécifiquement pour les mariages. C&apos;est
               <strong className="text-white"> notre création</strong> : nous l&apos;avons développée nous-mêmes et nous la maîtrisons de A à Z. Et surtout,
-              elle est <span className="text-[#c9a227]">incluse dans toutes nos formules</span>, dès la formule Éclat d&apos;Amour à 1200€ TTC.
+              elle est <span className="text-[#c9a227]">incluse dans toutes nos formules</span>, dès la formule Éclat d&apos;Amour à 1300€ TTC.
             </p>
           </div>
         </div>
@@ -404,7 +404,7 @@ export default function AnimationsInteractivesMariage() {
                 'Participation depuis le smartphone via QR Code unique',
                 'Affichage professionnel sur écran géant',
                 'Pilotée en direct par un vrai DJ aux platines',
-                'Incluse dès la formule Éclat d\'Amour (1200€ TTC)',
+                'Incluse dès la formule Éclat d\'Amour (1300€ TTC)',
                 'Adaptée à toutes les générations, de 7 à 77 ans',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">

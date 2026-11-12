@@ -80,15 +80,15 @@ export default function CGV() {
               <div className="space-y-3">
                 <div className="flex justify-between items-center py-2 border-b border-[#c9a227]/10">
                   <span>Formule Éclat d&apos;Amour</span>
-                  <span className="text-[#c9a227] font-medium">1 200 € TTC</span>
+                  <span className="text-[#c9a227] font-medium">1 300 € TTC</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-[#c9a227]/10">
                   <span>Formule Rêve en Blanc</span>
-                  <span className="text-[#c9a227] font-medium">1 490 € TTC</span>
+                  <span className="text-[#c9a227] font-medium">1 590 € TTC</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-[#c9a227]/10">
                   <span>Formule Conte de Fées</span>
-                  <span className="text-[#c9a227] font-medium">1 690 € TTC</span>
+                  <span className="text-[#c9a227] font-medium">1 790 € TTC</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-[#c9a227]/10">
                   <span>Option Cérémonie Laïque</span>

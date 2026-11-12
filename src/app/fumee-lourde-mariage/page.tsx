@@ -44,7 +44,7 @@ const faqs = [
   {
     question: 'La fumée lourde est-elle incluse dans vos formules ?',
     answer:
-      "Oui, la machine à fumée lourde est incluse dès la formule Rêve en Blanc (1490€ TTC), qui comprend aussi 2 lanceurs d'étincelles froides — le duo qui rend une ouverture de bal vraiment spectaculaire.",
+      "Oui, la machine à fumée lourde est incluse dès la formule Rêve en Blanc (1590€ TTC), qui comprend aussi 2 lanceurs d'étincelles froides — le duo qui rend une ouverture de bal vraiment spectaculaire.",
   },
   {
     question: 'À quel moment utilise-t-on la fumée lourde pendant le mariage ?',
@@ -64,7 +64,7 @@ const serviceSchema = {
   name: "Fumée lourde pour ouverture de bal de mariage en Bretagne",
   serviceType: 'Effet spécial mariage — fumée lourde (nuage au sol)',
   description:
-    "Machine à fumée lourde pour ouverture de bal : nuage blanc au sol, sans danger, sans résidu. Incluse dès la formule Rêve en Blanc (1490€ TTC) avec les étincelles froides.",
+    "Machine à fumée lourde pour ouverture de bal : nuage blanc au sol, sans danger, sans résidu. Incluse dès la formule Rêve en Blanc (1590€ TTC) avec les étincelles froides.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'MG Events Animation',
@@ -216,7 +216,7 @@ export default function FumeeLourdeMariagePage() {
           <h3 className="text-[#c9a227] font-medium mb-4">Ce qu&apos;il faut savoir</h3>
           <CheckList
             items={[
-              'Machine à fumée lourde incluse dès Rêve en Blanc (1490€ TTC)',
+              'Machine à fumée lourde incluse dès Rêve en Blanc (1590€ TTC)',
               "Combinée à 2 lanceurs d'étincelles froides dans la même formule",
               'Sans danger pour les invités, enfants compris',
               'Aucun résidu au sol, aucune tache sur les tenues',
@@ -283,7 +283,7 @@ export default function FumeeLourdeMariagePage() {
             Offrez-vous une première danse <span className="text-[#c9a227]">sur un nuage</span>
           </h2>
           <p className="text-[#888] mb-8">
-            La fumée lourde est incluse dès la formule Rêve en Blanc (1490€ TTC), avec les étincelles
+            La fumée lourde est incluse dès la formule Rêve en Blanc (1590€ TTC), avec les étincelles
             froides. Vérifions ensemble votre date : devis gratuit sous 24h.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

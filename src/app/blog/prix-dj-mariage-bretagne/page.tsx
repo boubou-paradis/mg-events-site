@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'Quel budget prévoir pour un DJ de mariage ?',
     answer:
-      "Tout dépend de ce qui est inclus : durée de présence, matériel son et lumière, animations, effets d'ouverture de bal, photobooth. Chez MG Events, nos formules mariage vont de 1200€ à 1690€ TTC, tarifs affichés publiquement. Comparez toujours ce que recouvre le prix, pas seulement le chiffre.",
+      "Tout dépend de ce qui est inclus : durée de présence, matériel son et lumière, animations, effets d'ouverture de bal, photobooth. Chez MG Events, nos formules mariage vont de 1300€ à 1790€ TTC, tarifs affichés publiquement. Comparez toujours ce que recouvre le prix, pas seulement le chiffre.",
   },
   {
     question: 'Pourquoi certains DJ sont-ils beaucoup moins chers ?',
@@ -121,10 +121,10 @@ export default function Article() {
       <p>
         Pour vous donner un ordre d&apos;idée réel — pas une fourchette théorique — voici nos tarifs,
         affichés publiquement sur notre <Link href="/tarifs-dj-mariage" className="text-[#c9a227] hover:underline">page
-        tarifs</Link> : la formule Éclat d&apos;Amour à 1200€ TTC (sonorisation complète du cocktail au
-        dancefloor, éclairages, animations interactives, deux micros sans fil), Rêve en Blanc à 1490€ TTC
+        tarifs</Link> : la formule Éclat d&apos;Amour à 1300€ TTC (sonorisation complète du cocktail au
+        dancefloor, éclairages, animations interactives, deux micros sans fil), Rêve en Blanc à 1590€ TTC
         (ajoute l&apos;ambiance de salle, la fumée lourde, les étincelles froides et le Livre d&apos;Or
-        Audio) et Conte de Fées à 1690€ TTC (ajoute le photobooth vintage avec 150 impressions). La
+        Audio) et Conte de Fées à 1790€ TTC (ajoute le photobooth vintage avec 150 impressions). La
         sonorisation de cérémonie laïque est à 180€.
       </p>
       <p>

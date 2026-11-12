@@ -50,7 +50,7 @@ const faqs = [
   {
     question: 'Ce service est-il inclus dans la prestation MG Events ?',
     answer:
-      "Oui, la collecte et le partage des photos des invités font partie d'AnimaJet, inclus dès la formule Éclat d'Amour (1200€ TTC).",
+      "Oui, la collecte et le partage des photos des invités font partie d'AnimaJet, inclus dès la formule Éclat d'Amour (1300€ TTC).",
   },
 ];
 
