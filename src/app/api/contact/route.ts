@@ -86,9 +86,9 @@ function isRateLimited(ip: string): boolean {
 }
 
 const formuleLabels: Record<string, string> = {
-  eclat: "Eclat d'Amour (1200€)",
-  reve: "Reve en Blanc (1490€)",
-  conte: "Conte de Fees (1690€)",
+  eclat: "Eclat d'Amour (1300€)",
+  reve: "Reve en Blanc (1590€)",
+  conte: "Conte de Fees (1790€)",
   '': "Non specifiee",
 };
 

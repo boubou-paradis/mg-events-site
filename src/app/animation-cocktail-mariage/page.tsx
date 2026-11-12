@@ -50,7 +50,7 @@ const faqs = [
   {
     question: 'L\'animation du cocktail est-elle incluse dans vos formules ?',
     answer:
-      "Oui. AnimaJet est inclus dès la formule Éclat d'Amour (1200€ TTC) et couvre tous les temps de votre mariage, du vin d'honneur à la soirée dansante.",
+      "Oui. AnimaJet est inclus dès la formule Éclat d'Amour (1300€ TTC) et couvre tous les temps de votre mariage, du vin d'honneur à la soirée dansante.",
   },
 ];
 

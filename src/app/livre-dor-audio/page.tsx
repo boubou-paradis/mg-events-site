@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "Le livre d'or audio est-il inclus dans vos formules ?",
     answer:
-      "Le Livre d'Or Audio est inclus dans nos formules Rêve en Blanc (1490€) et Conte de Fées (1690€). Il est également disponible en location seule à 40€ si vous souhaitez l'ajouter à une autre prestation ou le réserver indépendamment.",
+      "Le Livre d'Or Audio est inclus dans nos formules Rêve en Blanc (1590€) et Conte de Fées (1790€). Il est également disponible en location seule à 40€ si vous souhaitez l'ajouter à une autre prestation ou le réserver indépendamment.",
   },
   {
     question: "Pourquoi choisir un livre d'or audio plutôt qu'un livre d'or classique ?",
@@ -248,7 +248,7 @@ export default function LivreOrAudioPage() {
           <div className="card-dark p-6">
             <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-2">Inclus dans</p>
             <p className="text-white font-[family-name:var(--font-display)] text-lg mb-1">Rêve en Blanc &amp; Conte de Fées</p>
-            <p className="text-[#888] text-sm">Sans supplément, dès la formule Rêve en Blanc (1490€).</p>
+            <p className="text-[#888] text-sm">Sans supplément, dès la formule Rêve en Blanc (1590€).</p>
           </div>
           <div className="card-dark p-6 border-[#c9a227]/30">
             <div className="flex items-center justify-between mb-1">

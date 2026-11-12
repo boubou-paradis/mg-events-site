@@ -5,8 +5,8 @@ import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, Map
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Loire-Atlantique (44) · Avis 5★ · Dès 1200€',
-  description: "DJ animateur mariage en Loire-Atlantique (44) : Nantes, Saint-Nazaire, La Baule, Guérande. Avis 5★, dès 1200€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
+  title: 'DJ Mariage Loire-Atlantique (44) · Avis 5★ · Dès 1300€',
+  description: "DJ animateur mariage en Loire-Atlantique (44) : Nantes, Saint-Nazaire, La Baule, Guérande. Avis 5★, dès 1300€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Loire-Atlantique, DJ mariage 44, DJ mariage Nantes, DJ mariage Saint-Nazaire, DJ mariage La Baule, DJ mariage Guérande, DJ mariage Pornic, DJ mariage Clisson, animation mariage Pays de la Loire',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',
@@ -26,15 +26,15 @@ const pointsForts = [
 ];
 
 const formules = [
-  { name: 'Éclat d\'Amour', price: '1200', description: 'L\'essentiel pour une soirée réussie' },
-  { name: 'Rêve en Blanc', price: '1490', description: 'Notre formule la plus demandée', popular: true },
-  { name: 'Conte de Fées', price: '1690', description: 'L\'expérience complète avec photobooth' },
+  { name: 'Éclat d\'Amour', price: '1300', description: 'L\'essentiel pour une soirée réussie' },
+  { name: 'Rêve en Blanc', price: '1590', description: 'Notre formule la plus demandée', popular: true },
+  { name: 'Conte de Fées', price: '1790', description: 'L\'expérience complète avec photobooth' },
 ];
 
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage à Nantes ?',
-    answer: 'Nos formules DJ mariage en Loire-Atlantique démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35), la distance exacte étant calculée selon l\'adresse du lieu de réception ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
+    answer: 'Nos formules DJ mariage en Loire-Atlantique démarrent à 1300€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1790€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35), la distance exacte étant calculée selon l\'adresse du lieu de réception ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
   },
   {
     question: 'Vous déplacez-vous à La Baule et Saint-Nazaire ?',
@@ -105,7 +105,7 @@ const localBusinessSchema = {
     { "@type": "City", "name": "Châteaubriant" },
     { "@type": "AdministrativeArea", "name": "Loire-Atlantique" }
   ],
-  "priceRange": "1200€ - 1690€",
+  "priceRange": "1300€ - 1790€",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -146,19 +146,19 @@ const localBusinessSchema = {
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Formule Éclat d'Amour" },
-        "price": "1200",
+        "price": "1300",
         "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Formule Rêve en Blanc" },
-        "price": "1490",
+        "price": "1590",
         "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Formule Conte de Fées" },
-        "price": "1690",
+        "price": "1790",
         "priceCurrency": "EUR"
       }
     ]

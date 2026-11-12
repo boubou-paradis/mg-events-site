@@ -50,7 +50,7 @@ const faqs = [
   {
     question: 'Le partage photo est-il inclus dans vos formules ?',
     answer:
-      "Oui, il fait partie d'AnimaJet, inclus dès la formule Éclat d'Amour (1200€ TTC), au même titre que le quiz, le blind test et le mur photo.",
+      "Oui, il fait partie d'AnimaJet, inclus dès la formule Éclat d'Amour (1300€ TTC), au même titre que le quiz, le blind test et le mur photo.",
   },
 ];
 

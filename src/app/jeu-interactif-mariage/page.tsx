@@ -50,7 +50,7 @@ const faqs = [
   {
     question: 'Les jeux interactifs sont-ils inclus dans vos formules ?',
     answer:
-      "Oui, l'ensemble des jeux AnimaJet est inclus dès la formule Éclat d'Amour (1200€ TTC), sans supplément.",
+      "Oui, l'ensemble des jeux AnimaJet est inclus dès la formule Éclat d'Amour (1300€ TTC), sans supplément.",
   },
 ];
 

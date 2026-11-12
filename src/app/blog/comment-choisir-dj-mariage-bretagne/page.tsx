@@ -311,7 +311,7 @@ export default function Article() {
                 Comparez les devis en détail : qu&apos;est-ce qui est inclus ? Sonorisation cocktail ? Éclairages ? Animations ?
                 Un devis transparent est le signe d&apos;un professionnel sérieux. Chez MG Events, nos{' '}
                 <Link href="/tarifs-dj-mariage" className="text-[#c9a227] hover:underline">tarifs DJ mariage</Link>{' '}
-                sont affichés publiquement : de 1200€ à 1690€ TTC, tout inclus, sans surprise.
+                sont affichés publiquement : de 1300€ à 1790€ TTC, tout inclus, sans surprise.
               </p>
 
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">

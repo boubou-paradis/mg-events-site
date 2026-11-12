@@ -61,7 +61,7 @@ const localBusinessSchema = {
     { '@type': 'AdministrativeArea', name: 'Morbihan' },
     { '@type': 'AdministrativeArea', name: 'Loire-Atlantique' },
   ],
-  priceRange: '1200€ - 1690€',
+  priceRange: '1300€ - 1790€',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
@@ -175,7 +175,7 @@ const servicesInclus = [
 const faqs = [
   {
     question: 'Combien coûte un DJ mariage en Bretagne ?',
-    answer: 'Nos formules DJ mariage en Bretagne démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs comprennent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35), la distance exacte étant calculée selon l\'adresse du lieu de réception ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
+    answer: 'Nos formules DJ mariage en Bretagne démarrent à 1300€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1790€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs comprennent la sonorisation, l\'éclairage, l\'installation et le démontage. Le déplacement est inclus jusqu\'à 100 km aller-retour au départ de Redon (35), la distance exacte étant calculée selon l\'adresse du lieu de réception ; au-delà, 0,66 € du kilomètre, toujours indiqué sur le devis.',
   },
   {
     question: 'Dans quels départements intervenez-vous ?',
@@ -263,7 +263,7 @@ export default function DJMariageBretagne() {
                 DJ mariage <span className="text-[#c9a227]">en Bretagne</span>
               </h1>
               <h2 className="text-xl text-[#aaa] mb-6">
-                25 ans d&apos;expérience, des formules de 1 200 € à 1 690 € et des animations exclusives pour votre
+                25 ans d&apos;expérience, des formules de 1 300 € à 1 790 € et des animations exclusives pour votre
                 mariage en Bretagne.
               </h2>
 
@@ -599,7 +599,7 @@ export default function DJMariageBretagne() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             <Link href="/tarifs-dj-mariage" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
               <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Tarifs DJ mariage</h3>
-              <p className="text-[#888] text-sm">Formules de 1200€ à 1690€ TTC, affichées en toute transparence.</p>
+              <p className="text-[#888] text-sm">Formules de 1300€ à 1790€ TTC, affichées en toute transparence.</p>
             </Link>
             <Link href="/photobooth-mariage" className="card-dark p-5 group hover:border-[#c9a227]/40 transition-colors">
               <h3 className="text-white font-medium mb-2 group-hover:text-[#c9a227] transition-colors">Photobooth vintage</h3>

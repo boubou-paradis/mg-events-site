@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   // (réservée à /dj-mariage-bretagne). "Bretagne" reste présent dans le H1 et le corps.
   title: 'Tarif DJ mariage : prix, formules et devis gratuit',
   description:
-    "Tarifs DJ mariage en Bretagne : formules de 1200€ à 1690€ TTC, cérémonie laïque 180€, photobooth vintage 240€. Prix transparents, ce qui est inclus, devis gratuit sous 24h.",
+    "Tarifs DJ mariage en Bretagne : formules de 1300€ à 1790€ TTC, cérémonie laïque 180€, photobooth vintage 240€. Prix transparents, ce qui est inclus, devis gratuit sous 24h.",
   keywords:
     'tarif DJ mariage Bretagne, prix DJ mariage, tarif DJ mariage Rennes, combien coûte un DJ mariage, prix DJ mariage Ille-et-Vilaine, formule DJ mariage, devis DJ mariage gratuit',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
     title: 'Tarif DJ Mariage Bretagne | Prix transparents & formules détaillées',
     description:
-      'Formules DJ mariage de 1200€ à 1690€ TTC, options cérémonie laïque, photobooth, livre d\'or audio. Tout ce qui est inclus, sans surprise.',
+      'Formules DJ mariage de 1300€ à 1790€ TTC, options cérémonie laïque, photobooth, livre d\'or audio. Tout ce qui est inclus, sans surprise.',
     url: `${BASE}/${SLUG}`,
     images: [{ url: `${BASE}/images/console-dj-pro.jpg` }],
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const formules = [
   {
     name: "Éclat d'Amour",
-    price: '1200',
+    price: '1300',
     description: "L'essentiel pour une soirée réussie",
     features: [
       'Sonorisation cocktail (enceinte batterie)',
@@ -47,7 +47,7 @@ const formules = [
   },
   {
     name: 'Rêve en Blanc',
-    price: '1490',
+    price: '1590',
     description: 'Notre formule la plus demandée',
     features: [
       "Tout de la formule Éclat d'Amour",
@@ -63,7 +63,7 @@ const formules = [
   },
   {
     name: 'Conte de Fées',
-    price: '1690',
+    price: '1790',
     description: "L'expérience complète et magique",
     features: [
       'Tout de la formule Rêve en Blanc',
@@ -111,7 +111,7 @@ const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage en Bretagne chez MG Events ?',
     answer:
-      "Nos formules mariage vont de 1200€ TTC (Éclat d'Amour) à 1690€ TTC (Conte de Fées, photobooth vintage inclus), en passant par Rêve en Blanc à 1490€ TTC, notre formule la plus demandée avec fumée lourde et étincelles froides. Les tarifs sont affichés en toute transparence : ce que vous voyez est ce que vous payez.",
+      "Nos formules mariage vont de 1300€ TTC (Éclat d'Amour) à 1790€ TTC (Conte de Fées, photobooth vintage inclus), en passant par Rêve en Blanc à 1590€ TTC, notre formule la plus demandée avec fumée lourde et étincelles froides. Les tarifs sont affichés en toute transparence : ce que vous voyez est ce que vous payez.",
   },
   {
     question: 'Que comprend exactement le tarif ?',
@@ -126,7 +126,7 @@ const faqs = [
   {
     question: 'Le photobooth est-il inclus dans les formules ?',
     answer:
-      "Le photobooth vintage TSF est inclus sans supplément dans la formule Conte de Fées (1690€). Avec les autres formules, il est disponible en option à 240€ avec 150 tirages inclus.",
+      "Le photobooth vintage TSF est inclus sans supplément dans la formule Conte de Fées (1790€). Avec les autres formules, il est disponible en option à 240€ avec 150 tirages inclus.",
   },
   {
     question: "Pourquoi les tarifs d'un DJ mariage varient-ils autant d'un prestataire à l'autre ?",
@@ -156,7 +156,7 @@ const serviceSchema = {
   name: 'Prestation DJ mariage en Bretagne — formules et tarifs',
   serviceType: 'DJ mariage, animation de soirée, sonorisation et éclairage',
   description:
-    "Formules DJ mariage transparentes de 1200€ à 1690€ TTC en Bretagne : sonorisation, éclairage, animations interactives, fumée lourde, étincelles froides, photobooth vintage. Déplacement inclus jusqu'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 €/km indiqué sur le devis.",
+    "Formules DJ mariage transparentes de 1300€ à 1790€ TTC en Bretagne : sonorisation, éclairage, animations interactives, fumée lourde, étincelles froides, photobooth vintage. Déplacement inclus jusqu'à 100 km aller-retour au départ de Redon (35) ; au-delà, 0,66 €/km indiqué sur le devis.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'MG Events Animation',
@@ -168,21 +168,21 @@ const serviceSchema = {
     {
       '@type': 'Offer',
       name: "Formule Éclat d'Amour",
-      price: '1200',
+      price: '1300',
       priceCurrency: 'EUR',
       description: 'Sonorisation cocktail, repas et soirée, 2 micros, éclairages, animations interactives.',
     },
     {
       '@type': 'Offer',
       name: 'Formule Rêve en Blanc',
-      price: '1490',
+      price: '1590',
       priceCurrency: 'EUR',
       description: "Formule Éclat d'Amour + ambiance salle RGBW, fumée lourde, étincelles froides, Livre d'Or Audio.",
     },
     {
       '@type': 'Offer',
       name: 'Formule Conte de Fées',
-      price: '1690',
+      price: '1790',
       priceCurrency: 'EUR',
       description: 'Formule Rêve en Blanc + photobooth vintage TSF avec 150 impressions.',
     },
@@ -234,7 +234,7 @@ export default function TarifsDjMariagePage() {
           </h1>
           <p className="text-[#aaa] text-lg leading-relaxed mb-8">
             Combien coûte un DJ de mariage ? Chez MG Events Animation, la réponse est affichée noir sur
-            blanc : trois formules de <strong className="text-white">1200€ à 1690€ TTC</strong>, des options
+            blanc : trois formules de <strong className="text-white">1300€ à 1790€ TTC</strong>, des options
             claires et un devis gratuit personnalisé sous 24h. Pas de prix caché, pas de supplément
             surprise le jour J : les frais de déplacement éventuels sont chiffrés à l&apos;avance sur le devis.
           </p>

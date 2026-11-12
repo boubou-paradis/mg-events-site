@@ -62,7 +62,7 @@ function Hero() {
         {/* Badge */}
         <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 bg-[#1a1a1a] border border-[#c9a227]/20 rounded-full mb-8">
           <span className="w-2 h-2 bg-[#c9a227] rounded-full animate-pulse" />
-          <span className="text-sm text-[#aaa]">Disponible pour la saison 2026-2027</span>
+          <span className="text-sm text-[#aaa]">Dernières dates disponibles pour 2027 · Agenda 2028 ouvert</span>
         </div>
 
         {/* Title */}
@@ -445,7 +445,7 @@ function Formules() {
   const formules = [
     {
       name: 'Éclat d\'Amour',
-      price: '1200',
+      price: '1300',
       description: 'L\'essentiel pour une soirée réussie',
       features: [
         'Sonorisation cocktail (enceinte batterie)',
@@ -462,7 +462,7 @@ function Formules() {
     },
     {
       name: 'Rêve en Blanc',
-      price: '1490',
+      price: '1590',
       description: 'Notre formule la plus demandée',
       features: [
         'Tout de la formule Éclat d\'Amour',
@@ -476,7 +476,7 @@ function Formules() {
     },
     {
       name: 'Conte de Fées',
-      price: '1690',
+      price: '1790',
       description: 'L\'expérience complète et magique',
       features: [
         'Tout de la formule Rêve en Blanc',

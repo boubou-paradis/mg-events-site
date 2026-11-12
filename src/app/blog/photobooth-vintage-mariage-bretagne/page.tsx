@@ -340,7 +340,7 @@ export default function Article() {
                 {[
                   {
                     q: 'Le photobooth est-il inclus dans vos formules ?',
-                    a: 'Le photobooth vintage TSF est inclus dans la formule Conte de Fées (1690€). Il peut également être ajouté en option à nos autres formules. Contactez-nous pour un devis personnalisé.',
+                    a: 'Le photobooth vintage TSF est inclus dans la formule Conte de Fées (1790€). Il peut également être ajouté en option à nos autres formules. Contactez-nous pour un devis personnalisé.',
                   },
                   {
                     q: 'Combien de photos peut-on imprimer pendant la soirée ?',

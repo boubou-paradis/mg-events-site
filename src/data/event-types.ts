@@ -33,9 +33,9 @@ export const eventTypes: Record<string, EventType> = {
     description: 'Animation musicale professionnelle pour votre mariage',
     keywords: ['DJ mariage', 'animation mariage', 'sono mariage', 'musique mariage'],
     formules: [
-      { name: "Éclat d'Amour", price: '1200', description: "L'essentiel pour une soirée réussie" },
-      { name: 'Rêve en Blanc', price: '1490', description: 'Notre formule la plus demandée', popular: true },
-      { name: 'Conte de Fées', price: '1690', description: "L'expérience complète avec photobooth" },
+      { name: "Éclat d'Amour", price: '1300', description: "L'essentiel pour une soirée réussie" },
+      { name: 'Rêve en Blanc', price: '1590', description: 'Notre formule la plus demandée', popular: true },
+      { name: 'Conte de Fées', price: '1790', description: "L'expérience complète avec photobooth" },
     ],
     features: [
       { icon: 'Mic2', title: "25 ans d'expérience", description: 'Plus de 100 mariages animés en Bretagne' },

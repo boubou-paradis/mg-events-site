@@ -5,8 +5,8 @@ import { ArrowLeft, Check, Star, Mic2, Camera, Sparkles, Music, Phone, Mail, Map
 import AnimaJetMeshBlock from '@/components/animajet/AnimaJetMeshBlock';
 
 export const metadata: Metadata = {
-  title: 'DJ Mariage Morbihan (56) · Avis 5★ · Dès 1200€',
-  description: "DJ animateur mariage dans le Morbihan (56) : Vannes, Lorient, Pontivy, Auray. Avis 5★, dès 1200€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
+  title: 'DJ Mariage Morbihan (56) · Avis 5★ · Dès 1300€',
+  description: "DJ animateur mariage dans le Morbihan (56) : Vannes, Lorient, Pontivy, Auray. Avis 5★, dès 1300€ TTC. 25 ans d'expérience. Devis gratuit sous 24h ✓",
   keywords: 'DJ mariage Morbihan, DJ mariage Vannes, DJ mariage Lorient, DJ mariage Auray, DJ mariage Pontivy, animation mariage 56',
   alternates: {
     canonical: 'https://www.mg-events35.com/dj-mariage-morbihan',
@@ -26,15 +26,15 @@ const pointsForts = [
 ];
 
 const formules = [
-  { name: 'Éclat d\'Amour', price: '1200', description: 'L\'essentiel pour une soirée réussie' },
-  { name: 'Rêve en Blanc', price: '1490', description: 'Notre formule la plus demandée', popular: true },
-  { name: 'Conte de Fées', price: '1690', description: 'L\'expérience complète avec photobooth' },
+  { name: 'Éclat d\'Amour', price: '1300', description: 'L\'essentiel pour une soirée réussie' },
+  { name: 'Rêve en Blanc', price: '1590', description: 'Notre formule la plus demandée', popular: true },
+  { name: 'Conte de Fées', price: '1790', description: 'L\'expérience complète avec photobooth' },
 ];
 
 const faqs = [
   {
     question: 'Quel est le prix d\'un DJ mariage dans le Morbihan ?',
-    answer: 'Nos formules DJ mariage dans le 56 démarrent à 1200€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1690€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent l\'installation et le démontage.',
+    answer: 'Nos formules DJ mariage dans le 56 démarrent à 1300€ TTC (formule Éclat d\'Amour) et vont jusqu\'à 1790€ TTC (formule Conte de Fées avec photobooth inclus). Ces tarifs incluent l\'installation et le démontage.',
   },
   {
     question: 'Intervenez-vous sur les îles du Morbihan ?',
@@ -111,7 +111,7 @@ const localBusinessSchema = {
     { "@type": "City", "name": "La Trinité-sur-Mer" },
     { "@type": "AdministrativeArea", "name": "Morbihan" }
   ],
-  "priceRange": "1200€ - 1690€",
+  "priceRange": "1300€ - 1790€",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -152,19 +152,19 @@ const localBusinessSchema = {
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Formule Éclat d'Amour" },
-        "price": "1200",
+        "price": "1300",
         "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Formule Rêve en Blanc" },
-        "price": "1490",
+        "price": "1590",
         "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Formule Conte de Fées" },
-        "price": "1690",
+        "price": "1790",
         "priceCurrency": "EUR"
       }
     ]

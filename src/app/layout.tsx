@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: "MG Events Animation | DJ Mariage Bretagne",
     template: "%s | MG Events Animation",
   },
-  description: "DJ mariage Bretagne — Avis 5★, formules transparentes dès 1200€ TTC. 25 ans d'expérience, AnimaJet, photobooth vintage. Devis gratuit sous 24h ✓",
+  description: "DJ mariage Bretagne — Avis 5★, formules transparentes dès 1300€ TTC. 25 ans d'expérience, AnimaJet, photobooth vintage. Devis gratuit sous 24h ✓",
   keywords: "DJ mariage Bretagne, animation mariage Bretagne, DJ Rennes, DJ Vannes, DJ Nantes, sonorisation mariage Bretagne, photobooth vintage mariage, étincelles froides mariage, cérémonie laïque sonorisation, AnimaJet animation interactive",
   authors: [{ name: "MG Events Animation" }],
   creator: "MG Events Animation",
@@ -91,21 +91,21 @@ const weddingServiceJsonLd = {
       "@type": "Offer",
       "name": "Formule Éclat d'Amour",
       "description": "Sonorisation cocktail, repas et soirée dansante, 2 micros, éclairages, AnimaJet inclus",
-      "price": "1200",
+      "price": "1300",
       "priceCurrency": "EUR"
     },
     {
       "@type": "Offer",
       "name": "Formule Rêve en Blanc",
       "description": "Formule complète avec ambiance RGBW, boule à facettes, fumée lourde et étincelles froides certifiées CE",
-      "price": "1490",
+      "price": "1590",
       "priceCurrency": "EUR"
     },
     {
       "@type": "Offer",
       "name": "Formule Conte de Fées",
       "description": "Expérience premium avec photobooth vintage TSF années 60 et 150 impressions incluses",
-      "price": "1690",
+      "price": "1790",
       "priceCurrency": "EUR"
     }
   ],
@@ -220,7 +220,7 @@ const jsonLd = {
           "name": "Formule Éclat d'Amour",
           "description": "Sonorisation cocktail, repas et soirée dansante, 2 micros, 4 éclairages, vidéoprojecteur, AnimaJet inclus"
         },
-        "price": "1200",
+        "price": "1300",
         "priceCurrency": "EUR"
       },
       {
@@ -230,7 +230,7 @@ const jsonLd = {
           "name": "Formule Rêve en Blanc",
           "description": "Formule complète avec ambiance RGBW, boule à facettes, fumée lourde et étincelles froides"
         },
-        "price": "1490",
+        "price": "1590",
         "priceCurrency": "EUR"
       },
       {
@@ -240,7 +240,7 @@ const jsonLd = {
           "name": "Formule Conte de Fées",
           "description": "Expérience premium avec photobooth vintage et 150 impressions incluses"
         },
-        "price": "1690",
+        "price": "1790",
         "priceCurrency": "EUR"
       }
     ]

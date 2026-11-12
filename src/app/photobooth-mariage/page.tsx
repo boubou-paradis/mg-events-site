@@ -29,7 +29,7 @@ const faqs = [
   {
     question: 'Le photobooth est-il inclus dans vos formules mariage ?',
     answer:
-      "Le photobooth vintage est inclus sans supplément dans notre formule Conte de Fées (1690€ TTC). Avec les formules Éclat d'Amour et Rêve en Blanc, il est disponible en option à 240€, avec 150 tirages inclus.",
+      "Le photobooth vintage est inclus sans supplément dans notre formule Conte de Fées (1790€ TTC). Avec les formules Éclat d'Amour et Rêve en Blanc, il est disponible en option à 240€, avec 150 tirages inclus.",
   },
   {
     question: 'Peut-on louer le photobooth seul, sans prestation DJ ?',
@@ -222,7 +222,7 @@ export default function PhotoboothMariagePage() {
             <p className="text-xs text-[#c9a227] uppercase tracking-wider mb-2">Inclus dans</p>
             <p className="text-white font-[family-name:var(--font-display)] text-lg mb-1">Conte de Fées</p>
             <p className="text-[#888] text-sm">
-              Sans supplément dans notre formule complète à 1690€ TTC : DJ animateur, fumée lourde,
+              Sans supplément dans notre formule complète à 1790€ TTC : DJ animateur, fumée lourde,
               étincelles froides, Livre d&apos;Or Audio et photobooth.
             </p>
           </div>

@@ -50,7 +50,7 @@ const faqs = [
   {
     question: 'Le blind test est-il inclus dans la prestation DJ ?',
     answer:
-      "Oui, il fait partie d'AnimaJet, inclus dès la formule Éclat d'Amour (1200€ TTC). Et comme c'est le DJ qui le pilote, la transition entre blind test et soirée dansante est parfaitement fluide.",
+      "Oui, il fait partie d'AnimaJet, inclus dès la formule Éclat d'Amour (1300€ TTC). Et comme c'est le DJ qui le pilote, la transition entre blind test et soirée dansante est parfaitement fluide.",
   },
 ];
 
