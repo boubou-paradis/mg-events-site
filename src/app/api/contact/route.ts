@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
+import { findFieldWithLink, LINK_REJECTED_MESSAGE } from '@/lib/anti-spam';
 import { Resend } from 'resend';
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
@@ -17,6 +18,37 @@ interface ContactFormData {
   formule: string;
   message: string;
   website?: string; // honeypot : doit rester vide
+  turnstileToken?: string; // jeton Cloudflare Turnstile (si le widget est actif)
+}
+
+// Vérification Cloudflare Turnstile côté serveur.
+// Active uniquement si TURNSTILE_SECRET_KEY est défini : sans la clé, le
+// contrôle est ignoré et le formulaire se comporte comme avant.
+const TURNSTILE_VERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+
+async function verifyTurnstile(token: string | undefined, ip: string): Promise<boolean> {
+  const secret = process.env.TURNSTILE_SECRET_KEY;
+  if (!secret) return true;
+  if (!token) return false;
+
+  const body = new URLSearchParams({ secret, response: token });
+  if (ip && ip !== 'unknown') body.set('remoteip', ip);
+
+  try {
+    const res = await fetch(TURNSTILE_VERIFY_URL, { method: 'POST', body });
+    if (!res.ok) {
+      console.error('Turnstile siteverify HTTP', res.status);
+      return false;
+    }
+    const result: { success?: boolean; 'error-codes'?: string[] } = await res.json();
+    if (!result.success) {
+      console.warn('Turnstile refusé:', result['error-codes'] || []);
+    }
+    return result.success === true;
+  } catch (error) {
+    console.error('Turnstile siteverify erreur:', error);
+    return false;
+  }
 }
 
 // Échappe les caractères HTML pour éviter toute injection dans l'email
@@ -109,6 +141,30 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Message trop long (5000 caractères maximum).' },
         { status: 400 }
+      );
+    }
+
+    // Anti-spam : refus explicite des liens dans les champs libres.
+    // On répond 400 (et non un faux succès) pour qu'un vrai client puisse
+    // retirer le lien et renvoyer sa demande.
+    const fieldWithLink = findFieldWithLink({
+      message: data.message,
+      name: data.name,
+      location: data.location,
+      address: data.address,
+      city: data.city,
+    });
+    if (fieldWithLink) {
+      console.warn(`Contact refusé (lien dans "${fieldWithLink}") ip=${ip} email=${data.email}`);
+      return NextResponse.json({ error: LINK_REJECTED_MESSAGE }, { status: 400 });
+    }
+
+    // Cloudflare Turnstile (si TURNSTILE_SECRET_KEY est défini)
+    if (!(await verifyTurnstile(data.turnstileToken, ip))) {
+      console.warn(`Contact refusé (Turnstile) ip=${ip} email=${data.email}`);
+      return NextResponse.json(
+        { error: 'La vérification anti-robot a échoué. Merci de réessayer.' },
+        { status: 403 }
       );
     }
 

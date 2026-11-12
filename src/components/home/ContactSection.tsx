@@ -1,7 +1,35 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import Script from 'next/script';
 import { Phone, Mail, MapPin } from 'lucide-react';
+
+// Cloudflare Turnstile : actif uniquement si la clé publique est définie.
+// Sans clé, aucun script n'est chargé et le formulaire se comporte comme avant.
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+const TURNSTILE_SCRIPT_URL = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (
+        container: HTMLElement,
+        options: {
+          sitekey: string;
+          theme?: 'light' | 'dark' | 'auto';
+          callback?: (token: string) => void;
+          'expired-callback'?: () => void;
+          'error-callback'?: () => void;
+        }
+      ) => string;
+      reset: (widgetId: string) => void;
+      remove: (widgetId: string) => void;
+    };
+  }
+}
+
+const GENERIC_ERROR_MESSAGE =
+  'Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.';
 
 // Section contact avec formulaire de devis (îlot client)
 export default function ContactSection() {
@@ -21,9 +49,50 @@ export default function ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState(GENERIC_ERROR_MESSAGE);
+
+  // Turnstile : conteneur du widget, id du widget rendu, jeton courant
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetIdRef = useRef<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+
+  // Rendu explicite du widget (appelé quand le script est prêt)
+  const renderTurnstile = useCallback(() => {
+    if (!TURNSTILE_SITE_KEY || !window.turnstile) return;
+    if (!turnstileContainerRef.current || turnstileWidgetIdRef.current !== null) return;
+    turnstileWidgetIdRef.current = window.turnstile.render(turnstileContainerRef.current, {
+      sitekey: TURNSTILE_SITE_KEY,
+      theme: 'dark',
+      callback: (token) => setTurnstileToken(token),
+      'expired-callback': () => setTurnstileToken(null),
+      'error-callback': () => setTurnstileToken(null),
+    });
+  }, []);
+
+  // Jeton à usage unique : on réinitialise le widget après chaque envoi
+  const resetTurnstile = useCallback(() => {
+    setTurnstileToken(null);
+    if (window.turnstile && turnstileWidgetIdRef.current !== null) {
+      window.turnstile.reset(turnstileWidgetIdRef.current);
+    }
+  }, []);
+
+  // Nettoyage du widget au démontage du composant
+  useEffect(() => {
+    return () => {
+      if (window.turnstile && turnstileWidgetIdRef.current !== null) {
+        window.turnstile.remove(turnstileWidgetIdRef.current);
+        turnstileWidgetIdRef.current = null;
+      }
+    };
+  }, []);
+
+  const turnstileEnabled = Boolean(TURNSTILE_SITE_KEY);
+  const canSubmit = !isSubmitting && (!turnstileEnabled || turnstileToken !== null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (turnstileEnabled && !turnstileToken) return;
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -33,7 +102,10 @@ export default function ContactSection() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          ...(turnstileEnabled ? { turnstileToken } : {}),
+        }),
       });
 
       if (response.ok) {
@@ -53,12 +125,25 @@ export default function ContactSection() {
           website: '',
         });
       } else {
+        // Message renvoyé par l'API (ex. lien refusé), générique en repli
+        let apiError: string | undefined;
+        try {
+          const payload = await response.json();
+          if (typeof payload?.error === 'string' && payload.error.trim()) {
+            apiError = payload.error;
+          }
+        } catch {
+          // réponse sans JSON : on garde le message générique
+        }
+        setErrorMessage(apiError || GENERIC_ERROR_MESSAGE);
         setSubmitStatus('error');
       }
     } catch {
+      setErrorMessage(GENERIC_ERROR_MESSAGE);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
+      if (turnstileEnabled) resetTurnstile();
     }
   };
 
@@ -308,10 +393,22 @@ export default function ContactSection() {
                 />
               </div>
 
+              {/* Cloudflare Turnstile (uniquement si NEXT_PUBLIC_TURNSTILE_SITE_KEY est défini) */}
+              {turnstileEnabled && (
+                <>
+                  <Script
+                    src={TURNSTILE_SCRIPT_URL}
+                    strategy="afterInteractive"
+                    onReady={renderTurnstile}
+                  />
+                  <div ref={turnstileContainerRef} className="flex justify-center min-h-[65px]" />
+                </>
+              )}
+
               <button
                 type="submit"
                 className="btn-gold w-full disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={isSubmitting}
+                disabled={!canSubmit}
               >
                 {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
               </button>
@@ -324,7 +421,7 @@ export default function ContactSection() {
 
               {submitStatus === 'error' && (
                 <div className="p-4 bg-red-900/20 border border-red-500/30 rounded text-red-400 text-sm text-center">
-                  Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.
+                  {errorMessage}
                 </div>
               )}
 
