@@ -113,6 +113,51 @@ export default function Article() {
                 <li>Testez la musique en conditions réelles avant le jour J</li>
               </ul>
 
+              <h3 className="text-xl text-white mt-8 mb-4">Idées de chansons d&apos;ouverture de bal par style</h3>
+              <p>
+                Pas d&apos;inspiration ? Voici des valeurs sûres, à classer selon
+                l&apos;ambiance que vous voulez donner. Pour une ouverture surprise, on peut enchaîner un slow
+                et un titre très rythmé : le DJ prépare le mix pour une transition sans coupure.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 my-6">
+                <div className="card-dark p-4">
+                  <p className="text-white font-medium mb-2">Romantiques en français</p>
+                  <ul className="text-sm space-y-1">
+                    <li><span className="text-white">La Vie en rose</span> · Édith Piaf</li>
+                    <li><span className="text-white">L&apos;Hymne à l&apos;amour</span> · Édith Piaf</li>
+                    <li><span className="text-white">Je te promets</span> · Johnny Hallyday</li>
+                    <li><span className="text-white">Ma préférence</span> · Julien Clerc</li>
+                  </ul>
+                </div>
+                <div className="card-dark p-4">
+                  <p className="text-white font-medium mb-2">Romantiques en anglais</p>
+                  <ul className="text-sm space-y-1">
+                    <li><span className="text-white">Perfect</span> · Ed Sheeran</li>
+                    <li><span className="text-white">All of Me</span> · John Legend</li>
+                    <li><span className="text-white">Thinking Out Loud</span> · Ed Sheeran</li>
+                    <li><span className="text-white">Can&apos;t Help Falling in Love</span> · Elvis Presley</li>
+                  </ul>
+                </div>
+                <div className="card-dark p-4">
+                  <p className="text-white font-medium mb-2">Intemporels pour danser à deux</p>
+                  <ul className="text-sm space-y-1">
+                    <li><span className="text-white">Stand by Me</span> · Ben E. King</li>
+                    <li><span className="text-white">Your Song</span> · Elton John</li>
+                    <li><span className="text-white">At Last</span> · Etta James</li>
+                    <li><span className="text-white">La Bohème</span> · Charles Aznavour</li>
+                  </ul>
+                </div>
+                <div className="card-dark p-4">
+                  <p className="text-white font-medium mb-2">Pour une ouverture surprise qui finit en fête</p>
+                  <ul className="text-sm space-y-1">
+                    <li><span className="text-white">(I&apos;ve Had) The Time of My Life</span> · Bill Medley &amp; Jennifer Warnes</li>
+                    <li><span className="text-white">Shut Up and Dance</span> · Walk the Moon</li>
+                    <li><span className="text-white">Uptown Funk</span> · Mark Ronson ft. Bruno Mars</li>
+                    <li><span className="text-white">I Gotta Feeling</span> · The Black Eyed Peas</li>
+                  </ul>
+                </div>
+              </div>
+
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mt-12 mb-6">
                 2. Chorégraphie ou pas ?
               </h2>

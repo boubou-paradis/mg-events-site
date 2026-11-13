@@ -175,7 +175,7 @@ export default function Article() {
             </div>
 
             <h1 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-white mb-4">
-              Comment choisir le <span className="text-[#c9a227]">bon DJ</span> pour son mariage ?
+              Comment trouver un <span className="text-[#c9a227]">bon DJ</span> pour son mariage ?
             </h1>
 
             <div className="flex items-center gap-3">
