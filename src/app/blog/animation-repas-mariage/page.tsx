@@ -1,14 +1,18 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import BlogArticleShell from '@/components/BlogArticleShell';
+import YouTubeLite from '@/components/YouTubeLite';
+import { animajetVideos, ANIMAJET_YOUTUBE_CHANNEL } from '@/data/animajetVideos';
 
 const SLUG = 'animation-repas-mariage';
 const BASE = 'https://www.mg-events35.com';
 
 export const metadata: Metadata = {
-  title: 'Animation repas mariage : idées élégantes entre les plats',
+  // Nov. 2026 : "animation repas mariage" pos 13,6 ; "animation repas assis" 364 impr. pos 33 ;
+  // "jeux mariage pendant le repas" pos 17,5. Ajout section repas assis + déroulé type.
+  title: 'Animation repas mariage : 12 idées et jeux pour un repas assis',
   description:
-    "Comment animer un repas de mariage sans casser l'ambiance : animations courtes entre les plats, coordination avec le traiteur, quiz et blind test bien dosés. Conseils de DJ de terrain.",
+    "Animer un repas de mariage assis sans casser l'ambiance : 12 jeux à faire depuis la table (quiz, blind test, Le Bon Ordre…), déroulé type et coordination avec le traiteur.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     title: "Comment animer un repas de mariage sans casser l'ambiance",
@@ -27,6 +31,11 @@ const faqs = [
     question: 'Quelles animations fonctionnent le mieux pendant le repas ?',
     answer:
       "Les formats courts et inclusifs : un quiz sur les mariés (10-15 minutes), une manche de blind test, le jeu « elle et lui », une rétrospective photo. Les invités participent depuis leur table — personne n'est forcé de monter sur scène entre le plat et le fromage.",
+  },
+  {
+    question: 'Quels jeux faire pendant un repas assis ?',
+    answer:
+      "Ceux qui se jouent depuis la table : quiz des mariés sur smartphone, manche de blind test, jeu « elle ou lui », jeu des serviettes, chanson des témoins avec paroles à l'écran. Personne n'a besoin de se lever et le service du traiteur n'est pas perturbé.",
   },
   {
     question: 'Comment coordonner les animations avec le traiteur ?',
@@ -60,7 +69,7 @@ export default function Article() {
       heroAlt="Salle de réception de mariage pendant le repas, ambiance chaleureuse"
       date="1 juillet 2026"
       isoDate="2026-07-01"
-      readTime="9 min"
+      readTime="12 min"
       faqs={faqs}
       related={[
         { href: '/blog/planning-soiree-mariage', title: 'Planning de soirée mariage', desc: 'Le bon timing du jour J.' },
@@ -130,6 +139,115 @@ export default function Article() {
         sketchs : ce sont souvent les moments les plus forts du repas. Notre rôle : les coordonner en amont
         via un groupe dédié, vérifier les fichiers avant le jour J (la vidéo qui ne se lance pas est un
         classique du mariage), et les placer aux bons créneaux.
+      </p>
+
+      <H2>Animation repas assis : 12 idées qui se jouent depuis la table</H2>
+      <p>
+        Un repas assis impose une contrainte simple : les invités ne bougent pas. Les meilleures
+        animations sont donc celles qui se jouent <strong className="text-white">sans quitter sa
+        chaise</strong>. Celles qu&apos;on utilise le plus souvent en Bretagne, du plus calme au plus
+        festif :
+      </p>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          <strong className="text-white">Le quiz des mariés par table</strong> : chaque table répond
+          sur smartphone, classement en direct à l&apos;écran (voir notre{' '}
+          <Link href="/quiz-mariage-interactif" className="text-[#c9a227] hover:underline">quiz mariage
+          interactif</Link>).
+        </li>
+        <li>
+          <strong className="text-white">Le blind test générations</strong> : une manche de 10 titres, des
+          années 60 à aujourd&apos;hui. Les tables chantent, personne n&apos;est mis en avant seul (détails
+          sur le <Link href="/blind-test-mariage" className="text-[#c9a227] hover:underline">blind test
+          mariage</Link>).
+        </li>
+        <li>
+          <strong className="text-white">Le Bon Ordre</strong> : l&apos;équipe de la mariée contre celle
+          du marié, chaque camp remet des souvenirs du couple dans l&apos;ordre depuis son téléphone.
+        </li>
+        <li>
+          <strong className="text-white">Matching</strong> : le jeu des points communs entre invités.
+          Parfait entre l&apos;entrée et le plat pour que les deux familles fassent connaissance.
+        </li>
+        <li>
+          <strong className="text-white">La Roue de la Destinée et le jeu des 12 mois</strong> : une roue
+          géante à l&apos;écran tire défis et gages, et chaque mois de naissance a sa mission.
+        </li>
+        <li>
+          <strong className="text-white">Photo Mystère</strong> : une photo des mariés se dévoile peu à peu
+          sur grand écran, toute la salle tente de deviner où et quand elle a été prise.
+        </li>
+        <li>
+          <strong className="text-white">Le jeu « elle ou lui »</strong> : les mariés dos à dos, une
+          chaussure de chacun en main, la salle réagit à chaque réponse.
+        </li>
+        <li>
+          <strong className="text-white">Le diaporama en direct</strong> : les photos prises par les invités
+          depuis le matin défilent sur écran pendant le repas.
+        </li>
+        <li>
+          <strong className="text-white">Le téléphone livre d&apos;or</strong> : il circule ou reste à un coin
+          de la salle, les invités laissent un message vocal aux mariés entre deux plats (notre{' '}
+          <Link href="/livre-dor-audio" className="text-[#c9a227] hover:underline">livre d&apos;or
+          audio</Link>).
+        </li>
+        <li>
+          <strong className="text-white">Le jeu des serviettes</strong> : tout le monde fait tourner sa
+          serviette sur un refrain, à l&apos;entrée des mariés ou au dessert. Trente secondes, effet garanti.
+        </li>
+        <li>
+          <strong className="text-white">La chanson détournée des témoins</strong> : paroles projetées à
+          l&apos;écran, toute la salle chante le refrain.
+        </li>
+        <li>
+          <strong className="text-white">L&apos;entrée du dessert</strong> : lumière baissée, musique choisie
+          par les mariés, étincelles froides sur la pièce montée.
+        </li>
+      </ul>
+      <p>
+        Le quiz, Le Bon Ordre, Matching, la Roue et Photo Mystère font partie d&apos;
+        <Link href="/animations-interactives-mariage" className="text-[#c9a227] hover:underline">AnimaJet</Link>,
+        la plateforme de jeux interactifs que nous avons conçue et développée. Les invités jouent en
+        scannant un QR code, sans application à installer. Deux exemples en vidéo :
+      </p>
+      <YouTubeLite
+        video={animajetVideos.quizIA}
+        caption="Le quiz interactif AnimaJet : préparé en quelques secondes, joué par toutes les tables."
+      />
+      <YouTubeLite
+        video={animajetVideos.bonOrdre}
+        caption="Le Bon Ordre : l'équipe de la mariée contre celle du marié, depuis les téléphones."
+      />
+      <p>
+        Toutes les démonstrations sont sur la{' '}
+        <a href={ANIMAJET_YOUTUBE_CHANNEL} target="_blank" rel="noopener" className="text-[#c9a227] hover:underline">
+          chaîne YouTube AnimaJet</a>.
+      </p>
+      <p>
+        Ces idées valent aussi pour un repas assis d&apos;anniversaire ou d&apos;entreprise : on adapte
+        simplement les questions du quiz et la playlist du blind test. On le fait régulièrement en{' '}
+        <Link href="/dj-anniversaire-bretagne" className="text-[#c9a227] hover:underline">soirée
+        anniversaire</Link> et en{' '}
+        <Link href="/dj-soiree-entreprise" className="text-[#c9a227] hover:underline">soirée
+        d&apos;entreprise</Link>.
+      </p>
+
+      <H2>Exemple de déroulé : un repas de mariage animé sans temps mort</H2>
+      <p>Le déroulé type que l&apos;on cale avec le traiteur pour un repas de 120 invités :</p>
+      <ul className="list-disc pl-6 space-y-2">
+        <li><strong className="text-white">Entrée des mariés</strong> (5 min) : musique choisie, jeu des serviettes.</li>
+        <li><strong className="text-white">Entrée</strong> : musique d&apos;ambiance à volume de conversation.</li>
+        <li><strong className="text-white">Entre l&apos;entrée et le plat</strong> (10-15 min) : quiz des mariés par table.</li>
+        <li><strong className="text-white">Plat</strong> : pas d&apos;animation, le service passe en priorité.</li>
+        <li><strong className="text-white">Avant le fromage</strong> (10 min) : discours ou surprise des témoins.</li>
+        <li><strong className="text-white">Avant le dessert</strong> (10 min) : manche de blind test, annonce des gagnants.</li>
+        <li><strong className="text-white">Dessert</strong> : entrée de la pièce montée, puis enchaînement vers l&apos;ouverture de bal.</li>
+      </ul>
+      <p>
+        Au total, environ 45 minutes d&apos;animation réparties sur trois à quatre heures de repas. Pour la
+        suite de la soirée, voir notre{' '}
+        <Link href="/blog/planning-soiree-mariage" className="text-[#c9a227] hover:underline">planning de
+        soirée mariage</Link>.
       </p>
 
       <H2>Ce qu&apos;il faut éviter absolument</H2>

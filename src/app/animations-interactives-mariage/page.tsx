@@ -18,6 +18,8 @@ import {
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import AnimaJetIcon from '@/components/animajet/AnimaJetIcon';
+import YouTubeLite from '@/components/YouTubeLite';
+import { animajetVideos, ANIMAJET_YOUTUBE_CHANNEL } from '@/data/animajetVideos';
 import {
   animajetFeatures,
   animajetClusterPages,
@@ -333,8 +335,38 @@ export default function AnimationsInteractivesMariage() {
         </div>
       </section>
 
-      {/* Galerie */}
+      {/* Les jeux en vidéo (chaîne YouTube AnimaJet) */}
       <section className="py-16 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
+            Les jeux AnimaJet <span className="text-[#c9a227]">en vidéo</span>
+          </h2>
+          <p className="text-[#888] text-center mb-10 max-w-3xl mx-auto">
+            Chaque animation en moins de deux minutes, filmée par celui qui l&apos;a développée. Retrouvez
+            tous les tutos sur la{' '}
+            <a href={ANIMAJET_YOUTUBE_CHANNEL} target="_blank" rel="noopener" className="text-[#c9a227] hover:underline">
+              chaîne YouTube AnimaJet</a>.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6">
+            {[
+              animajetVideos.presentation,
+              animajetVideos.quizIA,
+              animajetVideos.bonOrdre,
+              animajetVideos.animaBuzz,
+              animajetVideos.photoMystere,
+              animajetVideos.roue,
+              animajetVideos.matching,
+              animajetVideos.photosInvites,
+              animajetVideos.animaVote,
+            ].map((v) => (
+              <YouTubeLite key={v.id} video={v} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Galerie */}
+      <section className="py-16 bg-[#0a0a0a] border-t border-[#c9a227]/10">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-[family-name:var(--font-display)] text-3xl text-white text-center mb-4">
             AnimaJet <span className="text-[#c9a227]">en images</span>

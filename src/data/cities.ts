@@ -517,6 +517,10 @@ Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, a
   {
     name: 'Lorient',
     slug: 'lorient',
+    // Nov. 2026 : "dj lorient" 158 impr., pos 20,6 (requête plus large que mariage).
+    metaTitle: 'DJ Lorient · Mariage, soirée, entreprise · Avis 5★',
+    metaDescription:
+      'DJ à Lorient et dans le pays lorientais (56) : mariages, soirées d’entreprise et événements privés. Sono, lumière, jeux interactifs AnimaJet. Avis 5★, devis sous 24h.',
     department: 'Morbihan',
     departmentCode: '56',
     departmentSlug: 'morbihan',
@@ -530,7 +534,9 @@ Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, a
 
 La région lorientaise offre des domaines de caractère à des tarifs plus accessibles que la côte sud. Les anciennes propriétés de capitaines au long cours, les manoirs cachés dans les vallons du Scorff et du Blavet, les salles avec vue sur la rade proposent des cadres variés pour tous les budgets. Le Festival Interceltique a donné à la ville une culture de l'événementiel bien rodée.
 
-Notre expérience de DJ mariage à Lorient intègre naturellement la dimension celtique quand les couples le souhaitent. Nous pouvons alterner sets festifs contemporains et moments de musique bretonne revisitée, fest-noz moderne ou ballades celtiques pour l'émotion. Cette polyvalence fait la richesse d'un mariage en pays lorientais.`,
+Notre expérience de DJ mariage à Lorient intègre naturellement la dimension celtique quand les couples le souhaitent. Nous pouvons alterner sets festifs contemporains et moments de musique bretonne revisitée, fest-noz moderne ou ballades celtiques pour l'émotion. Cette polyvalence fait la richesse d'un mariage en pays lorientais.
+
+Comme DJ à Lorient, nous animons aussi des soirées d'entreprise (séminaires, galas, soirées CSE) et des événements privés, de Lanester à Larmor-Plage. Même exigence : sonorisation adaptée au lieu, lecture de la salle et jeux interactifs AnimaJet sur grand écran pour faire participer tous les invités.`,
     localHighlights: [
       'Tarifs des domaines plus accessibles que sur la côte sud',
       'Culture celtique forte : possibilité d\'intégrer des sets bretons',
@@ -654,6 +660,10 @@ Notre expérience de DJ mariage à La Trinité-sur-Mer et dans le pays d'Auray n
   {
     name: 'Ploërmel',
     slug: 'ploermel',
+    // Nov. 2026 : "dj ploermel" 227 impr., pos 13,8-20 (requête plus large que mariage).
+    metaTitle: 'DJ Ploërmel · Mariage & soirées · Avis 5★ · Dès 1300€',
+    metaDescription:
+      'DJ à Ploërmel, Josselin et Lac au Duc (56) : mariages, anniversaires et soirées privées à 50 km de notre base. Jeux interactifs AnimaJet, sono et lumière. Devis sous 24h.',
     department: 'Morbihan',
     departmentCode: '56',
     departmentSlug: 'morbihan',
@@ -669,7 +679,9 @@ Le pays de Ploërmel concentre quelques-uns des lieux les plus emblématiques de
 
 DJ mariage à Ploërmel, c'est savoir composer avec ces lieux singuliers : l'acoustique des grandes salles de château, les contraintes des réceptions en extérieur au bord du lac, l'ambiance intimiste des domaines de campagne. Ploërmel se situe à environ 50 km de notre base. La distance exacte est calculée selon l'adresse du lieu de réception. Les forfaits incluent jusqu'à 100 km aller-retour ; les kilomètres supplémentaires sont facturés 0,66 €/km. Nous intervenons également à Josselin, Malestroit, Guer, Mauron et La Gacilly.
 
-Au-delà de la soirée dansante, nous adaptons nos animations à l'esprit du lieu : sets variété et hits internationaux pour faire danser toutes les générations, touches de musique bretonne et fest-noz revisité chères au centre Bretagne, et notre plateforme AnimaJet (quiz interactif, photo mystère, blind test live) pour une réception participative. Avec 25 ans d'expérience derrière les platines, nous lisons la piste de danse et adaptons la programmation en temps réel.`,
+Au-delà de la soirée dansante, nous adaptons nos animations à l'esprit du lieu : sets variété et hits internationaux pour faire danser toutes les générations, touches de musique bretonne et fest-noz revisité chères au centre Bretagne, et notre plateforme AnimaJet (quiz interactif, photo mystère, blind test live) pour une réception participative. Avec 25 ans d'expérience derrière les platines, nous lisons la piste de danse et adaptons la programmation en temps réel.
+
+DJ à Ploërmel, on ne fait pas que des mariages : anniversaires de 30, 40 ou 50 ans, fêtes de famille et soirées privées en salle des fêtes ou en longère autour du Lac au Duc font aussi partie de nos prestations, avec le même matériel et les mêmes jeux interactifs.`,
     localHighlights: [
       'Lac au Duc : plus grand plan d\'eau du Morbihan, cadre nature pour réceptions au bord de l\'eau',
       'Château de Josselin à 15 min : décor médiéval d\'exception sur l\'Oust',
