@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   // Nov. 2026 : "comment trouver un bon dj pour son mariage" 252 impr., pos 9,5, 0 clic.
   title: 'Comment trouver un bon DJ pour son mariage ? 10 critères',
   description:
-    'Trouver un bon DJ pour son mariage : 10 critères concrets (expérience, matériel de secours, contrat, avis vérifiables, tarifs) et les questions à poser avant de signer.',
+    'Choisir son DJ de mariage : 10 critères concrets (expérience, matériel de secours, contrat, avis, tarifs) et les questions à poser avant de signer.',
   keywords:
     'comment choisir son DJ de mariage, choisir un DJ mariage, critères DJ mariage, questions à poser à un DJ, trouver un bon DJ mariage, contrat DJ mariage, matériel DJ mariage',
   alternates: {

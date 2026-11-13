@@ -12,7 +12,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Fumée Lourde Mariage Bretagne | Ouverture de bal sur nuage',
   description:
-    "Fumée lourde pour votre ouverture de bal en Bretagne : un nuage blanc au sol, effet « danser sur un nuage », sans danger et sans odeur. Incluse dès la formule Rêve en Blanc.",
+    "Fumée lourde pour l'ouverture de bal en Bretagne : un nuage blanc au sol pour « danser sur un nuage », sans danger ni odeur. Incluse dès Rêve en Blanc.",
   keywords:
     'fumée lourde mariage, ouverture de bal fumée lourde, nuage au sol mariage, fumée lourde ouverture de bal Bretagne, effet nuage première danse, machine fumée lourde mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },

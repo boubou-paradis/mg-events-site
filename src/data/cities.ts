@@ -520,7 +520,7 @@ Notre plateforme AnimaJet, que nous avons conçue et développée nous-mêmes, a
     // Nov. 2026 : "dj lorient" 158 impr., pos 20,6 (requête plus large que mariage).
     metaTitle: 'DJ Lorient · Mariage, soirée, entreprise · Avis 5★',
     metaDescription:
-      'DJ à Lorient et dans le pays lorientais (56) : mariages, soirées d’entreprise et événements privés. Sono, lumière, jeux interactifs AnimaJet. Avis 5★, devis sous 24h.',
+      'DJ à Lorient et dans le pays lorientais (56) : mariages, soirées d’entreprise et événements privés. Jeux interactifs AnimaJet. Avis 5★, devis sous 24h.',
     department: 'Morbihan',
     departmentCode: '56',
     departmentSlug: 'morbihan',
@@ -663,7 +663,7 @@ Notre expérience de DJ mariage à La Trinité-sur-Mer et dans le pays d'Auray n
     // Nov. 2026 : "dj ploermel" 227 impr., pos 13,8-20 (requête plus large que mariage).
     metaTitle: 'DJ Ploërmel · Mariage & soirées · Avis 5★ · Dès 1300€',
     metaDescription:
-      'DJ à Ploërmel, Josselin et Lac au Duc (56) : mariages, anniversaires et soirées privées à 50 km de notre base. Jeux interactifs AnimaJet, sono et lumière. Devis sous 24h.',
+      'DJ à Ploërmel, Josselin et Lac au Duc (56) : mariages, anniversaires et soirées privées à 50 km de notre base. Jeux interactifs AnimaJet. Devis sous 24h.',
     department: 'Morbihan',
     departmentCode: '56',
     departmentSlug: 'morbihan',

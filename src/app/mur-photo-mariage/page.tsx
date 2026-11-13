@@ -9,7 +9,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Mur photo mariage | Mosaïque de photos sur écran géant — AnimaJet',
   description:
-    "Le mur photo de mariage AnimaJet : toutes les photos partagées par vos invités composent une mosaïque vivante sur écran géant, en temps réel. Sans application. MG Events Bretagne.",
+    'Mur photo de mariage AnimaJet : les photos de vos invités forment une mosaïque vivante sur grand écran, en temps réel et sans application.',
   keywords:
     'mur photo mariage, mur photo événementiel, mosaïque photo mariage, mur photo numérique mariage, mur photo écran géant, mur d\'images mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },

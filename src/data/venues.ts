@@ -85,7 +85,7 @@ export const venues: Venue[] = [
     lastWedding: 'août 2026',
     metaTitle: 'DJ Mariage Domaine du Val de Caratel (Louisfert) · Avis 5★',
     metaDescription:
-      "DJ mariage au Domaine du Val de Caratel à Louisfert, près de Châteaubriant (44) : nous y avons animé un mariage en août 2026. Retour d'expérience et conseils. Devis 24h.",
+      "DJ mariage au Domaine du Val de Caratel à Louisfert, près de Châteaubriant (44) : nous y avons animé un mariage en août 2026. Retour d'expérience et conseils.",
     intro:
       "Le Domaine du Val de Caratel, à Louisfert près de Châteaubriant, est un hameau restauré au pied d'un château du XVIIe siècle. Nous y avons animé un mariage fin août 2026.",
     about: [

@@ -8,7 +8,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Pourquoi les animations interactives révolutionnent les mariages',
   description:
-    "Quiz, blind test, partage photo en direct : les animations interactives transforment les mariages modernes. Découvrez pourquoi vos invités ne veulent plus être de simples spectateurs.",
+    'Quiz, blind test, partage photo en direct : pourquoi les animations interactives changent les mariages et font des invités des acteurs de la soirée.',
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],

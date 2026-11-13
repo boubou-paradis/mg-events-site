@@ -8,7 +8,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Comment occuper les invités pendant le cocktail de mariage',
   description:
-    "Le cocktail de mariage est souvent un moment creux pendant les photos de couple. Découvrez comment occuper et amuser vos invités avec des animations interactives sur smartphone.",
+    'Cocktail de mariage pendant les photos de couple : comment occuper et amuser vos invités avec des animations interactives sur smartphone.',
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],

@@ -12,7 +12,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Feu d\'Artifice de Jour Mariage Bretagne | Explosion de Couleurs',
   description:
-    "Un tir de jets de fumée colorée qui explose en couleurs au moment fort de votre cérémonie. 180€ TTC, 4 couleurs — option réservée à nos clients DJ, non disponible seule.",
+    'Jets de fumée colorée au moment fort de votre cérémonie : 4 couleurs, 180€ TTC. Option réservée à nos clients DJ mariage en Bretagne.',
   keywords:
     "feu d'artifice de jour mariage, explosion couleurs cérémonie, feu artifice cérémonie laïque, fumée colorée mariage Bretagne, animation originale mariage, feu d'artifice diurne, jets de fumée colorée mariage",
   alternates: { canonical: `${BASE}/${SLUG}` },

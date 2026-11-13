@@ -8,7 +8,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Prix DJ mariage : comprendre les tarifs en Bretagne',
   description:
-    "Combien coûte un DJ de mariage en Bretagne ? Ce qui fait varier les prix (durée, matériel, animations, déplacement), comment lire un devis et éviter les mauvaises surprises.",
+    'Combien coûte un DJ de mariage en Bretagne ? Ce qui fait varier le prix (durée, matériel, animations, déplacement) et comment lire un devis.',
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],

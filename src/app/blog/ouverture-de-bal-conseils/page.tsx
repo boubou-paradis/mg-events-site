@@ -5,7 +5,7 @@ import { ArrowLeft, Calendar, User, Clock, Check } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Ouverture de bal mariage : musique, chorégraphie et effets',
-  description: 'Réussir votre ouverture de bal de mariage : choix de la musique, chorégraphie simple ou surprise, fumée lourde et étincelles froides pour une première danse inoubliable.',
+  description: 'Réussir votre ouverture de bal : choix de la musique, chorégraphie simple ou surprise, fumée lourde et étincelles froides pour la première danse.',
   alternates: {
     canonical: 'https://www.mg-events35.com/blog/ouverture-de-bal-conseils',
   },

@@ -8,7 +8,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: "Animation mariage : les erreurs qui cassent l'ambiance",
   description:
-    "Trop de jeux, mauvais timing, micro mal géré, playlist imposée, zéro coordination avec le traiteur : les erreurs d'animation qui plombent un mariage, et comment les éviter.",
+    "Trop de jeux, mauvais timing, micro mal géré, playlist imposée : les erreurs d'animation qui plombent un mariage, et comment les éviter.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],

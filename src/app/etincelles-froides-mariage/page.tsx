@@ -12,7 +12,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Étincelles Froides Mariage Bretagne | Ouverture de bal',
   description:
-    "Étincelles froides certifiées CE pour votre mariage en Bretagne : machines Mac Mah MAC SPARK 300, effet spectaculaire et maîtrisé pour l'ouverture de bal. Incluses dès Rêve en Blanc.",
+    'Étincelles froides certifiées CE pour votre ouverture de bal en Bretagne : machines MAC SPARK 300, effet spectaculaire et maîtrisé. Dès Rêve en Blanc.',
   keywords:
     'étincelles froides mariage, étincelles froides mariage Bretagne, ouverture de bal étincelles, gerbes étincelles mariage, machine étincelles froides, étincelles froides salle mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },
