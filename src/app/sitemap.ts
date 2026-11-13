@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { cities } from '@/data/cities'
 import { allClusterPages } from '@/data/animajet'
+import { venues } from '@/data/venues'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.mg-events35.com'
@@ -49,6 +50,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // Lieux où MG Events a réellement animé (src/data/venues.ts, nov. 2026)
+    ...venues.map((v) => ({
+      url: `${baseUrl}/lieux-reception-bretagne/${v.slug}`,
+      lastModified: '2026-11-13',
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
     // Note : recentrage géo juillet 2026 — Finistère (29) et Mayenne (53)
     // retirés (301 vers /zones-intervention), y compris leurs villes
     // (Brest, Quimper, Morlaix, Concarneau, Laval, Mayenne-ville,

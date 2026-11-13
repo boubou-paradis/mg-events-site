@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, MapPin, Phone, Mail, Star } from 'lucide-react';
+import { venues } from '@/data/venues';
 
 export const metadata: Metadata = {
   title: 'Les Plus Beaux Lieux de Réception pour votre Mariage en Bretagne',
@@ -147,6 +148,30 @@ export default function LieuxReceptionBretagne() {
             règles sonores, accessibilité. Nous connaissons ces contraintes et arrivons préparés pour que
             la prestation son et lumière soit parfaite quelle que soit la salle choisie.
           </p>
+        </div>
+      </section>
+
+      {/* Lieux où nous avons animé (pages dédiées) */}
+      <section className="pb-4">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl text-white mb-6">
+            Les lieux où <span className="text-[#c9a227]">nous avons animé récemment</span>
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {venues.map((v) => (
+              <Link
+                key={v.slug}
+                href={`/lieux-reception-bretagne/${v.slug}`}
+                className="card-dark p-5 hover:border-[#c9a227]/30 transition-colors"
+              >
+                <p className="text-white font-medium mb-1">{v.name}</p>
+                <p className="text-[#888] text-sm">
+                  {v.commune} ({v.departmentCode}) · mariage animé en {v.lastWedding}
+                </p>
+                <p className="text-[#c9a227] text-sm mt-2">Notre retour d&apos;expérience →</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
