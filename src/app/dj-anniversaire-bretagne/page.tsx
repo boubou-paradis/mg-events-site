@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   // "dj rennes anniversaire" pos 22 ; "prix dj anniversaire" pos 19. Ajout section prix + Rennes/35.
   title: 'DJ Anniversaire Rennes & Bretagne · Soirée 30, 40, 50 ans · Dès 600€',
   description:
-    "DJ animateur pour votre anniversaire à Rennes, Redon et en Bretagne : 30, 40, 50, 60 ans, soirée privée ou familiale. Musique toutes générations, quiz, photobooth. Dès 600€ TTC, devis sous 24h.",
+    'DJ anniversaire à Rennes, Redon et en Bretagne : 30, 40, 50, 60 ans. Musique toutes générations, quiz, photobooth. Dès 600€ TTC, devis sous 24h.',
   keywords:
     'DJ anniversaire Bretagne, DJ anniversaire Ille-et-Vilaine, DJ soirée privée Bretagne, animation anniversaire adulte, DJ anniversaire 40 ans, DJ anniversaire 50 ans, animation anniversaire Rennes',
   alternates: { canonical: `${BASE}/${SLUG}` },

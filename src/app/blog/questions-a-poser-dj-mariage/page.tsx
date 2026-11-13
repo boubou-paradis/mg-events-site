@@ -8,7 +8,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Questions à poser à son DJ mariage avant de signer',
   description:
-    "La checklist complète des questions à poser à votre DJ de mariage : expérience, matériel, assurance, horaires, playlist, animations, contrat. Ne signez rien avant de l'avoir lue.",
+    'Les questions à poser à votre DJ de mariage : expérience, matériel, assurance, horaires, playlist, animations, contrat. La checklist avant de signer.',
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],

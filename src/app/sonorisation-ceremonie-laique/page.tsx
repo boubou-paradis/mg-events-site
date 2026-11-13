@@ -12,7 +12,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Sonorisation Cérémonie Laïque Bretagne | DJ mariage — 180€',
   description:
-    "Sonorisation de cérémonie laïque en Bretagne : enceinte sur batterie, micros sans fil et cravate, 2 techniciens dédiés. Musiques d'entrée, discours, échange des vœux. 180€ TTC.",
+    'Sonorisation de cérémonie laïque en Bretagne : enceinte sur batterie, micros sans fil et cravate, 2 techniciens. Entrée, discours, vœux. 180€ TTC.',
   keywords:
     'sonorisation cérémonie laïque, DJ cérémonie laïque Bretagne, musique cérémonie laïque mariage, sono cérémonie extérieur, micro cérémonie laïque, cérémonie laïque Bretagne',
   alternates: { canonical: `${BASE}/${SLUG}` },

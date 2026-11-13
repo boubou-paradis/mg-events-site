@@ -8,7 +8,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'DJ ou playlist Spotify pour un mariage ? Avantages et limites',
   description:
-    "Playlist Spotify ou DJ professionnel pour votre mariage ? Comparatif honnête : budget, matériel, transitions, imprévus, animation. Ce qui marche pour un petit comité, ce qui coince à 120 invités.",
+    'Playlist Spotify ou DJ pour votre mariage ? Comparatif honnête : budget, matériel, transitions, imprévus. Ce qui marche en petit comité, ce qui coince à 120.',
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],

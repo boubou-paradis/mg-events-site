@@ -8,7 +8,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: "Musique vin d'honneur : ambiance, volume et conseils DJ",
   description:
-    "Quelle musique pour le vin d'honneur de votre mariage ? Styles, volume, sonorisation en extérieur, transition vers le repas : les conseils d'un DJ pour un cocktail réussi.",
+    "Quelle musique pour le vin d'honneur ? Styles, volume, sono en extérieur, transition vers le repas : les conseils d'un DJ pour un cocktail réussi.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],

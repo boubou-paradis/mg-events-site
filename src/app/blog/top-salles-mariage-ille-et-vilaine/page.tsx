@@ -5,7 +5,7 @@ import { ArrowLeft, Calendar, User, Clock, MapPin, Star, Users, Leaf, Castle } f
 
 export const metadata: Metadata = {
   title: 'Top 5 des salles de mariage en Ille-et-Vilaine (35) | Guide 2026',
-  description: 'Découvrez les plus belles salles de mariage en Ille-et-Vilaine : Domaine de Cicé-Blossac, Château de la Ballue, Manoir de la Begaudière... Notre sélection pour un mariage inoubliable.',
+  description: 'Les plus belles salles de mariage en Ille-et-Vilaine : Domaine de Cicé-Blossac, Château de la Ballue, Manoir de la Begaudière… Notre sélection.',
   keywords: 'salle mariage Ille-et-Vilaine, lieu réception mariage 35, domaine mariage Rennes, château mariage Bretagne, salle mariage Rennes',
   alternates: {
     canonical: 'https://www.mg-events35.com/blog/top-salles-mariage-ille-et-vilaine',

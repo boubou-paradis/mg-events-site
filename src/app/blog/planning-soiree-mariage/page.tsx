@@ -8,7 +8,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Planning soirée mariage : le bon timing pour l\'ambiance',
   description:
-    "Le planning d'une soirée de mariage réussie, heure par heure : vin d'honneur, repas, discours, ouverture de bal, soirée dansante. Les pièges de timing et comment les éviter.",
+    "Planning d'une soirée de mariage heure par heure : vin d'honneur, repas, discours, ouverture de bal, soirée dansante. Les pièges de timing à éviter.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],

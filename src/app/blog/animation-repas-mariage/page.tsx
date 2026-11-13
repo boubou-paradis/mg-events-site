@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   // "jeux mariage pendant le repas" pos 17,5. Ajout section repas assis + déroulé type.
   title: 'Animation repas mariage : 12 idées et jeux pour un repas assis',
   description:
-    "Animer un repas de mariage assis sans casser l'ambiance : 12 jeux à faire depuis la table (quiz, blind test, Le Bon Ordre…), déroulé type et coordination avec le traiteur.",
+    'Animer un repas de mariage assis : 12 jeux à faire depuis la table (quiz, blind test, Le Bon Ordre…), déroulé type et coordination avec le traiteur.',
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],

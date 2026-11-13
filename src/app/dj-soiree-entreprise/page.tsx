@@ -13,7 +13,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'DJ Soirée Entreprise Bretagne · Séminaire, gala, CSE · Dès 800€',
   description:
-    "DJ animateur pour vos soirées d'entreprise en Bretagne : séminaires, galas, vœux, CE/CSE. Animations interactives AnimaJet, photobooth logo, formules dès 800€. Devis gratuit.",
+    "DJ pour soirées d'entreprise en Bretagne : séminaires, galas, vœux, CE/CSE. Animations interactives AnimaJet, photobooth, dès 800€. Devis gratuit.",
   keywords:
     "DJ soirée entreprise Bretagne, DJ soirée entreprise Rennes, animation soirée entreprise, DJ comité d'entreprise, animation séminaire Bretagne, DJ gala entreprise, soirée CSE animation",
   alternates: { canonical: `${BASE}/${SLUG}` },

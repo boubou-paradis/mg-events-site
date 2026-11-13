@@ -8,7 +8,7 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   title: 'Quiz ou blind test : quelle animation choisir pour son mariage ?',
   description:
-    "Quiz interactif ou blind test musical pour votre mariage ? On compare les deux animations stars : déroulé, ambiance, public, moment idéal. Et pourquoi ne pas choisir les deux ?",
+    'Quiz interactif ou blind test pour votre mariage ? Déroulé, ambiance, public, moment idéal : on compare les deux animations stars.',
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
     images: ['https://www.mg-events35.com/images/og-default.jpg'],
