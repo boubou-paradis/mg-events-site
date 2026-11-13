@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Quelle musique pour le vin d'honneur de votre mariage ? Styles, volume, sonorisation en extérieur, transition vers le repas : les conseils d'un DJ pour un cocktail réussi.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: "Musique de vin d'honneur : créer l'ambiance sans gêner les invités",
     description: "Styles, volume et sonorisation d'extérieur : les conseils DJ pour un cocktail de mariage réussi.",
     url: `${BASE}/blog/${SLUG}`,

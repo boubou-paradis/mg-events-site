@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/blog/top-salles-mariage-ille-et-vilaine',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Top 5 des salles de mariage en Ille-et-Vilaine (35)',
     description: 'Notre sélection des plus beaux lieux de réception pour votre mariage en Ille-et-Vilaine.',
     url: 'https://www.mg-events35.com/blog/top-salles-mariage-ille-et-vilaine',

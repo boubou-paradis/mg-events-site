@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'animation cocktail mariage, animation vin d\'honneur, occuper invités cocktail mariage, animation apéritif mariage, animation pendant photos mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Animation cocktail de mariage — AnimaJet par MG Events',
     description:
       "Occupez et amusez vos invités pendant le vin d'honneur avec des animations interactives sur smartphone.",

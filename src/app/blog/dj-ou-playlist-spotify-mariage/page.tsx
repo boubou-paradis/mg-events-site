@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Playlist Spotify ou DJ professionnel pour votre mariage ? Comparatif honnête : budget, matériel, transitions, imprévus, animation. Ce qui marche pour un petit comité, ce qui coince à 120 invités.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'DJ ou playlist Spotify : que choisir pour un mariage ?',
     description: 'Le comparatif honnête, sans mépriser la playlist — mais sans ignorer ce qui se passe à 23h quand la piste ne démarre pas.',
     url: `${BASE}/blog/${SLUG}`,

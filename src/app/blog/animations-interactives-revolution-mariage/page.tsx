@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Quiz, blind test, partage photo en direct : les animations interactives transforment les mariages modernes. Découvrez pourquoi vos invités ne veulent plus être de simples spectateurs.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Pourquoi les animations interactives révolutionnent les mariages modernes',
     description:
       "Le smartphone, l'écran géant et le jeu collectif réinventent l'animation de mariage. On vous explique pourquoi.",

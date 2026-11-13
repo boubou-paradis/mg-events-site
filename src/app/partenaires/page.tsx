@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/partenaires',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Nos Partenaires de Confiance | MG Events Animation Bretagne',
     description: 'Photographes, traiteurs, fleuristes : découvrez nos partenaires de confiance pour votre mariage en Bretagne. Professionnels recommandés par MG Events.',
     type: 'website',

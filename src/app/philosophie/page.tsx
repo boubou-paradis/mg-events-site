@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/philosophie',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Notre Philosophie | MG Events Animation',
     description: 'C\'est votre soirée. Simplement. Découvrez notre approche unique du métier de DJ animateur en Bretagne.',
     type: 'website',

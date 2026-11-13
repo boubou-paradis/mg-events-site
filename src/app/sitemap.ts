@@ -263,6 +263,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    // Page partenaires (indexable, liée depuis le footer — absente du sitemap jusqu'en nov. 2026)
+    {
+      url: `${baseUrl}/partenaires`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
     // Pages légales
     {
       url: `${baseUrl}/mentions-legales`,

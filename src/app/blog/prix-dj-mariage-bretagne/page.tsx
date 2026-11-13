@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Combien coûte un DJ de mariage en Bretagne ? Ce qui fait varier les prix (durée, matériel, animations, déplacement), comment lire un devis et éviter les mauvaises surprises.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Combien coûte un DJ de mariage en Bretagne ?',
     description: 'Les vraies variables qui font le prix d\'un DJ mariage, et comment comparer les devis sereinement.',
     url: `${BASE}/blog/${SLUG}`,

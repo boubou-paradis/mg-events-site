@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'quiz mariage interactif, quiz mariage, jeu interactif mariage, animation quiz mariage, quiz personnalisé mariage, quiz invités mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Quiz mariage interactif — AnimaJet par MG Events',
     description:
       "Le quiz interactif qui fait jouer tous vos invités en même temps, depuis leur téléphone, sur écran géant.",

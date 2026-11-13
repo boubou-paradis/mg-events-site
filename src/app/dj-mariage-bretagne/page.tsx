@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/dj-mariage-bretagne',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'DJ Mariage Bretagne | Animation Soirée - MG Events',
     description: "DJ mariage en Bretagne : animation élégante, sonorisation et éclairage professionnels. 25 ans d'expérience.",
     url: 'https://www.mg-events35.com/dj-mariage-bretagne',

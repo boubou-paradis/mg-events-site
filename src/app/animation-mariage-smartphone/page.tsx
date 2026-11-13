@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'animation mariage smartphone, jeu mariage téléphone, animation mariage sans application, jeu mariage smartphone, animation mariage QR code, animation mariage téléphone',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Animation mariage sur smartphone — AnimaJet par MG Events',
     description:
       "Vos invités jouent depuis leur téléphone, sans application, via un QR Code unique. Simple, fluide, fédérateur.",

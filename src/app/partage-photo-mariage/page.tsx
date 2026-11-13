@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'partage photo mariage, partage photo direct mariage, photos mariage écran géant, diaporama live mariage, partage photo invités mariage, photo live mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Partage photo de mariage en direct — AnimaJet par MG Events',
     description:
       "Les photos de vos invités s'affichent en direct sur grand écran. Récupérez des centaines de souvenirs.",

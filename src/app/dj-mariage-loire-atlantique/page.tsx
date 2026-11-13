@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'DJ Mariage Loire-Atlantique (44) | MG Events Animation Nantes',
     description: "DJ animateur mariage en Loire-Atlantique (44). Nantes, Saint-Nazaire, La Baule, Guérande. 25 ans d'expérience, photobooth vintage, animations interactives.",
     url: 'https://www.mg-events35.com/dj-mariage-loire-atlantique',

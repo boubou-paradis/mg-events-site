@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
       canonical: `https://www.mg-events35.com/dj-soiree-entreprise/${city.slug}`,
     },
     openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
       title: `DJ Soirée Entreprise ${city.name} | MG Events Animation`,
       description: `DJ animateur pour soirée d'entreprise à ${city.name}. Séminaires, team building, animations interactives.`,
       url: `https://www.mg-events35.com/dj-soiree-entreprise/${city.slug}`,

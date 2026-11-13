@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'animation moderne mariage, animation originale mariage, animation mariage tendance, animation mariage 2026, idée animation mariage moderne, animation soirée mariage originale',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Animation moderne de mariage — AnimaJet par MG Events',
     description:
       "Des animations interactives loin des classiques ringards : smartphone, écran géant, partage photo en direct.",

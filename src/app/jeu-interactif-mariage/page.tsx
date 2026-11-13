@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'jeu interactif mariage, jeux mariage, animation jeu mariage, jeux soirée mariage, jeux invités mariage, roue de la destinée mariage, photo mystère mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Jeux interactifs de mariage — AnimaJet par MG Events',
     description:
       "Quiz, blind test, roue de la destinée, photo mystère... Une palette de jeux pour faire vibrer vos invités.",

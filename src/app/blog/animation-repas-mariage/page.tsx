@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "Animer un repas de mariage assis sans casser l'ambiance : 12 jeux à faire depuis la table (quiz, blind test, Le Bon Ordre…), déroulé type et coordination avec le traiteur.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: "Comment animer un repas de mariage sans casser l'ambiance",
     description: 'Animations courtes, timing avec le traiteur et juste dose : les conseils d\'un DJ animateur de terrain.',
     url: `${BASE}/blog/${SLUG}`,

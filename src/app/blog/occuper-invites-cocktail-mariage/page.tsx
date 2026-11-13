@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Le cocktail de mariage est souvent un moment creux pendant les photos de couple. Découvrez comment occuper et amuser vos invités avec des animations interactives sur smartphone.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Comment occuper les invités pendant le cocktail de mariage',
     description: "Quiz, blind test, partage photo : nos idées pour un vin d'honneur sans temps mort.",
     url: `${BASE}/blog/${SLUG}`,

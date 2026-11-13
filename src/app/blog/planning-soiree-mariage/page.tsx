@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Le planning d'une soirée de mariage réussie, heure par heure : vin d'honneur, repas, discours, ouverture de bal, soirée dansante. Les pièges de timing et comment les éviter.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: "Planning d'une soirée de mariage : le bon timing pour garder l'ambiance",
     description: "Heure par heure, comment se construit une soirée qui ne retombe jamais — par un DJ de terrain.",
     url: `${BASE}/blog/${SLUG}`,
