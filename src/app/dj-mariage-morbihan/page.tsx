@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/dj-mariage-morbihan',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'DJ Mariage Morbihan | Animation Mariage Vannes - MG Events',
     description: "DJ animateur mariage dans le Morbihan. Vannes, Lorient, Pontivy, Auray. 25 ans d'expérience, photobooth vintage, animations interactives.",
     url: 'https://www.mg-events35.com/dj-mariage-morbihan',

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/blog/photobooth-vintage-mariage-bretagne',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Photobooth vintage mariage Bretagne : guide complet 2026',
     description: 'Tout ce qu\'il faut savoir sur le photobooth vintage TSF pour un mariage en Bretagne.',
     url: 'https://www.mg-events35.com/blog/photobooth-vintage-mariage-bretagne',

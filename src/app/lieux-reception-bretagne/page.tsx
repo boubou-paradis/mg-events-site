@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/lieux-reception-bretagne',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Les Plus Beaux Lieux de Réception Mariage en Bretagne | MG Events',
     description: "Châteaux, domaines et manoirs pour votre mariage en Bretagne. MG Events, DJ professionnel, intervient dans tous ces lieux d'exception.",
     url: 'https://www.mg-events35.com/lieux-reception-bretagne',

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "10 idées d'animations de mariage originales pour 2026 : quiz interactif, blind test, mur photo, partage photo en direct, roue de la destinée... De quoi marquer durablement vos invités.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: "10 idées d'animations de mariage originales en 2026",
     description: "Notre sélection d'animations modernes et interactives pour un mariage vraiment mémorable.",
     url: `${BASE}/blog/${SLUG}`,

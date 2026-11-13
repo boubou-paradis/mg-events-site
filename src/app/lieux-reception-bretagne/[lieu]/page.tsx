@@ -25,7 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lieu: str
     title: venue.metaTitle,
     description: venue.metaDescription,
     alternates: { canonical: url },
-    openGraph: { title: `DJ mariage au ${venue.name}`, description: venue.metaDescription, url },
+    openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'], title: `DJ mariage au ${venue.name}`, description: venue.metaDescription, url },
   };
 }
 

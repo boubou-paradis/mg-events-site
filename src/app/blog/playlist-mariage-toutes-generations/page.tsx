@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Comment construire une playlist de mariage qui fait danser de 7 à 77 ans : la logique DJ derrière l'enchaînement, les erreurs à éviter et la place à laisser à vos incontournables.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Playlist mariage : comment faire danser toutes les générations',
     description: "La logique DJ derrière une soirée qui ne retombe jamais : montée en énergie, alternance et lecture de piste.",
     url: `${BASE}/blog/${SLUG}`,

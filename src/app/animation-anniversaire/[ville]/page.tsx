@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
       canonical: `https://www.mg-events35.com/animation-anniversaire/${city.slug}`,
     },
     openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
       title: `Animation Anniversaire ${city.name} | MG Events Animation`,
       description: `DJ animateur pour anniversaire à ${city.name}. Animation musicale, karaoké, photobooth.`,
       url: `https://www.mg-events35.com/animation-anniversaire/${city.slug}`,

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'animation digitale mariage, animation connectée mariage, animation numérique mariage, animation high-tech mariage, animation interactive digitale mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Animation digitale de mariage — AnimaJet par MG Events',
     description:
       "Smartphone, QR Code, écran géant : l'animation digitale qui connecte tous vos invités, sans application.",

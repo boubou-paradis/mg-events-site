@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/zones-intervention',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Nos zones d\'intervention et nos frais de déplacement',
     description: 'Basés à Redon (35) : secteurs de l\'Ille-et-Vilaine, de la Loire-Atlantique et du Morbihan dans un rayon approximatif de 100 km. Au-delà : sur étude et sur devis.',
     url: 'https://www.mg-events35.com/zones-intervention',

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'photos invités mariage, récupérer photos invités mariage, album photo invités mariage, collecte photos mariage, photos mariage QR code, photos partagées mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Photos des invités de mariage — AnimaJet par MG Events',
     description:
       "Centralisez tous les clichés de vos invités et récupérez des centaines de photos après la soirée.",

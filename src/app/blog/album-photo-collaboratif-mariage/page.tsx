@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Créez un album photo collaboratif le jour de votre mariage : vos invités partagent leurs clichés via QR Code, affichage en direct sur écran géant et récupération de centaines de photos après la soirée.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Comment créer un album photo collaboratif pendant un mariage',
     description: "Le guide pour centraliser et récupérer toutes les photos de vos invités.",
     url: `${BASE}/blog/${SLUG}`,

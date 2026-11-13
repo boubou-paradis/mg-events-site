@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
       canonical: `https://www.mg-events35.com/dj-mariage/${city.slug}`,
     },
     openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
       title: `DJ Mariage ${city.name} | MG Events Animation`,
       description: `DJ animateur mariage à ${city.name}. Avis 5★, dès 1300€. 25 ans d'expérience, photobooth vintage, animations interactives.`,
       url: `https://www.mg-events35.com/dj-mariage/${city.slug}`,

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "MG Events Animation",
     images: [
       {
-        url: "https://www.mg-events35.com/images/hero-bg.jpg",
+        url: "https://www.mg-events35.com/images/og-default.jpg",
         width: 1200,
         height: 630,
         alt: "MG Events Animation - DJ Mariage Bretagne",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MG Events Animation - DJ Mariage Bretagne",
     description: "DJ animateur mariage en Bretagne. 25 ans d'expérience.",
-    images: ["https://www.mg-events35.com/images/hero-bg.jpg"],
+    images: ["https://www.mg-events35.com/images/og-default.jpg"],
   },
   robots: {
     index: true,

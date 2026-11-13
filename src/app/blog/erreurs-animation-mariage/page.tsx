@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Trop de jeux, mauvais timing, micro mal géré, playlist imposée, zéro coordination avec le traiteur : les erreurs d'animation qui plombent un mariage, et comment les éviter.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: "Les erreurs à éviter pour l'animation de votre mariage",
     description: "25 ans de mariages, et toujours les mêmes erreurs qui cassent l'ambiance. La liste, pour les éviter.",
     url: `${BASE}/blog/${SLUG}`,

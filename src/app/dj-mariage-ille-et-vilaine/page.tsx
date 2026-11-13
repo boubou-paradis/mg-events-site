@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.mg-events35.com/dj-mariage-ille-et-vilaine',
   },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'DJ Mariage Ille-et-Vilaine (35) | MG Events Animation',
     description: "DJ animateur mariage en Ille-et-Vilaine (35). Rennes, Saint-Malo, Fougères, Vitré. 25 ans d'expérience, photobooth vintage, animations interactives.",
     url: 'https://www.mg-events35.com/dj-mariage-ille-et-vilaine',

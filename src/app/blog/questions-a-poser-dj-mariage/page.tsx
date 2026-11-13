@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "La checklist complète des questions à poser à votre DJ de mariage : expérience, matériel, assurance, horaires, playlist, animations, contrat. Ne signez rien avant de l'avoir lue.",
   alternates: { canonical: `${BASE}/blog/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Les questions essentielles à poser à votre DJ de mariage',
     description: 'La checklist complète avant de signer : expérience, matériel, contrat, playlist, coordination.',
     url: `${BASE}/blog/${SLUG}`,

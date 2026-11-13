@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'mur photo mariage, mur photo événementiel, mosaïque photo mariage, mur photo numérique mariage, mur photo écran géant, mur d\'images mariage',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Mur photo de mariage — AnimaJet par MG Events',
     description:
       "Une mosaïque vivante composée en temps réel par les photos de vos invités, sur écran géant.",

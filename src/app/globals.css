@@ -142,3 +142,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gold);
 }
+
+/* Accessibilité (Lighthouse link-in-text-block) : les liens insérés dans un
+   paragraphe ne doivent pas se distinguer uniquement par la couleur.
+   On exclut les liens stylés en bouton (padding horizontal). */
+@layer base {
+  p a:not([class*="px-"]) {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+}

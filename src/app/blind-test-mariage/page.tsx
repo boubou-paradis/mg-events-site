@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'blind test mariage, blind test interactif mariage, animation musicale mariage, jeu musical mariage, quiz musical mariage, blind test soirée',
   alternates: { canonical: `${BASE}/${SLUG}` },
   openGraph: {
+    images: ['https://www.mg-events35.com/images/og-default.jpg'],
     title: 'Blind test mariage interactif — AnimaJet par MG Events',
     description:
       "La bataille musicale qui mélange toutes les générations, en direct sur écran géant, sans application.",
