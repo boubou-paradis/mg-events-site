@@ -10,9 +10,10 @@ const SLUG = 'livre-dor-audio';
 const BASE = 'https://www.mg-events35.com';
 
 export const metadata: Metadata = {
-  title: "Livre d'Or Audio mariage | Téléphone rétro à messages vocaux",
+  // Nov. 2026 : "telephone message mariage" / "telephone audio mariage" pos 9, 0 clic.
+  title: "Téléphone Livre d'Or Audio Mariage · Messages vocaux · 40€",
   description:
-    "Un téléphone rétro où vos invités laissent un message vocal aux mariés. Un souvenir sonore authentique. Inclus dans nos formules ou en location à 40€.",
+    "Téléphone rétro de mariage : vos invités décrochent et laissent un message audio aux mariés. Livre d'or vocal inclus dans nos formules ou en location à 40€.",
   keywords:
     "livre d'or audio, livre d'or audio mariage, livre d'or sonore, livre d'or vocal, téléphone à messages mariage, audio guestbook, livre d'or original mariage, téléphone rétro mariage, livre d'or téléphone",
   alternates: { canonical: `${BASE}/${SLUG}` },

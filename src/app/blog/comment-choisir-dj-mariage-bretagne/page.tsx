@@ -8,9 +8,10 @@ const ARTICLE_URL = 'https://www.mg-events35.com/blog/comment-choisir-dj-mariage
 export const metadata: Metadata = {
   // Intention INFORMATIVE assumée : pas de "Bretagne" dans le title ni le H1.
   // La page commerciale /dj-mariage-bretagne reste seule cible sur les requêtes régionales.
-  title: 'Comment choisir son DJ de mariage ? 10 critères',
+  // Nov. 2026 : "comment trouver un bon dj pour son mariage" 252 impr., pos 9,5, 0 clic.
+  title: 'Comment trouver un bon DJ pour son mariage ? 10 critères',
   description:
-    'Découvrez les critères essentiels pour choisir un DJ de mariage fiable : expérience, matériel, ambiance, contrat, tarifs, avis et questions à poser.',
+    'Trouver un bon DJ pour son mariage : 10 critères concrets (expérience, matériel de secours, contrat, avis vérifiables, tarifs) et les questions à poser avant de signer.',
   keywords:
     'comment choisir son DJ de mariage, choisir un DJ mariage, critères DJ mariage, questions à poser à un DJ, trouver un bon DJ mariage, contrat DJ mariage, matériel DJ mariage',
   alternates: {
