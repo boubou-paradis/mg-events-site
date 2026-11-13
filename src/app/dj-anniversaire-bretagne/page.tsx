@@ -15,9 +15,9 @@ const BASE = 'https://www.mg-events35.com';
 export const metadata: Metadata = {
   // Nov. 2026 : "dj anniversaire" pos 15 ; "animateur pour soiree anniversaire dans le 35" pos 8 ;
   // "dj rennes anniversaire" pos 22 ; "prix dj anniversaire" pos 19. Ajout section prix + Rennes/35.
-  title: 'DJ Anniversaire Rennes & Bretagne · Soirée 30, 40, 50 ans',
+  title: 'DJ Anniversaire Rennes & Bretagne · Soirée 30, 40, 50 ans · Dès 600€',
   description:
-    "DJ animateur pour votre anniversaire à Rennes, Redon et en Bretagne : 30, 40, 50, 60 ans, soirée privée ou familiale. Musique toutes générations, quiz, photobooth. Prix et devis sous 24h.",
+    "DJ animateur pour votre anniversaire à Rennes, Redon et en Bretagne : 30, 40, 50, 60 ans, soirée privée ou familiale. Musique toutes générations, quiz, photobooth. Dès 600€ TTC, devis sous 24h.",
   keywords:
     'DJ anniversaire Bretagne, DJ anniversaire Ille-et-Vilaine, DJ soirée privée Bretagne, animation anniversaire adulte, DJ anniversaire 40 ans, DJ anniversaire 50 ans, animation anniversaire Rennes',
   alternates: { canonical: `${BASE}/${SLUG}` },
@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "Quel est le tarif d'un DJ pour un anniversaire ?",
     answer:
-      "Le tarif dépend de la durée, du lieu, du matériel nécessaire et des animations souhaitées : chaque anniversaire est différent, du repas de famille à la grande soirée dansante. Décrivez-nous votre projet via le formulaire de contact : devis gratuit et personnalisé sous 24h.",
+      "Nos formules anniversaire démarrent à 600€ TTC (4h d'animation) et vont jusqu'à 1200€ TTC (formule VIP avec photobooth). Le tarif exact dépend de la durée, du lieu, du matériel nécessaire et des animations souhaitées. Décrivez-nous votre projet via le formulaire de contact : devis gratuit et personnalisé sous 24h.",
   },
   {
     question: 'Fournissez-vous le matériel son et lumière ?',
@@ -267,7 +267,7 @@ export default function DjAnniversaireBretagnePage() {
             <li><strong className="text-white">La distance</strong> : déplacement inclus jusqu&apos;à 100 km aller-retour depuis Redon, puis 0,66 €/km.</li>
           </ul>
           <p>
-            Méfiez-vous des tarifs très bas qui n&apos;incluent ni le matériel ni la préparation : un DJ qui
+            Nos formules anniversaire vont de <strong className="text-white">600€ TTC</strong> (4h d&apos;animation) à <strong className="text-white">1200€ TTC</strong> (formule VIP avec photobooth), déplacement inclus jusqu&apos;à 100 km aller-retour. Méfiez-vous des tarifs très bas qui n&apos;incluent ni le matériel ni la préparation : un DJ qui
             arrive sans connaître la personne fêtée ni la playlist ne fera pas danser trois générations. Le
             plus simple : décrivez-nous votre soirée, vous recevez un devis détaillé et gratuit sous 24h.
           </p>
