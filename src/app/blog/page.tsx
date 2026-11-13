@@ -13,6 +13,22 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: 'prix-dj-soiree',
+    title: 'Combien coûte un DJ pour une soirée ? Anniversaire, entreprise, mariage',
+    excerpt: "Anniversaire dès 600€, entreprise dès 800€, mariage dès 1300€ TTC : les vrais tarifs d'un DJ en Bretagne, ce qui les fait varier et comment lire un devis.",
+    image: '/images/gallery-3.jpg',
+    date: '13 novembre 2026',
+    readTime: '7 min',
+  },
+  {
+    slug: 'telephone-livre-dor-audio-mariage',
+    title: "Téléphone livre d'or audio au mariage : mode d'emploi et idées de messages",
+    excerpt: "Comment fonctionne le téléphone à messages, où le placer, quel message d'accueil enregistrer et 20 idées de messages à souffler aux invités.",
+    image: '/images/livre-dor-audio-mariage.png',
+    date: '13 novembre 2026',
+    readTime: '6 min',
+  },
+  {
     slug: 'prix-dj-mariage-bretagne',
     title: 'Combien coûte un DJ de mariage en Bretagne ?',
     excerpt: "Ce qui fait varier le prix d'un DJ mariage : durée, matériel, animations, options. Comment lire un devis et comparer sereinement, avec nos tarifs réels en exemple.",

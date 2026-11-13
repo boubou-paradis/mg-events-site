@@ -129,6 +129,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Blog — nouveaux articles juillet 2026
     {
+      url: `${baseUrl}/blog/prix-dj-soiree`,
+      lastModified: '2026-11-13',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/telephone-livre-dor-audio-mariage`,
+      lastModified: '2026-11-13',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
       url: `${baseUrl}/blog/prix-dj-mariage-bretagne`,
       lastModified: today,
       changeFrequency: 'monthly',
