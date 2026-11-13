@@ -6,14 +6,18 @@ import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import { Section, SectionTitle, Prose, CheckList, Steps } from '@/components/animajet/ClusterSections';
 import { cities } from '@/data/cities';
+import YouTubeLite from '@/components/YouTubeLite';
+import { animajetVideos } from '@/data/animajetVideos';
 
 const SLUG = 'dj-anniversaire-bretagne';
 const BASE = 'https://www.mg-events35.com';
 
 export const metadata: Metadata = {
-  title: 'DJ Anniversaire Bretagne | Animation soirée privée',
+  // Nov. 2026 : "dj anniversaire" pos 15 ; "animateur pour soiree anniversaire dans le 35" pos 8 ;
+  // "dj rennes anniversaire" pos 22 ; "prix dj anniversaire" pos 19. Ajout section prix + Rennes/35.
+  title: 'DJ Anniversaire Rennes & Bretagne · Soirée 30, 40, 50 ans',
   description:
-    "DJ animateur pour votre anniversaire en Bretagne : 30, 40, 50, 60 ans, soirée privée ou familiale. Musique toutes générations, quiz interactifs, photobooth. Devis gratuit sous 24h.",
+    "DJ animateur pour votre anniversaire à Rennes, Redon et en Bretagne : 30, 40, 50, 60 ans, soirée privée ou familiale. Musique toutes générations, quiz, photobooth. Prix et devis sous 24h.",
   keywords:
     'DJ anniversaire Bretagne, DJ anniversaire Ille-et-Vilaine, DJ soirée privée Bretagne, animation anniversaire adulte, DJ anniversaire 40 ans, DJ anniversaire 50 ans, animation anniversaire Rennes',
   alternates: { canonical: `${BASE}/${SLUG}` },
@@ -185,7 +189,17 @@ export default function DjAnniversaireBretagnePage() {
             <Link href="/livre-dor-audio" className="text-[#c9a227] hover:underline">Livre d&apos;Or Audio</Link>{' '}
             recueille les messages vocaux de vos proches — à réécouter longtemps après la fête.
           </p>
+          <p>
+            Les jeux viennent d&apos;<Link href="/animations-interactives-mariage" className="text-[#c9a227] hover:underline">AnimaJet</Link>,
+            la plateforme d&apos;animations interactives que nous avons développée : quiz sur la personne
+            fêtée, AnimaBuzz (les téléphones deviennent des buzzers pour le blind test), Photo Mystère,
+            Roue de la Destinée pour les gages. Aperçu en une minute et demie :
+          </p>
         </Prose>
+        <YouTubeLite
+          video={animajetVideos.presentation}
+          caption="AnimaJet en vidéo : les invités jouent depuis leur téléphone, les résultats s'affichent sur écran."
+        />
       </Section>
 
       {/* Déroulé */}
@@ -232,6 +246,55 @@ export default function DjAnniversaireBretagnePage() {
             l&apos;arrivée du gâteau. Chaque anniversaire étant différent, le devis est établi sur mesure.
           </p>
         </div>
+      </Section>
+
+      {/* Prix */}
+      <Section bg="#141414" narrow>
+        <SectionTitle center={false}>
+          Prix d&apos;un DJ pour un anniversaire : <span className="text-[#c9a227]">ce qui le fait varier</span>
+        </SectionTitle>
+        <Prose>
+          <p>
+            Il n&apos;y a pas un prix unique pour un DJ d&apos;anniversaire : un apéritif dînatoire de 40
+            personnes dans une longère et une soirée dansante de 150 invités en salle des fêtes ne
+            demandent ni le même matériel ni le même temps. Cinq éléments font le prix :
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong className="text-white">La durée</strong> : de l&apos;apéritif à la fin de soirée, ou seulement la partie dansante.</li>
+            <li><strong className="text-white">La taille de la salle et le nombre d&apos;invités</strong>, qui fixent la sonorisation et l&apos;éclairage nécessaires.</li>
+            <li><strong className="text-white">Les animations</strong> : quiz personnalisé, blind test, photo live sur écran.</li>
+            <li><strong className="text-white">Les options</strong> : photobooth, Livre d&apos;Or Audio, étincelles froides pour le gâteau.</li>
+            <li><strong className="text-white">La distance</strong> : déplacement inclus jusqu&apos;à 100 km aller-retour depuis Redon, puis 0,66 €/km.</li>
+          </ul>
+          <p>
+            Méfiez-vous des tarifs très bas qui n&apos;incluent ni le matériel ni la préparation : un DJ qui
+            arrive sans connaître la personne fêtée ni la playlist ne fera pas danser trois générations. Le
+            plus simple : décrivez-nous votre soirée, vous recevez un devis détaillé et gratuit sous 24h.
+          </p>
+        </Prose>
+      </Section>
+
+      {/* Rennes / 35 */}
+      <Section bg="#0a0a0a" narrow>
+        <SectionTitle center={false}>
+          Animateur de soirée anniversaire <span className="text-[#c9a227]">à Rennes et en Ille-et-Vilaine</span>
+        </SectionTitle>
+        <Prose>
+          <p>
+            Basés à Redon, nous animons très régulièrement des anniversaires dans tout le 35 : Rennes et sa
+            métropole, Vitré, Fougères, Saint-Malo, Bain-de-Bretagne, Guichen… mais aussi en Morbihan
+            (Ploërmel, Vannes, Lorient) et en Loire-Atlantique (Nantes, Guérande, Châteaubriant). Salle
+            des fêtes, longère privée, restaurant ou gîte : on s&apos;adapte au lieu, y compris pour les
+            salles avec limiteur de son.
+          </p>
+          <p>
+            Vous organisez aussi un événement professionnel ? Voir notre page{' '}
+            <Link href="/dj-soiree-entreprise" className="text-[#c9a227] hover:underline">DJ soirée
+            entreprise</Link>. Pour des idées de jeux à table, lisez{' '}
+            <Link href="/blog/animation-repas-mariage" className="text-[#c9a227] hover:underline">nos
+            idées d&apos;animation pour un repas assis</Link> : elles marchent aussi pour un anniversaire.
+          </p>
+        </Prose>
       </Section>
 
       {/* Villes */}
